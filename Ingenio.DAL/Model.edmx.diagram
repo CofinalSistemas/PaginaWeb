@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="188a99a4699246a8bacb3fcb96e3048e" Name="Diagram1" ZoomLevel="93" >
+        <EntityTypeShape EntityType="Model.agencias" Width="1.5" PointX="7.5" PointY="35.75" />
+        <EntityTypeShape EntityType="Model.ahorrosContractual" Width="1.5" PointX="23.75" PointY="35.375" />
+        <EntityTypeShape EntityType="Model.ahorrospermanentes" Width="1.5" PointX="17.75" PointY="36" />
+        <EntityTypeShape EntityType="Model.aportessociales" Width="1.5" PointX="20.75" PointY="37.25" />
+        <EntityTypeShape EntityType="Model.asociados" Width="1.5" PointX="15.5" PointY="34.875" />
+        <EntityTypeShape EntityType="Model.barrios" Width="1.5" PointX="5.25" PointY="54.125" />
+        <EntityTypeShape EntityType="Model.ciiu" Width="1.5" PointX="6" PointY="59.75" />
+        <EntityTypeShape EntityType="Model.ciudades" Width="1.5" PointX="5.25" PointY="37.75" />
+        <EntityTypeShape EntityType="Model.comunas" Width="1.5" PointX="8.25" PointY="55.375" />
+        <EntityTypeShape EntityType="Model.costosliquidacion" Width="1.5" PointX="12.75" PointY="37" />
+        <EntityTypeShape EntityType="Model.creditos" Width="1.5" PointX="10.5" PointY="17.25" />
+        <EntityTypeShape EntityType="Model.departamentos" Width="1.5" PointX="3" PointY="37.875" />
+        <EntityTypeShape EntityType="Model.destinos" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="Model.divisionciiu" Width="1.5" PointX="8.25" PointY="59.75" />
+        <EntityTypeShape EntityType="Model.empresas" Width="1.5" PointX="12.75" PointY="45.5" />
+        <EntityTypeShape EntityType="Model.hahorrosAtermino" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.hahorrospermanentes" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.hAportesSociales" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Model.hasociados" Width="1.5" PointX="9.75" PointY="30.125" />
+        <EntityTypeShape EntityType="Model.hcreditos" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.hnits" Width="1.5" PointX="9.75" PointY="44.375" />
+        <EntityTypeShape EntityType="Model.nits" Width="1.5" PointX="10.5" PointY="55.125" />
+        <EntityTypeShape EntityType="Model.pais" Width="1.5" PointX="0.75" PointY="39.75" />
+        <EntityTypeShape EntityType="Model.personacargo" Width="1.5" PointX="17.75" PointY="64" />
+        <EntityTypeShape EntityType="Model.plancuentas" Width="1.5" PointX="10.5" PointY="66.375" />
+        <EntityTypeShape EntityType="Model.profesiones" Width="1.5" PointX="13.25" PointY="33.25" />
+        <EntityTypeShape EntityType="Model.sahorrosContractual" Width="1.5" PointX="26" PointY="37.25" />
+        <EntityTypeShape EntityType="Model.sahorrospermanentes" Width="1.5" PointX="20" PointY="30.125" />
+        <EntityTypeShape EntityType="Model.sAportesSociales" Width="1.5" PointX="23" PointY="46.625" />
+        <EntityTypeShape EntityType="Model.tasaspormontosyplazos" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.tasasporplazos" Width="1.5" PointX="3" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.Zonasgenerales" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.zonasgeograficas" Width="1.5" PointX="3" PointY="69.125" />
+        <AssociationConnector Association="Model.FK_agencias_ciudades" />
+        <AssociationConnector Association="Model.FK_ahorrosContractual_agencias" />
+        <AssociationConnector Association="Model.FK_ahorrospermanentes_agencias" />
+        <AssociationConnector Association="Model.FK_AportesSociales_agencias" />
+        <AssociationConnector Association="Model.FK_costosliquidacion_agencias" />
+        <AssociationConnector Association="Model.FK_empresas_agencias" />
+        <AssociationConnector Association="Model.FK_hasociados_agencias" />
+        <AssociationConnector Association="Model.FK_hnits_agencias" />
+        <AssociationConnector Association="Model.FK_sahorrosContractual_agencias1" />
+        <AssociationConnector Association="Model.FK_sahorrospermanentes_agencias1" />
+        <AssociationConnector Association="Model.FK_ahorrosContractual_asociados" />
+        <AssociationConnector Association="Model.FK_sahorrosContractual_ahorrosContractual" />
+        <AssociationConnector Association="Model.FK_ahorrospermanentes_asociados" />
+        <AssociationConnector Association="Model.FK_sahorrospermanentes_ahorrospermanentes" />
+        <AssociationConnector Association="Model.FK_AportesSociales_asociados_20" />
+        <AssociationConnector Association="Model.FK_sAportesSociales_AportesSociales_21" />
+        <AssociationConnector Association="Model.FK_asociados_ciudades_1" />
+        <AssociationConnector Association="Model.FK_asociados_departamentos" />
+        <AssociationConnector Association="Model.FK_asociados_empresas" />
+        <AssociationConnector Association="Model.FK_asociados_nits_20" />
+        <AssociationConnector Association="Model.FK_asociados_pais" />
+        <AssociationConnector Association="Model.FK_asociados_profesiones" />
+        <AssociationConnector Association="Model.FK_asociados_profesiones1" />
+        <AssociationConnector Association="Model.FK_personacargo_asociados_1" />
+        <AssociationConnector Association="Model.FK_barrios_comunas" />
+        <AssociationConnector Association="Model.FK_barrios_pais" />
+        <AssociationConnector Association="Model.FK_barrios_zonasgeograficas" />
+        <AssociationConnector Association="Model.FK_nits_barrios" />
+        <AssociationConnector Association="Model.FK_divisionciiu_ciiu" />
+        <AssociationConnector Association="Model.FK_ciudades_departamentos" />
+        <AssociationConnector Association="Model.FK_empresas_ciudades" />
+        <AssociationConnector Association="Model.FK_comunas_pais" />
+        <AssociationConnector Association="Model.FK_comunas_zonasgeograficas" />
+        <AssociationConnector Association="Model.FK_costosliquidacion_creditos" />
+        <AssociationConnector Association="Model.FK_costosliquidacion_plancuentas" />
+        <AssociationConnector Association="Model.FK_departamentos_pais" />
+        <AssociationConnector Association="Model.FK_tasasporplazos_destinos" />
+        <AssociationConnector Association="Model.FK_nits_divisionciiu" />
+        <AssociationConnector Association="Model.FK_empresas_idnits_20" />
+        <AssociationConnector Association="Model.FK_zonasgeograficas_pais" />
+        <EntityTypeShape EntityType="Model.ahorrosalavista" Width="1.5" PointX="17.75" PointY="28.125" />
+        <EntityTypeShape EntityType="Model.ahorrosAtermino" Width="1.5" PointX="20.75" PointY="44.5" />
+        <EntityTypeShape EntityType="Model.cuentasnovedadesvarias" Width="1.5" PointX="12.75" PointY="68.5" />
+        <EntityTypeShape EntityType="Model.lineas" Width="1.5" PointX="12.75" PointY="72" />
+        <EntityTypeShape EntityType="Model.novedadesvariasnocausadas" Width="1.5" PointX="17.75" PointY="51.125" />
+        <EntityTypeShape EntityType="Model.sahorrosAtermino" Width="1.5" PointX="26" PointY="44.25" />
+        <EntityTypeShape EntityType="Model.seguimientocredito" Width="1.5" PointX="12.75" PointY="27" />
+        <EntityTypeShape EntityType="Model.tasasplazoahorrotermino" Width="1.5" PointX="5.375" PointY="11.75" />
+        <EntityTypeShape EntityType="Model.tazasporplazos" Width="1.5" PointX="15" PointY="72.375" />
+        <AssociationConnector Association="Model.FK_ahorrosAtermino_agencias" />
+        <AssociationConnector Association="Model.FK_novedadesvariasnocausadas_agencias" />
+        <AssociationConnector Association="Model.FK_sahorrosAtermino_agencias1" />
+        <AssociationConnector Association="Model.FK_seguimientocredito_agencias" />
+        <AssociationConnector Association="Model.FK_seguimientocredito_agencias1" />
+        <AssociationConnector Association="Model.FK_ahorrosalavista_asociados_20" />
+        <AssociationConnector Association="Model.FK_ahorrosAtermino_asociados_20" />
+        <AssociationConnector Association="Model.FK_sahorrosAtermino_ahorrosAtermino_21" />
+        <AssociationConnector Association="Model.FK_novedadesvariasnocausadas_asociados" />
+        <AssociationConnector Association="Model.FK_seguimientocredito_creditos" />
+        <AssociationConnector Association="Model.FK_cuentasnovedadesvarias_plancuentas" />
+        <AssociationConnector Association="Model.FK_novedadesvariasnocausadas_cuentasnovedadesvarias" />
+        <AssociationConnector Association="Model.FK_destinos_lineas" />
+        <AssociationConnector Association="Model.FK_lineas_plancuentas" />
+        <AssociationConnector Association="Model.FK_lineas_plancuentas1" />
+        <AssociationConnector Association="Model.FK_lineas_plancuentas2" />
+        <AssociationConnector Association="Model.FK_tazasporplazos_lineas" />
+        <EntityTypeShape EntityType="Model.sahorrosalavista" Width="1.5" PointX="23" PointY="28.125" />
+        <AssociationConnector Association="Model.FK_sahorrosalavista_agencias1" />
+        <AssociationConnector Association="Model.FK_sahorrosalavista_ahorrosalavista_21" />
+        <EntityTypeShape EntityType="Model.dependenciasempresas" Width="1.5" PointX="17.75" PointY="45.75" />
+        <AssociationConnector Association="Model.FK_dependenciasempresas_agencias" />
+        <AssociationConnector Association="Model.FK_asociados_dependenciasempresas_2" />
+        <AssociationConnector Association="Model.FK_dependenciasempresas_ciudades" />
+        <EntityTypeShape EntityType="Model.parameahorroAlaVista" Width="1.5" PointX="12.75" PointY="76.375" />
+        <AssociationConnector Association="Model.FK_ahorrosalavista_parameahorroAlaVista" />
+        <AssociationConnector Association="Model.FK_ahorroAlaVista_plancuentas" />
+        <AssociationConnector Association="Model.FK_parameahorroAlaVista_plancuentas" />
+        <AssociationConnector Association="Model.FK_parameahorroAlaVista_plancuentas_1" />
+        <EntityTypeShape EntityType="Model.hahorrosalavista" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Model.hahorrosContractual" Width="1.5" PointX="0.75" PointY="13.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

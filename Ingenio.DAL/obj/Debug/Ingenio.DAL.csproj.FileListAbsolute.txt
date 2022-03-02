@@ -1,0 +1,90 @@
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll.config
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\Ingenio.DAL.pdb
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\EntityFramework.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\Ingenio.BO.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\Newtonsoft.Json.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\Owin.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\Ingenio.BO.pdb
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\Ingenio.BO.dll.config
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\EntityFramework.xml
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\bin\Debug\Newtonsoft.Json.xml
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\obj\Debug\Ingenio.DAL.csprojResolveAssemblyReference.cache
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CoreCompileInputs.cache
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CopyComplete
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\obj\Debug\Ingenio.DAL.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Entrega\Ingenio.DAL\obj\Debug\Ingenio.DAL.pdb
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll.config
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Ingenio.DAL.pdb
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\EntityFramework.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Ingenio.BO.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Newtonsoft.Json.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Owin.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Ingenio.BO.pdb
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Ingenio.BO.dll.config
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\EntityFramework.xml
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Newtonsoft.Json.xml
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Debug\Ingenio.DAL.csprojResolveAssemblyReference.cache
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CoreCompileInputs.cache
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CopyComplete
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Debug\Ingenio.DAL.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Debug\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Newtonsoft.Json.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Debug\Newtonsoft.Json.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Debug\Ingenio.DAL.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Debug\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Debug\Ingenio.DAL.pdb
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll.config
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Ingenio.DAL.pdb
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\EntityFramework.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Ingenio.BO.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Newtonsoft.Json.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Owin.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Ingenio.BO.pdb
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Ingenio.BO.dll.config
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\EntityFramework.xml
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Newtonsoft.Json.xml
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.csprojResolveAssemblyReference.cache
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CoreCompileInputs.cache
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CopyComplete
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.dll
+D:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Newtonsoft.Json.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Debug\Newtonsoft.Json.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.pdb

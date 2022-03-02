@@ -1,0 +1,20 @@
+﻿<siteMap>
+  <siteMapNode title="Home" description="Home" url="~/home/index">
+    <siteMapNode title="Products" description="Our products"
+      url="~/Home/QuienesSomos">
+      <siteMapNode title="Hardware" description="Hardware choices"
+        url="~/Hardware.aspx" />
+      <siteMapNode title="Software" description="Software choices"
+        url="~/Software.aspx" />
+    </siteMapNode>
+    <siteMapNode title="Services" description="Services we offer"
+        url="~/Services.aspx">
+        <siteMapNode title="Training" description="Training classes"
+          url="~/Training.aspx" />
+        <siteMapNode title="Consulting" description="Consulting services" 
+          url="~/Consulting.aspx" />
+        <siteMapNode title="Support" description="Supports plans" 
+          url="~/Support.aspx" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

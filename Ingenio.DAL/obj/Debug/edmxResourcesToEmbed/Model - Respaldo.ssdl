@@ -1,0 +1,2564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="agencias">
+    <Key>
+      <PropertyRef Name="codigoagencia" />
+    </Key>
+    <Property Name="codigoagencia" Type="int" Nullable="false" />
+    <Property Name="nombreagencia" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="codpais" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="codciudad" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="80" />
+    <Property Name="telefono" Type="varchar" MaxLength="12" />
+    <Property Name="coddepto" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="fechacreacion" Type="datetime" />
+    <Property Name="fechasistema" Type="datetime" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="correosaliente" Type="varchar" MaxLength="40" />
+    <Property Name="fechatrabajo" Type="datetime" Nullable="false" />
+    <Property Name="rutaopa" Type="varchar" MaxLength="200" />
+    <Property Name="clavecorreo" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="tipocorreo" Type="char" MaxLength="1" />
+    <Property Name="idagencias" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigoagenciaseguro" Type="varchar" MaxLength="30" />
+    <Property Name="protocolodeenvio" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="nombreperfil" Type="varchar" MaxLength="20" />
+    <Property Name="web" Type="bit" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="zsisco" Type="bit" />
+  </EntityType>
+  <EntityType Name="ahorrosalavista">
+    <Key>
+      <PropertyRef Name="codlinea" />
+      <PropertyRef Name="agencia" />
+      <PropertyRef Name="numerocuenta" />
+    </Key>
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="numerocuenta" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="saldoTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="saldoMinimo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="acumuladoretiros" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="transito" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="fechainicio" Type="datetime" Nullable="false" />
+    <Property Name="f_ultimatransaccion" Type="datetime" />
+    <Property Name="interesliquidado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="f_ultimacausacion" Type="datetime" />
+    <Property Name="interedisponible" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="rtefteacumulada" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="gmfMesasociado" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="gmfMesentidad" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="interescausado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="morosidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="formapago" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="valorcuota" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="consignaciontitular" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="idahorrosalavista" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechainiciodeduccion" Type="smalldatetime" />
+    <Property Name="web" Type="bit" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="pignorado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="idasesores" Type="smallint" />
+    <Property Name="idoperador" Type="smallint" />
+  </EntityType>
+  <EntityType Name="ahorrosAtermino">
+    <Key>
+      <PropertyRef Name="codlinea" />
+      <PropertyRef Name="agencia" />
+      <PropertyRef Name="numerocuenta" />
+    </Key>
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="numerocuenta" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="Cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="beneficiario1" Type="bigint" />
+    <Property Name="nombrebeneficiario1" Type="varchar" MaxLength="40" />
+    <Property Name="beneficiario2" Type="bigint" />
+    <Property Name="nombrebeneficiario2" Type="varchar" MaxLength="40" />
+    <Property Name="fechainicio" Type="datetime" Nullable="false" />
+    <Property Name="fechaRenovacion" Type="datetime" />
+    <Property Name="fecharenovainteres" Type="datetime" />
+    <Property Name="f_ultimatransaccion" Type="datetime" />
+    <Property Name="PeriodoLiquida" Type="int" Nullable="false" />
+    <Property Name="plazo" Type="int" Nullable="false" />
+    <Property Name="tasacaptacion" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="pignorado" Type="char" MaxLength="1" />
+    <Property Name="modalidad" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="saldototal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="interesanticipado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="interescausado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="capitaliza" Type="char" MaxLength="1" />
+    <Property Name="interedisponible" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="codlineaahorros" Type="char" MaxLength="4" />
+    <Property Name="nrocuentaahorros" Type="char" MaxLength="20" />
+    <Property Name="tasacaptacionanterior" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="f_ultimacausacion" Type="datetime" />
+    <Property Name="rtefteacumulada" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="gmfmesasociado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="gmfmesentidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="acumuladoretiros" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="fechavencimientointeres" Type="datetime" />
+    <Property Name="fechavencimientocapital" Type="datetime" />
+    <Property Name="operador" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="fecharealcreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="idahorrosatermino" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="valortitulo" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="web" Type="bit" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="origenfondos" Type="char" MaxLength="1" />
+    <Property Name="f_sgtevctoktal" Type="datetime" />
+    <Property Name="idasesores" Type="smallint" />
+    <Property Name="formaapertura" Type="varchar" MaxLength="1" />
+    <Property Name="detalle" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ahorrosContractual">
+    <Key>
+      <PropertyRef Name="codlinea" />
+      <PropertyRef Name="agencia" />
+      <PropertyRef Name="numerocuenta" />
+    </Key>
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="numerocuenta" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="Tasacaptacion" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="plazo" Type="int" Nullable="false" />
+    <Property Name="fechainicio" Type="datetime" Nullable="false" />
+    <Property Name="valorcuota" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="interesliquidado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="saldoTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="saldoMinimo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="formapago" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="codlineaahorros" Type="char" MaxLength="4" />
+    <Property Name="nrocuentaahorros" Type="char" MaxLength="20" />
+    <Property Name="tasacaptacionanterior" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="fechainicioanterior" Type="datetime" />
+    <Property Name="f_ultimatransaccion" Type="datetime" />
+    <Property Name="interedisponible" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="interescausado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="f_ultimacausacion" Type="datetime" />
+    <Property Name="morosidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="rtefteacumulada" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="liquidacionautomatica" Type="char" MaxLength="1" />
+    <Property Name="fechaliquidacion" Type="datetime" />
+    <Property Name="liquidado" Type="char" MaxLength="1" />
+    <Property Name="gmfmesasociado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="gmfmesentidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="acumuladoretiros" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="transito" Type="decimal" Precision="9" Scale="0" />
+    <Property Name="pignorado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="tipocuota" Type="char" MaxLength="1" />
+    <Property Name="porcentajesalario" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="porcentajecuota" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="idahorroscontractual" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechainiciodeduccion" Type="datetime" />
+    <Property Name="web" Type="bit" />
+    <Property Name="fechaultvencimiento" Type="datetime" />
+    <Property Name="fuerenovado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="idasesores" Type="smallint" />
+    <Property Name="idoperador" Type="smallint" />
+  </EntityType>
+  <EntityType Name="ahorrospermanentes">
+    <Key>
+      <PropertyRef Name="codlinea" />
+      <PropertyRef Name="agencia" />
+      <PropertyRef Name="numerocuenta" />
+    </Key>
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="numerocuenta" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="tipoCuota" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="valor" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="porcentajeSalario" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="porcentajeCuota" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="saldoTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="saldoMinimo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="acumuladoretiros" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="transito" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="fechainicio" Type="datetime" Nullable="false" />
+    <Property Name="f_ultimatransaccion" Type="datetime" />
+    <Property Name="formapago" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="f_ultimacausacion" Type="datetime" />
+    <Property Name="interesliquidado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="interescausado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="interedisponible" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="rtefteacumulada" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="fechaliquidacion" Type="datetime" />
+    <Property Name="codlineaahorros" Type="char" MaxLength="4" />
+    <Property Name="nrocuentaahorros" Type="char" MaxLength="20" />
+    <Property Name="liquidacionautomatica" Type="char" MaxLength="1" />
+    <Property Name="liquidado" Type="char" MaxLength="1" />
+    <Property Name="morosidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="gmfmesasociado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="gmfmesentidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="idahorrospermanentes" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechainiciodeduccion" Type="smalldatetime" />
+    <Property Name="web" Type="bit" />
+    <Property Name="estado" Type="char" MaxLength="1" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="pignorado" Type="char" MaxLength="1" />
+    <Property Name="idasesores" Type="smallint" />
+  </EntityType>
+  <EntityType Name="aportessociales">
+    <Key>
+      <PropertyRef Name="codlinea" />
+      <PropertyRef Name="numerocuenta" />
+      <PropertyRef Name="agencia" />
+    </Key>
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="numerocuenta" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="saldoTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="fechaapertura" Type="datetime" Nullable="false" />
+    <Property Name="formaPago" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="morosidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="f_ultimatransaccion" Type="datetime" />
+    <Property Name="Porcentajesalario" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="Porcentajecuota" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="valorcuota" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="tipocuota" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="acumuladoretiros" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="multiplicador" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="idaportessociales" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechainiciodeduccion" Type="smalldatetime" />
+    <Property Name="web" Type="bit" />
+    <Property Name="estado" Type="char" MaxLength="1" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="idasesores" Type="smallint" />
+    <Property Name="zsisco" Type="bit" />
+  </EntityType>
+  <EntityType Name="asociados">
+    <Key>
+      <PropertyRef Name="cedulasociado" />
+    </Key>
+    <Property Name="cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="codnit" Type="varchar" MaxLength="15" />
+    <Property Name="codempresa" Type="char" MaxLength="10" />
+    <Property Name="coddependencia" Type="char" MaxLength="10" />
+    <Property Name="periododeduce" Type="char" MaxLength="1" />
+    <Property Name="fechanacimiento" Type="datetime" />
+    <Property Name="deduceocacional" Type="char" MaxLength="1" />
+    <Property Name="sexo" Type="char" MaxLength="1" />
+    <Property Name="estudios" Type="char" MaxLength="1" />
+    <Property Name="codprofesion" Type="char" MaxLength="4" />
+    <Property Name="estadocivil" Type="char" MaxLength="2" />
+    <Property Name="nroacta" Type="char" MaxLength="10" />
+    <Property Name="fechaacta" Type="datetime" />
+    <Property Name="salario" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="codempresalabora" Type="char" MaxLength="12" />
+    <Property Name="fechaingresoLabora" Type="datetime" />
+    <Property Name="tipocontrato" Type="char" MaxLength="3" />
+    <Property Name="fechaterminacontrato" Type="datetime" />
+    <Property Name="cargo" Type="char" MaxLength="4" />
+    <Property Name="codbanco" Type="char" MaxLength="4" />
+    <Property Name="numerocuenta" Type="varchar" MaxLength="20" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="codanalista" Type="bigint" Nullable="false" />
+    <Property Name="rutaanalista" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="tipocuenta" Type="char" MaxLength="1" />
+    <Property Name="estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="ultimaactualizacion" Type="datetime" />
+    <Property Name="operadoractualizo" Type="varchar" MaxLength="4" />
+    <Property Name="paisnace" Type="char" MaxLength="3" />
+    <Property Name="dptonace" Type="char" MaxLength="2" />
+    <Property Name="ciudadnace" Type="char" MaxLength="5" />
+    <Property Name="idnits" Type="bigint" Nullable="false" />
+    <Property Name="idtipovivienda" Type="smallint" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="idtiposalario" Type="smallint" />
+    <Property Name="tipopacto" Type="char" MaxLength="1" />
+    <Property Name="web" Type="tinyint" />
+    <Property Name="idasociados" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigotipo" Type="char" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="barrios">
+    <Key>
+      <PropertyRef Name="codpais" />
+      <PropertyRef Name="coddepartamento" />
+      <PropertyRef Name="codciudad" />
+      <PropertyRef Name="codzona" />
+      <PropertyRef Name="codcomuna" />
+      <PropertyRef Name="codbarrio" />
+    </Key>
+    <Property Name="codpais" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="coddepartamento" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codciudad" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="codzona" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codcomuna" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codbarrio" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idbarrios" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="web" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="ciiu">
+    <Key>
+      <PropertyRef Name="codciiu" />
+    </Key>
+    <Property Name="codsector" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="codciiu" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="250" />
+    <Property Name="idciiu" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="porcentaje" Type="decimal" Precision="10" Scale="6" />
+    <Property Name="web" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ciudades">
+    <Key>
+      <PropertyRef Name="codpais" />
+      <PropertyRef Name="coddepartamento" />
+      <PropertyRef Name="codciudad" />
+    </Key>
+    <Property Name="codpais" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="coddepartamento" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codciudad" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="nombreciudad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="idciudades" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="web" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="comunas">
+    <Key>
+      <PropertyRef Name="codpais" />
+      <PropertyRef Name="coddepartamento" />
+      <PropertyRef Name="codciudad" />
+      <PropertyRef Name="codzona" />
+      <PropertyRef Name="codcomuna" />
+    </Key>
+    <Property Name="codpais" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="coddepartamento" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codciudad" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="codzona" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codcomuna" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="nombrecomuna" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="idcomunas" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="web" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="costosliquidacion">
+    <Key>
+      <PropertyRef Name="registro" />
+    </Key>
+    <Property Name="registro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nrosolicitud" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="pagare" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="codcuenta" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="valorcosto" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="tipocosto" Type="char" MaxLength="1" />
+    <Property Name="valorcancelado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="nroliquidacion" Type="int" />
+    <Property Name="fechacancelado" Type="datetime" />
+    <Property Name="fechapago" Type="datetime" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="periododegracia" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="numerocosto" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="web" Type="bit" />
+    <Property Name="porcentaje" Type="decimal" Precision="9" Scale="6" />
+  </EntityType>
+  <EntityType Name="creditos">
+    <Key>
+      <PropertyRef Name="pagare" />
+    </Key>
+    <Property Name="cedulasociado" Type="bigint" />
+    <Property Name="codlinea" Type="char" MaxLength="4" />
+    <Property Name="coddestino" Type="char" MaxLength="4" />
+    <Property Name="codgarantia" Type="char" MaxLength="10" />
+    <Property Name="valorgarantia" Type="float" />
+    <Property Name="pagare" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="F_iniciofinanciacion" Type="datetime" />
+    <Property Name="f_ultimacausacion" Type="datetime" />
+    <Property Name="f_cargoprestamo" Type="datetime" />
+    <Property Name="f_ultimopago" Type="datetime" />
+    <Property Name="capital" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="capitalinicial" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="cancelado" Type="char" MaxLength="1" />
+    <Property Name="tasacolocacion" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="plazo" Type="char" MaxLength="6" />
+    <Property Name="anualidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="intcorriente" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="intmora" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="intcorrientenocontabilizado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="intmoranocontabilizado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="saldocapital" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="estado" Type="char" MaxLength="1" />
+    <Property Name="formapago" Type="char" MaxLength="1" />
+    <Property Name="adjetivo" Type="char" MaxLength="2" />
+    <Property Name="tipocuota" Type="char" MaxLength="1" />
+    <Property Name="modalidadinteres" Type="char" MaxLength="1" />
+    <Property Name="periodointeres" Type="char" MaxLength="1" />
+    <Property Name="modalidadcapital" Type="char" MaxLength="1" />
+    <Property Name="periodocapital" Type="char" MaxLength="1" />
+    <Property Name="asientonomina" Type="char" MaxLength="1" />
+    <Property Name="codoperador" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="fechasistema" Type="datetime" />
+    <Property Name="tasainicial" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="tasaanterior" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="libranza" Type="char" MaxLength="15" />
+    <Property Name="datacredito" Type="char" MaxLength="1" />
+    <Property Name="cuotainteres" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="codsubdestino" Type="char" MaxLength="4" />
+    <Property Name="procredito" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="juridico" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="saldoponersedia" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="cuotasmora" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="diasmora" Type="int" />
+    <Property Name="prejuridico" Type="char" MaxLength="1" />
+    <Property Name="extrapordias" Type="char" MaxLength="1" />
+    <Property Name="tasanominal" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="tasaefectiva" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="fechasaldoponersedia" Type="datetime" />
+    <Property Name="idcredito" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechavence" Type="datetime" />
+    <Property Name="web" Type="bit" />
+    <Property Name="diasmorareales" Type="int" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="cuentasnovedadesvarias">
+    <Key>
+      <PropertyRef Name="codnovedad" />
+    </Key>
+    <Property Name="codnovedad" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="codcuenta" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tiponovedad" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="controlenlaentidad" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="naturalezamovimientosrecaudos" Type="char" MaxLength="1" />
+    <Property Name="idcuentasnovedadesvarias" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="zsisco" Type="bit" />
+  </EntityType>
+  <EntityType Name="departamentos">
+    <Key>
+      <PropertyRef Name="codpais" />
+      <PropertyRef Name="coddepartamento" />
+    </Key>
+    <Property Name="codpais" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="coddepartamento" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="nombredepartamento" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="iddepartamentos" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="web" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="dependenciasempresas">
+    <Key>
+      <PropertyRef Name="codempresa" />
+      <PropertyRef Name="coddependencia" />
+    </Key>
+    <Property Name="codempresa" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="coddependencia" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="nombredependencia" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="telefono" Type="char" MaxLength="12" />
+    <Property Name="fax" Type="char" MaxLength="12" />
+    <Property Name="direccion" Type="varchar" MaxLength="40" />
+    <Property Name="codpais" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="coddepartamento" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codciudad" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="nitempresa" Type="bigint" />
+    <Property Name="email" Type="varchar" MaxLength="40" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="iddependenciasempresas" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="web" Type="bit" />
+    <Property Name="szin" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="destinos">
+    <Key>
+      <PropertyRef Name="Coddestino" />
+      <PropertyRef Name="codlinea" />
+    </Key>
+    <Property Name="Coddestino" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="nombredestino" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="clase" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="tasacolocacionminima" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="tasacolocacionmaxima" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="tasapordefecto" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="tasaMora" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="tasacolocaciondtf" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="montominimo" Type="float" Nullable="false" />
+    <Property Name="montomaximo" Type="float" Nullable="false" />
+    <Property Name="peridominimodias" Type="int" Nullable="false" />
+    <Property Name="periodomaximodias" Type="int" Nullable="false" />
+    <Property Name="pidenroliquidacion" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="pidenropagareliquidacion" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="pidefechainicialcredito" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="financiainterescorriente" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="capitalizainteres" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="cobrainteresabonoextradias" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="causainteresanticipado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="igualPlanPago" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="periodogracia" Type="int" Nullable="false" />
+    <Property Name="formacobrodtf" Type="char" MaxLength="1" />
+    <Property Name="utilizarangostasaoplazo" Type="char" MaxLength="2" />
+    <Property Name="manejacalendariofestivo" Type="char" MaxLength="1" />
+    <Property Name="acumulafestivos" Type="char" MaxLength="1" />
+    <Property Name="tipotasavariable" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="conservapuntostasavariable" Type="char" MaxLength="1" />
+    <Property Name="iddestino" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="extrasreestructuran" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="periodicidad" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="web" Type="bit" />
+    <Property Name="szin" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="divisionciiu">
+    <Key>
+      <PropertyRef Name="codciiu" />
+      <PropertyRef Name="coddivision" />
+    </Key>
+    <Property Name="codciiu" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="coddivision" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="iddivisionciiu" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="web" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="empresas">
+    <Key>
+      <PropertyRef Name="codempresa" />
+    </Key>
+    <Property Name="codempresa" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="nitempresa" Type="bigint" Nullable="false" />
+    <Property Name="nombreempresa" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="codciiu" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="50" />
+    <Property Name="codpais" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="ciudad" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="departamento" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="telefono" Type="varchar" MaxLength="12" />
+    <Property Name="representante" Type="varchar" MaxLength="30" />
+    <Property Name="pagador" Type="varchar" MaxLength="30" />
+    <Property Name="formapago" Type="char" MaxLength="1" />
+    <Property Name="numerosemanas" Type="int" />
+    <Property Name="numerodecadas" Type="int" />
+    <Property Name="numerocatorcenas" Type="int" />
+    <Property Name="numeroquincenas" Type="int" />
+    <Property Name="numeromes" Type="int" />
+    <Property Name="fechaingreso" Type="datetime" />
+    <Property Name="fecharetiro" Type="datetime" />
+    <Property Name="empresaretirados" Type="char" MaxLength="1" />
+    <Property Name="cobramora" Type="char" MaxLength="1" />
+    <Property Name="fechacorte" Type="datetime" />
+    <Property Name="diasgraciasemana" Type="char" MaxLength="2" />
+    <Property Name="diasgraciaquincena" Type="char" MaxLength="2" />
+    <Property Name="diasgraciadecada" Type="char" MaxLength="2" />
+    <Property Name="diasgraciacatorcenas" Type="char" MaxLength="2" />
+    <Property Name="diasgraciasmes" Type="char" MaxLength="2" />
+    <Property Name="capturadatos" Type="char" MaxLength="1" />
+    <Property Name="periododeduccion" Type="char" MaxLength="1" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="morapornomina" Type="char" MaxLength="1" />
+    <Property Name="certificada" Type="char" MaxLength="1" />
+    <Property Name="idempresas" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numerobimes" Type="smallint" />
+    <Property Name="numerotrimes" Type="smallint" />
+    <Property Name="numerosemestre" Type="smallint" />
+    <Property Name="web" Type="bit" />
+    <Property Name="regional" Type="varchar" MaxLength="20" />
+    <Property Name="numeroventiochenas" Type="smallint" />
+    <Property Name="szin" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="hahorrosalavista">
+    <Key>
+      <PropertyRef Name="idhahorrosalavista" />
+    </Key>
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="mes" Type="int" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="numerocuenta" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="saldoTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="saldoMinimo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="acumuladoretiros" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="transito" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="fechainicio" Type="datetime" Nullable="false" />
+    <Property Name="f_ultimatransaccion" Type="datetime" />
+    <Property Name="interesliquidado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="f_ultimacausacion" Type="datetime" />
+    <Property Name="interedisponible" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="rtefteacumulada" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="gmfMesasociado" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="gmfMesentidad" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="interescausado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="morosidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="formapago" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="valorcuota" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="tarjetadebitobloqueada" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="cupotarjetadebito" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="numerodetarjetadebito" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="numerotramamega" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="numerotramaopa" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="consignaciontitular" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="fechainiciodeduccion" Type="smalldatetime" />
+    <Property Name="web" Type="bit" />
+    <Property Name="idhahorrosalavista" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="hahorrosAtermino">
+    <Key>
+      <PropertyRef Name="idhahorrosAtermino" />
+    </Key>
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="mes" Type="int" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="numerocuenta" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="Cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="beneficiario1" Type="bigint" />
+    <Property Name="nombrebeneficiario1" Type="varchar" MaxLength="40" />
+    <Property Name="beneficiario2" Type="bigint" />
+    <Property Name="nombrebeneficiario2" Type="varchar" MaxLength="40" />
+    <Property Name="fechainicio" Type="datetime" Nullable="false" />
+    <Property Name="fechaRenovacion" Type="datetime" />
+    <Property Name="fecharenovainteres" Type="datetime" />
+    <Property Name="f_ultimatransaccion" Type="datetime" />
+    <Property Name="PeriodoLiquida" Type="int" Nullable="false" />
+    <Property Name="plazo" Type="int" Nullable="false" />
+    <Property Name="tasacaptacion" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="pignorado" Type="char" MaxLength="1" />
+    <Property Name="modalidad" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="saldototal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="interesanticipado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="interescausado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="capitaliza" Type="char" MaxLength="1" />
+    <Property Name="interedisponible" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="codlineaahorros" Type="char" MaxLength="4" />
+    <Property Name="nrocuentaahorros" Type="char" MaxLength="20" />
+    <Property Name="tasacaptacionanterior" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="f_ultimacausacion" Type="datetime" />
+    <Property Name="rtefteacumulada" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="gmfmesasociado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="gmfmesentidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="acumuladoretiros" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="fechavencimientocapital" Type="smalldatetime" />
+    <Property Name="fechavencimientointeres" Type="datetime" />
+    <Property Name="operador" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="fecharealcreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="agenciaoriginalmes" Type="int" Nullable="false" />
+    <Property Name="valortitulo" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="web" Type="bit" />
+    <Property Name="idhahorrosAtermino" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="origenfondos" Type="char" MaxLength="1" />
+    <Property Name="f_sgtevctoktal" Type="datetime" />
+  </EntityType>
+  <EntityType Name="hahorrosContractual">
+    <Key>
+      <PropertyRef Name="idhahorrosContractual" />
+    </Key>
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="mes" Type="int" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="numerocuenta" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="Tasacaptacion" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="plazo" Type="int" Nullable="false" />
+    <Property Name="fechainicio" Type="datetime" Nullable="false" />
+    <Property Name="valorcuota" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="interesliquidado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="saldoTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="saldoMinimo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="formapago" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="codlineaahorros" Type="char" MaxLength="4" />
+    <Property Name="nrocuentaahorros" Type="char" MaxLength="20" />
+    <Property Name="tasacaptacionanterior" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="fechainicioanterior" Type="datetime" />
+    <Property Name="f_ultimatransaccion" Type="datetime" />
+    <Property Name="interedisponible" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="interescausado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="f_ultimacausacion" Type="datetime" />
+    <Property Name="morosidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="rtefteacumulada" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="liquidacionautomatica" Type="char" MaxLength="1" />
+    <Property Name="fechaliquidacion" Type="datetime" />
+    <Property Name="liquidado" Type="char" MaxLength="1" />
+    <Property Name="gmfmesasociado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="gmfmesentidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="acumuladoretiros" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="transito" Type="decimal" Precision="9" Scale="0" />
+    <Property Name="pignorado" Type="char" MaxLength="1" />
+    <Property Name="tipocuota" Type="char" MaxLength="1" />
+    <Property Name="porcentajesalario" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="porcentajecuota" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="fechainiciodeduccion" Type="datetime" />
+    <Property Name="web" Type="bit" />
+    <Property Name="fechaultvencimiento" Type="datetime" />
+    <Property Name="idhahorrosContractual" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="hahorrospermanentes">
+    <Key>
+      <PropertyRef Name="idhahorrospermanentes" />
+    </Key>
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="mes" Type="int" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="numerocuenta" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="tipoCuota" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="valor" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="porcentajeSalario" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="porcentajeCuota" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="saldoTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="saldoMinimo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="acumuladoretiros" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="transito" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="fechainicio" Type="datetime" Nullable="false" />
+    <Property Name="f_ultimatransaccion" Type="datetime" />
+    <Property Name="formapago" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="f_ultimacausacion" Type="datetime" />
+    <Property Name="interesliquidado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="interescausado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="interedisponible" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="rtefteacumulada" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="fechaliquidacion" Type="datetime" />
+    <Property Name="codlineaahorros" Type="char" MaxLength="4" />
+    <Property Name="nrocuentaahorros" Type="char" MaxLength="20" />
+    <Property Name="liquidacionautomatica" Type="char" MaxLength="1" />
+    <Property Name="liquidado" Type="char" MaxLength="1" />
+    <Property Name="morosidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="gmfmesasociado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="gmfmesentidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="fechainiciodeduccion" Type="smalldatetime" />
+    <Property Name="web" Type="bit" />
+    <Property Name="estado" Type="char" MaxLength="1" />
+    <Property Name="idhahorrospermanentes" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="hAportesSociales">
+    <Key>
+      <PropertyRef Name="idhAportesSociales" />
+    </Key>
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="mes" Type="int" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="numerocuenta" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="saldoTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="fechaapertura" Type="datetime" Nullable="false" />
+    <Property Name="formaPago" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="morosidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="f_ultimatransaccion" Type="datetime" />
+    <Property Name="Porcentajesalario" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="Porcentajecuota" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="valorcuota" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="tipocuota" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="acumuladoretiros" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="multiplicador" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="fechainiciodeduccion" Type="smalldatetime" />
+    <Property Name="web" Type="bit" />
+    <Property Name="estado" Type="char" MaxLength="1" />
+    <Property Name="idhAportesSociales" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="hasociados">
+    <Key>
+      <PropertyRef Name="año" />
+      <PropertyRef Name="mes" />
+      <PropertyRef Name="cedulasociado" />
+    </Key>
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="mes" Type="int" Nullable="false" />
+    <Property Name="cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="codnit" Type="varchar" MaxLength="15" />
+    <Property Name="codempresa" Type="char" MaxLength="10" />
+    <Property Name="coddependencia" Type="char" MaxLength="10" />
+    <Property Name="periododeduce" Type="char" MaxLength="1" />
+    <Property Name="fechanacimiento" Type="datetime" />
+    <Property Name="deduceocacional" Type="char" MaxLength="1" />
+    <Property Name="sexo" Type="char" MaxLength="1" />
+    <Property Name="estudios" Type="char" MaxLength="1" />
+    <Property Name="codprofesion" Type="char" MaxLength="4" />
+    <Property Name="estadocivil" Type="char" MaxLength="2" />
+    <Property Name="nroacta" Type="char" MaxLength="10" />
+    <Property Name="fechaacta" Type="datetime" />
+    <Property Name="salario" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="codempresalabora" Type="char" MaxLength="12" />
+    <Property Name="fechaingresoLabora" Type="datetime" />
+    <Property Name="tipocontrato" Type="char" MaxLength="3" />
+    <Property Name="fechaterminacontrato" Type="datetime" />
+    <Property Name="cargo" Type="char" MaxLength="4" />
+    <Property Name="codbanco" Type="char" MaxLength="4" />
+    <Property Name="numerocuenta" Type="varchar" MaxLength="20" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="codanalista" Type="bigint" Nullable="false" />
+    <Property Name="rutaanalista" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="tipocuenta" Type="char" MaxLength="1" />
+    <Property Name="estado" Type="char" MaxLength="1" />
+    <Property Name="ultimaactualizacion" Type="datetime" />
+    <Property Name="operadoractualizo" Type="varchar" MaxLength="4" />
+    <Property Name="paisnace" Type="char" MaxLength="3" />
+    <Property Name="dptonace" Type="char" MaxLength="2" />
+    <Property Name="ciudadnace" Type="char" MaxLength="5" />
+    <Property Name="idtipovivienda" Type="smallint" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="idtiposalario" Type="smallint" />
+    <Property Name="tipopacto" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="hcreditos">
+    <Key>
+      <PropertyRef Name="año" />
+      <PropertyRef Name="mes" />
+      <PropertyRef Name="pagare" />
+    </Key>
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="mes" Type="int" Nullable="false" />
+    <Property Name="cedulasociado" Type="bigint" />
+    <Property Name="codlinea" Type="char" MaxLength="4" />
+    <Property Name="coddestino" Type="char" MaxLength="4" />
+    <Property Name="codgarantia" Type="char" MaxLength="4" />
+    <Property Name="valorgarantia" Type="float" />
+    <Property Name="pagare" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="F_iniciofinanciacion" Type="datetime" />
+    <Property Name="f_ultimacausacion" Type="datetime" />
+    <Property Name="f_cargoprestamo" Type="datetime" />
+    <Property Name="f_ultimopago" Type="datetime" />
+    <Property Name="capital" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="capitalinicial" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="cancelado" Type="char" MaxLength="1" />
+    <Property Name="tasacolocacion" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="plazo" Type="char" MaxLength="6" />
+    <Property Name="anualidad" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="intcorriente" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="intmora" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="intcorrientenocontabilizado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="intmoranocontabilizado" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="saldocapital" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="estado" Type="char" MaxLength="1" />
+    <Property Name="formapago" Type="char" MaxLength="1" />
+    <Property Name="adjetivo" Type="char" MaxLength="2" />
+    <Property Name="tipocuota" Type="char" MaxLength="1" />
+    <Property Name="modalidadinteres" Type="char" MaxLength="1" />
+    <Property Name="periodointeres" Type="char" MaxLength="1" />
+    <Property Name="modalidadcapital" Type="char" MaxLength="1" />
+    <Property Name="periodocapital" Type="char" MaxLength="1" />
+    <Property Name="asientonomina" Type="char" MaxLength="1" />
+    <Property Name="codoperador" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="fechasistema" Type="datetime" />
+    <Property Name="tasainicial" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="tasaanterior" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="libranza" Type="char" MaxLength="15" />
+    <Property Name="datacredito" Type="char" MaxLength="1" />
+    <Property Name="cuotainteres" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="codsubdestino" Type="char" MaxLength="4" />
+    <Property Name="procredito" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="juridico" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="saldoponersedia" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="cuotasmora" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="diasmora" Type="int" />
+    <Property Name="prejuridico" Type="char" MaxLength="1" />
+    <Property Name="extrapordias" Type="char" MaxLength="1" />
+    <Property Name="tasanominal" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="tasaefectiva" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="fechasaldoponersedia" Type="datetime" />
+    <Property Name="fechavence" Type="smalldatetime" />
+    <Property Name="web" Type="bit" />
+    <Property Name="diasmorareales" Type="int" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="hnits">
+    <Key>
+      <PropertyRef Name="año" />
+      <PropertyRef Name="mes" />
+      <PropertyRef Name="nit" />
+    </Key>
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="mes" Type="int" Nullable="false" />
+    <Property Name="nit" Type="bigint" Nullable="false" />
+    <Property Name="digito" Type="tinyint" Nullable="false" />
+    <Property Name="primerApellido" Type="varchar" MaxLength="25" />
+    <Property Name="segundoapellido" Type="varchar" MaxLength="25" />
+    <Property Name="nombres" Type="varchar" MaxLength="20" />
+    <Property Name="nombreintegrado" Type="varchar" MaxLength="105" />
+    <Property Name="direccion" Type="varchar" MaxLength="50" />
+    <Property Name="tipoidentificacion" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="relacion" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="telefono1" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="extension1" Type="char" MaxLength="10" />
+    <Property Name="telefono2" Type="char" MaxLength="10" />
+    <Property Name="extencion2" Type="char" MaxLength="10" />
+    <Property Name="apartadoaereo" Type="varchar" MaxLength="12" />
+    <Property Name="codpaiscedula" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="codciudadcedula" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="enviocorrespondencia" Type="varchar" MaxLength="20" />
+    <Property Name="email" Type="char" MaxLength="50" />
+    <Property Name="fechaingreso" Type="datetime" Nullable="false" />
+    <Property Name="fecharetiro" Type="datetime" />
+    <Property Name="fechaultActualizacion" Type="datetime" Nullable="false" />
+    <Property Name="fechanacimiento" Type="datetime" />
+    <Property Name="codpais" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="coddepartamento" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codciudad" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="codzona" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codcomuna" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codbarrio" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="codciiu" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="coddivision" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="estrato" Type="char" MaxLength="2" />
+    <Property Name="beeper" Type="char" MaxLength="10" />
+    <Property Name="codbeeper" Type="char" MaxLength="4" />
+    <Property Name="celular" Type="char" MaxLength="12" />
+    <Property Name="segundonombre" Type="varchar" MaxLength="25" />
+    <Property Name="operadoractualizo" Type="varchar" MaxLength="4" />
+    <Property Name="codsegmento" Type="char" MaxLength="3" />
+    <Property Name="fechaexpcedula" Type="datetime" />
+  </EntityType>
+  <EntityType Name="lineas">
+    <Key>
+      <PropertyRef Name="codlinea" />
+    </Key>
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="codcuenta" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codcuentaingresocorrientes" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="codcuentaingresosmora" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="idlineas" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="zsisco" Type="bit" />
+  </EntityType>
+  <EntityType Name="nits">
+    <Key>
+      <PropertyRef Name="idnits" />
+    </Key>
+    <Property Name="idnits" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nit" Type="bigint" Nullable="false" />
+    <Property Name="digito" Type="tinyint" />
+    <Property Name="primerapellido" Type="varchar" MaxLength="25" />
+    <Property Name="segundoapellido" Type="varchar" MaxLength="25" />
+    <Property Name="nombres" Type="varchar" MaxLength="20" />
+    <Property Name="nombreintegrado" Type="varchar" MaxLength="105" />
+    <Property Name="direccion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tipoidentificacion" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="relacion" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="telefono1" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="extension1" Type="char" MaxLength="10" />
+    <Property Name="telefono2" Type="char" MaxLength="10" />
+    <Property Name="extencion2" Type="char" MaxLength="10" />
+    <Property Name="apartadoaereo" Type="varchar" MaxLength="12" />
+    <Property Name="codpaiscedula" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="codciudadcedula" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="enviocorrespondencia" Type="varchar" MaxLength="20" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="fechaingreso" Type="datetime" Nullable="false" />
+    <Property Name="fecharetiro" Type="datetime" />
+    <Property Name="fechaultactualizacion" Type="datetime" Nullable="false" />
+    <Property Name="fechanacimiento" Type="datetime" />
+    <Property Name="codpais" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="coddepartamento" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codciudad" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="codzona" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codcomuna" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codbarrio" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="codciiu" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="coddivision" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="estrato" Type="char" MaxLength="2" />
+    <Property Name="beeper" Type="char" MaxLength="10" />
+    <Property Name="codbeeper" Type="char" MaxLength="4" />
+    <Property Name="celular" Type="char" MaxLength="12" />
+    <Property Name="segundonombre" Type="varchar" MaxLength="25" />
+    <Property Name="operadoractualizo" Type="varchar" MaxLength="4" />
+    <Property Name="codsegmento" Type="char" MaxLength="3" />
+    <Property Name="fechaexpcedula" Type="datetime" />
+  </EntityType>
+  <EntityType Name="novedadesvariasnocausadas">
+    <Key>
+      <PropertyRef Name="cedulasociado" />
+      <PropertyRef Name="codnovedad" />
+    </Key>
+    <Property Name="cedulasociado" Type="bigint" Nullable="false" />
+    <Property Name="codnovedad" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="cuota" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="formapago" Type="char" MaxLength="1" />
+    <Property Name="fechacargo" Type="datetime" />
+    <Property Name="agencia" Type="int" />
+    <Property Name="estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="idnovedadesvariasnocausadas" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechainiciodeduccion" Type="smalldatetime" />
+    <Property Name="web" Type="bit" />
+    <Property Name="igualperiododeduce" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="zsisco" Type="bit" />
+  </EntityType>
+  <EntityType Name="pais">
+    <Key>
+      <PropertyRef Name="codpais" />
+    </Key>
+    <Property Name="codpais" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="idpais" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="web" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="parameahorroAlaVista">
+    <Key>
+      <PropertyRef Name="codlinea" />
+    </Key>
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="tasaCaptacion" Type="decimal" Precision="6" Scale="4" Nullable="false" />
+    <Property Name="CodCuenta" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="periodogracia" Type="int" Nullable="false" />
+    <Property Name="periodoliquida" Type="int" Nullable="false" />
+    <Property Name="periodoinactivo" Type="int" />
+    <Property Name="multiplicador" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="saldominimoliquinteres" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="saldominimocuenta" Type="numeric" Precision="18" Scale="4" />
+    <Property Name="codfuente" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="cuentaretencion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="cuentagastointeres" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tipoliquidacion" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="ManejaConsecutivo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="codcuentainactivos" Type="varchar" MaxLength="10" />
+    <Property Name="cuentacausa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="liquidaintereses" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="cuotaminmensual" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="cuotamaxmensual" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="datoscomplementarios" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="asignacuenta" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="reconocerinteres" Type="char" MaxLength="1" />
+    <Property Name="controlaretiros" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="permiteconclave" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="valormax" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="idparametro" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="saldominimomaneja" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="web" Type="bit" />
+    <Property Name="zsisco" Type="bit" />
+  </EntityType>
+  <EntityType Name="personacargo">
+    <Key>
+      <PropertyRef Name="registro" />
+    </Key>
+    <Property Name="registro" Type="int" Nullable="false" />
+    <Property Name="cedulaAsociado" Type="bigint" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="30" />
+    <Property Name="nit" Type="bigint" />
+    <Property Name="tipoidentificacion" Type="char" MaxLength="1" />
+    <Property Name="sexo" Type="char" MaxLength="1" />
+    <Property Name="fechanacimiento" Type="datetime" />
+    <Property Name="parentesco" Type="char" MaxLength="2" />
+    <Property Name="fechaingreso" Type="datetime" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="estudiante" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="discapacitado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="terceraedad" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="administracion" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="tratamiento" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="codigoniveleducativo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="email" Type="char" MaxLength="200" />
+    <Property Name="celular" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="plancuentas">
+    <Key>
+      <PropertyRef Name="codcuenta" />
+    </Key>
+    <Property Name="codcuenta" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="naturaleza" Type="char" MaxLength="1" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="nivel" Type="int" />
+    <Property Name="documentoreferencia" Type="char" MaxLength="1" />
+    <Property Name="cuentamovimiento" Type="char" MaxLength="1" />
+    <Property Name="tercero" Type="char" MaxLength="1" />
+    <Property Name="requierecentrocostos" Type="char" MaxLength="1" />
+    <Property Name="centrocostos" Type="varchar" MaxLength="10" />
+    <Property Name="año" Type="int" />
+    <Property Name="triibutaria" Type="char" MaxLength="1" />
+    <Property Name="cuentatributaria" Type="char" MaxLength="1" />
+    <Property Name="porcentaje" Type="decimal" Precision="10" Scale="3" />
+    <Property Name="baseretencion" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="estado" Type="char" MaxLength="1" />
+    <Property Name="estadodecuentas" Type="char" MaxLength="1" />
+    <Property Name="anexos" Type="char" MaxLength="1" />
+    <Property Name="debito1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debito2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debito3" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debito4" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debito5" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debito6" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debito7" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debito8" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debito9" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debito10" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debito11" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debito12" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debito13" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito3" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito4" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito5" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito6" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito7" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito8" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito9" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito10" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito11" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito12" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credito13" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="debitoapertura" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="creditoApertura" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="nitgenerico" Type="bigint" />
+  </EntityType>
+  <EntityType Name="profesiones">
+    <Key>
+      <PropertyRef Name="codprofesion" />
+    </Key>
+    <Property Name="codprofesion" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="nombreprofesion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="web" Type="bit" />
+    <Property Name="idprofesion" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="tipo" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="sahorrosalavista">
+    <Key>
+      <PropertyRef Name="nroregistro" />
+    </Key>
+    <Property Name="nroregistro" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="nrocuenta" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="fechatrabajo" Type="datetime" Nullable="false" />
+    <Property Name="operador" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="valorefectivo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="valorcheque" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="documento" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="natura" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="fechasistema" Type="datetime" />
+    <Property Name="numerodocumento" Type="char" MaxLength="15" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="concepto" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="tasa" Type="numeric" Precision="18" Scale="5" />
+    <Property Name="pagare" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="estadotarjeta" Type="char" MaxLength="1" />
+    <Property Name="agenciatransaccion" Type="int" Nullable="false" />
+    <Property Name="transito" Type="decimal" Precision="9" Scale="0" />
+    <Property Name="detalle" Type="varchar" MaxLength="250" />
+    <Property Name="recibo" Type="varchar" MaxLength="15" />
+    <Property Name="conceptotraslado" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="saldoanterior" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="consolidado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="sahorrosAtermino">
+    <Key>
+      <PropertyRef Name="nroregistro" />
+    </Key>
+    <Property Name="nroregistro" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="nrocuenta" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="fechatrabajo" Type="datetime" Nullable="false" />
+    <Property Name="operador" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="valorefectivo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="valorcheque" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="documento" Type="char" MaxLength="10" />
+    <Property Name="natura" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="fechasistema" Type="datetime" />
+    <Property Name="numerodocumento" Type="char" MaxLength="15" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="concepto" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="tasa" Type="numeric" Precision="18" Scale="5" />
+    <Property Name="pagare" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="estadotarjeta" Type="char" MaxLength="1" />
+    <Property Name="agenciatransaccion" Type="int" Nullable="false" />
+    <Property Name="transito" Type="decimal" Precision="9" Scale="0" />
+    <Property Name="detalle" Type="varchar" MaxLength="250" />
+    <Property Name="recibo" Type="varchar" MaxLength="15" />
+    <Property Name="conceptotraslado" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="consolidado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="sahorrosContractual">
+    <Key>
+      <PropertyRef Name="nroregistro" />
+    </Key>
+    <Property Name="nroregistro" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="nrocuenta" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="fechatrabajo" Type="datetime" Nullable="false" />
+    <Property Name="operador" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="valorefectivo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="valorcheque" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="documento" Type="char" MaxLength="10" />
+    <Property Name="natura" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="fechasistema" Type="datetime" />
+    <Property Name="numerodocumento" Type="char" MaxLength="15" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="concepto" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="tasa" Type="numeric" Precision="18" Scale="5" />
+    <Property Name="pagare" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="estadotarjeta" Type="char" MaxLength="1" />
+    <Property Name="agenciatransaccion" Type="int" Nullable="false" />
+    <Property Name="transito" Type="decimal" Precision="9" Scale="0" />
+    <Property Name="detalle" Type="varchar" MaxLength="250" />
+    <Property Name="recibo" Type="varchar" MaxLength="15" />
+    <Property Name="conceptotraslado" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="saldoanterior" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="consolidado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="sahorrospermanentes">
+    <Key>
+      <PropertyRef Name="nroregistro" />
+    </Key>
+    <Property Name="nroregistro" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="nrocuenta" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="fechatrabajo" Type="datetime" Nullable="false" />
+    <Property Name="operador" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="valorefectivo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="valorcheque" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="documento" Type="char" MaxLength="10" />
+    <Property Name="natura" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="fechasistema" Type="datetime" />
+    <Property Name="numerodocumento" Type="char" MaxLength="15" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="concepto" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="tasa" Type="numeric" Precision="18" Scale="5" />
+    <Property Name="pagare" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="estadotarjeta" Type="char" MaxLength="1" />
+    <Property Name="agenciatransaccion" Type="int" Nullable="false" />
+    <Property Name="transito" Type="decimal" Precision="9" Scale="0" />
+    <Property Name="detalle" Type="varchar" MaxLength="250" />
+    <Property Name="recibo" Type="varchar" MaxLength="15" />
+    <Property Name="conceptotraslado" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="saldoanterior" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="consolidado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="sAportesSociales">
+    <Key>
+      <PropertyRef Name="nroregistro" />
+    </Key>
+    <Property Name="nroregistro" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="nrocuenta" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="fechatrabajo" Type="datetime" Nullable="false" />
+    <Property Name="operador" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="valorefectivo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="valorcheque" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="documento" Type="char" MaxLength="10" />
+    <Property Name="natura" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="fechasistema" Type="datetime" />
+    <Property Name="numerodocumento" Type="char" MaxLength="15" />
+    <Property Name="agencia" Type="int" Nullable="false" />
+    <Property Name="concepto" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="tasa" Type="numeric" Precision="18" Scale="5" />
+    <Property Name="pagare" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="estadotarjeta" Type="char" MaxLength="1" />
+    <Property Name="agenciatransaccion" Type="int" Nullable="false" />
+    <Property Name="detalle" Type="varchar" MaxLength="250" />
+    <Property Name="recibo" Type="varchar" MaxLength="15" />
+    <Property Name="conceptotraslado" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="saldoanterior" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="seguimientocredito">
+    <Key>
+      <PropertyRef Name="registro" />
+    </Key>
+    <Property Name="registro" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cedulasociado" Type="bigint" />
+    <Property Name="fechaTrabajo" Type="datetime" />
+    <Property Name="codoperador" Type="varchar" MaxLength="4" />
+    <Property Name="totalefectivo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="documento" Type="char" MaxLength="10" />
+    <Property Name="natura" Type="char" MaxLength="4" />
+    <Property Name="pagare" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="fechasistema" Type="datetime" />
+    <Property Name="tasacolocacion" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="cuotainteres" Type="decimal" Precision="18" Scale="10" />
+    <Property Name="agencia" Type="int" />
+    <Property Name="tipocargo" Type="char" MaxLength="1" />
+    <Property Name="recibopago" Type="char" MaxLength="15" />
+    <Property Name="agenciatransaccion" Type="int" Nullable="false" />
+    <Property Name="estadotarjeta" Type="char" MaxLength="1" />
+    <Property Name="codcuenta" Type="varchar" MaxLength="10" />
+    <Property Name="concepto" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="pertenecepago" Type="int" />
+  </EntityType>
+  <EntityType Name="tasasplazoahorrotermino">
+    <Key>
+      <PropertyRef Name="nroregistro" />
+    </Key>
+    <Property Name="nroregistro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="plazo" Type="int" />
+    <Property Name="tasa" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="moditasarenovacioninteres" Type="char" MaxLength="1" />
+    <Property Name="moditasarenoacioncapital" Type="char" MaxLength="1" />
+    <Property Name="PeriodoLiquida" Type="int" />
+    <Property Name="permitemodificar" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="web" Type="bit" />
+  </EntityType>
+  <EntityType Name="tasaspormontosyplazos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="idparametrosahorroatermino" Type="smallint" Nullable="false" />
+    <Property Name="montodesde" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="montohasta" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="plazodesde" Type="int" Nullable="false" />
+    <Property Name="plazohasta" Type="int" Nullable="false" />
+    <Property Name="tasa" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="modificatasaen" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="id" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="periodoliquidadesde" Type="int" />
+    <Property Name="periodoliquidahasta" Type="int" />
+  </EntityType>
+  <EntityType Name="tasasporplazos">
+    <Key>
+      <PropertyRef Name="nroregistro" />
+      <PropertyRef Name="codlinea" />
+      <PropertyRef Name="coddestino" />
+    </Key>
+    <Property Name="nroregistro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="coddestino" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="plazoinicial" Type="int" />
+    <Property Name="plazofinal" Type="int" />
+    <Property Name="tasainteres" Type="numeric" Precision="18" Scale="10" />
+    <Property Name="web" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tazasporplazos">
+    <Key>
+      <PropertyRef Name="nroregistro" />
+    </Key>
+    <Property Name="nroregistro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codlinea" Type="char" MaxLength="4" />
+    <Property Name="coddestino" Type="char" MaxLength="4" />
+    <Property Name="plazoinicial" Type="int" />
+    <Property Name="plazofinal" Type="int" />
+    <Property Name="tasainteres" Type="decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="Zonasgenerales">
+    <Key>
+      <PropertyRef Name="idzonasgenerales" />
+    </Key>
+    <Property Name="idzonasgenerales" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigozona" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="nombrezona" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="zonasgeograficas">
+    <Key>
+      <PropertyRef Name="codpais" />
+      <PropertyRef Name="coddepartamento" />
+      <PropertyRef Name="codciudad" />
+      <PropertyRef Name="codzona" />
+    </Key>
+    <Property Name="codpais" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="coddepartamento" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codciudad" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="codzona" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="nombrezona" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="idzonasgeograficas" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="szin" Type="tinyint" />
+    <Property Name="web" Type="tinyint" />
+  </EntityType>
+  <Association Name="FK_agencias_ciudades">
+    <End Role="ciudades" Type="Self.ciudades" Multiplicity="1" />
+    <End Role="agencias" Type="Self.agencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ciudades">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+      </Principal>
+      <Dependent Role="agencias">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepto" />
+        <PropertyRef Name="codciudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ahorroAlaVista_plancuentas">
+    <End Role="plancuentas" Type="Self.plancuentas" Multiplicity="1" />
+    <End Role="parameahorroAlaVista" Type="Self.parameahorroAlaVista" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plancuentas">
+        <PropertyRef Name="codcuenta" />
+      </Principal>
+      <Dependent Role="parameahorroAlaVista">
+        <PropertyRef Name="CodCuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ahorrosalavista_asociados_20">
+    <End Role="asociados" Type="Self.asociados" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ahorrosalavista" Type="Self.ahorrosalavista" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="asociados">
+        <PropertyRef Name="cedulasociado" />
+      </Principal>
+      <Dependent Role="ahorrosalavista">
+        <PropertyRef Name="Cedulasociado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_ahorrosalavista_operador_1' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_ahorrosalavista_operador_1" />-->
+  <Association Name="FK_ahorrosalavista_parameahorroAlaVista">
+    <End Role="parameahorroAlaVista" Type="Self.parameahorroAlaVista" Multiplicity="1" />
+    <End Role="ahorrosalavista" Type="Self.ahorrosalavista" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="parameahorroAlaVista">
+        <PropertyRef Name="codlinea" />
+      </Principal>
+      <Dependent Role="ahorrosalavista">
+        <PropertyRef Name="codlinea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ahorrosAtermino_agencias">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="ahorrosAtermino" Type="Self.ahorrosAtermino" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="ahorrosAtermino">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ahorrosAtermino_asociados_20">
+    <End Role="asociados" Type="Self.asociados" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ahorrosAtermino" Type="Self.ahorrosAtermino" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="asociados">
+        <PropertyRef Name="cedulasociado" />
+      </Principal>
+      <Dependent Role="ahorrosAtermino">
+        <PropertyRef Name="Cedulasociado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ahorrosContractual_agencias">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="ahorrosContractual" Type="Self.ahorrosContractual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="ahorrosContractual">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ahorrosContractual_asociados">
+    <End Role="asociados" Type="Self.asociados" Multiplicity="1" />
+    <End Role="ahorrosContractual" Type="Self.ahorrosContractual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="asociados">
+        <PropertyRef Name="cedulasociado" />
+      </Principal>
+      <Dependent Role="ahorrosContractual">
+        <PropertyRef Name="Cedulasociado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_ahorrosContractual_operador_1' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_ahorrosContractual_operador_1" />-->
+  <Association Name="FK_ahorrospermanentes_agencias">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="ahorrospermanentes" Type="Self.ahorrospermanentes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="ahorrospermanentes">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ahorrospermanentes_asociados">
+    <End Role="asociados" Type="Self.asociados" Multiplicity="1" />
+    <End Role="ahorrospermanentes" Type="Self.ahorrospermanentes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="asociados">
+        <PropertyRef Name="cedulasociado" />
+      </Principal>
+      <Dependent Role="ahorrospermanentes">
+        <PropertyRef Name="Cedulasociado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AportesSociales_agencias">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="aportessociales" Type="Self.aportessociales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="aportessociales">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AportesSociales_asociados_20">
+    <End Role="asociados" Type="Self.asociados" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="aportessociales" Type="Self.aportessociales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="asociados">
+        <PropertyRef Name="cedulasociado" />
+      </Principal>
+      <Dependent Role="aportessociales">
+        <PropertyRef Name="cedulasociado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_asociados_ciudades_1">
+    <End Role="ciudades" Type="Self.ciudades" Multiplicity="0..1" />
+    <End Role="asociados" Type="Self.asociados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ciudades">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+      </Principal>
+      <Dependent Role="asociados">
+        <PropertyRef Name="paisnace" />
+        <PropertyRef Name="dptonace" />
+        <PropertyRef Name="ciudadnace" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_asociados_departamentos">
+    <End Role="departamentos" Type="Self.departamentos" Multiplicity="0..1" />
+    <End Role="asociados" Type="Self.asociados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="departamentos">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+      </Principal>
+      <Dependent Role="asociados">
+        <PropertyRef Name="paisnace" />
+        <PropertyRef Name="dptonace" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_asociados_dependenciasempresas_2">
+    <End Role="dependenciasempresas" Type="Self.dependenciasempresas" Multiplicity="0..1" />
+    <End Role="asociados" Type="Self.asociados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dependenciasempresas">
+        <PropertyRef Name="codempresa" />
+        <PropertyRef Name="coddependencia" />
+      </Principal>
+      <Dependent Role="asociados">
+        <PropertyRef Name="codempresalabora" />
+        <PropertyRef Name="coddependencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_asociados_empresas">
+    <End Role="empresas" Type="Self.empresas" Multiplicity="0..1" />
+    <End Role="asociados" Type="Self.asociados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="empresas">
+        <PropertyRef Name="codempresa" />
+      </Principal>
+      <Dependent Role="asociados">
+        <PropertyRef Name="codempresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_asociados_nits_20">
+    <End Role="nits" Type="Self.nits" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="asociados" Type="Self.asociados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nits">
+        <PropertyRef Name="idnits" />
+      </Principal>
+      <Dependent Role="asociados">
+        <PropertyRef Name="idnits" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_asociados_nits_5' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_asociados_nits_5" />-->
+  <Association Name="FK_asociados_pais">
+    <End Role="pais" Type="Self.pais" Multiplicity="0..1" />
+    <End Role="asociados" Type="Self.asociados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pais">
+        <PropertyRef Name="codpais" />
+      </Principal>
+      <Dependent Role="asociados">
+        <PropertyRef Name="paisnace" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_asociados_profesiones">
+    <End Role="profesiones" Type="Self.profesiones" Multiplicity="0..1" />
+    <End Role="asociados" Type="Self.asociados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="profesiones">
+        <PropertyRef Name="codprofesion" />
+      </Principal>
+      <Dependent Role="asociados">
+        <PropertyRef Name="codprofesion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_asociados_profesiones1">
+    <End Role="profesiones" Type="Self.profesiones" Multiplicity="0..1" />
+    <End Role="asociados" Type="Self.asociados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="profesiones">
+        <PropertyRef Name="codprofesion" />
+      </Principal>
+      <Dependent Role="asociados">
+        <PropertyRef Name="cargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_barrios_comunas">
+    <End Role="comunas" Type="Self.comunas" Multiplicity="1" />
+    <End Role="barrios" Type="Self.barrios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comunas">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+        <PropertyRef Name="codzona" />
+        <PropertyRef Name="codcomuna" />
+      </Principal>
+      <Dependent Role="barrios">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+        <PropertyRef Name="codzona" />
+        <PropertyRef Name="codcomuna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_barrios_pais">
+    <End Role="pais" Type="Self.pais" Multiplicity="1" />
+    <End Role="barrios" Type="Self.barrios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pais">
+        <PropertyRef Name="codpais" />
+      </Principal>
+      <Dependent Role="barrios">
+        <PropertyRef Name="codpais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_barrios_zonasgeograficas">
+    <End Role="zonasgeograficas" Type="Self.zonasgeograficas" Multiplicity="1" />
+    <End Role="barrios" Type="Self.barrios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zonasgeograficas">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+        <PropertyRef Name="codzona" />
+      </Principal>
+      <Dependent Role="barrios">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+        <PropertyRef Name="codzona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ciudades_departamentos">
+    <End Role="departamentos" Type="Self.departamentos" Multiplicity="1" />
+    <End Role="ciudades" Type="Self.ciudades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="departamentos">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+      </Principal>
+      <Dependent Role="ciudades">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_comunas_pais">
+    <End Role="pais" Type="Self.pais" Multiplicity="1" />
+    <End Role="comunas" Type="Self.comunas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pais">
+        <PropertyRef Name="codpais" />
+      </Principal>
+      <Dependent Role="comunas">
+        <PropertyRef Name="codpais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_comunas_zonasgeograficas">
+    <End Role="zonasgeograficas" Type="Self.zonasgeograficas" Multiplicity="1" />
+    <End Role="comunas" Type="Self.comunas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zonasgeograficas">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+        <PropertyRef Name="codzona" />
+      </Principal>
+      <Dependent Role="comunas">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+        <PropertyRef Name="codzona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_costosliquidacion_agencias">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="costosliquidacion" Type="Self.costosliquidacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="costosliquidacion">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_costosliquidacion_creditos">
+    <End Role="creditos" Type="Self.creditos" Multiplicity="0..1" />
+    <End Role="costosliquidacion" Type="Self.costosliquidacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="creditos">
+        <PropertyRef Name="pagare" />
+      </Principal>
+      <Dependent Role="costosliquidacion">
+        <PropertyRef Name="pagare" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_costosliquidacion_plancuentas">
+    <End Role="plancuentas" Type="Self.plancuentas" Multiplicity="1" />
+    <End Role="costosliquidacion" Type="Self.costosliquidacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plancuentas">
+        <PropertyRef Name="codcuenta" />
+      </Principal>
+      <Dependent Role="costosliquidacion">
+        <PropertyRef Name="codcuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cuentasnovedadesvarias_plancuentas">
+    <End Role="plancuentas" Type="Self.plancuentas" Multiplicity="1" />
+    <End Role="cuentasnovedadesvarias" Type="Self.cuentasnovedadesvarias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plancuentas">
+        <PropertyRef Name="codcuenta" />
+      </Principal>
+      <Dependent Role="cuentasnovedadesvarias">
+        <PropertyRef Name="codcuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_departamentos_pais">
+    <End Role="pais" Type="Self.pais" Multiplicity="1" />
+    <End Role="departamentos" Type="Self.departamentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pais">
+        <PropertyRef Name="codpais" />
+      </Principal>
+      <Dependent Role="departamentos">
+        <PropertyRef Name="codpais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dependenciasempresas_agencias">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="dependenciasempresas" Type="Self.dependenciasempresas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="dependenciasempresas">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dependenciasempresas_ciudades">
+    <End Role="ciudades" Type="Self.ciudades" Multiplicity="1" />
+    <End Role="dependenciasempresas" Type="Self.dependenciasempresas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ciudades">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+      </Principal>
+      <Dependent Role="dependenciasempresas">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_destinos_lineas">
+    <End Role="lineas" Type="Self.lineas" Multiplicity="1" />
+    <End Role="destinos" Type="Self.destinos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lineas">
+        <PropertyRef Name="codlinea" />
+      </Principal>
+      <Dependent Role="destinos">
+        <PropertyRef Name="codlinea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_divisionciiu_ciiu">
+    <End Role="ciiu" Type="Self.ciiu" Multiplicity="1" />
+    <End Role="divisionciiu" Type="Self.divisionciiu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ciiu">
+        <PropertyRef Name="codciiu" />
+      </Principal>
+      <Dependent Role="divisionciiu">
+        <PropertyRef Name="codciiu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_empresas_agencias">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="empresas" Type="Self.empresas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="empresas">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_empresas_ciudades">
+    <End Role="ciudades" Type="Self.ciudades" Multiplicity="1" />
+    <End Role="empresas" Type="Self.empresas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ciudades">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+      </Principal>
+      <Dependent Role="empresas">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="departamento" />
+        <PropertyRef Name="ciudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_empresas_idnits_20">
+    <End Role="nits" Type="Self.nits" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="empresas" Type="Self.empresas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nits">
+        <PropertyRef Name="idnits" />
+      </Principal>
+      <Dependent Role="empresas">
+        <PropertyRef Name="nitempresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_hasociados_agencias">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="hasociados" Type="Self.hasociados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="hasociados">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_hnits_agencias">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="hnits" Type="Self.hnits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="hnits">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_lineas_plancuentas">
+    <End Role="plancuentas" Type="Self.plancuentas" Multiplicity="1" />
+    <End Role="lineas" Type="Self.lineas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plancuentas">
+        <PropertyRef Name="codcuenta" />
+      </Principal>
+      <Dependent Role="lineas">
+        <PropertyRef Name="codcuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_lineas_plancuentas1">
+    <End Role="plancuentas" Type="Self.plancuentas" Multiplicity="1" />
+    <End Role="lineas" Type="Self.lineas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plancuentas">
+        <PropertyRef Name="codcuenta" />
+      </Principal>
+      <Dependent Role="lineas">
+        <PropertyRef Name="codcuentaingresocorrientes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_lineas_plancuentas2">
+    <End Role="plancuentas" Type="Self.plancuentas" Multiplicity="1" />
+    <End Role="lineas" Type="Self.lineas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plancuentas">
+        <PropertyRef Name="codcuenta" />
+      </Principal>
+      <Dependent Role="lineas">
+        <PropertyRef Name="codcuentaingresosmora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_nits_barrios">
+    <End Role="barrios" Type="Self.barrios" Multiplicity="1" />
+    <End Role="nits" Type="Self.nits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="barrios">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+        <PropertyRef Name="codzona" />
+        <PropertyRef Name="codcomuna" />
+        <PropertyRef Name="codbarrio" />
+      </Principal>
+      <Dependent Role="nits">
+        <PropertyRef Name="codpais" />
+        <PropertyRef Name="coddepartamento" />
+        <PropertyRef Name="codciudad" />
+        <PropertyRef Name="codzona" />
+        <PropertyRef Name="codcomuna" />
+        <PropertyRef Name="codbarrio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_nits_divisionciiu">
+    <End Role="divisionciiu" Type="Self.divisionciiu" Multiplicity="1" />
+    <End Role="nits" Type="Self.nits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="divisionciiu">
+        <PropertyRef Name="codciiu" />
+        <PropertyRef Name="coddivision" />
+      </Principal>
+      <Dependent Role="nits">
+        <PropertyRef Name="codciiu" />
+        <PropertyRef Name="coddivision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_novedadesvariasnocausadas_agencias">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="0..1" />
+    <End Role="novedadesvariasnocausadas" Type="Self.novedadesvariasnocausadas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="novedadesvariasnocausadas">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_novedadesvariasnocausadas_asociados">
+    <End Role="asociados" Type="Self.asociados" Multiplicity="1" />
+    <End Role="novedadesvariasnocausadas" Type="Self.novedadesvariasnocausadas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="asociados">
+        <PropertyRef Name="cedulasociado" />
+      </Principal>
+      <Dependent Role="novedadesvariasnocausadas">
+        <PropertyRef Name="cedulasociado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_novedadesvariasnocausadas_cuentasnovedadesvarias">
+    <End Role="cuentasnovedadesvarias" Type="Self.cuentasnovedadesvarias" Multiplicity="1" />
+    <End Role="novedadesvariasnocausadas" Type="Self.novedadesvariasnocausadas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cuentasnovedadesvarias">
+        <PropertyRef Name="codnovedad" />
+      </Principal>
+      <Dependent Role="novedadesvariasnocausadas">
+        <PropertyRef Name="codnovedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_parameahorroAlaVista_plancuentas">
+    <End Role="plancuentas" Type="Self.plancuentas" Multiplicity="1" />
+    <End Role="parameahorroAlaVista" Type="Self.parameahorroAlaVista" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plancuentas">
+        <PropertyRef Name="codcuenta" />
+      </Principal>
+      <Dependent Role="parameahorroAlaVista">
+        <PropertyRef Name="cuentaretencion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_parameahorroAlaVista_plancuentas_1">
+    <End Role="plancuentas" Type="Self.plancuentas" Multiplicity="0..1" />
+    <End Role="parameahorroAlaVista" Type="Self.parameahorroAlaVista" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plancuentas">
+        <PropertyRef Name="codcuenta" />
+      </Principal>
+      <Dependent Role="parameahorroAlaVista">
+        <PropertyRef Name="codcuentainactivos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_personacargo_asociados_1">
+    <End Role="asociados" Type="Self.asociados" Multiplicity="1" />
+    <End Role="personacargo" Type="Self.personacargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="asociados">
+        <PropertyRef Name="cedulasociado" />
+      </Principal>
+      <Dependent Role="personacargo">
+        <PropertyRef Name="cedulaAsociado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sahorrosalavista_agencias1">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="sahorrosalavista" Type="Self.sahorrosalavista" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="sahorrosalavista">
+        <PropertyRef Name="agenciatransaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sahorrosalavista_ahorrosalavista_21">
+    <End Role="ahorrosalavista" Type="Self.ahorrosalavista" Multiplicity="1" />
+    <End Role="sahorrosalavista" Type="Self.sahorrosalavista" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ahorrosalavista">
+        <PropertyRef Name="codlinea" />
+        <PropertyRef Name="agencia" />
+        <PropertyRef Name="numerocuenta" />
+      </Principal>
+      <Dependent Role="sahorrosalavista">
+        <PropertyRef Name="codlinea" />
+        <PropertyRef Name="agencia" />
+        <PropertyRef Name="nrocuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sahorrosAtermino_agencias1">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="sahorrosAtermino" Type="Self.sahorrosAtermino" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="sahorrosAtermino">
+        <PropertyRef Name="agenciatransaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sahorrosAtermino_ahorrosAtermino_21">
+    <End Role="ahorrosAtermino" Type="Self.ahorrosAtermino" Multiplicity="1" />
+    <End Role="sahorrosAtermino" Type="Self.sahorrosAtermino" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ahorrosAtermino">
+        <PropertyRef Name="codlinea" />
+        <PropertyRef Name="agencia" />
+        <PropertyRef Name="numerocuenta" />
+      </Principal>
+      <Dependent Role="sahorrosAtermino">
+        <PropertyRef Name="codlinea" />
+        <PropertyRef Name="agencia" />
+        <PropertyRef Name="nrocuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sahorrosContractual_agencias1">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="sahorrosContractual" Type="Self.sahorrosContractual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="sahorrosContractual">
+        <PropertyRef Name="agenciatransaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sahorrosContractual_ahorrosContractual">
+    <End Role="ahorrosContractual" Type="Self.ahorrosContractual" Multiplicity="1" />
+    <End Role="sahorrosContractual" Type="Self.sahorrosContractual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ahorrosContractual">
+        <PropertyRef Name="codlinea" />
+        <PropertyRef Name="agencia" />
+        <PropertyRef Name="numerocuenta" />
+      </Principal>
+      <Dependent Role="sahorrosContractual">
+        <PropertyRef Name="codlinea" />
+        <PropertyRef Name="agencia" />
+        <PropertyRef Name="nrocuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sahorrospermanentes_agencias1">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="sahorrospermanentes" Type="Self.sahorrospermanentes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="sahorrospermanentes">
+        <PropertyRef Name="agenciatransaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sahorrospermanentes_ahorrospermanentes">
+    <End Role="ahorrospermanentes" Type="Self.ahorrospermanentes" Multiplicity="1" />
+    <End Role="sahorrospermanentes" Type="Self.sahorrospermanentes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ahorrospermanentes">
+        <PropertyRef Name="codlinea" />
+        <PropertyRef Name="agencia" />
+        <PropertyRef Name="numerocuenta" />
+      </Principal>
+      <Dependent Role="sahorrospermanentes">
+        <PropertyRef Name="codlinea" />
+        <PropertyRef Name="agencia" />
+        <PropertyRef Name="nrocuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sAportesSociales_AportesSociales_21">
+    <End Role="aportessociales" Type="Self.aportessociales" Multiplicity="1" />
+    <End Role="sAportesSociales" Type="Self.sAportesSociales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aportessociales">
+        <PropertyRef Name="codlinea" />
+        <PropertyRef Name="numerocuenta" />
+        <PropertyRef Name="agencia" />
+      </Principal>
+      <Dependent Role="sAportesSociales">
+        <PropertyRef Name="codlinea" />
+        <PropertyRef Name="nrocuenta" />
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_seguimientocredito_agencias">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="0..1" />
+    <End Role="seguimientocredito" Type="Self.seguimientocredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="seguimientocredito">
+        <PropertyRef Name="agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_seguimientocredito_agencias1">
+    <End Role="agencias" Type="Self.agencias" Multiplicity="1" />
+    <End Role="seguimientocredito" Type="Self.seguimientocredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agencias">
+        <PropertyRef Name="codigoagencia" />
+      </Principal>
+      <Dependent Role="seguimientocredito">
+        <PropertyRef Name="agenciatransaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_seguimientocredito_creditos">
+    <End Role="creditos" Type="Self.creditos" Multiplicity="1" />
+    <End Role="seguimientocredito" Type="Self.seguimientocredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="creditos">
+        <PropertyRef Name="pagare" />
+      </Principal>
+      <Dependent Role="seguimientocredito">
+        <PropertyRef Name="pagare" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_seguimientocredito_nits_20' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_seguimientocredito_nits_20" />-->
+  <Association Name="FK_tasasporplazos_destinos">
+    <End Role="destinos" Type="Self.destinos" Multiplicity="1" />
+    <End Role="tasasporplazos" Type="Self.tasasporplazos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="destinos">
+        <PropertyRef Name="Coddestino" />
+        <PropertyRef Name="codlinea" />
+      </Principal>
+      <Dependent Role="tasasporplazos">
+        <PropertyRef Name="coddestino" />
+        <PropertyRef Name="codlinea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tazasporplazos_lineas">
+    <End Role="lineas" Type="Self.lineas" Multiplicity="0..1" />
+    <End Role="tazasporplazos" Type="Self.tazasporplazos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lineas">
+        <PropertyRef Name="codlinea" />
+      </Principal>
+      <Dependent Role="tazasporplazos">
+        <PropertyRef Name="codlinea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_zonasgeograficas_pais">
+    <End Role="pais" Type="Self.pais" Multiplicity="1" />
+    <End Role="zonasgeograficas" Type="Self.zonasgeograficas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pais">
+        <PropertyRef Name="codpais" />
+      </Principal>
+      <Dependent Role="zonasgeograficas">
+        <PropertyRef Name="codpais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="agencias" EntityType="Self.agencias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ahorrosalavista" EntityType="Self.ahorrosalavista" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ahorrosAtermino" EntityType="Self.ahorrosAtermino" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ahorrosContractual" EntityType="Self.ahorrosContractual" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ahorrospermanentes" EntityType="Self.ahorrospermanentes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aportessociales" EntityType="Self.aportessociales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="asociados" EntityType="Self.asociados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="barrios" EntityType="Self.barrios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ciiu" EntityType="Self.ciiu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ciudades" EntityType="Self.ciudades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="comunas" EntityType="Self.comunas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="costosliquidacion" EntityType="Self.costosliquidacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="creditos" EntityType="Self.creditos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cuentasnovedadesvarias" EntityType="Self.cuentasnovedadesvarias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="departamentos" EntityType="Self.departamentos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dependenciasempresas" EntityType="Self.dependenciasempresas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="destinos" EntityType="Self.destinos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="divisionciiu" EntityType="Self.divisionciiu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="empresas" EntityType="Self.empresas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hahorrosalavista" EntityType="Self.hahorrosalavista" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hahorrosAtermino" EntityType="Self.hahorrosAtermino" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hahorrosContractual" EntityType="Self.hahorrosContractual" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hahorrospermanentes" EntityType="Self.hahorrospermanentes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hAportesSociales" EntityType="Self.hAportesSociales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hasociados" EntityType="Self.hasociados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hcreditos" EntityType="Self.hcreditos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hnits" EntityType="Self.hnits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="lineas" EntityType="Self.lineas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="nits" EntityType="Self.nits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="novedadesvariasnocausadas" EntityType="Self.novedadesvariasnocausadas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pais" EntityType="Self.pais" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="parameahorroAlaVista" EntityType="Self.parameahorroAlaVista" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="personacargo" EntityType="Self.personacargo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="plancuentas" EntityType="Self.plancuentas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="profesiones" EntityType="Self.profesiones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sahorrosalavista" EntityType="Self.sahorrosalavista" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sahorrosAtermino" EntityType="Self.sahorrosAtermino" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sahorrosContractual" EntityType="Self.sahorrosContractual" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sahorrospermanentes" EntityType="Self.sahorrospermanentes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sAportesSociales" EntityType="Self.sAportesSociales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="seguimientocredito" EntityType="Self.seguimientocredito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tasasplazoahorrotermino" EntityType="Self.tasasplazoahorrotermino" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tasaspormontosyplazos" EntityType="Self.tasaspormontosyplazos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tasasporplazos" EntityType="Self.tasasporplazos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tazasporplazos" EntityType="Self.tazasporplazos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Zonasgenerales" EntityType="Self.Zonasgenerales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="zonasgeograficas" EntityType="Self.zonasgeograficas" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_agencias_ciudades" Association="Self.FK_agencias_ciudades">
+      <End Role="ciudades" EntitySet="ciudades" />
+      <End Role="agencias" EntitySet="agencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ahorroAlaVista_plancuentas" Association="Self.FK_ahorroAlaVista_plancuentas">
+      <End Role="plancuentas" EntitySet="plancuentas" />
+      <End Role="parameahorroAlaVista" EntitySet="parameahorroAlaVista" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ahorrosalavista_asociados_20" Association="Self.FK_ahorrosalavista_asociados_20">
+      <End Role="asociados" EntitySet="asociados" />
+      <End Role="ahorrosalavista" EntitySet="ahorrosalavista" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ahorrosalavista_parameahorroAlaVista" Association="Self.FK_ahorrosalavista_parameahorroAlaVista">
+      <End Role="parameahorroAlaVista" EntitySet="parameahorroAlaVista" />
+      <End Role="ahorrosalavista" EntitySet="ahorrosalavista" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ahorrosAtermino_agencias" Association="Self.FK_ahorrosAtermino_agencias">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="ahorrosAtermino" EntitySet="ahorrosAtermino" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ahorrosAtermino_asociados_20" Association="Self.FK_ahorrosAtermino_asociados_20">
+      <End Role="asociados" EntitySet="asociados" />
+      <End Role="ahorrosAtermino" EntitySet="ahorrosAtermino" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ahorrosContractual_agencias" Association="Self.FK_ahorrosContractual_agencias">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="ahorrosContractual" EntitySet="ahorrosContractual" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ahorrosContractual_asociados" Association="Self.FK_ahorrosContractual_asociados">
+      <End Role="asociados" EntitySet="asociados" />
+      <End Role="ahorrosContractual" EntitySet="ahorrosContractual" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ahorrospermanentes_agencias" Association="Self.FK_ahorrospermanentes_agencias">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="ahorrospermanentes" EntitySet="ahorrospermanentes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ahorrospermanentes_asociados" Association="Self.FK_ahorrospermanentes_asociados">
+      <End Role="asociados" EntitySet="asociados" />
+      <End Role="ahorrospermanentes" EntitySet="ahorrospermanentes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AportesSociales_agencias" Association="Self.FK_AportesSociales_agencias">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="aportessociales" EntitySet="aportessociales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AportesSociales_asociados_20" Association="Self.FK_AportesSociales_asociados_20">
+      <End Role="asociados" EntitySet="asociados" />
+      <End Role="aportessociales" EntitySet="aportessociales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_asociados_ciudades_1" Association="Self.FK_asociados_ciudades_1">
+      <End Role="ciudades" EntitySet="ciudades" />
+      <End Role="asociados" EntitySet="asociados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_asociados_departamentos" Association="Self.FK_asociados_departamentos">
+      <End Role="departamentos" EntitySet="departamentos" />
+      <End Role="asociados" EntitySet="asociados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_asociados_dependenciasempresas_2" Association="Self.FK_asociados_dependenciasempresas_2">
+      <End Role="dependenciasempresas" EntitySet="dependenciasempresas" />
+      <End Role="asociados" EntitySet="asociados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_asociados_empresas" Association="Self.FK_asociados_empresas">
+      <End Role="empresas" EntitySet="empresas" />
+      <End Role="asociados" EntitySet="asociados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_asociados_nits_20" Association="Self.FK_asociados_nits_20">
+      <End Role="nits" EntitySet="nits" />
+      <End Role="asociados" EntitySet="asociados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_asociados_pais" Association="Self.FK_asociados_pais">
+      <End Role="pais" EntitySet="pais" />
+      <End Role="asociados" EntitySet="asociados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_asociados_profesiones" Association="Self.FK_asociados_profesiones">
+      <End Role="profesiones" EntitySet="profesiones" />
+      <End Role="asociados" EntitySet="asociados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_asociados_profesiones1" Association="Self.FK_asociados_profesiones1">
+      <End Role="profesiones" EntitySet="profesiones" />
+      <End Role="asociados" EntitySet="asociados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_barrios_comunas" Association="Self.FK_barrios_comunas">
+      <End Role="comunas" EntitySet="comunas" />
+      <End Role="barrios" EntitySet="barrios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_barrios_pais" Association="Self.FK_barrios_pais">
+      <End Role="pais" EntitySet="pais" />
+      <End Role="barrios" EntitySet="barrios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_barrios_zonasgeograficas" Association="Self.FK_barrios_zonasgeograficas">
+      <End Role="zonasgeograficas" EntitySet="zonasgeograficas" />
+      <End Role="barrios" EntitySet="barrios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ciudades_departamentos" Association="Self.FK_ciudades_departamentos">
+      <End Role="departamentos" EntitySet="departamentos" />
+      <End Role="ciudades" EntitySet="ciudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_comunas_pais" Association="Self.FK_comunas_pais">
+      <End Role="pais" EntitySet="pais" />
+      <End Role="comunas" EntitySet="comunas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_comunas_zonasgeograficas" Association="Self.FK_comunas_zonasgeograficas">
+      <End Role="zonasgeograficas" EntitySet="zonasgeograficas" />
+      <End Role="comunas" EntitySet="comunas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_costosliquidacion_agencias" Association="Self.FK_costosliquidacion_agencias">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="costosliquidacion" EntitySet="costosliquidacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_costosliquidacion_creditos" Association="Self.FK_costosliquidacion_creditos">
+      <End Role="creditos" EntitySet="creditos" />
+      <End Role="costosliquidacion" EntitySet="costosliquidacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_costosliquidacion_plancuentas" Association="Self.FK_costosliquidacion_plancuentas">
+      <End Role="plancuentas" EntitySet="plancuentas" />
+      <End Role="costosliquidacion" EntitySet="costosliquidacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cuentasnovedadesvarias_plancuentas" Association="Self.FK_cuentasnovedadesvarias_plancuentas">
+      <End Role="plancuentas" EntitySet="plancuentas" />
+      <End Role="cuentasnovedadesvarias" EntitySet="cuentasnovedadesvarias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_departamentos_pais" Association="Self.FK_departamentos_pais">
+      <End Role="pais" EntitySet="pais" />
+      <End Role="departamentos" EntitySet="departamentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dependenciasempresas_agencias" Association="Self.FK_dependenciasempresas_agencias">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="dependenciasempresas" EntitySet="dependenciasempresas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dependenciasempresas_ciudades" Association="Self.FK_dependenciasempresas_ciudades">
+      <End Role="ciudades" EntitySet="ciudades" />
+      <End Role="dependenciasempresas" EntitySet="dependenciasempresas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_destinos_lineas" Association="Self.FK_destinos_lineas">
+      <End Role="lineas" EntitySet="lineas" />
+      <End Role="destinos" EntitySet="destinos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_divisionciiu_ciiu" Association="Self.FK_divisionciiu_ciiu">
+      <End Role="ciiu" EntitySet="ciiu" />
+      <End Role="divisionciiu" EntitySet="divisionciiu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_empresas_agencias" Association="Self.FK_empresas_agencias">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="empresas" EntitySet="empresas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_empresas_ciudades" Association="Self.FK_empresas_ciudades">
+      <End Role="ciudades" EntitySet="ciudades" />
+      <End Role="empresas" EntitySet="empresas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_empresas_idnits_20" Association="Self.FK_empresas_idnits_20">
+      <End Role="nits" EntitySet="nits" />
+      <End Role="empresas" EntitySet="empresas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_hasociados_agencias" Association="Self.FK_hasociados_agencias">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="hasociados" EntitySet="hasociados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_hnits_agencias" Association="Self.FK_hnits_agencias">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="hnits" EntitySet="hnits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_lineas_plancuentas" Association="Self.FK_lineas_plancuentas">
+      <End Role="plancuentas" EntitySet="plancuentas" />
+      <End Role="lineas" EntitySet="lineas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_lineas_plancuentas1" Association="Self.FK_lineas_plancuentas1">
+      <End Role="plancuentas" EntitySet="plancuentas" />
+      <End Role="lineas" EntitySet="lineas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_lineas_plancuentas2" Association="Self.FK_lineas_plancuentas2">
+      <End Role="plancuentas" EntitySet="plancuentas" />
+      <End Role="lineas" EntitySet="lineas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_nits_barrios" Association="Self.FK_nits_barrios">
+      <End Role="barrios" EntitySet="barrios" />
+      <End Role="nits" EntitySet="nits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_nits_divisionciiu" Association="Self.FK_nits_divisionciiu">
+      <End Role="divisionciiu" EntitySet="divisionciiu" />
+      <End Role="nits" EntitySet="nits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_novedadesvariasnocausadas_agencias" Association="Self.FK_novedadesvariasnocausadas_agencias">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="novedadesvariasnocausadas" EntitySet="novedadesvariasnocausadas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_novedadesvariasnocausadas_asociados" Association="Self.FK_novedadesvariasnocausadas_asociados">
+      <End Role="asociados" EntitySet="asociados" />
+      <End Role="novedadesvariasnocausadas" EntitySet="novedadesvariasnocausadas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_novedadesvariasnocausadas_cuentasnovedadesvarias" Association="Self.FK_novedadesvariasnocausadas_cuentasnovedadesvarias">
+      <End Role="cuentasnovedadesvarias" EntitySet="cuentasnovedadesvarias" />
+      <End Role="novedadesvariasnocausadas" EntitySet="novedadesvariasnocausadas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_parameahorroAlaVista_plancuentas" Association="Self.FK_parameahorroAlaVista_plancuentas">
+      <End Role="plancuentas" EntitySet="plancuentas" />
+      <End Role="parameahorroAlaVista" EntitySet="parameahorroAlaVista" />
+    </AssociationSet>
+    <AssociationSet Name="FK_parameahorroAlaVista_plancuentas_1" Association="Self.FK_parameahorroAlaVista_plancuentas_1">
+      <End Role="plancuentas" EntitySet="plancuentas" />
+      <End Role="parameahorroAlaVista" EntitySet="parameahorroAlaVista" />
+    </AssociationSet>
+    <AssociationSet Name="FK_personacargo_asociados_1" Association="Self.FK_personacargo_asociados_1">
+      <End Role="asociados" EntitySet="asociados" />
+      <End Role="personacargo" EntitySet="personacargo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sahorrosalavista_agencias1" Association="Self.FK_sahorrosalavista_agencias1">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="sahorrosalavista" EntitySet="sahorrosalavista" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sahorrosalavista_ahorrosalavista_21" Association="Self.FK_sahorrosalavista_ahorrosalavista_21">
+      <End Role="ahorrosalavista" EntitySet="ahorrosalavista" />
+      <End Role="sahorrosalavista" EntitySet="sahorrosalavista" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sahorrosAtermino_agencias1" Association="Self.FK_sahorrosAtermino_agencias1">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="sahorrosAtermino" EntitySet="sahorrosAtermino" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sahorrosAtermino_ahorrosAtermino_21" Association="Self.FK_sahorrosAtermino_ahorrosAtermino_21">
+      <End Role="ahorrosAtermino" EntitySet="ahorrosAtermino" />
+      <End Role="sahorrosAtermino" EntitySet="sahorrosAtermino" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sahorrosContractual_agencias1" Association="Self.FK_sahorrosContractual_agencias1">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="sahorrosContractual" EntitySet="sahorrosContractual" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sahorrosContractual_ahorrosContractual" Association="Self.FK_sahorrosContractual_ahorrosContractual">
+      <End Role="ahorrosContractual" EntitySet="ahorrosContractual" />
+      <End Role="sahorrosContractual" EntitySet="sahorrosContractual" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sahorrospermanentes_agencias1" Association="Self.FK_sahorrospermanentes_agencias1">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="sahorrospermanentes" EntitySet="sahorrospermanentes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sahorrospermanentes_ahorrospermanentes" Association="Self.FK_sahorrospermanentes_ahorrospermanentes">
+      <End Role="ahorrospermanentes" EntitySet="ahorrospermanentes" />
+      <End Role="sahorrospermanentes" EntitySet="sahorrospermanentes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sAportesSociales_AportesSociales_21" Association="Self.FK_sAportesSociales_AportesSociales_21">
+      <End Role="aportessociales" EntitySet="aportessociales" />
+      <End Role="sAportesSociales" EntitySet="sAportesSociales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_seguimientocredito_agencias" Association="Self.FK_seguimientocredito_agencias">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="seguimientocredito" EntitySet="seguimientocredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_seguimientocredito_agencias1" Association="Self.FK_seguimientocredito_agencias1">
+      <End Role="agencias" EntitySet="agencias" />
+      <End Role="seguimientocredito" EntitySet="seguimientocredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_seguimientocredito_creditos" Association="Self.FK_seguimientocredito_creditos">
+      <End Role="creditos" EntitySet="creditos" />
+      <End Role="seguimientocredito" EntitySet="seguimientocredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tasasporplazos_destinos" Association="Self.FK_tasasporplazos_destinos">
+      <End Role="destinos" EntitySet="destinos" />
+      <End Role="tasasporplazos" EntitySet="tasasporplazos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tazasporplazos_lineas" Association="Self.FK_tazasporplazos_lineas">
+      <End Role="lineas" EntitySet="lineas" />
+      <End Role="tazasporplazos" EntitySet="tazasporplazos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_zonasgeograficas_pais" Association="Self.FK_zonasgeograficas_pais">
+      <End Role="pais" EntitySet="pais" />
+      <End Role="zonasgeograficas" EntitySet="zonasgeograficas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

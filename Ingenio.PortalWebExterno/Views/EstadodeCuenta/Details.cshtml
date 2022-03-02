@@ -1,0 +1,789 @@
+﻿@{
+    Layout = "~/Views/Shared/layoutAso.cshtml";
+    ViewBag.Title = "Estado de cuenta";
+    ViewBag.titulo = "Estado de cuenta";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "estados";
+
+}
+@using System.Globalization;
+<!--estilos-->
+<style>
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+
+    .modal-header, .modal-footer {
+        background-color: #5CB85C;
+    }
+
+    .modal-body {
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+
+    .btn-primary {
+        background-color: #da4d4d;
+        border-color: #da4d4d;
+    }
+
+    .modal-title {
+        color: white;
+    }
+
+    .table {
+        border-collapse: inherit;
+    }
+    
+</style> 
+<section id="contenido">
+    <div class="container">
+
+        <div id="imprimir" style="background-color: rgba(242, 242, 242, 0.57);">
+            <div class="row">
+                <div class="col-lg-3">
+                </div>
+                <div class="container">
+                    <h4 style="text-align: center">COOPERATIVA DE AHORRO Y CREDITO NACIONAL</h4>
+                </div>
+                <div class="col-lg-3">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                </div>
+                <div class="container">
+                    <h4 style="text-align: center">ESTADO DE CUENTA</h4>
+                </div>
+                <div class="col-lg-3">
+                </div>
+            </div>
+            <br />
+            <div id="datos" class="row" style="display:block">
+                <div class="col-xs-2 col-lg-1">
+                    <strong>Cedula:</strong>
+                </div>
+                <div class="col-xs-2 col-lg-2">
+                    @(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado:ViewBag.Nitaso.nit)
+                </div>
+                <div class="col-xs-2 col-lg-1">
+                    <strong>Nombre:</strong>
+                </div>
+                <div class="col-xs-6 col-lg-8">
+                   @(ViewBag.Aso != null ? ViewBag.Aso.nits.nombreintegrado : ViewBag.Nitaso.nombreintegrado)
+                </div>
+                <div class="col-xs-2 col-lg-1">
+                    <strong>Empresa:</strong>
+                </div>
+                <div class="col-xs-2 col-lg-2">
+                    @(ViewBag.Aso != null ? ViewBag.Aso.empresas.nombreempresa : ViewBag.Nitaso.nombreintegrado)
+                </div>
+                <div class="col-xs-2 col-lg-1">
+                    <strong>Direccion:</strong>
+                </div>
+                <div class="col-xs-6 col-lg-8">
+                    @(ViewBag.Aso != null ? ViewBag.aso.nits.direccion : ViewBag.Nitaso.direccion)
+                </div>
+                <div class="col-xs-2 col-lg-1">
+                    <strong>Deducción:</strong>
+                </div>
+                <div class="col-xs-2 col-lg-2">
+                    @(ViewBag.periododeduce ?? String.Empty)
+                </div>
+            </div>
+
+
+            <div id="datos" class="row" style="display:block">
+                <div class="col-xs-2 col-lg-1">
+                    <strong>Antiguedad:</strong>
+                </div>
+                <div class="col-xs-2 col-lg-2">
+                    @(ViewBag.antiguedad ?? String.Empty) Meses
+                </div>
+                <div class="col-xs-2 col-lg-1">
+                    <strong>Salario:</strong>
+                </div>
+                <div class="col-xs-2 col-lg-2">
+                    @(ViewBag.Aso != null ? ViewBag.aso.salario : "")
+                </div>
+                <div class="col-xs-2 col-lg-1">
+                    <strong>Estado:</strong>
+                </div>
+                <div class="col-xs-6 col-lg-3">
+                    @(ViewBag.activado ?? String.Empty)
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-3">
+                    <h4 style="text-align: center">DEPOSITOS</h4>
+                </div>
+                <div class="col-lg-4">
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped" id="ahorro_cliente" border="1" cellspacing="0" style="font-size:small">
+                    <thead>
+                        <tr style="background-color: #5CB85C; color: #EFF2F5;">
+
+                            <th>TIPO</th>
+                            <th>No. CUENTA</th>
+
+                            <th>F. APERTURA</th>
+
+
+                            <th>VALOR CUOTA</th>
+                            <th>SALDO</th>
+                            <th>ESTADO</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{ if (ViewBag.Apermanentes.Count != 0)
+                        {
+
+                    <tr>
+                        <td id="titulo-3">AHORRO PERMANENTE</td>
+                        <td id="boton-3" class="form-inline" style="width:200px">
+                            <select class="form-control" id="AHPERMANENTE" name="AHPERMANENTE" onchange="GetSelectedApermanente(this)" value="@ViewBag.Plazo" placeholder="" type="text" required>
+                                <option value="">Seleccione...</option>
+                            </select>
+                            <button type="button" id="tasas" name="tasas" value="5" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal" onclick="GetMovimientos(this)"><span class="fa fa-eye"></span></button>
+                        </td>
+                        <td id="fecha-3"> </td>
+                        <td id="valor-3"></td>
+                        <td id="saldo-3"></td>
+                        <td id="estado-3"></td>
+
+                    </tr>
+
+                        } }
+
+                        @{ if (ViewBag.ASocial.Count != 0)
+                        {
+
+                    <tr>
+
+                        <td id="titulo-4">APORTES SOCIALES</td>
+                        <td id="boton-4" class="form-inline" style="width:200px">
+                            <select class="form-control" id="AHSOCIALES" name="AHSOCIALES" onchange="GetSelectedAsociales(this)" value="@ViewBag.Plazo" placeholder="" type="text" required>
+                                <option value="">Seleccione...</option>
+                            </select>
+                            <button type="button" id="tasas" name="tasas" value="4" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal" onclick="GetMovimientos(this)"><span class="fa fa-eye"></span></button>
+                            <a href="~/AhExtractos/details/4"> Extracto</a>
+                        </td>
+                        <td id="fecha-4"> </td>
+                        <td id="valor-4"></td>
+                        <td id="saldo-4"></td>
+                        <td id="estado-4"></td>
+
+
+                    </tr>
+
+                        } }
+                        @{ if (ViewBag.AAtermino.Count != 0)
+                        {
+
+                    <tr>
+                        <td id="titulo-2">AHORROS A TERMINO</td>
+                        <td id="boton-2" class="form-inline" style="width:200px">
+                            <select class="form-control" id="AHTERMINO" name="AHTERMINO" onchange="GetSelectedAtermino(this)" value="@ViewBag.Plazo" placeholder="" type="text" required>
+                                <option value="">Seleccione...</option>
+                            </select>
+                            <button type="button" id="tasas" name="tasas" value="3" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal" onclick="GetMovimientos(this)"><span class="fa fa-eye"></span></button>
+                            @*<a href="~/AhExtractos/details/2"> Extracto</a>*@
+                        </td>
+                        <td id="fecha-2"> </td>
+                        <td id="valor-2"></td>
+                        <td id="saldo-2"></td>
+                        <td id="estado-2"></td>
+
+
+                    </tr>
+                        } }
+                        @{ if (ViewBag.Contractual.Count != 0)
+                            {
+
+                    <tr>
+
+                        <td id="titulo-5">AHORROS CONTRACTUAL</td>
+                        <td id="boton-5" class="form-inline" style="width:200px">
+                            <select class="form-control" id="AHCONTRACTUAL" name="AHCONTRACTUAL" onchange="GetSelectedAcontractual(this)" value="@ViewBag.Plazo" placeholder="" type="text" required>
+                                <option value="">Seleccione...</option>
+                            </select>
+                            <button type="button" value="2" class="btn btn-success btn-md" id="tasas" name="tasas" data-toggle="modal" data-target="#myModal" onclick="GetMovimientos(this)"><span class="fa fa-eye"></span></button>
+                            <a href="~/AhExtractos/details/3"> Extracto</a>
+                        </td>
+                        <td id="fecha-5"> </td>
+                        <td id="valor-5"></td>
+                        <td id="saldo-5"></td>
+                        <td id="estado-5"></td>
+
+
+                    </tr>
+                            } }
+                        @{ if (ViewBag.Alavista.Count != 0)
+                            {
+                    <tr>
+                        <td id="titulo-1">AHORROS A LA VISTA</td>
+                        <td id="boton-1" class="form-inline" style="width:200px">
+                            <select class="form-control" id="AHALAVISTA" name="AHALAVISTA" onchange="GetSelectedTextValue(this)" value="@ViewBag.Plazo" placeholder="" type="text" required>
+                                <option value="">Seleccione...</option>
+                            </select>
+                            <button type="button" id="tasas" name="tasas" value="1" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal" onclick="GetMovimientos(this)"> <span class="fa fa-eye"></span></button>
+                            <a href="~/AhExtractos/details/1"> Extracto</a>
+                        </td>
+                        <td id="fecha-1"></td>
+                        <td id="valor-1"></td>
+                        <td id="saldo-1"></td>
+                        <td id="estado-1"> </td>
+
+
+                    </tr>
+                                } }
+
+                        @*<tr>
+                        <td colspan="5">TOTAL AHORROS</td>
+                        <td>@ViewBag.CuotaTotal</td>
+                        <td>@ViewBag.Totales</td>
+                        <td colspan="4"></td>
+                    </tr>*@
+
+                        @if (ViewBag.Contractual.Count==0 && ViewBag.Alavista.Count ==0 && ViewBag.AAtermino.Count == 0 && ViewBag.Asocial.Count == 0 && ViewBag.Apermanentes.Count == 0)
+                    {
+                    <tr>
+                        <td>NO EXISTEN REGISTROS</td>
+                    </tr>
+                    }
+                    else
+                    {
+                    <tr>
+                        <td colspan="4">TOTAL DEPOSITOS</td>
+                        <td>
+                            @{ NumberFormatInfo nfi11 = new CultureInfo("en-US", false).NumberFormat;
+                                    Decimal cuo44 = Math.Round(@ViewBag.Totales);
+                                    string scuo44 = cuo44.ToString("C", nfi11);
+                            }
+                            @Html.DisplayFor(modelItem => scuo44)
+                        </td>
+                        <td></td>
+                    </tr>
+                    }
+
+                    </tbody>
+
+                </table>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                    </div>
+                    <div class="col-lg-3">
+                        <h4 style="text-align: center">CREDITOS</h4>
+                    </div>
+                    <div class="col-lg-4">
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped" id="credito_cliente" border="1" cellspacing="0" style="font-size:small">
+                        <thead>
+                            <tr style="background-color: #5CB85C; color: #EFF2F5;">
+
+                                <th>DESTINO</th>
+                                <th>PAGARE</th>
+                                <th>FECHA DESEMBOLSO</th>
+                                <th>CUOTAS EN MORA</th>
+                                <th>VALOR CUOTA</th>
+
+                                <th>SALDO TOTAL</th>
+
+                                <th>ESTADO</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.Credit)
+                    {
+
+                        <tr>
+                            <td>@item.coddestino</td>
+
+                            <td>
+                                <input type="button" id="tasas" name="tasas" value="@item.pagare" class="btn btn-success" data-toggle="modal" data-target="#myModal2" onclick="GetMov_cred(this)" />
+                                <a href="~/CExtractos/Details" > Extracto</a>
+                            </td>
+                            <td>@item.F_iniciofinanciacion</td>
+                            <td>@item.cuotasmora</td>
+                            <td>
+                                @{ NumberFormatInfo nfi11 = new CultureInfo("en-US", false).NumberFormat;
+                                    Decimal cuo11 = Math.Round(item.anualidad);
+                                    string scuo11 = cuo11.ToString("C", nfi11);
+                                }
+                                @Html.DisplayFor(modelItem => scuo11)
+                            </td>
+                            <td>
+                                @{
+                                    Decimal cuo12 = Math.Round(item.saldocapital);
+                                    string scuo12 = cuo12.ToString("C", nfi11);
+                                }
+                                @Html.DisplayFor(modelItem => scuo12)
+                            </td>
+                            <td>@item.estado</td>
+
+
+
+                        </tr>
+                    }
+                            @if (ViewBag.Credit.Count == 0)
+                    {
+                        <tr>
+                            <td>NO EXISTEN REGISTROS</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5">TOTAL OBLIGACIONES</td>
+                            <td>
+                                @{ NumberFormatInfo nfi11 = new CultureInfo("en-US", false).NumberFormat;
+                                    Decimal cuo45 = Math.Round(@ViewBag.Obligaciones);
+                                    string scuo45 = cuo45.ToString("C", nfi11);
+                                }
+                                @Html.DisplayFor(modelItem => scuo45)
+                            </td>
+                            <td></td>
+                        </tr>
+                    }
+
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        @*<button class="btn btn-success" onclick="imprime('imprimir')"><span class="glyphicon glyphicon-download"></span>Imprimir</button>*@
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Movimientos</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table" role="grid" id="tablacli" border="1" cellspacing="1" style="font-size:small">
+
+                            <thead>
+                                <tr>
+                                    <th align="center">FECHA</th>
+                                    <th align="center">NATURALEZA</th>
+                                    <th align="center">DETALLE</th>
+                                    <th align="center">VALOR EFECTIVO</th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Movimientos</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table" role="grid" id="tablacli2" border="1" cellspacing="1" style="font-size:small">
+
+                            <thead>
+                                <tr>
+                                    <th align="center">FECHA</th>
+                                    <th align="center">NATURALEZA</th>
+                                    <th align="center">RECIBO DE PAGO</th>
+                                    <th align="center">VALOR EFECTIVO</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    </section>
+<script>
+    $(document).ready(function () {
+
+        load_lineas();
+    });
+
+    function load_lineas() {
+        var linea = '@(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado: ViewBag.Nitaso.nit)';
+
+         $.ajax({
+                                        url: "@Url.Action("Ah_vista")",
+                    type: "POST",
+                    data: { "id": linea },
+                cache: false,
+                datatype: "json",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+
+                                                    var $option = $('<option>');
+                        $option.val(value.numerocuenta);
+                        $option.html(value.numerocuenta);
+                        $('#AHALAVISTA').append($option);
+                                                })
+                }
+                                        });
+
+        $.ajax({
+                                        url: "@Url.Action("Ah_termino")",
+            type: "POST",
+        data: { "id": linea },
+        cache: false,
+        datatype: "json",
+        success: function (data) {
+            $.each(data, function (index, value) {
+
+                                                    var $option = $('<option>');
+                $option.val(value.numerocuenta);
+                $option.html(value.numerocuenta);
+                $('#AHTERMINO').append($option);
+                                                })
+        }
+                                        });
+
+        $.ajax({
+                                        url: "@Url.Action("Ah_contractual")",
+            type: "POST",
+        data: { "id": linea },
+        cache: false,
+        datatype: "json",
+        success: function (data) {
+            $.each(data, function (index, value) {
+
+                                                    var $option = $('<option>');
+                $option.val(value.numerocuenta);
+                $option.html(value.numerocuenta);
+                $('#AHCONTRACTUAL').append($option);
+                                                })
+        }
+                                        });
+
+        $.ajax({
+                                        url: "@Url.Action("Ah_permanente")",
+            type: "POST",
+        data: { "id": linea },
+        cache: false,
+        datatype: "json",
+        success: function (data) {
+            $.each(data, function (index, value) {
+
+                                                    var $option = $('<option>');
+                $option.val(value.numerocuenta);
+                $option.html(value.numerocuenta);
+                $('#AHPERMANENTE').append($option);
+                                                })
+        }
+                                        });
+
+        $.ajax({
+                                        url: "@Url.Action("Ah_sociales")",
+            type: "POST",
+        data: { "id": linea },
+        cache: false,
+        datatype: "json",
+        success: function (data) {
+            $.each(data, function (index, value) {
+
+                                                    var $option = $('<option>');
+                $option.val(value.numerocuenta);
+                $option.html(value.numerocuenta);
+                $('#AHSOCIALES').append($option);
+                                                })
+        }
+                                        });
+
+                                    }
+</script>
+<script>
+    function imprime(imprimir) {
+
+        var ficha = document.getElementById(imprimir);
+        var ventimp = window.open(' ', 'popimpr');
+        ventimp.document.write(ficha.innerHTML);
+        ventimp.document.close();
+        ventimp.print();
+        ventimp.close();
+
+
+
+    }
+</script>
+<script>
+
+    function GetSelectedAsociales(nrocuenta) {
+        var linea = '@(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado: ViewBag.Nitaso.nit)';
+        var vistas = $('#AHSOCIALES').val();
+        $.ajax({
+            url: "@Url.Action("GetEspecificoAsociales")",
+            type: "POST",
+        data: { "nroc": nrocuenta.value, "id": linea },
+        cache: false,
+        datatype: "json",
+        success: function (data) {
+
+            $.each(data, function (index, value) {
+
+                var fechainicio = value.fechaapertura;
+                var valor = value.valor;
+                var saldoTotal = value.saldoTotal;
+                var estado = value.estado;
+
+                if (estado == "A") estado = "Activo";
+                if (estado == "I") estado = "Inactivo";
+
+                document.getElementById('fecha-4').innerHTML = fechainicio;
+                document.getElementById('valor-4').innerHTML = "$" + formatNumber.new(Math.round(valor));
+                document.getElementById('saldo-4').innerHTML = "$" + formatNumber.new(Math.round(saldoTotal));
+                document.getElementById('estado-4').innerHTML = estado;
+            })
+        }
+    });
+
+    }
+
+    function GetSelectedApermanente(nrocuenta) {
+        var linea = '@(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado: ViewBag.Nitaso.nit)';
+        var vistas = $('#AHPERMANENTE').val();
+        $.ajax({
+            url: "@Url.Action("GetEspecificoPermanente")",
+            type: "POST",
+        data: { "nroc": nrocuenta.value, "id": linea },
+        cache: false,
+        datatype: "json",
+        success: function (data) {
+
+            $.each(data, function (index, value) {
+
+                var fechainicio = value.fechainicio;
+                var valor = value.valor;
+                var saldoTotal = value.saldototal;
+                var estado = value.estado;
+
+                if (estado == "A") estado = "Activo";
+                if (estado == "I") estado = "Inactivo";
+
+                document.getElementById('fecha-3').innerHTML = fechainicio;
+                document.getElementById('valor-3').innerHTML = "$" + formatNumber.new(Math.round(valor));
+                document.getElementById('saldo-3').innerHTML = "$" + formatNumber.new(Math.round(saldoTotal));
+                document.getElementById('estado-3').innerHTML = estado;
+            })
+        }
+        });
+
+    }
+
+    function GetSelectedAcontractual(nrocuenta) {
+        var linea ='@(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado: ViewBag.Nitaso.nit)';
+        var vistas = $('#AHCONTRACTUAL').val();
+        $.ajax({
+            url: "@Url.Action("GetEspecificoContractual")",
+            type: "POST",
+        data: { "nroc": nrocuenta.value, "id": linea },
+        cache: false,
+        datatype: "json",
+        success: function (data) {
+
+            $.each(data, function (index, value) {
+
+                var fechainicio = value.fechainicio;
+                var valor = value.valor;
+                var saldoTotal = value.saldoTotal;
+                var estado = value.estado;
+
+                if (estado == "A") estado = "Activo";
+                if (estado == "I") estado = "Inactivo";
+
+                document.getElementById('fecha-5').innerHTML = fechainicio;
+                document.getElementById('valor-5').innerHTML = "$" + formatNumber.new(Math.round(valor));
+                document.getElementById('saldo-5').innerHTML = "$" + formatNumber.new(Math.round(saldoTotal));
+                document.getElementById('estado-5').innerHTML = estado;
+            })
+        }
+        });
+
+    }
+
+    function GetSelectedAtermino(nrocuenta) {
+        var linea = '@(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado: ViewBag.Nitaso.nit)';
+        var vistas = $('#AHTERMINO').val();
+        $.ajax({
+            url: "@Url.Action("GetEspecificoAtermino")",
+            type: "POST",
+        data: { "nroc": nrocuenta.value, "id": linea },
+        cache: false,
+        datatype: "json",
+        success: function (data) {
+
+            $.each(data, function (index, value) {
+
+                var fechainicio = value.fechainicio;
+                var valor = value.valor;
+                var saldoTotal = value.saldototal;
+                var estado = value.estado;
+
+                if (estado == "A") estado = "Activo";
+                if (estado == "I") estado = "Inactivo";
+
+                document.getElementById('fecha-2').innerHTML = fechainicio;
+                document.getElementById('valor-2').innerHTML = "$" + formatNumber.new(Math.round(valor));
+                document.getElementById('saldo-2').innerHTML = "$" + formatNumber.new(Math.round(saldoTotal));
+                document.getElementById('estado-2').innerHTML = estado;
+            })
+        }
+    });
+
+    }
+
+    function GetSelectedTextValue(nrocuenta) {
+        var linea = '@(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado: ViewBag.Nitaso.nit)';
+        var vistas = $('#AHALAVISTA').val();
+        $.ajax({
+            url: "@Url.Action("GetEspecifico")",
+            type: "POST",
+            data: { "nroc": nrocuenta.value, "id": linea },
+        cache: false,
+        datatype: "json",
+        success: function (data) {
+
+            $.each(data, function (index, value) {
+
+                var fechainicio = value.fechainicio;
+                var valor = value.valor;
+                var saldoTotal = value.saldoTotal;
+                var estado = value.estado;
+
+                if (estado == "A") estado = "Activo";
+                if (estado == "I") estado = "Inactivo";
+
+                document.getElementById('fecha-1').innerHTML = fechainicio;
+                document.getElementById('valor-1').innerHTML ="$" + formatNumber.new(Math.round(valor));
+                document.getElementById('saldo-1').innerHTML = "$" + formatNumber.new(Math.round(saldoTotal));
+                document.getElementById('estado-1').innerHTML = estado;
+            })
+        }
+        });
+
+    }
+
+    function GetMovimientos(cuenta) {
+
+        var ccc = "";
+        if (cuenta.value == 1) ccc = $('#AHALAVISTA').val();
+        if (cuenta.value == 2) ccc = $('#AHCONTRACTUAL').val();
+        if (cuenta.value == 3) ccc = $('#AHTERMINO').val();
+        if (cuenta.value == 4) ccc = $('#AHSOCIALES').val();
+        if (cuenta.value == 5) ccc = $('#AHPERMANENTE').val();
+
+
+
+       $.ajax({
+            url: "@Url.Action("GetMovimientos")",
+            type: "POST",
+            data: { "id": ccc },
+        cache: false,
+        datatype: "json",
+        success: function (data) {
+            $("#tablacli tbody tr").remove();
+            $.each(data, function (index, value) {
+
+                var fechatrabajo = value.fechatrabajo;
+                var valorefectivo = value.valorefectivo;
+                var natura = value.natura;
+                var detalle = value.detalle;
+
+                if (detalle == null) detalle = "";
+
+                $("#tablacli tbody").append("<tr><td align='center'> " + fechatrabajo + " </td>" +
+                                                              "<td align='center'> " + natura + "</td>" +
+                                                              "<td align='center'> " + detalle + "</td>" +
+                                                              "<td align='center'>$ " + formatNumber.new(valorefectivo) + "</td>" );
+
+
+
+            })
+        }
+       });
+
+    }
+
+    function GetMov_cred(pagare) {
+
+       $.ajax({
+        url: "@Url.Action("GetMov")",
+        type: "POST",
+        data: { "id": pagare.value },
+        cache: false,
+        datatype: "json",
+        success: function (data) {
+            $("#tablacli2 tbody tr").remove();
+            $.each(data, function (index, value) {
+
+                var fechaTrabajo = value.fechaTrabajo;
+                var totalefectivo = value.totalefectivo;
+                var natura = value.natura;
+                var recibopago = value.recibopago;
+                $("#tablacli2 tbody").append("<tr><td align='center'> " + fechaTrabajo + "</td>" +
+                                                              "<td align='center'> " + natura + "</td>" +
+                                                              "<td align='center'> " + recibopago + "</td>" +
+                                                              "<td align='center'>$" + formatNumber.new(totalefectivo) + "</td>");
+
+
+
+            })
+        }
+       });
+
+    }
+
+
+    var formatNumber = {
+        separador: ".", // separador para los miles
+        sepDecimal: ',', // separador para los decimales
+        formatear: function (num) {
+            num += '';
+            var splitStr = num.split('.');
+            var splitLeft = splitStr[0];
+            var splitRight = splitStr.length > 1 ? this.sepDecimal + splitStr[1] : '';
+            var regx = /(\d+)(\d{3})/;
+            while (regx.test(splitLeft)) {
+                splitLeft = splitLeft.replace(regx, '$1' + this.separador + '$2');
+            }
+            return this.simbol + splitLeft + splitRight;
+        },
+        new: function (num, simbol) {
+            this.simbol = simbol || '';
+            return this.formatear(num);
+        }
+    }
+</script>

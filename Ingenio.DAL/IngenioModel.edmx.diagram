@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="79c5d4fe910f455e9ed6ee382aca9355" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="IngenioModel.Modulos" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IngenioModel.UsuariosRoles" PointX="4.625" PointY="0.5" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IngenioModel.Roles" Width="1.5" PointX="4.375" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IngenioModel.RolesModulos" Width="1.5" PointX="0.5" PointY="3.25" IsExpanded="true" />
+        <AssociationConnector Association="IngenioModel.FK_RolesModulos_Modulos" />
+        <AssociationConnector Association="IngenioModel.FK_RolesModulos_Roles" />
+        <AssociationConnector Association="IngenioModel.FK_UsuariosRoles_Roles" />
+        <EntityTypeShape EntityType="IngenioModel.SEGUIMIENTO_SIMULADORES" Width="1.5" PointX="5.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="IngenioModel.Sliders" Width="1.5" PointX="8.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IngenioModel.Cargos" Width="1.5" PointX="9" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IngenioModel.Usuarios" Width="1.5" PointX="2.375" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="IngenioModel.FK_Sliders_Usuarios" />
+        <AssociationConnector Association="IngenioModel.FK_UsuariosRoles_Usuarios" />
+        <AssociationConnector Association="IngenioModel.CargosUsuarios" />
+        <EntityTypeShape EntityType="IngenioModel.Estados" Width="1.5" PointX="0.75" PointY="5.5" />
+        <AssociationConnector Association="IngenioModel.UsuariosEstados" />
+        <EntityTypeShape EntityType="IngenioModel.Galeria" Width="1.5" PointX="3.25" PointY="6.125" />
+        <AssociationConnector Association="IngenioModel.UsuariosGaleria" />
+        <EntityTypeShape EntityType="IngenioModel.Log_Usuarios" Width="1.5" PointX="8.375" PointY="7.375" />
+        <EntityTypeShape EntityType="IngenioModel.Asociados_Ingenio" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="IngenioModel.Param_dian" Width="1.5" PointX="3.375" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

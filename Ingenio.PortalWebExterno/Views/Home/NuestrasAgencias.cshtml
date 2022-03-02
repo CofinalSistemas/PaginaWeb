@@ -1,0 +1,373 @@
+﻿@{
+    ViewBag.Title = "Nuestras Agencias";
+    ViewBag.titulo = "Nuestras Agencias";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "conoscanosActivo";
+}
+<style>
+
+    #Nariñoo, #Caucaa, #Putumayoo, #PuntosAtencioon, #Vallee {
+        color: black;
+        font-size: 20px;
+    }
+
+    .text-justify {
+        font-size: 18px;
+    }
+
+    #nar, #Cau, #Putu, #Punto, #Valle {
+        padding-bottom: 1px;
+        background: #da4d4d;
+    }
+
+    #get-it {
+        background: -webkit-linear-gradient(left, rgba(216,65,65,0.99) 0%, rgba(216,65,65,0.89) 49%, rgba(213,195,195,0.81) 90%, rgba(213,195,195,0.79) 100%);
+        text-align: left;
+        -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+    }
+
+    #titulo {
+        background-image: url(/img/textura1.png);
+        background-size: 30%;
+    }
+</style>
+
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'b7e1cad8ae31b522b9a3b64e60182dc54a8c7acb';
+    window.smartsupp || (function (d) {
+        var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+        s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+        c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+        c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+    })(document);
+</script>
+
+<style>
+    .contenido {
+        background-image: url(/img/texture-bw.png);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        -webkit-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
+        box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
+    }
+</style>
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+
+
+<!-- imagen fondo1-->
+<!--<div class="parallaxbox" id="pb0" style="background-image: url(/img/tur5.jpg)">-->
+<!--<div id="titulo">
+    <div id="get-it">
+        <div class="container">
+            <div class="text-center">
+                <h2>Sucursales</h2>
+            </div>
+
+        </div>
+    </div>
+</div>-->
+<!-- contenido-->
+<section class="contenido">
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8); -webkit-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);-moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);  ">
+        <ul class="nav nav-tabs" style="background-color:#da4d4d">
+            <li class="active" id="nar"><a id="Nariñoo" href="#Nariño" data-toggle="tab">Nariño</a></li>
+            <li id="Cau"><a data-toggle="tab" id="Caucaa" href="#Cauca">Cauca</a></li>
+            <li id="Putu"><a data-toggle="tab" id="Putumayoo" href="#Putumayo">Putumayo</a></li>
+            <li id="Punto"><a data-toggle="tab" id="PuntosAtencioon" href="#PuntosAtencion">Extensiones de Caja</a></li>
+            <li id="Valle"><a data-toggle="tab" id="Vallee" href="#ValledelCauca">Valle del Cauca</a></li>
+        </ul>
+
+        <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
+            <div class="tab-pane active" id="Nariño">
+
+                <div class="heading">
+                    <h4>PASTO</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_LorenzoPasto.jpg" style="width:400px; height: 400px;" alt="Lorenzo Pasto" class="img-responsive  center-block">*@
+                    <strong>Principal:</strong> Cra 29 No 18–41 Teléfono: 7336300 - Extensiones: 100, 101, 102. Asesores Integrales: 103 a 107. cartera Pasto: 111 a 113 <br />
+                    <strong>Barrio Lorenzo:</strong> Calle 18A No 1-17 - Teléfono: 7336300 Extensiones: 190 - 191  <br />
+                    <strong>Horario de atención al publico:</strong>   Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm - Sábado: 8:00 am a 11:30 am.
+                </p>
+				  <div class="heading">
+                    <h4>SANDONA</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Sandona.jpg" style="width:400px; height: 400px;" alt="Sandona" class="img-responsive  center-block">*@
+                    Calle 5ta. No. 03-77 - Teléfono: 7336300 Extensiones: 200 - 201<br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
+                </p>
+				
+                <div class="heading">
+                    <h4>IPIALES</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Ipiales.jpg" style="width:400px; height: 400px;" alt="Lorenzo Pasto" class="img-responsive  center-block">*@
+                    Calle 16 No 7-40 - Teléfono: 7336300 Extensiones: 300 - 301 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am.
+                </p>
+              
+                <div class="heading">
+                    <h4>CONSACÁ</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Consaca.jpg" style="width:400px; height: 400px;" alt="Consaca" class="img-responsive  center-block">*@
+                    Carrera 7 No 2-61 - Teléfono: 7336300 Extensiones: 400 - 401 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12.00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
+                </p>
+
+                <div class="heading">
+                    <h4>BUESACO</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Buesaco.jpg" style="width:400px; height: 300px;" alt="Buesaco" class="img-responsive  center-block">*@
+                    Carrera 3 No 8-22 Parque Principal - Teléfono: 7336300 Extensiones: 500 - 501 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
+
+                </p>
+                <div class="heading">
+                    <h4>TAMINANGO</h4>
+                </div>
+                <p class="text-justify">
+                    Calle 3 No. 4 -70 B/San Francisco - Teléfono: 7336300 Extensiones: 600 - 601 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12.00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 3:00 pm Jornada Continua.
+                </p>
+                <div class="heading">
+                    <h4>LA UNION</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_La Union.JPG" style="width:400px; height: 300px;" alt="La Unión" class="img-responsive  center-block">*@
+                    Carrera 2a No 17-67 B/Eduardo Santos - Teléfono: 7336300 Extensiones: 700 - 701 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
+                </p>
+
+                <div class="heading">
+                    <h4>TUMACO</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto3_Tumaco.JPG" style="width:400px; height: 300px;" alt="Tumaco" class="img-responsive  center-block">*@
+                    Casa 67 Calle Obando – Teléfono: 7336300 Extensiones: 800 - 801 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am.
+                </p>
+
+                <div class="heading">
+                    <h4>LINARES</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto2_Linares.JPG" style="width:400px; height: 300px;" alt="Buesaco" class="img-responsive  center-block">*@
+                    Calle 4 No 3-50 B/Golgota - Teléfono: 7336300 Extensiones: 110 - 111 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
+                </p>
+                <div class="heading">
+                    <h4>ANCUYA</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Ancuya.jpg" style="width:400px; height: 300px;" alt="Buesaco" class="img-responsive  center-block">*@
+                    Calle 2 No 4-27 - Teléfono: 7336300 Extensiones: 130 - 131 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+                </p>
+                <div class="heading">
+                    <h4>TUQUERRES</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Tuquerres.jpg" style="width:400px; height: 400px;" alt="Buesaco" class="img-responsive  center-block">*@
+                    Calle 17 No 12-54 - Teléfono: 7336300 Extensiones: 140 - 141 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am
+                </p>
+                <div class="heading">
+                    <h4>GUALMATAN</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Gualmatan.jpg" style="width:400px; height: 500px;" alt="Gualmatan" class="img-responsive  center-block">*@
+                    Calle 5 No 5-28 B/ Centro. Calle Ppal - Teléfono: 7336300 Extensiones: 150 - 151 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+                </p>
+                <div class="heading">
+                    <h4>GUACHUCAL</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Guachucal.jpg" style="width:400px; height: 400px;" alt="Guachucal" class="img-responsive  center-block">*@
+                    Carrera 5 No 4-67 B/ Centro - Teléfono: 7336300 Extensiones: 160 - 161 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+                </p>
+            </div>
+            <div class="tab-pane " id="Cauca">
+                <div class="heading">
+                    <h4>POPAYÁN</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto2_Popayan.jpg" style="width:500px; height: 400px;" alt="Popayan" class="img-responsive  center-block">*@
+                    Calle 4 No 4-12 Ed.Altozano Centro Histórico - Teléfono: 7336300 Extensiones: 900 - 901  <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am
+                </p>
+            </div>
+            <div class="tab-pane" id="Putumayo">
+                <div class="heading">
+                    <h4>SIBUNDOY</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Sibundoy.jpg" style="width:500px; height: 400px;" alt="Sibundoy" class="img-responsive  center-block">*@
+                    Calle 15 No 15-74 B/Oriental - Teléfono: 7336300 Extensiones: 120 - 121 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+                </p>
+            </div>
+
+            <div class="tab-pane" id="ValledelCauca">
+                <div class="heading">
+                    <h4>PALMIRA</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Sibundoy.jpg" style="width:500px; height: 400px;" alt="Sibundoy" class="img-responsive  center-block">*@
+                    Calle 29 No 29-39 Centro - Respaldo de Nuestra Señora del Palmar - Teléfono: 7336300 Extensiones: 202 - 203 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am
+                </p>
+            </div>
+
+            <div class="tab-pane" id="PuntosAtencion">
+                <div class="heading">
+                    <h4>SAN JOSE DE ALBAN</h4>
+                </div>
+                <p class="text-justify">
+                    Calle 4 No 01 B/ Los Guaduales - Teléfono: 7336300 Extensión: 502 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+                </p>
+                <div class="heading">
+                    <h4>SAN LORENZO</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_SanLorenzo.jpg" style="width:500px; height: 400px;" alt="Sibundoy" class="img-responsive  center-block">*@
+                    Carrera 3 No 3-33 B/ Centro - Teléfono: 7336300 Extensión: 602 <br />
+                    <strong>Horario de atención al publico:</strong> Horario de Atención: Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+                </p>
+
+                <div class="heading">
+                    <h4>CUMBAL</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Cumbal.jpg" style="width:500px; height: 400px;" alt="Sibundoy" class="img-responsive  center-block">*@
+                    Calle 18 No 7-23 B/ Granada - Teléfono: 7336300 Extensión: 162 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+                </p>
+				
+				<div class="heading">
+                    <h4>SAN BERNARDO</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Cumbal.jpg" style="width:500px; height: 400px;" alt="Sibundoy" class="img-responsive  center-block">*@
+                    Carrera 1 No 5-17 B/ Porvenir - Teléfono: 7336300 Extensión: 503 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+                </p>
+				
+				<div class="heading">
+                    <h4>EL PEÑOL</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Cumbal.jpg" style="width:500px; height: 400px;" alt="Sibundoy" class="img-responsive  center-block">*@
+                    Calle principal frente al parque B/Centro - Teléfono: 7336300 Extensión: 173 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+                </p>
+
+				<div class="heading">
+                    <h4>LA FLORIDA</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Cumbal.jpg" style="width:500px; height: 400px;" alt="Sibundoy" class="img-responsive  center-block">*@
+                    Calle 3 No Casa 53B B/Divino Niño - Teléfono: 7336300 Extensión: 172 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+                </p>
+				
+				<div class="heading">
+                    <h4>NARIÑO</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Cumbal.jpg" style="width:500px; height: 400px;" alt="Sibundoy" class="img-responsive  center-block">*@
+                    Calle 4 No 4-38 B/Centro - Teléfono: 7336300 Extensión: 174 <br />
+                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+                </p>
+				
+                <div class="heading">
+                    <h4>MERCADERES (CAUCA)</h4>
+                </div>
+                <p class="text-justify">
+                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Mercaderes.jpg" style="width:500px; height: 400px;" alt="Mercaderes" class="img-responsive  center-block">*@
+                    Cra 3 No 2-64 B/ Santa Teresita - Teléfono: 7336300 Extensión: 702 <br />
+                    <strong>Horario de atención al publico:</strong>   Horario de atención: Martes a Viernes de 8:00 am A 12:00 meridiano - 2:00 pm A 4:30 pm, Sábado de 8:00 am A 2:00 pm Jornada Continua.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- imagen fondo2-->
+<!--<div class="parallaxbox" id="pb1" style="background-image: url(/img/tur5.jpg);"> </div>-->
+
+<script>
+    $("#Nariñoo").click(function (e) {
+        e.preventDefault();
+        console
+        $("#imagen").css("background-image", "url(/img/Credito4.jpg)")
+        $("#imagen2").css("background-image", "url(/img/Credito4.jpg)")
+    });
+    $("#Nariñoo").click(function (e) {
+        e.preventDefault();
+        console
+        $("#imagen").css("background-image", "url(/img/Credito1.jpg)")
+        $("#imagen2").css("background-image", "url(/img/Credito1.jpg)")
+    });
+    $("#Caucaa").click(function (e) {
+        e.preventDefault();
+        console
+        $("#imagen").css("background-image", "url(/img/Credito2.jpg)")
+        $("#imagen2").css("background-image", "url(/img/Credito2.jpg)")
+    });
+    $("#Putumayoo").click(function (e) {
+        e.preventDefault();
+        console
+        $("#imagen").css("background-image", "url(/img/Credito1.jpg)")
+        $("#imagen2").css("background-image", "url(/img/Credito1.jpg)")
+    });
+    $("#PuntosAtencioon").click(function (e) {
+        e.preventDefault();
+        console
+        $("#imagen2").css("background-image", "url(/img/credito1.jpg)")
+        $("#imagen").css("background-image", "url(/img/Credito1.jpg)")
+
+    });
+
+</script>
+<!-- scrip para parallax-->
+<script type="text/javascript">
+    function parallax() {
+        setpos("#pb0");
+        setpos("#pb1");
+
+    }
+
+
+
+    function setpos(element, factor) {
+        factor = factor || 2;
+
+        var offset = $(element).offset();
+        var w = $(window);
+
+        var posx = (offset.left - w.scrollLeft()) / factor;
+        var posy = (offset.top - w.scrollTop()) / factor;
+
+        $(element).css('background-position', '100% ' + posy + 'px');
+
+        // use this to have parralax scrolling vertical and horizontal
+        //$(element).css('background-position', posx+'px '+posy+'px');
+    }
+
+    $(document).ready(function () {
+        parallax();
+    }).scroll(function () {
+        parallax();
+    });
+</script>

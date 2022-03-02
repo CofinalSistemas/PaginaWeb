@@ -1,0 +1,934 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="IngenioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Asociados_Ingenio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Identificacion" Type="varchar(max)" Nullable="false" />
+          <Property Name="PrimerNombre" Type="varchar(max)" Nullable="false" />
+          <Property Name="SegundoNombre" Type="varchar(max)" />
+          <Property Name="PrimerApellido" Type="varchar(max)" Nullable="false" />
+          <Property Name="SegundoAPellido" Type="varchar(max)" />
+          <Property Name="Correo" Type="varchar(max)" Nullable="false" />
+          <Property Name="Password" Type="varchar(max)" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="FechaAnteriroAcceso" Type="datetime" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="tipo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cargos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Estados">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Titulo" Type="varchar(max)" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Imagen" Type="varchar(max)" />
+          <Property Name="Html" Type="text" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="FechaFin" Type="datetime" />
+          <Property Name="NoticiaCofiFunda" Type="bit" Nullable="false" />
+          <Property Name="Url" Type="varchar(max)" Nullable="false" />
+          <Property Name="Id_Usuario" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Galeria">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RutaImagen" Type="varchar(max)" />
+          <Property Name="Id_Usuario" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Log_Usuarios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Usuario" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Fecha_acesso" Type="datetime" />
+          <Property Name="Ip" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Modulos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Param_dian">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="INTERES_PAGADOS" Type="varchar" MaxLength="15" />
+          <Property Name="INTERES_DEDUCIBLES" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar(max)" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RolesModulos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_Rol" Type="int" Nullable="false" />
+          <Property Name="Id_Modulo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SEGUIMIENTO_SIMULADORES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FECHA" Type="datetime" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TELEFONO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+          <Property Name="TIPO" Type="char" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="Sliders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Imagen" Type="varchar(max)" />
+          <Property Name="Titulo" Type="varchar(max)" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="Url" Type="varchar(max)" />
+          <Property Name="Posicion" Type="tinyint" Nullable="false" />
+          <Property Name="Activo" Type="bit" />
+          <Property Name="Id_Usuario" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar(max)" Nullable="false" />
+          <Property Name="Password" Type="varchar(max)" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="FechaUltimoAcceso" Type="datetime" />
+          <Property Name="Nombre" Type="varchar(max)" Nullable="false" />
+          <Property Name="Telefono" Type="varchar(max)" />
+          <Property Name="Identificacion" Type="varchar(max)" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="Id_cargo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsuariosRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_Usuario" Type="int" Nullable="false" />
+          <Property Name="Id_Rol" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_RolesModulos_Modulos">
+          <End Role="Modulos" Type="Self.Modulos" Multiplicity="1" />
+          <End Role="RolesModulos" Type="Self.RolesModulos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modulos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RolesModulos">
+              <PropertyRef Name="Id_Modulo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolesModulos_Roles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="RolesModulos" Type="Self.RolesModulos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RolesModulos">
+              <PropertyRef Name="Id_Rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuariosRoles_Roles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="UsuariosRoles" Type="Self.UsuariosRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UsuariosRoles">
+              <PropertyRef Name="Id_Rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="P_Operador_UiAf" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="P_Operador_UiAf2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="P_Operador_UiAf3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="P_Operador_UiAf4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fechai" Type="datetime" Mode="In" />
+          <Parameter Name="fechaf" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="P_Transaccciones_Uiaf" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+          <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+          <Parameter Name="ValorMinimoInclusion" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="UIAF_MULTIPLES_TRANSAC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FECHAINI" Type="datetime" Mode="In" />
+          <Parameter Name="FECHAFIN" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="UIAF_TRANSMULTIPLES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FECHAINI" Type="datetime" Mode="In" />
+          <Parameter Name="FECHAFIN" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="UIAF_TRANSMULTIPLES2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FECHAINI" Type="datetime" Mode="In" />
+          <Parameter Name="FECHAFIN" Type="datetime" Mode="In" />
+        </Function>
+        <EntityContainer Name="IngenioModelStoreContainer">
+          <EntitySet Name="Asociados_Ingenio" EntityType="Self.Asociados_Ingenio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cargos" EntityType="Self.Cargos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Estados" EntityType="Self.Estados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Galeria" EntityType="Self.Galeria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Log_Usuarios" EntityType="Self.Log_Usuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Modulos" EntityType="Self.Modulos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Param_dian" EntityType="Self.Param_dian" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RolesModulos" EntityType="Self.RolesModulos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SEGUIMIENTO_SIMULADORES" EntityType="Self.SEGUIMIENTO_SIMULADORES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sliders" EntityType="Self.Sliders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsuariosRoles" EntityType="Self.UsuariosRoles" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_RolesModulos_Modulos" Association="Self.FK_RolesModulos_Modulos">
+            <End Role="Modulos" EntitySet="Modulos" />
+            <End Role="RolesModulos" EntitySet="RolesModulos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolesModulos_Roles" Association="Self.FK_RolesModulos_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="RolesModulos" EntitySet="RolesModulos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuariosRoles_Roles" Association="Self.FK_UsuariosRoles_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="UsuariosRoles" EntitySet="UsuariosRoles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IngenioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Modulos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="RolesModulos" Relationship="IngenioModel.FK_RolesModulos_Modulos" FromRole="Modulos" ToRole="RolesModulos" />
+        </EntityType>
+        <EntityType Name="UsuariosRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Nullable="false" Type="Int32" />
+          <Property Name="Id_Usuario" Nullable="false" Type="Int32" />
+          <Property Name="Id_Rol" Nullable="false" Type="Int32" />
+          <NavigationProperty Name="Roles" Relationship="IngenioModel.FK_UsuariosRoles_Roles" FromRole="UsuariosRoles" ToRole="Roles" />
+          <NavigationProperty Name="Usuarios" Relationship="IngenioModel.FK_UsuariosRoles_Usuarios" FromRole="UsuariosRoles" ToRole="Usuarios" />
+        </EntityType>
+        <EntityContainer Name="IngenioEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Modulos" EntityType="Self.Modulos" />
+          <EntitySet Name="UsuariosRoles" EntityType="Self.UsuariosRoles" />
+          <EntitySet Name="Roles" EntityType="IngenioModel.Roles" />
+          <EntitySet Name="RolesModulos" EntityType="IngenioModel.RolesModulos" />
+          <AssociationSet Name="FK_RolesModulos_Modulos" Association="IngenioModel.FK_RolesModulos_Modulos">
+            <End Role="Modulos" EntitySet="Modulos" />
+            <End Role="RolesModulos" EntitySet="RolesModulos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolesModulos_Roles" Association="IngenioModel.FK_RolesModulos_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="RolesModulos" EntitySet="RolesModulos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuariosRoles_Roles" Association="IngenioModel.FK_UsuariosRoles_Roles">
+            <End EntitySet="Roles" Role="Roles" />
+            <End EntitySet="UsuariosRoles" Role="UsuariosRoles" />
+          </AssociationSet>
+          <EntitySet Name="SEGUIMIENTO_SIMULADORES" EntityType="IngenioModel.SEGUIMIENTO_SIMULADORES" />
+          <EntitySet Name="Sliders" EntityType="IngenioModel.Sliders" />
+          <EntitySet Name="Cargos" EntityType="IngenioModel.Cargos" />
+          <EntitySet Name="Usuarios" EntityType="IngenioModel.Usuarios" />
+          <AssociationSet Name="FK_Sliders_Usuarios" Association="IngenioModel.FK_Sliders_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Sliders" EntitySet="Sliders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuariosRoles_Usuarios" Association="IngenioModel.FK_UsuariosRoles_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="UsuariosRoles" EntitySet="UsuariosRoles" />
+          </AssociationSet>
+          <AssociationSet Name="CargosUsuarios" Association="IngenioModel.CargosUsuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Cargos" EntitySet="Cargos" />
+          </AssociationSet>
+          <EntitySet Name="Estados" EntityType="IngenioModel.Estados" />
+          <AssociationSet Name="UsuariosEstados" Association="IngenioModel.UsuariosEstados">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Estados" EntitySet="Estados" />
+          </AssociationSet>
+          <EntitySet Name="Galeria" EntityType="IngenioModel.Galeria" />
+          <AssociationSet Name="UsuariosGaleria" Association="IngenioModel.UsuariosGaleria">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Galeria" EntitySet="Galeria" />
+          </AssociationSet>
+          <FunctionImport Name="UIAF_MULTIPLES" ReturnType="Collection(Int64)">
+            <Parameter Name="FECHAINI" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHAFIN" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="UIAF_MULTIPLES_TRANSAC">
+            <Parameter Name="FECHAINI" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHAFIN" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <EntitySet Name="Log_Usuarios" EntityType="IngenioModel.Log_Usuarios" />
+          <FunctionImport Name="P_Transaccciones_Uiaf">
+            <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+            <Parameter Name="ValorMinimoInclusion" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="P_Operador_UiAf" ReturnType="Collection(IngenioModel.P_Operador_UiAf_Result)" />
+          <FunctionImport Name="P_Operador_UiAf2" ReturnType="Collection(IngenioModel.P_Operador_UiAf2_Result)" />
+          <EntitySet Name="Asociados_Ingenio" EntityType="IngenioModel.Asociados_Ingenio" />
+          <EntitySet Name="Param_dian" EntityType="IngenioModel.Param_dian" />
+          <FunctionImport Name="P_Operador_UiAf3" ReturnType="Collection(IngenioModel.P_Operador_UiAf3_Result)" />
+          <FunctionImport Name="UIAF_TRANSMULTIPLES" ReturnType="Collection(IngenioModel.UIAF_TRANSMULTIPLES_Result)">
+            <Parameter Name="FECHAINI" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHAFIN" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="UIAF_TRANSMULTIPLES2" ReturnType="Collection(IngenioModel.UIAF_TRANSMULTIPLES2_Result)">
+            <Parameter Name="FECHAINI" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHAFIN" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="P_Operador_UiAf4" ReturnType="Collection(IngenioModel.P_Operador_UiAf4_Result)">
+            <Parameter Name="fechai" Mode="In" Type="DateTime" />
+            <Parameter Name="fechaf" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          </EntityContainer>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" DefaultValue="True" />
+          <NavigationProperty Name="RolesModulos" Relationship="IngenioModel.FK_RolesModulos_Roles" FromRole="Roles" ToRole="RolesModulos" />
+          <NavigationProperty Name="UsuariosRoles" Relationship="IngenioModel.FK_UsuariosRoles_Roles" FromRole="Roles" ToRole="UsuariosRoles" />
+        </EntityType>
+        <EntityType Name="RolesModulos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Rol" Type="Int32" Nullable="false" />
+          <Property Name="Id_Modulo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Modulos" Relationship="IngenioModel.FK_RolesModulos_Modulos" FromRole="RolesModulos" ToRole="Modulos" />
+          <NavigationProperty Name="Roles" Relationship="IngenioModel.FK_RolesModulos_Roles" FromRole="RolesModulos" ToRole="Roles" />
+        </EntityType>
+        <Association Name="FK_RolesModulos_Modulos">
+          <End Type="IngenioModel.Modulos" Role="Modulos" Multiplicity="1" />
+          <End Type="IngenioModel.RolesModulos" Role="RolesModulos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modulos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RolesModulos">
+              <PropertyRef Name="Id_Modulo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolesModulos_Roles">
+          <End Type="IngenioModel.Roles" Role="Roles" Multiplicity="1" />
+          <End Type="IngenioModel.RolesModulos" Role="RolesModulos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RolesModulos">
+              <PropertyRef Name="Id_Rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuariosRoles_Roles">
+          <End Type="IngenioModel.Roles" Multiplicity="1" Role="Roles" />
+          <End Type="IngenioModel.UsuariosRoles" Multiplicity="*" Role="UsuariosRoles" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UsuariosRoles">
+              <PropertyRef Name="Id_Rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SEGUIMIENTO_SIMULADORES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FECHA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONO" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TIPO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sliders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Titulo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Posicion" Type="Byte" Nullable="false" />
+          <Property Name="Activo" Type="Boolean" />
+          <Property Name="Id_Usuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Usuarios" Relationship="IngenioModel.FK_Sliders_Usuarios" FromRole="Sliders" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Cargos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Usuarios" Relationship="IngenioModel.CargosUsuarios" FromRole="Cargos" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaUltimoAcceso" Type="DateTime" Precision="3" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Identificacion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" DefaultValue="True" />
+          <Property Name="Id_Cargo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Sliders" Relationship="IngenioModel.FK_Sliders_Usuarios" FromRole="Usuarios" ToRole="Sliders" />
+          <NavigationProperty Name="UsuariosRoles" Relationship="IngenioModel.FK_UsuariosRoles_Usuarios" FromRole="Usuarios" ToRole="UsuariosRoles" />
+          <NavigationProperty Name="Cargos" Relationship="IngenioModel.CargosUsuarios" FromRole="Usuarios" ToRole="Cargos" />
+          <NavigationProperty Name="Estados" Relationship="IngenioModel.UsuariosEstados" FromRole="Usuarios" ToRole="Estados" />
+          <NavigationProperty Name="Galeria" Relationship="IngenioModel.UsuariosGaleria" FromRole="Usuarios" ToRole="Galeria" />
+        </EntityType>
+        <Association Name="FK_Sliders_Usuarios">
+          <End Type="IngenioModel.Usuarios" Role="Usuarios" Multiplicity="1" />
+          <End Type="IngenioModel.Sliders" Role="Sliders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sliders">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuariosRoles_Usuarios">
+          <End Type="IngenioModel.Usuarios" Role="Usuarios" Multiplicity="1" />
+          <End Type="IngenioModel.UsuariosRoles" Role="UsuariosRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UsuariosRoles">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CargosUsuarios">
+          <End Type="IngenioModel.Usuarios" Role="Usuarios" Multiplicity="*" />
+          <End Type="IngenioModel.Cargos" Role="Cargos" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Cargos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="Id_Cargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Estados">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Titulo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Html" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FechaInicio" Type="DateTime" Precision="3" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" />
+          <Property Name="FechaFin" Type="DateTime" Precision="3" />
+          <Property Name="NoticiaCofiFunda" Type="Boolean" Nullable="false" />
+          <Property Name="Url" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Id_Usuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Usuarios" Relationship="IngenioModel.UsuariosEstados" FromRole="Estados" ToRole="Usuarios" />
+        </EntityType>
+        <Association Name="UsuariosEstados">
+          <End Type="IngenioModel.Usuarios" Role="Usuarios" Multiplicity="1" />
+          <End Type="IngenioModel.Estados" Role="Estados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Estados">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Galeria">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RutaImagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Id_Usuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Usuarios" Relationship="IngenioModel.UsuariosGaleria" FromRole="Galeria" ToRole="Usuarios" />
+        </EntityType>
+        <Association Name="UsuariosGaleria">
+          <End Type="IngenioModel.Usuarios" Role="Usuarios" Multiplicity="1" />
+          <End Type="IngenioModel.Galeria" Role="Galeria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Galeria">
+              <PropertyRef Name="Id_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Log_Usuarios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Usuario" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Fecha_acesso" Type="DateTime" Precision="3" />
+          <Property Name="Ip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="P_Operador_UiAf_Result">
+          <Property Type="DateTime" Name="fechaseguimiento" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="Valor_Transaccion" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="codciudad" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="nombreagencia" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tipoproducto" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="numerocuenta" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="tipoidentificacion" Nullable="false" MaxLength="1" />
+          <Property Type="Int64" Name="cedulasociado" Nullable="true" />
+          <Property Type="String" Name="primerapellido" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="segundoapellido" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nombres" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="segundonombre" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nombreasociado" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="80" />
+          <Property Type="Decimal" Name="salario" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="P_Operador_UiAf2_Result">
+          <Property Type="DateTime" Name="fechaseguimiento" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="Valor_Transaccion" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="codciudad" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="nombreagencia" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tipoproducto" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="numerocuenta" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="tipoidentificacion" Nullable="false" MaxLength="1" />
+          <Property Type="Int64" Name="cedulasociado" Nullable="true" />
+          <Property Type="String" Name="primerapellido" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="segundoapellido" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nombres" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="segundonombre" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nombreasociado" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="80" />
+          <Property Type="Decimal" Name="salario" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="codlinea" Nullable="true" MaxLength="4" />
+        </ComplexType>
+        <EntityType Name="Asociados_Ingenio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Identificacion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PrimerNombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SegundoNombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PrimerApellido" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SegundoAPellido" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaAnteriroAcceso" Type="DateTime" Precision="3" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" />
+          <Property Name="tipo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Param_dian">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="INTERES_PAGADOS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="INTERES_DEDUCIBLES" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="P_Operador_UiAf3_Result">
+          <Property Type="DateTime" Name="fechaseguimiento" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="Valor_Transaccion" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="codciudad" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="nombreagencia" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tipoproducto" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="numerocuenta" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="tipoidentificacion" Nullable="false" MaxLength="1" />
+          <Property Type="Int64" Name="cedulasociado" Nullable="true" />
+          <Property Type="String" Name="primerapellido" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="segundoapellido" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nombres" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="segundonombre" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nombreasociado" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="80" />
+          <Property Type="Decimal" Name="salario" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="codlinea" Nullable="true" MaxLength="4" />
+          <Property Type="Int32" Name="TIPO_TRANSACCION" Nullable="true" />
+          <Property Type="String" Name="codoperador" Nullable="false" MaxLength="4" />
+        </ComplexType>
+        <ComplexType Name="UIAF_TRANSMULTIPLES_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int64" Name="cedula" Nullable="false" />
+          <Property Type="Int64" Name="totalefectivo" Nullable="false" />
+          <Property Type="String" Name="tipo" Nullable="true" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="UIAF_TRANSMULTIPLES2_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="nrocuenta" Nullable="true" MaxLength="15" />
+          <Property Type="Int64" Name="cedula" Nullable="false" />
+          <Property Type="Int64" Name="totalefectivo" Nullable="false" />
+          <Property Type="String" Name="tipo" Nullable="true" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="P_Operador_UiAf4_Result">
+          <Property Type="DateTime" Name="fechaseguimiento" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="Valor_Transaccion" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="codciudad" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="nombreagencia" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tipoproducto" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="numerocuenta" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="tipoidentificacion" Nullable="false" MaxLength="1" />
+          <Property Type="Int64" Name="cedulasociado" Nullable="true" />
+          <Property Type="String" Name="primerapellido" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="segundoapellido" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nombres" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="segundonombre" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="nombreasociado" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="nombre" Nullable="true" MaxLength="250" />
+          <Property Type="Decimal" Name="salario" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="codlinea" Nullable="true" MaxLength="4" />
+          <Property Type="Int32" Name="TIPO_TRANSACCION" Nullable="true" />
+          <Property Type="String" Name="operador" Nullable="true" MaxLength="4" />
+        </ComplexType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IngenioModelStoreContainer" CdmEntityContainer="IngenioEntities">
+    <EntitySetMapping Name="Modulos">
+      <EntityTypeMapping TypeName="IsTypeOf(IngenioModel.Modulos)">
+        <MappingFragment StoreEntitySet="Modulos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuariosRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(IngenioModel.UsuariosRoles)">
+        <MappingFragment StoreEntitySet="UsuariosRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="IsTypeOf(IngenioModel.Roles)">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolesModulos">
+      <EntityTypeMapping TypeName="IsTypeOf(IngenioModel.RolesModulos)">
+        <MappingFragment StoreEntitySet="RolesModulos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+          <ScalarProperty Name="Id_Modulo" ColumnName="Id_Modulo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+          <EntitySetMapping Name="SEGUIMIENTO_SIMULADORES">
+            <EntityTypeMapping TypeName="IngenioModel.SEGUIMIENTO_SIMULADORES">
+              <MappingFragment StoreEntitySet="SEGUIMIENTO_SIMULADORES">
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sliders">
+            <EntityTypeMapping TypeName="IngenioModel.Sliders">
+              <MappingFragment StoreEntitySet="Sliders">
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Posicion" ColumnName="Posicion" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cargos">
+            <EntityTypeMapping TypeName="IngenioModel.Cargos">
+              <MappingFragment StoreEntitySet="Cargos">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="IngenioModel.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="Id_Cargo" ColumnName="Id_cargo" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="FechaUltimoAcceso" ColumnName="FechaUltimoAcceso" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estados">
+            <EntityTypeMapping TypeName="IngenioModel.Estados">
+              <MappingFragment StoreEntitySet="Estados">
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="NoticiaCofiFunda" ColumnName="NoticiaCofiFunda" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="Html" ColumnName="Html" />
+                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Galeria">
+            <EntityTypeMapping TypeName="IngenioModel.Galeria">
+              <MappingFragment StoreEntitySet="Galeria">
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+                <ScalarProperty Name="RutaImagen" ColumnName="RutaImagen" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="UIAF_MULTIPLES_TRANSAC" FunctionName="IngenioModel.Store.UIAF_MULTIPLES_TRANSAC" />
+          <EntitySetMapping Name="Log_Usuarios">
+            <EntityTypeMapping TypeName="IngenioModel.Log_Usuarios">
+              <MappingFragment StoreEntitySet="Log_Usuarios">
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="Fecha_acesso" ColumnName="Fecha_acesso" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="P_Transaccciones_Uiaf" FunctionName="IngenioModel.Store.P_Transaccciones_Uiaf" />
+          <FunctionImportMapping FunctionImportName="P_Operador_UiAf" FunctionName="IngenioModel.Store.P_Operador_UiAf">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="IngenioModel.P_Operador_UiAf_Result">
+                <ScalarProperty Name="fechaseguimiento" ColumnName="fechaseguimiento" />
+                <ScalarProperty Name="Valor_Transaccion" ColumnName="Valor_Transaccion" />
+                <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+                <ScalarProperty Name="nombreagencia" ColumnName="nombreagencia" />
+                <ScalarProperty Name="tipoproducto" ColumnName="tipoproducto" />
+                <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+                <ScalarProperty Name="tipoidentificacion" ColumnName="tipoidentificacion" />
+                <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+                <ScalarProperty Name="primerapellido" ColumnName="primerapellido" />
+                <ScalarProperty Name="segundoapellido" ColumnName="segundoapellido" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="segundonombre" ColumnName="segundonombre" />
+                <ScalarProperty Name="nombreasociado" ColumnName="nombreasociado" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="salario" ColumnName="salario" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="P_Operador_UiAf2" FunctionName="IngenioModel.Store.P_Operador_UiAf2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="IngenioModel.P_Operador_UiAf2_Result">
+                <ScalarProperty Name="fechaseguimiento" ColumnName="fechaseguimiento" />
+                <ScalarProperty Name="Valor_Transaccion" ColumnName="Valor_Transaccion" />
+                <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+                <ScalarProperty Name="nombreagencia" ColumnName="nombreagencia" />
+                <ScalarProperty Name="tipoproducto" ColumnName="tipoproducto" />
+                <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+                <ScalarProperty Name="tipoidentificacion" ColumnName="tipoidentificacion" />
+                <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+                <ScalarProperty Name="primerapellido" ColumnName="primerapellido" />
+                <ScalarProperty Name="segundoapellido" ColumnName="segundoapellido" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="segundonombre" ColumnName="segundonombre" />
+                <ScalarProperty Name="nombreasociado" ColumnName="nombreasociado" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="salario" ColumnName="salario" />
+                <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Asociados_Ingenio">
+            <EntityTypeMapping TypeName="IngenioModel.Asociados_Ingenio">
+              <MappingFragment StoreEntitySet="Asociados_Ingenio">
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="FechaAnteriroAcceso" ColumnName="FechaAnteriroAcceso" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="SegundoAPellido" ColumnName="SegundoAPellido" />
+                <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+                <ScalarProperty Name="SegundoNombre" ColumnName="SegundoNombre" />
+                <ScalarProperty Name="PrimerNombre" ColumnName="PrimerNombre" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Param_dian">
+            <EntityTypeMapping TypeName="IngenioModel.Param_dian">
+              <MappingFragment StoreEntitySet="Param_dian">
+                <ScalarProperty Name="INTERES_DEDUCIBLES" ColumnName="INTERES_DEDUCIBLES" />
+                <ScalarProperty Name="INTERES_PAGADOS" ColumnName="INTERES_PAGADOS" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="P_Operador_UiAf3" FunctionName="IngenioModel.Store.P_Operador_UiAf3">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="IngenioModel.P_Operador_UiAf3_Result">
+                <ScalarProperty Name="fechaseguimiento" ColumnName="fechaseguimiento" />
+                <ScalarProperty Name="Valor_Transaccion" ColumnName="Valor_Transaccion" />
+                <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+                <ScalarProperty Name="nombreagencia" ColumnName="nombreagencia" />
+                <ScalarProperty Name="tipoproducto" ColumnName="tipoproducto" />
+                <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+                <ScalarProperty Name="tipoidentificacion" ColumnName="tipoidentificacion" />
+                <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+                <ScalarProperty Name="primerapellido" ColumnName="primerapellido" />
+                <ScalarProperty Name="segundoapellido" ColumnName="segundoapellido" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="segundonombre" ColumnName="segundonombre" />
+                <ScalarProperty Name="nombreasociado" ColumnName="nombreasociado" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="salario" ColumnName="salario" />
+                <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+                <ScalarProperty Name="TIPO_TRANSACCION" ColumnName="TIPO_TRANSACCION" />
+                <ScalarProperty Name="codoperador" ColumnName="codoperador" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UIAF_TRANSMULTIPLES" FunctionName="IngenioModel.Store.UIAF_TRANSMULTIPLES">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="IngenioModel.UIAF_TRANSMULTIPLES_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="totalefectivo" ColumnName="totalefectivo" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UIAF_TRANSMULTIPLES2" FunctionName="IngenioModel.Store.UIAF_TRANSMULTIPLES2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="IngenioModel.UIAF_TRANSMULTIPLES2_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="nrocuenta" ColumnName="nrocuenta" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="totalefectivo" ColumnName="totalefectivo" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="P_Operador_UiAf4" FunctionName="IngenioModel.Store.P_Operador_UiAf4">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="IngenioModel.P_Operador_UiAf4_Result">
+                <ScalarProperty Name="fechaseguimiento" ColumnName="fechaseguimiento" />
+                <ScalarProperty Name="Valor_Transaccion" ColumnName="Valor_Transaccion" />
+                <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+                <ScalarProperty Name="nombreagencia" ColumnName="nombreagencia" />
+                <ScalarProperty Name="tipoproducto" ColumnName="tipoproducto" />
+                <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+                <ScalarProperty Name="tipoidentificacion" ColumnName="tipoidentificacion" />
+                <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+                <ScalarProperty Name="primerapellido" ColumnName="primerapellido" />
+                <ScalarProperty Name="segundoapellido" ColumnName="segundoapellido" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="segundonombre" ColumnName="segundonombre" />
+                <ScalarProperty Name="nombreasociado" ColumnName="nombreasociado" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="salario" ColumnName="salario" />
+                <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+                <ScalarProperty Name="TIPO_TRANSACCION" ColumnName="TIPO_TRANSACCION" />
+                <ScalarProperty Name="operador" ColumnName="operador" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

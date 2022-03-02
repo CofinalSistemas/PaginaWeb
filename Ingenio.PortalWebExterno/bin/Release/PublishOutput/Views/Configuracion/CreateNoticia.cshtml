@@ -1,0 +1,435 @@
+﻿@model Ingenio.BO.Ingenio.Estados
+@using System.Configuration;
+@{
+    Layout = "~/Views/Shared/layoutAdmin.cshtml";
+    ViewBag.Title = ViewBag.TitleNoti;
+    ViewBag.titulo = ViewBag.TitleNoti;
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "Estados";
+}
+
+@Styles.Render("~/Content/roalaEditorCss")
+<link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css" rel="stylesheet">
+
+<style>
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+
+    #conte {
+        background-color: #ebebeb;
+    }
+
+    .btn-default {
+        background-color: #5CB85C;
+        color: white;
+    }
+
+    .panel-heading {
+        background-color: #5CB85C;
+        color: white;
+    }
+</style>
+
+
+
+<section id="contenido">
+    <div class="container" id="conte">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Añadir nueva entrada</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>
+                    @{if (ViewBag.NoticiaCofiFunda)
+                        {
+                            <a href="~/Configuracion/IndexNoticiaFundacion" class="btn btn-default"><i class="fa fa-chevron-left"></i>Mostrar entradas</a>
+                        }
+                        else {
+                            <a href="~/Configuracion/IndexNoticia" class="btn btn-default"><i class="fa fa-chevron-left"></i>Mostrar entradas</a>
+                        }
+                    }
+                </h3>
+            </div>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="col-md-9">
+                    <div class="box" style="background: #EBEBEB;">
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="firstname">Titulo</label>
+                                        <input name="Titulo" placeholder="Agrega un titulo aquí" type="text" class="form-control" id="titulo" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Imagen miniatura</label>
+                                        <style>
+                                            .image-preview-input {
+                                                position: relative;
+                                                overflow: hidden;
+                                                margin: 0px;
+                                                color: #333;
+                                                background-color: #fff;
+                                                border-color: #ccc;
+                                            }
+
+                                                .image-preview-input input[type=file] {
+                                                    position: absolute;
+                                                    top: 0;
+                                                    right: 0;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    font-size: 20px;
+                                                    cursor: pointer;
+                                                    opacity: 0;
+                                                    filter: alpha(opacity=0);
+                                                }
+
+                                            .image-preview-input-title {
+                                                margin-left: 2px;
+                                            }
+                                        </style>
+
+                                        <div class="input-group image-preview">
+                                            <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                                            <span class="input-group-btn">
+                                                <!-- image-preview-clear button -->
+                                                <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                                    <span class="glyphicon glyphicon-remove"></span> Quitar
+                                                </button>
+                                                <!-- image-preview-input -->
+                                                <div class="btn btn-default image-preview-input" style="margin-left: -1px; background-color: #5CB85C; color: white;">
+                                                    <span class="glyphicon glyphicon-folder-open"></span>
+                                                    <span class="image-preview-input-title">Abrir</span>
+                                                    <input required type="file" id="files" accept="image/jpg, image/png, image/jpeg, image/gif" name="Imagen" /> <!-- rename it -->
+                                                </div>
+                                            </span>
+                                        </div><!-- /input-group image-preview [TO HERE]-->
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    @if (ViewBag.NoticiaCofiFunda)
+                                    {
+                                        <div id="linkNoticia" style="display:none; padding-bottom:5px;"><strong> Enlace permanente: </strong><span id="UrlNoticia"></span></div>
+                                    }
+                                    else
+                                    {
+                                        <div id="linkNoticia" style="display:none; padding-bottom:5px;"><strong> Enlace permanente: </strong><span id="UrlNoticia"></span></div>
+                                    }
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <textarea id="myEditor"></textarea>
+                                    <input id="htmlOculto" name="htmlOculto" type="hidden" />
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <div class="col-md-3">
+                    <div class="panel-group accordion" id="accordionThree">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding:10px 10px; background-color: #5CB85C; color: white;">
+                                <h4 class="panel-title text-center">
+                                    <a data-toggle="collapse" data-parent="#accordionThree" href="#collapse3a">
+                                        Publicar
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse3a" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="row" style="padding-bottom:10px;">
+                                        <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 ">
+                                            <button title="Guardar borrador" id="borrador" type="submit" value=0 class="btn btn-default" data-toggle="tooltip">Guardar</button>
+                                        </div>
+                                        <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6">
+                                            <button id="previa" type="submit" value=2 class="btn btn-template-main">Vista previa</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive">
+                                                <table class="table" style="margin-bottom:0px;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Estado</td>
+                                                            <th>Pendiente</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Fecha publicada</td>
+                                                            <th>Pendiente</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Creada</td>
+                                                            <th>Pendiente</th>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 col-md-offset-3">
+                                            <button id="publicar" type="submit" style="color: #fff; background-color: #4CAF50; border-color: #4CAF50;" value=1 class="btn btn-info"><span class="fa fa-check"></span>Publicar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="panel-group accordion" id="accordionThre">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding:10px 10px;background-color: #5CB85C; color: white;">
+                                <h4 class="panel-title text-center">
+                                    <a data-toggle="collapse" data-parent="#accordionThre" href="#collapse3b" class="collapsed" aria-expanded="false">
+                                        Fecha evento
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse3b" class="panel-collapse collapse in" aria-expanded="false" style="height: 0px;">
+                                <div class="panel-body">
+                                    <div class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-md-3 control-label" style="text-align: left">Inicio:</label>
+                                            <div class="col-md-9">
+                                                <input name="FechaInicio" type="date" min="2016-01-01" max="@DateTime.Now.AddYears(2).ToString("yyyy-MM-dd")" class="form-control" id="fechaInicio" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-md-3 control-label" style="text-align: left">Fin:</label>
+                                            <div class="col-md-9">
+                                                <input name="FechaFin" type="date" min="2016-01-01" max="@DateTime.Now.AddYears(2).ToString("yyyy-MM-dd")" class="form-control" id="fechaFin">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <!-- /.row -->
+    </div>
+</section>
+<script src="~/Scripts/codemirror.min.js" type="text/javascript"></script>
+@*<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js" type="text/javascript"></script>*@
+@Scripts.Render("~/bundles/roalaEditorjs")
+
+<script>
+    var activo;
+    var files;
+    var EnlacePermanente;
+    $(function () {
+        $('#myEditor').froalaEditor({
+            language: 'es',
+            height: 450,
+            toolbarButtons: ['fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'fontFamily', 'fontSize', '|', 'color', 'emoticons', 'inlineStyle', 'paragraphStyle', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', 'quote', 'insertHR', '|', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable', 'undo', 'redo', 'clearFormatting', 'selectAll', 'html'],
+            imageUploadURL: '@Url.Action("upload")',
+            imageManagerLoadURL: '@Url.Action("cargarGaleria")',
+            imageManagerDeleteURL: '@Url.Action("EliminarGaleria")',
+            imageMaxSize: 2 * 1024 * 1024,
+            imageAllowedTypes: ['jpeg', 'jpg', 'png', 'gif'],
+            fontFamily: {
+                'Arial,Helvetica,sans-serif': 'Arial',
+                'Georgia,serif': 'Georgia',
+                'Impact,Charcoal,sans-serif': 'Impact',
+                'Tahoma,Geneva,sans-serif': 'Tahoma',
+                "'Times New Roman',Times,serif": 'Times New Roman',
+                'Verdana,Geneva,sans-serif': 'Verdana',
+                'Roboto': 'Roboto'
+            },
+            fileUploadURL: '@Url.Action("uploadDocumentos")',
+            fileMaxSize: 20 * 1024 * 1024,
+            fileAllowedTypes: ['*']
+
+        }).on('froalaEditor.image.error', function (e, editor, error, response) {
+            if (error.code == 6) {
+                swal({
+                    title: "Formato incorrecto",
+                    text: "",
+                    timer: 1200,
+                    type: "error",
+                    showConfirmButton: false
+                });
+            }
+        });
+    });
+
+    // para saber cual boton genrera el evento submit
+    $("#publicar,#borrador,#previa").click(function () {
+        activo = parseInt($(this).val());
+    });
+
+    //para generar  url
+    $("#titulo").on("blur", function () {
+
+        EnlacePermanente = $("#titulo").val().substr(0, 20).replace(/[^-A-Za-z0-9]+/g, "").trim()
+        if (EnlacePermanente.length > 4) {
+            $("#linkNoticia").show();
+            if ("@ViewBag.NoticiaCofiFunda" == "True") {
+                $("#UrlNoticia").html('@ConfigurationManager.AppSettings["httpurl"]' + '@Url.Action("NoticiasFundacion","Home")' + "/" + EnlacePermanente)
+            } else {
+
+                $("#UrlNoticia").html('@ConfigurationManager.AppSettings["httpurl"]' + '@Url.Action("NoticiasCofinal","Home")' + "/" + EnlacePermanente);
+            }
+        }
+    });
+    //submit al formulario
+    $("form").on("submit", function (e) {
+        e.preventDefault();
+        var fd = new FormData(this);
+        fd.append("Html", $('<div/>').text($('#myEditor').froalaEditor('html.get')).html());
+        fd.append("Imagen", $("#files"));
+        fd.append("Url", EnlacePermanente)
+        console.log($("#files")[0].files[0]);
+        var fecha = true;
+        if (fechaInicio > fechaFin) {
+            fecha = false;
+            swal({
+                title: "",
+                text: "La fecha fin no puede ser menor.",
+                type: "error",
+                timer: 2000,
+                allowEscapeKey: false,
+                allowOutsideClick: false,
+                showConfirmButton: false
+            });
+        }
+        if (fecha) {
+            swal({
+                title: "Espera un momento",
+                text: "Guardando...",
+                allowEscapeKey: false,
+                allowOutsideClick: false,
+                showConfirmButton: false
+            });
+            var activoenvio;
+            if (activo == 1) {
+                activoenvio = true
+            } else if (activo == 0 || activo == 2) {
+                activoenvio = false
+            }
+            var NoticiaCofiFunda = "@ViewBag.NoticiaCofiFunda";
+            if (NoticiaCofiFunda == "True") {
+                NoticiaCofiFunda = true
+            } else {
+                NoticiaCofiFunda = false
+            }
+            fd.append("Activo", activoenvio);
+            fd.append("NoticiaCofiFunda", NoticiaCofiFunda)
+            $.ajax({
+                url: "@Url.Action("CreateNoticia")",
+                type: "POST",
+                data: fd,
+                cache: false,
+                dataType: 'json',
+                processData: false, //No procesar los archivos
+                contentType: false, //Establecer el tipo de contenido falso como jQuery le dirá al servidor una petición de su cadena de consulta.
+                success: function (response) {
+                    if (response.estado) {
+                        if (activo == 1 || activo == 0) {
+                            swal({
+                                title: "Cambios guardados exitosamente",
+                                text: "",
+                                timer: 1500,
+                                type: "success",
+                                showConfirmButton: true,
+                            }, function () {
+                                window.location.href = response.urlEditNot + "/" + response.id;
+                            }
+                        );
+                        }
+                        else if (activo == 2) {
+                            swal({
+                                title: "",
+                                text: "",
+                                timer: 0,
+                                showConfirmButton: false,
+                            });
+
+                            window.open(response.urlPrewNot + "/" + response.id, "_blank");
+                        }
+                    } else {
+                        swal("Error", response.mensaje, "error")
+                    }
+                }
+            });
+        }
+    });
+
+    $(document).on('click', '#close-preview', function () {
+        $('.image-preview').popover('hide');
+        //Pasa el cursor se acaben cerrar la vista previa
+        $('.image-preview').hover(
+            function () {
+                $('.image-preview').popover('show');
+            },
+             function () {
+                 $('.image-preview').popover('hide');
+             }
+        );
+    });
+
+    $(function () {
+        // Crear el botón de cierre
+        var closebtn = $('<button/>', {
+            type: "button",
+            text: 'x',
+            id: 'close-preview',
+            style: 'font-size: initial;',
+        });
+        closebtn.attr("class", "close pull-right");
+        // Set the popover default content
+        $('.image-preview').popover({
+            trigger: 'manual',
+            html: true,
+            title: "<strong>Vista previa</strong>" + $(closebtn)[0].outerHTML,
+            content: "No se ha subido imagen",
+            placement: 'bottom'
+        });
+        // Establecer el contenido predeterminado popover
+        $('.image-preview-clear').click(function () {
+            $('.image-preview').attr("data-content", "").popover('hide');
+            $('.image-preview-filename').val("");
+            $('.image-preview-clear').hide();
+            $('.image-preview-input input:file').val("");
+            $(".image-preview-input-title").text("Abrir");
+        });
+        //Crear la imagen de vista previa
+        $(".image-preview-input input:file").change(function () {
+            var img = $('<img/>', {
+                id: 'dynamic',
+                width: 250,
+                height: 200
+            });
+            var file = this.files[0];
+            var reader = new FileReader();
+            //Establecer previsualización de la imagen en los datos contenidos - popover
+            reader.onload = function (e) {
+                $(".image-preview-input-title").text("Cambiar");
+                $(".image-preview-clear").show();
+                $(".image-preview-filename").val(file.name);
+                img.attr('src', e.target.result);
+                $(".image-preview").attr("data-content", $(img)[0].outerHTML).popover("show");
+            }
+            reader.readAsDataURL(file);
+        });
+    });
+
+</script>

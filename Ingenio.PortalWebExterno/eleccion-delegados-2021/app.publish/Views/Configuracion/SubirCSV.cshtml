@@ -1,0 +1,94 @@
+﻿@model Cenit.Votos.Models.UploadCSVModel
+
+@{
+    ViewBag.Title = "Archivos Planos";
+}
+<div class="container">
+    <div class="section">
+
+
+        <div class="no-pad">
+            <div class="col s12">
+                <div class="icon-block">
+                    <h2 class="center" style="color:#333"><i class="material-icons md-96">ballot</i></h2>
+                    <h5 class="center">Archivos Planos</h5>
+                    <p>
+
+                        <bg>* Subir nuevos archivos eliminará la data que este actualmente en el servidor</bg>
+                        <ul>
+                            <li>Agencias.csv*</li>
+                            <li>Votantes.csv</li>
+                            <li>Cargos.csv</li>
+                            <li>Candidatos.csv</li>
+                            <li>Fotos.zip</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        @using (Html.BeginForm("SubirArchivosPlanos", "Configuracion", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Archivo</span>
+                    <input type="file" name="FileAttach">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+            <input name="HasHeader" type="hidden" value="false">
+   
+            <input type="submit" class="btn btn-default" value="Subir" />
+        }
+
+    </section>
+    <section>
+        <div id="resultado">
+            @{
+
+                var result = (sas.UploadFileResultModel)(ViewBag.Result) ?? new sas.UploadFileResultModel();
+                <ul>
+                    <li>Estado: @result.Status;</li>
+                    <li>Archivo: @result.FileName;</li>
+                    <li>Filas: @result.Rows</li>
+                    <li>
+                        Advertencias: @result.Advertencias.Count
+                        <ul>
+                            @foreach (var item in result.Advertencias)
+                            {
+                                <li>@item</li>
+                            }
+                        </ul>
+                    </li>
+
+                    <li>
+                        Errores: @result.Errores.Count
+                        <ul>
+                            @foreach (var item in result.Errores)
+                            {
+                                <li>@item</li>
+                            }
+                        </ul>
+                    </li>
+                </ul>
+            }
+
+        </div>
+    </section>
+</div>
+
+
+
+
+
+
+
+@section Scripts
+{
+
+}
+

@@ -1,0 +1,62 @@
+﻿@model Cenit.Votos.Controllers.DocumentoVerificaModel
+
+@{
+    ViewBag.Title = "Verificar";
+}
+
+<div class="container">
+    <div class="section">
+        <!--   Icon Section   -->
+        <div class="row center">
+            <div class="col s12">
+                <div class="icon-block">
+                    <h2 class="center" style="color:#333"><i class="material-icons md-96">person_search</i></h2>
+                    <h5 class="center">Vamos a verificar tu Identidad</h5>
+                    <p class="center bg-dark">
+                        Antes de continuar, por favor digita tu número de documento. Lo validaremos con nuestra base de datos <br>
+                        Recuerda tener a la mano tu telefono.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="col s12">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="center">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="input-field">
+                            @Html.EditorFor(model => model.NroDocumento, new { htmlAttributes = new { @class = "validate", type="number", maxlength = "10" ,autocomplete = "off"  } })
+                            @Html.LabelFor(model => model.NroDocumento, htmlAttributes: new { @class = "" })
+                            @Html.ValidationMessageFor(model => model.NroDocumento, "", new { @class = "" })
+
+                        </div>
+
+                        <div class="">
+                            <input type="submit" value="Consultar" class="btn btn-default" />
+                        </div>
+
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="row center">
+            <div class="col-12">@ViewBag.Numero</div>
+        </div>
+     
+
+     
+    </div>
+</div>
+
+@section scripts{
+    <script>
+
+        $().ready(function () {
+            $("#NroDocumento").val("")
+        })
+    </script>
+    }
+
+

@@ -1,0 +1,31 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Locked Out";
+}
+
+<div class="container">
+    <div class="section">
+        <div class="row center">
+            <div class="col s12">
+                <div class="icon-block">
+                    <h2 class="center" style="color:#333"><i class="material-icons md-96">block</i></h2>
+                    <h5 class="center">Bloqueado</h5>
+                    <p class="center bg-dark">
+                        Su ingreso ha sido bloqueado por multiples intentos fallidos
+                        <br /> <br>Por favor reintena en al menos en 1 hora.
+                    </p>
+                    <input class="btn btn-default" type="button" name="name" value="Aceptar" onclick("window.location.href = '/') />
+                    <br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<hgroup>
+    <h1 class="text-danger">Locked out.</h1>
+    <h2 class="text-danger">This account has been locked out, please try again later.</h2>
+</hgroup>

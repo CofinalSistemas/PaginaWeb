@@ -1,0 +1,75 @@
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\bin\Release\Ingenio.DLL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\bin\Release\Ingenio.DLL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\bin\Release\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\bin\Release\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\bin\Release\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\bin\Release\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\bin\Release\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\bin\Release\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\bin\Release\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\bin\Release\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\obj\Release\Ingenio.BLL.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\obj\Release\Ingenio.BLL.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\obj\Release\Ingenio.BLL.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\obj\Release\Ingenio.DLL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DLL\obj\Release\Ingenio.DLL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\bin\Release\Ingenio.DLL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\bin\Release\Ingenio.DLL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\bin\Release\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\bin\Release\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\bin\Release\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\bin\Release\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\bin\Release\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\bin\Release\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\bin\Release\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\bin\Release\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\obj\Release\Ingenio.BLL.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\obj\Release\Ingenio.BLL.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\obj\Release\Ingenio.BLL.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\obj\Release\Ingenio.DLL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\obj\Release\Ingenio.DLL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\bin\Release\Ingenio.DLL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\bin\Release\Ingenio.DLL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\bin\Release\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\bin\Release\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\bin\Release\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\bin\Release\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\bin\Release\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\bin\Release\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\bin\Release\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\bin\Release\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\obj\Release\Ingenio.BLL.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\obj\Release\Ingenio.BLL.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\obj\Release\Ingenio.BLL.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\obj\Release\Ingenio.DLL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DLL\obj\Release\Ingenio.DLL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.DLL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.DLL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\obj\Release\Ingenio.BLL.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\obj\Release\Ingenio.BLL.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\obj\Release\Ingenio.BLL.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\obj\Release\Ingenio.DLL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\obj\Release\Ingenio.DLL.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.DLL.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.DLL.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.BO.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.DAL.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\EntityFramework.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.BO.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.BO.dll.config
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.DAL.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\Ingenio.DAL.dll.config
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\bin\Release\EntityFramework.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\obj\Release\Ingenio.BLL.csproj.AssemblyReference.cache
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\obj\Release\Ingenio.BLL.csproj.CoreCompileInputs.cache
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\obj\Release\Ingenio.BLL.csproj.CopyComplete
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\obj\Release\Ingenio.DLL.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DLL\obj\Release\Ingenio.DLL.pdb

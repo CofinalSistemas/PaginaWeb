@@ -1,0 +1,762 @@
+﻿@model Ingenio.BO.nits
+
+@{
+    ViewBag.Title = "Editar asociado";
+    ViewBag.titulo = "Editar datos";
+    ViewBag.url = Url.Action("index", "home");
+    var aso = ViewBag.aso;
+    var depart = ViewBag.depart;
+    var ciudad = ViewBag.ciudad;
+    var zona = ViewBag.zona;
+    var comuna = ViewBag.comuna;
+    var barrio = ViewBag.barrio;
+    var profesion = ViewBag.profesion;
+    var empresa = ViewBag.empresa;
+    var empresalabora = ViewBag.empresalabora;
+    aso.estadocivil = aso.estadocivil.Trim();
+    aso.estudios = aso.estudios.Trim();
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()   
+
+    <div class="form-horizontal">
+
+        <div class="col-md-6">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.nombreintegrado, "Nombre:", new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(model => model.nombreintegrado, null, new { @class = "form-control", @Disabled = true })
+                    @Html.ValidationMessageFor(model => model.nombreintegrado, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.nit, "Identificación", new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(model => model.nit, null, new { @class = "form-control", @Disabled = true })
+                    @Html.ValidationMessageFor(model => model.nit, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4">Estado civil:</label>
+                <div class="col-md-8">
+                    @{
+                        List<SelectListItem> estadocivil = new List<SelectListItem>();
+                        estadocivil.Add(new SelectListItem
+                        {
+                            Text = "CASADO(A)",
+                            Value = "C",
+                            Selected = aso.estadocivil == "C" ? true : false
+                        });
+                        estadocivil.Add(new SelectListItem
+                        {
+                            Text = "VIUDO(A)",
+                            Value = "D",
+                            Selected = aso.estadocivil == "D" ? true : false
+                        });
+                        estadocivil.Add(new SelectListItem
+                        {
+                            Text = "MADRE SOLTERA",
+                            Value = "F",
+                            Selected = aso.estadocivil == "F" ? true : false
+                        });
+                        estadocivil.Add(new SelectListItem
+                        {
+                            Text = "MUJER CABEZA DE FLIA",
+                            Value = "P",
+                            Selected = aso.estadocivil == "P" ? true : false
+                        });
+                        estadocivil.Add(new SelectListItem
+                        {
+                            Text = "SOLTERO(A)",
+                            Value = "S",
+                            Selected = aso.estadocivil == "S" ? true : false
+                        });
+                        estadocivil.Add(new SelectListItem
+                        {
+                            Text = "DIVORCIADO(A)",
+                            Value = "T",
+                            Selected = aso.estadocivil == "T" ? true : false
+                        });
+                        estadocivil.Add(new SelectListItem
+                        {
+                            Text = "SEPARADO(A)",
+                            Value = "U",
+                            Selected = aso.estadocivil == "U" ? true : false
+                        });
+                        estadocivil.Add(new SelectListItem
+                        {
+                            Text = "UNION LIBRE",
+                            Value = "V",
+                            Selected = aso.estadocivil == "V" ? true : false
+                        });
+                    }
+
+                    @Html.DropDownList("estadocivil", estadocivil, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4">Fecha de nacimiento:</label>
+                <div class="col-md-8">
+                    <input value="@aso.fechanacimiento.ToString("yyyy-MM-dd")" type="date" min="1900-01-01" max=@DateTime.Now.ToString("yyyy-MM-dd") name="fechanacimiento" id="FechaN" required class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="direccion">Dirección <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    @Html.TextBoxFor(model => model.direccion, null, new { @class = "form-control", @Required = true })
+                    @Html.ValidationMessageFor(model => model.direccion, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="codpais">País residencia <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="barrios_pais_nombre" name="barrios.pais.nombre" type="text" value="@Model.barrios.pais.nombre.Trim()" required>
+                    @Html.ValidationMessageFor(model => model.codpais, "", new { @class = "text-danger" })
+                    <input type="hidden" id="_codpais" name="codpais" value="@Model.codpais" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="coddepartamento">Depto residencia <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="coddepartamento" name="departamento" type="text" value="@depart.nombredepartamento.Trim()" required>
+                    @Html.ValidationMessageFor(model => model.coddepartamento, "", new { @class = "text-danger" })
+                    <input type="hidden" id="_codDepartamento" name="coddepartamento" value="@Model.coddepartamento" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                @{string cod = Model.codciudad;}
+                <label class="control-label col-md-4" for="codciudad">Ciudad residencia <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="codciudad" name="ciudad" type="text" value="@ciudad.nombreciudad.Trim()" required>
+                    @Html.ValidationMessageFor(model => model.codciudad, "", new { @class = "text-danger" })
+                    <input type="hidden" id="_codCiudad" name="codciudad" value="@Model.codciudad" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="codzona">Zona <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="codzona" name="zona" type="text" value="@zona.nombrezona.Trim()" required>
+                    @Html.ValidationMessageFor(model => model.codzona, "", new { @class = "text-danger" })
+                    <input type="hidden" id="_codZona" name="codzona" value="@Model.codzona" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="codcomuna">Comuna <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="codcomuna" name="comuna" type="text" value="@comuna.nombrecomuna.Trim()" required>
+                    @Html.ValidationMessageFor(model => model.codcomuna, "", new { @class = "text-danger" })
+                    <input type="hidden" id="_codComuna" name="codcomuna" value="@Model.codcomuna" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="codbarrio">Barrio <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="codbarrio" name="barrio" type="text" value="@barrio.nombre.Trim()" required>
+                    @Html.ValidationMessageFor(model => model.codbarrio, "", new { @class = "text-danger" })
+                    <input type="hidden" id="_codBarrio" name="codbarrio" value="@Model.codbarrio" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="telefono1">Teléfono <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.telefono1, new { htmlAttributes = new { @class = "form-control", @data_mask = "0 00 00 00", @Required = "true" } })
+                    @Html.ValidationMessageFor(model => model.telefono1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.extension1, "Ext 1:", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.extension1, new { htmlAttributes = new { @class = "form-control", @data_mask = "00000000" } })
+                    @Html.ValidationMessageFor(model => model.extension1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.telefono2, "Teléfono 2:", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.telefono2, new { htmlAttributes = new { @class = "form-control", @data_mask = "0 00 00 00" } })
+                    @Html.ValidationMessageFor(model => model.telefono2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.extencion2, "Ext 2:", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.extencion2, new { htmlAttributes = new { @class = "form-control", @data_mask = "00000000" } })
+                    @Html.ValidationMessageFor(model => model.extencion2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="celular">Celular <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.celular, new { htmlAttributes = new { @class = "form-control", @data_mask = "000 000 0000", @Required = "true" } })
+                    @Html.ValidationMessageFor(model => model.celular, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="email">Correo <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="email" name="email" type="email" value="@Model.email.Trim()" required>
+                    @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4">Tipo Estudios:</label>
+                <div class="col-md-8">
+                    @{
+                        List<SelectListItem> tipoEstudios = new List<SelectListItem>();
+                        tipoEstudios.Add(new SelectListItem
+                        {
+                            Text = "CURSO",
+                            Value = "C",
+                            Selected = aso.estudios == "C" ? true : false
+                        });
+                        tipoEstudios.Add(new SelectListItem
+                        {
+                            Text = "OTROS",
+                            Value = "O",
+                            Selected = aso.estudios == "O" ? true : false
+                        });
+                        tipoEstudios.Add(new SelectListItem
+                        {
+                            Text = "POSGRADOS",
+                            Value = "G",
+                            Selected = aso.estudios == "G" ? true : false
+                        });
+                        tipoEstudios.Add(new SelectListItem
+                        {
+                            Text = "PRIMARIA",
+                            Value = "P",
+                            Selected = aso.estudios == "P" ? true : false
+                        });
+                        tipoEstudios.Add(new SelectListItem
+                        {
+                            Text = "SECUNDARIA",
+                            Value = "S",
+                            Selected = aso.estudios == "S" ? true : false
+                        });
+                        tipoEstudios.Add(new SelectListItem
+                        {
+                            Text = "TÉCNICO",
+                            Value = "T",
+                            Selected = aso.estudios == "T" ? true : false
+                        });
+                        tipoEstudios.Add(new SelectListItem
+                        {
+                            Text = "TECNOLÓGICO",
+                            Value = "E",
+                            Selected = aso.estudios == "E" ? true : false
+                        });
+                        tipoEstudios.Add(new SelectListItem
+                        {
+                            Text = "UNIVERSITARIO",
+                            Value = "U",
+                            Selected = aso.estudios == "U" ? true : false
+                        });
+                    }
+                    @Html.DropDownList("estudios", tipoEstudios, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="codprofesion">Profesion <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="codprofesion" name="profesion" type="text" value="@aso.profesiones.nombreprofesion" required>
+                    <input type="hidden" id="_codprofesion" name="codprofesion" value="@aso.codprofesion" /><!---preguntar a Jose si este hiden es necesario aunque dudo mucho-->
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="codempresa">Empresa <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="codempresa" name="empresa" type="text" data-oculto="_codempresa" value="@aso.empresas.nombreempresa.Trim()" required>
+                    <input type="hidden" id="_codempresa" name="codempresa" value="@aso.codempresa" /><!---preguntar a Jose si este hiden es necesario aunque dudo mucho-->
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="codempresalabora">Trabaja en <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="codempresalabora" name="empresalabora" type="text" data-oculto="_codempresalabora" value="@empresalabora.nombreempresa.Trim()" required>
+                    <input type="hidden" id="_codempresalabora" name="codempresalabora" value="@aso.codempresalabora" /><!---preguntar a Jose si este hiden es necesario aunque dudo mucho-->
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="dependencia">Dependencia <span id='red'>*</span> :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="dependencia" name="dependencia" type="text" value="@aso.dependenciasempresas.nombredependencia.Trim()" required>
+                    <input type="hidden" id="_coddependencia" name="coddependencia" value="@aso.coddependencia" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4">Salario:</label>
+                <div class="col-md-8">
+                    <input name="salario" class="form-control" id="salario" type="text" value="@aso.salario" disabled>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.codciiu, "Ciiu:", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    <input class="form-control" id="codciiu" name="nomciiu" type="text" value="@Model.divisionciiu.ciiu.nombre.Trim()">
+                    @Html.ValidationMessageFor(model => model.codciiu, "", new { @class = "text-danger" })
+                    <input type="hidden" id="_codciiu" name="codciiu" value="@Model.codciiu" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.coddivision, "Divicion Ciiu:", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    <input class="form-control" id="coddivision" name="nomdivision" type="text" value="@Model.divisionciiu.nombre.Trim()">
+                    @Html.ValidationMessageFor(model => model.coddivision, "", new { @class = "text-danger" })
+                    <input type="hidden" id="_coddivision" name="coddivision" value="@Model.coddivision" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="col-md-offset-6">
+                    <input type="submit" value="Guardar" class="btn btn-danger" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+                        }
+
+@Scripts.Render("~/bundles/Mascaras")
+@Scripts.Render("~/bundles/Nomenclaturas")
+<script>
+
+    $('form').on('submit', function (event) {
+        event.preventDefault();      
+        //enviar formulario
+        var fd = new FormData(this);           
+        swal({
+            title: "Espera un momento",
+            text: "Guardando...",            
+            allowEscapeKey: false,
+            allowOutsideClick: false,
+            showConfirmButton: false
+        });
+        $.ajax({
+            url: "@Url.Action("Edit")",
+            type: "POST",
+            data: fd,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                if (response.estado) {             
+                    swal("Datos guardados", "Información editada correctamente", "success")
+                } else {
+                    swal("Error", response.mensaje, "error")
+                }
+            }
+        });
+    });
+
+
+    $(function () {
+        $("#direccion").val($.trim($("#direccion").val()))
+        function split(val) {
+            return val.split(/ \s*/);
+        }
+        function extractLast(term) {
+            return split(term).pop();
+        }
+
+        $("#direccion").bind("keydown", function (event) {
+            if (event.keyCode === $.ui.keyCode.TAB &&
+                $(this).autocomplete("instance").menu.active) {
+                event.preventDefault();
+            }
+        })
+     .autocomplete({
+         minLength: 0,
+         source: function (request, response) {
+             // delegate back to autocomplete, but extract the last term
+             response($.ui.autocomplete.filter(
+             n, extractLast(request.term)));
+         },
+         focus: function () {
+             // prevent value inserted on focus
+             return false;
+         },
+         select: function (event, ui) {
+             var terms = split(this.value);
+             // remove the current input
+             terms.pop();
+             // add the selected item
+             terms.push(ui.item.value);
+             // add placeholder to get the comma-and-space at the end
+             terms.push("");
+             this.value = terms.join(" ");
+             return false;
+         }
+     });
+        $("#barrios_pais_nombre").change(function () {
+            $('#_codDepartamento, #coddepartamento').val("");
+        });
+
+        $("#coddepartamento").change(function () {
+            $('#_codCiudad, #codciudad').val("");
+        });
+
+        $("#codciudad").change(function () {
+            $('#_codZona, #codzona').val("");
+        });
+
+        $("#codzona").change(function () {
+            $('#_codComuna, #codcomuna').val("");
+        });
+
+        $("#codcomuna").change(function () {
+            $('#_codBarrio, #codbarrio').val("");
+        });
+
+        //$("#extension1").val($.trim($("#extension1").val()))
+        // $("#extencion2").val($.trim($("#extencion2").val()))
+
+        $("#barrios_pais_nombre").autocomplete({
+            autoFocus: true,
+            source: '@Url.Action("AutoCompletePais", "Tool")',
+            change: function (event, ui) {
+                if (!ui.item) {
+                    $(this).val("");
+                }
+                $('#coddepartamento, #_codDepartamento').val("");
+                $('#codciudad, #_codciudad').val("");
+            },
+            select: function (event, ui) {
+                $('#barrios_pais_nombre').val(ui.item.label);
+                $('#_codpais').val(ui.item.value);
+                return false;
+            }
+        })
+
+        $("#coddepartamento").autocomplete({
+            autoFocus: true,
+            source: function (request, response) {
+                $.ajax({
+                    url: '@Url.Action("AutoCompleteDepartamentos", "Tool")',
+                    dataType: "json",
+                    data: {
+                        term: request.term,
+                        id: $("#_codpais").val()
+                    },
+                    success: function (data) {
+                        response(data);
+                    }
+                });
+            },
+            change: function (event, ui) {
+                if (!ui.item) {
+                    $(this).val("");
+                }
+            },
+            select: function (event, ui) {
+                $('#coddepartamento').val(ui.item.label);
+                $('#_codDepartamento').val(ui.item.value);
+                return false;
+            }
+        })
+
+        $("#codciudad").autocomplete({
+            autoFocus: true,
+            source: function (request, response) {
+                $.ajax({
+                    url: '@Url.Action("AutoCompleteCiudad", "Tool")',
+                    dataType: "json",
+                    data: {
+                        term: request.term,
+                        id: $("#_codDepartamento").val()
+                    },
+                    success: function (data) {
+                        response(data);
+                    }
+                });
+            },
+            change: function (event, ui) {
+                if (!ui.item) {
+                    $(this).val("");
+                }
+            },
+            select: function (event, ui) {
+                $('#codciudad').val(ui.item.label);
+                $('#_codCiudad').val(ui.item.value);
+                return false;
+            }
+        })
+
+        $("#codzona").autocomplete({
+            autoFocus: true,
+            source: function (request, response) {
+                $.ajax({
+                    url: '@Url.Action("AutoCompleteZona", "Tool")',
+                    dataType: "json",
+                    data: {
+                        term: request.term,
+                        id: $("#_codCiudad").val()
+                    },
+                    success: function (data) {
+                        response(data);
+                    }
+                });
+            },
+            change: function (event, ui) {
+                if (!ui.item) {
+                    $(this).val("");
+                }
+            },
+            select: function (event, ui) {
+                $('#codzona').val(ui.item.label);
+                $('#_codZona').val(ui.item.value);
+                return false;
+            }
+        })
+
+        $("#codcomuna").autocomplete({
+            autoFocus: true,
+            source: function (request, response) {
+                $.ajax({
+                    url: '@Url.Action("AutoCompleteComuna", "Tool")',
+                    dataType: "json",
+                    data: {
+                        term: request.term,
+                        id: $("#_codZona").val()
+                    },
+                    success: function (data) {
+                        response(data);
+                    }
+                });
+            },
+            change: function (event, ui) {
+                if (!ui.item) {
+                    $(this).val("");
+                }
+            },
+            select: function (event, ui) {
+                $('#codcomuna').val(ui.item.label);
+                $('#_codComuna').val(ui.item.value);
+                return false;
+            }
+        })
+
+        $("#codbarrio").autocomplete({
+            autoFocus: true,
+            source: function (request, response) {
+                $.ajax({
+                    url: '@Url.Action("AutoCompleteBarrio", "Tool")',
+                    dataType: "json",
+                    data: {
+                        term: request.term,
+                        id: $("#_codComuna").val()
+                    },
+                    success: function (data) {
+                        response(data);
+                    }
+                });
+            },
+            change: function (event, ui) {
+                if (!ui.item) {
+                    $(this).val("");
+                }
+            },
+            select: function (event, ui) {
+                $('#codbarrio').val(ui.item.label);
+                $('#_codBarrio').val(ui.item.value);
+                return false;
+            }
+        })
+
+        $("#codprofesion").autocomplete({
+            autoFocus: true,
+            source: '@Url.Action("AutoCompleteProfesion", "Asociado")',
+            change: function (event, ui) {
+                if (!ui.item) {
+                    $(this).val("");
+                }
+            },
+            select: function (event, ui) {
+                $('#codprofesion').val(ui.item.label);
+                $('#_codprofesion').val(ui.item.value);
+                return false;
+            }
+        })
+
+        $("#codempresa, #codempresalabora").autocomplete({
+            autoFocus: true,
+            source: '@Url.Action("AutoCompleteEmpresa", "Asociado")',
+            change: function (event, ui) {
+                if (!ui.item) {
+                    $(this).val("");
+                }
+            },
+            select: function (event, ui) {
+                var oculto = $(this).data("oculto");
+                $(this).val(ui.item.label);
+                $('#' + oculto).val(ui.item.value);
+                $(this).val($.trim($(this).val()))
+                return false;
+            }
+        })
+
+        $("#dependencia").autocomplete({
+            autoFocus: true,
+            source: function (request, response) {
+                $.ajax({
+                    url: '@Url.Action("AutoCompleteDependencias", "Asociado")',
+                    dataType: "json",
+                    data: {
+                        term: request.term,
+                        id: $("#_codempresalabora").val()
+                    },
+                    success: function (data) {
+                        response(data);
+                    }
+                });
+            },
+            change: function (event, ui) {
+                if (!ui.item) {
+                    $(this).val("");
+                }
+            },
+            select: function (event, ui) {
+                $('#dependencia').val(ui.item.label);
+                $('#_coddependencia').val(ui.item.value);
+                return false;
+            }
+        })
+
+        $("#codciiu").autocomplete({
+            autoFocus: true,
+            source: '@Url.Action("AutoCompleteCiiu", "Asociado")',
+            change: function (event, ui) {
+                if (!ui.item) {
+                    $(this).val("");
+                }
+            },
+            select: function (event, ui) {
+                $('#codciiu').val(ui.item.label);
+                $('#_codciiu').val(ui.item.value);
+                return false;
+            }
+        })
+         .autocomplete("instance")
+            ._resizeMenu = function () {
+                this.menu.element.outerWidth(400);
+            }
+        $("#codciiu").autocomplete("instance")._renderItem = renderItem;
+
+    });
+
+
+    $("#coddivision").autocomplete({
+        autoFocus: true,
+        source: function (request, response) {
+            $.ajax({
+                url: '@Url.Action("AutoCompleteDivision", "Asociado")',
+                dataType: "json",
+                data: {
+                    term: request.term,
+                    id: $("#_codciiu").val()
+                },
+                success: function (data) {
+                    response(data);
+                }
+            });
+        },
+        change: function (event, ui) {
+            if (!ui.item) {
+                $(this).val("");
+            }
+        },
+        select: function (event, ui) {
+            $('#coddivision').val(ui.item.label);
+            $('#_coddivision').val(ui.item.value);
+            return false;
+        }
+    })
+
+    function renderItem(ul, item) {
+        return $("<li>")
+        .append("<span style='display:block; font-size: 1em'>" + item.label + "</span>")
+        .appendTo(ul);
+    }
+
+    $("form").on("submit", function (e) {
+
+        $("input[data-mask]").unmask();
+
+    })
+</script>

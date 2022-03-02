@@ -1,0 +1,92 @@
+﻿@{
+    Layout = "~/Views/Shared/layoutFundacion.cshtml";
+    ViewBag.Title = "Proyectos y Convenios";
+    ViewBag.titulo = "Proyectos y Convenios";
+    ViewBag.url = Url.Action("index", "Fundacion");
+    ViewBag.activo = "NuestrosProgramas";
+}
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+<style>
+   .text-justify {
+        font-size: 20px;
+    }
+    #get-it{
+             background: -webkit-linear-gradient(left, #f2a326 0%, rgba(242, 163, 38, 0.81) 50%, rgba(242, 163, 38, 0.55) 69%, rgba(242, 163, 38, 0.51) 100%);
+            }
+    #titulo{
+            background-image:url(/img/texturaAmarilla2.jpg); 
+            background-size:30%;
+            }
+    
+</style>
+<!--seccion de imagen 1-->
+<div class="parallaxbox" id="pb0" style="background-image: url(/img/fondos/conve.jpg);"> </div>
+
+<!--seccion de Titulo-->
+<div id="titulo">
+    <div id="get-it">
+        <div class="container" >
+            <div class="text-center">
+                <center><h2>Interadministrativos con entidades oficiales y privadas</h2></center>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--seccion de contenido-->
+<section style="background-image:url(/img/texture-bw.png); padding-top:40px; padding-bottom:40px; ">
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8);   ">
+
+        <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
+            <div class="tab-pane active" id="info">
+                <ul class="text-justify">
+                    <li>Semillero solidario.</li>
+                    <li>
+                        Proyecto de educación solidaria para instituciones educativas –
+                        Convenio con la unidad de organizaciones solidarias.
+                    </li>
+                    <li>Contrato de licitación pública n° 122-14(Gobernación de Nariño- fundación Cofinal)</li>
+                    <li>Adición a licitación pública n°122-14(Capacitación para conformación de fondos de ahorros)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--seccion de imagen 2-->
+<div class="parallaxbox" id="pb1" style="background-image: url(/img/fondos/conve.jpg);"> </div>
+
+<!-- scrip para parallax-->
+<script type="text/javascript">
+			function parallax() {
+			    setpos("#pb0");
+			    setpos("#pb1");
+
+			}
+
+
+
+			function setpos(element, factor) {
+				factor = factor || 2;
+
+				var offset = $(element).offset();
+				var w = $(window);
+
+				var posx = (offset.left - w.scrollLeft()) / factor;
+				var posy = (offset.top - w.scrollTop()) / factor;
+
+				$(element).css('background-position', '100% '+posy+'px');
+
+    // use this to have parralax scrolling vertical and horizontal
+    //$(element).css('background-position', posx+'px '+posy+'px');
+}
+
+$(document).ready(function () {
+	parallax();
+}).scroll(function () {
+	parallax();
+});
+</script>

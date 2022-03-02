@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IngenioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Asociados_Ingenio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Identificacion" Type="varchar(max)" Nullable="false" />
+    <Property Name="PrimerNombre" Type="varchar(max)" Nullable="false" />
+    <Property Name="SegundoNombre" Type="varchar(max)" />
+    <Property Name="PrimerApellido" Type="varchar(max)" Nullable="false" />
+    <Property Name="SegundoAPellido" Type="varchar(max)" />
+    <Property Name="Correo" Type="varchar(max)" Nullable="false" />
+    <Property Name="Password" Type="varchar(max)" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaAnteriroAcceso" Type="datetime" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="tipo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cargos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estados">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titulo" Type="varchar(max)" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Imagen" Type="varchar(max)" />
+    <Property Name="Html" Type="text" />
+    <Property Name="FechaInicio" Type="datetime" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="FechaFin" Type="datetime" />
+    <Property Name="NoticiaCofiFunda" Type="bit" Nullable="false" />
+    <Property Name="Url" Type="varchar(max)" Nullable="false" />
+    <Property Name="Id_Usuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Galeria">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RutaImagen" Type="varchar(max)" />
+    <Property Name="Id_Usuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Log_Usuarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Fecha_acesso" Type="datetime" />
+    <Property Name="Ip" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Modulos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Param_dian">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INTERES_PAGADOS" Type="varchar" MaxLength="15" />
+    <Property Name="INTERES_DEDUCIBLES" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar(max)" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RolesModulos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Rol" Type="int" Nullable="false" />
+    <Property Name="Id_Modulo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SEGUIMIENTO_SIMULADORES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="TIPO" Type="char" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Sliders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imagen" Type="varchar(max)" />
+    <Property Name="Titulo" Type="varchar(max)" />
+    <Property Name="Descripcion" Type="varchar(max)" />
+    <Property Name="Url" Type="varchar(max)" />
+    <Property Name="Posicion" Type="tinyint" Nullable="false" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="Id_Usuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar(max)" Nullable="false" />
+    <Property Name="Password" Type="varchar(max)" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="FechaUltimoAcceso" Type="datetime" />
+    <Property Name="Nombre" Type="varchar(max)" Nullable="false" />
+    <Property Name="Telefono" Type="varchar(max)" />
+    <Property Name="Identificacion" Type="varchar(max)" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Id_cargo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuariosRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Usuario" Type="int" Nullable="false" />
+    <Property Name="Id_Rol" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_RolesModulos_Modulos">
+    <End Role="Modulos" Type="Self.Modulos" Multiplicity="1" />
+    <End Role="RolesModulos" Type="Self.RolesModulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulos">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RolesModulos">
+        <PropertyRef Name="Id_Modulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RolesModulos_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="RolesModulos" Type="Self.RolesModulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RolesModulos">
+        <PropertyRef Name="Id_Rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosRoles_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="UsuariosRoles" Type="Self.UsuariosRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UsuariosRoles">
+        <PropertyRef Name="Id_Rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="P_Operador_UiAf" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="P_Operador_UiAf2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="P_Operador_UiAf3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="P_Operador_UiAf4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fechai" Type="datetime" Mode="In" />
+    <Parameter Name="fechaf" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="P_Transaccciones_Uiaf" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+    <Parameter Name="ValorMinimoInclusion" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="UIAF_MULTIPLES_TRANSAC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FECHAINI" Type="datetime" Mode="In" />
+    <Parameter Name="FECHAFIN" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="UIAF_TRANSMULTIPLES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FECHAINI" Type="datetime" Mode="In" />
+    <Parameter Name="FECHAFIN" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="UIAF_TRANSMULTIPLES2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FECHAINI" Type="datetime" Mode="In" />
+    <Parameter Name="FECHAFIN" Type="datetime" Mode="In" />
+  </Function>
+  <EntityContainer Name="IngenioModelStoreContainer">
+    <EntitySet Name="Asociados_Ingenio" EntityType="Self.Asociados_Ingenio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cargos" EntityType="Self.Cargos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estados" EntityType="Self.Estados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Galeria" EntityType="Self.Galeria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Log_Usuarios" EntityType="Self.Log_Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modulos" EntityType="Self.Modulos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Param_dian" EntityType="Self.Param_dian" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RolesModulos" EntityType="Self.RolesModulos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEGUIMIENTO_SIMULADORES" EntityType="Self.SEGUIMIENTO_SIMULADORES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sliders" EntityType="Self.Sliders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsuariosRoles" EntityType="Self.UsuariosRoles" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_RolesModulos_Modulos" Association="Self.FK_RolesModulos_Modulos">
+      <End Role="Modulos" EntitySet="Modulos" />
+      <End Role="RolesModulos" EntitySet="RolesModulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RolesModulos_Roles" Association="Self.FK_RolesModulos_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="RolesModulos" EntitySet="RolesModulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosRoles_Roles" Association="Self.FK_UsuariosRoles_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UsuariosRoles" EntitySet="UsuariosRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

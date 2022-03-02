@@ -1,0 +1,266 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using Ingenio.BO;
+using Ingenio.DLL;
+
+namespace Ingenio.PortalWebExterno.Controllers
+{
+    public class AsociadoController : Controller
+    {
+        // GET: Asociado
+
+        AsociadoBLL asocBll = new AsociadoBLL();
+        ToolBLL toolBll = new ToolBLL();
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        // GET: Asociado/Details/5
+        public ActionResult Details(int id)
+        {
+            asociados aso = asocBll.GetAsociado(id);
+            ViewBag.Aso = aso;
+            TimeSpan dias = DateTime.Now - Convert.ToDateTime(aso.nits.fechaingreso);
+            ViewBag.antiguedad = Math.Abs((aso.nits.fechaingreso.Month - DateTime.Now.Month) + 12 * (aso.nits.fechaingreso.Year - DateTime.Now.Year));
+            ViewBag.agencia = aso.nits.agencia + "-" + asocBll.GetAgencias(aso);
+            if (aso.periododeduce == "M") ViewBag.periododeduce = "Mensual";
+            if (aso.periododeduce == "Q") ViewBag.periododeduce = "Quiencenal";
+            if (aso.periododeduce == "O") ViewBag.periododeduce = "Catorcenal";
+            if (aso.periododeduce == "D") ViewBag.periododeduce = "Decadal";
+            if (aso.periododeduce == "E") ViewBag.periododeduce = "Semanal";
+            return View();
+        }
+        public class CAhorros
+        {
+            public string tipo_cuenta { get; set; }
+            public int año { get; set; }
+            public int mes { get; set; }
+            public string nombre { get; set; }
+            public string numerocuenta { get; set; }
+            public long cedulasociado { get; set; }
+            public string codlinea { get; set; }
+            public string fechainicio { get; set; }
+            public string fechavencimiento { get; set; }
+            public decimal anulidad { get; set; }
+            public decimal saldoponersedia { get; set; }
+            public decimal pagare { get; set; }
+            public string estado { get; set; }
+            public decimal cuota { get; set; }
+            public decimal saldototal { get; set; }
+            public int interes { get; set; }
+
+        }
+        public ActionResult GetAhorros(int anio, int mes, int nit)
+        {
+
+            dynamic ahorro = asocBll.GetAhorros(anio, mes, nit);
+
+            try
+            {
+                var permanente = ahorro.ahorroPermanente;// permanentes
+                var AhorroSocial = ahorro.ahorroSocial;// social
+                var AhorroATermino = ahorro.ahorroAtermino;// a termino
+                var Creditos = ahorro.Creditos;
+                List<CAhorros> parts = new List<CAhorros>();
+
+                foreach (var item in permanente)
+                {
+                    parts.Add(new CAhorros() { tipo_cuenta = "P", año = item.año, mes = item.mes, codlinea = item.codlinea, numerocuenta = item.numerocuenta, nombre = item.nombre, fechainicio = Convert.ToString(item.fechainicio), fechavencimiento = Convert.ToString(item.fechavencimiento), cuota = item.cuota, saldototal = item.saldototal, interes = item.interes });
+                }
+                foreach (var item in AhorroSocial)
+                {
+                    parts.Add(new CAhorros() { tipo_cuenta = "S", año = item.año, mes = item.mes, codlinea = item.codlinea, numerocuenta = item.numerocuenta, nombre = item.nombre, fechainicio = Convert.ToString(item.fechainicio), fechavencimiento = Convert.ToString(item.fechavencimiento), cuota = item.cuota, saldototal = item.saldototal, interes = item.interes });
+                }
+                foreach (var item in AhorroATermino)
+                {
+                    parts.Add(new CAhorros() { tipo_cuenta = "AT", año = item.año, mes = item.mes, codlinea = item.codlinea, numerocuenta = item.numerocuenta, nombre = item.nombre, fechainicio = Convert.ToString(item.fechainicio), fechavencimiento = Convert.ToString(item.fechavencimiento), cuota = item.cuota, saldototal = item.saldototal, interes = item.interes });
+                }
+                foreach (var item in Creditos)
+                {
+                    parts.Add(new CAhorros() { tipo_cuenta = "C", año = item.año, mes = item.mes, cedulasociado = item.cedulasociado, codlinea = item.codlinea, nombre = item.nombre, fechainicio = Convert.ToString(item.fechainicio), fechavencimiento = Convert.ToString(item.fechavencimiento), cuota = item.cuotasmora, anulidad = item.anulidad, saldoponersedia = item.saldoponersedia, pagare = item.pagare, estado = item.estado == "V" ? "Vigente" : item.estado });
+                }
+
+                return Json(parts, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception er) { return Json(false, JsonRequestBehavior.AllowGet); }
+        }
+
+
+        // GET: Asociado/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Asociado/Create
+        [HttpPost]
+        public ActionResult Create(FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add insert logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        //autocomplete profesiones
+        public JsonResult AutoCompleteProfesion(string term)
+        {
+            ICollection<profesiones> profesiones = asocBll.GetProfesiones(term);
+            List<object> profesiones2 = new List<object>();
+            foreach (var item in profesiones)
+            {
+                profesiones2.Add(new
+                {
+                    value = item.codprofesion,
+                    label = item.nombreprofesion.Trim()
+
+                });
+            }
+            return Json(profesiones2, JsonRequestBehavior.AllowGet);
+        }
+
+        //autocomplete empresas
+        public JsonResult AutoCompleteEmpresa(string term)
+        {
+            ICollection<empresas> empresas = asocBll.GetEmpresas(term);
+            List<object> empresas2 = new List<object>();
+            foreach (var item in empresas)
+            {
+                empresas2.Add(new
+                {
+                    value = item.codempresa,
+                    label = item.nombreempresa.Trim()
+
+                });
+            }
+            return Json(empresas2, JsonRequestBehavior.AllowGet);
+        }
+
+        //autocomplete depedencias
+        public JsonResult AutoCompleteDependencias(string term, string id)
+        {
+            ICollection<dependenciasempresas> dependecias = asocBll.GetDependencias(term, id);
+            List<object> dependecias2 = new List<object>();
+            foreach (var item in dependecias)
+            {
+                dependecias2.Add(new
+                {
+                    value = item.coddependencia,
+                    label = item.nombredependencia.Trim()
+
+                });
+            }
+            return Json(dependecias2, JsonRequestBehavior.AllowGet);
+        }
+
+        //autocomplete empresas
+        public JsonResult AutoCompleteCiiu(string term)
+        {
+            ICollection<ciiu> ciiu1 = asocBll.GetCiiu(term);
+            List<object> ciiu2 = new List<object>();
+            foreach (var item in ciiu1)
+            {
+                ciiu2.Add(new
+                {
+                    value = item.codciiu,
+                    label = item.nombre.Trim()
+
+                });
+            }
+            return Json(ciiu2, JsonRequestBehavior.AllowGet);
+        }
+
+        //autocomplete depedencias
+        public JsonResult AutoCompleteDivision(string term, string id)
+        {
+            ICollection<divisionciiu> divciiu = asocBll.GetDivisionciiu(term, id);
+            List<object> divciiu2 = new List<object>();
+            foreach (var item in divciiu)
+            {
+                divciiu2.Add(new
+                {
+                    value = item.coddivision,
+                    label = item.nombre.Trim()
+
+                });
+            }
+            return Json(divciiu2, JsonRequestBehavior.AllowGet);
+        }
+
+        // GET: Asociado/Edit/5
+        public ActionResult Edit(int id)
+        {
+            asociados aso = asocBll.GetAsociado(id);  
+            
+            ViewBag.depart = toolBll.GetDepartamento(aso.nits.coddepartamento);
+            ViewBag.ciudad = toolBll.GetCiudad(aso.nits.codciudad);
+            ViewBag.zona = toolBll.GetZona(aso.nits.codzona);
+            ViewBag.comuna = toolBll.GetComuna(aso.nits.codcomuna);
+            ViewBag.barrio = toolBll.GetBarrio(aso.nits.codbarrio);
+            ViewBag.empresalabora = asocBll.GetEmpresaLabora(aso.codempresalabora);
+            ViewBag.Aso = aso;
+            return View("Edit", aso.nits);
+        }
+
+        // POST: Asociado/Edit/5
+        [HttpPost]
+        public JsonResult Edit(int id, asociados aso, nits nit)
+        {
+            try
+            {
+               // asociados aso = new asociados();
+                //aso.estadocivil = aso["Id_EstadoCivil"];
+               // aso.fechanacimiento = Convert.ToDateTime(collection["Fecha_Nacimiento"]); //convertir fecha a date
+                //aso.estudios = collection["Id_TipoEstudios"];
+                //aso.codprofesion = collection["codprofesion"];
+                //aso.codempresa = collection["codempresa"];
+                //aso.codempresalabora = collection["codempresalabora"];
+                //aso.coddependencia = collection["coddependencia"];
+                // TODO: Add update logic here
+                bool retorno = asocBll.Edit(id, nit, aso);
+                return Json(new { estado = true }, JsonRequestBehavior.AllowGet);
+
+            }
+            catch (Excepciones e)
+            {
+                return Json(new
+                {
+                    estado = false,
+                    mensaje = e.Descripcion,
+                }, JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        // GET: Asociado/Delete/5
+        public ActionResult Delete(int id)
+        {
+            return View();
+        }
+
+        // POST: Asociado/Delete/5
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+    }
+}

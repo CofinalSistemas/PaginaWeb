@@ -1,0 +1,370 @@
+﻿@model IEnumerable<Ingenio.BO.Ingenio.Sliders>
+@{
+    Layout = "~/Views/Shared/layoutAdmin.cshtml";
+    ViewBag.Title = ViewBag.title;
+    ViewBag.titulo = ViewBag.title;
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "Estados";
+}
+<style>
+    .thumb {
+        height: 75px;
+        border: 1px solid #000;
+        margin: 10px 5px 0 0;
+    }
+
+    .dragImagen {
+        border: 2px dashed #bbb;
+        border-radius: 5px;
+        /*padding: 25px;*/
+        text-align: center;
+        font: 20pt bold 'Vollkorn';
+        color: #bbb;
+    }
+
+    #tam {
+        height: 193px;
+    }
+
+    .progress-1, .progress-2, .progress-3, .progress-4, .progress-5, .progress-6 {
+        overflow: hidden;
+        height: 20px;
+        margin-bottom: 20px;
+        background-color: #f5f5f5;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .progress-bar-1, .progress-bar-2, .progress-bar-3, .progress-bar-4, .progress-bar-5, .progress-bar-6 {
+        float: left;
+        width: 0;
+        height: 100%;
+        font-size: 12px;
+        line-height: 20px;
+        color: #fff;
+        text-align: center;
+        background-color: #337ab7;
+        -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+        box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+        -webkit-transition: width .6s ease;
+        -o-transition: width .6s ease;
+        transition: width .6s ease;
+    }
+
+    .estadopublicado {
+        width: 0px;
+        height: 80px;
+        border-left: 35px solid #EA7070;
+        border-right: 35px solid #EA7070;
+        border-bottom: 35px solid transparent;
+        z-index: 1;
+        position: absolute;
+    }
+
+    .estadoborrador {
+        width: 0px;
+        height: 80px;
+        border-left: 35px solid #999;
+        border-right: 35px solid #999;
+        border-bottom: 35px solid transparent;
+        z-index: 1;
+        position: absolute;
+    }
+
+    .estParraEstado {
+        margin-left: -30px;
+        padding-top: 13px;
+        color: white;
+    }
+    #contenido {
+        background-image: url(/img/Logos/cofinalFondo.png);
+        margin-top: -40px;
+        padding-top: 40px;
+        margin-bottom: -3px;
+        padding-bottom: 30px;
+    }
+</style>
+<section  id="contenido">
+    <div class="container">
+        <div class="row">
+            @*<div class="col-md-3">
+                    <div class="panel panel-default sidebar-menu with-icons">
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="active">
+                                    <a href="#sliderr" data-toggle="pill">Slider</a>
+                                </li>
+                                <li>
+                                    <a href="#noticias" id="sli" data-toggle="pill">Noticias</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>*@
+
+            <div class="col-md-12">
+                <div id="sliderr">
+                 
+                    @foreach (var item in Model)
+                    {
+                        //if (i == 6) { break; }
+                        <div class="col-md-4">
+
+                            <div class="thumbnail" id="@item.Id" style="background-color: #ccc; border: 1px solid #777;">
+
+                                <div id="estado-@item.Id" class="@Html.Raw(item.Activo == true ? "estadopublicado" : "estadoborrador")">
+                                    <p id="parrafoEstado-@item.Id" class="estParraEstado">
+                                        @if (item.Activo == true)
+                                        {@Html.Raw("Publicado")}
+                                        else if (item.Activo == false)
+                                        { @Html.Raw("Borrador")}
+                                        else {@Html.Raw("Agregar") }
+                                    </p>
+                                </div>
+                                <label class="miniatura" id="@item.Id">
+                                    <input class="inputFile" type="file" id="@item.Id" style="display:none;">
+                                    @if (@item.Imagen == null)
+                                    {
+                                    <img style="width:100%; height:201.828px;" id="imagen-@item.Id" src="~/igmSliders/imgtemp.png" alt="imagen" class="img-responsive">
+                                    }
+                                    else
+                                    {
+                                    <img style="width:100%; height:201.828px;" id="imagen-@item.Id" src="@item.Imagen" alt="imagen" class="img-responsive">
+                                    }
+                                </label>
+
+                                <div class="caption">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" id="titulo-@item.Id" placeholder="Titulo noticia" value="@item.Titulo">
+                                    </div>
+                                    <div class="form-group"><textarea class="form-control" type="text" id="Descripcion-@item.Id" placeholder="Descripción">@item.Descripcion</textarea></div>
+                                    <div class="form-group"><input class="form-control" type="text" id="url-@item.Id" placeholder="Url" value="@item.Url"></div>
+                                    <div class="progress-@item.Id">
+                                        <div class="progress-bar-@item.Id" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%; color: #111;">0%</div>
+                                    </div>
+
+                                    <button title="Guardar y publicar" type="button" class="btn btn-primary" name="publicar" data-id="@item.Id" data-toggle="tooltip"><span class="fa  fa-eye"></span></button>&nbsp;
+                                    <button title="Guardar borrador" type="button" class="btn btn-default" name="save" data-id="@item.Id" data-toggle="tooltip"><span class="fa  fa-save"></span></button>&nbsp;
+                                    <button title="Eliminar" type="button" class="btn btn-danger" name="eliminar" data-id="@item.Id" data-toggle="tooltip"><span class="fa fa-trash-o"></span></button>&nbsp;
+                                    <div class="btn-group">
+                                        <button id="tooltipTextoSlider-@item.Id" title="@if (item.Posicion == 1)
+                                        {@Html.Raw("Texto a la Izquierda")}
+                                        else if (item.Posicion == 2)
+                                        { @Html.Raw("Texto a la Derecha")}
+                                        else {@Html.Raw("Texto al Centro") }" type="button" class="btn btn-info" data-toggle="tooltip">
+                                            @if (item.Posicion == 1)
+                                            {@Html.Raw("Iz..")}
+                                            else if (item.Posicion == 2)
+                                            { @Html.Raw("De..")}
+                                            else {@Html.Raw("Ce..") }
+                                        </button>
+                                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <ul id="listaAlinearTexto-@item.Id" class="dropdown-menu">
+                                            <li name="activeIzquierda" id="activeIzquierda-@item.Id" data-id="@item.Id" class="@Html.Raw(item.Posicion == 1 ? "active" : "")"> <a href="#"><i class="fa fa-align-left"></i>Texto izquierda</a></li>
+                                            <li name="activeCentro" id="activeCentro-@item.Id" data-id="@item.Id" class="@Html.Raw(item.Posicion == 0 ? "active" : "")"><a href="#"><i class="fa fa-align-center"></i>Texto centro</a></li>
+                                            <li name="activeDerecha" id="activeDerecha-@item.Id" data-id="@item.Id" class="@Html.Raw(item.Posicion == 2 ? "active" : "")"><a href="#"><i class="fa fa-align-right"></i>Texto derecha</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        //i++;
+                    }
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+
+  
+    //Eliminar slilder
+    $('[name=eliminar]').on('click', function (event) {
+        event.preventDefault();
+        var id = $(this).data('id');
+        var fD = new FormData();
+        fD.append('file', "");
+        fD.append("titulo", "");
+        fD.append("descripcion", "");
+        fD.append("url", "");
+        fD.append("activo", false);
+        fD.append("eliminar", true);
+        fD.append("Id", id);
+        fD.append("posicion", 0)
+        swal({
+            title: "¿Eliminar?",
+            text: "Si elimina se perdera la publicación",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Si, eliminar",
+            closeOnConfirm: false
+        }, function () {
+            $.ajax({
+                url: '@Url.Action("uploadSlider")',
+                type: "POST",
+                data: fD,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function (response) {
+                    if (response.estado) {
+                        console.log(response);
+                        $('#imagen-' + id).attr("src", "/igmSliders/imgtemp.png");
+                        $("#titulo-" + id).val("");
+                        $("#Descripcion-" + id).val("");
+                        $("#url-" + id).val("");
+                        $(".progress-bar-" + id).css("width", "0%");
+                        $(".progress-bar-" + id).html("0%");
+                        $("#parrafoEstado-" + id).html("Agregar");
+                        $("#estado-" + id).attr("class", "estadoborrador");
+                        $('#listaAlinearTexto-' + id + '> li').removeClass('active');
+                        $('#activeCentro-' + id).addClass('active');
+                        $('#tooltipTextoSlider-' + id).attr('data-original-title', 'Texto a la Centro');
+                        $('#tooltipTextoSlider-' + id).html('Ce..');
+
+                        swal({
+                            title: "",
+                            text: "Eliminado correctamente",
+                            timer: 2000,
+                            type: "success",
+                            showConfirmButton: true
+                        });
+                    } else {
+                        swal("Error", response.mensaje, "error")
+                    }
+                }
+            })
+        });
+
+    });
+    //guardar slider
+    var tmpFiles = new Array();
+
+    window.addEventListener('load', init, false);
+    function init() {
+        var box = $('.miniatura');
+        var inputFile = $('.inputFile');
+        $.each(box, function (index, value) {
+            value.addEventListener('dragover', function (e) { e.preventDefault(); return false; }, false);
+            value.addEventListener('drop', subirArchivo, false);
+        });
+        $.each(inputFile, function (index, value) {
+            value.addEventListener("change", subirArchivo, false);
+        });
+        $('[name=save],[name=publicar]').on('click', function (event) {
+            event.preventDefault();
+            var activo = false;
+            var posicion = 0;
+            var id = $(this).data('id');
+            $(".progress-bar-" + id).css("width", "0%");
+            $(".progress-bar-" + id).html("0%");
+            $("#parrafoEstado-" + id).html("Borrador");
+            $("#estado-" + id).attr("class", "estadoborrador");
+            if ($(this).attr("name") == "publicar") {
+                activo = true;
+                $("#parrafoEstado-" + id).html("Publicado");
+                $("#estado-" + id).attr("class", "estadopublicado");
+            }
+            if ($("#activeIzquierda-" + id).attr('class') == "active") {
+                posicion = 1;
+            } else if ($("#activeDerecha-" + id).attr('class') == "active") {
+                posicion = 2;
+            }
+            var fD = new FormData();
+            fD.append('file', tmpFiles[id]);
+            fD.append("titulo", $("#titulo-" + id).val().trim());
+            fD.append("descripcion", $("#Descripcion-" + id).val().trim());
+            fD.append("url", $("#url-" + id).val());
+            fD.append("Id", id);
+            fD.append("activo", activo);
+            fD.append("posicion", posicion);
+            var ajax = new XMLHttpRequest();
+            ajax.open('POST', '@Url.Action("uploadSlider")', true);
+            ajax.addEventListener('load', function (e) {
+                if (this.status == '200') {
+                    box.innerHTML = 'Se subió el archivo correctamente :)';
+                }
+                else {
+                    box.innerHTML = 'No se pudo subir el archivo :(';
+                }
+            });
+            box.innerHTML = 'Subiendo el archivo...';
+            ajax.upload.addEventListener('progress', function (e) {
+                if (e.lengthComputable) {
+                    $('.progress-' + id).addClass('show');
+                    var percentComplete = e.loaded / e.total;
+                    $('.progress-bar-' + id).css("width", percentComplete * 100 + '%');
+                    $('.progress-bar-' + id).html(percentComplete * 100 + '%');
+                    if (percentComplete === 1) {
+                        $('.progress-' + id).addClass('hide');
+                    }
+                }
+            });
+            ajax.send(fD);
+        });
+    }
+    //capturar imagen
+    function subirArchivo(evt) {
+        evt.preventDefault();
+        var id = $(this).attr("id");
+        var files;
+        try {
+            files = evt.dataTransfer.files;
+        }
+        catch (err) {
+            files = evt.target.files;
+        }
+        for (var i = 0, f; f = files[i]; i++) {
+            if (!f.type.match('image.*')) {
+                continue;
+            }
+            var reader = new FileReader();
+            reader.onload = (function (theFile) {
+                tmpFiles[id] = theFile;
+                return function (e) {
+                    $('#imagen-' + id).attr("src", e.target.result);
+                };
+            })(f);
+
+            reader.readAsDataURL(f);
+        }
+    }
+    //alinear texto slider
+    $('[name=activeIzquierda],[name=activeCentro], [name=activeDerecha] ').on('click', function (event) {
+        event.preventDefault();
+        var id = $(this).data('id');
+        if ($(this).attr("name") == "activeIzquierda") {
+            $('#listaAlinearTexto-' + id + ' > li').removeClass('active');
+            $('#activeIzquierda-' + id).addClass('active');
+            $('#tooltipTextoSlider-' + id).attr('data-original-title', 'Texto a la Izquierda');
+            $('#tooltipTextoSlider-' + id).html('Iz..');
+        } else if ($(this).attr("name") == "activeDerecha") {
+            $('#listaAlinearTexto-' + id + ' > li').removeClass('active');
+            $('#activeDerecha-' + id).addClass('active');
+            $('#tooltipTextoSlider-' + id).attr('data-original-title', 'Texto a la Derecha');
+            $('#tooltipTextoSlider-' + id).html('De..');
+        } else {
+            $('#listaAlinearTexto-' + id + '> li').removeClass('active');
+            $('#activeCentro-' + id).addClass('active');
+            $('#tooltipTextoSlider-' + id).attr('data-original-title', 'Texto a la Centro');
+            $('#tooltipTextoSlider-' + id).html('Ce..');
+        }
+    });
+
+    @*$('#listaAlinearTexto > li').removeClass('active');
+
+    $('#@ViewBag.activo').addClass('active');*@
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IngenioModelStoreContainer" CdmEntityContainer="IngenioEntities">
+    <EntitySetMapping Name="Modulos">
+      <EntityTypeMapping TypeName="IsTypeOf(IngenioModel.Modulos)">
+        <MappingFragment StoreEntitySet="Modulos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuariosRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(IngenioModel.UsuariosRoles)">
+        <MappingFragment StoreEntitySet="UsuariosRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="IsTypeOf(IngenioModel.Roles)">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolesModulos">
+      <EntityTypeMapping TypeName="IsTypeOf(IngenioModel.RolesModulos)">
+        <MappingFragment StoreEntitySet="RolesModulos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+          <ScalarProperty Name="Id_Modulo" ColumnName="Id_Modulo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEGUIMIENTO_SIMULADORES">
+      <EntityTypeMapping TypeName="IngenioModel.SEGUIMIENTO_SIMULADORES">
+        <MappingFragment StoreEntitySet="SEGUIMIENTO_SIMULADORES">
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sliders">
+      <EntityTypeMapping TypeName="IngenioModel.Sliders">
+        <MappingFragment StoreEntitySet="Sliders">
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Posicion" ColumnName="Posicion" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cargos">
+      <EntityTypeMapping TypeName="IngenioModel.Cargos">
+        <MappingFragment StoreEntitySet="Cargos">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IngenioModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Id_Cargo" ColumnName="Id_cargo" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="FechaUltimoAcceso" ColumnName="FechaUltimoAcceso" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estados">
+      <EntityTypeMapping TypeName="IngenioModel.Estados">
+        <MappingFragment StoreEntitySet="Estados">
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="NoticiaCofiFunda" ColumnName="NoticiaCofiFunda" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="Html" ColumnName="Html" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Galeria">
+      <EntityTypeMapping TypeName="IngenioModel.Galeria">
+        <MappingFragment StoreEntitySet="Galeria">
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="RutaImagen" ColumnName="RutaImagen" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UIAF_MULTIPLES_TRANSAC" FunctionName="IngenioModel.Store.UIAF_MULTIPLES_TRANSAC" />
+    <EntitySetMapping Name="Log_Usuarios">
+      <EntityTypeMapping TypeName="IngenioModel.Log_Usuarios">
+        <MappingFragment StoreEntitySet="Log_Usuarios">
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="Fecha_acesso" ColumnName="Fecha_acesso" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="P_Transaccciones_Uiaf" FunctionName="IngenioModel.Store.P_Transaccciones_Uiaf" />
+    <FunctionImportMapping FunctionImportName="P_Operador_UiAf" FunctionName="IngenioModel.Store.P_Operador_UiAf">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IngenioModel.P_Operador_UiAf_Result">
+          <ScalarProperty Name="fechaseguimiento" ColumnName="fechaseguimiento" />
+          <ScalarProperty Name="Valor_Transaccion" ColumnName="Valor_Transaccion" />
+          <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+          <ScalarProperty Name="nombreagencia" ColumnName="nombreagencia" />
+          <ScalarProperty Name="tipoproducto" ColumnName="tipoproducto" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="tipoidentificacion" ColumnName="tipoidentificacion" />
+          <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+          <ScalarProperty Name="primerapellido" ColumnName="primerapellido" />
+          <ScalarProperty Name="segundoapellido" ColumnName="segundoapellido" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="segundonombre" ColumnName="segundonombre" />
+          <ScalarProperty Name="nombreasociado" ColumnName="nombreasociado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="salario" ColumnName="salario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="P_Operador_UiAf2" FunctionName="IngenioModel.Store.P_Operador_UiAf2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IngenioModel.P_Operador_UiAf2_Result">
+          <ScalarProperty Name="fechaseguimiento" ColumnName="fechaseguimiento" />
+          <ScalarProperty Name="Valor_Transaccion" ColumnName="Valor_Transaccion" />
+          <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+          <ScalarProperty Name="nombreagencia" ColumnName="nombreagencia" />
+          <ScalarProperty Name="tipoproducto" ColumnName="tipoproducto" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="tipoidentificacion" ColumnName="tipoidentificacion" />
+          <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+          <ScalarProperty Name="primerapellido" ColumnName="primerapellido" />
+          <ScalarProperty Name="segundoapellido" ColumnName="segundoapellido" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="segundonombre" ColumnName="segundonombre" />
+          <ScalarProperty Name="nombreasociado" ColumnName="nombreasociado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="salario" ColumnName="salario" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Asociados_Ingenio">
+      <EntityTypeMapping TypeName="IngenioModel.Asociados_Ingenio">
+        <MappingFragment StoreEntitySet="Asociados_Ingenio">
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="FechaAnteriroAcceso" ColumnName="FechaAnteriroAcceso" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="SegundoAPellido" ColumnName="SegundoAPellido" />
+          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+          <ScalarProperty Name="SegundoNombre" ColumnName="SegundoNombre" />
+          <ScalarProperty Name="PrimerNombre" ColumnName="PrimerNombre" />
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Param_dian">
+      <EntityTypeMapping TypeName="IngenioModel.Param_dian">
+        <MappingFragment StoreEntitySet="Param_dian">
+          <ScalarProperty Name="INTERES_DEDUCIBLES" ColumnName="INTERES_DEDUCIBLES" />
+          <ScalarProperty Name="INTERES_PAGADOS" ColumnName="INTERES_PAGADOS" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="P_Operador_UiAf3" FunctionName="IngenioModel.Store.P_Operador_UiAf3">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IngenioModel.P_Operador_UiAf3_Result">
+          <ScalarProperty Name="fechaseguimiento" ColumnName="fechaseguimiento" />
+          <ScalarProperty Name="Valor_Transaccion" ColumnName="Valor_Transaccion" />
+          <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+          <ScalarProperty Name="nombreagencia" ColumnName="nombreagencia" />
+          <ScalarProperty Name="tipoproducto" ColumnName="tipoproducto" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="tipoidentificacion" ColumnName="tipoidentificacion" />
+          <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+          <ScalarProperty Name="primerapellido" ColumnName="primerapellido" />
+          <ScalarProperty Name="segundoapellido" ColumnName="segundoapellido" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="segundonombre" ColumnName="segundonombre" />
+          <ScalarProperty Name="nombreasociado" ColumnName="nombreasociado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="salario" ColumnName="salario" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="TIPO_TRANSACCION" ColumnName="TIPO_TRANSACCION" />
+          <ScalarProperty Name="codoperador" ColumnName="codoperador" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UIAF_TRANSMULTIPLES" FunctionName="IngenioModel.Store.UIAF_TRANSMULTIPLES">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IngenioModel.UIAF_TRANSMULTIPLES_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="totalefectivo" ColumnName="totalefectivo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UIAF_TRANSMULTIPLES2" FunctionName="IngenioModel.Store.UIAF_TRANSMULTIPLES2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IngenioModel.UIAF_TRANSMULTIPLES2_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="nrocuenta" ColumnName="nrocuenta" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="totalefectivo" ColumnName="totalefectivo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="P_Operador_UiAf4" FunctionName="IngenioModel.Store.P_Operador_UiAf4">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IngenioModel.P_Operador_UiAf4_Result">
+          <ScalarProperty Name="fechaseguimiento" ColumnName="fechaseguimiento" />
+          <ScalarProperty Name="Valor_Transaccion" ColumnName="Valor_Transaccion" />
+          <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+          <ScalarProperty Name="nombreagencia" ColumnName="nombreagencia" />
+          <ScalarProperty Name="tipoproducto" ColumnName="tipoproducto" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="tipoidentificacion" ColumnName="tipoidentificacion" />
+          <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+          <ScalarProperty Name="primerapellido" ColumnName="primerapellido" />
+          <ScalarProperty Name="segundoapellido" ColumnName="segundoapellido" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="segundonombre" ColumnName="segundonombre" />
+          <ScalarProperty Name="nombreasociado" ColumnName="nombreasociado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="salario" ColumnName="salario" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="TIPO_TRANSACCION" ColumnName="TIPO_TRANSACCION" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

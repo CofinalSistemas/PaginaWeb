@@ -1,0 +1,184 @@
+﻿    
+@{
+        Layout = "~/Views/Shared/layoutFundacion.cshtml";
+        ViewBag.Title = " Cursos en Economía Solidaria";
+        ViewBag.titulo = "Cursos en Economía Solidaria";
+        ViewBag.url = Url.Action("index", "Fundacion");
+        ViewBag.activo = "NuestrosProgramas";
+}
+ <!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+
+<style>
+   
+   .text-justify {
+        font-size: large;
+    }
+    .p{
+     font-size: 20px;
+    }
+  
+   .heading{
+       margin-bottom: 10px;
+   }
+   #an{
+     color: black;
+    font-size: 20px;
+   }
+  
+   
+</style>
+<!--fondo1-->
+
+<div class="parallaxbox" id="pb0" style="background-image: url(/img/fondos/economia.jpg);"> </div>
+
+<!-- contenido-->
+<section style="background-image:url(/img/texture-bw.png); padding-top:40px; padding-bottom:40px;-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8);  ">
+        <ul class="nav nav-tabs" style="background-color:#F2A326;">
+            <li class="active" id="pro">
+                <a id="an" href="#programas" data-toggle="tab">Programas</a>
+            </li>
+            <li id="cur">
+                <a id="an" href="#Objetivos" data-toggle="tab" >Objetivos del programa</a>
+            </li>
+            <li id="metodo">
+                <a id="an" data-toggle="tab" href="#MetodoU">Metodologías</a>
+            </li>
+            <li id="material">
+                <a id="an" data-toggle="tab" href="#MaterialD">Material Didáctico</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
+            <div class="tab-pane active" id="programas">
+           <!--contenido de objetivos-->
+            <div class="heading">
+                    <h4>Cursos</h4>
+                    <br />
+                    <br />
+                    <ul class="text-justify">
+                        <li>Cursos de Cooperativismo nivel básico, intermedio y avanzado</li>
+                        <li>Cursos de Cooperativismo con énfasis en Cooperativas de Trabajo Asociado</li>
+                        <li>Cursos Cooperativismo con Énfasis en Fondos de Empleados.</li>
+                        <li>Curso de Emprendimiento y Liderazgo.</li>
+                        
+                       
+                    </ul>
+                </div>
+
+            </div>
+            <!--objetivos del programa-->
+            <div class="tab-pane" id="Objetivos">
+                <!--contenido de objetivos-->
+                <div class="heading">
+                    <h4>Objetivo General</h4>
+                    <br />
+                    <br />
+                    <p class="text-justify" style="font-size: 18px;">
+                        Nuestro Curso Básico de Economía Solidaria pretende brindar las herramientas conceptuales, metodológicas, normativas y estructurales que posee el modelo solidario dirigido a todos los sectores de la comunidad, como una alternativa eficiente de organización económica y de mejoramiento de su calidad de vida.
+                    </p>
+                </div>
+                <div class="heading">
+                    <h4>Objetivos Específicos</h4>
+                    <br />
+                    <br />
+                    <ul class="text-justify">
+                        <li>Dar a conocer la historia, precursores y teorías de la economía solidaria en el mundo y en Colombia.</li>
+                        <li>Identificar los conceptos, principios y valores establecidos por el sector solidario.</li>
+                        <li>Explicar la estructura del sistema de economía solidaria y la participación de sus integrantes en el desarrollo y fortalecimiento del modelo solidario.</li>
+                        <li>Describir los pasos para lograr una eficaz participación de sus integrantes (asociados) y el desarrollo de un modelo solidario de autogestión.</li>
+                        <li>Identificar los aspectos legales y técnicos que permitan adquirir y profundizar habilidades y conocimientos relacionados con la economía solidaria.</li>
+                        <li>Establecer las bases para la formulación de proyectos de acuerdo al tipo de organización solidaria que desee conformar.</li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <!--contenido metodologias-->
+            <div class="tab-pane " id="MetodoU">
+                <div class="heading">
+                    <h4>Metodología a Utilizar </h4>
+                </div>
+                <p class="text-justify" style="font-size:20px">
+                    En el curso básico de economía solidaria se utilizan varios métodos pedagógicos, entre ellos:
+                </p>
+                <ul class="text-justify">
+                    <li>Clases magistrales.</li>
+                    <li>Clases de tutoría.</li>
+                    <li>Clases participativas.</li>
+                </ul>
+                <p class="text-justify" style="font-size:20px">
+                    La Fundación Cofinal para adelantar procesos de formación pedagógica puede utilizar una o la combinación de varias de las metodologías explicadas anteriormente, todo esto dependiendo del grupo al cual se presente dicha capacitación.
+                </p>
+            </div>
+            <!--contenido material d-->
+            <div class="tab-pane" id="MaterialD">
+                <div class="heading">
+                    <h4>Material Didáctico y Ayudas Educativas Incorporadas </h4>
+                </div>
+                <ul class="text-justify">
+                    <li>Presentación en Power Point.</li>
+                    <li>Libro “Curso Básico en Cooperativismo”.</li>
+                    <li>Videos.</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<div class="parallaxbox" id="pb1" style="background-image: url(/img/fondos/economia.jpg);"> </div>
+ <!--fondo 2 con carusel de fotos-->
+<ul class="pgwSlideshow">
+    @{ int count = 0;}
+    @foreach (var item in ViewBag.imagenesSolidaridad)
+    {
+        <li><img src="@item"></li>
+        count++;
+        if (count == 20)
+        {
+            break;
+        }
+    }
+
+
+</ul>
+<!-- scrip para parallax-->
+<script type="text/javascript">
+			function parallax() {
+			    setpos("#pb0");
+			    setpos("#pb1");
+			    
+
+
+			}
+
+
+
+			function setpos(element, factor) {
+				factor = factor || 2;
+
+				var offset = $(element).offset();
+				var w = $(window);
+
+				var posx = (offset.left - w.scrollLeft()) / factor;
+				var posy = (offset.top - w.scrollTop()) / factor;
+
+				$(element).css('background-position', '100% '+posy+'px');
+
+    // use this to have parralax scrolling vertical and horizontal
+    //$(element).css('background-position', posx+'px '+posy+'px');
+}
+
+$(document).ready(function () {
+	parallax();
+}).scroll(function () {
+	parallax();
+});
+</script>
+<script>
+    $(document).ready(function () {
+        $('.pgwSlideshow').pgwSlideshow();
+    });
+</script>

@@ -1,0 +1,717 @@
+﻿@using Ingenio.Models
+@{
+    AccountModels cuentaUsuario = new AccountModels();
+    if (!cuentaUsuario.IsNull() && cuentaUsuario.IsAsociado)
+    {
+        Layout = "~/Views/Shared/layoutAso.cshtml";       
+    }
+    
+
+    ViewBag.Title = "Simulador Ahorro ";
+    ViewBag.titulo = "Simulador Ahorro";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "simuladoresActivo";
+
+}
+<!--estilos-->
+<style>
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+
+    .modal-header, .modal-footer {
+        background-color: #5CB85C;
+    }
+
+    .modal-body {
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+
+    .btn-primary {
+        background-color: #da4d4d;
+        border-color: #da4d4d;
+    }
+
+    .modal-title {
+        color: white;
+    }
+
+    .table {
+        border-collapse: inherit;
+    }
+</style>
+
+@using System.Globalization;
+<section id="contenido">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="container">
+                <h4 style="text-align: center">COOPERATIVA DE AHORRO Y CREDITO NACIONAL</h4>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="container">
+                <h4 style="text-align: center">SIMULADOR CDAT</h4>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+
+        <br>
+        <div class="container well col-md-12">
+            @using (Html.BeginForm("Calcular", "SimuladorCDAT"))
+            {
+                @*<form class="form-horizontal" id="formExportar" method="post">*@
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="Nombre" style="color: black;">Nombre:</label>
+                            <div class="col-md-7 input-group" id="divNombre">
+                                <input @(cuentaUsuario.IsNull() ? "" : "readonly") style="text-transform: uppercase;" data-toggle="tooltip" title="Ingrese nombre!" class="form-control" id="txtNombre" value="@(ViewBag.nombreintegrado ?? String.Empty)" name="txtNombre" placeholder="" type="text" onkeypress="return soloLetras(event)" required />
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="Email" style="color: black;">Email:</label>
+                            <div class="col-md-7 input-group" id="divEmail">
+                                <input @(cuentaUsuario.IsNull() ? "" : "readonly") class="form-control" id="txtEmail" value="@ViewBag.Email" name="txtEmail" placeholder="" type="email" />
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="Telefono" style="color: black;">Telefono:</label>
+                            <div class="col-md-7 input-group" id="divTelefono">
+                                <input @(cuentaUsuario.IsNull() ? "" : "readonly") class="form-control" id="Telefono" value="@ViewBag.Telefono" name="Telefono" placeholder="" type="tel" onKeyPress="return soloNumeros(event)" maxlength="11" required />
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="Capital" style="color: black;">Capital:</label>
+                            <div class="col-md-7 input-group" id="divCapital">
+                                <input class="form-control" id="txtCapital" value="@ViewBag.capital" name="txtCapital" placeholder="" type="text" required />
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="Plazo" style="color: black;">Tarifa retefuente %:</label>
+                            <div class="col-md-7 input-group" id="divPlazo">
+
+                              <input @(cuentaUsuario.IsNull() ? "" : "readonly") class="form-control" id="divplazo" value="4,000" name="Tarifa" placeholder="" type="text" />
+                            @*<input class="form-control" id="Tarifa" value="4,000" name="Tarifa" placeholder="" type="text" required />*@
+
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="Plazo" style="color: black;">Plazo(días):</label>
+                            <div class="col-md-7 input-group" id="divPlazo">
+                                <input name="nuevo_Plazo" type="number" id="nuevo_Plazo" value="" style="display:none" onKeyPress="return soloNumeros(event)" maxlength="4" min="0" onchange="agregar(this)">
+                                <button class="btn-danger" name="cerrar" id="cerrar" value="" style="display:none" onclick="retornar()">X</button>
+                                <select class="form-control" id="txtPlazo" name="txtPlazo" onchange="GetSelectedTextValue(this)" value="@ViewBag.Plazo" placeholder="" type="text" required>
+                                    <option value="">Seleccione...</option>
+                                    <option value="999">Otro plazo...</option>
+                                </select>
+                                <input name="Plazo" type="text" id="Plazo" value="" style="display:none">
+                                <input type="button" id="tasas" name="tasas" value="Ver Tasas" class="btn btn-success" data-toggle="modal" data-target="#myModal" />
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="Periodo" style="color: black;">Periodo de Liquidacion(días):</label>
+                            <div class="col-md-7 input-group" id="divPeriodo">
+                                <input name="nuevo_periodo" type="number" id="nuevo_periodo" value="" style="display:none">
+
+                                <select class="form-control" id="txtPeriodo" name="txtPeriodo" onchange="GetSelected(this)" value="@ViewBag.Periodo" placeholder="" type="text" required>
+                                    <option value="">Seleccione...</option>
+                                </select>
+                                <input name="Periodo" type="text" id="Periodo" value="" style="display:none">
+                                <input name="liquida" type="text" id="liquida" value="" style="display:none">
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtMonto1" style="color: black;"></label>
+                            <div class="col-md-7 input-group" id="divcap">
+                                @*<div class="g-recaptcha" data-sitekey="6LfNcBMTAAAAAMilW297YqhG2Ap25DmeMc94zbMx"></div>
+
+                                    @section scripts{
+                                        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                                    }
+                                    <div class="form-group">
+                                        <textarea id="capta" name="capta" style="height:150px" class="form-control hidden " required></textarea>
+                                    </div>*@
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtmes" style="color: black;"></label>
+                            <div class="col-md-7 input-group" id="divMes">
+                                <button class="btn btn-success" id="Calcular1" name="Calcular1" onclick="darclick1()">
+                                    <span class="glyphicon glyphicon-check"></span> Calcular
+                                </button>
+                                <br /><br />
+                                <input @{if (ViewBag.boton == null)
+                                    { @Html.Raw("style='display:none'")} } type="submit" class="btn btn-success" id="Refresh" name="Refresh" disableValidation="true" value="Refrescar" onclick="darclick()" />
+                                  
+                                
+
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+
+
+                    </div><!-- /row -->
+                                    }
+</div>
+        @{
+            if (ViewBag.Simulador != null)
+            {
+                
+                <div id="imprimir">
+                    <div class="row">
+                        <div class="col-lg-4">
+                        </div>
+                        <div class="col-lg-3">
+                            <h4 style="text-align: center">SIMULADOR DE INTERESES CDAT</h4>
+                        </div>
+                        <div class="col-lg-4">
+                        </div>
+                    </div>
+                    <table class="table" border="0" cellspacing="0" style="font-size:small; background-color: rgba(242, 242, 242, 0.74)">
+
+                        <tbody>
+                            <tr>
+                                <td><strong>Linea: Certificado de depósito de Ahorro a término</strong> </td>
+                                
+
+                            </tr>
+                            <tr>
+                                <td><strong>Capital:</strong>
+                                    @{ NumberFormatInfo nfi11 = new CultureInfo("en-US", false).NumberFormat;
+                                    Double cuo11 = Math.Round(Convert.ToDouble(ViewBag.capital1));
+                                    string scuo11 = cuo11.ToString("C", nfi11);
+                                }
+                                @Html.DisplayFor(modelItem => scuo11)
+                                </td>
+                                <td><strong>Tasa del periodo:</strong>
+                                    @{
+                                        decimal cuo13 = Math.Round(ViewBag.Tasa, 2);
+                                string scuo13 = cuo13.ToString(nfi11) + " %";
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo13)
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td><strong>Plazo:</strong>  @ViewBag.plazo</td>
+                                <td><strong>Periodo de liquidacion:</strong> @ViewBag.periodo</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">Estos datos son informativos, pueden variar de acuerdo con el comportamiento de la tasa de interés y no constituyen un compromiso para la Cooperativa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-striped" id="tabla2" border="1" cellspacing="0" style="font-size:small;background-color: rgba(242, 242, 242, 0.74)">
+                        <thead>
+                            <tr style="background-color: #5CB85C;  color: rgba(255, 255, 255, 0.9); font-size: 17px;">
+
+                                <th>Capital</th>
+                                <th>Interes ganado</th>
+                                <th>Retefuente</th>
+                                <th>Interes pagado</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                    double intganado = 0;
+                                    double rtf = 0;
+                                    double intpagado = 0;
+                                    NumberFormatInfo nfi1 = new CultureInfo("en-US", false).NumberFormat;
+                                    foreach (var item in ViewBag.Simulador)
+                                    {
+                                <tr>
+                                    <td>
+                                            @{
+                                            Double cuo = Math.Round(item.capital);
+                                            string scuo = cuo.ToString("C", nfi1);
+
+                                        }
+                                        @Html.DisplayFor(modelItem => scuo)
+                                    </td>
+                                    <td>
+                                            @{
+                                            Double cuo1 = Math.Round(item.interesganado);
+                                            intganado = intganado + cuo1;
+                                            string scuo1 = cuo1.ToString("C", nfi1);
+                                        }
+                                        @Html.DisplayFor(modelItem => scuo1)
+                                    </td>
+                                    <td>
+                                            @{
+                                            Double cuo2 = Math.Round(item.retefuente);
+                                            rtf = rtf + cuo2;
+                                            string scuo2 = cuo2.ToString("C", nfi1);
+                                        }
+                                        @Html.DisplayFor(modelItem => scuo2)
+                                    </td>
+                                    <td>
+                                            @{
+                                            Double cuo3 = Math.Round(item.interespagado);
+                                            intpagado = intpagado + cuo3;
+                                            string scuo3 = cuo3.ToString("C", nfi1);
+                                        }
+                                        @Html.DisplayFor(modelItem => scuo3)
+                                    </td>
+
+                                </tr>
+                                                }
+                            <tr>
+                                <td><strong>Totales:</strong></td>
+                                <td>
+                                    @{
+                                        Double cuo31 = intganado;
+                                        string scuo31 = cuo31.ToString("C", nfi1);
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo31)
+                                </td>
+                                <td>@{
+                                        Double cuo32 = rtf;
+                                        string scuo32 = cuo32.ToString("C", nfi1);
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo32)</td>
+    
+                                    <td>@{
+                                        Double cuo33 = intpagado;
+                                        string scuo33 = cuo33.ToString("C", nfi1);
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo33)</td>
+    
+                                </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+                @*<button class="btn btn-success" onclick="imprime('imprimir')"><span class="glyphicon glyphicon-download"></span>Imprimir</button>*@
+                                            }
+        }
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Tasas de acuerdo al Monto y Plazo</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table" role="grid" id="tablacli" border="1" cellspacing="1" style="font-size:small">
+
+                            <thead>
+                                <tr>
+                                    <th align="center">PLAZO</th>
+                                    <th align="center">MONTO MINIMO</th>
+                                    <th align="center">MONTO MAXIMO</th>
+                                    <th align="center">TASA DE INTERES</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function validar() {
+
+        var plazo = parseInt($('#txtPlazo').val());
+        var periodo = parseInt($('#txtPeriodo').val());
+
+        if (plazo % periodo == 0) {
+            document.getElementById("txtper").value = "bien";
+        }
+        else {
+            alert("El Periodo no es divisible del Plazo");
+            document.getElementById("txtper").value = "";
+        }
+
+
+
+
+    }
+</script>
+<script>
+    function imprime(imprimir) {
+
+        var ficha = document.getElementById(imprimir);
+        var ventimp = window.open(' ', 'popimpr');
+        ventimp.document.write(ficha.innerHTML);
+        ventimp.document.close();
+        ventimp.print();
+        ventimp.close();
+
+
+
+    }
+</script>
+<script>
+$(function () {
+        $("[data-habilitado = True]").attr({disabled: true})
+
+        $('#tabla2').DataTable({
+            "bFilter": false,
+            "info": false,
+            "aLengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
+            "iDisplayLength": 25,
+            language: {
+            "lengthMenu": "Mostrar _MENU_ registros por pagina",
+            "zeroRecords": "Nothing found - sorry",
+            "info": "Pagina _PAGE_ de _PAGES_",
+            "infoEmpty": "No records available",
+            "search": "Buscar",
+            "infoFiltered": "(filtered from _MAX_ total records)",
+            "paginate": {
+                "next": "Siguiente",
+                "previous": "Anterior"
+            }
+        }
+        });
+})
+</script>
+
+<script>
+    $(document).ready(function () {
+
+        $('#txtCapital').priceFormat({
+            prefix: '',
+            centsSeparator: ',',
+            thousandsSeparator: '.'
+        });
+        
+        $('[data-toggle="tooltip"]').tooltip();
+        load_lineas();
+
+
+
+
+    });
+    function soloNumeros(e) {
+        var key = window.Event ? e.which : e.keyCode
+        return ((key >= 48 && key <= 57) || (key == 8))
+    }
+    function soloLetras(e) {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toLowerCase();
+        letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+        especiales = "8-37-39-46";
+
+        tecla_especial = false
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+            return false;
+        }
+    }
+    function load_lineas() {
+        $.get(
+              '@Url.Action("GetPlazo", "SimuladorCDAT")'
+           )
+          .done(function (data) {
+              $.each(data, function (i, row) {
+                  var $option = $('<option>');
+                  $option.val(row.plazo);
+                  $option.html(row.plazo);
+                  $('#txtPlazo').append($option);
+              })
+          })
+          .fail(function (data) {
+              console.log('error !!!');
+          }
+      );
+    }
+
+    function GetSelectedTextValue(txtPlazo) {
+
+        var selectedText = txtPlazo.options[txtPlazo.selectedIndex].innerHTML;
+        var selectedValue = txtPlazo.value;
+        if (selectedValue != 999) {
+
+            document.getElementById("Plazo").value = selectedValue;
+            $("#txtPeriodo").html("");
+            var $option = $('<option>');
+            $option.val("");
+            $option.html("Seleccione...");
+            $('#txtPeriodo').append($option);
+
+            $.ajax({
+                    url: "@Url.Action("GetPlazo2")",
+                    type: "POST",
+                    data: { "plazo": selectedValue },
+                cache: false,
+                datatype: "json",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+
+                        var $option = $('<option>');
+                        $option.val(value.tasa);
+                        $option.html(value.PeriodoLiquida);
+                        $('#txtPeriodo').append($option);
+                    })
+                    }
+            });
+
+
+            $.ajax({
+                url: "@Url.Action("GetPlazo3")",
+                type: "POST",
+            data: {"plazo": selectedValue },
+            cache: false,
+            datatype: "json",
+            success: function (data) {
+                $("#c tbody tr").remove();
+                $.each(data, function (index, value) {
+
+                    var montodesde = value.montodesde;
+                    var montofinal = value.montohasta;
+                    var tasa =value.tasa;
+                
+                    $("#tablacli tbody").append("<tr><td align='center'> " + selectedValue + " días</td>" +
+                                                                  "<td align='center'>$ " + formatNumber.new(montodesde) + "</td>" +
+                                                                  "<td align='center'>$ " + formatNumber.new(montofinal) + "</td>" +
+                                                                  "<td align='center'>" + tasa + " % E.A</td>");
+
+
+
+                })
+            }
+        });
+
+        }
+        else {
+            document.getElementById('txtPlazo').style.display = 'none';
+            document.getElementById('nuevo_Plazo').style.display = 'block';
+            document.getElementById('tasas').style.display = 'none';
+            document.getElementById('nuevo_periodo').style.display = 'block';
+            document.getElementById('txtPeriodo').style.display = 'none';
+            document.getElementById('cerrar').style.display = 'block';
+
+            
+        }
+
+
+        var formatNumber = {
+            separador: ".", // separador para los miles
+            sepDecimal: ',', // separador para los decimales
+            formatear: function (num) {
+                num += '';
+                var splitStr = num.split('.');
+                var splitLeft = splitStr[0];
+                var splitRight = splitStr.length > 1 ? this.sepDecimal + splitStr[1] : '';
+                var regx = /(\d+)(\d{3})/;
+                while (regx.test(splitLeft)) {
+                    splitLeft = splitLeft.replace(regx, '$1' + this.separador + '$2');
+                }
+                return this.simbol + splitLeft + splitRight;
+            },
+            new: function (num, simbol) {
+                this.simbol = simbol || '';
+                return this.formatear(num);
+            }
+        }
+
+    }
+
+    function GetSelected(txtPeriodo) {
+
+        var selectedText = txtPeriodo.options[txtPeriodo.selectedIndex].innerHTML;
+        var selectedValue = txtPeriodo.value;
+
+        document.getElementById("Periodo").value = selectedValue;
+        document.getElementById("liquida").value = selectedText;
+    }
+    
+    function retornar() {
+
+        document.getElementById('txtPlazo').style.display = 'block';
+        document.getElementById('nuevo_Plazo').style.display = 'none';
+        document.getElementById('tasas').style.display = 'block';
+        document.getElementById('nuevo_periodo').style.display = 'none';
+        document.getElementById('txtPeriodo').style.display = 'block';
+        document.getElementById('cerrar').style.display = 'none';
+        document.getElementById('nuevo_periodo').value = "";
+        document.getElementById('nuevo_Plazo').value = "";
+    }
+        
+    function agregar(dato) {
+
+       
+        document.getElementById('nuevo_periodo').value = dato.value;
+        document.getElementById("nuevo_periodo").readOnly = true;
+    }
+
+</script>
+<script>
+    function darclick1() {
+
+        document.getElementById("Refresh").style.display = 'block';
+        @*var fd = new FormData();
+        
+        var ftxtCapital = $('#txtCapital').val();
+        var fPlazo = $('#Plazo').val();
+
+        var fPeriodo = $('#Periodo').val();
+        var fTarifa = $('#Tarifa').val();
+        var fliquida = $('#liquida').val();
+        var ftxtNombre = $('#txtNombre').val();
+
+        var ftxtEmail = $('#txtEmail').val();
+        var fTelefono = $('#Telefono').val();
+        var fnuevo_periodo = $('#nuevo_periodo').val();
+        var fnuevo_Plazo = $('#nuevo_Plazo').val();
+
+
+        fd.append('txtCapital', ftxtCapital)
+        fd.append('Plazo', fPlazo)
+
+        $.ajax({
+            url: "@Url.Action("validaciones", "SimuladorCDAT")",
+            type: "POST",
+        data: fd,
+        cache: false,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            if (response.estado) {
+                document.getElementById('Refresh').style.display = 'block';
+
+
+            } else {
+                swal("Error", "dañoo", "error")
+               // return false;
+            }
+        }
+        });*@
+
+    }
+    function darclick() {
+
+        //document.location.href = "Details";
+        //return false;
+        document.getElementById("txtCapital").value = "";
+       
+        //document.getElementById("txtPeriodo").value = "0";
+        //document.getElementById("txtPlazo").value = "";
+
+        //var nom = "";
+        //var nom = '@ViewBag.boton';
+        //if (nom == "3") {
+          //  document.getElementById("txtNombre").value = "";
+            //document.getElementById("txtEmail").value = "";
+            //document.getElementById("Telefono").value = "";
+
+        //}
+
+    }
+</script>
+<script>
+    $("[name=Calcular]").on("click", function (e) {
+        e.preventDefault();
+        var fd = new FormData();
+        var frm = document.getElementById('botonex11');
+
+        var ftxtCapital = $('#txtCapital').val();
+        var fPlazo = $('#Plazo').val();
+
+        var fPeriodo = $('#Periodo').val();
+        var fTarifa = $('#Tarifa').val();
+        var fliquida = $('#liquida').val();
+        var ftxtNombre = $('#txtNombre').val();
+
+        var ftxtEmail = $('#txtEmail').val();
+        var fTelefono = $('#Telefono').val();
+        var fnuevo_periodo = $('#nuevo_periodo').val();
+        var fnuevo_Plazo = $('#nuevo_Plazo').val();
+
+
+        fd.append('txtCapital', ftxtCapital)
+        fd.append('Plazo', fPlazo)
+
+        $.ajax({
+            url: "@Url.Action("validaciones", "SimuladorCDAT")",
+            type: "POST",
+        data: fd,
+        cache: false,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            if (response.estado) {
+                document.getElementById('Refresh').style.display = 'block';
+                
+
+            } else {
+                swal("Error", "dañoo", "error")
+                return false;
+            }
+        }
+        });
+
+        
+        
+        fd.append('Periodo', fPeriodo)
+        fd.append('Tarifa', fTarifa)
+        fd.append('liquida', fliquida)
+        fd.append('txtNombre', ftxtNombre)
+        fd.append('txtEmail', ftxtEmail)
+        fd.append('Telefono', fTelefono)
+        fd.append('nuevo_periodo', fnuevo_periodo)
+
+        fd.append('nuevo_Plazo', fnuevo_Plazo)
+
+
+        @*swal({
+            title: "Espera un momento",
+            text: "Generando...",
+            allowEscapeKey: false,
+            allowOutsideClick: false,
+            showConfirmButton: false
+        });
+        $.ajax({
+            url: "@Url.Action("Calcular", "SimuladorCDAT")",
+            type: "POST",
+            data: fd,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                if (response.estado) {
+                    document.getElementById('Refresh').style.display = 'block';
+                    swal({
+                        title: "Simulacion terminada",
+                        text: "",
+
+                        type: "success",
+                        showConfirmButton: true
+                    });
+
+                } else {
+                    swal("Error", response.msj, "error")
+                }
+            }
+        });*@
+    });
+</script>

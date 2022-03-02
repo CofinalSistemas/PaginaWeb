@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Confirmado";
+}
+
+
+<div class="container">
+    <div class="section">
+        <div class="row center">
+            <div class="col s12">
+                <div class="icon-block">
+                    <h2 class="center" style="color:#333"><i class="material-icons md-96">how_to_reg</i></h2>
+                    <h5 class="center">Confirmado</h5>
+                    <p class="center bg-dark">
+                        Tu identidad ha sido confirmada. 
+                       <br /> <br>Ahora recibiras un mensaje con un <span style="font-weight:500;">codigo de 6 dígitos</span>> que debes ingresar en el sistema para continuar!.
+                    </p>
+                    <br>
+                    <form action="confirmado" method="post">
+                        @Html.AntiForgeryToken()
+                        <input class="btn btn-default" type="submit" name="name" value="Solicitar codigo" />
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,186 @@
+﻿@{
+    Layout = "~/Views/Shared/layoutAdmin.cshtml";
+    ViewBag.Title = " Reporte Simulador Crédito ";
+    ViewBag.titulo = "Reporte Simulador Crédito";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "simuladoresActivo";
+
+}
+
+@model Ingenio.BO.asociados
+
+@{
+    ViewBag.Title = "Lista de simulaciones Credito realizadas";
+}
+<!--estilos-->
+<style>
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+
+    .modal-header, .modal-footer {
+        background-color: #5CB85C;
+    }
+
+    .modal-body {
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+
+    .btn-primary {
+        background-color: #da4d4d;
+        border-color: #da4d4d;
+    }
+
+    .modal-title {
+        color: white;
+    }
+
+    .table {
+        border-collapse: inherit;
+    }
+</style>
+
+<section id="contenido">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="container">
+                <h4 style="text-align: center">COOPERATIVA DE AHORRO Y CREDITO NACIONAL</h4>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="container">
+                <h4 style="text-align: center">REPORTE DE SIMULACIONES DE CREDITO</h4>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+        <br>
+
+        <div class="container well col-md-12">
+            <form class="form-horizontal" id="formExportar" method="post">
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="inicial" style="color: black;">Fecha inicial:</label>
+                        <div class="col-md-7 input-group" id="divinicial">
+                            <input class="form-control" id="txtinicial" value="@ViewBag.inicial" name="txtinicial" placeholder="" type="date" required />
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="final" style="color: black;">Fecha final:</label>
+                        <div class="col-md-7 input-group" id="divfinal">
+                            <input class="form-control" id="txtfinal" value="@ViewBag.final" name="txtfinal" placeholder="" type="date" required />
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="txtmes" style="color: black;"></label>
+                        <div class="col-md-7 input-group" id="divMes">
+                            <button class="btn btn-success" id="Calcular" name="Calcular" onclick="GetSelectedT()">
+                                <span class="glyphicon glyphicon-check"></span> Reporte
+                            </button>
+
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+
+
+                </div><!-- /row -->
+            </form>
+        </div>
+
+        <div id="imprimir">
+            <div class="row">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-3">
+                    <h4 style="text-align: center">LISTA DE SIMULACIONES CREDITO REALIZADAS</h4>
+                </div>
+                <div class="col-lg-4">
+                </div>
+            </div>
+
+
+            <table class="table table-striped" id="tabla2" border="1" cellspacing="0" style="background: rgba(245, 245, 245, 0.63);">
+                <thead>
+                    <tr style="background: #5CB85C; color: #111;">
+                        <th>No</th>
+                        <th>FECHA</th>
+                        <th>NOMBRE</th>
+                        <th>TELEFONO</th>
+                        <th>EMAIL</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <button class="btn btn-success" onclick="imprime('imprimir')"><span class="glyphicon glyphicon-download"></span>Imprimir</button>
+
+    </div>
+</section>
+
+<script>
+    function imprime(imprimir) {
+
+        var ficha = document.getElementById(imprimir);
+        var ventimp = window.open(' ', 'popimpr');
+        ventimp.document.write(ficha.innerHTML);
+        ventimp.document.close();
+        ventimp.print();
+        ventimp.close();
+    }
+</script>
+<script>
+    $(function () {
+
+        $("[name=Calcular]").on("click", function (e) {
+            e.preventDefault();
+
+        var selectedValue = txtinicial.value;
+        var selectedValue1 = txtfinal.value;
+        var i = 0;
+        console.log(":" + selectedValue1);
+        $.ajax({
+        url: "@Url.Action("Reporte")",
+        type: "POST",
+        data: { "inicial": selectedValue, "final": selectedValue1 },
+        cache: false,
+        datatype: "json",
+        success: function (data) {
+            $("#tabla2 tbody tr").remove();
+            $.each(data, function (index, value) {
+
+                var FECHA = value.FECHA;
+                var NOMBRE = value.NOMBRE;
+                var TELEFONO = value.TELEFONO;
+                var EMAIL = value.EMAIL;
+                i++;
+                $("#tabla2 tbody").append("<tr><td align='center'>" + i + "</td>" +
+                                                                "<td align='center'>" + FECHA + "</td>" +
+                                                                "<td align='center'>" + NOMBRE + "</td>" +
+                                                              "<td align='center'>" + TELEFONO + " </td>"+
+                                                              "<td align='center'>" + EMAIL + " </td>");
+
+
+                
+            })
+            if (i == 0) {
+                $("#tabla2 tbody").append("<tr><td> NO EXISTEN REGISTROS </td>");
+            }
+        }
+        });
+
+        })
+    })
+</script>
+
+

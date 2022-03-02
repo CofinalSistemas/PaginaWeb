@@ -1,0 +1,228 @@
+﻿
+@{
+    ViewBag.Title = "Quienes Somos";
+    ViewBag.titulo = "Nuestra Coperativa";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "conoscanosActivo";
+
+}
+<!-- estilo contenido -->
+<style>
+    .contenido {
+        background-image: url(/img/texture-bw.png);
+        padding-top: 20px;
+        padding-bottom: 50px;
+        -webkit-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
+        box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
+    }
+</style>
+
+  <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = 'b7e1cad8ae31b522b9a3b64e60182dc54a8c7acb';
+        window.smartsupp || (function (d) {
+            var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+            s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+            c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+            c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+        })(document);
+    </script>
+
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+<style>
+    #misio {
+        padding-bottom: 1px;
+        background: #da4d4d;
+    }
+
+    #an {
+        color: black;
+        font-size: 20px;
+    }
+
+    #resena, #visio, #quienS {
+        padding-bottom: 1px;
+        background: #da4d4d;
+    }
+
+    .text-justify {
+        font-size: 18px;
+    }
+</style>
+<!-- imagen fondo1-->
+<div class="parallaxbox" id="pb0" style="background-image: url('/img/fondos/Nuestra Coop.jpg');"> </div>
+<!-- contenido-->
+<section class="contenido">
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8); -webkit-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);-moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);   ">
+        <ul class="nav nav-tabs" style="background-color:#da4d4d">
+            <li id="quienS" class="active"><a id="an" href="#quienesSomos" data-toggle="tab">Quienes Somos</a></li>
+            <li id="resena"><a id="an" data-toggle="tab" href="#resenaHistorica">Reseña Histórica</a></li>
+            <li id="misio"><a id="an" data-toggle="tab" href="#mision">Misión</a></li>
+            <li id="visio"><a id="an" data-toggle="tab" href="#vision">Visión</a></li>
+
+        </ul>
+
+        <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
+            <div class="tab-pane active" id="quienesSomos">
+
+                <div class="heading">
+                    <h4>Quienes Somos</h4>
+                </div>
+                <ul class="text-justify">
+                    <li>
+                        Somos una empresa nariñense de carácter privado, sin ánimo de lucro y de servicio social, fundada el 4 de Julio de 1.964.
+                    </li>
+                    <li>Somos una Cooperativa de Ahorro y Crédito con 57 años de existencia in-interrumpida en el sector de la Economía Solidaria con amplia cobertura en el sur occidente del país.</li>
+                    <li>
+                        Una empresa vigilada por la Superintendencia de la Economía Solidaria -  SUPERSOLIDARIA.
+
+                    </li>
+                    <li>
+                        Somos una empresa Respaldada por el Fondo de Garantías FOGACOOP.
+
+                    </li>
+                    <li>“Cofinal es impulsor de desarrollo socioenconómico del suroccidente Colombiano a través de servicios cooperativos de ahorro y crédito; sirviendo con responsabilidad y confianza mutua, generamos bienestar a nuestros asociados ”</li>
+                </ul>
+
+            </div>
+            <div class="tab-pane " id="resenaHistorica">
+                <div class="heading">
+                    <h4>Reseña Histórica</h4>
+                </div>
+                <p class="text-justify">
+                    En el enigmático y bello sur de Colombia y mas exáctamente en la serena y plácida ciudad de Pasto,
+                    el 30 de Abril de 1964 se hace el reconocimiento de la personería Jurídica a nuestra importante cooperativa hoy llamada COFINAL.<br /><br />
+
+                    La Epoca de fundación de COFINAL, los años sesenta, fue marcada por grandes y definitivos acontecimientos
+                    que vale la pena resaltar como el invento de la pildora, la aparicion de la mini falda y el bikini,
+                    la primavera de Praga, el mayo de Paris, el primer viaje a la luna, la música sugerente y perene de los Beatles,
+                    la primera visita de un Papa a Colombia y con mucha satisfacción y orgullo, la simiente de la mejor cooperativa
+                    del suroccidente colombiano, llamada en ese entonces COOEDUCADOR.<br /><br />
+
+                    Efectivamente, COFINAL irrumpió en el panorama financiero del sur de Colombia hace 57 años, por iniciativa de un grupo de 58 docentes
+                    impulsados por un plausible deseo de solidaridad y por la difícil  situación económica que padecían los educadores  cuyos salarios
+                    se cancelaban con recursos de la incipiente Industria Licorera de Nariño, y a veces, en rama, pero sobre todo cumpliendo el postulado
+                    cristiano de ayudarse los unos a los otros.
+
+                </p>
+
+            </div>
+            <div class="tab-pane" id="mision">
+                <div class="heading">
+                    <h4>Misión Corporativa</h4>
+                </div>
+                <p class="text-justify">
+                    Brindar servicios cooperativos de ahorro y crédito, que generen bienestar a los asociados,sus familias y a la comunidad en general,contribuyendo al desarrollo del país.
+                </p>
+
+            </div>
+            <div class="tab-pane" id="vision">
+                <div class="heading">
+                    <h4>Visión Corporativa  </h4>
+                </div>
+                <p class="text-justify">
+                    En 2024 COFINAL se consolidará como la cooperativa líder en la prestación de servicios financieros y sociales del suroccidente colombiano, ampliando su cobertura a través de la innovación y el fortalecimiento organizacional.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- imagen fondo2-->
+<div class="parallaxbox" id="pb1" style="background-image: url('/img/fondos/Nuestra Coop.jpg');"> </div>
+<!--seccion direccion-->
+<section class="background-white no-mb">
+    <div class="container">
+        <div class="row" style="padding-top:20px;">
+            <div class="col-md-4" data-animate="fadeInUp">
+                <div class="box-simple">
+                    <div class="icon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <h3>DIRECCION</h3>
+                    <p>
+                        Cra. 29 No. 18-41
+                        San Juan de Pasto
+                        Nariño Colombia - Suramerica
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-animate="fadeInUp">
+                <div class="box-simple">
+                    <div class="icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <h3>Centro de llamadas</h3>
+                    <p>
+                        Tel: +(011572) 7336300
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-animate="fadeInUp">
+                <div class="box-simple">
+                    <div class="icon">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <h3>CORREO ELECTRONICO</h3>
+                    <p class="text-muted">
+                        servicioalasociado@cofinal.com.co
+                    </p>
+                    <strong><a href="mailto:"> </a></strong>
+                </div>
+                <!-- /.box-simple -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .maps iframe {
+        pointer-events: none;
+    }
+</style>
+
+<!--<div class='embed-container  maps'>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9160578226433!2d-77.28225128580804!3d1.2185285623241011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed487375d6129%3A0x75d762a9f2c9e3da!2sCOFINAL!5e0!3m2!1ses!2sit!4v1454678597238" height="350" frameborder="0" style="border: 0; width: 100%;" allowfullscreen></iframe>
+</div>-->
+<!-- scrip para parallax-->
+<script type="text/javascript">
+    function parallax() {
+        setpos("#pb0");
+        setpos("#pb1");
+
+    }
+
+
+
+    function setpos(element, factor) {
+        factor = factor || 2;
+
+        var offset = $(element).offset();
+        var w = $(window);
+
+        var posx = (offset.left - w.scrollLeft()) / factor;
+        var posy = (offset.top - w.scrollTop()) / factor;
+
+        $(element).css('background-position', '100% ' + posy + 'px');
+
+        // use this to have parralax scrolling vertical and horizontal
+        //$(element).css('background-position', posx+'px '+posy+'px');
+    }
+
+    $(document).ready(function () {
+        parallax();
+    }).scroll(function () {
+        parallax();
+    });
+</script>
+
+
+
+
+

@@ -1,0 +1,158 @@
+﻿@{
+    Layout = "~/Views/Shared/layoutFundacion.cshtml";
+    ViewBag.Title = "Turismo";
+    ViewBag.titulo = "Turismo";
+    ViewBag.url = Url.Action("index", "Fundacion");
+    ViewBag.activo = "NuestrosProgramas";
+}
+<script src="~/Scripts/parallax.js"></script>
+
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+<!-- script  para textura de titulos-->
+<style>
+    .text-justify {
+        font-size: large;
+    }
+     #get-it{
+             background: -webkit-linear-gradient(left, #f2a326 0%, rgba(242, 163, 38, 0.81) 50%, rgba(242, 163, 38, 0.55) 69%, rgba(242, 163, 38, 0.51) 100%);
+            text-align:center; 
+            
+            }
+    #titulo{
+            background-image:url(/img/texturaAmarilla2.jpg); 
+            background-size:30%;
+            -webkit-box-shadow: 0px 2px 29px 2px rgba(90,86,209,1);
+            -moz-box-shadow: 0px 2px 29px 2px rgba(90,86,209,1);
+             box-shadow: 0px 2px 29px 2px rgba(90,86,209,1);
+            }
+    #fondo{
+        background-image:url(/img/turiFond2.jpg);
+        background-attachment: fixed;  
+        background-size: cover; 
+        padding-top:1px; 
+        margin-top:-40px; 
+        margin-bottom:0px; 
+        padding-bottom:1px;
+        height:500px;
+    }
+    .item img{
+        width:100%;
+
+    }
+</style>
+<style>
+    #banner {
+ background-size: cover;
+transition: background-position 0.05s linear;
+
+}
+</style>
+<!--estilo contenido turismo-->
+<style>
+    #contenido {
+        background-image: url(/img/texture-bw.png);
+        padding-top: 40px;
+        -webkit-box-shadow: 0px 15px 65px -6px rgba(40,40,46,1);
+        -moz-box-shadow: 0px 15px 65px -6px rgba(40,40,46,1);
+        box-shadow: 0px 15px 65px -6px rgba(40,40,46,1);
+        padding-bottom: 40px;
+    }
+</style>
+ <!--primer fondo-->
+<div class="parallaxbox" id="pb0" style="background-image: url(/img/fondoFunTurismo.JPG);"> </div>
+<!-- div titulo-->
+<section  style="margin-bottom:30px">
+    <div id="titulo">
+        <div id="get-it">
+            <div class="container">
+                <div class="col-md-8 col-sm-12">
+                    <h2>Diseñamos planes especiales para grupos</h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- contenido-->
+<section id="contenido">
+        <div class="container" style="background-color: rgba(255, 255, 255, 0.8);  ">
+
+            <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
+                <div class="tab-pane active" id="info">
+
+
+                    <ul class="text-justify">
+                        <li>Planes Turísticos regionales, nacionales e internacionales.</li>
+                        <li>Caminatas y Paseos Ecológicos.</li>
+                        <li>Convenio con Hoteles Decameron.</li>
+                        <li>FunCofinal facilita el ACCESO al crédito a los asociados de Cofinal</li>
+                        <li></li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+ <!--2 fondo-->
+<div class="parallaxbox" id="pb1" style="background-image: url(/img/fondoFunTurismo.JPG);"> </div>
+ <!--fondo 2 con carusel de fotos-->
+<ul class="pgwSlideshow">
+    @{ int count=0;}
+    @foreach (var item in ViewBag.imagenesTurismo)
+    {
+        <li><img src="@item"></li>
+        count++;
+        if (count==20)
+        {
+            break;
+        }
+    }
+    
+
+</ul>
+     
+<!-- scrip para parallax-->
+<script type="text/javascript">
+			function parallax() {
+			    setpos("#pb0");
+			    setpos("#pb1");
+
+
+
+			}
+
+
+
+			function setpos(element, factor) {
+				factor = factor || 2;
+
+				var offset = $(element).offset();
+				var w = $(window);
+
+				var posx = (offset.left - w.scrollLeft()) / factor;
+				var posy = (offset.top - w.scrollTop()) / factor;
+
+				$(element).css('background-position', '100% '+posy+'px');
+
+    // use this to have parralax scrolling vertical and horizontal
+    //$(element).css('background-position', posx+'px '+posy+'px');
+}
+
+$(document).ready(function () {
+	parallax();
+}).scroll(function () {
+	parallax();
+});
+</script>
+<!--script de carusel de fotos-->
+<script>
+    $(document).ready(function () {
+        $('.pgwSlideshow').pgwSlideshow();
+    });
+</script>
+

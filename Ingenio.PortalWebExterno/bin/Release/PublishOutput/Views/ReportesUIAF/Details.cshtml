@@ -1,0 +1,452 @@
+﻿@{
+    Layout = "~/Views/Shared/layoutAdmin.cshtml";
+    ViewBag.Title = " Reporte UIAF ";
+    ViewBag.titulo = "Reporte UIAF";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "reportes";
+
+}
+@model  Ingenio.PortalWebExterno.Models.UIAF
+@{
+
+}
+
+<!--estilos-->
+<style>
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+
+    .modal-header, .modal-footer {
+        background-color: #5CB85C;
+    }
+
+    .modal-body {
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+
+    .btn-primary {
+        background-color: #da4d4d;
+        border-color: #da4d4d;
+    }
+
+    .modal-title {
+        color: white;
+    }
+
+    .table {
+        border-collapse: inherit;
+    }
+</style>
+<style type="text/css">
+    .webGrid { margin: 4px; border-collapse: collapse; width: 300px; }
+        .header { background-color: #E8E8E8; font-weight: bold; color: #FFF; }
+        .webGrid th, .webGrid td { border: 1px solid #C0C0C0; padding: 5px; }
+        .alt { background-color: #E8E8E8; color: #000; }
+        .person { width: 200px; font-weight:bold;}
+        .webGrid tr, thead{   
+                    color:black;
+        }
+</style>
+<section id="contenido">
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+        </div>
+        <div class="container">
+            <h4 style="text-align: center">COOPERATIVA DE AHORRO Y CREDITO NACIONAL</h4>
+        </div>
+        <div class="col-lg-3">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+        </div>
+        <div class="container">
+            <h4 style="text-align: center">REPORTES UIAF</h4>
+        </div>
+        <div class="col-lg-3">
+        </div>
+    </div>
+
+    <br>
+    <div class="container well col-md-12">
+        @*@using (Html.BeginForm("Calcular", "ReportesUIAF"))
+        {*@
+        <form class="form-horizontal" id="formExportar" method="post">
+            <div class="row">
+
+                <div class="col-md-6 form-group">
+                    <label class="col-md-5 control-label" for="inicial1" style="color: black;">Fecha inicial:</label>
+                    <div class="col-md-7 input-group" id="inicial1">
+                        <input class="form-control" id="inicial" value="@ViewBag.inicial" placeholder="AAAA-MM-DD" type="text" required />
+                    </div><!-- /input-group -->
+                </div><!-- /form-group -->
+                <div class="col-md-6 form-group">
+                    <label class="col-md-5 control-label" for="final1" style="color: black;">Fecha final:</label>
+                    <div class="col-md-7 input-group" id="final1">
+                        <input class="form-control" id="final" value="@ViewBag.final" placeholder="AAAA-MM-DD" type="text" required />
+                    </div><!-- /input-group -->
+                </div><!-- /form-group -->
+                <div class="col-md-6 form-group"  >
+                    <label class="col-md-5 control-label" id="millones" for="Mostrar" style="color: black;display:block">Mostrar consignaciones que superen el limite:</label>
+                    <div class="col-md-7 input-group" id="divMostrar">
+                        @*<input class="form-control" style="align-content:flex-start" id="Mostrar" name="Mostrar" value="0" onclick="validate()" type="checkbox" checked />*@
+                        <input class="form-control" id="chk" style="display:block" value="10000000" onKeyPress="return soloNumeros(event)" maxlength="10" placeholder="" type="text"  />
+                    </div><!-- /input-group -->
+                </div><!-- /form-group -->
+                <div class="col-md-6 form-group">
+                    <label class="col-md-5 control-label" for="Mostrar1" style="color: black;">Tipo de Reporte:</label>
+
+                    <div class="col-md-7 input-group" id="divMostrar1">
+                        <label><strong> </strong></label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" value="C" name="tipo_identificacion" checked="checked" onclick="handleClick(this)">
+                                Transacciones en efectivo
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" value="P" name="tipo_identificacion" onclick="handleClick(this)">
+                                Productos
+                            </label>
+                        </div>
+                    </div>
+
+                    <input type="text" value="C" class="form-control" id="tipo" onclick="handleClick(this)" style="display:none">
+
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="col-md-5 control-label" for="txtmes" style="color: black;"></label>
+                    <div class="col-md-7 input-group" id="divMes">
+                        <button class="btn btn-success" id="Calcular" name="Calcular" >
+                            <span class="glyphicon glyphicon-check"></span> Generar
+                        </button>
+                    </div><!-- /input-group -->
+                </div><!-- /form-group -->
+
+                <div id="btn_exp3" style="display:none">
+                    @Html.ActionLink("Exportar", "EstadoAseguradoras", new { id = "botonex11" }, new { @class = "btn btn-success" })
+                </div>
+            </div><!-- /row -->
+            @*}*@
+            </form>
+</div>
+    @*<div class="table-responsive">*@
+
+    @{
+
+        if (ViewBag.Reportes != null)
+        {
+            @*<div>
+                <h4 style="text-align: center">DETALLE</h4>
+            </div>
+            var grid = new WebGrid(rowsPerPage: Model.PageSize, canSort: false);
+            grid.Bind(Model.Customer, autoSortAndPage: false, rowCount: Model.TotalRecord);
+            <div class="table-responsive" style="background: rgba(242, 242, 242, 0.65);">
+                @grid.GetHtml(
+                                                 tableStyle: "webGrid",
+
+                                                 columns: grid.Columns(
+                                                             grid.Column("nro", "No."),
+                                                             grid.Column("fechatransaccion", "Fecha transaccion"),
+                                                             grid.Column("valortransaccion", "Valor transaccion"),
+                                                             grid.Column("moneda", "Moneda"),
+                                                             grid.Column("codigooficina", "Codigo oficina"),
+                                                             grid.Column("codigodepartamento", "Codigo departamento"),
+                                                             grid.Column("tipo_producto", "Tipo producto"),
+                                                             grid.Column("tipo_transaccion", "Tipo transaccion"),
+                                                             grid.Column("numerocuenta", "Numero cuenta"),
+                                                             grid.Column("tipoidentificacion", "Tipo identificacion"),
+                                                             grid.Column("documento", "Documento"),
+                                                             grid.Column("primerapellido", "Primer apellido"),
+                                                             grid.Column("segundoapellido", "Segundo apellido"),
+                                                             grid.Column("nombres", "Nombres"),
+                                                             grid.Column("otronombre", "Otro nombre"),
+                                                             grid.Column("razonsocial", "Razon social"),
+                                                             grid.Column("actividadeconomica", "Actividad economica"),
+                                                             grid.Column("Salario", "Salario"),
+
+                                                             grid.Column("tipoidentificaciondeconsignante", "Tipo identificacion de consignante"),
+                                                             grid.Column("tipodocconsignante", "Tipo doc consignante"),
+                                                             grid.Column("primerapellidoconsignante", "Primer apellido consignante"),
+                                                             grid.Column("segundoapellidoconsignante", "Segundo apellido consignante"),
+                                                             grid.Column("nombreconsignante", "Nombre consignante"),
+                                                             grid.Column("otronombreconsignante", "Otro nombre consignante")
+
+
+                                                         )
+                                                     )
+
+
+            </div>*@
+            <div id="btn_exp1" style = "display:block">
+                @Html.ActionLink("Exportar", "EstadoAseguradoras", new { @id = "botonex" }, new { @class = "btn btn-success" })
+            </div>
+
+        }
+        if (ViewBag.Reportes1 != null)
+        {
+            @*<div>
+                <h4 style="text-align: center">DETALLE</h4>
+            </div>
+            var grid = new WebGrid(rowsPerPage: Model.PageSize, canSort: false);
+            grid.Bind(Model.Customer, autoSortAndPage: false, rowCount: Model.TotalRecord);
+            <div class="table-responsive" style="background: rgba(242, 242, 242, 0.65);">
+                @grid.GetHtml(
+                                                 tableStyle: "webGrid",
+
+                                                 columns: grid.Columns(
+                                                             grid.Column("nro", "No."),
+                                                             grid.Column("fechatransaccion", "Fecha de vinculación"),
+
+                                                             grid.Column("codigodepartamento", "Codigo departamento"),
+                                                             grid.Column("tipo_producto", "Tipo de producto"),
+
+                                                             grid.Column("numerocuenta", "Número del producto"),
+                                                             grid.Column("tipoidentificacion", "Identificacion titular 1"),
+                                                             grid.Column("documento", "Documento titular 1"),
+                                                             grid.Column("primerapellido", "Primer apellido titular 1"),
+                                                             grid.Column("segundoapellido", "Segundo apellido titular 1"),
+                                                             grid.Column("nombres", "Primer nombre titular 1"),
+                                                             grid.Column("otronombre", "Otro Nombre titular 1"),
+                                                             grid.Column("razonsocial", "Razon social titular 1"),
+
+                                                             grid.Column("tipoidentificaciondeconsignante", "Identificacion titular 2"),
+                                                             grid.Column("tipodocconsignante", "Documento titular 2"),
+                                                             grid.Column("primerapellidoconsignante", "Primer apellido titular 2"),
+                                                             grid.Column("segundoapellidoconsignante", "Segundo apellido titular 2"),
+                                                             grid.Column("nombreconsignante", "Primer nombre titular 2"),
+                                                             grid.Column("otronombreconsignante", "Otro Nombre titular 2"),
+                                                             grid.Column("otronombreconsignante", "Razon social titular 2")
+
+                                                         )
+                                                     )
+                
+                
+            </div>*@
+            <div id="btn_exp2" style="display:block">
+                @Html.ActionLink("Exportar", "EstadoAseguradoras", new { id = "botonex1" }, new { @class = "btn btn-success" })
+            </div>
+        }
+    }
+                
+            </div>
+</section>
+
+        <script>
+            function dateDs() {
+                var fecha1 = ($('#inicial').val());
+                var anyo1 = fecha1.substr(0, 4);
+                var mes1 = fecha1.substr(5, 2);
+                var dia1 = fecha1.substr(8);
+
+                var fecha2 = ($('#final').val());
+                var dia2 = fecha2.substr(0, 2);
+                var mes2 = fecha2.substr(3, 2);
+                var anyo2 = fecha2.substr(6);
+
+                var nuevafecha1 = fecha1 //new Date(anyo1 + "," + mes1 + "," + dia1);
+                var nuevafecha2 = fecha2 //new Date(anyo2 + "," + mes2 + "," + dia2);
+
+                var Dif = nuevafecha2.getTime() - nuevafecha1.getTime();
+                var dias = Math.floor(Dif / (1000 * 24 * 60 * 60));
+
+                if (dias > 31) {
+                    alert("La Fecha inicial y Fecha final no puede ser mayor a un mes");
+
+                }
+            }
+        </script>
+        <script>
+            function validate() {
+                if (document.getElementById('Mostrar').checked) {
+                    document.getElementById('chk').value = "10000000";
+                } else {
+                    document.getElementById('chk').value = "0";
+                }
+            }
+        </script>
+<script src="~/Scripts/jquery.maskedinput.js" type="text/javascript"></script>
+<script>
+    jQuery(function ($) {
+        
+        $('#inicial').mask('9999-99-99', { placeholder: "yyyy-mm-dd" });
+        $('#final').mask('9999-99-99', { placeholder: "yyyy-mm-dd" });
+        
+       
+    });
+    
+</script>
+<script>
+    function soloNumeros(e) {
+        var key = window.Event ? e.which : e.keyCode
+        return ((key >= 48 && key <= 57) || (key == 8))
+    }
+</script>
+<script>
+    function isValidDate(day, month, year) {
+        var dteDate;
+
+        // En javascript, el mes empieza en la posicion 0 y termina en la 11 
+        //   siendo 0 el mes de enero
+        // Por esta razon, tenemos que restar 1 al mes
+        month = month - 1;
+        // Establecemos un objeto Data con los valore recibidos
+        // Los parametros son: año, mes, dia, hora, minuto y segundos
+        // getDate(); devuelve el dia como un entero entre 1 y 31
+        // getDay(); devuelve un num del 0 al 6 indicando siel dia es lunes,
+        //   martes, miercoles ...
+        // getHours(); Devuelve la hora
+        // getMinutes(); Devuelve los minutos
+        // getMonth(); devuelve el mes como un numero de 0 a 11
+        // getTime(); Devuelve el tiempo transcurrido en milisegundos desde el 1
+        //   de enero de 1970 hasta el momento definido en el objeto date
+        // setTime(); Establece una fecha pasandole en milisegundos el valor de esta.
+        // getYear(); devuelve el año
+        // getFullYear(); devuelve el año
+        dteDate = new Date(year, month, day);
+
+        //Devuelva true o false...
+        return ((day == dteDate.getDate()) && (month == dteDate.getMonth()) && (year == dteDate.getFullYear()));
+    }
+
+    /**
+     * Funcion para validar una fecha
+     * Tiene que recibir:
+     *  La fecha en formato ingles yyyy-mm-dd
+     * Devuelve:
+     *  true-Fecha correcta
+     *  false-Fecha Incorrecta
+     */
+    function validate_fecha(fecha) {
+        var patron = new RegExp("^(19|20)+([0-9]{2})([-])([0-9]{1,2})([-])([0-9]{1,2})$");
+
+        if (fecha.search(patron) == 0) {
+            var values = fecha.split("-");
+            if (isValidDate(values[2], values[1], values[0])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Funcion que es ejecutada desde el botón de validar
+     */
+    function validar() {
+        var fecha = document.getElementById("inicial").value;
+        if (validate_fecha(fecha) == true)
+            alert("La fecha es correcta");
+        else
+            alert("La fecha es incorrecta");
+    }
+</script>
+<script>
+    function handleClick(myRadio) {
+        currentValue = myRadio.value;
+        document.getElementById("tipo").value = currentValue;
+        
+        if (currentValue == "P") {
+            document.getElementById("inicial").value = "1964-01-01";
+            
+            document.getElementById('millones').style.display = 'none';
+            document.getElementById('chk').style.display = 'none';
+            
+        }
+        else {
+            document.getElementById("inicial").value = "";
+            document.getElementById("final").value = "";
+           
+            document.getElementById('millones').style.display = 'block';
+            document.getElementById('chk').style.display = 'block';
+        }
+    }
+</script>
+<script>
+    $("[name=Calcular]").on("click", function (e) {
+        e.preventDefault();
+
+        var fecha = document.getElementById("inicial").value;
+        if (validate_fecha(fecha) == true)
+        {  }
+        else
+        {
+            swal("El campo Fecha inicial", "La fecha es incorrecta", "warning");
+            return false;
+        }
+
+        var fecha = document.getElementById("final").value;
+        if (validate_fecha(fecha) == true)
+        { }
+        else
+        {
+            swal("El campo Fecha final", "La fecha es incorrecta", "warning");
+            return false;
+        }
+
+        var fd = new FormData();
+        var frm = document.getElementById('botonex11');
+
+        var finicial = $('#inicial').val();
+        var ffinal = $('#final').val();
+       
+        var fchk = $('#chk').val();
+        var ftipo = $('#tipo').val();
+        fd.append('inicial', finicial)
+        fd.append('final', ffinal)
+        fd.append('chk', fchk)
+        fd.append('tipo', ftipo)
+
+        
+        swal({
+            title: "Espera un momento",
+            text: "Generando...",
+            allowEscapeKey: false,
+            allowOutsideClick: false,
+            showConfirmButton: false
+        });
+        $.ajax({
+            url: "@Url.Action("Calcular", "ReportesUIAF")",
+            type: "POST",
+            data: fd,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                if (response.estado) {
+                    document.getElementById('btn_exp3').style.display = 'block';
+               
+                   $.ajax({
+                        url: "@Url.Action()",
+                        type: "POST",
+                        data: fd,
+                        cache: false,
+                        processData: false,
+                        contentType: false,
+                        success: function (response) {
+                            swal({
+                                title: "Exportar Reporte a Excel",
+                                text: "",
+
+                                type: "success",
+                                showConfirmButton: true
+                            }, function () {
+                                window.open("EstadoAseguradoras");
+                            });
+                        }
+                    });
+             
+                   
+                } else {
+                    swal("Error", response.mensaje, "error")
+                }
+            }
+        });
+    });
+</script>

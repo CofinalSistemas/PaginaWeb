@@ -1,0 +1,844 @@
+﻿@{
+    ViewBag.Title = "Productos";
+    ViewBag.titulo = "Ahorros";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "potafolioActivo";
+    ViewBag.c = Url.Action("index", "Home/Ahorros");
+}
+
+<section style="background-image:url(/img/recortada.jpg); background-attachment: fixed;  background-size: cover; padding-top:20px; margin-top:-40px; margin-bottom:0px; padding-bottom:40px;">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="panel panel-default sidebar-menu with-icons" style="background-color: rgba(255, 255, 255, 0.8);">
+                    <div class="panel-body">
+                        <ul id="nav1" class="nav nav-pills nav-stacked">
+                            <li >
+                                <a href="#cuentaCofiahorrito" data-toggle="pill">Cuenta Cofiahorrito</a>
+                            </li>
+                            <li>
+                                <a href="#cuentaCofijunior" data-toggle="pill">Cuenta Cofijunior</a>
+                            </li>
+                            <li>
+                                <a href="#cuentaCofidiario" data-toggle="pill">Cuenta Cofidiario</a>
+                            </li>
+                            <li>
+                                <a href="#cuetaEmpresarial" data-toggle="pill">Cuenta de ahorro Empresarial</a>
+                            </li>
+                            <li>
+                                <a href="#ahorroContractual" data-toggle="pill">Ahorro Contractual</a>
+                            </li>
+                            <li>
+                                <a href="#ahorroSemilla" data-toggle="pill">Cuenta de ahorro Semilla Cooperativa</a>
+                            </li>
+                            <li>
+                                <a href="#cdat" data-toggle="pill">C.D.A.T</a>
+                            </li>
+
+                            @*<li style="visibility: hidden;" class="active">
+                                    <a href="#ahorroCumplirSueños" data-toggle="pill">Ahorro para cumplir tus sueños</a>
+                                </li>*@
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- *** MENUS AND FILTERS END *** -->
+            </div>
+            <div class="tab-content col-md-9" style="background-color: rgba(255, 255, 255, 0.8);">
+
+                <div class="tab-pane active" id="cuentaCofiahorrito">
+                    <div class="heading">
+                        <h4>CUENTA COFIAHORRITO</h4>
+                    </div>
+                    <p class="text-justify">
+                        <strong>AHORRANDO, JUGANDO Y LOS SUEÑOS REALIZANDO!</strong>
+                        Es la cuenta de ahorros creada exclusivamente para niños y niñas de 1 día de nacidos hasta 13 años de edad.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionThree">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionThree" href="#collapse3a">
+                                                Beneficios de la cuenta:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3a" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <ul class="text-justify">
+                                                        <li>
+                                                            Su manejo se hace a través de libreta de ahorros diseñada especialmente para ellos.
+                                                            La cuenta se maneja bajo la responsabilidad de un tutor.
+                                                        </li>
+                                                        <li>Nuestros niños tienen acceso al Fondo de Solidaridad, aplican condiciones y restricciones.</li>
+                                                        <li>Programamos actividades lúdicas y recreativas para ellos.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionThree" href="#collapse3b">
+                                                Requisitos de apertura:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3b" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <ul class="text-justify">
+                                                        <li>Fotocopia del documento de identidad del menor.</li>
+                                                        <li>Fotocopia ampliada del documento de identidad del padre, madre o tutor.</li>
+                                                        <li>Diligenciar el formulario de afiliación.</li>
+                                                        <li>Cancelar el monto mínimo de apertura.</li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Cofiahorrito-01.jpg" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">MONTOS DE AFILIACIÓN</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Concepto</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Afiliación</td>
+                                                <td>$ 9.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Depósito de ahorros</td>
+                                                <td>$ 5.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Aportes</td>
+                                                <td>$ 5.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Libreta de ahorros</td>
+                                                <td>$ 0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Recreación, cultura y deporte</td>
+                                                <td>$ 1.000</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>TOTAL</th>
+                                                <th>$ 20.000</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">CUOTAS MENSUALES</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Concepto</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Aportes sociales</td>
+                                                <td>$ 5.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cultura</td>
+                                                <td>$ 1.000</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>TOTAL</th>
+                                                <th>$ 6.000</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane " id="cuentaCofijunior">
+
+                    <div class="heading">
+                        <h4>CUENTA COFIJUNIOR</h4>
+                    </div>
+                    <p class="text-justify">
+                        <strong>AYUDAMOS A REALIZAR TUS SUEÑOS.</strong>
+                        Cuenta de ahorros para jóvenes entre 14 y 23 años de edad.
+                        Su manejo se hace a través de libreta de ahorros o tarjeta débito.
+                        La cuenta se maneja bajo la responsabilidad de un tutor
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="panel-group accordion" id="accordionOne">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionOne" href="#collapse1a" aria-expanded="true" class="">
+                                                Beneficios de la cuenta:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1a" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                        <div class="panel-body">
+                                            <ul class="text-justify">
+
+                                                <li>
+                                                    Nuestros jóvenes asociados reciben todos los beneficios del fondo de solidaridad de la cooperativa.
+                                                </li>
+                                                <li>El manejo de la tarjeta débito es de $ 5.000 mensuales, la cooperativa a través del Fondo de Solidaridad, aporta un 50% para un cobro final al asociado de $ 2.500</li>
+                                                <li>Los jóvenes ya inician su historial crediticio.</li>
+                                                <li>Pueden obtener créditos si son mayores de edad.</li>
+                                                <li>Acceso a realizar transacciones a través del Multiportal Transaccional.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionOne" href="#collapse1b" class="collapsed" aria-expanded="false">
+                                                Requisitos de apertura:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1b" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                            <ul class="text-justify">
+                                                <li>Fotocopia del documento de identidad del joven.</li>
+                                                <li>Fotocopia ampliada del documento de identidad del padre, madre o tutor.</li>
+                                                <li>Diligenciar el formulario de afiliación.</li>
+                                                <li>Cancelar el monto mínimo de apertura.</li>
+                                            </ul>
+                                            <p class="text-justify">
+                                                Nota: Si el joven es mayor de 18 años y esta en etapa educativa debe presentar el
+                                                certificado de estudios que así lo garantice.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/cofijunior-02.png" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">MONTOS DE AFILIACIÓN</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Concepto</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Afiliación</td>
+                                                <td>$ 10.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cuenta de ahorros</td>
+                                                <td>$ 10.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Aportes</td>
+                                                <td>$ 5.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fondo de solidaridad</td>
+                                                <td>$ 4.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fondo prexequial</td>
+                                                <td>$ 0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Seguro de vida</td>
+                                                <td>$ 0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Recreación, cultura y deporte</td>
+                                                <td>$ 1.000</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>TOTAL</th>
+                                                <th>$ 30.000</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">CUOTAS MENSUALES</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Concepto</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Aportes sociales</td>
+                                                <td>$ 5.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fondo de solidaridad</td>
+                                                <td>$ 4.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Recreación, cultura y deporte</td>
+                                                <td>$ 1.000</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>TOTAL</th>
+                                                <th>$ 10.000</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="cuentaCofidiario">
+                    <div class="heading">
+                        <h4>CUENTA COFIDIARIO</h4>
+                    </div>
+                    <p class="text-justify">
+                        <strong>¿Por qué NO TENER UNA CUENTA DE AHORROS CON BUENA RENTABILIDAD Y MAYORES BENEFICIOS?.</strong>
+                        Cuenta de ahorros para personas mayores de 18 años. Disponibilidad inmediata del dinero a través de
+                        toda la red de agencias y cajeros electrónicos SERVIBANCA. Liquidación diaria de interés. Excelente rentabilidad.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionTwo">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionTwo" href="#collapse2a" aria-expanded="true" class="">
+                                                Beneficios de la cuenta:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2a" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                        <div class="panel-body">
+                                            <ul class="text-justify">
+                                                <li>El manejo de la tarjeta débito es de $ 5.000 mensuales, la cooperativa a través del Fondo de Solidaridad, aporta un 50% para un cobro final al asociado de $ 2.500.</li>
+                                                <li>Libreta Cofidiario con un costo de $ 25.000</li>
+                                                <li>Seguro de vida de $ 20.000.000.</li>
+                                                <li>Seguro preexequial voluntario a bajo costo.</li>
+                                                <li>Todos los depósitos cuentan con el respaldo del Seguro para el Ahorro, ofrecido por FOGACOOP. Este seguro es para todas las líneas de captación, excepto los Aportes Sociales</li>
+                                                <li>Acceso a todos los fondos sociales de la Cooperativa para el asociado.</li>
+                                                <li>Acceso a todas las líneas de crédito.</li>
+                                                <li>Acceso a realizar transacciones a través del Multiportal Transaccional.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionTwo" href="#collapse2b" class="collapsed" aria-expanded="false">
+                                                Requisitos de apertura:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2b" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body">
+                                            <ul class="text-justify">
+                                                <li>2 Fotocopias ampliadas al 150% de la persona que va a asociarse.</li>
+                                                <li>Diligenciar formatos de vinculación</li>
+                                                <li>Fotocopia del documento de identidad de beneficiarios.</li>
+                                                <li>Cancelar el monto mínimo de apertura Ver valores.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Cofidiario-01.png" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">MONTOS DE AFILIACIÓN</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Concepto</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Afiliación</td>
+                                                <td>$ 12.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Depósito de ahorros</td>
+                                                <td>$ 10.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Aportes</td>
+                                                <td>$ 11.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fondo de solidaridad, cultura y recración</td>
+                                                <td>$ 7.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Seguro de vida</td>
+                                                <td>$ 5.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Póliza preexequial</td>
+                                                <td>$ 5.000</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>TOTAL</th>
+                                                <th>$ 50.000</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">CUOTAS MENSUALES</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Concepto</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Aportes sociales</td>
+                                                <td>$ 11.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fondo de solidaridad, cultura y recreación</td>
+                                                <td>$ 7.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Seguro de vida</td>
+                                                <td>$ 5.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Póliza preexequial</td>
+                                                <td>$ 5.000</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>TOTAL</th>
+                                                <th>$ 28.000</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane" id="cuetaEmpresarial">
+                    <div class="heading">
+                        <h4>CUENTA DE AHORRO EMPRESARIAL</h4>
+                    </div>
+                    <p class="text-justify">
+                        En Cofinal respaldamos a todas las empresas sin ánimo de lucro mediante nuestra cuenta de ahorro a la vista.
+                        Disponibilidad inmediata del dinero a través de toda la red de agencias. Liquidación diaria de interés. Excelente rentabilidad.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionemp">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionemp" href="#collapseemp1" aria-expanded="true" class="">
+                                                Beneficios de la cuenta:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseemp1" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                        <div class="panel-body">
+                                            <ul class="text-justify">
+                                                <li>Cuenta de ahorros para personas jurídicas sin cuota de manejo.</li>
+                                                <li>Primera libreta de ahorros gratuita, luego tendrá un costo de $ 25.000</li>
+                                                <li>Uso de la Red de agencia de cofinal para depósitos,retiros y/o consultas, sin ningún costo.</li>
+                                                <li>Manejo de cuentas de nómina sin costo.</li>
+                                                <li>Acceso a consultas a través del sitio web.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionemp" href="#collapseemp" class="collapsed" aria-expanded="false">
+                                                Requisitos de apertura:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseemp" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body">
+                                            <ul class="text-justify">
+                                                <li>Certificado o registro Cámara de Comercio.</li>
+                                                <li>Fotocopia cédula del representante legal.</li>
+                                                <li>Fotocopia del RUT.</li>
+                                                <li>Oficio a COFINAL explicando cómo será el manejo de la cuenta.</li>
+                                                <li>Diligenciar el formulario de Afiliación.</li>
+                                                <li>Cancelar el monto mínimo de apertura Ver valores.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/iempresarial.jpg" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">MONTOS DE AFILIACIÓN</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Concepto</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Afiliación</td>
+                                                <td>$ 20.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Depósito de ahorros</td>
+                                                <td>$ 120.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Aportes</td>
+                                                <td>$ 60.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fondo de solidaridad, cultura y recración</td>
+                                                <td>$ 0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Seguro de vida</td>
+                                                <td>$ 0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Libreta de Ahorros</td>
+                                                <td>$ 0</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>TOTAL</th>
+                                                <th>$ 200.000</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tab-pane" id="ahorroContractual">
+                    <div class="heading">
+                        <h4>AHORRO CONTRACTUAL</h4>
+                    </div>
+                    <p class="text-justify">
+                        Es un  producto de ahorro programado en el cual  asociado persona natural o jurídica,
+                        realiza un depósito mensual a un periodo de tiempo pactado con antelación.
+
+                        Es un producto ideal  para programar obligaciones o compromisos futuros y sirve como
+                        una excelente herramienta en su programación financiera. Además cuenta con una atractiva
+                        rentabilidad a plazos establecidos por el asociado.
+
+                        Ideal para programar sus actividades empresariales como pago de cesantías e impuestos
+                        entre otros compromisos familiares futuros como la educación de sus hijos.
+
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Monto mínimo de apertura</h4>
+                            <p>El ahorro contractual  se apertura con un monto mínimo de $ 20.000 para Cofiahorrito y Cofijunior, Cofidiario $ 50.000</p>
+                            <h4>Plazo</h4>
+                            <p>El plazo mínimo de programación para el ahorro no podrá ser inferior a 180 días.</p>
+                            <h4>Pago de intereses</h4>
+                            <p>
+                                Los intereses que genere este tipo de depósito, solo serán abonados
+                                al Capital inicial una vez cumplido el periodo pactado entre el asociado y la Cooperativa.
+                            </p>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/empre.jpg" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="ahorroSemilla">
+                    <div class="heading">
+                        <h4>CUENTA DE AHORRO SEMILLA COOPERATIVA</h4>
+                    </div>
+                    <p class="text-justify">
+                        Es un  producto de ahorro programado en el cual el asociado - persona natural se organiza en grupos,
+                        dentro del sector rural o urbano marginal; realiza un depósito mensual de forma individual dentro de
+                        un periodo pactado con antelación.
+                    </p>
+                    <p> Este producto de ahorro, es atendido en el campo por un Asesor Financiero Rural (AFR).</p>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionSemi">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionSemi" href="#collapsemilla1" aria-expanded="true" class="">
+                                                Tasa de captación:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapsemilla1" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                        <div class="panel-body">
+                                            <p class="text-justify">
+                                                Los asociados que constituyan un ahorro SEMILLA COOPERATIVA, contarán  con una tasa
+                                                efectiva anual del 2.8% E.A., con causación diaria de intereses, liquidados al vencimiento
+                                                del plazo pactado inicialmente. En el caso de que un asociado no cancele una de las cuotas,
+                                                el vencimiento del ahorro contractual se conserva en el plazo pactado.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionSemi" href="#collapsemilla2" class="collapsed" aria-expanded="false">
+                                                Condiciones del depósito:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapsemilla2" class="panel-collapse collapse" aria-expanded="false">
+                                        <div class="panel-body">
+                                            <p class="text-justify">El ahorro programado Semilla Cooperativa, tendrá las siguientes condiciones:</p>
+                                            <ul class="text-justify">
+                                                <li>El saldo mínimo para establecer un Ahorro programado Semilla Cooperativa será de $10.000.</li>
+                                           </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionSemi" href="#collapsemilla3" class="collapsed" aria-expanded="false">
+                                                Pago de intereses:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapsemilla3" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body">
+                                            Los intereses que genere este tipo de depósito, solo serán abonados
+                                            al Capital inicial una vez cumplido el periodo pactado entre el asociado y la Cooperativa.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/semilla1.png" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">MONTOS DE AFILIACIÓN</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Concepto</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Afiliación</td>
+                                                <td>$ 5.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Aportes sociales</td>
+                                                <td>$ 15.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ahorros a la vista</td>
+                                                <td>$ 2.000</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>TOTAL</th>
+                                                <th>$ 22.000</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">CUOTAS MENSUALES</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Concepto</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Aportes sociales</td>
+                                                <td>$ 15.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ahorro programado</td>
+                                                <td>$ 10.000</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>TOTAL</th>
+                                                <th>$ 10.000</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="cdat">
+                    <div class="heading">
+                        <h4>C.D.A.T.</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-justify">
+                            Certificado de Depósito de Ahorro a Término, para asociados naturales o jurídicos que deseen
+                            invertir su capital a plazos flexibles. La seguridad y rentabilidad en el depósito
+                            son garantías para nuestros asociados.
+                            <br />
+                            <br />
+                            Tasas de interés según término de permanencia. Pago de intereses
+                            mensuales, bimensual, trimestral, semestral o al vencimiento del Título.
+
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/CDAT-01.png" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var ubicacion = window.location.hash;
+    console.log(ubicacion);
+    $('a[href='+ubicacion+']').tab('show')  
+</script>

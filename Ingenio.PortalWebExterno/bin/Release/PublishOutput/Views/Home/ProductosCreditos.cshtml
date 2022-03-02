@@ -1,0 +1,338 @@
+﻿
+@{
+    ViewBag.Title = "Productos";
+    ViewBag.titulo = "Créditos";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.c = Url.Action("index", "Home/Creditos");
+    ViewBag.activo = "potafolioActivo";
+}
+<section style="background-image:url(/img/recortada.jpg); background-attachment: fixed;  background-size: cover; padding-top:20px; margin-top:-40px; margin-bottom:0px; padding-bottom:40px;">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="panel panel-default sidebar-menu with-icons" style="background-color: rgba(255, 255, 255, 0.8);">
+                    <div class="panel-body">
+                        <ul id="nav1" class="nav nav-pills nav-stacked">
+                            <li>
+                                <a href="#creditoEducativo" data-toggle="pill">Crédito Educativo</a>
+                            </li>
+                            <li>
+                                <a href="#creditoVivienda" data-toggle="pill">Crédito Vivienda</a>
+                            </li>
+                            <li>
+                                <a href="#creditoCartera" data-toggle="pill">Crédito Cartera</a>
+                            </li>
+                            <li>
+                                <a href="#creditoLibranza" data-toggle="pill">Crédito Libranza</a>
+                            </li>
+                            <li>
+                                <a href="#creditoConsumo" data-toggle="pill">Crédito Consumo</a>
+                            </li>
+                            <li>
+                                <a href="#microcredito" data-toggle="pill">Microcrédito</a>
+                            </li>
+                            
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- *** MENUS AND FILTERS END *** -->
+            </div>
+            <div class="tab-content col-md-9" style="background-color: rgba(255, 255, 255, 0.8);">
+                <!--credito educativo-->
+                <div class="tab-pane active" id="creditoEducativo">
+                    <div class="heading">
+                        <h4>CRÉDITO EDUCATIVO</h4>
+                    </div>
+                    <p class="text-justify">
+                        Pensando en el desarrollo profesional de los asociados, Cofinal pone a su disposición el crédito Educativo, el cual facilita el acceso a la educación superior, donde se podrá financiar el 100% de la matrícula de Pregrado, Postgrado y cursos de formación continua.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionThree">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionThree" href="#collapse3a">
+                                                Caraterísticas:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3a" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <ul class="text-justify">
+                                                        <li> <strong>Financiamiento</strong> del 100% del valor de costos de matrícula       
+                                                        </li>
+                                                        <li><strong>Tasa de Interés Preferencial</strong> exclusiva para el financiamiento de sus Estudios.</li>
+                                                        <li><strong>Flexibilidad en día de pago</strong> el estudiante escoge el día del mes en que se le facilita pagar sus cuotas.</li>
+                                                        <li><strong>Plazo:</strong> Desde 6 hasta 60 meses</li>
+                                                        <li><strong>Condiciones:</strong> Capacidad de pago debidamente soportada</li>
+                                                        <li><strong>Desembolso:</strong> A favor de la Institución educativa avalada por el ministerio de educación nacional.</li>
+                                                        <li><strong>Garantías:</strong> De acuerdo al perfil de riesgo del solicitante.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Logos/educa.png" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+   
+                </div>
+                <!--credito vivienda-->
+                <div class="tab-pane " id="creditoVivienda">
+
+                    <div class="heading">
+                        <h4>CRÉDITO DE VIVIENDA</h4>
+                    </div>
+                    <p class="text-justify">
+                        Pensando en cumplir con el sueño de tener casa propia,
+                        Cofinal pone a disposición de los asociados el crédito hipotecario para compra de vivienda nueva o usada, 
+                        donde se podrá financiar hasta el 70% del valor del valor del inmueble que desea comprar.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="panel-group accordion" id="accordionOne">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionOne" href="#collapse1a" aria-expanded="true" class="">
+                                                Características:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1a" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                        <div class="panel-body">
+                                            <ul class="text-justify">
+                                                <li><strong>Financiamiento</strong> del 70% del valor del Inmueble
+                                                    
+                                                </li>
+                                                <li>
+                                                    <strong>Tasa de Interés</strong> acorde a la normatividad vigente
+                                                </li>
+                                                <li><strong>Flexibilidad en día de pago</strong> el asociado escoge el día del mes en que se le facilita pagar sus cuotas.</li>
+                                                <li><strong>Plazo:</strong> Desde 60 meses hasta 120 meses</li>
+                                                <li><strong>Condiciones:</strong> Capacidad de pago debidamente soportada. Para calcular los ingresos mínimos para poder acceder al crédito, se pueden tener en cuenta la suma de los ingresos familiares.</li>
+                                                <li><strong>Desembolso:</strong> A favor del actual propietario del bien.</li>
+                                                <li><strong>Garantías:</strong> Hipoteca abierta en primer grado y sin límite de cuantía a favor de Cofinal. Adicionalmente, los deudores deben firmar un pagare.</li>
+                                                <li><strong> Sistema de Amortización:</strong> En pesos, cuota fija.</li>
+                                                <li><strong> Asegurabilidad:</strong> El inmueble deberá estar protegido por una póliza que cubra los casos de incendio y terremoto.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Logos/vivien.png" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+
+                  
+                </div>
+                <!--credito cartera-->
+                <div class="tab-pane" id="creditoCartera">
+                    <div class="heading">
+                        <h4>CRÉDITO PARA COMPRA DE CARTERA</h4>
+                    </div>
+                    <p class="text-justify">
+                        Destino de crédito creado para unificar las obligaciones de los asociados 
+                        adquiridas en otras entidades financieras (Tarjetas de crédito, créditos, entre otras obligaciones) 
+                        y reunir todas las deudas en una sola.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionTwo">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionTwo" href="#collapse2a" aria-expanded="true" class="">
+                                               Características:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2a" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                        <div class="panel-body">
+                                            <ul class="text-justify">
+                                                <li>Asociados con contrato a término fijo o indefinido, profesionales, pensionados, independientes o rentistas de capital.</li>
+                                                <li>Ser mayor de 18 años o hasta la edad máxima que acepte la póliza de seguro de vida deudores.</li>
+                                                <li>Mantener un historial crediticio adecuado en centrales de información financiera.</li>
+                                                <li>El monto máximo se otorga dependiendo de la capacidad de endeudamiento que tenga el asociado.</li>
+                                                <li>La capacidad de pago se define de acuerdo con las condiciones y políticas establecidas por la Cooperativa</li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Logos/carter.png" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+
+                   
+
+                </div>
+                <!--credito libranza-->
+                <div class="tab-pane" id="creditoLibranza">
+                    <div class="heading">
+                        <h4>CRÉDITO DE LIBRANZA</h4>
+                    </div>
+                    <p class="text-justify">
+                        El crédito de libranza, es un crédito de libre inversión que le ofrece al asociado una alternativa de financiación siempre y 
+                        cuando haya un convenio de libranza suscrito con la empresa con que labora el asociado previa autorización del empleador 
+                        para que descuente de su nómina el valor de la cuota correspondiente a la obligación adquirida con Cofinal.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionemp">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionemp" href="#collapseemp1" aria-expanded="true" class="">
+                                                Características:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseemp1" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                        <div class="panel-body">
+                                            <ul class="text-justify">
+                                                <li>Plazos desde 2 meses hasta 84 meses dependiendo del monto solicitado.</li>
+                                                <li>Se presta desde <strong>$200.000</strong> hasta <strong>$100’000.000</strong> dependiendo de su nivel de ingresos y el monto del crédito solicitado. En todos los casos se realiza un estudio de la capacidad de endeudamiento del cliente.</li>
+                                                <li>Los montos de los créditos se calculan sobre la disponibilidad de pago del solicitante y/o codeudor.</li>
+                                                <li>Cuotas fijas durante la vigencia del crédito</li>
+                                                <li>Aplican condiciones del convenio entre Cofinal en la entidad donde labora el asociado.</li>
+                                                <li>El asociado podrá realizar abonos extraordinarios en cualquier momento, sin incurrir en cobros adicionales.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+               
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Logos/libran.png" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+
+                   
+
+                </div>
+                <!--credito consumo-->
+                <div class="tab-pane" id="creditoConsumo">
+                    <div class="heading">
+                        <h4>CRÉDITO DE CONSUMO</h4>
+                    </div>
+                    <p class="text-justify">
+                        El crédito de consumo de Cofinal esta diseñado para que los asociados puedan satisfacer sus necesidades personales de consumo, el cual lo pude utilizar para la compra de vehículo, viajes, 
+                        compra de electrodomésticos, en salud, pago de servicios o para financiar gastos inmediatos.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionemp">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionemp" href="#collapseemp1" aria-expanded="true" class="">
+                                                Características:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseemp1" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                        <div class="panel-body">
+                                            <ul class="text-justify">
+                                                
+                                                <li>Se presta desde <strong>$100.000</strong> hasta <strong>$100’000.000</strong> dependiendo de su nivel de ingresos y el monto del crédito solicitado. En todos los casos se realiza un estudio de la capacidad de endeudamiento del cliente</li>
+                                                <li>Plazos desde 2 meses hasta 84 meses dependiendo del monto solicitado.</li>
+                                                <li>El asociado podrá realizar abonos extraordinarios en cualquier momento, sin incurrir en cobros adicionales.</li>
+                                                <li>Los montos de los créditos se calculan sobre la disponibilidad de pago del solicitante y/o codeudor.</li>
+                                                <li>Ser mayor de 18 años o hasta la edad máxima que acepte la póliza de seguro de vida deudores.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Logos/consum.png" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+                </div>
+                <!--creditomicro-->
+                <div class="tab-pane" id="microcredito">
+                    <div class="heading">
+                        <h4>MICROCRÉDITO</h4>
+                    </div>
+                    <p class="text-justify">
+                        La solución para hacer crecer su negocio.
+                        Línea de crédito destinado exclusivamente para Microempresarios,
+                        cuya fuente de ingresos provenga del desarrollo de su actividad comercial,
+                        el cual le sirve satisfacer las necesidades de capital de trabajo, financiar la adquisición de inventarios,
+                        compra de materia prima, inversión en maquinaria y equipos productivos, inversión en insumos agrícolas,
+                        tecnificación de procesos productivos, con el fin de contribuir al mejoramiento de la calidad de vida del asociado y de su familia.
+
+                    </p>
+                      <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionSemi">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionSemi" href="#collapsemilla1" aria-expanded="true" class="">
+                                                Requisitos:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapsemilla1" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                        <div class="panel-body">
+                                            <ul class="text-justify">
+                                                <li>Personas naturales mayores de edad con actividad económica independiente.</li>
+                                                <li>Personas naturales con experiencia mínima de un (1) año en el desarrollo de la actividad económica actual.</li>
+                                                <li>Monto de crédito: desde $500.000 hasta $20.000.000 de pesos.</li>
+                                                <li>Plazo  desde 6 meses hasta 60 meses</li>
+                                                <li>Tasa fija de interés durante toda la vigencia del crédito, con la tasa más baja del mercado.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Micro2.jpg" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+
+                    </div>
+                  
+                </div>
+
+              
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var ubicacion = window.location.hash;
+    console.log(ubicacion);
+    $('a[href='+ubicacion+']').tab('show')
+</script>
+
+

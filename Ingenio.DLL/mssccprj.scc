@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[Ingenio.DLL.csproj]
+SCC_Aux_Path = "C:\proyecto cofinal"
+SCC_Project_Name = "$/Ingenio.DLL", EAAAAAAA
+
+[Ingenio.BLL.csproj]
+SCC_Aux_Path = "F:\ProyectoCofinal"
+SCC_Project_Name = "$/Ingenio.PortalWebExterno.root/Ingenio.PortalWebExterno/Ingenio.DLL", YDAAAAAA

@@ -1,0 +1,50 @@
+﻿<div id="datos" class="row" style="display:block">
+    <div class="col-xs-2 col-lg-1">
+        <strong>Cedula:</strong>
+    </div>
+    <div class="col-xs-2 col-lg-2">
+        @(ViewBag.Aso.cedulasociado ?? String.Empty)
+    </div>
+    <div class="col-xs-2 col-lg-1">
+        <strong>Nombre:</strong>
+    </div>
+    <div class="col-xs-6 col-lg-8">
+        @(ViewBag.Aso.nits.nombreintegrado ?? String.Empty)
+    </div>
+    <div class="col-xs-2 col-lg-1">
+        <strong>Empresa:</strong>
+    </div>
+    <div class="col-xs-2 col-lg-2">
+        @(ViewBag.Aso.empresas.nombreempresa ?? String.Empty)
+    </div>
+    <div class="col-xs-2 col-lg-1">
+        <strong>Direccion:</strong>
+    </div>
+    <div class="col-xs-6 col-lg-8">
+        @(ViewBag.aso.nits.direccion ?? String.Empty)
+    </div>
+    <div class="col-xs-2 col-lg-1">
+        <strong>Agencia:</strong>
+    </div>
+    <div class="col-xs-2 col-lg-2">
+        @(ViewBag.agencia ?? String.Empty)
+    </div>
+    
+</div>
+<br />
+<div class="row">
+    <div class="col-lg-4">
+    </div>
+    <div class="col-lg-3">
+        <h4 style="text-align: center">CAPITAL</h4>
+    </div>
+    <div class="col-lg-4">
+    </div>
+</div>
+<div id="datos" class="row" style="display:block">
+    <div class="col-xs-2 col-lg-2">
+        <strong>Saldo total ahorro: @(ViewBag.Aso.cedulasociado ?? String.Empty)</strong>
+        
+    </div>
+    
+</div>

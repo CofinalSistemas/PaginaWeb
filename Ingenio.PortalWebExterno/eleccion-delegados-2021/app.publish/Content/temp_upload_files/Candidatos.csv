@@ -1,0 +1,13 @@
+Id,CargoId,AgenciaId,Nombre,TelefonoCelular,CorreoElectronico,FotoId,Detalle,NumeroInscripcionPlanilla
+13,1,1,Fleur,3900989084,ipsum.primis.in@ipsum.com,13,"tempus eu, ligula. Aenean euismod mauris eu",1
+21,1,1,Dai,2992085354,varius@ataugueid.ca,21,"mollis nec, cursus a, enim. Suspendisse aliquet,",2
+94,1,1,Blanco, ,accumsan@Quisque.ca,94,vel nisl. Quisque fringilla,3
+101,3,2,Carlos,213213,434@adsad.ca,44,adsad,4
+102,3,2,Dafne,23432,varius@ataugueid.ca,45,adsad,5
+103,3,2,Delfina,23423,varius@ataugueid.ca,46,adsad,6
+104,3,2,Blanco,,,,,7
+105,6,3,Pedro,234234,varius@ataugueid.ca,48,adsad,8
+106,6,3,Maria Clara,234234,varius@ataugueid.ca,49,adsad,9
+107,6,3,Enriqueto,234324,varius@ataugueid.ca,50,adsad,10
+108,6,3,Cuantemoch,234234,varius@ataugueid.ca,51,adsad,11
+109,6,3,Blanco,,,,,12

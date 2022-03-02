@@ -1,0 +1,58 @@
+﻿@model Cenit.Votos.Controllers.DocumentoVerificaModel
+
+@{
+    ViewBag.Title = "Documento";
+}
+
+
+<div class="container">
+    <div class="section">
+        <div class="row center">
+            <div class="col s12">
+                <div class="icon-block">
+                    <h2 class="center" style="color:#333"><i class="material-icons md-96">security_update_warning</i></h2>
+                    <h5 class="center">Confirmemos tu número celular</h5>
+                    <p class="center bg-dark">
+                        Registramos el siguiente número en nuestra base de datos.<br> Escribe por favor los
+                        <span class="bg-dark"> ultimos 4 digitos </span>
+                        <br>
+                        <div style="font-weight: 500; font-size: 24px;" class="center">@Model.NumeroTelefonoPuzzle</div>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="col s12">
+                @using (Html.BeginForm("verificarnumero", "documento", FormMethod.Post, new { autocomplete = "off" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="center">
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="input-field">
+                            @Html.Editor("numerosFaltantes", new { htmlAttributes = new { @class = "validate", type = "number"} })
+                            @Html.Label("numerosFaltantes", "Ingresa los números faltantes", htmlAttributes: new { })
+                            @* @Html.ValidationMessageFor("numerosFaltantes" "", new { @class = "text-danger" })*@
+
+                        </div>
+
+                        <div class="input-field">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Enviar" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="debug">
+                @ViewBag.Mensaje
+                @{var restares = Model.MaxReintentosNumero - Model.IntentosNumero;}
+                Reintentos: @restares
+            </div>
+        </div>
+
+    </div>
+</div>
+

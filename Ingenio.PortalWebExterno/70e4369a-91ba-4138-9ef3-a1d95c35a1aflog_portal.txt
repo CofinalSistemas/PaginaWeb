@@ -1,0 +1,360 @@
+Inicio 14/07/2021 11:52:03 a. m.: Aplicacion PortalWeb 
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error1 14/07/2021 11:57:32: Controlador Account, funcion registro  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 12:03:24: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 12:53:50: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 12:59:05: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 13:06:40: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 14:24:18: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+System.Web.Mvc - System.Web.HttpException (0x80004005): No se encuentra un método de acción público 'Index' en el controlador 'Ingenio.Controllers.Seguridad.AccountController'.
+   en System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   en System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   en System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) - 14/07/2021
+   en System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   en System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   en System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 14:51:38: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error1 14/07/2021 15:45:09: Controlador Account, funcion registro  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+System.Web.Mvc - System.Web.HttpException (0x80004005): No se encuentra un método de acción público 'Index' en el controlador 'Ingenio.Controllers.Seguridad.AccountController'.
+   en System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   en System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   en System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) - 14/07/2021
+   en System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   en System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   en System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 16:48:12: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 17:19:10: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 17:25:54: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 18:06:33: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 19:44:39: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 20:19:28: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+System.Web.Mvc - System.Web.HttpException (0x80004005): No se encuentra el controlador de la ruta de acceso '/aaa9' o no implementa IController.
+   en System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   en System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   en System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   en System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) - 14/07/2021
+   en System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   en System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   en System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   en System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+D:\portalweb\Documentos\modal.json
+System.Web.Mvc - System.Web.HttpException (0x80004005): No se encuentra el controlador de la ruta de acceso '/aab9' o no implementa IController.
+   en System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   en System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   en System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   en System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) - 14/07/2021
+   en System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   en System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   en System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   en System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+System.Web.Mvc - System.Web.HttpException (0x80004005): No se encuentra el controlador de la ruta de acceso '/aaa9' o no implementa IController.
+   en System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   en System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   en System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   en System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) - 14/07/2021
+   en System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   en System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   en System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   en System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+D:\portalweb\Documentos\modal.json
+System.Web.Mvc - System.Web.HttpException (0x80004005): No se encuentra el controlador de la ruta de acceso '/aab9' o no implementa IController.
+   en System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   en System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   en System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   en System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) - 14/07/2021
+   en System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   en System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   en System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   en System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 22:46:29: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.
+System.Web.Mvc - System.Web.HttpException (0x80004005): No se encuentra el controlador de la ruta de acceso '/actuator/health' o no implementa IController.
+   en System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   en System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   en System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   en System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) - 14/07/2021
+   en System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   en System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   en System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   en System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+D:\portalweb\Documentos\modal.json
+Error 14/07/2021 23:14:28: Controlador ConfiguracionDAL, funcion getEstadoIndexCofinal  Se produjo una excepción de tipo 'Excepciones'.

@@ -1,0 +1,372 @@
+﻿@{
+    Layout = "~/Views/Shared/layoutAso.cshtml";
+    ViewBag.Title = "Extractos de Ahorro";
+    ViewBag.titulo = "Extractos de Ahorro";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "extractos";
+
+}
+@using Ingenio.Models;
+@{
+    AccountModels cuentaUsuario = new AccountModels();
+}
+@using System.Globalization;
+<!--estilos-->
+<style>
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+
+    .modal-header, .modal-footer {
+        background-color: #5CB85C;
+    }
+
+    .modal-body {
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+
+    .btn-primary {
+        background-color: #da4d4d;
+        border-color: #da4d4d;
+    }
+
+    .modal-title {
+        color: white;
+    }
+
+    .table {
+        border-collapse: inherit;
+    }
+</style>
+
+<section id="contenido">
+    <div class="container">
+               
+        
+          <div class="container well col-md-12">
+                @using (Html.BeginForm("Calcular", "AhExtractos"))
+                {
+                    <div class="container">
+                        <h4 style="text-align: center">COOPERATIVA DE AHORRO Y CREDITO NACIONAL</h4>
+                    </div>
+                        <div class="container">
+                            <h4 style="text-align: center">EXTRACTO DE APORTES</h4>
+                        </div>
+                        <table id="tabla1" class="table" border="0" cellspacing="0" style="width:100%;font-size:smaller; background-color: #F2F2F2; border: 0px solid #e3e3e3;">
+
+                            <tbody>
+
+                                <tr>
+                                    <td><img src="~/img/logo-small.png" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Nombre:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.nits.nombreintegrado : ViewBag.nitaso.nombreintegrado)
+                                        <strong>Cedula:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado : ViewBag.nitaso.nit)
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Direccion:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.nits.direccion : ViewBag.nitaso.direccion)
+                                        <strong>Agencia:</strong> @(ViewBag.agencia ?? String.Empty)
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td><strong>Ciudad:</strong> @(ViewBag.nombreciudad ?? String.Empty) - @(ViewBag.nombredepartamento ?? String.Empty)</td>
+
+                                </tr>
+                                <tr>
+                                    <td> @(ViewBag.nombrelinea ?? String.Empty) </td>
+
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    <div class="row">
+                        
+
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtcedula" style="color: black;">Nro. Cuenta:</label>
+                            <div class="col-md-7 input-group" id="divcedula">
+                                                                       
+                                 <select class="form-control" id="AHALAVISTA" name="AHALAVISTA" onchange="GetSelectedTextValue(this)" placeholder="" type="text" required>
+                                     <option value="">Seleccione...</option>
+                                 </select>    
+                                   
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtmes" style="color: black;"></label>
+                            <div class="col-md-7 input-group" id="divMes">
+                                @*<button class="btn btn-success" id="Calcular" name="Calcular">
+                                    <span class="glyphicon glyphicon-check"></span> Consultar
+                                </button>*@
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+
+
+                    </div><!-- /row -->
+                }
+            </div>
+      
+            
+                <div id="imprimir">
+                
+                    <div class="container">
+                        
+                    </div>
+                    <div id="encabezado" style="display:none">
+                        <div class="container">
+                            <h4 style="text-align: center">EXTRACTO DE APORTE</h4>
+                        </div>
+                        <table id="tabla1" class="table" border="0" cellspacing="0" style="width:100%;font-size:smaller; background-color: #F2F2F2; border: 0px solid #e3e3e3;">
+
+                            <tbody>
+
+                                <tr>
+                                    <td><img src="~/img/logo-small.png" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Nombre:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.nits.nombreintegrado : ViewBag.nitaso.nombreintegrado )
+                                        <strong>Cedula:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado : ViewBag.nitaso.nit )
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Direccion:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.nits.direccion : ViewBag.nitaso.direccion)
+                                        <strong>Agencia:</strong> @(ViewBag.agencia ?? String.Empty)
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td><strong>Ciudad:</strong> @(ViewBag.nombreciudad ?? String.Empty) - @(ViewBag.nombredepartamento ?? String.Empty)</td>
+
+                                </tr>
+                                <tr>
+                                    <td><strong>Linea:</strong>@(ViewBag.Aho != null ? ViewBag.Aho.codlinea +" "+ ViewBag.nombrelinea :"") </td>
+
+                                </tr>
+                                <tr>
+                                    <td><strong>Número Cuenta:</strong><label id="lbl_nro"></label>   </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                            <div class="row">
+                                <div class="col-lg-4">
+                                </div>
+                                <div class="col-lg-4">
+                                    <h4 style="font-size:small; text-align: center">Detalle</h4>
+                                </div>
+                                <div class="col-lg-4">
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="tabla2" border="0" cellspacing="0" style="width:100%;font-size: 10px; background-color: #F2F2F2;border: 0px solid #e3e3e3;">
+                                    <thead>
+                                        <tr style="background-color: #5CB85C;  color: black; font-size: 11px;">
+
+                                            <th width="80px">FECHA</th>
+                                            <th align="center">CLASE DE MOVIMIENTO</th>
+                                            <th>CONSIGNACION</th>
+                                            <th>RETIRO</th>
+                                            <th>SALDO</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                       
+                                    </tbody>
+
+                                </table>
+                            </div>
+                            <br />
+
+                                    <div class="table-responsive" style="width:100%">
+                                        <table class="table table-striped" id="tabla3" border="0" cellspacing="0" style="width:100%;background-color: #F9F9F9;">
+                                            <thead></thead>
+                                            <tbody>
+
+                                                <tr style="font-size:small;">
+                                                    <td colspan="5" align="center">Resumen movimientos</td>
+                                                </tr>
+                                                <tr style="font-size:small;">
+
+                                                    <td id="td_1">
+                                                      
+                                                    </td>
+
+                                                    <td id="td_2">
+                                                       
+                                                    </td>
+
+                                                    <td id="td_3">
+                                                       
+                                                    </td>
+                                                    <td id="td_4" colspan="2">
+                                                      
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                
+                </div>
+
+                <button class="btn btn-success" onclick="imprime('imprimir')"><span class="glyphicon glyphicon-download"></span>Imprimir</button>
+                                        
+        </div>
+    </section>
+        <script>
+            function imprime(imprimir) {
+
+                var el = document.getElementById('encabezado'); //se define la variable "el" igual a nuestro div
+                el.style.display = (el.style.display == 'none') ? 'block' : 'none';
+
+                var ficha = document.getElementById(imprimir);
+                var ventimp = window.open(' ', 'popimpr');
+                ventimp.document.write(ficha.innerHTML);
+                ventimp.document.close();
+                ventimp.print();
+                ventimp.close();
+
+                var el = document.getElementById('encabezado'); //se define la variable "el" igual a nuestro div
+                el.style.display = (el.style.display == 'none') ? 'block' : 'none';
+
+            }
+        </script>
+@*<script>
+$(function () {
+        $("[data-habilitado = True]").attr({disabled: true})
+
+        $('#tabla2').DataTable({
+            "bFilter": false,
+            "info": false,
+            "aLengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
+            "iDisplayLength": 25,
+            language: {
+                "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                "zeroRecords": "Nothing found - sorry",
+                "info": "Pagina _PAGE_ de _PAGES_",
+                "infoEmpty": "No records available",
+                "search": "Buscar",
+                "infoFiltered": "(filtered from _MAX_ total records)",
+                "paginate": {
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            }
+        });
+})
+</script>*@
+<script>
+    $(document).ready(function () {
+
+        load_lineas();
+    });
+
+    function load_lineas() {
+        var linea = '@(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado: ViewBag.Nitaso.nit)';
+
+        $.ajax({
+            url: "@Url.Action("Ah_vista")",
+            type: "POST",
+            data: { "id": linea },
+            cache: false,
+            datatype: "json",
+            success: function (data) {
+                $.each(data, function (index, value) {
+
+                    var $option = $('<option>');
+                    $option.val(value.numerocuenta);
+                    $option.html(value.numerocuenta);
+                    $('#AHALAVISTA').append($option);
+                })
+            }
+        });
+    }
+
+    function GetSelectedTextValue(nrocuenta) {
+        var linea = '@(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado: ViewBag.Nitaso.nit)';
+        var vistas = $('#AHALAVISTA').val();
+
+        document.getElementById('lbl_nro').innerHTML =" "+ nrocuenta.value;
+        var saldoant = "";
+        var Consigna = "";
+        var Reti = "";
+        var Sald = "";
+
+
+        $.ajax({
+            url: "@Url.Action("Ah_permanente")",
+            type: "POST",
+            data: { "id": nrocuenta.value },
+            cache: false,
+            datatype: "json",
+            success: function (data) {
+                $("#tabla2 tbody tr").remove();
+                $.each(data, function (index, value) {
+
+                    var fechatrabajo = value.fechatrabajo;
+                    var detalle = value.detalle;
+                    var valorefectivo = value.valorefectivo;
+                    var retiro = value.retiro;
+                    var saldoanterior = value.saldoanterior;
+                    saldoant = value.saldoin;
+                    Consigna = value.nuevacons;
+                    Reti = value.retiross;
+                    Sald = value.nuevos;
+
+                    $("#tabla2 tbody").append("<tr><td align='left'> " + fechatrabajo + "</td>" +
+                                                                   "<td align='left'> " + detalle + "</td>" +
+                                                                   "<td align='right'>$ " + formatNumber.new(valorefectivo) + "</td>" +
+                                                                   "<td align='right'>$ " + formatNumber.new(retiro) + "</td>" +
+                                                                   "<td align='right'>$ " + formatNumber.new(saldoanterior) + "</td>");
+
+                })
+
+                document.getElementById('td_1').innerHTML ="Saldo Anterior: $"+ formatNumber.new(saldoant);
+                document.getElementById('td_2').innerHTML ="Consignaciones: $" + formatNumber.new(Consigna);
+                document.getElementById('td_3').innerHTML ="Retiros: $"+ formatNumber.new(Reti);
+                document.getElementById('td_4').innerHTML ="Saldo: $"+ formatNumber.new(Sald);
+            }
+        });
+
+    }
+
+    var formatNumber = {
+        separador: ".", // separador para los miles
+        sepDecimal: ',', // separador para los decimales
+        formatear: function (num) {
+            num += '';
+            var splitStr = num.split('.');
+            var splitLeft = splitStr[0];
+            var splitRight = splitStr.length > 1 ? this.sepDecimal + splitStr[1] : '';
+            var regx = /(\d+)(\d{3})/;
+            while (regx.test(splitLeft)) {
+                splitLeft = splitLeft.replace(regx, '$1' + this.separador + '$2');
+            }
+            return this.simbol + splitLeft + splitRight;
+        },
+        new: function (num, simbol) {
+            this.simbol = simbol || '';
+            return this.formatear(num);
+        }
+    }
+</script>

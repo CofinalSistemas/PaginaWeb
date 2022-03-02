@@ -1,0 +1,113 @@
+﻿@model Ingenio.BO.Ingenio.Param_dian
+
+@{
+    Layout = "~/Views/Shared/layoutAdmin.cshtml";
+    ViewBag.Title = "DIAN";
+    ViewBag.titulo = "Parametrizacion de intereses";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "Estados";
+}
+<section id="contenido">
+    <div class="container">
+        <!DOCTYPE html>
+
+        <html>
+        <head>
+            <meta name="viewport" content="width=device-width" />
+            <title>Edit</title>
+        </head>
+        <body>
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/jqueryval")
+
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Ingrese sus nuevos valores</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.ID)
+
+                    <div class="form-group">
+                        <label class="col-md-2" for="inicial1" style="color: black;">Intereses pagados (%):</label>
+                        <div class="col-md-10" style="width:124px">
+                            @*<input class="form-control" id="inte1" value="@(Model.INTERES_PAGADOS)" placeholder="" type="text" required />*@
+
+                            @Html.EditorFor(model => model.INTERES_PAGADOS, new { htmlAttributes = new { @class = "form-control" } }) 
+                            @Html.ValidationMessageFor(model => model.INTERES_PAGADOS, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2" for="inicial2" style="color: black;">Intereses deducidos (%):</label>
+                        <div class="col-md-10" style="width:124px">
+                            @*<input class="form-control" id="inte2" value="@(Model.INTERES_DEDUCIBLES)" placeholder="" type="text" required />*@
+
+                            @Html.EditorFor(model => model.INTERES_DEDUCIBLES, new { htmlAttributes = new { @class = "form-control" } }) 
+                            @Html.ValidationMessageFor(model => model.INTERES_DEDUCIBLES, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" id="Guardar" value="Actualizar" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <div>
+                @Html.ActionLink("Regresar", "Details")
+            </div>
+        </body>
+    </html></div></section>
+<script type="text/javascript">
+    document.getElementById("Guardar").disableValidation = true;
+</script>
+    <script>
+        $("[name=Guardar]").on("click", function (e) {
+            e.preventDefault();
+            var fd = new FormData();
+            var fpaga = $('#paga').val();
+            var fdedu = $('#dedu').val();
+
+            fd.append('paga', fpaga)
+            fd.append('dedu', fdedu)
+
+
+
+            swal({
+                title: "Espera un momento",
+                text: "procesando...",
+                allowEscapeKey: false,
+                allowOutsideClick: false,
+                showConfirmButton: false
+            });
+            $.ajax({
+                url: "@Url.Action("Guarda", "Dian")",
+                type: "POST",
+                data: fd,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function (response) {
+                    if (response.estado) {
+
+                        swal({
+                            title: "Datos Guardados",
+                            text: "",
+
+                            type: "success",
+                            showConfirmButton: true
+                        });
+
+                    } else {
+                        swal("Error", response.mensaje, "error")
+                    }
+                }
+            });
+        });
+    </script>

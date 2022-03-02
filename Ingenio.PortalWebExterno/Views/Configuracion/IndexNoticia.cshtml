@@ -1,0 +1,137 @@
+﻿@model IEnumerable<Ingenio.BO.Ingenio.Estados>
+@{
+    Layout = "~/Views/Shared/layoutAdmin.cshtml";
+    ViewBag.Title = ViewBag.TitleNoti;
+    ViewBag.titulo = ViewBag.TitleNoti;
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "Estados";
+}
+
+<style>
+    .panel-body {
+        padding: 15px;
+        background-color: rgba(204, 204, 204, 0.51);
+    }
+
+    #contenido {
+        background-image: url(/img/Logos/cofinalFondo.png);
+        margin-top: -40px;
+        margin-bottom: 1px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+</style>
+
+<section id="contenido">
+    <div id="noticias" class="container">
+        <div class="row">
+            <div class="col-md-1">
+
+                <h3>
+                    @{if (ViewBag.NoticiaCofiFUnda)
+                        {
+                            <a href="~/Configuracion/CreateNoticiaFundacion" type="button" id="nuevo" class="btn icon-btn btn-success"><span class="fa fa-plus"></span>Añadir nueva</a>
+                        }
+                        else
+                        {
+                            <a href="~/Configuracion/CreateNoticia" type="button" id="nuevo" class="btn icon-btn btn-success"><span class="fa fa-plus"></span>Añadir nueva</a>
+                        } }
+
+                </h3>
+            </div>
+        </div>
+        <div class="panel panel-default" style="border: 1px solid #555555;">
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Título
+                                </th>
+                                <th>
+                                    Autor
+                                </th>
+                                <th>
+                                    Fecha
+                                </th>
+                                <th>
+                                    Estado
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="notis">
+                            @foreach (var item in Model)
+                            {
+                                <tr data-number="@item.Id">
+                                    <td id="@item.Id">
+                                        @Html.DisplayFor(modelItem => item.Titulo)
+                                    </td>
+                                    <td id="@item.Id">
+                                        @Html.DisplayFor(modelItem => item.Id_Usuario)
+                                    </td>
+                                    <td id="@item.Id">
+                                        @item.Fecha.ToString("dd-MM-yyyy")
+                                        @Html.Raw(item.Activo ? "Publicada" : "Última modificación")
+                                    </td>
+                                    <td @Html.Raw(item.Activo ? "style = 'color:#5cb85c;'" : "")>@Html.Raw(item.Activo ? "Publicada" : "Borrador")</td>
+                                    <td>
+                                        @if (item.NoticiaCofiFunda)
+                                        {
+                                            <a href="/configuracion/PreviewNotiFundacion/@item.Id" title="Previsualizar noticia" class="btn btn-xs btn-default" data-toggle="tooltip" target="_blank"><span class="fa fa-eye"></span></a>
+                                            <a href="/configuracion/EditNoticiaFundacion/@item.Id" title="Editar/Detalles" class="btn btn-xs btn-success" data-toggle="tooltip"><span class="fa fa-pencil-square-o "></span></a>
+
+                                        }
+                                        else
+                                        {
+                                            <a href="/configuracion/Preview/@item.Id" title="Previsualizar noticia" class="btn btn-xs btn-default" data-toggle="tooltip" target="_blank"><span class="fa fa-eye"></span></a>
+                                            <a href="/configuracion/Edit/@item.Id" title="Editar/Detalles" class="btn btn-xs btn-success" data-toggle="tooltip"><span class="fa fa-pencil-square-o"></span></a>
+                                            
+                                        }
+
+                                        <button title="Eliminar" data-action="eliminar" value="@item.Id" class="btn btn-xs btn-danger" data-toggle="tooltip"><span class="fa fa-trash-o"></span></button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $(".table").DataTable();
+
+    //delete noticia
+    $('table').on('click', "[data-action=eliminar]", function (event) {
+        event.preventDefault();
+        var id = $(this).val();
+        var element = $(this);
+        swal({
+            title: "¿Eliminar?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Si, eliminar",
+            closeOnConfirm: false
+        },
+        function () {
+            $.post("@Url.Action("Delete")", { id: id }, function (response) {
+                if (response == true) {
+                    swal({
+                        title: "Eliminado",
+                        text: "",
+                        timer: 1000,
+                        type: "success",
+                        showConfirmButton: false
+                    });
+                    $(element).parent().parent().remove();
+                }
+                else {
+                    swal("Error", "No se ha eliminado el estado", "error");
+                }
+            });
+        })
+    });
+</script>

@@ -1,0 +1,63 @@
+﻿@model Cenit.Votos.Models.Votos.Voto
+
+@{
+    ViewBag.Title = "VotoEnFirme";
+    Layout = "";
+}
+
+<h2>VotoEnFirme</h2>
+
+<div>
+    <h4>Voto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora_Voto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora_Voto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ip_Voto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ip_Voto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detalles)
+        </dt>
+
+        <dd>
+            DETALLE DE SU VOTO:
+            <ul>
+                @{foreach (var item in Model.Detalles)
+                    {
+                        @item.Cargo.Nombre
+                        <li>
+                            @item.Candidato.Nombre
+                        </li>
+                        <li>
+                            @item.EnFirme
+                        </li>
+
+                        <br>
+                    }
+                }
+            </ul>
+        </dd>
+
+    </dl>
+</div>
+

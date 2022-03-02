@@ -1,0 +1,298 @@
+﻿@{
+    ViewBag.Title = "Alianzas Compartidas";
+    ViewBag.titulo = "Alianzas Compartidas";
+    ViewBag.url = Url.Action("index", "home");
+    
+    
+}
+<style>
+    .text-justify, #lin{
+        font-size:19px;
+    }
+</style>
+<section style="background-image:url(/img/recortada.jpg); background-attachment: fixed;  background-size: cover; padding-top:20px; margin-top:-40px; margin-bottom:0px; padding-bottom:40px;">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="panel panel-default sidebar-menu with-icons" style="background-color: rgba(255, 255, 255, 0.8);">
+                    <div class="panel-body">
+                        <ul id="nav1" class="nav nav-pills nav-stacked">
+                            <li>
+                                <a href="#banca" data-toggle="pill">BANCA DE OPORTUNIDADES</a>
+                            </li>
+                            <li>
+                                <a href="#woccu" data-toggle="pill">WOCCU</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#previsora" data-toggle="pill">ASEGURADORA SOLIDARIA DE COLOMBIA</a>
+                            </li>
+                            <li>
+                                <a href="#pre-ex" data-toggle="pill">PRE-EXEQUIALES</a>
+                            </li>
+                            @*<li>
+                                <a href="#banco" data-toggle="pill">BANCO DE BOGOTÁ</a>
+                            </li>*@
+                            @*<li>
+                                <a href="#coop" data-toggle="pill">COOPCENTRAL</a>
+                            </li>*@
+                       </ul>
+                    </div>
+                </div>
+
+                <!-- *** MENUS AND FILTERS END *** -->
+            </div>
+            <div class="tab-content col-md-9" style="background-color: rgba(255, 255, 255, 0.8);">
+                <!--woccu-->
+                <div class="tab-pane active" id="woccu">
+                     
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionThree">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionThree" href="#collapse3a">
+                                                WOCCU:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3a" class="panel-collapse collapse in" style="height:250px;">
+                                        <div class="panel-body">
+
+                                            <div class="text-justify">
+                                                El consejo Mundial de cooperativas <strong>Woccu</strong>: se está desarrollando un proyecto para llegar a los sectores donde la banca
+                                                tradicional ha incursionado  por carecer de una experiencia.
+                                                <br />
+                                                <br />
+                                                <p class="buttons" style="margin-bottom: 40px;">
+                                                    <a class="btn btn-template-main scroll-to" href="http://www.woccu.org.mx/">Visitar página web</a>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Logos/woccu.jpg" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                        <br />
+                        
+                    </div>
+
+                </div>
+                <!--banca-->
+                <div class="tab-pane" id="banca">
+                  <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="panel-group accordion" id="accordionOne">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionOne" href="#collapse1a" aria-expanded="true" class="">
+                                                Banca de Oportunidades:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1a" class="panel-collapse collapse in" aria-expanded="true" style="height:250px;">
+                                        <div class="panel-body">
+                                            <div class="text-justify">
+
+                                                El consejo Mundial de cooperativas <strong>Banca de Oportunidades</strong>: está desarrollando un proyecto para llegar a los sectores donde la banca
+                                                tradicional ha incursionado  por carecer de una experiencia.
+
+                                                <br />
+                                                <br />
+                                                <p class="buttons" style="margin-bottom: 40px;">
+                                                    <a class="btn btn-template-main scroll-to" href="http://www.bancadelasoportunidades.gov.co/">Visitar página web</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Logos/bancaO.png" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+
+                </div>
+                <!--previsora-->
+                <div class="tab-pane" id="previsora">
+                       
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionTwo">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionTwo" href="#collapse2a" aria-expanded="true" class="">
+                                               Aseguradora Solidaria de Colombia:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2a" class="panel-collapse collapse in" aria-expanded="true" style="height:380px;">
+                                        <div class="panel-body">
+                                            <div class="text-justify">
+                                                Pólizas de vida con <strong>Aseguradora Solidaria de Colombia,</strong> gracias a sus bajos costos se busca proteger la vida, ahorros, aportes y obligaciones crediticias de los
+                                                asociados; asegurando un capital de respaldo que les permita dependiendo de la póliza tomada en caso de fallecimiento, incapacidad total o permanente y/o enfermedades graves conservar
+                                                la independencia económica y mantener su calidad de vida y la de sus seres queridos.</li>
+
+                                                <br />
+                                                <br />
+                                                <p class="buttons" style="margin-bottom:40px;">
+                                                    <a class="btn btn-template-main scroll-to" href="https://www.aseguradorasolidaria.com.co/">Visitar página web</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Logos/LogoAseguradora.png" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+                    </div>
+
+                   <!---->
+
+                </div>
+                <!--pre-exequial-->
+                <div class="tab-pane" id="pre-ex">
+                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionemp">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionemp" href="#collapseemp1" aria-expanded="true" class="">
+                                                Pre-exequiales:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseemp1" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                        <div class="panel-body">
+                                            <div class="text-justify">
+                                                A través de empresas como <strong>Monte de los olivos, Memorial, Central Protección Exequial,</strong> entre otros; nuestros asociados adquieren su proyección y la del grupo familiar
+                                                primario en caso de fallecimiento, recibiendo el servicio fúnebre y asistencia en el momento del duelo.
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                        </div>
+                         <div class="col-md-6 center-block">
+                             <img class="img-responsive" data-animate="fadeInRight" src="~/img/Logos/pre-ex.png" alt="CofiAhorrito" style="border-radius:18px;">
+                         </div>
+                    </div>
+
+                </div>
+                <!--Banco-->
+                @*<div class="tab-pane" id="banco">
+                   
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionSemi">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionSemi" href="#collapsemilla1" aria-expanded="true" class="">
+                                                Banco de Bogotá:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapsemilla1" class="panel-collapse collapse in" aria-expanded="true" style="height:250px;">
+                                        <div class="panel-body">
+                                            <p class="text-justify">
+                                                Mediante esta alianza ofrecemos el servicio de TARJETAS DEBITO COFINAL-VISA, con la cual nuestros asociados pueden hacer uso de 
+                                                sus recursos las 24 horas del día a nivel nacional e internacional, haciendo uso de los cajeros del Banco.
+
+
+                                            </p>
+                                            <br />
+                                            <p class="buttons" style="margin-bottom: 40px;">
+                                                <a class="btn btn-template-main scroll-to" href="https://www.bancodebogota.com/">Visitar página web</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Logos/bancoBogota.jpg" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+
+                    </div>
+                  
+                </div>*@
+                <!--Coopcenttral-->
+                @*<div class="tab-pane" id="coop">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="panel-group accordion" id="accordionSemi">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionSemi" href="#collapsemilla1" aria-expanded="true" class="">
+                                                CoopCentral:
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapsemilla1" class="panel-collapse collapse in" aria-expanded="true" style="height: 450px;">
+                                        <div class="panel-body">
+                                            <p class="text-justify">
+                                               Mediante esta alianza ofrecemos:
+                                            </p>
+                                                <li id="lin" >CDT dorado</li>
+                                                <li id="lin">Cuenta corriente complemento</li>
+                                                <li id="lin">Portal transaccional</li>
+                                                <li id="lin">Crédito de tesoreria</li>
+                                                <li id="lin">Crediaportes</li>
+                                                <li id="lin">Crédito de fomento solidario</li>
+                                            <p class="text-justify">
+                                               El banco atiende igualmente las necesidades de caja y capital de trabajo de sus asociados y clientes con competitivas modalidades de crédito a la medida de nuestra naturaleza y con todas las lineas de
+                                                redescuento en Banca de segundo piso.
+                                            </p>
+
+
+                                                <br />
+<p class="buttons" style="margin-bottom: 40px;">
+                                                <a class="btn btn-template-main scroll-to" href="https://www.coopcentral.com.co/">Visitar página web</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 center-block">
+                            <img class="img-responsive" data-animate="fadeInRight" src="~/img/Logos/coopcentral.jpg" alt="CofiAhorrito" style="border-radius:18px;">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>*@
+</section>
+<script>
+    var ubicacion = window.location.hash;
+    console.log(ubicacion);
+    $('a[href='+ubicacion+']').tab('show')
+</script>

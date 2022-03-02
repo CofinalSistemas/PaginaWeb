@@ -1,0 +1,1375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="Model" />
+  <Alias Key="Target" Value="Model.Store" />
+  <EntityContainerMapping CdmEntityContainer="ModelContainer" StorageEntityContainer="ModelStoreContainer">
+    <EntitySetMapping Name="agencias">
+      <EntityTypeMapping TypeName="Model.agencias">
+        <MappingFragment StoreEntitySet="agencias">
+          <ScalarProperty Name="zsisco" ColumnName="zsisco" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="nombreperfil" ColumnName="nombreperfil" />
+          <ScalarProperty Name="protocolodeenvio" ColumnName="protocolodeenvio" />
+          <ScalarProperty Name="codigoagenciaseguro" ColumnName="codigoagenciaseguro" />
+          <ScalarProperty Name="idagencias" ColumnName="idagencias" />
+          <ScalarProperty Name="tipocorreo" ColumnName="tipocorreo" />
+          <ScalarProperty Name="clavecorreo" ColumnName="clavecorreo" />
+          <ScalarProperty Name="rutaopa" ColumnName="rutaopa" />
+          <ScalarProperty Name="fechatrabajo" ColumnName="fechatrabajo" />
+          <ScalarProperty Name="correosaliente" ColumnName="correosaliente" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="fechasistema" ColumnName="fechasistema" />
+          <ScalarProperty Name="fechacreacion" ColumnName="fechacreacion" />
+          <ScalarProperty Name="coddepto" ColumnName="coddepto" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+          <ScalarProperty Name="codpais" ColumnName="codpais" />
+          <ScalarProperty Name="nombreagencia" ColumnName="nombreagencia" />
+          <ScalarProperty Name="codigoagencia" ColumnName="codigoagencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ahorrosContractual">
+      <EntityTypeMapping TypeName="Model.ahorrosContractual">
+        <MappingFragment StoreEntitySet="ahorrosContractual">
+          <ScalarProperty Name="idoperador" ColumnName="idoperador" />
+          <ScalarProperty Name="idasesores" ColumnName="idasesores" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="fuerenovado" ColumnName="fuerenovado" />
+          <ScalarProperty Name="fechaultvencimiento" ColumnName="fechaultvencimiento" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="fechainiciodeduccion" ColumnName="fechainiciodeduccion" />
+          <ScalarProperty Name="idahorroscontractual" ColumnName="idahorroscontractual" />
+          <ScalarProperty Name="porcentajecuota" ColumnName="porcentajecuota" />
+          <ScalarProperty Name="porcentajesalario" ColumnName="porcentajesalario" />
+          <ScalarProperty Name="tipocuota" ColumnName="tipocuota" />
+          <ScalarProperty Name="pignorado" ColumnName="pignorado" />
+          <ScalarProperty Name="transito" ColumnName="transito" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="acumuladoretiros" ColumnName="acumuladoretiros" />
+          <ScalarProperty Name="gmfmesentidad" ColumnName="gmfmesentidad" />
+          <ScalarProperty Name="gmfmesasociado" ColumnName="gmfmesasociado" />
+          <ScalarProperty Name="liquidado" ColumnName="liquidado" />
+          <ScalarProperty Name="fechaliquidacion" ColumnName="fechaliquidacion" />
+          <ScalarProperty Name="liquidacionautomatica" ColumnName="liquidacionautomatica" />
+          <ScalarProperty Name="rtefteacumulada" ColumnName="rtefteacumulada" />
+          <ScalarProperty Name="morosidad" ColumnName="morosidad" />
+          <ScalarProperty Name="f_ultimacausacion" ColumnName="f_ultimacausacion" />
+          <ScalarProperty Name="interescausado" ColumnName="interescausado" />
+          <ScalarProperty Name="interedisponible" ColumnName="interedisponible" />
+          <ScalarProperty Name="f_ultimatransaccion" ColumnName="f_ultimatransaccion" />
+          <ScalarProperty Name="fechainicioanterior" ColumnName="fechainicioanterior" />
+          <ScalarProperty Name="tasacaptacionanterior" ColumnName="tasacaptacionanterior" />
+          <ScalarProperty Name="nrocuentaahorros" ColumnName="nrocuentaahorros" />
+          <ScalarProperty Name="codlineaahorros" ColumnName="codlineaahorros" />
+          <ScalarProperty Name="formapago" ColumnName="formapago" />
+          <ScalarProperty Name="saldoMinimo" ColumnName="saldoMinimo" />
+          <ScalarProperty Name="saldoTotal" ColumnName="saldoTotal" />
+          <ScalarProperty Name="interesliquidado" ColumnName="interesliquidado" />
+          <ScalarProperty Name="valorcuota" ColumnName="valorcuota" />
+          <ScalarProperty Name="fechainicio" ColumnName="fechainicio" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="Tasacaptacion" ColumnName="Tasacaptacion" />
+          <ScalarProperty Name="Cedulasociado" ColumnName="Cedulasociado" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ahorrospermanentes">
+      <EntityTypeMapping TypeName="Model.ahorrospermanentes">
+        <MappingFragment StoreEntitySet="ahorrospermanentes">
+          <ScalarProperty Name="idasesores" ColumnName="idasesores" />
+          <ScalarProperty Name="pignorado" ColumnName="pignorado" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="fechainiciodeduccion" ColumnName="fechainiciodeduccion" />
+          <ScalarProperty Name="idahorrospermanentes" ColumnName="idahorrospermanentes" />
+          <ScalarProperty Name="gmfmesentidad" ColumnName="gmfmesentidad" />
+          <ScalarProperty Name="gmfmesasociado" ColumnName="gmfmesasociado" />
+          <ScalarProperty Name="morosidad" ColumnName="morosidad" />
+          <ScalarProperty Name="liquidado" ColumnName="liquidado" />
+          <ScalarProperty Name="liquidacionautomatica" ColumnName="liquidacionautomatica" />
+          <ScalarProperty Name="nrocuentaahorros" ColumnName="nrocuentaahorros" />
+          <ScalarProperty Name="codlineaahorros" ColumnName="codlineaahorros" />
+          <ScalarProperty Name="fechaliquidacion" ColumnName="fechaliquidacion" />
+          <ScalarProperty Name="rtefteacumulada" ColumnName="rtefteacumulada" />
+          <ScalarProperty Name="interedisponible" ColumnName="interedisponible" />
+          <ScalarProperty Name="interescausado" ColumnName="interescausado" />
+          <ScalarProperty Name="interesliquidado" ColumnName="interesliquidado" />
+          <ScalarProperty Name="f_ultimacausacion" ColumnName="f_ultimacausacion" />
+          <ScalarProperty Name="formapago" ColumnName="formapago" />
+          <ScalarProperty Name="f_ultimatransaccion" ColumnName="f_ultimatransaccion" />
+          <ScalarProperty Name="fechainicio" ColumnName="fechainicio" />
+          <ScalarProperty Name="transito" ColumnName="transito" />
+          <ScalarProperty Name="acumuladoretiros" ColumnName="acumuladoretiros" />
+          <ScalarProperty Name="saldoMinimo" ColumnName="saldoMinimo" />
+          <ScalarProperty Name="saldoTotal" ColumnName="saldoTotal" />
+          <ScalarProperty Name="porcentajeCuota" ColumnName="porcentajeCuota" />
+          <ScalarProperty Name="porcentajeSalario" ColumnName="porcentajeSalario" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="tipoCuota" ColumnName="tipoCuota" />
+          <ScalarProperty Name="Cedulasociado" ColumnName="Cedulasociado" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aportessociales">
+      <EntityTypeMapping TypeName="Model.aportessociales">
+        <MappingFragment StoreEntitySet="aportessociales">
+          <ScalarProperty Name="zsisco" ColumnName="zsisco" />
+          <ScalarProperty Name="idasesores" ColumnName="idasesores" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="fechainiciodeduccion" ColumnName="fechainiciodeduccion" />
+          <ScalarProperty Name="idaportessociales" ColumnName="idaportessociales" />
+          <ScalarProperty Name="multiplicador" ColumnName="multiplicador" />
+          <ScalarProperty Name="acumuladoretiros" ColumnName="acumuladoretiros" />
+          <ScalarProperty Name="tipocuota" ColumnName="tipocuota" />
+          <ScalarProperty Name="valorcuota" ColumnName="valorcuota" />
+          <ScalarProperty Name="Porcentajecuota" ColumnName="Porcentajecuota" />
+          <ScalarProperty Name="Porcentajesalario" ColumnName="Porcentajesalario" />
+          <ScalarProperty Name="f_ultimatransaccion" ColumnName="f_ultimatransaccion" />
+          <ScalarProperty Name="morosidad" ColumnName="morosidad" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="formaPago" ColumnName="formaPago" />
+          <ScalarProperty Name="fechaapertura" ColumnName="fechaapertura" />
+          <ScalarProperty Name="saldoTotal" ColumnName="saldoTotal" />
+          <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="asociados">
+      <EntityTypeMapping TypeName="Model.asociados">
+        <MappingFragment StoreEntitySet="asociados">
+          <ScalarProperty Name="codigotipo" ColumnName="codigotipo" />
+          <ScalarProperty Name="idasociados" ColumnName="idasociados" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="tipopacto" ColumnName="tipopacto" />
+          <ScalarProperty Name="idtiposalario" ColumnName="idtiposalario" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idtipovivienda" ColumnName="idtipovivienda" />
+          <ScalarProperty Name="idnits" ColumnName="idnits" />
+          <ScalarProperty Name="ciudadnace" ColumnName="ciudadnace" />
+          <ScalarProperty Name="dptonace" ColumnName="dptonace" />
+          <ScalarProperty Name="paisnace" ColumnName="paisnace" />
+          <ScalarProperty Name="operadoractualizo" ColumnName="operadoractualizo" />
+          <ScalarProperty Name="ultimaactualizacion" ColumnName="ultimaactualizacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipocuenta" ColumnName="tipocuenta" />
+          <ScalarProperty Name="rutaanalista" ColumnName="rutaanalista" />
+          <ScalarProperty Name="codanalista" ColumnName="codanalista" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="codbanco" ColumnName="codbanco" />
+          <ScalarProperty Name="cargo" ColumnName="cargo" />
+          <ScalarProperty Name="fechaterminacontrato" ColumnName="fechaterminacontrato" />
+          <ScalarProperty Name="tipocontrato" ColumnName="tipocontrato" />
+          <ScalarProperty Name="fechaingresoLabora" ColumnName="fechaingresoLabora" />
+          <ScalarProperty Name="codempresalabora" ColumnName="codempresalabora" />
+          <ScalarProperty Name="salario" ColumnName="salario" />
+          <ScalarProperty Name="fechaacta" ColumnName="fechaacta" />
+          <ScalarProperty Name="nroacta" ColumnName="nroacta" />
+          <ScalarProperty Name="estadocivil" ColumnName="estadocivil" />
+          <ScalarProperty Name="codprofesion" ColumnName="codprofesion" />
+          <ScalarProperty Name="estudios" ColumnName="estudios" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="deduceocacional" ColumnName="deduceocacional" />
+          <ScalarProperty Name="fechanacimiento" ColumnName="fechanacimiento" />
+          <ScalarProperty Name="periododeduce" ColumnName="periododeduce" />
+          <ScalarProperty Name="coddependencia" ColumnName="coddependencia" />
+          <ScalarProperty Name="codempresa" ColumnName="codempresa" />
+          <ScalarProperty Name="codnit" ColumnName="codnit" />
+          <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="barrios">
+      <EntityTypeMapping TypeName="Model.barrios">
+        <MappingFragment StoreEntitySet="barrios">
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idbarrios" ColumnName="idbarrios" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="codbarrio" ColumnName="codbarrio" />
+          <ScalarProperty Name="codcomuna" ColumnName="codcomuna" />
+          <ScalarProperty Name="codzona" ColumnName="codzona" />
+          <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+          <ScalarProperty Name="coddepartamento" ColumnName="coddepartamento" />
+          <ScalarProperty Name="codpais" ColumnName="codpais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ciiu">
+      <EntityTypeMapping TypeName="Model.ciiu">
+        <MappingFragment StoreEntitySet="ciiu">
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="porcentaje" ColumnName="porcentaje" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idciiu" ColumnName="idciiu" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="codciiu" ColumnName="codciiu" />
+          <ScalarProperty Name="codsector" ColumnName="codsector" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ciudades">
+      <EntityTypeMapping TypeName="Model.ciudades">
+        <MappingFragment StoreEntitySet="ciudades">
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idciudades" ColumnName="idciudades" />
+          <ScalarProperty Name="nombreciudad" ColumnName="nombreciudad" />
+          <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+          <ScalarProperty Name="coddepartamento" ColumnName="coddepartamento" />
+          <ScalarProperty Name="codpais" ColumnName="codpais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comunas">
+      <EntityTypeMapping TypeName="Model.comunas">
+        <MappingFragment StoreEntitySet="comunas">
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idcomunas" ColumnName="idcomunas" />
+          <ScalarProperty Name="nombrecomuna" ColumnName="nombrecomuna" />
+          <ScalarProperty Name="codcomuna" ColumnName="codcomuna" />
+          <ScalarProperty Name="codzona" ColumnName="codzona" />
+          <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+          <ScalarProperty Name="coddepartamento" ColumnName="coddepartamento" />
+          <ScalarProperty Name="codpais" ColumnName="codpais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="costosliquidacion">
+      <EntityTypeMapping TypeName="Model.costosliquidacion">
+        <MappingFragment StoreEntitySet="costosliquidacion">
+          <ScalarProperty Name="porcentaje" ColumnName="porcentaje" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="numerocosto" ColumnName="numerocosto" />
+          <ScalarProperty Name="periododegracia" ColumnName="periododegracia" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="fechapago" ColumnName="fechapago" />
+          <ScalarProperty Name="fechacancelado" ColumnName="fechacancelado" />
+          <ScalarProperty Name="nroliquidacion" ColumnName="nroliquidacion" />
+          <ScalarProperty Name="valorcancelado" ColumnName="valorcancelado" />
+          <ScalarProperty Name="tipocosto" ColumnName="tipocosto" />
+          <ScalarProperty Name="valorcosto" ColumnName="valorcosto" />
+          <ScalarProperty Name="codcuenta" ColumnName="codcuenta" />
+          <ScalarProperty Name="pagare" ColumnName="pagare" />
+          <ScalarProperty Name="nrosolicitud" ColumnName="nrosolicitud" />
+          <ScalarProperty Name="registro" ColumnName="registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creditos">
+      <EntityTypeMapping TypeName="Model.creditos">
+        <MappingFragment StoreEntitySet="creditos">
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="diasmorareales" ColumnName="diasmorareales" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="fechavence" ColumnName="fechavence" />
+          <ScalarProperty Name="idcredito" ColumnName="idcredito" />
+          <ScalarProperty Name="fechasaldoponersedia" ColumnName="fechasaldoponersedia" />
+          <ScalarProperty Name="tasaefectiva" ColumnName="tasaefectiva" />
+          <ScalarProperty Name="tasanominal" ColumnName="tasanominal" />
+          <ScalarProperty Name="extrapordias" ColumnName="extrapordias" />
+          <ScalarProperty Name="prejuridico" ColumnName="prejuridico" />
+          <ScalarProperty Name="diasmora" ColumnName="diasmora" />
+          <ScalarProperty Name="cuotasmora" ColumnName="cuotasmora" />
+          <ScalarProperty Name="saldoponersedia" ColumnName="saldoponersedia" />
+          <ScalarProperty Name="juridico" ColumnName="juridico" />
+          <ScalarProperty Name="procredito" ColumnName="procredito" />
+          <ScalarProperty Name="codsubdestino" ColumnName="codsubdestino" />
+          <ScalarProperty Name="cuotainteres" ColumnName="cuotainteres" />
+          <ScalarProperty Name="datacredito" ColumnName="datacredito" />
+          <ScalarProperty Name="libranza" ColumnName="libranza" />
+          <ScalarProperty Name="tasaanterior" ColumnName="tasaanterior" />
+          <ScalarProperty Name="tasainicial" ColumnName="tasainicial" />
+          <ScalarProperty Name="fechasistema" ColumnName="fechasistema" />
+          <ScalarProperty Name="codoperador" ColumnName="codoperador" />
+          <ScalarProperty Name="asientonomina" ColumnName="asientonomina" />
+          <ScalarProperty Name="periodocapital" ColumnName="periodocapital" />
+          <ScalarProperty Name="modalidadcapital" ColumnName="modalidadcapital" />
+          <ScalarProperty Name="periodointeres" ColumnName="periodointeres" />
+          <ScalarProperty Name="modalidadinteres" ColumnName="modalidadinteres" />
+          <ScalarProperty Name="tipocuota" ColumnName="tipocuota" />
+          <ScalarProperty Name="adjetivo" ColumnName="adjetivo" />
+          <ScalarProperty Name="formapago" ColumnName="formapago" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="saldocapital" ColumnName="saldocapital" />
+          <ScalarProperty Name="intmoranocontabilizado" ColumnName="intmoranocontabilizado" />
+          <ScalarProperty Name="intcorrientenocontabilizado" ColumnName="intcorrientenocontabilizado" />
+          <ScalarProperty Name="intmora" ColumnName="intmora" />
+          <ScalarProperty Name="intcorriente" ColumnName="intcorriente" />
+          <ScalarProperty Name="anualidad" ColumnName="anualidad" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="tasacolocacion" ColumnName="tasacolocacion" />
+          <ScalarProperty Name="cancelado" ColumnName="cancelado" />
+          <ScalarProperty Name="capitalinicial" ColumnName="capitalinicial" />
+          <ScalarProperty Name="capital" ColumnName="capital" />
+          <ScalarProperty Name="f_ultimopago" ColumnName="f_ultimopago" />
+          <ScalarProperty Name="f_cargoprestamo" ColumnName="f_cargoprestamo" />
+          <ScalarProperty Name="f_ultimacausacion" ColumnName="f_ultimacausacion" />
+          <ScalarProperty Name="F_iniciofinanciacion" ColumnName="F_iniciofinanciacion" />
+          <ScalarProperty Name="pagare" ColumnName="pagare" />
+          <ScalarProperty Name="valorgarantia" ColumnName="valorgarantia" />
+          <ScalarProperty Name="codgarantia" ColumnName="codgarantia" />
+          <ScalarProperty Name="coddestino" ColumnName="coddestino" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="departamentos">
+      <EntityTypeMapping TypeName="Model.departamentos">
+        <MappingFragment StoreEntitySet="departamentos">
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="iddepartamentos" ColumnName="iddepartamentos" />
+          <ScalarProperty Name="nombredepartamento" ColumnName="nombredepartamento" />
+          <ScalarProperty Name="coddepartamento" ColumnName="coddepartamento" />
+          <ScalarProperty Name="codpais" ColumnName="codpais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="destinos">
+      <EntityTypeMapping TypeName="Model.destinos">
+        <MappingFragment StoreEntitySet="destinos">
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="periodicidad" ColumnName="periodicidad" />
+          <ScalarProperty Name="extrasreestructuran" ColumnName="extrasreestructuran" />
+          <ScalarProperty Name="iddestino" ColumnName="iddestino" />
+          <ScalarProperty Name="conservapuntostasavariable" ColumnName="conservapuntostasavariable" />
+          <ScalarProperty Name="tipotasavariable" ColumnName="tipotasavariable" />
+          <ScalarProperty Name="acumulafestivos" ColumnName="acumulafestivos" />
+          <ScalarProperty Name="manejacalendariofestivo" ColumnName="manejacalendariofestivo" />
+          <ScalarProperty Name="utilizarangostasaoplazo" ColumnName="utilizarangostasaoplazo" />
+          <ScalarProperty Name="formacobrodtf" ColumnName="formacobrodtf" />
+          <ScalarProperty Name="periodogracia" ColumnName="periodogracia" />
+          <ScalarProperty Name="igualPlanPago" ColumnName="igualPlanPago" />
+          <ScalarProperty Name="causainteresanticipado" ColumnName="causainteresanticipado" />
+          <ScalarProperty Name="cobrainteresabonoextradias" ColumnName="cobrainteresabonoextradias" />
+          <ScalarProperty Name="capitalizainteres" ColumnName="capitalizainteres" />
+          <ScalarProperty Name="financiainterescorriente" ColumnName="financiainterescorriente" />
+          <ScalarProperty Name="pidefechainicialcredito" ColumnName="pidefechainicialcredito" />
+          <ScalarProperty Name="pidenropagareliquidacion" ColumnName="pidenropagareliquidacion" />
+          <ScalarProperty Name="pidenroliquidacion" ColumnName="pidenroliquidacion" />
+          <ScalarProperty Name="periodomaximodias" ColumnName="periodomaximodias" />
+          <ScalarProperty Name="peridominimodias" ColumnName="peridominimodias" />
+          <ScalarProperty Name="montomaximo" ColumnName="montomaximo" />
+          <ScalarProperty Name="montominimo" ColumnName="montominimo" />
+          <ScalarProperty Name="tasacolocaciondtf" ColumnName="tasacolocaciondtf" />
+          <ScalarProperty Name="tasaMora" ColumnName="tasaMora" />
+          <ScalarProperty Name="tasapordefecto" ColumnName="tasapordefecto" />
+          <ScalarProperty Name="tasacolocacionmaxima" ColumnName="tasacolocacionmaxima" />
+          <ScalarProperty Name="tasacolocacionminima" ColumnName="tasacolocacionminima" />
+          <ScalarProperty Name="clase" ColumnName="clase" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="nombredestino" ColumnName="nombredestino" />
+          <ScalarProperty Name="Coddestino" ColumnName="Coddestino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="divisionciiu">
+      <EntityTypeMapping TypeName="Model.divisionciiu">
+        <MappingFragment StoreEntitySet="divisionciiu">
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="iddivisionciiu" ColumnName="iddivisionciiu" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="coddivision" ColumnName="coddivision" />
+          <ScalarProperty Name="codciiu" ColumnName="codciiu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="empresas">
+      <EntityTypeMapping TypeName="Model.empresas">
+        <MappingFragment StoreEntitySet="empresas">
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="numeroventiochenas" ColumnName="numeroventiochenas" />
+          <ScalarProperty Name="regional" ColumnName="regional" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="numerosemestre" ColumnName="numerosemestre" />
+          <ScalarProperty Name="numerotrimes" ColumnName="numerotrimes" />
+          <ScalarProperty Name="numerobimes" ColumnName="numerobimes" />
+          <ScalarProperty Name="idempresas" ColumnName="idempresas" />
+          <ScalarProperty Name="certificada" ColumnName="certificada" />
+          <ScalarProperty Name="morapornomina" ColumnName="morapornomina" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="periododeduccion" ColumnName="periododeduccion" />
+          <ScalarProperty Name="capturadatos" ColumnName="capturadatos" />
+          <ScalarProperty Name="diasgraciasmes" ColumnName="diasgraciasmes" />
+          <ScalarProperty Name="diasgraciacatorcenas" ColumnName="diasgraciacatorcenas" />
+          <ScalarProperty Name="diasgraciadecada" ColumnName="diasgraciadecada" />
+          <ScalarProperty Name="diasgraciaquincena" ColumnName="diasgraciaquincena" />
+          <ScalarProperty Name="diasgraciasemana" ColumnName="diasgraciasemana" />
+          <ScalarProperty Name="fechacorte" ColumnName="fechacorte" />
+          <ScalarProperty Name="cobramora" ColumnName="cobramora" />
+          <ScalarProperty Name="empresaretirados" ColumnName="empresaretirados" />
+          <ScalarProperty Name="fecharetiro" ColumnName="fecharetiro" />
+          <ScalarProperty Name="fechaingreso" ColumnName="fechaingreso" />
+          <ScalarProperty Name="numeromes" ColumnName="numeromes" />
+          <ScalarProperty Name="numeroquincenas" ColumnName="numeroquincenas" />
+          <ScalarProperty Name="numerocatorcenas" ColumnName="numerocatorcenas" />
+          <ScalarProperty Name="numerodecadas" ColumnName="numerodecadas" />
+          <ScalarProperty Name="numerosemanas" ColumnName="numerosemanas" />
+          <ScalarProperty Name="formapago" ColumnName="formapago" />
+          <ScalarProperty Name="pagador" ColumnName="pagador" />
+          <ScalarProperty Name="representante" ColumnName="representante" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="codpais" ColumnName="codpais" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="codciiu" ColumnName="codciiu" />
+          <ScalarProperty Name="nombreempresa" ColumnName="nombreempresa" />
+          <ScalarProperty Name="nitempresa" ColumnName="nitempresa" />
+          <ScalarProperty Name="codempresa" ColumnName="codempresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hahorrosAtermino">
+      <EntityTypeMapping TypeName="Model.hahorrosAtermino">
+        <MappingFragment StoreEntitySet="hahorrosAtermino">
+          <ScalarProperty Name="f_sgtevctoktal" ColumnName="f_sgtevctoktal" />
+          <ScalarProperty Name="origenfondos" ColumnName="origenfondos" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idhahorrosAtermino" ColumnName="idhahorrosAtermino" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="valortitulo" ColumnName="valortitulo" />
+          <ScalarProperty Name="agenciaoriginalmes" ColumnName="agenciaoriginalmes" />
+          <ScalarProperty Name="fecharealcreacion" ColumnName="fecharealcreacion" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+          <ScalarProperty Name="fechavencimientointeres" ColumnName="fechavencimientointeres" />
+          <ScalarProperty Name="fechavencimientocapital" ColumnName="fechavencimientocapital" />
+          <ScalarProperty Name="acumuladoretiros" ColumnName="acumuladoretiros" />
+          <ScalarProperty Name="gmfmesentidad" ColumnName="gmfmesentidad" />
+          <ScalarProperty Name="gmfmesasociado" ColumnName="gmfmesasociado" />
+          <ScalarProperty Name="rtefteacumulada" ColumnName="rtefteacumulada" />
+          <ScalarProperty Name="f_ultimacausacion" ColumnName="f_ultimacausacion" />
+          <ScalarProperty Name="tasacaptacionanterior" ColumnName="tasacaptacionanterior" />
+          <ScalarProperty Name="nrocuentaahorros" ColumnName="nrocuentaahorros" />
+          <ScalarProperty Name="codlineaahorros" ColumnName="codlineaahorros" />
+          <ScalarProperty Name="interedisponible" ColumnName="interedisponible" />
+          <ScalarProperty Name="capitaliza" ColumnName="capitaliza" />
+          <ScalarProperty Name="interescausado" ColumnName="interescausado" />
+          <ScalarProperty Name="interesanticipado" ColumnName="interesanticipado" />
+          <ScalarProperty Name="saldototal" ColumnName="saldototal" />
+          <ScalarProperty Name="modalidad" ColumnName="modalidad" />
+          <ScalarProperty Name="pignorado" ColumnName="pignorado" />
+          <ScalarProperty Name="tasacaptacion" ColumnName="tasacaptacion" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="PeriodoLiquida" ColumnName="PeriodoLiquida" />
+          <ScalarProperty Name="f_ultimatransaccion" ColumnName="f_ultimatransaccion" />
+          <ScalarProperty Name="fecharenovainteres" ColumnName="fecharenovainteres" />
+          <ScalarProperty Name="fechaRenovacion" ColumnName="fechaRenovacion" />
+          <ScalarProperty Name="fechainicio" ColumnName="fechainicio" />
+          <ScalarProperty Name="nombrebeneficiario2" ColumnName="nombrebeneficiario2" />
+          <ScalarProperty Name="beneficiario2" ColumnName="beneficiario2" />
+          <ScalarProperty Name="nombrebeneficiario1" ColumnName="nombrebeneficiario1" />
+          <ScalarProperty Name="beneficiario1" ColumnName="beneficiario1" />
+          <ScalarProperty Name="Cedulasociado" ColumnName="Cedulasociado" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="año" ColumnName="año" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hahorrospermanentes">
+      <EntityTypeMapping TypeName="Model.hahorrospermanentes">
+        <MappingFragment StoreEntitySet="hahorrospermanentes">
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idhahorrospermanentes" ColumnName="idhahorrospermanentes" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="fechainiciodeduccion" ColumnName="fechainiciodeduccion" />
+          <ScalarProperty Name="gmfmesentidad" ColumnName="gmfmesentidad" />
+          <ScalarProperty Name="gmfmesasociado" ColumnName="gmfmesasociado" />
+          <ScalarProperty Name="morosidad" ColumnName="morosidad" />
+          <ScalarProperty Name="liquidado" ColumnName="liquidado" />
+          <ScalarProperty Name="liquidacionautomatica" ColumnName="liquidacionautomatica" />
+          <ScalarProperty Name="nrocuentaahorros" ColumnName="nrocuentaahorros" />
+          <ScalarProperty Name="codlineaahorros" ColumnName="codlineaahorros" />
+          <ScalarProperty Name="fechaliquidacion" ColumnName="fechaliquidacion" />
+          <ScalarProperty Name="rtefteacumulada" ColumnName="rtefteacumulada" />
+          <ScalarProperty Name="interedisponible" ColumnName="interedisponible" />
+          <ScalarProperty Name="interescausado" ColumnName="interescausado" />
+          <ScalarProperty Name="interesliquidado" ColumnName="interesliquidado" />
+          <ScalarProperty Name="f_ultimacausacion" ColumnName="f_ultimacausacion" />
+          <ScalarProperty Name="formapago" ColumnName="formapago" />
+          <ScalarProperty Name="f_ultimatransaccion" ColumnName="f_ultimatransaccion" />
+          <ScalarProperty Name="fechainicio" ColumnName="fechainicio" />
+          <ScalarProperty Name="transito" ColumnName="transito" />
+          <ScalarProperty Name="acumuladoretiros" ColumnName="acumuladoretiros" />
+          <ScalarProperty Name="saldoMinimo" ColumnName="saldoMinimo" />
+          <ScalarProperty Name="saldoTotal" ColumnName="saldoTotal" />
+          <ScalarProperty Name="porcentajeCuota" ColumnName="porcentajeCuota" />
+          <ScalarProperty Name="porcentajeSalario" ColumnName="porcentajeSalario" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="tipoCuota" ColumnName="tipoCuota" />
+          <ScalarProperty Name="Cedulasociado" ColumnName="Cedulasociado" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="año" ColumnName="año" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hAportesSociales">
+      <EntityTypeMapping TypeName="Model.hAportesSociales">
+        <MappingFragment StoreEntitySet="hAportesSociales">
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idhAportesSociales" ColumnName="idhAportesSociales" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="fechainiciodeduccion" ColumnName="fechainiciodeduccion" />
+          <ScalarProperty Name="multiplicador" ColumnName="multiplicador" />
+          <ScalarProperty Name="acumuladoretiros" ColumnName="acumuladoretiros" />
+          <ScalarProperty Name="tipocuota" ColumnName="tipocuota" />
+          <ScalarProperty Name="valorcuota" ColumnName="valorcuota" />
+          <ScalarProperty Name="Porcentajecuota" ColumnName="Porcentajecuota" />
+          <ScalarProperty Name="Porcentajesalario" ColumnName="Porcentajesalario" />
+          <ScalarProperty Name="f_ultimatransaccion" ColumnName="f_ultimatransaccion" />
+          <ScalarProperty Name="morosidad" ColumnName="morosidad" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="formaPago" ColumnName="formaPago" />
+          <ScalarProperty Name="fechaapertura" ColumnName="fechaapertura" />
+          <ScalarProperty Name="saldoTotal" ColumnName="saldoTotal" />
+          <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="año" ColumnName="año" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hasociados">
+      <EntityTypeMapping TypeName="Model.hasociados">
+        <MappingFragment StoreEntitySet="hasociados">
+          <ScalarProperty Name="tipopacto" ColumnName="tipopacto" />
+          <ScalarProperty Name="idtiposalario" ColumnName="idtiposalario" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idtipovivienda" ColumnName="idtipovivienda" />
+          <ScalarProperty Name="ciudadnace" ColumnName="ciudadnace" />
+          <ScalarProperty Name="dptonace" ColumnName="dptonace" />
+          <ScalarProperty Name="paisnace" ColumnName="paisnace" />
+          <ScalarProperty Name="operadoractualizo" ColumnName="operadoractualizo" />
+          <ScalarProperty Name="ultimaactualizacion" ColumnName="ultimaactualizacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipocuenta" ColumnName="tipocuenta" />
+          <ScalarProperty Name="rutaanalista" ColumnName="rutaanalista" />
+          <ScalarProperty Name="codanalista" ColumnName="codanalista" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="codbanco" ColumnName="codbanco" />
+          <ScalarProperty Name="cargo" ColumnName="cargo" />
+          <ScalarProperty Name="fechaterminacontrato" ColumnName="fechaterminacontrato" />
+          <ScalarProperty Name="tipocontrato" ColumnName="tipocontrato" />
+          <ScalarProperty Name="fechaingresoLabora" ColumnName="fechaingresoLabora" />
+          <ScalarProperty Name="codempresalabora" ColumnName="codempresalabora" />
+          <ScalarProperty Name="salario" ColumnName="salario" />
+          <ScalarProperty Name="fechaacta" ColumnName="fechaacta" />
+          <ScalarProperty Name="nroacta" ColumnName="nroacta" />
+          <ScalarProperty Name="estadocivil" ColumnName="estadocivil" />
+          <ScalarProperty Name="codprofesion" ColumnName="codprofesion" />
+          <ScalarProperty Name="estudios" ColumnName="estudios" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="deduceocacional" ColumnName="deduceocacional" />
+          <ScalarProperty Name="fechanacimiento" ColumnName="fechanacimiento" />
+          <ScalarProperty Name="periododeduce" ColumnName="periododeduce" />
+          <ScalarProperty Name="coddependencia" ColumnName="coddependencia" />
+          <ScalarProperty Name="codempresa" ColumnName="codempresa" />
+          <ScalarProperty Name="codnit" ColumnName="codnit" />
+          <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="año" ColumnName="año" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hcreditos">
+      <EntityTypeMapping TypeName="Model.hcreditos">
+        <MappingFragment StoreEntitySet="hcreditos">
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="diasmorareales" ColumnName="diasmorareales" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="fechavence" ColumnName="fechavence" />
+          <ScalarProperty Name="fechasaldoponersedia" ColumnName="fechasaldoponersedia" />
+          <ScalarProperty Name="tasaefectiva" ColumnName="tasaefectiva" />
+          <ScalarProperty Name="tasanominal" ColumnName="tasanominal" />
+          <ScalarProperty Name="extrapordias" ColumnName="extrapordias" />
+          <ScalarProperty Name="prejuridico" ColumnName="prejuridico" />
+          <ScalarProperty Name="diasmora" ColumnName="diasmora" />
+          <ScalarProperty Name="cuotasmora" ColumnName="cuotasmora" />
+          <ScalarProperty Name="saldoponersedia" ColumnName="saldoponersedia" />
+          <ScalarProperty Name="juridico" ColumnName="juridico" />
+          <ScalarProperty Name="procredito" ColumnName="procredito" />
+          <ScalarProperty Name="codsubdestino" ColumnName="codsubdestino" />
+          <ScalarProperty Name="cuotainteres" ColumnName="cuotainteres" />
+          <ScalarProperty Name="datacredito" ColumnName="datacredito" />
+          <ScalarProperty Name="libranza" ColumnName="libranza" />
+          <ScalarProperty Name="tasaanterior" ColumnName="tasaanterior" />
+          <ScalarProperty Name="tasainicial" ColumnName="tasainicial" />
+          <ScalarProperty Name="fechasistema" ColumnName="fechasistema" />
+          <ScalarProperty Name="codoperador" ColumnName="codoperador" />
+          <ScalarProperty Name="asientonomina" ColumnName="asientonomina" />
+          <ScalarProperty Name="periodocapital" ColumnName="periodocapital" />
+          <ScalarProperty Name="modalidadcapital" ColumnName="modalidadcapital" />
+          <ScalarProperty Name="periodointeres" ColumnName="periodointeres" />
+          <ScalarProperty Name="modalidadinteres" ColumnName="modalidadinteres" />
+          <ScalarProperty Name="tipocuota" ColumnName="tipocuota" />
+          <ScalarProperty Name="adjetivo" ColumnName="adjetivo" />
+          <ScalarProperty Name="formapago" ColumnName="formapago" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="saldocapital" ColumnName="saldocapital" />
+          <ScalarProperty Name="intmoranocontabilizado" ColumnName="intmoranocontabilizado" />
+          <ScalarProperty Name="intcorrientenocontabilizado" ColumnName="intcorrientenocontabilizado" />
+          <ScalarProperty Name="intmora" ColumnName="intmora" />
+          <ScalarProperty Name="intcorriente" ColumnName="intcorriente" />
+          <ScalarProperty Name="anualidad" ColumnName="anualidad" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="tasacolocacion" ColumnName="tasacolocacion" />
+          <ScalarProperty Name="cancelado" ColumnName="cancelado" />
+          <ScalarProperty Name="capitalinicial" ColumnName="capitalinicial" />
+          <ScalarProperty Name="capital" ColumnName="capital" />
+          <ScalarProperty Name="f_ultimopago" ColumnName="f_ultimopago" />
+          <ScalarProperty Name="f_cargoprestamo" ColumnName="f_cargoprestamo" />
+          <ScalarProperty Name="f_ultimacausacion" ColumnName="f_ultimacausacion" />
+          <ScalarProperty Name="F_iniciofinanciacion" ColumnName="F_iniciofinanciacion" />
+          <ScalarProperty Name="pagare" ColumnName="pagare" />
+          <ScalarProperty Name="valorgarantia" ColumnName="valorgarantia" />
+          <ScalarProperty Name="codgarantia" ColumnName="codgarantia" />
+          <ScalarProperty Name="coddestino" ColumnName="coddestino" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="año" ColumnName="año" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hnits">
+      <EntityTypeMapping TypeName="Model.hnits">
+        <MappingFragment StoreEntitySet="hnits">
+          <ScalarProperty Name="fechaexpcedula" ColumnName="fechaexpcedula" />
+          <ScalarProperty Name="codsegmento" ColumnName="codsegmento" />
+          <ScalarProperty Name="operadoractualizo" ColumnName="operadoractualizo" />
+          <ScalarProperty Name="segundonombre" ColumnName="segundonombre" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="codbeeper" ColumnName="codbeeper" />
+          <ScalarProperty Name="beeper" ColumnName="beeper" />
+          <ScalarProperty Name="estrato" ColumnName="estrato" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="coddivision" ColumnName="coddivision" />
+          <ScalarProperty Name="codciiu" ColumnName="codciiu" />
+          <ScalarProperty Name="codbarrio" ColumnName="codbarrio" />
+          <ScalarProperty Name="codcomuna" ColumnName="codcomuna" />
+          <ScalarProperty Name="codzona" ColumnName="codzona" />
+          <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+          <ScalarProperty Name="coddepartamento" ColumnName="coddepartamento" />
+          <ScalarProperty Name="codpais" ColumnName="codpais" />
+          <ScalarProperty Name="fechanacimiento" ColumnName="fechanacimiento" />
+          <ScalarProperty Name="fechaultActualizacion" ColumnName="fechaultActualizacion" />
+          <ScalarProperty Name="fecharetiro" ColumnName="fecharetiro" />
+          <ScalarProperty Name="fechaingreso" ColumnName="fechaingreso" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="enviocorrespondencia" ColumnName="enviocorrespondencia" />
+          <ScalarProperty Name="codciudadcedula" ColumnName="codciudadcedula" />
+          <ScalarProperty Name="codpaiscedula" ColumnName="codpaiscedula" />
+          <ScalarProperty Name="apartadoaereo" ColumnName="apartadoaereo" />
+          <ScalarProperty Name="extencion2" ColumnName="extencion2" />
+          <ScalarProperty Name="telefono2" ColumnName="telefono2" />
+          <ScalarProperty Name="extension1" ColumnName="extension1" />
+          <ScalarProperty Name="telefono1" ColumnName="telefono1" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="relacion" ColumnName="relacion" />
+          <ScalarProperty Name="tipoidentificacion" ColumnName="tipoidentificacion" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="nombreintegrado" ColumnName="nombreintegrado" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="segundoapellido" ColumnName="segundoapellido" />
+          <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+          <ScalarProperty Name="digito" ColumnName="digito" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="año" ColumnName="año" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nits">
+      <EntityTypeMapping TypeName="Model.nits">
+        <MappingFragment StoreEntitySet="nits">
+          <ScalarProperty Name="fechaexpcedula" ColumnName="fechaexpcedula" />
+          <ScalarProperty Name="codsegmento" ColumnName="codsegmento" />
+          <ScalarProperty Name="operadoractualizo" ColumnName="operadoractualizo" />
+          <ScalarProperty Name="segundonombre" ColumnName="segundonombre" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="codbeeper" ColumnName="codbeeper" />
+          <ScalarProperty Name="beeper" ColumnName="beeper" />
+          <ScalarProperty Name="estrato" ColumnName="estrato" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="coddivision" ColumnName="coddivision" />
+          <ScalarProperty Name="codciiu" ColumnName="codciiu" />
+          <ScalarProperty Name="codbarrio" ColumnName="codbarrio" />
+          <ScalarProperty Name="codcomuna" ColumnName="codcomuna" />
+          <ScalarProperty Name="codzona" ColumnName="codzona" />
+          <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+          <ScalarProperty Name="coddepartamento" ColumnName="coddepartamento" />
+          <ScalarProperty Name="codpais" ColumnName="codpais" />
+          <ScalarProperty Name="fechanacimiento" ColumnName="fechanacimiento" />
+          <ScalarProperty Name="fechaultactualizacion" ColumnName="fechaultactualizacion" />
+          <ScalarProperty Name="fecharetiro" ColumnName="fecharetiro" />
+          <ScalarProperty Name="fechaingreso" ColumnName="fechaingreso" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="enviocorrespondencia" ColumnName="enviocorrespondencia" />
+          <ScalarProperty Name="codciudadcedula" ColumnName="codciudadcedula" />
+          <ScalarProperty Name="codpaiscedula" ColumnName="codpaiscedula" />
+          <ScalarProperty Name="apartadoaereo" ColumnName="apartadoaereo" />
+          <ScalarProperty Name="extencion2" ColumnName="extencion2" />
+          <ScalarProperty Name="telefono2" ColumnName="telefono2" />
+          <ScalarProperty Name="extension1" ColumnName="extension1" />
+          <ScalarProperty Name="telefono1" ColumnName="telefono1" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="relacion" ColumnName="relacion" />
+          <ScalarProperty Name="tipoidentificacion" ColumnName="tipoidentificacion" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="nombreintegrado" ColumnName="nombreintegrado" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="segundoapellido" ColumnName="segundoapellido" />
+          <ScalarProperty Name="primerapellido" ColumnName="primerapellido" />
+          <ScalarProperty Name="digito" ColumnName="digito" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="idnits" ColumnName="idnits" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pais">
+      <EntityTypeMapping TypeName="Model.pais">
+        <MappingFragment StoreEntitySet="pais">
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idpais" ColumnName="idpais" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="codpais" ColumnName="codpais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="personacargo">
+      <EntityTypeMapping TypeName="Model.personacargo">
+        <MappingFragment StoreEntitySet="personacargo">
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="codigoniveleducativo" ColumnName="codigoniveleducativo" />
+          <ScalarProperty Name="tratamiento" ColumnName="tratamiento" />
+          <ScalarProperty Name="administracion" ColumnName="administracion" />
+          <ScalarProperty Name="terceraedad" ColumnName="terceraedad" />
+          <ScalarProperty Name="discapacitado" ColumnName="discapacitado" />
+          <ScalarProperty Name="estudiante" ColumnName="estudiante" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="fechaingreso" ColumnName="fechaingreso" />
+          <ScalarProperty Name="parentesco" ColumnName="parentesco" />
+          <ScalarProperty Name="fechanacimiento" ColumnName="fechanacimiento" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="tipoidentificacion" ColumnName="tipoidentificacion" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cedulaAsociado" ColumnName="cedulaAsociado" />
+          <ScalarProperty Name="registro" ColumnName="registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="plancuentas">
+      <EntityTypeMapping TypeName="Model.plancuentas">
+        <MappingFragment StoreEntitySet="plancuentas">
+          <ScalarProperty Name="nitgenerico" ColumnName="nitgenerico" />
+          <ScalarProperty Name="creditoApertura" ColumnName="creditoApertura" />
+          <ScalarProperty Name="debitoapertura" ColumnName="debitoapertura" />
+          <ScalarProperty Name="credito13" ColumnName="credito13" />
+          <ScalarProperty Name="credito12" ColumnName="credito12" />
+          <ScalarProperty Name="credito11" ColumnName="credito11" />
+          <ScalarProperty Name="credito10" ColumnName="credito10" />
+          <ScalarProperty Name="credito9" ColumnName="credito9" />
+          <ScalarProperty Name="credito8" ColumnName="credito8" />
+          <ScalarProperty Name="credito7" ColumnName="credito7" />
+          <ScalarProperty Name="credito6" ColumnName="credito6" />
+          <ScalarProperty Name="credito5" ColumnName="credito5" />
+          <ScalarProperty Name="credito4" ColumnName="credito4" />
+          <ScalarProperty Name="credito3" ColumnName="credito3" />
+          <ScalarProperty Name="credito2" ColumnName="credito2" />
+          <ScalarProperty Name="credito1" ColumnName="credito1" />
+          <ScalarProperty Name="debito13" ColumnName="debito13" />
+          <ScalarProperty Name="debito12" ColumnName="debito12" />
+          <ScalarProperty Name="debito11" ColumnName="debito11" />
+          <ScalarProperty Name="debito10" ColumnName="debito10" />
+          <ScalarProperty Name="debito9" ColumnName="debito9" />
+          <ScalarProperty Name="debito8" ColumnName="debito8" />
+          <ScalarProperty Name="debito7" ColumnName="debito7" />
+          <ScalarProperty Name="debito6" ColumnName="debito6" />
+          <ScalarProperty Name="debito5" ColumnName="debito5" />
+          <ScalarProperty Name="debito4" ColumnName="debito4" />
+          <ScalarProperty Name="debito3" ColumnName="debito3" />
+          <ScalarProperty Name="debito2" ColumnName="debito2" />
+          <ScalarProperty Name="debito1" ColumnName="debito1" />
+          <ScalarProperty Name="anexos" ColumnName="anexos" />
+          <ScalarProperty Name="estadodecuentas" ColumnName="estadodecuentas" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="baseretencion" ColumnName="baseretencion" />
+          <ScalarProperty Name="porcentaje" ColumnName="porcentaje" />
+          <ScalarProperty Name="cuentatributaria" ColumnName="cuentatributaria" />
+          <ScalarProperty Name="triibutaria" ColumnName="triibutaria" />
+          <ScalarProperty Name="año" ColumnName="año" />
+          <ScalarProperty Name="centrocostos" ColumnName="centrocostos" />
+          <ScalarProperty Name="requierecentrocostos" ColumnName="requierecentrocostos" />
+          <ScalarProperty Name="tercero" ColumnName="tercero" />
+          <ScalarProperty Name="cuentamovimiento" ColumnName="cuentamovimiento" />
+          <ScalarProperty Name="documentoreferencia" ColumnName="documentoreferencia" />
+          <ScalarProperty Name="nivel" ColumnName="nivel" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="naturaleza" ColumnName="naturaleza" />
+          <ScalarProperty Name="codcuenta" ColumnName="codcuenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="profesiones">
+      <EntityTypeMapping TypeName="Model.profesiones">
+        <MappingFragment StoreEntitySet="profesiones">
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idprofesion" ColumnName="idprofesion" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="nombreprofesion" ColumnName="nombreprofesion" />
+          <ScalarProperty Name="codprofesion" ColumnName="codprofesion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sahorrosContractual">
+      <EntityTypeMapping TypeName="Model.sahorrosContractual">
+        <MappingFragment StoreEntitySet="sahorrosContractual">
+          <ScalarProperty Name="consolidado" ColumnName="consolidado" />
+          <ScalarProperty Name="saldoanterior" ColumnName="saldoanterior" />
+          <ScalarProperty Name="conceptotraslado" ColumnName="conceptotraslado" />
+          <ScalarProperty Name="recibo" ColumnName="recibo" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="transito" ColumnName="transito" />
+          <ScalarProperty Name="agenciatransaccion" ColumnName="agenciatransaccion" />
+          <ScalarProperty Name="estadotarjeta" ColumnName="estadotarjeta" />
+          <ScalarProperty Name="pagare" ColumnName="pagare" />
+          <ScalarProperty Name="tasa" ColumnName="tasa" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="numerodocumento" ColumnName="numerodocumento" />
+          <ScalarProperty Name="fechasistema" ColumnName="fechasistema" />
+          <ScalarProperty Name="natura" ColumnName="natura" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="valorcheque" ColumnName="valorcheque" />
+          <ScalarProperty Name="valorefectivo" ColumnName="valorefectivo" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+          <ScalarProperty Name="fechatrabajo" ColumnName="fechatrabajo" />
+          <ScalarProperty Name="nrocuenta" ColumnName="nrocuenta" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="nroregistro" ColumnName="nroregistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sahorrospermanentes">
+      <EntityTypeMapping TypeName="Model.sahorrospermanentes">
+        <MappingFragment StoreEntitySet="sahorrospermanentes">
+          <ScalarProperty Name="consolidado" ColumnName="consolidado" />
+          <ScalarProperty Name="saldoanterior" ColumnName="saldoanterior" />
+          <ScalarProperty Name="conceptotraslado" ColumnName="conceptotraslado" />
+          <ScalarProperty Name="recibo" ColumnName="recibo" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="transito" ColumnName="transito" />
+          <ScalarProperty Name="agenciatransaccion" ColumnName="agenciatransaccion" />
+          <ScalarProperty Name="estadotarjeta" ColumnName="estadotarjeta" />
+          <ScalarProperty Name="pagare" ColumnName="pagare" />
+          <ScalarProperty Name="tasa" ColumnName="tasa" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="numerodocumento" ColumnName="numerodocumento" />
+          <ScalarProperty Name="fechasistema" ColumnName="fechasistema" />
+          <ScalarProperty Name="natura" ColumnName="natura" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="valorcheque" ColumnName="valorcheque" />
+          <ScalarProperty Name="valorefectivo" ColumnName="valorefectivo" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+          <ScalarProperty Name="fechatrabajo" ColumnName="fechatrabajo" />
+          <ScalarProperty Name="nrocuenta" ColumnName="nrocuenta" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="nroregistro" ColumnName="nroregistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sAportesSociales">
+      <EntityTypeMapping TypeName="Model.sAportesSociales">
+        <MappingFragment StoreEntitySet="sAportesSociales">
+          <ScalarProperty Name="saldoanterior" ColumnName="saldoanterior" />
+          <ScalarProperty Name="conceptotraslado" ColumnName="conceptotraslado" />
+          <ScalarProperty Name="recibo" ColumnName="recibo" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="agenciatransaccion" ColumnName="agenciatransaccion" />
+          <ScalarProperty Name="estadotarjeta" ColumnName="estadotarjeta" />
+          <ScalarProperty Name="pagare" ColumnName="pagare" />
+          <ScalarProperty Name="tasa" ColumnName="tasa" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="numerodocumento" ColumnName="numerodocumento" />
+          <ScalarProperty Name="fechasistema" ColumnName="fechasistema" />
+          <ScalarProperty Name="natura" ColumnName="natura" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="valorcheque" ColumnName="valorcheque" />
+          <ScalarProperty Name="valorefectivo" ColumnName="valorefectivo" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+          <ScalarProperty Name="fechatrabajo" ColumnName="fechatrabajo" />
+          <ScalarProperty Name="nrocuenta" ColumnName="nrocuenta" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="nroregistro" ColumnName="nroregistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tasaspormontosyplazos">
+      <EntityTypeMapping TypeName="Model.tasaspormontosyplazos">
+        <MappingFragment StoreEntitySet="tasaspormontosyplazos">
+          <ScalarProperty Name="periodoliquidahasta" ColumnName="periodoliquidahasta" />
+          <ScalarProperty Name="periodoliquidadesde" ColumnName="periodoliquidadesde" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="modificatasaen" ColumnName="modificatasaen" />
+          <ScalarProperty Name="tasa" ColumnName="tasa" />
+          <ScalarProperty Name="plazohasta" ColumnName="plazohasta" />
+          <ScalarProperty Name="plazodesde" ColumnName="plazodesde" />
+          <ScalarProperty Name="montohasta" ColumnName="montohasta" />
+          <ScalarProperty Name="montodesde" ColumnName="montodesde" />
+          <ScalarProperty Name="idparametrosahorroatermino" ColumnName="idparametrosahorroatermino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tasasporplazos">
+      <EntityTypeMapping TypeName="Model.tasasporplazos">
+        <MappingFragment StoreEntitySet="tasasporplazos">
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="tasainteres" ColumnName="tasainteres" />
+          <ScalarProperty Name="plazofinal" ColumnName="plazofinal" />
+          <ScalarProperty Name="plazoinicial" ColumnName="plazoinicial" />
+          <ScalarProperty Name="coddestino" ColumnName="coddestino" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="nroregistro" ColumnName="nroregistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zonasgenerales">
+      <EntityTypeMapping TypeName="Model.Zonasgenerales">
+        <MappingFragment StoreEntitySet="Zonasgenerales">
+          <ScalarProperty Name="nombrezona" ColumnName="nombrezona" />
+          <ScalarProperty Name="codigozona" ColumnName="codigozona" />
+          <ScalarProperty Name="idzonasgenerales" ColumnName="idzonasgenerales" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zonasgeograficas">
+      <EntityTypeMapping TypeName="Model.zonasgeograficas">
+        <MappingFragment StoreEntitySet="zonasgeograficas">
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idzonasgeograficas" ColumnName="idzonasgeograficas" />
+          <ScalarProperty Name="nombrezona" ColumnName="nombrezona" />
+          <ScalarProperty Name="codzona" ColumnName="codzona" />
+          <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+          <ScalarProperty Name="coddepartamento" ColumnName="coddepartamento" />
+          <ScalarProperty Name="codpais" ColumnName="codpais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ahorrosalavista">
+      <EntityTypeMapping TypeName="Model.ahorrosalavista">
+        <MappingFragment StoreEntitySet="ahorrosalavista">
+          <ScalarProperty Name="idoperador" ColumnName="idoperador" />
+          <ScalarProperty Name="idasesores" ColumnName="idasesores" />
+          <ScalarProperty Name="pignorado" ColumnName="pignorado" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="fechainiciodeduccion" ColumnName="fechainiciodeduccion" />
+          <ScalarProperty Name="idahorrosalavista" ColumnName="idahorrosalavista" />
+          <ScalarProperty Name="consignaciontitular" ColumnName="consignaciontitular" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="valorcuota" ColumnName="valorcuota" />
+          <ScalarProperty Name="formapago" ColumnName="formapago" />
+          <ScalarProperty Name="morosidad" ColumnName="morosidad" />
+          <ScalarProperty Name="interescausado" ColumnName="interescausado" />
+          <ScalarProperty Name="gmfMesentidad" ColumnName="gmfMesentidad" />
+          <ScalarProperty Name="gmfMesasociado" ColumnName="gmfMesasociado" />
+          <ScalarProperty Name="rtefteacumulada" ColumnName="rtefteacumulada" />
+          <ScalarProperty Name="interedisponible" ColumnName="interedisponible" />
+          <ScalarProperty Name="f_ultimacausacion" ColumnName="f_ultimacausacion" />
+          <ScalarProperty Name="interesliquidado" ColumnName="interesliquidado" />
+          <ScalarProperty Name="f_ultimatransaccion" ColumnName="f_ultimatransaccion" />
+          <ScalarProperty Name="fechainicio" ColumnName="fechainicio" />
+          <ScalarProperty Name="transito" ColumnName="transito" />
+          <ScalarProperty Name="acumuladoretiros" ColumnName="acumuladoretiros" />
+          <ScalarProperty Name="saldoMinimo" ColumnName="saldoMinimo" />
+          <ScalarProperty Name="saldoTotal" ColumnName="saldoTotal" />
+          <ScalarProperty Name="Cedulasociado" ColumnName="Cedulasociado" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ahorrosAtermino">
+      <EntityTypeMapping TypeName="Model.ahorrosAtermino">
+        <MappingFragment StoreEntitySet="ahorrosAtermino">
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="formaapertura" ColumnName="formaapertura" />
+          <ScalarProperty Name="idasesores" ColumnName="idasesores" />
+          <ScalarProperty Name="f_sgtevctoktal" ColumnName="f_sgtevctoktal" />
+          <ScalarProperty Name="origenfondos" ColumnName="origenfondos" />
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="valortitulo" ColumnName="valortitulo" />
+          <ScalarProperty Name="idahorrosatermino" ColumnName="idahorrosatermino" />
+          <ScalarProperty Name="fecharealcreacion" ColumnName="fecharealcreacion" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+          <ScalarProperty Name="fechavencimientocapital" ColumnName="fechavencimientocapital" />
+          <ScalarProperty Name="fechavencimientointeres" ColumnName="fechavencimientointeres" />
+          <ScalarProperty Name="acumuladoretiros" ColumnName="acumuladoretiros" />
+          <ScalarProperty Name="gmfmesentidad" ColumnName="gmfmesentidad" />
+          <ScalarProperty Name="gmfmesasociado" ColumnName="gmfmesasociado" />
+          <ScalarProperty Name="rtefteacumulada" ColumnName="rtefteacumulada" />
+          <ScalarProperty Name="f_ultimacausacion" ColumnName="f_ultimacausacion" />
+          <ScalarProperty Name="tasacaptacionanterior" ColumnName="tasacaptacionanterior" />
+          <ScalarProperty Name="nrocuentaahorros" ColumnName="nrocuentaahorros" />
+          <ScalarProperty Name="codlineaahorros" ColumnName="codlineaahorros" />
+          <ScalarProperty Name="interedisponible" ColumnName="interedisponible" />
+          <ScalarProperty Name="capitaliza" ColumnName="capitaliza" />
+          <ScalarProperty Name="interescausado" ColumnName="interescausado" />
+          <ScalarProperty Name="interesanticipado" ColumnName="interesanticipado" />
+          <ScalarProperty Name="saldototal" ColumnName="saldototal" />
+          <ScalarProperty Name="modalidad" ColumnName="modalidad" />
+          <ScalarProperty Name="pignorado" ColumnName="pignorado" />
+          <ScalarProperty Name="tasacaptacion" ColumnName="tasacaptacion" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="PeriodoLiquida" ColumnName="PeriodoLiquida" />
+          <ScalarProperty Name="f_ultimatransaccion" ColumnName="f_ultimatransaccion" />
+          <ScalarProperty Name="fecharenovainteres" ColumnName="fecharenovainteres" />
+          <ScalarProperty Name="fechaRenovacion" ColumnName="fechaRenovacion" />
+          <ScalarProperty Name="fechainicio" ColumnName="fechainicio" />
+          <ScalarProperty Name="nombrebeneficiario2" ColumnName="nombrebeneficiario2" />
+          <ScalarProperty Name="beneficiario2" ColumnName="beneficiario2" />
+          <ScalarProperty Name="nombrebeneficiario1" ColumnName="nombrebeneficiario1" />
+          <ScalarProperty Name="beneficiario1" ColumnName="beneficiario1" />
+          <ScalarProperty Name="Cedulasociado" ColumnName="Cedulasociado" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cuentasnovedadesvarias">
+      <EntityTypeMapping TypeName="Model.cuentasnovedadesvarias">
+        <MappingFragment StoreEntitySet="cuentasnovedadesvarias">
+          <ScalarProperty Name="zsisco" ColumnName="zsisco" />
+          <ScalarProperty Name="idcuentasnovedadesvarias" ColumnName="idcuentasnovedadesvarias" />
+          <ScalarProperty Name="naturalezamovimientosrecaudos" ColumnName="naturalezamovimientosrecaudos" />
+          <ScalarProperty Name="controlenlaentidad" ColumnName="controlenlaentidad" />
+          <ScalarProperty Name="tiponovedad" ColumnName="tiponovedad" />
+          <ScalarProperty Name="codcuenta" ColumnName="codcuenta" />
+          <ScalarProperty Name="codnovedad" ColumnName="codnovedad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lineas">
+      <EntityTypeMapping TypeName="Model.lineas">
+        <MappingFragment StoreEntitySet="lineas">
+          <ScalarProperty Name="zsisco" ColumnName="zsisco" />
+          <ScalarProperty Name="idlineas" ColumnName="idlineas" />
+          <ScalarProperty Name="codcuentaingresosmora" ColumnName="codcuentaingresosmora" />
+          <ScalarProperty Name="codcuentaingresocorrientes" ColumnName="codcuentaingresocorrientes" />
+          <ScalarProperty Name="codcuenta" ColumnName="codcuenta" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="novedadesvariasnocausadas">
+      <EntityTypeMapping TypeName="Model.novedadesvariasnocausadas">
+        <MappingFragment StoreEntitySet="novedadesvariasnocausadas">
+          <ScalarProperty Name="zsisco" ColumnName="zsisco" />
+          <ScalarProperty Name="igualperiododeduce" ColumnName="igualperiododeduce" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="fechainiciodeduccion" ColumnName="fechainiciodeduccion" />
+          <ScalarProperty Name="idnovedadesvariasnocausadas" ColumnName="idnovedadesvariasnocausadas" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="fechacargo" ColumnName="fechacargo" />
+          <ScalarProperty Name="formapago" ColumnName="formapago" />
+          <ScalarProperty Name="cuota" ColumnName="cuota" />
+          <ScalarProperty Name="codnovedad" ColumnName="codnovedad" />
+          <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sahorrosAtermino">
+      <EntityTypeMapping TypeName="Model.sahorrosAtermino">
+        <MappingFragment StoreEntitySet="sahorrosAtermino">
+          <ScalarProperty Name="consolidado" ColumnName="consolidado" />
+          <ScalarProperty Name="conceptotraslado" ColumnName="conceptotraslado" />
+          <ScalarProperty Name="recibo" ColumnName="recibo" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="transito" ColumnName="transito" />
+          <ScalarProperty Name="agenciatransaccion" ColumnName="agenciatransaccion" />
+          <ScalarProperty Name="estadotarjeta" ColumnName="estadotarjeta" />
+          <ScalarProperty Name="pagare" ColumnName="pagare" />
+          <ScalarProperty Name="tasa" ColumnName="tasa" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="numerodocumento" ColumnName="numerodocumento" />
+          <ScalarProperty Name="fechasistema" ColumnName="fechasistema" />
+          <ScalarProperty Name="natura" ColumnName="natura" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="valorcheque" ColumnName="valorcheque" />
+          <ScalarProperty Name="valorefectivo" ColumnName="valorefectivo" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+          <ScalarProperty Name="fechatrabajo" ColumnName="fechatrabajo" />
+          <ScalarProperty Name="nrocuenta" ColumnName="nrocuenta" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="nroregistro" ColumnName="nroregistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="seguimientocredito">
+      <EntityTypeMapping TypeName="Model.seguimientocredito">
+        <MappingFragment StoreEntitySet="seguimientocredito">
+          <ScalarProperty Name="pertenecepago" ColumnName="pertenecepago" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="codcuenta" ColumnName="codcuenta" />
+          <ScalarProperty Name="estadotarjeta" ColumnName="estadotarjeta" />
+          <ScalarProperty Name="agenciatransaccion" ColumnName="agenciatransaccion" />
+          <ScalarProperty Name="recibopago" ColumnName="recibopago" />
+          <ScalarProperty Name="tipocargo" ColumnName="tipocargo" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="cuotainteres" ColumnName="cuotainteres" />
+          <ScalarProperty Name="tasacolocacion" ColumnName="tasacolocacion" />
+          <ScalarProperty Name="fechasistema" ColumnName="fechasistema" />
+          <ScalarProperty Name="pagare" ColumnName="pagare" />
+          <ScalarProperty Name="natura" ColumnName="natura" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="totalefectivo" ColumnName="totalefectivo" />
+          <ScalarProperty Name="codoperador" ColumnName="codoperador" />
+          <ScalarProperty Name="fechaTrabajo" ColumnName="fechaTrabajo" />
+          <ScalarProperty Name="cedulasociado" ColumnName="cedulasociado" />
+          <ScalarProperty Name="registro" ColumnName="registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tasasplazoahorrotermino">
+      <EntityTypeMapping TypeName="Model.tasasplazoahorrotermino">
+        <MappingFragment StoreEntitySet="tasasplazoahorrotermino">
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="permitemodificar" ColumnName="permitemodificar" />
+          <ScalarProperty Name="PeriodoLiquida" ColumnName="PeriodoLiquida" />
+          <ScalarProperty Name="moditasarenoacioncapital" ColumnName="moditasarenoacioncapital" />
+          <ScalarProperty Name="moditasarenovacioninteres" ColumnName="moditasarenovacioninteres" />
+          <ScalarProperty Name="tasa" ColumnName="tasa" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="nroregistro" ColumnName="nroregistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tazasporplazos">
+      <EntityTypeMapping TypeName="Model.tazasporplazos">
+        <MappingFragment StoreEntitySet="tazasporplazos">
+          <ScalarProperty Name="tasainteres" ColumnName="tasainteres" />
+          <ScalarProperty Name="plazofinal" ColumnName="plazofinal" />
+          <ScalarProperty Name="plazoinicial" ColumnName="plazoinicial" />
+          <ScalarProperty Name="coddestino" ColumnName="coddestino" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="nroregistro" ColumnName="nroregistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sahorrosalavista">
+      <EntityTypeMapping TypeName="Model.sahorrosalavista">
+        <MappingFragment StoreEntitySet="sahorrosalavista">
+          <ScalarProperty Name="consolidado" ColumnName="consolidado" />
+          <ScalarProperty Name="saldoanterior" ColumnName="saldoanterior" />
+          <ScalarProperty Name="conceptotraslado" ColumnName="conceptotraslado" />
+          <ScalarProperty Name="recibo" ColumnName="recibo" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="transito" ColumnName="transito" />
+          <ScalarProperty Name="agenciatransaccion" ColumnName="agenciatransaccion" />
+          <ScalarProperty Name="estadotarjeta" ColumnName="estadotarjeta" />
+          <ScalarProperty Name="pagare" ColumnName="pagare" />
+          <ScalarProperty Name="tasa" ColumnName="tasa" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="numerodocumento" ColumnName="numerodocumento" />
+          <ScalarProperty Name="fechasistema" ColumnName="fechasistema" />
+          <ScalarProperty Name="natura" ColumnName="natura" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="valorcheque" ColumnName="valorcheque" />
+          <ScalarProperty Name="valorefectivo" ColumnName="valorefectivo" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+          <ScalarProperty Name="fechatrabajo" ColumnName="fechatrabajo" />
+          <ScalarProperty Name="nrocuenta" ColumnName="nrocuenta" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="nroregistro" ColumnName="nroregistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dependenciasempresas">
+      <EntityTypeMapping TypeName="Model.dependenciasempresas">
+        <MappingFragment StoreEntitySet="dependenciasempresas">
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="iddependenciasempresas" ColumnName="iddependenciasempresas" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="nitempresa" ColumnName="nitempresa" />
+          <ScalarProperty Name="codciudad" ColumnName="codciudad" />
+          <ScalarProperty Name="coddepartamento" ColumnName="coddepartamento" />
+          <ScalarProperty Name="codpais" ColumnName="codpais" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="nombredependencia" ColumnName="nombredependencia" />
+          <ScalarProperty Name="coddependencia" ColumnName="coddependencia" />
+          <ScalarProperty Name="codempresa" ColumnName="codempresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="parameahorroAlaVista">
+      <EntityTypeMapping TypeName="Model.parameahorroAlaVista">
+        <MappingFragment StoreEntitySet="parameahorroAlaVista">
+          <ScalarProperty Name="zsisco" ColumnName="zsisco" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="saldominimomaneja" ColumnName="saldominimomaneja" />
+          <ScalarProperty Name="idparametro" ColumnName="idparametro" />
+          <ScalarProperty Name="valormax" ColumnName="valormax" />
+          <ScalarProperty Name="permiteconclave" ColumnName="permiteconclave" />
+          <ScalarProperty Name="controlaretiros" ColumnName="controlaretiros" />
+          <ScalarProperty Name="reconocerinteres" ColumnName="reconocerinteres" />
+          <ScalarProperty Name="asignacuenta" ColumnName="asignacuenta" />
+          <ScalarProperty Name="datoscomplementarios" ColumnName="datoscomplementarios" />
+          <ScalarProperty Name="cuotamaxmensual" ColumnName="cuotamaxmensual" />
+          <ScalarProperty Name="cuotaminmensual" ColumnName="cuotaminmensual" />
+          <ScalarProperty Name="liquidaintereses" ColumnName="liquidaintereses" />
+          <ScalarProperty Name="cuentacausa" ColumnName="cuentacausa" />
+          <ScalarProperty Name="codcuentainactivos" ColumnName="codcuentainactivos" />
+          <ScalarProperty Name="ManejaConsecutivo" ColumnName="ManejaConsecutivo" />
+          <ScalarProperty Name="tipoliquidacion" ColumnName="tipoliquidacion" />
+          <ScalarProperty Name="cuentagastointeres" ColumnName="cuentagastointeres" />
+          <ScalarProperty Name="cuentaretencion" ColumnName="cuentaretencion" />
+          <ScalarProperty Name="codfuente" ColumnName="codfuente" />
+          <ScalarProperty Name="saldominimocuenta" ColumnName="saldominimocuenta" />
+          <ScalarProperty Name="saldominimoliquinteres" ColumnName="saldominimoliquinteres" />
+          <ScalarProperty Name="multiplicador" ColumnName="multiplicador" />
+          <ScalarProperty Name="periodoinactivo" ColumnName="periodoinactivo" />
+          <ScalarProperty Name="periodoliquida" ColumnName="periodoliquida" />
+          <ScalarProperty Name="periodogracia" ColumnName="periodogracia" />
+          <ScalarProperty Name="CodCuenta" ColumnName="CodCuenta" />
+          <ScalarProperty Name="tasaCaptacion" ColumnName="tasaCaptacion" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hahorrosalavista">
+      <EntityTypeMapping TypeName="Model.hahorrosalavista">
+        <MappingFragment StoreEntitySet="hahorrosalavista">
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idhahorrosalavista" ColumnName="idhahorrosalavista" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="fechainiciodeduccion" ColumnName="fechainiciodeduccion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="consignaciontitular" ColumnName="consignaciontitular" />
+          <ScalarProperty Name="numerotramaopa" ColumnName="numerotramaopa" />
+          <ScalarProperty Name="numerotramamega" ColumnName="numerotramamega" />
+          <ScalarProperty Name="numerodetarjetadebito" ColumnName="numerodetarjetadebito" />
+          <ScalarProperty Name="cupotarjetadebito" ColumnName="cupotarjetadebito" />
+          <ScalarProperty Name="tarjetadebitobloqueada" ColumnName="tarjetadebitobloqueada" />
+          <ScalarProperty Name="valorcuota" ColumnName="valorcuota" />
+          <ScalarProperty Name="formapago" ColumnName="formapago" />
+          <ScalarProperty Name="morosidad" ColumnName="morosidad" />
+          <ScalarProperty Name="interescausado" ColumnName="interescausado" />
+          <ScalarProperty Name="gmfMesentidad" ColumnName="gmfMesentidad" />
+          <ScalarProperty Name="gmfMesasociado" ColumnName="gmfMesasociado" />
+          <ScalarProperty Name="rtefteacumulada" ColumnName="rtefteacumulada" />
+          <ScalarProperty Name="interedisponible" ColumnName="interedisponible" />
+          <ScalarProperty Name="f_ultimacausacion" ColumnName="f_ultimacausacion" />
+          <ScalarProperty Name="interesliquidado" ColumnName="interesliquidado" />
+          <ScalarProperty Name="f_ultimatransaccion" ColumnName="f_ultimatransaccion" />
+          <ScalarProperty Name="fechainicio" ColumnName="fechainicio" />
+          <ScalarProperty Name="transito" ColumnName="transito" />
+          <ScalarProperty Name="acumuladoretiros" ColumnName="acumuladoretiros" />
+          <ScalarProperty Name="saldoMinimo" ColumnName="saldoMinimo" />
+          <ScalarProperty Name="saldoTotal" ColumnName="saldoTotal" />
+          <ScalarProperty Name="Cedulasociado" ColumnName="Cedulasociado" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="año" ColumnName="año" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hahorrosContractual">
+      <EntityTypeMapping TypeName="Model.hahorrosContractual">
+        <MappingFragment StoreEntitySet="hahorrosContractual">
+          <ScalarProperty Name="szin" ColumnName="szin" />
+          <ScalarProperty Name="idhahorrosContractual" ColumnName="idhahorrosContractual" />
+          <ScalarProperty Name="fechaultvencimiento" ColumnName="fechaultvencimiento" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="fechainiciodeduccion" ColumnName="fechainiciodeduccion" />
+          <ScalarProperty Name="porcentajecuota" ColumnName="porcentajecuota" />
+          <ScalarProperty Name="porcentajesalario" ColumnName="porcentajesalario" />
+          <ScalarProperty Name="tipocuota" ColumnName="tipocuota" />
+          <ScalarProperty Name="pignorado" ColumnName="pignorado" />
+          <ScalarProperty Name="transito" ColumnName="transito" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="acumuladoretiros" ColumnName="acumuladoretiros" />
+          <ScalarProperty Name="gmfmesentidad" ColumnName="gmfmesentidad" />
+          <ScalarProperty Name="gmfmesasociado" ColumnName="gmfmesasociado" />
+          <ScalarProperty Name="liquidado" ColumnName="liquidado" />
+          <ScalarProperty Name="fechaliquidacion" ColumnName="fechaliquidacion" />
+          <ScalarProperty Name="liquidacionautomatica" ColumnName="liquidacionautomatica" />
+          <ScalarProperty Name="rtefteacumulada" ColumnName="rtefteacumulada" />
+          <ScalarProperty Name="morosidad" ColumnName="morosidad" />
+          <ScalarProperty Name="f_ultimacausacion" ColumnName="f_ultimacausacion" />
+          <ScalarProperty Name="interescausado" ColumnName="interescausado" />
+          <ScalarProperty Name="interedisponible" ColumnName="interedisponible" />
+          <ScalarProperty Name="f_ultimatransaccion" ColumnName="f_ultimatransaccion" />
+          <ScalarProperty Name="fechainicioanterior" ColumnName="fechainicioanterior" />
+          <ScalarProperty Name="tasacaptacionanterior" ColumnName="tasacaptacionanterior" />
+          <ScalarProperty Name="nrocuentaahorros" ColumnName="nrocuentaahorros" />
+          <ScalarProperty Name="codlineaahorros" ColumnName="codlineaahorros" />
+          <ScalarProperty Name="formapago" ColumnName="formapago" />
+          <ScalarProperty Name="saldoMinimo" ColumnName="saldoMinimo" />
+          <ScalarProperty Name="saldoTotal" ColumnName="saldoTotal" />
+          <ScalarProperty Name="interesliquidado" ColumnName="interesliquidado" />
+          <ScalarProperty Name="valorcuota" ColumnName="valorcuota" />
+          <ScalarProperty Name="fechainicio" ColumnName="fechainicio" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="Tasacaptacion" ColumnName="Tasacaptacion" />
+          <ScalarProperty Name="Cedulasociado" ColumnName="Cedulasociado" />
+          <ScalarProperty Name="numerocuenta" ColumnName="numerocuenta" />
+          <ScalarProperty Name="agencia" ColumnName="agencia" />
+          <ScalarProperty Name="codlinea" ColumnName="codlinea" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="año" ColumnName="año" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

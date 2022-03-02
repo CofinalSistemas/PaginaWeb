@@ -1,0 +1,439 @@
+﻿@{
+    ViewBag.Title = "Nuestro Ahorros";
+    ViewBag.titulo = "Opciones de Ahorro";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "productos";
+
+}
+<style>
+    .bs-callout {
+        padding: 20px;
+        margin-top: 20px 0;
+        border: 1px solid #ce4844;
+        border-left-width: 5px;
+        border-radius: 3px;
+        background-color: white;
+    }
+
+    .box-image-text {
+        background: rgba(255, 255, 255, 0.83);
+        border-radius: 3px;
+        width: 320px;
+        height: 265px;
+        margin-left: 2px;
+        position: relative;
+        -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+    }
+
+    .bar.background-white {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    .image:hover {
+        transform: scale(0.8);
+    }
+
+    .blanco {
+        background-color: #fff;
+        margin-left: 50px;
+    }
+
+    .play:hover {
+        background: #237fef;
+        transition: 2s;
+    }
+
+    .play {
+        width: 6em;
+        border-radius: 150%;
+        text-align: center;
+        background-color: #da4d4d;
+        font-size: 3em;
+        color: white;
+        transition: 2s;
+    }
+
+    .modal-body {
+        background-color: #DAFDFD;
+    }
+
+    .modal-header {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        background-color: #da4d4d;
+    }
+
+    .modal-footer {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        background-color: #da4d4d;
+    }
+
+    .top {
+        margin-bottom: 20px;
+    }
+
+    #col {
+        margin-right: 69px;
+    }
+
+
+    #imagenes {
+        padding-bottom: 45px;
+        margin: auto;
+        padding-top: 20px;
+        margin-top: -20px;
+        -moz-box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+        box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+    }
+
+    .content {
+        margin: 10px;
+        text-justify: auto;
+    }
+
+    p {
+        font-size: 15px
+    }
+
+    #textura {
+        background-color: #da4d4d;
+        -webkit-box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+        box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+        padding-top: 20px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+</style>
+
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'b7e1cad8ae31b522b9a3b64e60182dc54a8c7acb';
+    window.smartsupp || (function (d) {
+        var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+        s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+        c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+        c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+    })(document);
+</script>
+
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+
+<!-- Modal video -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Nuestros Ahorros</h4>
+            </div>
+            <div class="modal-body">
+                <video id="miv" src="~/Videos/ahorrosfin1.mp4" width="100%" controls></video>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="stop()" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- slider-->
+<!--seccion video-->
+<div class="parallaxbox1" id="pb0" style="background-image:url(/img/ahorro1-2.jpg)">
+
+    <div class="container">
+        <center>
+            <div class="play" data-toggle="modal" data-target="#myModal"> <i class="fa fa-play-circle-o" style="font-size:6em;"></i></div>
+
+        </center>
+    </div>
+
+
+</div>
+<!--nota-->
+<section id="textura">
+    <div class="container">
+
+        <p class="text-justify" style="color:#eeeeee; font-size:20px;">
+            <strong>COFINAL</strong>  ha diseñado un portafolio exclusivo teniendo en cuenta las
+            condiciones de la población con el objetivo de sembrar y cultivar
+            el buen hábito del ahorro, estimulándolo con atractivas tasas de interés,
+            bajos costos financieros y todo el respaldo del portafolio de servicios sociales.
+            Escoge la cuenta que sea para ti.
+        </p>
+    </div>
+
+</section>
+
+<!--contenido-->
+<div id="imagenes" class="row" style="background-image:url(/img/texture-bw.png);">
+
+    <div id="col" class="col-md-3 ">
+        <div class="blanco box-image-text blog">
+            <div class="top" style="margin-bottom:1px;">
+                <div class="image">
+                    <a href="/Home/Productos/#cuentaCofiahorrito"><img src="~/img/cofiahorrito.png" style="width:225px; height: 76.5px;" alt="Cofiahorrito" class="img-responsive  center-block"></a>
+
+                </div>
+            </div>
+
+            <div class="content">
+                <p>
+                    <strong>AHORRA JUGANDO Y LOS SUEÑOS REALIZANDO!</strong>
+                    Es la cuenta de ahorros creada exclusivamente para niños y niñas
+                    de 1 día de nacidos hasta 13 años de edad.
+                </p>
+                <p class="read-more">
+                    <a href="/Home/Productos/#cuentaCofiahorrito" class="btn btn-template-main">Mas información</a>
+                </p>
+                <br />
+
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div id="col" class="col-md-3 col-sm-6">
+        <div class="blanco box-image-text blog">
+            <div class="top">
+                <div class="image">
+                    <img src="~/img/cofijunior.png" style="width:225px; height: 76.5px;" alt="Cofijunior" class="img-responsive  center-block">
+                </div>
+            </div>
+            <div class="content" style="padding-top:11px;">
+                <p>
+                    <strong>
+                        AYUDAMOS A REALIZAR TUS SUEÑOS!
+                    </strong>
+                    Cuenta de ahorros para jóvenes entre 14 y 23 años de edad.
+                    Su manejo se hace a través de libreta de ahorros o tarjeta débito.
+                </p>
+                <p class="read-more">
+                    <a href="/Home/Productos/#cuentaCofijunior" class="btn btn-template-main">Mas información</a>
+                </p>
+
+            </div>
+        </div>
+        <!-- /.box-image-text -->
+    </div>
+    <!---->
+    <div id="col" class="col-md-3 col-sm-6">
+        <div class="blanco box-image-text blog">
+            <div class="top">
+                <div class="image">
+                    <img src="~/img/cofidiario.png" class="img-responsive center-block" style="width:225px; height: 76.5px;" alt="Cofidiario">
+                </div>
+            </div>
+            <div class="content" style="padding-top:11px;">
+                <p>
+                    Cuenta de ahorros para personas mayores de 18 años. Disponibilidad
+                    inmediata del dinero a través de toda la red de agencias y cajeros
+                    electrónicos Grupo AVAL.
+                </p>
+                <p class="read-more">
+                    <a href="/Home/Productos/#cuentaCofidiario" class="btn btn-template-main">Mas información</a>
+                </p>
+            </div>
+        </div>
+        <!-- /.box-image-text -->
+
+    </div>
+    <!---->
+    <div id="col" class="col-md-3 col-sm-6">
+        <div class="blanco box-image-text blog">
+            <div class="top">
+                <div class="image">
+                    <img src="~/img/empresarial.png" style="width:225px; height: 76.5px;" alt="Cofijunior" class="img-responsive  center-block">
+                </div>
+            </div>
+            <div class="content" style="padding-top:11px;">
+                <p>
+                    En Cofinal respaldamos a todas las empresas sin ánimo de lucro
+                    mediante nuestra cuenta de ahorro a la vista. Disponibilidad inmediata, liquidacion diaria de interés.
+                </p>
+                <p class="read-more">
+                    <a href="/Home/Productos/#cuetaEmpresarial" class="btn btn-template-main">Mas información</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div id="col" class="col-md-3 col-sm-6">
+        <div class="blanco box-image-text blog">
+            <div class="top">
+                <div class="image">
+                    <img src="~/img/Logo Semilla.jpg" style="margin-top: 10px; width:225px; height: 76.5px;" alt="Cofisemilla" class="img-responsive  center-block">
+                </div>
+            </div>
+            <div class="content" style="padding-top:11px;">
+                <p>
+                    Cuenta especialmente diseñada para atender necesidades de ahorro y crédito
+                    de la población rural, mediante asesor financiero rural.
+                </p>
+                <p class="read-more">
+                    <a href="/Home/Productos/#ahorroSemilla" class="btn btn-template-main">Mas información</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div id="col" class="col-md-3 col-sm-6">
+        <div class="blanco box-image-text blog">
+            <div class="top">
+                <div class="image">
+                    <img src="~/img/ahprogramado.png" style="width:225px; height: 76.5px;" alt="Cofijunior" class="img-responsive  center-block">
+                </div>
+            </div>
+            <div class="content" style="padding-top:11px;">
+                <p>
+                    Modalidad de ahorro que le permite depositar cuotas mensuales iguales,
+                    por un plazo de tiempo determinado. Goza de excelente rentabilidad.
+                </p>
+                <p class="read-more">
+                    <a href="/Home/Productos/#ahorroContractual" class="btn btn-template-main">Mas información</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!---->
+    <div id="col" class="col-md-3 col-sm-6">
+        <div class="blanco box-image-text blog">
+            <div class="top">
+                <div class="image">
+                    <img src="~/img/cdat.png" style="width:225px; height:60px;" alt="Cofijunior" class="img-responsive  center-block">
+                </div>
+            </div>
+            <div class="content" style="padding-top:11px;">
+                <p>
+                    Alternativa financiera de inversión de motos y plazos flexibles,
+                    con excelente rentabilidad. Inversión cubierta con seguro de depósitos gratuitos.
+                </p>
+                <p class="read-more">
+                    <a href="/Home/Productos/#cdat" class="btn btn-template-main">Mas información</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!---->
+    <div id="col" class="col-md-3 col-sm-6">
+        <div class="blanco box-image-text blog">
+            <div class="top" style="margin-bottom:1px;">
+                <div class="image">
+                    <img src="~/img/tarjeta-01.png" style="height: 76.5px;margin-top: 10px;" alt="Cofijunior" class="img-responsive  center-block">
+                </div>
+            </div>
+            <div class="content" style="padding-top:11px;">
+                <p>
+                    La tarjeta débito COFINAL – VISA, le permite hacer uso de sus recursos, las 24 horas del día a nivel nacional e internacional.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+<!---->
+<!--imagen 1-->
+<div class="parallaxbox1" id="pb1" style="background-image:url(/img/ahorro1-2.jpg) ">
+    <!--boton simulador-->
+    <div class="container" style="padding-top:1em; ">
+        <div class="well" style="max-width:400px; margin:0 auto 10px;">
+            @*<button id="miBoto" style="background-color:#da4d4d; background-size:20px;" type="button" class="btn btn-primary btn-lg btn-block" ><a style="color:white" href="~/SimuladorCDAT/Details">Simuladores</a></button>*@
+            <a href="~/SimuladorCDAT/Details">
+                <img src="~/img/simulador.png" alt="Simulador de Ahorro" style="width:350px;height:42px;border:0;">
+            </a>
+        </div>
+
+    </div>
+</div>
+<!--estilos-->
+<section style="margin-bottom:0px;">
+    <style>
+        #miBoton {
+            margin-top: 80px;
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 150px;
+            border: none;
+            padding-left: 40px; /* 40 píxeles a la izquierda para que no se amontone con la flecha */
+            background: url("/img/button_0002_Capa-2.png") no-repeat center; /* Imagen sin repetir y en la parte superior */
+            font-size: 50px; /*Aumentamos el tamaño de la fuente */
+            font-weight: bold; /* Y la ponemos en negrita */
+            color: #FFF;
+            transition: 1s;
+        }
+
+            #miBoton:hover {
+                /*opacity: 0.9;*/
+                transition: 1s;
+                background: url("/img/button_0001_Capa-3-copia.png") no-repeat center; /* Al pasar el ratón se ubica en la parte inferior */
+            }
+    </style>
+
+
+
+</section>
+<!-- scrip para parallax-->
+<script type="text/javascript">
+    function parallax() {
+        setpos("#pb0");
+        setpos("#pb1");
+
+    }
+
+
+
+    function setpos(element, factor) {
+        factor = factor || 2;
+
+        var offset = $(element).offset();
+        var w = $(window);
+
+        var posx = (offset.left - w.scrollLeft()) / factor;
+        var posy = (offset.top - w.scrollTop()) / factor;
+
+        $(element).css('background-position', '100% ' + posy + 'px');
+
+        // use this to have parralax scrolling vertical and horizontal
+        //$(element).css('background-position', posx+'px '+posy+'px');
+    }
+
+    $(document).ready(function () {
+        parallax();
+    }).scroll(function () {
+        parallax();
+    });
+</script>
+<!--funcion cerrar del video-->
+<script>
+    var myVideo = document.getElementById("miv");
+    $('#myModal').on('hide.bs.modal', function (e) {
+        // do something...
+        myVideo.pause();
+    })
+
+    function stop() {
+        var myVideo = document.getElementById("miv");
+        if (myVideo.play) {
+            myVideo.pause();
+
+        }
+        else {
+            myVideo.play();
+        }
+    }
+</script>

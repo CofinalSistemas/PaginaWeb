@@ -1,0 +1,727 @@
+﻿@using Ingenio.Models
+@{
+    AccountModels cuentaUsuario = new AccountModels();
+    if (!cuentaUsuario.IsNull() && cuentaUsuario.IsAsociado)
+    {
+        Layout = "~/Views/Shared/layoutAso.cshtml";
+    }
+    
+    ViewBag.Title = "Simulador Creditos";
+    ViewBag.titulo = "Simulador Creditos";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "simuladoresActivo";
+
+}
+@using System.Globalization;
+
+<style>
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+    .modal-header, .modal-footer{
+                    background-color: #5CB85C;
+    }
+     .modal-body{
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+
+    .btn-primary{
+    background-color: #da4d4d; border-color: #da4d4d;
+       } 
+    .modal-title{
+            color: white;
+    }
+
+    .table{
+            border-collapse: inherit;
+    }
+</style>
+<!--contenido-->
+<section id="contenido">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="container">
+                <h4 style="text-align: center">COOPERATIVA DE AHORRO Y CREDITO NACIONAL</h4>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+        <br />
+        <div class="container well col-md-12">
+            @using (Html.BeginForm("Calcular", "SimuladorCre"))
+            {
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="Nombre" style="color: black;">Nombre:</label>
+                        <div class="col-md-7 input-group" id="divNombre">
+                            <input @(cuentaUsuario.IsNull() ? "":"readonly")  style="text-transform: uppercase;" class="form-control" id="txtNombre" value="@ViewBag.nombreintegrado" name="txtNombre" placeholder="" type="text" onkeypress="return soloLetras(event)" required />
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="Email" style="color: black;">Email:</label>
+                        <div class="col-md-7 input-group" id="divEmail">
+                            <input @(cuentaUsuario.IsNull() ? "":"readonly") class="form-control" id="txtEmail" value="@ViewBag.Email" name="txtEmail" placeholder="" type="email"  />
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="Telefono" style="color: black;">Telefono:</label>
+                        <div class="col-md-7 input-group" id="divTelefono">
+                            <input  @(cuentaUsuario.IsNull() ? "":"readonly") class="form-control" id="Telefono" value="@ViewBag.Telefono" name="Telefono" placeholder="" type="tel" onKeyPress="return soloNumeros(event)" maxlength="11" required />
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="txtperiodo" style="color: black;">Periodo:</label>
+                        <div class="col-md-7 input-group" id="divperiodo">
+                            <select class="form-control" id="txtperiodo" name="txtperiodo" onchange="GetSelectedPer(this)" value="@ViewBag.Periodo" placeholder="" type="text">
+                                <option value="30" selected>Mensual</option>
+                                <option value="15">Quincenal</option>
+                                <option value="2">Semestral</option>
+                                <option value="4">Trimestral</option>
+                            </select>
+                            <input name="txtper" type="text" id="txtper" value="" style="display:none">
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="txtLinea" style="color: black;">Linea:</label>
+                        <div class="col-md-7 input-group" id="divLinea">
+                            
+                                <select class="form-control" id="txtLinea" name="txtLinea" onchange="GetSelectedTextValue(this)" value="@ViewBag.Linea" placeholder="" type="text" required>
+                                    <option value="">Seleccione...</option>
+                                </select>
+                                <input name="txtTabla" type="text" id="txtTabla" value="" style="display:none">
+                           
+                        </div>
+                    </div><!-- /form-group -->
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="Destino1" style="color: black;">Destino:</label>
+                        <div class="col-md-7 input-group" id="divDestino1">
+                            
+                                <select class="form-control" id="Destino1" name="Destino1" onchange="GetSelected3(this)" value="@ViewBag.Destino" placeholder="" type="text" required>
+                                    <option value="">Seleccione...</option>
+                                </select>
+                            <input name="Destino" type="text" id="Destino" value="" style="display:none">
+                            <input type="button" id="tasas" name="tasas" value="Ver Tasas" class="btn btn-success" data-toggle="modal" data-target="#myModal" />
+                                
+                            <!-- /input-group -->
+                        </div>
+                    </div><!-- /form-group -->
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="Plazo" style="color: black;">Plazo:</label>
+                        <div class="col-md-7 input-group" id="divPlazo">
+                            <input class="form-control" id="txtPlazo" value="@ViewBag.Plazo" name="txtPlazo" placeholder="" type="number" min="0" onKeyPress="return soloNumeros(event)" required />
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="txtMonto" style="color: black;">Monto a prestar:</label>
+                        <div class="col-md-7 input-group" id="divMonto">
+                            <input class="form-control" id="txtMonto" value="@ViewBag.Monto1" name="txtMonto" placeholder="" type="text" required />
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="txtMonto1" style="color: black;" >Tipo simulación:</label>
+                        <div class="col-md-7 input-group" id="divcap">
+                            <div class="radio">
+                                <label><input type="radio" value="1" name="optradio" onclick="handleClick(this)" checked>Basica</label>
+                                   <br />
+                                <label><input type="radio" value="2" onclick="handleClick(this)" name="optradio">Avanzada</label>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtmes" style="color: black;"></label>
+                            <div class="col-md-7 input-group" id="divMes">
+                                <button class="btn btn-success" id="Calcular" name="Calcular" onclick="darclick1()" >
+                                    <span class="glyphicon glyphicon-check"></span> Calcular
+                                </button><br /><br />
+                                <input @{if (ViewBag.boton == null ) { @Html.Raw("style='display:none'") } } type="submit"  disableValidation="true"  class="btn btn-success" id="Refresh" value="Refrescar" name="Refresh" onclick="darclick()" />
+                                   
+                            </div><!-- /input-group -->
+                          
+                        </div><!-- /form-group -->
+
+
+                    </div><!-- /row -->
+            }
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Tasas</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table" role="grid" id="tablacli" border="1" cellspacing="1" style="font-size:small">
+                        
+                            <thead>
+                                <tr>
+                                    <th align="center">DESTINO</th>
+                                    <th align="center">PLAZO MINIMO</th>
+                                    <th align="center">PLAZO MAXIMO</th>
+                                    <th align="center">TASA DE INTERES</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                            </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        @{
+            if (ViewBag.Simulador != null)
+            {
+                <div id="imprimir">
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                        </div>
+                        <div class="col-lg-3">
+                            <h4 style="text-align: center">SIMULADOR DE CREDITO</h4>
+                        </div>
+                        <div class="col-lg-4">
+                        </div>
+                    </div>
+                    <table id="tabla_rapida" class="table" border="0" cellspacing="0" style="display:block;font-size:small;background-color: rgba(242, 242, 242, 0.74)">
+
+                        <tbody >
+                            <tr>
+                                <td >
+                                    <strong>Cuota:</strong>
+                                    @{ NumberFormatInfo nfi12 = new CultureInfo("en-US", false).NumberFormat;
+                                        Double cuo112 = Math.Round(ViewBag.Cuota);
+                                        string scuo112 = cuo112.ToString("C", nfi12);
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo112)
+                                </td>
+                                <td>
+                                    <strong>Prestamos:</strong>
+                                    @{
+                                        double cuo122 = Math.Round(ViewBag.Monto);
+                                        string scuo122 = cuo122.ToString("C", nfi12);
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo122)
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td >
+                                    <strong>Tasa nominal:</strong>
+                                    @{
+                                        Double cuo132 = Math.Round(ViewBag.Tasa, 2);
+                                        string scuo132 = cuo132.ToString(nfi12) + " %";
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo132)
+                                </td>
+                                <td >
+                                    <strong>Estudio Credito:</strong>
+                                    @{
+                                        Double cuo142 = Math.Round(ViewBag.Monto) * (0.005);
+                                        string scuo142 = cuo142.ToString("C", nfi12);
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo142)
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td ><strong>Periodo:</strong> @(ViewBag.tiempo ?? String.Empty)</td>
+                                <td >
+                                    <strong>Valor Entregado:</strong>
+                                    @{
+                                        Double cuo152 = Math.Round(ViewBag.Monto) - (Math.Round(ViewBag.Monto) * (0.005));
+                                        string scuo152 = cuo152.ToString("C", nfi12);
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo152)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">Estos datos son informativos, pueden variar de acuerdo con el comportamiento de la tasa de interés y no constituyen un compromiso para la Cooperativa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table id="tabla_detallada" class="table"  border="0" cellspacing="0" style="display:none;font-size:small;background-color: rgba(242, 242, 242, 0.74)">
+
+                        <tbody>
+                            <tr>
+                                <td colspan="2">
+                                    <strong> @ViewBag.Nombrelinea</strong>
+                                </td>
+                                <td colspan="3">
+                                    <strong>Valor solicitado:</strong>
+                                    @{ NumberFormatInfo nfi11 = new CultureInfo("en-US", false).NumberFormat;
+                                        double cuo17= Math.Round(ViewBag.Monto);
+                                        string scuo17 = cuo17.ToString("C", nfi11);
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo17)
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <strong>Destino:</strong> @ViewBag.Nombredestino
+                                </td>
+                                <td colspan="2">
+                                    <strong>Cuota:</strong>
+                                    @{ 
+                                        Double cuo11 = Math.Round(ViewBag.Cuota);
+                                        string scuo11 = cuo11.ToString("C", nfi11);
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo11)
+                                </td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td colspan="3">
+                                    <strong>Tipo cuota:</strong> FIJA
+                                </td>
+                                <td colspan="3">
+                                    <strong>Seg. Credito:</strong> 0,10%
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <strong>Fecha de consulta:</strong> @DateTime.Now.ToShortDateString()
+                                </td>
+                                <td colspan="2">
+                                    <strong>Amortizacion:</strong> @ViewBag.tiempo
+                                    
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <strong>Tasa Efectiva:</strong>
+                                    @{
+                                        Double cuo131 = Math.Round(ViewBag.TasaEfectiva, 2);
+                                        string scuo131 = cuo131.ToString(nfi11) + " %";
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo131)
+                                </td>
+                                <td colspan="3">
+                                    <strong>Plazo:</strong> 
+                                    @{
+                                        string scuo141 = @ViewBag.Plazo + " Meses";
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo141)
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <strong>Tasa nominal del periodo:</strong>
+                                    @{
+                                        Double cuo13 = Math.Round(ViewBag.Tasa, 2);
+                                        string scuo13 = cuo13.ToString(nfi11) + " %";
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo13)
+                                </td>
+                                <td colspan="3">
+                                    <strong>Estudio Credito:</strong>
+                                    @{
+                                        Double cuo14 = Math.Round(ViewBag.Monto) * (0.005);
+                                        string scuo14 = cuo14.ToString("C", nfi11);
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo14)
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td colspan="2"><strong></strong></td>
+                                <td colspan="3">
+                                    <strong>Valor Entregado:</strong>
+                                    @{
+                                        Double cuo15 = Math.Round(ViewBag.Monto) - (Math.Round(ViewBag.Monto) * (0.005));
+                                        string scuo15 = cuo15.ToString("C", nfi11);
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo15)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">Estos datos son informativos, pueden variar de acuerdo con el comportamiento de la tasa de interés y no constituyen un compromiso para la Cooperativa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-striped" border="1" cellspacing="0" id="tabla2" style="font-size:small; background-color: rgba(245, 245, 245, 0.76);    border-top: 1px solid #333;">
+                        <thead>
+                            <tr style="background-color: #5CB85C;  color: rgba(255, 255, 255, 0.9); font-size: 17px;">
+
+                                <th>Nro</th>
+                                <th>Fecha</th>
+                                <th>Cuota <br />(Incluido seguro de Credito)</th>
+                                <th>Seguro de Credito</th>
+                                <th>Abono Interes</th>
+                                <th>Abono Capital</th>                                
+                                <th>Saldo capital</th>
+                                
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    @{ NumberFormatInfo nfi123 = new CultureInfo("en-US", false).NumberFormat;
+                                        Double cuo123 = Math.Round(ViewBag.Monto);
+                                        string scuo123 = cuo123.ToString("C", nfi123);
+                                    }
+                                    @Html.DisplayFor(modelItem => scuo123)
+                                </td>
+                            </tr>
+
+                            @foreach (var item in ViewBag.Simulador)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.nro
+
+                                    </td>
+                                    <td>@item.fecha</td>
+                                    <td>
+                                        @{ NumberFormatInfo nfi1 = new CultureInfo("en-US", false).NumberFormat;
+                                            Double cuo = Math.Round(item.cuota);
+                                            string scuo = cuo.ToString("C", nfi1);
+                                        }
+                                        @Html.DisplayFor(modelItem => scuo)
+                                    </td>
+                                    <td>
+                                        @{
+                                            Double cuo4 = Math.Round(item.sgvida);
+                                            string scuo4 = cuo4.ToString("C", nfi1);
+                                        }
+                                        @Html.DisplayFor(modelItem => scuo4)
+                                    </td>
+                                    
+                                    <td>
+                                        @{
+                                            Double cuo2 = Math.Round(item.abinteres);
+                                            string scuo2 = cuo2.ToString("C", nfi1);
+                                        }
+                                        @Html.DisplayFor(modelItem => scuo2)
+                                    </td>
+                                    <td>
+                                        @{
+                                            Double cuo1 = Math.Round(item.abcapital);
+                                            string scuo1 = cuo1.ToString("C", nfi1);
+                                        }
+                                        @Html.DisplayFor(modelItem => scuo1)
+                                    </td>
+                                    <td>
+
+                                        @{
+                                            Double cuo3 = Math.Round(item.saldocapital);
+                                            string scuo3 = cuo3.ToString("C", nfi1);
+                                        }
+                                        @Html.DisplayFor(modelItem => scuo3)
+                                    </td>
+
+                                    
+
+
+                                </tr>
+                                            }
+                        </tbody>
+                    </table>
+                </div>
+                @*<button class="btn btn-success" onclick="imprime('imprimir')"><span class="glyphicon glyphicon-download"></span>Imprimir</button>*@
+                                            }
+        }
+        </div>
+    </section>
+<!--script-->
+<script>
+
+            $(document).ready(function () {
+
+                $('#txtMonto').priceFormat({
+                    prefix: '',
+                    centsSeparator: ',',
+                    thousandsSeparator: '.'
+                });
+
+                load_lineas();
+
+            });
+            function soloNumeros(e) {
+                var key = window.Event ? e.which : e.keyCode
+                return ((key >= 48 && key <= 57) || (key == 8))
+            }
+            function soloLetras(e) {
+                key = e.keyCode || e.which;
+                tecla = String.fromCharCode(key).toLowerCase();
+                letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+                especiales = "8-37-39-46";
+
+                tecla_especial = false
+                for (var i in especiales) {
+                    if (key == especiales[i]) {
+                        tecla_especial = true;
+                        break;
+                    }
+                }
+
+                if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+                    return false;
+                }
+            }
+            function load_lineas() {
+                var linea = '@ViewBag.Linea';
+                var dest = '@ViewBag.Destino';
+                $.get(
+                      '@Url.Action("GetLinea", "SimuladorCre")'
+                   )
+                  .done(function (data) {
+                      $.each(data, function (i, row) {
+                          var $option = $('<option>',{selected:row.codlinea==linea});
+                          $option.val(row.codlinea);
+                          $option.html(row.nombre);
+                          $('#txtLinea').append($option);
+                      })
+                  })
+                  .fail(function (data) {
+                      console.log('error !!!');
+                  }
+              );
+
+                $.ajax({
+                    url: "@Url.Action("GetLinea2")",
+                    type: "POST",
+                data: { "linea": linea },
+                cache: false,
+                datatype: "json",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+
+                        var $option = $('<option>', { selected: value.Coddestino == dest });
+                        $option.val(value.Coddestino);
+                        $option.html(value.nombredestino);
+                        $('#Destino1').append($option);
+                    })
+                }
+                });
+
+                document.getElementById("txtTabla").value = linea;
+                document.getElementById("Destino").value = dest;
+
+                $.ajax({
+                    url: "@Url.Action("GetLinea3")",
+                    type: "POST",
+                data: {"line":linea, "destino": dest },
+                cache: false,
+                datatype: "json",
+                success: function (data) {
+                    $("#tablacli tbody tr").remove();
+                    $.each(data, function (index, value) {
+
+                        var nombredestino = value.nombredestino;
+                        var plazoinicial = value.plazoinicial / 30;
+                        plazoinicial = Math.round(plazoinicial);
+                        var tiempo = "mes(es)";
+                        if (plazoinicial < 1) {
+                            plazoinicial = 1;
+                            var tiempo = "dia";
+                        }
+
+
+                        var plazofinal = value.plazofinal/30;
+                        var tasainteres = value.tasainteres;
+
+                        //Escribimos los datos mediante jquery en la tabla tbl-clientes que crearemos en la pagina web
+                        $("#tablacli tbody").append("<tr><td align='center'>" + nombredestino + "</td>" +
+                                                                      "<td align='center'>" + plazoinicial +" "+ tiempo + "</td>" +
+                                                                      "<td align='center'>" + Math.round(plazofinal) + " mes(es)</td>" +
+                                                                      "<td align='center'>" + tasainteres + " % N.M.V</td>");
+
+
+
+                    })
+                }
+            });
+            }
+
+            function GetSelectedTextValue(txtLinea) {
+
+                var selectedText = txtLinea.options[txtLinea.selectedIndex].innerHTML;
+                var selectedValue = txtLinea.value;
+                document.getElementById("Destino").value = selectedValue;
+                document.getElementById("txtTabla").value = selectedValue;
+                $("#Destino1").html("");
+                var $option = $('<option>');
+                $option.val("");
+                $option.html("Seleccione...");
+                $('#Destino1').append($option);
+                $.ajax({
+                    url: "@Url.Action("GetLinea2")",
+                    type: "POST",
+                    data: { "linea": selectedValue },
+                cache: false,
+                datatype: "json",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+
+                        var $option = $('<option>');
+                        $option.val(value.Coddestino);
+                        $option.html(value.nombredestino);
+                        $('#Destino1').append($option);
+                    })
+                    }
+                });
+
+            }
+
+            function GetSelected3(Destino1) {
+
+                var selectedText = Destino1.options[Destino1.selectedIndex].innerHTML;
+                var selectedValue = Destino1.value;
+
+                document.getElementById("Destino").value = selectedValue;
+                var linea = $('#txtTabla').val();
+
+                $.ajax({
+                    url: "@Url.Action("GetLinea3")",
+                    type: "POST",
+                data: {"line":linea, "destino": selectedValue },
+                cache: false,
+                datatype: "json",
+                success: function (data) {
+                    $("#tablacli tbody tr").remove();
+                    $.each(data, function (index, value) {
+
+                        var nombredestino = value.nombredestino;
+                        var plazoinicial = value.plazoinicial / 30;
+                        plazoinicial = Math.round(plazoinicial);
+                        var tiempo = "mes(es)";
+                        if (plazoinicial < 1) {
+                            plazoinicial = 1;
+                            var tiempo = "dia";
+                        }
+
+
+                        var plazofinal = value.plazofinal/30;
+                        var tasainteres = value.tasainteres;
+
+                        //Escribimos los datos mediante jquery en la tabla tbl-clientes que crearemos en la pagina web
+                        $("#tablacli tbody").append("<tr><td align='center'>" + nombredestino + "</td>" +
+                                                                      "<td align='center'>" + plazoinicial +" "+ tiempo + "</td>" +
+                                                                      "<td align='center'>" + Math.round(plazofinal) + " mes(es)</td>" +
+                                                                      "<td align='center'>" + tasainteres + " % N.M.V</td>");
+
+
+
+                        })
+                    }
+                });
+
+            }
+
+            function GetSelectedPer(txtperiodo) {
+
+                var selectedText = txtperiodo.options[txtperiodo.selectedIndex].innerHTML;
+                var selectedValue = txtperiodo.value;
+
+                document.getElementById("txtper").value = selectedValue;
+            }
+
+
+
+</script>
+   <script>
+            function imprime(imprimir) {
+                                                              
+                var ficha = document.getElementById(imprimir);
+                var ventimp = window.open(' ', 'popimpr');
+                ventimp.document.write(ficha.innerHTML);
+                ventimp.document.close();
+                ventimp.print();
+                ventimp.close();
+
+            }
+        </script>
+<script>
+$(function () {
+        $("[data-habilitado = True]").attr({disabled: true})
+
+        $('#tabla2').DataTable({
+            "bFilter": false,
+            "info": false,
+            "aLengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
+            "iDisplayLength": 25,
+            language: {
+                "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                "zeroRecords": "Nothing found - sorry",
+                "info": "Pagina _PAGE_ de _PAGES_",
+                "infoEmpty": "No records available",
+                "search": "Buscar",
+                "infoFiltered": "(filtered from _MAX_ total records)",
+                "paginate": {
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            }
+        });
+})
+</script>
+<script>
+    function darclick1() {
+
+        document.getElementById("Refresh").style.display = 'block';
+    }
+    function darclick() {
+
+       //document.location.href = "Details";
+        //return false;
+       //document.getElementById("Destino1").value = "";
+        //document.getElementById("txtLinea").value = "";
+        //document.getElementById("txtperiodo").value = "30";
+         document.getElementById("txtMonto").value = "0";
+        //document.getElementById("txtPlazo").value = "0";
+        //var nom = "";
+        @*var nom = '@ViewBag.boton'>;
+        //if (nom == "3") {
+          //  document.getElementById("txtNombre").value = "";
+            //document.getElementById("txtEmail").value = "";
+            //document.getElementById("Telefono").value = "";
+
+        }*@
+
+    }
+</script>
+<script>
+    function handleClick(myRadio) {
+        currentValue = myRadio.value;
+        
+        if (currentValue == "1") {
+            document.getElementById("tabla_rapida").style.display = 'block';
+            document.getElementById("tabla_detallada").style.display = 'none';
+        }
+        else {
+            document.getElementById("tabla_rapida").style.display = 'none';
+            document.getElementById("tabla_detallada").style.display = 'block';
+        }
+    }
+</script>

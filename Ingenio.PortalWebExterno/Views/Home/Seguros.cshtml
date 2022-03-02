@@ -1,0 +1,311 @@
+﻿@{
+    ViewBag.Title = "Nuestros Seguros";
+    ViewBag.titulo = "Nuestros Seguros";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "productos";
+
+}
+
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'b7e1cad8ae31b522b9a3b64e60182dc54a8c7acb';
+    window.smartsupp || (function (d) {
+        var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+        s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+        c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+        c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+    })(document);
+</script>
+
+
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+<!---->
+<style>
+    .content {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .box-image-text {
+        margin-left: -5px;
+        margin-right: -5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: relative;
+        margin-bottom: 35px;
+        -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        width: 350px;
+        height: 480px;
+        margin-left: 30px;
+    }
+
+    .blanco {
+        background-color: #fff;
+    }
+
+    .play:hover {
+        background: #237fef;
+        transition: 2s;
+    }
+
+    .play {
+        width: 6em;
+        border-radius: 150%;
+        text-align: center;
+        background-color: #da4d4d;
+        font-size: 3em;
+        color: white;
+        transition: 2s;
+    }
+
+    .modal-body {
+        background-color: #DAFDFD;
+    }
+
+    .modal-header {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        background-color: #da4d4d;
+    }
+
+    .modal-footer {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        background-color: #da4d4d;
+    }
+
+    #get-it {
+        background: -webkit-linear-gradient(left, rgba(216,65,65,0.99) 0%, rgba(216,65,65,0.89) 49%, rgba(213,195,195,0.81) 90%, rgba(213,195,195,0.79) 100%);
+        text-align: left;
+        -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+    }
+
+    #titulo {
+        background-image: url(/img/textura1.png);
+        background-size: 30%;
+    }
+
+    .top {
+        margin-bottom: 20px;
+    }
+
+    .row {
+        margin-left: 45px;
+    }
+
+    .col-md-4, col-sm-3 {
+        display: block;
+        margin: 0 auto;
+        width: 32%;
+    }
+
+    #l {
+        text-align: justify;
+        color: #777;
+        font-size: 16px;
+    }
+
+    #pa {
+        color: #777;
+        font-size: 16px;
+    }
+
+    .image {
+        width: 115px;
+        height: 110px;
+        margin-left: 100px;
+    }
+
+    #col {
+        margin-left: -60px;
+        margin-right: 75px;
+    }
+</style>
+<!--funcion cerrar del video-->
+<script>
+
+    function stop() {
+        var myVideo = document.getElementById("miv");
+        if (myVideo.play) {
+            myVideo.pause();
+
+        }
+        else {
+            myVideo.play();
+        }
+    }
+</script>
+
+
+@*<!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Nuestros Seguros</h4>
+                </div>
+                <div class="modal-body">
+                    <video id="miv" src="~/Videos/segurosfin.mp4" width="100%" controls></video>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="stop()" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- fondo 1-->
+    <div class="parallaxbox1" id="pb0" style="background-image:url(/img/segur.png);">
+        <div class="container">
+            <center>
+                <div class="play" data-toggle="modal" data-target="#myModal"> <i class="fa fa-play-circle-o" style="font-size:6em;"></i></div>
+
+            </center>
+        </div>
+
+    </div>*@
+<!--titulo-->
+<div id="titulo">
+    <div id="get-it">
+        <div class="container">
+            <div class="col-md-12">
+                <center><h2>Planes de aseguramiento</h2></center>
+            </div>
+        </div>
+    </div>
+</div>
+<!--contenido-->
+<section id="imagenes" style="background-image:url(/img/texture-bw.png);">
+
+    <div class="row" style="margin-right:auto">
+        <div id="col" class="col-md-4 col-sm-3">
+            <div class="blanco box-image-text blog">
+                <div class="top">
+                    <div class="image">
+                        <img src="~/img/Logos/depositv2.png" alt="Cofiahorrito" class="img-responsive  center-block">
+                    </div>
+                </div>
+
+                <div class="content">
+                    <h4> Seguro Ahorro y aportes</h4>
+                    <p id="pa">
+                        <ul>
+                            <li id="l">Fallecimiento, por incapacidad total y permanente o por desmembración.</li>
+                            <li id="l">Saldo de aportes sociales más depósitos (ahorros a la vista, CDAT y/o contractual) hasta $200.000.000</li>
+                            <li id="l">Auxilio funerario: $ 2.000.000</li>
+                            <li id="l">Prima mensual: Gratis para asociados cubiertos con el seguro VIDA GRUPO ASOCIADOS, que además se encuentren al día en el pago del seguro, como también de sus obligaciones contraídas.</li>
+                            <li id="l">(Aplican terminos y condiciones)</li>
+                        </ul>
+                    </p>
+                    <br />
+
+                </div>
+            </div>
+        </div>
+        <div id="col" class="col-md-4 col-sm-3">
+            <div class="blanco box-image-text blog">
+                <div class="top">
+                    <div class="image">
+                        <img src="~/img/Logos/seguvida1v2.png" alt="Cofiahorrito" class="img-responsive  center-block">
+                    </div>
+                </div>
+                <div class="content">
+                    <h4>Seguro de vida Asociados</h4>
+                    <p id="pa">
+
+                        <ul>
+
+                            <li id="l">Amparo basico fallecimiento. Valor asegurado:$ 15.000.000</li>
+                            <li id="l">Edad de Riesgo: 18 a 70 años más 364 días</li>
+                            <li id="l">Permanencia: Indefinida o retiro por voluntad propia, por exclusión o por morosidad en el pago.</li>
+                            <li id="l">Prima mensual: $ 7.500</li>
+                            <li id="l">Obligatorio para asociados personas naturales mayores de edad. (Aplican condiciones y restricciones).</li>
+                            <li id="l">(Aplican terminos y condiciones)</li>
+
+                        </ul>
+
+                        <br />
+                        <br />
+                    </p>
+
+                </div>
+            </div>
+            <!-- /.box-image-text -->
+        </div>
+
+        <div id="col" class="col-md-4 col-sm-3">
+            <div class="blanco box-image-text blog">
+                <div class="top">
+                    <div class="image">
+                        <img src="~/img/seguvida2.png" alt="Cofiahorrito" class="img-responsive  center-block">
+                    </div>
+                </div>
+                <div class="content">
+                    <h4>voluntario Agropecuario</h4>
+                    <p id="pa">
+
+                        <ul>
+                            <li id="l">Fallecimiento, por incapacidad total y permanente, gastos médicos y renta diaria por hospitalización</li>
+                            <li id="l">Valor asegurado: $ 10.000.000</li>
+                            <li id="l">Edad de riesgo: 18 a 74 años más 364 días</li>
+                            <li id="l">Auxilio funerario:$ 1.000.000</li>
+                            <li id="l">Dirigido a asociados personas naturales con actividad agropecuaria. </li>
+                            <li id="l">(Aplican terminos y condiciones)</li>
+                        </ul>
+                        <br />
+                    </p>
+                </div>
+            </div>
+            <!-- /.box-image-text -->
+        </div>
+
+    </div>
+
+</section>
+<!--fondo 2-->
+<div class="parallaxbox" id="pb1" style="background-image:url(/img/segur.png);"></div>
+<!-- scrip para parallax-->
+<script type="text/javascript">
+    function parallax() {
+        setpos("#pb0");
+        setpos("#pb1");
+
+    }
+
+
+
+    function setpos(element, factor) {
+        factor = factor || 2;
+
+        var offset = $(element).offset();
+        var w = $(window);
+
+        var posx = (offset.left - w.scrollLeft()) / factor;
+        var posy = (offset.top - w.scrollTop()) / factor;
+
+        $(element).css('background-position', '100% ' + posy + 'px');
+
+        // use this to have parralax scrolling vertical and horizontal
+        //$(element).css('background-position', posx+'px '+posy+'px');
+    }
+
+    $(document).ready(function () {
+        parallax();
+    }).scroll(function () {
+        parallax();
+    });
+</script>
+
+
+
+
+
+

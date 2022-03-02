@@ -1,0 +1,557 @@
+﻿@{
+
+    Layout = "~/Views/Shared/layoutAso.cshtml";
+    ViewBag.activo = "consultaM";
+    ViewBag.Title = "Movimiento cuenta";
+    ViewBag.titulo = "Movimiento cuenta";
+    ViewBag.url = Url.Action("index", "home");
+
+
+
+}
+<!--estilos-->
+<style>
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+
+    .modal-header, .modal-footer {
+        background-color: #5CB85C;
+    }
+
+    .modal-body {
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+
+    .btn-primary {
+        background-color: #da4d4d;
+        border-color: #da4d4d;
+    }
+
+    .modal-title {
+        color: white;
+    }
+
+    .table {
+        border-collapse: inherit;
+    }
+</style>
+
+<section id="contenido">
+
+    <div class="container">
+
+        <div class="row">
+
+
+            <div role="tabpanel" class="tab-pane active" id="estadoC"></div>
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+
+            <div class="row">
+                <div class="col-lg-3">
+                </div>
+                <div class="container">
+                    <h4 style="text-align: center">COOPERATIVA DE AHORRO Y CREDITO NACIONAL</h4>
+                </div>
+                <div class="col-lg-3">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                </div>
+                <div class="container">
+                    <h4 style="text-align: center">DATOS CLIENTE</h4>
+                </div>
+                <div class="col-lg-3">
+                </div>
+            </div>
+
+            <br>
+
+            <div class="form-horizontal">
+
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="nombre">NOMBRE</label>
+                        <div class="col-md-8">
+
+                            <input class="form-control" data-val="true" data-val-number="The field dirección must be a number." data-val-required="El campo nombre es obligatorio." id="nombre" name="nombre" readonly="True" type="text" value="@(ViewBag.Aso.nits.nombreintegrado  ?? String.Empty)">
+                            <span class="field-validation-valid text-danger" data-valmsg-for="nombre" data-valmsg-replace="true"></span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="nit">IDENTIFICACION</label>
+                        <div class="col-md-8">
+                            <input class="form-control" data-val="true" data-val-number="The field dirección must be a number." data-val-required="El campo nit es obligatorio." id="nit" name="nit" readonly="True" type="text" value="@(ViewBag.Aso.cedulasociado  ?? String.Empty)">
+                            <span class="field-validation-valid text-danger" data-valmsg-for="nit" data-valmsg-replace="true"></span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="empresa">EMPRESA</label>
+                        <div class="col-md-8">
+
+                            <input class="form-control" data-val="true" data-val-number="The field dirección must be a number." data-val-required="El campo empresa es obligatorio." id="empresa" name="empresa" readonly="True" type="text" value="@(ViewBag.Aso.empresas.nombreempresa  ?? String.Empty)">
+                            <span class="field-validation-valid text-danger" data-valmsg-for="empresa" data-valmsg-replace="true"></span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="dir">DIRECCION</label>
+                        <div class="col-md-8">
+                            <input class="form-control" data-val="true" data-val-number="The field dirección must be a number." data-val-required="El campo dir es obligatorio." id="dir" name="dir" readonly="True" type="text" value="@(ViewBag.aso.nits.direccion ?? String.Empty)">
+                            <span class="field-validation-valid text-danger" data-valmsg-for="dir" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="salario">SALARIO</label>
+                        <div class="col-md-8">
+                            <input class="form-control" data-val="true" data-val-number="The field salario must be a number." data-val-required="El campo salario es obligatorio." id="salario" name="salario" readonly="True" type="text" value="@(ViewBag.aso.salario ?? String.Empty)">
+                            <span class="field-validation-valid text-danger" data-valmsg-for="salario" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="agencia">AGENCIA</label>
+                        <div class="col-md-8">
+                            <input class="form-control" data-val="true" data-val-number="The field agencia must be a number." data-val-required="El campo agencia es obligatorio." id="agencia" name="agencia" readonly="True" type="text" value="@(ViewBag.agencia ?? String.Empty)">
+                            <span class="field-validation-valid text-danger" data-valmsg-for="agencia" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="periodo">PERIODO DE DEDUCCION</label>
+                        <div class="col-md-8">
+                            <input class="form-control" data-val="true" data-val-number="The field agencia must be a number." data-val-required="El campo periodo es obligatorio." id="periodo" name="periodo" readonly="True" type="text" value="@(ViewBag.periododeduce ?? String.Empty)">
+                            <span class="field-validation-valid text-danger" data-valmsg-for="periodo" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="antiguedad">ANTIGUEDAD</label>
+                        <div class="col-md-8">
+                            <input class="form-control" data-val="true" data-val-number="The field agencia must be a number." data-val-required="El campo antiguedad es obligatorio." id="antiguedad" name="antiguedad" readonly="True" type="text" value="@(ViewBag.antiguedad ?? String.Empty)">
+                            <span class="field-validation-valid text-danger" data-valmsg-for="antiguedad" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+
+            <div class="container well col-md-12">
+                <form class="form-horizontal" id="formExportar" method="post">
+
+                    <div class="row">
+
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtanio" style="color: black;">Año:</label>
+                            <div class="col-md-7 input-group" id="divAnio">
+                                <input class="form-control" id="txtanio" placeholder="aaaa" type="number" />
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtmes" style="color: black;">Mes:</label>
+                            <div class="col-md-7 input-group" id="divMes">
+                                <input class="form-control" id="txtmes" placeholder="mes" type="number" pattern="[(0-9)]+" />
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtmes2" style="color: black;"></label>
+                            <div class="col-md-7 input-group" id="divMes1">
+
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtmes1" style="color: black;"></label>
+                            <div class="col-md-7 input-group" id="divMes2">
+                                <button class="btn btn-success" id="Calcular" name="Calcular">
+                                    <span class="glyphicon glyphicon-check"></span> Consultar
+                                </button>
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+
+                    </div><!-- /row -->
+
+
+
+                </form>
+            </div>
+            <br>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container" style="background-color: #FAFAFA;">
+
+        <div id="imprimir">
+
+            <div class="row">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-3" id="titulo" style="display:none">
+                    <h4 style="text-align: center">HISTORICO DE CUENTAS</h4>
+                </div>
+                <div class="col-lg-4">
+                </div>
+            </div>
+            <div id="datos" class="row" style="display:none">
+                <div class="col-xs-2 col-lg-1">
+                    <strong>Cedula:</strong>
+                </div>
+                <div class="col-xs-2 col-lg-2">
+                    @(ViewBag.Aso.cedulasociado ?? String.Empty)
+                </div>
+                <div class="col-xs-2 col-lg-1">
+                    <strong>Nombre:</strong>
+                </div>
+                <div class="col-xs-6 col-lg-8">
+                    @(ViewBag.Aso.nits.nombreintegrado ?? String.Empty)
+                </div>
+                <div class="col-xs-2 col-lg-1">
+                    <strong>Empresa:</strong>
+                </div>
+                <div class="col-xs-2 col-lg-2">
+                    @(ViewBag.Aso.empresas.nombreempresa ?? String.Empty)
+                </div>
+                <div class="col-xs-2 col-lg-1">
+                    <strong>Direccion:</strong>
+                </div>
+                <div class="col-xs-6 col-lg-3">
+                    @(ViewBag.aso.nits.direccion ?? String.Empty)
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-3">
+                    <h4 style="text-align: center">AHORROS</h4>
+                </div>
+                <div class="col-lg-4">
+                </div>
+            </div>
+
+
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="tablacli" border="1" CELLSPACING=0>
+                            <thead>
+                                <tr style="background-color: #5CB85C; color: #EAECEF;">
+                                    <th>
+                                        LINEA
+                                    </th>
+                                    <th width="110">
+                                        CUENTA
+                                    </th>
+                                    <th>
+                                        NOMBRE
+                                    </th>
+                                    <th>
+                                        F. APERTURA
+                                    </th>
+                                    <th>
+                                        F. VCTO
+                                    </th>
+                                    <th>
+                                        CUOTA
+                                    </th>
+                                    <th>
+                                        SALDO
+                                    </th>
+                                    <th>
+                                        INT. CAUSADO
+                                    </th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody></tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+
+            <div class="row">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-3">
+                    <h4 style="text-align: center">CREDITOS</h4>
+                </div>
+                <div class="col-lg-4">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="tablacli2" border="1" CELLSPACING=0>
+                            <thead>
+                                <tr style="background-color: #5CB85C; color: #EAECEF;">
+                                    <th>
+                                        LINEA
+                                    </th>
+                                    <th>
+                                        NOMBRE
+                                    </th>
+                                    <th>
+                                        CUOTA MORA
+                                    </th>
+                                    <th>
+                                        F.APERTURA
+                                    </th>
+                                    <th>
+                                        F. VCTO
+                                    </th>
+                                    <th>
+                                        CUOTA
+                                    </th>
+                                    <th>
+                                        SALDO TOTAL
+                                    </th>
+                                    <th>
+                                        SALDO DIA
+                                    </th>
+                                    <th>
+                                        PAGARE
+                                    </th>
+                                    <th>
+                                        ESTADO
+                                    </th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody></tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        @*<button class="btn btn-success" onclick="imprime('imprimir')"><span class="glyphicon glyphicon-download"></span>Imprimir</button>*@
+
+    </div>
+
+
+</section>
+<script>
+    $(document).ready(function () {
+
+
+        $("#txtFechaI").datepicker({
+            showOn: "button",
+            dateFormat: "dd/mm/yy",
+            maxDate: "+0d",
+            onClose: function (selectedDate) {
+                $("#txtFechaF").datepicker("option", "minDate", selectedDate);
+                var x = $("#divFechaF button");
+                x.text("");
+                x.addClass("btn btn-success");
+                x.append("<span class='glyphicon glyphicon-calendar'></span>");
+                var c = $("#spFechaF");
+                c.append(x);
+            }
+        });
+
+        $("#txtFechaF").datepicker({
+            showOn: "button",
+            dateFormat: "dd/mm/yy",
+            maxDate: "+0d",
+            onClose: function (selectedDate) {
+                $("#txtFechaI").datepicker("option", "maxDate", selectedDate);
+                var y = $("#divFechaI button");
+                y.text("");
+                y.addClass("btn btn-success");
+                y.append("<span class='glyphicon glyphicon-calendar'></span>");
+                var d = $("#spFechaI");
+                d.append(y);
+            }
+        });
+
+        var divFechaI = $("#divFechaI");
+        divFechaI.append("<span id='spFechaI' class='input-group-btn'>");
+
+        var divFechaF = $("#divFechaF");
+        divFechaF.append("<span id='spFechaF' class='input-group-btn'>");
+
+        var btnFechaI = $("#divFechaI button");
+        btnFechaI.text("");
+        btnFechaI.addClass("btn btn-success");
+        btnFechaI.append("<span class='glyphicon glyphicon-calendar'></span>");
+
+        var btnFechaF = $("#divFechaF button");
+        btnFechaF.text("");
+        btnFechaF.addClass("btn btn-success");
+        btnFechaF.append("<span class='glyphicon glyphicon-calendar'></span>");
+
+        var spFechaI = $("#spFechaI");
+        spFechaI.append(btnFechaI);
+
+        var spFechaF = $("#spFechaF");
+        spFechaF.append(btnFechaF);
+
+    });//end doc ready
+
+</script>
+<script>
+
+
+    $(function () {
+
+        $("[name=Calcular]").on("click", function (e) {
+            e.preventDefault();
+
+            if (document.getElementById) { //se obtiene el id
+                var el = document.getElementById('titulo'); //se define la variable "el" igual a nuestro div
+                el.style.display = (el.style.display == 'none') ? 'block' : 'block'; //damos un atributo display:none que oculta el div
+            }
+
+            var boton = $(this);
+            var fanio = parseInt($('#txtanio').val());
+            var fmes = parseInt($('#txtmes').val());
+            var fnit = parseInt($('#nit').val());
+
+            var ah = 0;
+            var cre = 0;
+            $.ajax({
+                url: "@Url.Action("GetAhorros")",
+                type: "POST",
+                data: { "anio": fanio, "mes": fmes, "nit": fnit },
+                cache: false,
+                datatype: "json",
+                success: function (data) {
+
+                    $("#tablacli tbody tr").remove();
+                    $.each(data, function (index, value) {
+
+                        var nombre = value.nombre;
+                        var numerocuenta = value.numerocuenta;
+                        var codlinea = value.codlinea;
+                        var fechainicio = value.fechainicio;
+                        var fechavencimiento = value.fechavencimiento;
+                        var cuota = value.cuota;
+                        var saldototal = value.saldototal;
+                        var interes = value.interes;
+                        var tipo = value.tipo_cuenta;
+
+                        if (tipo == "C") {
+                        }
+                        else {
+                            //Escribimos los datos mediante jquery en la tabla tbl-clientes que crearemos en la pagina web
+                            $("#tablacli tbody").append("<tr><td>" + codlinea + "</td>" +
+                                                                      "<td>" + numerocuenta + "</td>" +
+                                                                      "<td>" + nombre + "</td>" +
+                                                                      "<td>" + fechainicio + "</td>" +
+                                                                      "<td>" + fechavencimiento + "</td>" +
+                                                                      "<td>" + cuota + "</td>" +
+                                                                      "<td>" + saldototal + "</td>" +
+                                                                      "<td>" + interes + "</td>");
+                            ah = 1;
+
+                        }
+                    })
+                    if (ah == 0) {
+                        $("#tablacli tbody").append("<tr><td> NO EXISTEN REGISTROS </td>");
+                    }
+                    $("#tablacli2 tbody tr").remove();
+                    $.each(data, function (index, value) {
+
+                        var nombre = value.nombre;
+
+                        var codlinea = value.codlinea;
+                        var fechainicio = value.fechainicio;
+                        var fechavencimiento = value.fechavencimiento;
+
+                        var saldoponersedia = value.saldoponersedia;
+                        var pagare = value.pagare;
+                        var estado = value.estado;
+                        var cuota = value.cuotamora;
+                        var anualidad = value.anulidad;
+                        var saldototal = value.saldototal;
+                        var interes = value.interes;
+                        var tipo = value.tipo_cuenta;
+                        if (tipo == "C") {
+                            //Escribimos los datos mediante jquery en la tabla tbl-clientes que crearemos en la pagina web
+                            $("#tablacli2 tbody").append("<tr><td>" + codlinea + "</td>" +
+                                                                          "<td>" + nombre + "</td>" +
+                                                                          "<td>" + cuota + "</td>" +
+                                                                          "<td>" + fechainicio + "</td>" +
+                                                                          "<td>" + fechavencimiento + "</td>" +
+                                                                           "<td>" + anualidad + "</td>" +
+                                                                            "<td>" + saldototal + "</td>" +
+                                                                          "<td>" + saldoponersedia + "</td>" +
+                                                                          "<td>" + pagare + "</td>" +
+                                                                          "<td>" + estado + "</td>");
+                            cre = 1;
+                        }
+                    })
+                    if (cre == 0) {
+                        $("#tablacli2 tbody").append("<tr><td>NO EXISTEN REGISTROS</td>")
+                    }
+
+                }
+
+            });
+        })
+    })
+
+
+</script>
+<script type="text/javascript">
+    function imprime(imprimir) {
+        if (document.getElementById) { //se obtiene el id
+            var el = document.getElementById('datos'); //se define la variable "el" igual a nuestro div
+            el.style.display = (el.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
+        }
+
+        var ficha = document.getElementById(imprimir);
+        var ventimp = window.open(' ', 'popimpr');
+        ventimp.document.write(ficha.innerHTML);
+        ventimp.document.close();
+        ventimp.print();
+        ventimp.close();
+
+        if (document.getElementById) { //se obtiene el id
+            var el = document.getElementById('datos'); //se define la variable "el" igual a nuestro div
+            el.style.display = (el.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
+        }
+
+    }
+</script>

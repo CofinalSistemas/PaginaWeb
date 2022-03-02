@@ -1,0 +1,100 @@
+﻿@{
+    Layout = "~/Views/Shared/layoutAso.cshtml";
+    ViewBag.Title = "Certificado de Retención";
+    ViewBag.titulo = "Certificado de Retención";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "certificado";
+
+}
+@using Ingenio.Models;
+@{
+    AccountModels cuentaUsuario = new AccountModels();
+}
+
+
+<section id="contenido">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="container">
+                <h4 style="text-align: center">COOPERATIVA DE AHORRO Y CREDITO NACIONAL</h4>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="container">
+                <h4 style="text-align: center">CERTIFICADO DE RETENCION EN LA FUENTE</h4>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+        <div class="container well col-md-12">
+            
+                <div class="row">
+
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="inicial1" style="color: black;">Fecha inicial:</label>
+                        <div class="col-md-7 input-group" id="inicial1">
+                            <input class="form-control" id="inicial" value="@ViewBag.inicial" name="inicial" placeholder="AAAA-MM-DD" type="text"  />
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="final1" style="color: black;">Fecha final:</label>
+                        <div class="col-md-7 input-group" id="final1">
+                            <input class="form-control" id="final" value="@ViewBag.final" name="final" placeholder="AAAA-MM-DD" type="text"  />
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="txtcedula" style="color: black;">Cedula:</label>
+                        <div class="col-md-7 input-group" id="divcedula">
+                            <input class="form-control" id="txtcedula" value="@cuentaUsuario.Identificacion" name="txtcedula" placeholder="" type="number" required readonly />
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="txtmes" style="color: black;"></label>
+                        <div class="col-md-7 input-group" id="divMes">
+                            <button class="btn btn-success" id="Calcular" name="Calcular" onclick="certifica()">
+                                <span class="glyphicon glyphicon-check"></span> Generar
+                            </button>
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+
+
+                </div>
+           
+        </div>
+        </div>
+</section>
+<script>
+    function certifica(){
+        var fi= $('#inicial').val();
+        var ff= $('#final').val();
+
+        if (fi == null || fi=="") {
+            swal("Por favor ingrese la Fecha inicial ");
+            return false;
+        }
+        if (ff == null || ff=="") {
+            swal("Por favor ingrese la Fecha final ");
+            return false;
+        }
+
+        window.open('/WebF1.aspx?cedula='+@cuentaUsuario.Identificacion+'&fechai='+fi+'&fechaf='+ff, '', 'width=850,height=900,noresize');
+    }
+
+</script>
+<script src="~/Scripts/jquery.maskedinput.js" type="text/javascript"></script>
+<script>
+    jQuery(function ($) {
+
+        $('#inicial').mask('9999-99-99', { placeholder: "yyyy-01-01" });
+        $('#final').mask('9999-99-99', { placeholder: "yyyy-12-31" });
+
+
+    });
+
+</script>

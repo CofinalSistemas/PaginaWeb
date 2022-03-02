@@ -1,0 +1,54 @@
+﻿@model Ingenio.BO.Ingenio.Estados
+
+@{
+    ViewBag.Title = ViewBag.TitleNoti == null ? @Model.Titulo : ViewBag.TitleNoti;
+    ViewBag.titulo = @Model.Titulo;
+    ViewBag.url = Url.Action( "index", "home" );
+}
+<link rel="stylesheet" type="text/css" href="~/Content/editorHtml/froala_style_general.css" />
+<section>
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <!-- *** LEFT COLUMN ***
+                _________________________________________________________ -->
+
+                <div class="col-md-9" id="blog-post">
+                    <p class="text-muted text-uppercase mb-small text-right">
+                    @*    By <a href="#">@Model.Usuarios.Nombre</a>*@
+                        @Model.Fecha.ToShortDateString()
+                    </p>
+                    <div id="post-content">
+                    </div>
+                </div>
+                <!-- /#blog-post -->
+                <!-- *** LEFT COLUMN END *** -->
+                <!-- *** RIGHT COLUMN ***
+                _________________________________________________________ -->
+
+                <div class="col-md-3">
+                    <!-- *** MENUS AND WIDGETS ***
+                    _________________________________________________________ -->
+                    <div class="panel panel-default sidebar-menu text-center">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Programación</h3>
+                        </div>
+                        <div id="datepicker"></div>
+                    </div>
+                    <!-- *** MENUS AND FILTERS END *** -->
+                </div>
+                <!-- /.col-md-3 -->
+                <!-- *** RIGHT COLUMN END *** -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </div>
+</section>
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+    var htm = $('<div/>').html('@ViewBag.html').text();
+    $("#post-content").html(htm);
+</script>

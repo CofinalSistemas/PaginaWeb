@@ -1,0 +1,179 @@
+﻿@using Ingenio.Models
+@{
+    AccountModels cuentaUsuario = new AccountModels();
+}
+<header>
+
+    <!-- *** TOP ***
+    _________________________________________________________ -->
+    <div id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-9">
+                    <div class="login pull-left">
+                        <div class="social">
+                            <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
+                            <a href="~/Home/Contact" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                        </div>
+                        <a href="@Url.Action("logout","account")">
+                            <i class="fa fa-sign-in"></i>
+                            <span class="hidden-xs text-uppercase">Cerrar Sesión</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="login">
+
+                        @if (!cuentaUsuario.IsNull())
+                        {
+                            @cuentaUsuario.UserName
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *** TOP END *** -->
+    <!-- *** NAVBAR ***
+    _________________________________________________________ -->
+
+    @*<div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">*@
+
+        <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand home" href="~/Home/index">
+                        <img src="~/img/logo23.png" alt="Cofinal" class="hidden-xs hidden-sm hidden-md" style="margin-top: -0.4em; height: 64px;">
+                        <img src="~/img/logo23.png" alt="Cofinal" class="visible-sm visible-md" style="margin-top: -0.5em; height: 59px;"><span class="sr-only">Cofinal</span>
+                        <img src="~/img/logo23.png" alt="Cofinal" class="visible-xs  img-responsive" style="margin-top: -0.5em; height: 59px;"><span class="sr-only">Cofinal</span>
+                    </a>
+                    <div class="navbar-buttons">
+                        <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                            <span class="sr-only">Navegacion</span>
+                            <i class="fa fa-align-justify"></i>
+                        </button>
+                    </div>
+                </div>
+                <!--/.navbar-header -->
+
+
+                <div class="navbar-collapse collapse" id="navigation">
+                    <ul id="nav2" class="nav navbar-nav navbar-right">
+                        <!--simuladores-->
+                        <li id="simuladoresActivo" class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Simuladores<b class="caret"></b></a>
+                            <span class=".glyphicon .glyphicon-indent-left"></span>
+                            <ul class="dropdown-menu" style="right: 0px; left: 0px;">
+                                <li>
+                                    @Html.ActionLink("Ahorros", "Details", "SimuladorCDAT")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Creditos", "Edit", "SimuladorCre")
+                                </li>                            
+                            </ul>
+                        </li>
+                        <!--Extractos de cuenta-->
+                        <li id="extractos" class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Extracto de Cuenta<b class="caret"></b></a>
+                            <ul class="dropdown-menu" style="right: 0px; left: 0px;">
+                                <li>
+                                    <a href="~/CExtractos/Details">Extracto CREDITO</a>
+                                </li>
+                                <li>
+                                    <a href="~/AhExtractos/Details/1">Extracto AHORRO</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!--Movimientos-->
+                        @if (!cuentaUsuario.IsNull())
+                        {
+                            <li id="consultaM">
+                                <a href="@Url.Action("Details", "Asociado")" style="display:none">Movimiento cuenta</a>
+                            @*    @Html.ActionLink("Consulta Movimientos", "Details", "Asociado", new { @id = cuentaUsuario.Identificacion })*@
+                            </li>
+                        }
+                        <!--Formas de pago-->
+                        <li id="formasPago" class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Reporte de Pagos<br /> Otras entidades<b class="caret"></b></a>
+                            <ul class="dropdown-menu" style="right: 0px; left: 0px;">
+                                <li>
+                                    <a href="~/Formapago/Index">Reporte Pago</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!--Certificado dian-->
+                        <li id="certificado" class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Certificado DIAN<b class="caret"></b></a>
+                            <ul class="dropdown-menu" style="right: 0px; left: 0px;">
+                                <li>
+                                    <a href="~/Dian/Index">Reporte Tributario</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!--Reportes-->
+                 
+                        <!--Estado-->
+                        <li id="estados" class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Cuenta<b class="caret"></b></a>
+                            <ul class="dropdown-menu" style="right: 0px;">
+                                @if (!cuentaUsuario.IsNull())
+                                {
+                                    <li>
+                                       
+                                        <a href="@Url.Action("details","estadodecuenta", new { id=cuentaUsuario.Identificacion })">Estado de cuenta</a>
+                                    </li>
+                                    <li>
+                                        
+                                      @if (cuentaUsuario.Id_Cargo != 2)
+                                      { <a href="@Url.Action("edit", "asociado", new { id = cuentaUsuario.Identificacion })">Datos personales</a> }
+                                    </li>
+                                    @*<li>
+                                      @if (cuentaUsuario.Id_Cargo != 2)
+                                      {  <a href="@Url.Action("index", "PersCargo", new { id = cuentaUsuario.Identificacion })"> Personas a cargo</a>}
+                                    </li>*@
+                                }
+                            </ul>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+                <!--/.nav-collapse -->
+
+
+
+                <div class="collapse clearfix" id="search">
+
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+
+                                <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                            </span>
+                        </div>
+                    </form>
+
+                </div>
+                <!--/.nav-collapse -->
+
+            </div>
+
+
+        </div>
+        <!-- /#navbar -->
+
+    @*</div>*@
+    <!-- *** NAVBAR END *** -->
+
+</header>

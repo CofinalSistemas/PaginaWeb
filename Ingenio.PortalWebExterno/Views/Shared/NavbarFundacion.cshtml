@@ -1,0 +1,159 @@
+﻿@using Ingenio.Models
+
+@{
+
+    AccountModels cuentaUsuario = new AccountModels();
+}
+<header>
+    <!-- *** TOP ***
+    _________________________________________________________ -->
+    <div id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="login pull-left">
+                        <div class="social">
+                            <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
+                            <a href="~/Home/Contact" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                        </div>
+
+                        @if (!cuentaUsuario.IsNull())
+                        {
+                            <a href="@Url.Action("logout", "account")">
+                                <i class="fa fa-sign-in"></i>
+                                <span class="hidden-xs text-uppercase">Cerrar Sesión</span>
+                            </a>
+                        }
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="login">
+
+                        @if (!cuentaUsuario.IsNull())
+                        {
+                            @cuentaUsuario.UserName
+                        }
+                        else
+                        {
+                            <div class="login">
+                                <a href="@Url.Action("Login", "Account")"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar sesión</span></a>
+                                <a href="@Url.Action("Login", "Account")"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registrarse</span></a>
+                            </div>
+                        }
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *** TOP END *** -->
+    <!-- *** NAVBAR ***
+    _________________________________________________________ -->
+
+    <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+        <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand home" href="~/Fundacion/index">
+                        <img src="~/img/fundacion/logo-fundacion.png" alt="Cofinal" class="hidden-xs hidden-sm hidden-md" style="margin-top: -0.2em; height:61px;">
+                        <img src="~/img/fundacion/logo-fundacion.png" alt="Cofinal" class="visible-sm visible-md" style="margin-top: -0.4em; height:60px;"><span class="sr-only">Cofinal</span>
+                        <img src="~/img/fundacion/logo-fundacion.png" alt="Cofinal" class="visible-xs  img-responsive" style="margin-top: -0.4em; height:60px;"><span class="sr-only">Cofinal</span>
+                    </a>
+                    <div class="navbar-buttons">
+                        <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                            <span class="sr-only">Navegacion</span>
+                            <i class="fa fa-align-justify"></i>
+                        </button>
+                    </div>
+                </div>
+                <!--/.navbar-header -->
+
+
+                <div class="navbar-collapse collapse" id="navigation">
+                    <ul id="nav2" class="nav navbar-nav navbar-right">
+                        <!--boton nuestra fundaciòn-->
+                        <li id="informacion"  >
+                            <a href="~/Fundacion/informacion">Nuestra fundación</a>                      
+                        </li>
+                        <!--nuestros programas dropdwon-->
+                        <li id="NuestrosProgramas" class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Nuestros Programas<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li >
+                                    @Html.ActionLink("Cursos en Economía Solidaria(Cooperativismo)", "Solidaridad", "Fundacion")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Asesorias Profesionales", "AsesoriasP", "Fundacion")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Proyecto y Convenios Interadministrativos", "Convenios", "Fundacion")
+                                </li> 
+                                <li>@Html.ActionLink("Seminarios", "Seminarios", "Fundacion")
+                                </li> 
+                                <li>
+                                    @Html.ActionLink("Turismo", "Turismo", "Fundacion")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Proyecto de vivienda", "Proyectos", "Fundacion")
+                                </li>
+                                 
+                                <li>
+                                    @Html.ActionLink("Programas Recreativos", "Servicios", "Fundacion")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Grupo Años Felices", "AñosFelices", "Fundacion")
+                                </li>
+                               </ul>
+                        </li>
+                        <!--contactenos botòn-->
+                        <li id="Contactenos">
+                            <a href="@Url.Action("contactenos","Fundacion")">Contáctenos</a>
+                        </li>
+                        <!--boton home cofinal-->
+                        <li id="cofinal">
+                            <a href="~/Home/index">Cofinal</a>
+                        </li>
+                        @if (cuentaUsuario.IsAsociado)
+                        {
+                            <li id="cuenta">
+                                <a href="@Url.Action("homeaso","Home")">CUENTA</a>
+                            </li>
+                        }
+                        else if (cuentaUsuario.IsUsuario)
+                        {
+                            <li id="cuenta">
+                                <a href="@Url.Action("homeadmin","Home")">CUENTA</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+                
+                <div class="collapse clearfix" id="search">
+
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+
+                                <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                            </span>
+                        </div>
+                    </form>
+                                </div>
+                <!--/.nav-collapse -->
+
+            </div>
+        </div>
+        <!-- /#navbar -->
+    </div>
+    <!-- *** NAVBAR END *** -->
+</header>
+

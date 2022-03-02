@@ -1,0 +1,173 @@
+﻿@{
+    Layout = "~/Views/Shared/layoutAso.cshtml";
+    ViewBag.Title = "Forma de Pago";
+    ViewBag.titulo = "Forma de Pago";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "formasPago";
+
+}
+@model Ingenio.BO.asociados
+@using Ingenio.Models
+@{
+    ViewBag.Title = "Index";
+    AccountModels cuentaUsuario = new AccountModels();
+}
+
+
+@{
+    ViewBag.Title = "Contactos";
+    ViewBag.titulo = "Contactanos";
+    ViewBag.url = Url.Action("index", "home");
+
+}
+<!--formulario estilo-->
+<style>
+    #formulario {
+        background-color: rgba(234, 234, 234, 0.75);
+        margin-top: -10px;
+        background-attachment: fixed;
+        background-size: cover;
+        padding-top: 20px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        padding-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        -webkit-box-shadow: 0px 7px 54px -6px rgba(0,0,0,0.71);
+        -moz-box-shadow: 0px 7px 54px -6px rgba(0,0,0,0.71);
+        box-shadow: 0px 7px 54px -6px rgba(0,0,0,0.71);
+    }
+
+    .lead {
+        color: #2D1F1F;
+        font-family: inherit;
+    }
+
+    #info {
+        background-color: rgba(234, 234, 234, 0.75);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        -webkit-box-shadow: 0px 7px 54px -6px rgba(0,0,0,0.71);
+        -moz-box-shadow: 0px 7px 54px -6px rgba(0,0,0,0.71);
+        box-shadow: 0px 7px 54px -6px rgba(0,0,0,0.71);
+    }
+</style>
+
+<!--formulario contactenos-->
+<section style="background-image:url(/img/Logos/cofinalFondo.png); margin-bottom: 0px;">
+    <div class="container" style="margin-top: -40px;">
+        <div class="row">
+            <div class="col-md-8">
+
+                <section id="formulario">
+
+                    <div class="heading">
+                        <center><h2>REPORTE DE PAGO</h2></center>
+                    </div>
+
+                    <p class="lead">
+                        A través de este formulario puede confirmar la consignación realizada en el banco para agilizar el proceso.
+                    </p>
+                    @using (Html.BeginForm("ValidateCaptcha", "Formapago", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="firstname">Nombres</label>
+                                    <input @(cuentaUsuario.IsNull() ? "":"readonly") type="text" class="form-control" id="firstname" name="firstname" value="@ViewBag.nombreintegrado" required pattern="([a-zA-Z ]+)">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="lastname">Apellidos</label>
+                                    <input @(cuentaUsuario.IsNull() ? "":"readonly") type="text" class="form-control" id="lastname" name="lastname" value="@ViewBag.apellido" required pattern="([a-zA-Z ]+)">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="email">Cedula</label>
+                                    <input @(cuentaUsuario.IsNull() ? "":"readonly") type="number" class="form-control" id="Cedula" name="Cedula" value="@ViewBag.cedula" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="subject">Telefono</label>
+                                    <input @(cuentaUsuario.IsNull() ? "":"readonly") type="number" class="form-control" id="Telefono"  name="Telefono" value="@ViewBag.Telefono" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="message">Mensaje</label>
+                                    <textarea id="message" name="message" style="height:150px" class="form-control" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="message">Adjunte recibo de consignación(Tamaño maximo de la imagen 500 KB):</label>
+                                    <input type="file" name="archivo" required />
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-12 text-center">
+
+                                @*<div class="g-recaptcha" data-sitekey="6LfNcBMTAAAAAMilW297YqhG2Ap25DmeMc94zbMx"></div>
+                                <br />
+                                @section scripts{
+                                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                                }
+                                <div class="form-group">
+                                    <textarea id="capta" name="capta" style="height:150px" class="form-control hidden " required></textarea>
+                                </div>*@
+                                <button type="submit" onclick="darclick();" class="btn btn-template-main"><i class="fa fa-envelope-o"></i> Enviar Mensaje</button>
+
+                            </div>
+                        </div>
+                <!-- /.row -->
+                    }
+
+                </section>
+
+            </div>
+
+            <!--Información-->
+            <div class="col-md-4"style="margin-top: 30px;">
+                
+                <section id="info">
+
+                    <center>
+                        <h3 class="text-uppercase">Dirección y Teléfonos de nuestra Oficina Principal</h3></center>
+                    <center>
+                        <p>
+                            Cra. 29 No. 18-41
+                            <br>San Juan de Pasto
+                            <br>Nariño Colombia - Suramerica
+                            <br>Tel: +(011572) 7336300
+                            <br>
+                            <strong>Colombia</strong>
+                        </p>
+                    </center>
+
+</section>
+
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+        <script>
+            function darclick() {
+
+                //var captura = document.getElementById('g-recaptcha-response').value;
+                //if (captura == "")
+                //{ swal("Por favor, confirme que es una persona"); }
+                //else {
+
+                //    document.getElementById('capta').value = "listo";
+                //}
+            }
+        </script>
+

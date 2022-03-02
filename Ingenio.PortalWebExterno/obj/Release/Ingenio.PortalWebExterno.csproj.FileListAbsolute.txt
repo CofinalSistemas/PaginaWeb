@@ -1,0 +1,690 @@
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\ApplicationInsights.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\roslyn\csc.exe
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\roslyn\System.Collections.Immutable.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\roslyn\System.Reflection.Metadata.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\roslyn\vbc.exe
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\igmSliders\imgtemp.png
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\ClosedXML.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\FastMember.Signed.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Ingenio.DLL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AI.Agent.Intercept.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.Common.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.WebForms.DLL
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Web.Infrastructure.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.Helpers.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.Mvc.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.Optimization.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.Razor.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.WebPages.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\WebGrease.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Ingenio.DLL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\ClosedXML.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\ClosedXML.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.Helpers.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.Mvc.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.Optimization.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.Razor.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.WebPages.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\es\System.Web.Helpers.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\es\System.Web.Mvc.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\es\System.Web.Optimization.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\es\System.Web.Razor.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Deployment.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Razor.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\ApplicationInsights.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\msvcr120.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\msvcr120.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\roslyn\csc.exe
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\roslyn\System.Collections.Immutable.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\roslyn\System.Reflection.Metadata.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\roslyn\vbc.exe
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\igmSliders\imgtemp.png
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\ClosedXML.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\FastMember.Signed.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Ingenio.DLL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AI.Agent.Intercept.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.Common.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.WebForms.DLL
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.SqlServer.Types.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Web.Infrastructure.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.Helpers.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.Mvc.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.Optimization.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.Razor.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.WebPages.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\WebGrease.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Ingenio.DLL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\ClosedXML.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\ClosedXML.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.Helpers.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.Mvc.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.Optimization.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.Razor.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.WebPages.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\es\System.Web.Helpers.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\es\System.Web.Mvc.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\es\System.Web.Optimization.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\es\System.Web.Razor.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Deployment.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Razor.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\ApplicationInsights.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\msvcr120.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\msvcr120.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\roslyn\csc.exe
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\roslyn\System.Collections.Immutable.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\roslyn\System.Reflection.Metadata.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\roslyn\vbc.exe
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\igmSliders\imgtemp.png
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\ClosedXML.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\FastMember.Signed.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Ingenio.DLL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.Agent.Intercept.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.Common.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.WebForms.DLL
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.SqlServer.Types.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Web.Infrastructure.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.Helpers.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.Mvc.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.Optimization.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.Razor.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\WebGrease.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Ingenio.DLL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\ClosedXML.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\ClosedXML.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.Helpers.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.Mvc.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.Optimization.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.Razor.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Helpers.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Mvc.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Optimization.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Razor.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Deployment.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Razor.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ApplicationInsights.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\msvcr120.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\msvcr120.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\csc.exe
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\System.Collections.Immutable.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\System.Reflection.Metadata.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\vbc.exe
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\igmSliders\imgtemp.png
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ClosedXML.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\FastMember.Signed.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DLL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.Agent.Intercept.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.Common.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.WebForms.DLL
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.SqlServer.Types.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Web.Infrastructure.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Helpers.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Mvc.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Optimization.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Razor.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\WebGrease.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DLL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ClosedXML.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ClosedXML.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Helpers.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Mvc.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Optimization.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Razor.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Helpers.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Mvc.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Optimization.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Razor.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Deployment.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Razor.resources.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ApplicationInsights.config
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\msvcr120.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\msvcr120.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\csc.exe
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\System.Collections.Immutable.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\System.Reflection.Metadata.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\vbc.exe
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe.config
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\igmSliders\imgtemp.png
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll.config
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ClosedXML.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\EntityFramework.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\FastMember.Signed.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DLL.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.Common.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.SqlServer.Types.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Web.Infrastructure.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Owin.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Helpers.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Mvc.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Optimization.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Razor.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\WebGrease.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.BO.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll.config
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DLL.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ClosedXML.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ClosedXML.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\EntityFramework.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Helpers.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Mvc.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Optimization.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Razor.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DAL.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll.config
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Helpers.resources.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Mvc.resources.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Optimization.resources.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Razor.resources.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.resources.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.AssemblyReference.cache
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.CoreCompileInputs.cache
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.CopyComplete
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.pdb
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ApplicationInsights.config
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\msvcr120.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\msvcr120.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\csc.exe
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\System.Collections.Immutable.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\System.Reflection.Metadata.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\vbc.exe
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe.config
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\igmSliders\imgtemp.png
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll.config
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.pdb
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ClosedXML.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\EntityFramework.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\FastMember.Signed.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DLL.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.Common.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.WebForms.DLL
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.SqlServer.Types.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Web.Infrastructure.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Owin.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Helpers.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Mvc.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Optimization.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Razor.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\WebGrease.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.BO.pdb
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll.config
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DLL.pdb
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ClosedXML.pdb
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ClosedXML.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\EntityFramework.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Helpers.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Mvc.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Optimization.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.Razor.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.pdb
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.xml
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DAL.pdb
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll.config
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Helpers.resources.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Mvc.resources.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Optimization.resources.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.Razor.resources.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.resources.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Deployment.resources.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Razor.resources.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.AssemblyReference.cache
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.csproj.CoreCompileInputs.cache
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.dll
+E:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.PortalWebExterno\obj\Release\Ingenio.PortalWebExterno.pdb

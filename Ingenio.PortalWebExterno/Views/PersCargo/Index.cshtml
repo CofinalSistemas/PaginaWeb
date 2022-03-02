@@ -1,0 +1,316 @@
+﻿@model IEnumerable<Ingenio.BO.personacargo>
+
+@{
+    ViewBag.Title = "Beneficiarios";
+    ViewBag.titulo = "Beneficiarios";
+    Layout = "~/Views/Shared/layoutAso.cshtml";
+    ViewBag.activo = "estados";
+}
+
+<!--estilos-->
+<style>
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+
+    .modal-header, .modal-footer {
+        background-color: #5CB85C;
+    }
+
+    .modal-body {
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+
+    .btn-primary {
+        background-color: #da4d4d;
+        border-color: #da4d4d;
+    }
+
+    .modal-title {
+        color: white;
+    }
+
+    .table {
+        border-collapse: inherit;
+          background-color: rgba(242, 242, 242, 0.68);
+    }
+    
+</style>
+<section  id="contenido">
+    <div class="container">
+        <div class="table-responsive">
+            <table id="tac" class="table">
+                <thead>
+                    <tr style="background-color: #5CB85C; color: rgba(255, 255, 255, 0.9);">
+                        <th>
+                            Identificación
+                        </th>
+                        <th>
+                            Nombre
+                        </th>
+                        <th>
+                            Genero
+                        </th>
+                        <th>
+                            Fec. Nacimiento
+                        </th>
+                        <th>
+                            Parentesco
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                {
+                <tr data-number="@item.registro">
+                    <td id="nit-@item.registro" data-tipoidentificacion="@item.tipoidentificacion" data-cc="@item.nit">
+                        @Html.DisplayFor(modelItem => item.tipoidentificacion): @Html.DisplayFor(modelItem => item.nit)
+                    </td>
+                    <td id="nombre-@item.registro" data-nombre="@item.nombre.Trim()">
+                        @item.nombre.Trim()
+                    </td>
+                    <td id="sexo-@item.registro">
+                        @Html.DisplayFor(modelItem => item.sexo)
+                    </td>
+                    <td id="fechanacimiento-@item.registro">
+                        @{
+                                string fn = "";
+                                DateTime fecNacimiento = item.fechanacimiento ?? new DateTime();
+                                if (fecNacimiento == new DateTime())
+                                {
+                                    fn = "";
+                                }
+                                else
+                                {
+                                    fn = fecNacimiento.ToString("yyyy-MM-dd");
+                                }
+                        }
+                        @fn
+                    </td>
+                    <td id="parentesco-@item.registro" data-parentesco="@item.parentesco.Trim()">
+                        @{string parentesco = "";}
+                        @switch (item.parentesco.Trim())
+                            {
+                                case "C":
+                                    parentesco = ("Conyuge");
+                                    break;
+                                case "H":
+                                    parentesco = ("Hijo (a)");
+                                    break;
+                                case "P":
+                                    parentesco = ("Padres");
+                                    break;
+                                case "E":
+                                    parentesco = ("Hermano(a)");
+                                    break;
+                                case "A":
+                                    parentesco = ("Abuelo");
+                                    break;
+                                case "T":
+                                    parentesco = ("Tio(a)");
+                                    break;
+                                case "S":
+                                    parentesco = ("Sobrino (a)");
+                                    break;
+                                case "I":
+                                    parentesco = ("Primo (a)");
+                                    break;
+                                case "N":
+                                    parentesco = ("Nieto (a)");
+                                    break;
+                                case "O":
+                                    parentesco = ("Otro");
+                                    break;
+                                case "M":
+                                    parentesco = ("Amigo (a)");
+                                    break;
+                            }
+                        @parentesco
+                    </td>
+                    <td>
+                        <button title="Ver mas información" data-toggle="tooltip" data-action="ver" value="@item.registro" class="btn btn-xs btn-primary"><span class="fa fa-eye"></span></button>
+                    </td>
+                    <input type="hidden" id="estudiante-@item.registro" value="@item.estudiante">
+                    <input type="hidden" id="discapacitado-@item.registro" value="@item.discapacitado">
+                    <input type="hidden" id="terceraE-@item.registro" value="@item.terceraedad">
+                    <input type="hidden" id="administracion-@item.registro" value="@item.administracion">
+                    <input type="hidden" id="tratamiento-@item.registro" value="@item.tratamiento">
+                </tr>
+                                }
+                </tbody>
+            </table>
+            </div>
+
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Persona a cargo</h4>
+                        </div>
+
+                        <form>
+                            <div class="modal-body">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="phone">Identificación:</label>
+                                                <input type="number" name="nit" id="identificacionAC" class="form-control" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="tipoidentificacionAC">Tipo de documento:</label>
+                                                <input type="text" name="Tipoidenficación" id="tipoidentificacionAC" class="form-control" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="nombreAC">Nombre:</label>
+                                                <input type="text" class="form-control" name="nombre" id="nombreAC" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="FechaNAC">Fecha de nacimiento:</label>
+                                                <input type="text" max="@DateTime.Now.ToString("yyyy-MM-dd")" name="fechanacimiento" value="" id="FechaNAC" class="form-control" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="sexoAC">Genero:</label>
+                                                <input type="text" class="form-control" name="sexo" id="sexoAC" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="parentescoAC">Parentesco:</label>
+                                                <input type="text" class="form-control" name="parentesco" id="parentescoAC" disabled>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span style="text-align:justify;" class="input-group-addon"> <input disabled type="checkbox" name="estudiante" id="estudianteAC"></span>
+                                                <label style="text-align:justify;" for="estudianteAC" class="input-group-addon">Estudiante</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span style="text-align:justify;" class="input-group-addon"><input disabled type="checkbox" name="discapacitado" id="discapacidadAC"></span>
+                                                <label style="text-align:justify;" for="discapacidadAC" class="input-group-addon">Discapacitado</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span style="text-align:justify;" class="input-group-addon"><input disabled type="checkbox" name="terceraedad" id="terceraEAC"></span>
+                                                <label style="text-align:justify;" for="terceraEAC" class="input-group-addon">Tercera edad</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span style="text-align:justify;" class="input-group-addon"><input disabled type="checkbox" name="tratamiento" id="tratamientoAC"></span>
+                                                <label style="text-align:justify;" for="tratamientoAC" class="input-group-addon">Tratamiento</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group ">
+                                                <span style="text-align:justify;" class="input-group-addon"><input disabled type="checkbox" name="administracion" id="administracionAC"></span>
+                                                <label style="text-align:justify;" for="administracionAC" class="input-group-addon">Administración</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<script>
+
+    $('table').on('click', "[data-action=ver]", function (event) {
+
+        event.preventDefault();
+        var id = $(this).val();
+        //var tipoI = $('#tipoidentificacion'+id).html();
+        var tipoIdentificacion = $('#nit-' + id).data("tipoidentificacion");
+        var identificacion = $('#nit-' + id).data("cc");
+        var nombre = $('#nombre-' + id).data("nombre");
+        var sexo = $('#sexo-' + id).html();
+        var fechaN = $('#fechanacimiento-' + id).html().trim();
+        var parentesco = $('#parentesco-' + id).html();
+        var estudiante = $('#estudiante-' + id).val();
+        var discapacitado = $('#discapacitado-' + id).val();
+        var administracion = $('#administracion-' + id).val();
+        var tercera = $('#terceraE-' + id).val();
+        var tratamiento = $('#tratamiento-' + id).val();
+        switch (tipoIdentificacion) {
+            case "C":
+                tipoIdentificacion = ("Cédula ciudadania");
+                break;
+            case "N":
+                tipoIdentificacion = ("Nit");
+                break;
+            case "P":
+                tipoIdentificacion = ("Pasaporte");
+                break;
+            case "E":
+                tipoIdentificacion = ("Cédula extrangería");
+                break;
+            case "R":
+                tipoIdentificacion = ("Registro cívil");
+                break;
+            case "T":
+                tipoIdentificacion = ("Tarjeta de identidad");
+                break;
+            case "U":
+                tipoIdentificacion = ("Nro. inico Ident. personal");
+                break;
+            case "H":
+                tipoIdentificacion = ("RUT");
+                break;
+            case "O":
+                tipoIdentificacion = ("Otro");
+                break;
+        }
+        switch (sexo.trim()) {
+            case "M":
+                sexo = ("MASCULINO");
+                break;
+            case "F":
+                sexo = ("FEMENINO");
+        }
+
+        $('#tipoidentificacionAC').val(tipoIdentificacion);
+        $('#identificacionAC').val(identificacion);
+        $('#nombreAC').val(nombre);
+        $('#FechaNAC').val(fechaN);
+        $('#sexoAC').val(sexo);
+        $('#parentescoAC').val(parentesco.trim());
+        $('#estudianteAC').attr('checked', estudiante == "S" ? true : false);
+        $('#discapacidadAC').attr('checked', discapacitado == "S" ? true : false);
+        $('#administracionAC').attr('checked', administracion == "S" ? true : false);
+        $('#tratamientoAC').attr('checked', tratamiento == "S" ? true : false);
+        $('#terceraEAC').attr('checked', tercera == "S" ? true : false);
+        $('#myModal').modal('show');
+    })
+
+</script>

@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Cenit.Votos.Controllers.Reporte>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="container">
+    <div class="section">
+
+
+        <div class="center no-pad">
+            <div class="col s12">
+                <div class="icon-block">
+                    <h2 class="center" style="color:#333"><i class="material-icons md-96">ballot</i></h2>
+                    <h5 class="center">Resultados</h5>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section no-pad">
+            <div class="center no-pad">
+                <div class="col s12">
+                    <table class="table" class="responsive-table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.AgenciaId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.AgenciaNombre)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.CargoId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.CargoNombre)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.CandidatoId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.CandidatoNombre)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Votos)
+                            </th>
+
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AgenciaId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AgenciaNombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CargoId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CargoNombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CandidatoId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CandidatoNombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Votos)
+                                </td>
+
+                            </tr>
+                        }
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+

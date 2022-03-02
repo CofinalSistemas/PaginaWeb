@@ -1,0 +1,90 @@
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\EntityFramework.SqlServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\Newtonsoft.Json.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\EntityFramework.SqlServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\bin\Release\Newtonsoft.Json.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Release\Ingenio.DAL.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Release\Ingenio.DAL.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Release\Ingenio.DAL.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Release\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal\Ingenio.DAL\obj\Release\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\EntityFramework.SqlServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\Newtonsoft.Json.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\EntityFramework.SqlServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\bin\Release\Newtonsoft.Json.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Release\Ingenio.DAL.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Release\Ingenio.DAL.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Release\Ingenio.DAL.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Release\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Release\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\EntityFramework.SqlServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\Newtonsoft.Json.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\EntityFramework.SqlServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\bin\Release\Newtonsoft.Json.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 28_06_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Ingenio.DAL.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Ingenio.DAL.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\EntityFramework.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\EntityFramework.SqlServer.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Ingenio.BO.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Newtonsoft.Json.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Owin.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Ingenio.BO.pdb
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Ingenio.BO.dll.config
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\EntityFramework.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\EntityFramework.SqlServer.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Newtonsoft.Json.xml
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.csprojAssemblyReference.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.csproj.CoreCompileInputs.cache
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.csproj.CopyComplete
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.dll
+F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Ingenio.DAL.dll.config
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Ingenio.DAL.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Ingenio.DAL.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\EntityFramework.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\EntityFramework.SqlServer.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Ingenio.BO.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Newtonsoft.Json.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Owin.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Ingenio.BO.pdb
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Ingenio.BO.dll.config
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\EntityFramework.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\EntityFramework.SqlServer.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\bin\Release\Newtonsoft.Json.xml
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.csproj.AssemblyReference.cache
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.csproj.CoreCompileInputs.cache
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.csproj.CopyComplete
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.dll
+D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.DAL\obj\Release\Ingenio.DAL.pdb

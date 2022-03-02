@@ -1,0 +1,113 @@
+﻿@model Ingenio.PortalWebExterno.Models.SubscribeModel
+    <style>
+        #contenido {
+            background-image: url(/img/Logos/cofinalFondo.png);
+            margin-top: -40px;
+            padding-top: 40px;
+            margin-bottom: 0px;
+        }
+        .form-control{border-radius: 10px 10px 0 0;
+
+    }
+    </style>
+<section id="contenido">
+    <div class="container" >
+        <section>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4" style="background-color: rgba(229, 229, 229, 0.82); padding-bottom: 20px;">
+
+                    <h3 class="text-uppercase text-center">Restablecimiento de contraseña</h3>
+
+                    <p class="text-muted text-justify">
+                        Recibirá un correo electrónico con instrucciones sobre cómo restablecer su contraseña. Si no tiene acceso a su correo electrónico comunicate con nosotros.
+                    </p>
+                    <hr style="border-top: 1px solid #9E9E9E;">
+                    <form id="pass" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+                           
+                            <input name="identificacion" minlength="6" type="number" id="identificacion" class="form-control" placeholder="Identificación" required>
+                        </div>
+                        <div class="text-center">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.Captcha)
+                                <a href="@Url.Action("Index")">
+                                    <img alt="Captcha" src="@Url.Action("CaptchaImage")" style="" />
+                                </a>
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.Captcha)
+                                @Html.ValidationMessageFor(model => model.Captcha)
+                            </div>
+                            @*<div style="text-align:center;" class="g-recaptcha" data-sitekey="6LfNcBMTAAAAAMilW297YqhG2Ap25DmeMc94zbMx"></div>
+                            <br />
+                            @section scripts{
+                                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                            }*@
+                        </div>
+                        <div id="alertCapcha" style="display: none;" height 2em; line-height 0.5em;>
+                            <div class="alert alert-danger">Valida que no eres un robot</div>
+                        </div>
+                        <hr style="border-top: 1px solid #9E9E9E;">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-template-main"><i class="fa fa-key"></i>Enviar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</section>
+@Scripts.Render("~/bundles/md5")
+<script>
+
+    var error = false;
+
+    $("form").on("submit", function () {
+         event.preventDefault();
+
+        //var captura = document.getElementById('g-recaptcha-response').value;
+        //if (captura == "") {
+        //    $("#alertCapcha").show();
+        //    return false;
+        //}
+        //if (error) {
+        //    return false;
+        //}
+        //enviar formulario
+        var fd = new FormData(this);
+
+        swal({
+            title: "Espera un momento",
+            text: "Guardando...",
+            allowEscapeKey: false,
+            allowOutsideClick: false,
+            showConfirmButton: false
+        });
+        $.ajax({
+            url: "@Url.Action("RestaurarPass","account")",
+            type: "POST",
+            data: fd,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                if (response.estado) {
+
+                    alert("Por favor ingresa a tu correo electronico para terminar el registro.");
+                    //swal({
+                    //    title: "Información guardada",
+                    //    text: "Por favor ingresa a tu correo electronico para terminar el registro.",
+                    //    timer: 2000,
+                    //    type: "success",
+                    //    showConfirmButton: true
+                    //});
+                } else {
+                    alert(response.mensaje);
+                }
+            }
+        });
+    })
+</script>
+

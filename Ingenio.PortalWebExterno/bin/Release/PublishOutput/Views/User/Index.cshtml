@@ -1,0 +1,560 @@
+﻿@model IEnumerable<Ingenio.BO.Ingenio.Usuarios>
+
+@{
+    Layout = "~/Views/Shared/layoutAdmin.cshtml";
+    ViewBag.Title = "Gestión Usuarios";
+    ViewBag.titulo = "Gestión Usuarios";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "adminPerso";
+
+}
+<style>
+    #mensaje {
+        color: rgb(255, 255, 255);
+        background-color: rgb(92, 184, 92);
+        border-color: #5CB85C;
+    }
+    .panel-body {
+        padding: 15px;
+        background-color: rgba(204, 204, 204, 0.51);
+        
+    }
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+    .modal-header, .modal-footer{
+                    background-color: #5CB85C;
+    }
+    .modal-body{
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+
+    .btn-primary{
+    background-color: #da4d4d; border-color: #da4d4d;
+       } 
+    .modal-title{
+            color: white;
+    }
+</style>
+<section id="contenido">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" id="mensaje" style="display:none">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <button id="limpiarcamposnuevo" type="button" data-toggle="modal" data-target="#nuevo" class="btn icon-btn btn-success">
+                    <span class="fa fa-plus"></span> Nuevo
+                </button>
+            </div>
+            <hr />
+
+        </div>
+        <div class="panel panel-default" style="border-radius: 15px;">
+            <div class="panel-body" style="border-radius: 15px;">
+                <div class="table-responsive" style="color:#111;">
+                    <table id="tac" class="table">
+                        <thead>
+                            <tr>
+                                <th>Activo</th>
+                                <th>Identificación</th>
+                                <th>Usuario</th>
+                                <th>Nombre</th>
+                                <th>Cargo</th>
+                                <th>Fecha acceso</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr data-number="@item.Id">
+                                    <td id="activo-@item.Id">
+                                        <input @Html.Raw(item.Id == 1 ? "disabled" : "")  type="checkbox" id="activo2-@item.Id" name="activo" data-value="@item.Id" @Html.Raw(@item.Activo == true ? "checked" : "") />
+                                    </td>
+                                    <td id="identificacion-@item.Id">
+                                        @Html.DisplayFor(modelItem => item.Identificacion)
+                                    </td>
+                                    <td id="username-@item.Id">
+                                        @Html.DisplayFor(modelItem => item.UserName)
+                                    </td>
+                                    <td id="nombre-@item.Id">
+                                        @Html.DisplayFor(modelItem => item.Nombre)
+                                    </td>
+                                    <td id="cargo-@item.Id">
+                                        @Html.DisplayFor(modelItem => item.Cargos.Nombre)
+                                    </td>
+                                    <td id="fechaultimoacceso-@item.Id">
+                                        @Html.DisplayFor(modelItem => item.FechaUltimoAcceso)
+                                    </td>
+                                    <td>
+                                        <button name="Accion" title="Ver / Cambiar roles" data-toggle="modal" data-target="#dRoles" value="@item.Id" class="btn btn-xs btn-default " data-toggl="tooltip"><span class="fa fa-eye"></span></button>
+                                        <button name="Accion" title="Editar usuario" data-toggle="modal" data-target="#nuevo" value="@item.Id" data-action="editar" data-fechaacceso="@item.FechaUltimoAcceso" data-cargo="@item.Id_Cargo" data-telefono="@item.Telefono" class="btn btn-xs btn-success" data-toggl="tooltip"><span class="fa fa-pencil-square-o "></span></button>
+                                        <button name="Accion" title="Eliminar usuario" data-action="eliminar" value="@item.Id" class="btn btn-xs btn-danger" data-toggl="tooltip"><span class="fa fa-trash-o"></span></button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="nuevo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Nuevo Usuario</h4>
+                </div>
+                <form id="formModal" action="post">
+                    <div class="modal-body">
+                        <h5>Datos personales</h5>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="phone">Identificación:</label>
+                                        <input type="number" name="Identificacion" id="identificacion" placeholder="1224234535" minlength="5" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="nombre">Nombre:</label>
+                                        <input type="text" class="form-control" title="Solo se admiten letras a-zA-Z" pattern="[a-zA-Z ]+" name="Nombre" id="nombre" placeholder="Digita un nombre" minlength="5" maxlength="30" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="Telefono">Teléfono:</label>
+                                        <input type="number" class="form-control" name="Telefono" id="telefono" placeholder="3147782122 ó 7207256" minlength="5" maxlength="30" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="nombreAC">Cargo:</label>
+                                    <div id="inputCargo" style="display:none;" class="form-group">
+                                        <input type="text" class="form-control" title="Solo se admiten letras a-zA-Z" pattern="[a-zA-Z ]+" name="cargo" id="cargo" placeholder="Digite nuevo cargo" maxlength="100">
+                                    </div>
+                                    <div id="cambiarInput" class="input-group">
+                                        <select name="Id_Cargo" id="cargos" class="form-control">
+                                            @foreach (var item in ViewBag.cargo)
+                                            {
+                                                <option value="@item.Id">@item.Nombre</option>
+                                            }
+                                        </select>
+                                        <span class="input-group-btn">
+                                            <button id="nuevoCargo" title="Agregar nuevo cargo" data-toggle="tooltip" class="btn btn-success" type="button"><span class="fa fa-plus"></span></button>
+                                        </span>
+
+                                    </div><!-- /input-group -->
+                                </div>
+                            </div>
+
+                            <h5>Información de la cuenta</h5>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="username" class="control-label">Nombre de usuario:</label>
+                                        <input title="El nombre no puede estar vacio o contener estos caracteres ! # $ % & \/<>=?¿" type="text" pattern="[a-zA-Z0-9][a-zA-Z0-9_.-]{4,15}" name="UserName" id="username" class="form-control" placeholder="Sin espacios" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="password" class="control-label">Contraseña:</label>
+                                        <input minlength="6" type="password" id="password" class="form-control" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="password2" class="control-label">Repita la contraseña:</label>
+                                        <input minlength="6" type="password" id="password2" class="form-control" placeholder="" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="alert2" class="alert alert-danger" style="display: none; height: 2em; line-height: 0.5em;">Las contraseñas no coinciden</div>
+                            <!-- /.row -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="crear" class="btn btn-primary" style="">Guardar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dRoles" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Agregar / quitar roles</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="edit-body">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" id="save" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+@Scripts.Render("~/bundles/cifrar")
+
+<script src="~/Scripts/md5.js"></script>
+<script>
+
+
+    var patron = /^[a-zA-Z0-9][a-zA-Z0-9_.-]{4,9}$/,
+        error = false,
+        id,
+        edit = false,
+        activo = false,
+        fechaAcceso = "";
+
+    $(".table").DataTable({
+        fixedHeader: true
+    });
+    $('[data-toggl="tooltip"]').tooltip();
+    $(function () {
+
+        $("#tac").on("change", "[name=activo]", function () {
+            var id = $(this).data("value");
+            var activo = false
+            if (this.checked) // if changed state is "CHECKED"
+            {
+                activo = true
+            }
+            $.post("@Url.Action("ActivarUsuario")", { Id: id, Activo: activo }, function (res) {
+                if (res.estado == true) {
+                    $("#mensaje").attr("class", "alert alert-success");
+                    $("#mensaje p").html("Cambios realizados");
+                } else {
+                    $("#mensaje").attr("class", "alert alert-danger");
+                    $("#mensaje p").html(res.mensaje);
+                }
+                var timer = setInterval(function () {
+                    $("#mensaje").toggle("slide", { direction: "left" });
+                    clearInterval(timer);
+                }, 3000);
+                $("#mensaje").show();
+            });
+
+
+        })
+        $('#dRoles').on('show.bs.modal', function (e) {
+            $.post('@Url.Action("Details")', { id: id }, function (res) {
+                var ul = $("<ul>").css("list-style", "none");
+                $.each(res, function (index, value) {
+                    $("<li>")
+                        .append($("<input>", { type: "checkbox", name: value.id, id: value.id, checked: value.activo, disabled:value.disabled }))
+                        .append($("<Label>", { "for": value.id, html: value.nombre }))
+                        .appendTo(ul);
+                })
+                $("#edit-body").html(ul);
+            })
+        })
+
+        $("#password, #password2").on("change", function () {
+            var password = $("#password").val(),
+            password2 = $("#password2").val();
+            if (password != password2) {
+                $("#alert2").show();
+                error = true;
+            } else {
+                $("#alert2").hide();
+                error = false;
+            }
+        })
+
+        $("#cpassword, #cpassword2").on("change", function () {
+            var password = $("#cpassword").val(),
+            password2 = $("#cpassword2").val();
+            if (password != password2) {
+                $("#alert3").show();
+                error = true;
+            } else {
+                $("#alert3").hide();
+                error = false;
+            }
+        });
+
+        $("tbody").on("click", "[name=Accion]", function () {
+            id = $(this).val();
+            if ($(this).data("action") == "eliminar") {
+                eliminar(this);
+            }
+            if ($(this).data("action") == "editar") {
+                event.preventDefault();
+                edit = true;
+                id = $(this).val();
+
+                $("#cambiarInput").show();
+                $("#inputCargo").hide();
+                //var tipoI = $('#tipoidentificacion'+id).html();
+                var identificacion = $('#identificacion-' + id).html().trim();;
+                var username = $('#username-' + id).html().trim();;
+                var nombre = $('#nombre-' + id).html().trim();;
+                var cargo = $(this).data("cargo");
+                var telefono = $(this).data("telefono");
+                fechaAcceso = $(this).data("fechaacceso");
+                activo = $("#activo2-" + id).val();
+
+
+                $('#identificacion').val(identificacion);
+                $('#nombre').val(nombre);
+                $('#telefono').val(telefono);
+                $('#cargos option[value=' + cargo + ']').attr('selected', true);
+                $('#username').val(username);
+                $('#password2,#password').val("");
+                $("#password, #password2").attr("required", false);
+                $('#cargo').val("");
+
+
+            }
+        });
+
+        function eliminar(tag) {
+            swal({
+                title: "Desea eliminar el usuario?",
+                text: "",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Si, eliminar",
+                closeOnConfirm: false
+            },
+            function () {
+                $.post('@Url.Action("Delete")', { id: id }, function (response) {
+                    if (response == true) {
+                        swal({
+                            title: "Eliminado",
+                            text: "",
+                            timer: 1000,
+                            showConfirmButton: false
+                        });
+                        $(tag).parent().parent().remove();
+                    } else {
+                        swal("Error", "No se puede eliminar el usuario, se le han asignado un rol.", "error");
+                    }
+
+                });
+            });
+        }
+
+        $("#nuevoCargo").on("click", function () {
+            $("#cambiarInput").hide();
+            $("#inputCargo").show();
+            $("#cargo").attr("required", true);
+        })
+
+        $('#limpiarcamposnuevo').on('click', function (event) {
+            event.preventDefault();
+            edit = false;
+            $("#password, #password2").val("");
+            $('#nuevo [type=text],[type=number], [type=password]').val("");
+            $("#cambiarInput").show();
+            $("#inputCargo").hide();
+            $("#cargo").attr("required", false);
+        });
+
+        $('#formModal').on('submit', function (event) {
+            event.preventDefault();
+            if (error) {
+                return false;
+            }
+            //enviar formulario
+            var fd = new FormData(this);
+            var password = $("#password").val();
+            cargoInput = $("#cargo").val();
+
+            if (edit) {
+                if (password != "") {
+                    password = CryptoJS.MD5($("#password").val()).toString();
+                }
+                fd.append("Id", id);//el id es una variable global
+                fd.append("Password", password);
+                swal({
+                    title: "Espera un momento",
+                    text: "Guardando...",
+                    allowEscapeKey: false,
+                    allowOutsideClick: false,
+                    showConfirmButton: false
+                });
+                $.ajax({
+                    url: "@Url.Action("Edit")" + "/" + id,
+                    type: "POST",
+                    data: fd, cargoInput,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        if (response.estado) {
+                            Id = response.Id;
+                            var identificacion = $('#identificacion').val();
+                            var nombre = $('#nombre').val();
+                            var cargo = "";
+                            cargo = $('#cargo').val();
+                            if (cargo == "") {
+                                cargo = $('#cargos option:selected').html();
+                            }
+                            var username = $('#username').val();
+                            username = username.toUpperCase();
+                            swal({
+                                title: "Cambios guardados exitosamente",
+                                text: "",
+                                timer: 2000,
+                                type: "success",
+                                showConfirmButton: true
+                            });
+                            $('#cargos').append($('<option>', {
+                                val: response.Id_Cargo,
+                                text: cargo
+                            }));
+                            $("#cambiarInput").show();
+                            $("#inputCargo").hide();
+                            var checkA = $("<input>", { type: "checkbox", name: "activo", "data-value": Id, checked: response.activo, disabled: response.disabledcheck });
+                            var botones = $("<td>")
+                                .append($("<button>", { name: "Accion", "data-original-title": "Ver / Cambiar roles", class: "btn  btn-xs btn-default", value: Id, "data-toggle": "modal", "data-target": "#dRoles", "data-toggl": "tooltip", html: "<span class='fa fa-eye'></span>" }))
+                                .append(" ")
+                                .append($("<button>", { name: "Accion", "data-original-title": "Editar usuario", class: "btn  btn-xs btn-success", "data-action": "editar", "data-cargo": response.Id_Cargo, "data-telefono": response.telefono, value: Id, "data-toggle": "modal", "data-target": "#nuevo", "data-toggl": "tooltip", html: "<span class='fa fa-pencil-square-o'></span>" }))
+                                .append(" ")
+                                .append($("<button>", { name: "Accion", "data-original-title": "Eliminar usuario", class: "btn  btn-xs btn-danger", value: Id, "data-toggle": "modal", "data-action": "eliminar", "data-toggl": "tooltip", html: "<span class='fa fa-trash-o'></span>" }))
+
+                            $("[data-number = " + id + "]").replaceWith(
+                            $('<tr>', { "data-number": id })
+                                .append($("<td>", { html: checkA, id: "activo-" + Id }))
+                                .append($("<td>", { html: identificacion, id: 'identificacion-' + Id }))
+                                .append($("<td>", { html: username, id: "username-" + Id }))
+                                .append($("<td>", { html: nombre, id: "nombre-" + Id }))
+                                .append($("<td>", { html: cargo, id: "cargo-" + Id }))
+                                .append($("<td>", { html: fechaAcceso, id: "fechaultimoacceso-" + Id }))
+                            .append(botones)
+                            );
+                            $('#nuevo').modal('hide');
+
+                        } else {
+                            swal("Error", response.mensaje, "error")
+                        }
+                    }
+                });
+            }
+
+            else {
+
+                fd.append("Password", CryptoJS.MD5($(password).val()).toString());
+                swal({
+                    title: "Espera un momento",
+                    text: "Guardando...",
+                    allowEscapeKey: false,
+                    allowOutsideClick: false,
+                    showConfirmButtom: false
+                });
+                $.ajax({
+                    url: "@Url.Action("create")",
+                    type: "POST",
+                    data: fd, cargoInput,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        if (response.estado) {
+                            console.log(response);
+                            Id = response.Id;
+                            var identificacion = $('#identificacion').val();
+                            var nombre = $('#nombre').val();
+                            var cargo = "";
+                            cargo = $('#cargo').val();
+                            if (cargo == "") {
+                                cargo = $('#cargos option:selected').html();
+                            }
+
+                            var username = $('#username').val();
+                            username = username.toUpperCase();
+                            swal({
+                                title: "Cambios guardados exitosamente",
+                                text: "",
+                                timer: 2000,
+                                type: "success",
+                                showConfirmButton: true
+                            });
+                            $('#cargos').append($('<option>', {
+                                val: response.Id_Cargo,
+                                text: cargo
+                            }));
+                            $("#cambiarInput").show();
+                            $("#inputCargo").hide();
+                            var checkA = $("<input>", { type: "checkbox", name: "activo", "data-value": Id, checked: true });
+                            var element = $("<tr>", { "data-numer": Id })
+                                .append($("<td>", { html: checkA, id: "activo-" + Id }))
+                                .append($("<td>", { html: identificacion, id: 'identificacion-' + Id }))
+                                .append($("<td>", { html: username, id: "username-" + Id }))
+                                .append($("<td>", { html: nombre, id: "nombre-" + Id }))
+                                .append($("<td>", { html: cargo, id: "cargo-" + Id }))
+                                .append($("<td>", { html: response.fecha_acceso, id: "fechaultimoacceso-" + Id }))
+                            var botones = $("<td>")
+                                .append($("<button>", { name: "Accion", "data-original-title": "Ver / Cambiar roles", class: "btn  btn-xs btn-default", value: Id, "data-toggle": "modal", "data-target": "#dRoles", "data-toggl": "tooltip", html: "<span class='fa fa-eye'></span>" }))
+                                .append(" ")
+                                .append($("<button>", { name: "Accion", "data-original-title": "Editar usuario", class: "btn  btn-xs btn-success", "data-action": "editar", "data-cargo": response.Id_Cargo, "data-telefono": response.telefono, value: Id, "data-toggle": "modal", "data-target": "#nuevo", "data-toggl": "tooltip", html: "<span class='fa fa-pencil-square-o'></span>" }))
+                                .append(" ")
+                                .append($("<button>", { name: "Accion", "data-original-title": "Eliminar usuario", class: "btn  btn-xs btn-danger", value: Id, "data-toggle": "modal", "data-action": "eliminar", "data-toggl": "tooltip", html: "<span class='fa fa-trash-o'></span>" }))
+                                .appendTo(element);
+                            $('#nuevo').modal('hide');
+                            $(".table").append(element);
+
+                            //  swal("Guardado con exito", "", "success");
+                        } else {
+                            swal("Error", response.mensaje, "error")
+                        }
+                    }
+                });
+            }
+        });
+
+
+        $("#save").on("click", function () {
+            var datos = new Array();
+            $.each($("#edit-body input[type=checkbox]"), function (index, value) {
+                if ($(value).prop("checked") == true) {
+                    datos.push($(value).attr("name"));
+                }
+            })
+            datos = JSON.stringify(datos);
+
+            $.post('@Url.Action("CambiarRoles")', { data: datos, id: id }, function (res) {
+
+                if (res == true) {
+                    $("#mensaje").attr("class", "alert alert-success");
+                    $("#mensaje p").html("Cambios realizados");
+                } else {
+                    $("#mensaje").attr("class", "alert alert-danger");
+                    $("#mensaje p").html(res.mensaje);
+                }
+                $("#dRoles").modal("toggle");
+                var timer = setInterval(function () {
+                    $("#mensaje").toggle("slide", { direction: "left" });
+                    clearInterval(timer);
+                }, 5000);
+                $("#mensaje").show();
+            })
+        })
+    })
+</script>

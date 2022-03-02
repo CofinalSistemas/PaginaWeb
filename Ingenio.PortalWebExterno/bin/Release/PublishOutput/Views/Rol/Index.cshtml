@@ -1,0 +1,349 @@
+﻿@model IEnumerable<Ingenio.BO.Ingenio.Roles>
+
+@{
+
+    Layout = "~/Views/Shared/layoutAdmin.cshtml";
+    ViewBag.Title = "Roles";
+    ViewBag.titulo = "Roles";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "adminPerso";
+}
+
+<style>
+   #mensaje {
+        color: rgb(255, 255, 255);
+        background-color: rgb(92, 184, 92);
+        border-color: #5CB85C;
+    }
+
+    .panel-body {
+        padding: 15px;
+        background-color: rgba(204, 204, 204, 0.51);
+    }
+
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+
+    .modal-header, .modal-footer {
+        background-color: #5CB85C;
+    }
+
+    .modal-body {
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+
+    .btn-primary {
+        background-color: #da4d4d;
+        border-color: #da4d4d;
+    }
+
+    .modal-title {
+        color: white;
+    }
+</style>
+
+<section id="contenido">
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="alert alert-danger" id="mensaje" style="display:none">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <p></p>
+            </div>
+
+            <div class="col-md-3">
+                <button type="button" id="nuevo" class="btn icon-btn btn-success">
+                    <span class="fa fa-plus"></span> Nuevo
+                </button>
+            </div>
+            <hr />
+
+        </div>
+        <div class="panel panel-default" style="border-radius: 15px;">
+            <div class="panel-body">
+                <div class="table-responsive" style="color:#111;">
+                    <table id="tac" class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Nombre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Activo)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr data-number="@item.Id">
+                                    <td>
+                                        <input @Html.Raw(item.Id == 1 ? "disabled" : "") value="@item.Id" type="checkbox" id="Activo-@item.Id" name="acti" @Html.Raw(@item.Activo == true ? "checked" : "") />
+                                    </td>
+                                    <td id="Nombre-@item.Id">
+                                        @Html.DisplayFor(modelItem => item.Nombre)
+                                    </td>
+                                    <td>
+                                        <button title="Editar/Detalles" data-action="editar" value="@item.Id" class="btn btn-xs btn-default " data-toggle="tooltip"><span class="fa fa-pencil"></span></button>
+                                        <button title="Eliminar" data-action="eliminar" value="@item.Id" class="btn btn-xs btn-danger" data-toggle="tooltip"><span class="fa fa-trash-o"></span></button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 id="editroles" class="modal-title">Roles</h4>
+                    </div>
+
+                    <form id="formModal" action="post">
+                        <div class="modal-body">
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="Nombre">Nombre</label>
+                                            <input type="text" name="Nombre" id="NombreAC" placeholder="Admin" minlength="4" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h5><strong>Modulos</strong></h5>
+                                        <hr>
+                                        <ul id="modulos" style="list-style:none"></ul>
+                                    </div>
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary" id="save">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var edit = false;
+    var id
+    $(".table").DataTable({
+        fixedHeader: true
+    });
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    $("table").on("change", "[name=acti]", function () {
+
+        var id = $(this).val();
+        var activo = false
+        if (this.checked) // if changed state is "CHECKED"
+        {
+            activo = true
+        }
+        $.post("@Url.Action("ActivarRol")", { Id: id, Activo: activo }, function (res) {
+            if (res.estado == true) {
+                $("#mensaje").attr("class", "alert alert-success");
+                $("#mensaje p").html("Cambios realizados");
+            } else {
+                $("#mensaje").attr("class", "alert alert-danger");
+                $("#mensaje p").html(res.mensaje);
+            }
+            var timer = setInterval(function () {
+                $("#mensaje").toggle("slide", { direction: "left" });
+                clearInterval(timer);
+            }, 3000);
+            $("#mensaje").show();
+        });
+    });
+
+    $('table').on('click', "[data-action=editar]", function (event) {
+        event.preventDefault();
+        edit = true
+        id = $(this).val();
+        var Nombre = $('#Nombre-' + id).html().trim();
+        // var Activo = $('#Activo-' + id).prop("checked");
+        $('#NombreAC').val(Nombre);
+        // $('#ActivoAC').prop('checked', Activo);
+
+        $.post('@Url.Action("Details")', { id: id }, function (response) {
+            $("#modulos").html("");
+            $("#editroles").html("Editar rol");
+            $.each(response.modulos, function (index, value) {
+                var label = $("<label>", { html: value.nombre, "for": value.id });
+                checkbox = $("<input>", { disabled: value.disabled, type: "checkbox", "id": value.id, "name": value.id, checked: value.activo });
+                var li = $("<li>")
+                    .append(checkbox)
+                    .append(label);
+                $("#modulos").append(li);
+            });
+        });
+        $('#myModal').modal('show');
+    });
+
+    $('#nuevo').on('click', function (event) {
+        event.preventDefault();
+        edit = false;
+
+        $('#formModal [type=checkbox]').attr("checked", false);
+        $('#formModal [type=text],[type=number],[type=date], select').val("");
+
+        $.post('@Url.Action("Create")', function (response) {
+            $("#modulos").html("");
+            $("#editroles").html("Agregar nuevo rol");
+            $.each(response, function (index, value) {
+                var label = $("<label>", { html: value.Nombre, "for": value.Id, name: value.Id });
+                checkbox = $("<input>", { type: "checkbox", id: value.Id });
+                var li = $("<li>")
+                    .append(checkbox)
+                    .append(label);
+                $("#modulos").append(li);
+
+            });
+            $('#myModal').modal('show');
+        });
+
+    });
+
+    $("#formModal").on("submit", function (e) {
+        e.preventDefault();
+        var datos = new Array();
+        var nombre = $("#NombreAC").val().toUpperCase();
+        // var activo = $("#ActivoAC").prop("checked");
+        $.each($("#modulos input[type=checkbox]"), function (index, value) {
+            if ($(value).prop("checked") == true) {
+                datos.push($(value).attr("id"));
+            }
+        })
+        datos = JSON.stringify(datos);
+        if (edit) {
+            swal({
+                title: "Espera un momento",
+                text: "Guardando...",
+                allowEscapeKey: false,
+                allowOutsideClick: false,
+                showConfirmButton: false
+            });
+            $.post('@Url.Action("CambiarPermisos")', { data: datos, nombre: nombre, rol: id }, function (response) {
+                if (response.estado == true) {
+
+                    var checkbox = $('<input>', { name: "acti", type: "checkbox", id: "Activo-" + id, checked: response.activo, disabled: response.disabledcheck, value: id });
+                    var botones = $('<td>');
+                    botones
+                    .append($('<button>', { title: "Editar/Detalles", "data-action": "editar", value: id, class: "btn btn-xs btn-default", "data-toggle": "tooltip", html: "<span class='fa fa-pencil'></span" }))
+                    .append(' ')
+                    .append($('<button>', { title: "Eliminar", "data-action": "eliminar", class: "btn btn-xs btn-danger", value: id, "data-toggle": "tooltip", html: "<span class='fa fa-trash-o'></span>" }))
+
+                    $("[data-number = " + id + "]").replaceWith(
+                        $('<tr>', { "data-number": id })
+                        .append($("<td>", { html: checkbox, id: "activo-" + id }))
+                        .append($('<td>', { html: nombre, id: "Nombre-" + id }))
+
+                        .append(botones)
+                        );
+
+                    swal({
+                        title: "Cambios guardados exitosamente",
+                        text: "",
+                        timer: 2000,
+                        type: "success",
+                        showConfirmButton: true
+                    });
+                    $('#myModal').modal('hide');
+                } else {
+                    swal("Error", response.mensaje, "error")
+                }
+            })
+        }
+        else {
+
+            swal({
+                title: "Espera un momento",
+                text: "Guardando...",
+                allowEscapeKey: false,
+                allowOutsideClick: false,
+                showConfirmButton: false
+            });
+            $.post('@Url.Action("Create2")', { data: datos, nombre: nombre }, function (response) {
+                if (response.estado == true) {
+                    var checkbox = $('<input>', { name: "acti", type: "checkbox", id: "Activo-" + id, checked: activo, value: response.id_rol });
+                    var botones = $('<td>');
+                    botones
+                    .append($('<button>', { title: "Editar/Detalles", "data-action": "editar", value: response.id_rol, class: "btn btn-xs btn-default", "data-toggle": "tooltip", html: "<span class='fa fa-pencil'></span" }))
+                    .append(' ')
+                    .append($('<button>', { title: "Eliminar", "data-action": "eliminar", class: "btn btn-xs btn-danger", value: response.id_rol, "data-toggle": "tooltip", html: "<span class='fa fa-trash-o'></span>" }))
+
+                    $('tbody').append(
+                        $('<tr>', { "data-number": response.id_rol })
+                        .append($('<td>').append(checkbox))
+                        .append($('<td>', { html: nombre, id: "Nombre-" + response.id_rol }))
+                        .append(botones)
+                        );
+
+                    swal({
+                        title: "Cambios guardados exitosamente",
+                        text: "",
+                        timer: 2000,
+                        type: "success",
+                        showConfirmButton: true
+                    });
+                    $('#myModal').modal('hide');
+                } else {
+                    swal("Error", response.mensaje, "error")
+                }
+            })
+        }
+
+    });
+
+    $('table').on('click', "[data-action=eliminar]", function (event) {
+        event.preventDefault();
+        var id = $(this).val();
+        var element = $(this);
+        swal({
+            title: "¿Eliminar?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Si, eliminar",
+            closeOnConfirm: false
+        },
+        function () {
+            $.post("@Url.Action("Delete")", { id: id }, function (response) {
+                if (response == true) {
+                    swal({
+                        title: "Eliminado",
+                        text: "",
+                        timer: 1000,
+                        type: "success",
+                        showConfirmButton: false
+                    });
+
+                    $(element).parent().parent().remove();
+                }
+                else {
+                    swal("Error", "No se puede eliminar el rol, se le han asignado módulos.", "error");
+                }
+            });
+        })
+    });
+
+
+</script>

@@ -1,4 +1,390 @@
 /* your styles go here */
-#red{
-    color:#BF1900;
+#red {
+    color: #BF1900;
+}
+
+.py-cofinal {
+    padding: 4em 0em;
+}
+
+.section-home-about-us {
+    background: #FDFBF9 !important;
+    margin: 0;
+}
+
+    .section-home-about-us .content-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+@media (max-width: 970px ) {
+    .section-home-about-us .content-section {
+        flex-direction: column;
+    }
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+    .container-fluid .row {
+        margin: 0px !important;
+    }
+
+.title-section {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 31px;
+    line-height: 110%;
+    margin-bottom: 5px;
+}
+
+hr.separator-title {
+    margin: 10px 0px 20px;
+    border-top: 3px solid #E76100;
+    width: 120px;
+}
+
+.description-section {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000;
+}
+
+.btn-cofinal-orange {
+    border: 2px solid #E76100;
+    border-radius: 10px;
+    color: white;
+    background: #E76100;
+    padding: 1em 1.5em;
+}
+
+    .btn-cofinal-orange:hover {
+        color: #E76100;
+        background: white;
+        border-color: #E76100;
+    }
+
+
+    .btn-cofinal-orange.btn-cofinal-outline {
+        background: transparent;
+        color: #E76100;
+    }
+
+        .btn-cofinal-orange.btn-cofinal-outline:hover {
+            background: #E76100;
+            color: white;
+        }
+
+.section-home-about-us .btn-cofinal-orange {
+    margin-top: 15px;
+}
+
+/*  CARD OUR SERVICE HOME */
+.card-our-services {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .1);
+    margin: 20px 0px;
+}
+
+
+    .card-our-services .btn-cofinal-orange.btn-cofinal-outline {
+        padding: 5px 30px;
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .card-our-services .image-card {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .card-our-services .body-card {
+        padding: 1em;
+    }
+
+    .card-our-services .title-card {
+        margin-top: 0;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        color: #E76100;
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+
+@media (max-width: 970px ) {
+    .card-our-services .image-card {
+        height: 220px;
+    }
+}
+
+/*  SECTION INVERTIR */
+    .section-invertir {
+        background: #FDFBF9;
+        padding-top: 20px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .section-invertir .row-invertir {
+        display: flex;
+        align-items: flex-end;
+        border-radius: 0px 0px 6em 6em;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .section-invertir .row-invertir:before {
+        position: absolute;
+        content: "";
+        background: rgba(231, 97, 0, 0.12);
+        width: 100%;
+        height: 80%;
+        border-radius: 6em 6em 0px 0px;
+    }
+    
+
+    .section-invertir .col-content {
+        padding-bottom: 2em;
+    }
+
+    @media (max-width: 970px ) {
+        .section-invertir .row-invertir {
+            flex-direction: column-reverse;
+        }
+
+        .section-invertir .col-image {
+            text-align: center;
+        }
+
+        .section-invertir .row-invertir:before {
+            height: 40%;
+        }
+
+        .section-invertir .col-content {
+            padding-bottom: 0;
+        }
+    }
+
+    .section-invertir .title-invertir {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 112%;
+        text-align: center;
+        color: #5C5C5C;
+    }
+
+    .section-invertir .description-section {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        text-align: center;
+        color: #000000;
+        padding: 0px 100px;
+    }
+
+    .section-invertir .container-list {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0px;
+    }
+
+    .section-invertir .list-invertir {
+        list-style: none;
+        margin: 0;
+        padding: 1.5em;
+        border: 3px solid #5C5C5C;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+        position: relative;
+    }
+
+        .section-invertir .list-invertir .item {
+            padding: .3em 1em;
+            min-width: 170px;
+        }
+
+        .section-invertir .list-invertir .text-title {
+            position: absolute;
+            top: 7px;
+            left: 50%;
+            transform: translateX(-60%);
+            z-index: 10;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+            text-align: center;
+            color: #000000;
+        }
+
+        .section-invertir .list-invertir .item:nth-child(2) {
+            box-shadow: 25px 0px 0px -20px;
+        }
+
+        .section-invertir .list-invertir .item .text-action {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 112%;
+            text-align: center;
+            color: #E76100;
+        }
+
+        .section-invertir .list-invertir .item p {
+            margin-bottom: 0;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+            color: #000000;
+        }
+
+    .section-invertir .terms {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 120%;
+        color: #000000;
+        text-align: right;
+        margin-right: 10%;
+    }
+
+    @media (max-width: 970px ) {
+        .section-invertir .title-invertir {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 102%;
+        }
+
+        .section-invertir .description-section {
+            padding: 0px 40px;
+        }
+
+        .section-invertir .list-invertir {
+            flex-direction: column;
+        }
+
+        .section-invertir .list-invertir .item .text-action {
+            font-size: 30px;
+            line-height: 102%;
+        }
+
+        .section-invertir .list-invertir .item:nth-child(2) {
+            box-shadow: 0px 25px 0px -20px;
+            padding-bottom: 15px;
+            padding-top: 0px;
+        }
+        .section-invertir .terms {
+            margin-right: 0;
+            text-align: center;
+        }
+    }
+
+
+    /* SECTION ASOCIARTE */
+
+    .section-asociarte {
+        background: #FDFBF9;
+        margin-bottom: 0;
+    }
+    .section-asociarte .title-section {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 105%;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+
+    .section-asociarte .description-section {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 140%;
+        text-align: center;
+        color: #000000;
+        margin: 0 7%;
+        margin-bottom: 30px;
+    }
+    .row-cards-asociarte {
+        padding-top: 30px;
+    }
+    .row-cards-asociarte .card {
+        margin: 1em;
+        padding: 2em;
+        background: white;
+        box-shadow: 0px 7px 18px rgba(0, 40, 86, 0.1);
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        min-height: 360px;
+    }
+
+    .row-cards-asociarte .card:before {
+        content: "";
+        position: absolute;
+        width: 54px;
+        height: 61px;
+        right: 0;
+        bottom: 0;
+        background: rgba(85, 135, 218, 0.1);
+        border-radius: 70px 0px 10px;
+    }
+
+    .row-cards-asociarte .card .icon-card {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .row-cards-asociarte .card .title-card {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 120%;
+        color: #002856;
+        margin-top: 0;
+        margin-right: 20%;
+    }
+    .row-cards-asociarte .card .desc-card {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 140%;
+        color: #E76100;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 970px ) {
+        .section-asociarte .title-section {
+            font-size: 30px;
+            line-height: 105%;
+        }
+    }
+
+@media (min-width: 768px ) and (max-width: 970px ) {
+    .row-cards-asociarte .card {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 768px ) {
+    .row-cards-asociarte .card {
+        min-height: initial;
+    }
 }

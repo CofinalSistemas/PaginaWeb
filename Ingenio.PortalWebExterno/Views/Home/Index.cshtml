@@ -170,7 +170,9 @@
         }
 
             .sliderC > .item > a > img, .carousel-inner > .item > img {
-                width: 1400px;
+                width: 100%;
+                object-fit: cover;
+                object-position: center center;
             }
 
         .titulo {
@@ -246,10 +248,9 @@
         <!--seccion de noticias-->
         <section class="background-white no-mb" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
 
-
             <!-- div Ultimas noticias-->
             <!--Margen a lado y lado-->
-            <div class="container">
+            <div class="container-fluid">
                 <section class="row" style="margin-bottom: 0px">
 
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -257,53 +258,89 @@
                         <ol class="carousel-indicators">
 
                             @{ int pos = 0;
-                    foreach (var slide in Sliders)
-                    {
-                        if (slide.Id == 1)
-                        {
-                            <li data-target="#myCarousel" data-slide-to="@pos" class="active"></li>
-            }
-            else
-            {
-                <li data-target="#myCarousel" data-slide-to="@pos"></li>
-}
-pos++;
-}
+                                foreach (var slide in Sliders)
+                                {
+                                    if (slide.Id == 1)
+                                    {
+                                        <li data-target="#myCarousel" data-slide-to="@pos" class="active"></li>
+                                    }
+                                    else
+                                    {
+                                        <li data-target="#myCarousel" data-slide-to="@pos"></li>
+                                    }
+                                    pos++;
+                                }
                             }
 
+                            @{ for (int i = 0; i < 5; i++)
+                                {
+                                    if (i == 0)
+                                    {
+                                        <li data-target="#myCarousel" data-slide-to="@pos" class="active"></li>
+                                    }
+                                    else
+                                    {
+                                        <li data-target="#myCarousel" data-slide-to="@pos"></li>
+                                    }
+                                }
+                            }
                         </ol>
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
 
 
-                            @{foreach (Ingenio.BO.Ingenio.Sliders slid in Sliders)
-                    {
-                        if (slid.Id == 1)
-                        {
-                            <div class="item active">
-                                @*<img src="/igmsliders/20171120180543-microcredito2.png" alt="Chania">*@
-                                <img src="@slid.Imagen" alt="@slid.Titulo">
-                                <div class="carousel-caption">
-                                    <h3>@slid.Titulo</h3>
-                                    <p>@slid.Descripcion</p>
-                                </div>
-                            </div>
-            }
-            else
-            {
+                            @{
+                                foreach (Ingenio.BO.Ingenio.Sliders slid in Sliders)
+                                {
+                                    if (slid.Id == 1)
+                                    {
+                                        <div class="item active">
+                                            <img src="https://picsum.photos/1440/550" alt="@slid.Titulo">
+                                            @*<img src="@slid.Imagen" alt="@slid.Titulo">*@
+                                            <div class="carousel-caption">
+                                                <h3>@slid.Titulo</h3>
+                                                <p>@slid.Descripcion</p>
+                                            </div>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="item">
+                                            @*<img src="/igmsliders/20171211101149-bindodic2017_2.png" alt="Chicago">*@
+                                            <img src="@slid.Imagen" alt="Chania">
+                                            <div class="carousel-caption">
+                                                <h3>@slid.Titulo</h3>
+                                                <p>@slid.Descripcion</p>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            }
 
-                <div class="item">
-                    @*<img src="/igmsliders/20171211101149-bindodic2017_2.png" alt="Chicago">*@
-                    <img src="@slid.Imagen" alt="Chania">
-                    <div class="carousel-caption">
-                        <h3>@slid.Titulo</h3>
-                        <p>@slid.Descripcion</p>
-                    </div>
-                </div>
-}
-}
-
+                            @{ for (int i = 0; i < 5; i++)
+                                {
+                                    if (i == 0)
+                                    {
+                                        <div class="item active">
+                                            <img src="https://picsum.photos/1920/650" alt="Titulo">
+                                            <div class="carousel-caption">
+                                                <h3>Titulo Titulo</h3>
+                                                <p>Descripcion </p>
+                                            </div>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="item">
+                                            <img src="https://picsum.photos/1920/650" alt="Titulo">
+                                            <div class="carousel-caption">
+                                                <h3>Titulo Titulo</h3>
+                                                <p>Descripcion </p>
+                                            </div>
+                                        </div>
+                                    }
+                                }
                             }
 
                         </div>
@@ -319,36 +356,234 @@ pos++;
                         </a>
                     </div>
                 </section>
-                <br />
-                <br />
 
-                <div class="row">
-                    <section class="bar background-gray no-mb" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
-                        <div style="background-image:url(/img/barra.jpg); background-size:30%">
-                            <div id="get-it" style="background: -webkit-linear-gradient(left, rgba(216,65,65,0.99) 0%, rgba(216,65,65,0.89) 49%, rgba(213,195,195,0.81) 90%, rgba(213,195,195,0.79) 100%);text-align:left; -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
-                                <div class="container">
-                                    <div class="col-md-12">
-                                        <center><h2>Últimas Noticias y eventos</h2></center>
-                                    </div>
+                <!-----ABOUT US SECTION-->
+
+                <section class="section-home-about-us py-cofinal">
+                    <div class="container ">
+                        <div class="row content-section">
+                            <div class="col-xs-12 col-md-6 text-center">
+                                <img src="https://picsum.photos/400/400" alt="About Us Image">
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <h2 class="title-section">Sobre nosotros</h2>
+                                <hr class="separator-title" />
+                                <p class="description-section"> Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)  </p>
+                                <a class="btn btn-default btn-cofinal-orange">Conoce más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-----TITLE LAST NEWS
+        <div class="container">
+            <div class="row">
+                <section class="bar background-gray no-mb" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+                    <div style="background-image:url(/img/barra.jpg); background-size:30%">
+                        <div id="get-it" style="background: -webkit-linear-gradient(left, rgba(216,65,65,0.99) 0%, rgba(216,65,65,0.89) 49%, rgba(213,195,195,0.81) 90%, rgba(213,195,195,0.79) 100%);text-align:left; -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+                            <div class="container">
+                                <div class="col-md-12">
+                                    <center><h2>Últimas Noticias y eventos</h2></center>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    --->
+                <!--------- SECTION OUR SERVICES-------->
+                <!--EDIT ARRAY OUR SERVICES IN TOP OF THIS PAGE   -->
+
+                <section class="section-our-services py-cofinal">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-3">
+                                <h2 class="title-section">Nuestos servicios</h2>
+                                <hr class="separator-title" />
+                                <p class="description-section">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)   </p>
+                            </div>
+                            <div class="col-xs-12 col-md-9">
+                                <div class="row">
+                                    <!-- CARD SERVICE -->
+                                    <div class="col-xs-12 col-sm-6 col-lg-4">
+                                        <div class="card-our-services">
+                                            <img src="https://picsum.photos/200/300" class="image-card" alt="About Us Image">
+                                            <div class="body-card">
+                                                <h2 class="title-card">Ahorro</h2>
+                                                <p class="description-card">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias</p>
+                                                <a class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END CARD SERVICE -->
+                                    <!-- CARD SERVICE -->
+                                    <div class="col-xs-12 col-sm-6 col-lg-4">
+                                        <div class="card-our-services">
+                                            <img src="https://picsum.photos/200/300" class="image-card" alt="About Us Image">
+                                            <div class="body-card">
+                                                <h2 class="title-card">Crédito</h2>
+                                                <p class="description-card">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias</p>
+                                                <a class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END CARD SERVICE -->
+                                    <!-- CARD SERVICE -->
+                                    <div class="col-xs-12 col-sm-6 col-lg-4">
+                                        <div class="card-our-services">
+                                            <img src="https://picsum.photos/200/300" class="image-card" alt="About Us Image">
+                                            <div class="body-card">
+                                                <h2 class="title-card">Seguros</h2>
+                                                <p class="description-card">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias</p>
+                                                <a class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END CARD SERVICE -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!--------- SECTION INVERTIR-------->
+                <section class="section-invertir py-cofinal">
+                    <div class="container">
+                        <div class="row row-invertir">
+                            <div class="col-xs-12 col-md-6 col-image">
+                                <img src="~/img/pelada_cofinal.png" class="image-invertir" />
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-content">
+                                <h2 class="text-center title-invertir">¡El momento de invertir es ahora! </h2>
+                                <p class="description-section text-center">Apertura tu CDAT  con excelentes tasas de rentabilidad en Cofinal®. </p>
+                                <div class="container-list">
+                                    <ul class="list-invertir">
+                                        <p class="text-title">Desde</p>
+                                        <li class="item">
+                                            <h4 class="text-action text-center">6.5%</h4>
+                                            <p class="text-center">y obten hasta el</p>
+                                        </li>
+                                        <li class="item">
+                                            <h4 class="text-action text-center">$200.000</h4>
+                                            <p class="text-center">Efectivo anual</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="terms">*Aplican términos y condiciones</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <!--------- Comienza Imagenes Cajas-------->
-                <br />
+                <!--------- SECTION ASOCIARTE-------->
+                <section class="section-asociarte py-cofinal">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h2 class="title-section text-center">¿Por qué asociarte?</h2>
+                                <p class="description-section text-center">
+                                    Porqué sus beneficios van más allá de las atractivas tasas de interés con que cuentan sus productos de ahorro, más allá de la agilidad y oportunidad los trámites de las diferentes líneas de crédito. Porqué ofrece amplia cobertura en servicios sociales que benefician a todos sus asociados y a los integrantes de sus grupos familiares, a través de:
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row row-cards-asociarte">
+                            <!-- START CARD-->
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img src="~/img/icon_card.png" class="icon-card" alt="About Us Image">
+                                    <h2 class="title-card">Fondo de Solidaridad</h2>
+                                    <p class="desc-card">Permite estar presente en situaciones de calamidad doméstica, en el nacimiento de los hijos de los asociados, en enfermedades especializadas o en el fallecimiento del asociado o de un miembro de su grupo familiar.</p>
+                                </div>
+                            </div>
+                            <!-- END CARD-->
+                            <!-- START CARD-->
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img src="~/img/icon_card.png" class="icon-card" alt="About Us Image">
+                                    <h2 class="title-card">Fondo de Bienestar Integral</h2>
+                                    <p class="desc-card">Permite fomentar la recreación, el deporte y la cultura entre los asociados.</p>
+                                </div>
+                            </div>
+                            <!-- END CARD-->
+                            <!-- START CARD-->
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img src="~/img/icon_card.png" class="icon-card" alt="About Us Image">
+                                    <h2 class="title-card">Fondo de Educación</h2>
+                                    <p class="desc-card">Permite contribuir al fortalecimiento de la educación formal en las regiones donde hace presencia COFINAL.</p>
+                                </div>
+                            </div>
+                            <!-- END CARD-->
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="py-cofinal">
+                    <div class="container">
+                        <div class="row" style="padding-top:10px;">
+                            <div class="col-md-4" data-animate="fadeInUp">
+                                <div class="box-simple">
+                                    <div class="icon">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+                                    <h3>DIRECCION</h3>
+                                    <p>
+                                        Cra. 29 No. 18-41
+                                        San Juan de Pasto
+                                        Nariño Colombia - Suramerica
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4" data-animate="fadeInUp">
+                                <div class="box-simple">
+                                    <div class="icon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <h3>Centro de llamadas</h3>
+                                    <p>
+                                        Tel: (2) 7336300
+                                        Extensión: 253
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4" data-animate="fadeInUp">
+                                <div class="box-simple">
+                                    <div class="icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <h3>CORREO ELECTRONICO</h3>
+                                    <p class="text-muted"></p>
+                                    <p>
+                                        servicioalasociado@cofinal.com.co
+                                    </p>
+
+                                    <strong><a href="mailto:"> </a></strong>
+                                </div>
+                                <!-- /.box-simple -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
                 @*<div id="body">*@
-                    @*<div id="imagen2">*@
-                        <a><img src="~/img/57aniversario.jpg" width="1400" height="400" alt="" class="img-responsive" border="0"></a>
-                      <br/>
-                    @*</div>*@
+                @*<div id="imagen2">
+        <a><img src="~/img/57aniversario.jpg" width="1400" height="400" alt="" class="img-responsive" border="0"></a>
+        <br />*@
+                @*</div>*@
 
-                    @*<div id="imagen1">
+                @*<div id="imagen1">
 
-                <img src="~/img/tasacdat4.png" alt="" class="img-responsive" border="0">
-            </div>*@
+            <img src="~/img/tasacdat4.png" alt="" class="img-responsive" border="0">
+        </div>*@
 
-                </div>
+            </div>
                 <!------------- Estilos Cajas---------->
                 <style>
                     #body {
@@ -376,7 +611,7 @@ pos++;
                     <div class="container" id="conteniNot">
                         <div class="row" id="noti">
                             <div class="col-md-9" id="col">
-                               
+
                                 @*<h4>Mantenerse informado y actualizado sobre todas las noticias relacionadas con la Cooperativa</h4>*@
 
                                 <ul class="owl-carousel testimonials same-height-row">
@@ -422,20 +657,20 @@ pos++;
                             </div>
 
                             <script>document.getElementById('noclick').style.pointerEvents = 'none';</script>
-                            <div class="col-md-3">
+                <div class="col-md-3">
 
-                                <!-- DolarWeb IndMax Start -->
-                                <div class="heading text-center" style="margin-bottom:10px;padding-top:15px;">
-                                    <h4>INDICADORES ECONÓMICOS</h4>
-                                    <p style="display:inline-block;">
+                    <!-- DolarWeb IndMax Start -->
+                    <div class="heading text-center" style="margin-bottom:10px;padding-top:15px;">
+                        <h4>INDICADORES ECONÓMICOS</h4>
+                        <p style="display:inline-block;">
 
-                                        <!-- DolarWeb IndMax Start --><div id="IndicadoresMax"><h2><a href="https://dolar.wilkinsonpc.com.co/">Dolar Hoy Colombia</a></h2></div>
-                                        <script type="text/javascript" src="https://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-max.js?ancho=190&alto=280&fondo=transparent&fsize=12&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMax End -->
-                                    </p>
-                                </div>
-                            </div>
+                            <!-- DolarWeb IndMax Start --><div id="IndicadoresMax"><h2><a href="https://dolar.wilkinsonpc.com.co/">Dolar Hoy Colombia</a></h2></div>
+                            <script type="text/javascript" src="https://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-max.js?ancho=190&alto=280&fondo=transparent&fsize=12&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMax End -->
+                        </p>
+                    </div>
+                </div>
 
-                        </div>
+            </div>
                     </div>
                 </div>
 </section>
@@ -478,7 +713,8 @@ pos++;
 
     @*seccion de imagen 1 Imagen de Fondo Azul*@
     <!--porque asociarte-->
-    <div class="container">
+<div class="container">
+    @*
         <div class="row parallaxbox" id="pb0" style="background-image: url(/img/tarjeta2.jpg);"> </div>
         <div class="row">
             <section class="bar background-gray no-mb" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
@@ -492,24 +728,24 @@ pos++;
                     </div>
                 </div>
             </section>
-        </div>
-        @*<div class="row">
-                <section class="bar background-gray no-mb" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
-                    <div style="background-image:url(/img/barra.jpg); background-size:30%">
-                        <div id="get-it" style="background: -webkit-linear-gradient(left, rgba(216,65,65,0.99) 0%, rgba(216,65,65,0.89) 49%, rgba(213,195,195,0.81) 90%, rgba(213,195,195,0.79) 100%);text-align:left; -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
-                            <div id="conve" class="container">
-                                <div class="col-md-12">
-                                    <center><h2>Convenios y Alianzas Compartidas</h2></center>
-                                </div>
+        </div>*@
+    @*<div class="row">
+            <section class="bar background-gray no-mb" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+                <div style="background-image:url(/img/barra.jpg); background-size:30%">
+                    <div id="get-it" style="background: -webkit-linear-gradient(left, rgba(216,65,65,0.99) 0%, rgba(216,65,65,0.89) 49%, rgba(213,195,195,0.81) 90%, rgba(213,195,195,0.79) 100%);text-align:left; -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+                        <div id="conve" class="container">
+                            <div class="col-md-12">
+                                <center><h2>Convenios y Alianzas Compartidas</h2></center>
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>*@
+                </div>
+            </section>
+        </div>*@
 
-        <!--contenido porque asociarte-->
-        <div class="row">
-            @*<section id="aso" class="bar background-white no-mb">*@
+    <!--contenido porque asociarte-->
+    @*<div class="row">
+            <section id="aso" class="bar background-white no-mb">
             <div class="container">
                 <div class="row">
                     <div class="col-md-7" style="background-color:white">
@@ -532,19 +768,17 @@ pos++;
 
                         <!--imagen de porque asociarse-->
                         <img src="~/img/Fachada.jpg" alt="" class="img-responsive" style="-webkit-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.83);
-                            -moz-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.75); box-shadow:  2px 7px 30px 7px rgba(0,0,0,0.75);  height: 350px; position:relative;  top:10px; left:35px">
+                                -moz-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.75); box-shadow:  2px 7px 30px 7px rgba(0,0,0,0.75);  height: 350px; position:relative;  top:10px; left:35px">
                     </div>
                 </div>
             </div>
-            @*</section>*@
-        </div>
-		<br>
-		<br>
-		<br>
-        <!--fondo-->
-        <!--seccion de imagen 2-->
-        <!--imegne de Fondo azul-->
-        @*<div class="row parallaxbox" id="pb1" style="background-image: url(/img/fondoFunTurismo.JPG);"> </div>
+            </section>
+        </div>*@
+
+    <!--fondo-->
+    <!--seccion de imagen 2-->
+    <!--imegne de Fondo azul-->
+    @*<div class="row parallaxbox" id="pb1" style="background-image: url(/img/fondoFunTurismo.JPG);"> </div>
 
 
         <!--titulo convenios-->
@@ -655,66 +889,23 @@ pos++;
         <!--Imgen de Fondo Azul-->
         <div class="parallaxbox" id="pb2" style="background-image: url(/img/fondoFunTurismo.JPG);"> </div>*@
 
+   
+    <!-- seccion de contactos-->
+    <section class="background-white no-mb">
+        <div class="container">
+            
+        </div>
+    </section>
 
-        <!-- seccion de contactos-->
-        <section class="background-white no-mb">
-            <div class="container">
-                <div class="row" style="padding-top:10px;">
-                    <div class="col-md-4" data-animate="fadeInUp">
-                        <div class="box-simple">
-                            <div class="icon">
-                                <i class="fa fa-map-marker"></i>
-                            </div>
-                            <h3>DIRECCION</h3>
-                            <p>
-                                Cra. 29 No. 18-41
-                                San Juan de Pasto
-                                Nariño Colombia - Suramerica
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-animate="fadeInUp">
-                        <div class="box-simple">
-                            <div class="icon">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <h3>Centro de llamadas</h3>
-                            <p>
-                                Tel: (2) 7336300
-                                Extensión: 253
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-animate="fadeInUp">
-                        <div class="box-simple">
-                            <div class="icon">
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <h3>CORREO ELECTRONICO</h3>
-                            <p class="text-muted"></p>
-                            <p>
-                                servicioalasociado@cofinal.com.co
-                            </p>
-
-                            <strong><a href="mailto:"> </a></strong>
-                        </div>
-                        <!-- /.box-simple -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <style>
-            .maps iframe {
-                pointer-events: none;
-            }
-        </style>
-        @*<div class='embed-container  maps'>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9160578226433!2d-77.28225128580804!3d1.2185285623241011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed487375d6129%3A0x75d762a9f2c9e3da!2sCOFINAL!5e0!3m2!1ses!2sit!4v1454678597238" height="250" frameborder="0" style="border: 0; width: 100%;" allowfullscreen></iframe>
-            </div>*@
-    </div>
+    <style>
+        .maps iframe {
+            pointer-events: none;
+        }
+    </style>
+    @*<div class='embed-container  maps'>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9160578226433!2d-77.28225128580804!3d1.2185285623241011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed487375d6129%3A0x75d762a9f2c9e3da!2sCOFINAL!5e0!3m2!1ses!2sit!4v1454678597238" height="250" frameborder="0" style="border: 0; width: 100%;" allowfullscreen></iframe>
+        </div>*@
+</div>
 
     @Html.Partial("Footer")
     @*<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>*@

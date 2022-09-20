@@ -39,24 +39,9 @@
     @Styles.Render("~/Content/plantilla")
     @Styles.Render("~/Content/plantillaHome")
 
-    <!--ventana emer-->
+    <!--Ventana emergente-->
     <!--   Estilos Modal -->
     <style>
-        /* Style the Image Used to Trigger the Modal */
-
-        /*html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        img {
-            padding: 0;
-            display: block;
-            margin: 0 auto;
-            max-height: 100%;
-            max-width: 100%;
-        }*/
 
         #myImg {
             border-radius: 5px;
@@ -70,20 +55,19 @@
 
         /* The Modal (background) */
         .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 997; /* Sit on top */
-            padding-top: 20px; /* Location of the box */
+            display: none; 
+            position: fixed;
+            z-index: 997; 
+            padding-top: 20px; 
             left: 0;
             top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.9); 
         }
 
-        /* Modal Content (Image) */
         .modal-content {
             z-index: 998; /* Sit on top */
             margin: auto;
@@ -92,7 +76,6 @@
             max-width: 700px;
         }
 
-        /* Caption of Modal Image (Image Text) - Same Width as the Image */
         #caption {
             margin: auto;
             display: block;
@@ -103,7 +86,6 @@
             padding: 10px 0;
             height: 150px;
         }
-        /* Zoom in the Modal */
         .modal-content, #caption {
             -webkit-animation-name: zoom;
             -webkit-animation-duration: 0.6s;
@@ -131,7 +113,6 @@
             }
         }
 
-        /* Close Button */
         .close {
             position: absolute;
             top: 15px;
@@ -149,7 +130,6 @@
                 text-decoration: none;
                 cursor: pointer;
             }
-        /* 100% Image Width on Smaller Screens */
         @@media only screen and (max-width: 700px) {
             .modal-content {
                 width: 100%;
@@ -195,15 +175,7 @@
             text-align: center;
         }
     </style>
-    <!--estilos vista-->
-    @*<script type="text/javascript" src="http://www.jimdo.com/l/usersnippets/snowfall.min.js">
-        </script>*@
 
-    <!-- Responsivity for older IE -->
-    <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <!-- Favicon and apple touch icons-->
     <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
@@ -214,7 +186,6 @@
     <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
     <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
-
 </head>
 
 <body class="">
@@ -235,20 +206,14 @@
 
     <div id="all" class="">
 
-        <!-- *** NAVBAR ***
-        _________________________________________________________ -->
+        <!-- *** NAVBAR = Ruta de Navegación *** -->
+
         @Html.Partial("Navbar")
 
         <!-- seccion de slider de noticias-->
-        <div>
-
-        </div>
-
-
         <!--seccion de noticias-->
         <section class="background-white no-mb" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
 
-            <!-- div Ultimas noticias-->
             <!--Margen a lado y lado-->
             <div class="container-fluid" style="position: relative">
 
@@ -271,11 +236,11 @@
                             </li>
 
                             @*<li class="item item-app" style="background-color: #1F4F90">
-                                <a href="https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=2616#" target="_blank">
-                                    <p>Realiza tus Pagos por <strong>PSE</strong></p>
-                                    <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-                                </a>
-                            </li>*@
+                        <a href="https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=2616#" target="_blank">
+                            <p>Realiza tus Pagos por <strong>PSE</strong></p>
+                            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                        </a>
+                    </li>*@
 
                             <li class="item item-app" style="background-color: #E1852C">
                                 <a href="/FormatosAC/Index">
@@ -298,12 +263,10 @@
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                 </a>
                             </li>
-
                         </ul>
                     </div>
                 </section>
                 <!-- END  SECTION ICONS FLOAT -->
-
                 <!-- SECTION NEW SLIDER FOR HOMEPAGE -->
                 <section class="row" style="margin-bottom: 0px">
 
@@ -340,7 +303,6 @@
                             }
                         </ol>
 
-                        <!-- Wrapper for slides -->
                         <div class="carousel-inner">
 
 
@@ -370,36 +332,36 @@
                                 }
                             }
 
-                            @{ 
-                               @* for (int i = 0; i < 5; i++)
-                                {
-                                    if (i == 0)
-                                    {
-                                        <div class="item active">
-                                            <img src="https://www.cofinal.com.co/igmSliders/20220214120103-ganadores-banner.png" alt="Titulo">
-                                            <div class="carousel-caption">
-                                                <h3>Titulo Titulo</h3>
-                                                <p>Descripcion </p>
-                                            </div>
-                                        </div>
-                                    }
-                                    else
-                                    {
-                                        <div class="item">
-                                            <img src="https://www.cofinal.com.co/igmSliders/20220214120103-ganadores-banner.png" alt="Titulo">
-                                            <div class="carousel-caption">
-                                                <h3>Titulo Titulo</h3>
-                                                <p>Descripcion </p>
-                                            </div>
-                                        </div>
-                                    }
-                                }
+                            @{
+                                @* for (int i = 0; i < 5; i++)
+                        {
+                            if (i == 0)
+                            {
+                                <div class="item active">
+                                    <img src="https://www.cofinal.com.co/igmSliders/20220214120103-ganadores-banner.png" alt="Titulo">
+                                    <div class="carousel-caption">
+                                        <h3>Titulo Titulo</h3>
+                                        <p>Descripcion </p>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="item">
+                                    <img src="https://www.cofinal.com.co/igmSliders/20220214120103-ganadores-banner.png" alt="Titulo">
+                                    <div class="carousel-caption">
+                                        <h3>Titulo Titulo</h3>
+                                        <p>Descripcion </p>
+                                    </div>
+                                </div>
+                            }
+                        }
                                 *@
                             }
 
                         </div>
 
-                        <!-- Left and right controls -->
+                        <!-- Controles de izquierda a derecha -->
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                             <span class="sr-only">Previous</span>
@@ -411,7 +373,7 @@
                     </div>
                 </section>
                 <!-- END SECTION NEW SLIDER FOR HOMEPAGE -->
-                <!-----ABOUT US SECTION-->
+                <!----- Contenido -->
 
                 <section class="section-home-about-us py-cofinal">
                     <div class="container ">
@@ -432,12 +394,9 @@
                             </div>
                         </div>
                     </div>
-
                 </section>
-
-            
                 <!--------- SECTION OUR SERVICES-------->
-                <!--EDIT ARRAY OUR SERVICES IN TOP OF THIS PAGE   -->
+                <!-- Seccion 2  -->
 
                 <section class="section-our-services py-cofinal">
                     <div class="container">
@@ -511,8 +470,8 @@
                     </div>
                 </section>
 
-
-                <!--------- SECTION INVERTIR-------->
+                <!--------- Fin de Seccion 2 -------->
+                <!--------- Sección Anuncio -------->
                 <section class="section-invertir py-cofinal">
                     <div class="container">
                         <div class="row row-invertir">
@@ -528,7 +487,7 @@
                                         <li class="item">
                                             <p class="text-center">Desde</p>
                                             <h4 class="text-action text-center">$200.000</h4>
-                                            
+
                                         </li>
                                         <li class="item">
                                             <p class="text-center">Obten hasta el</p>
@@ -542,8 +501,8 @@
                         </div>
                     </div>
                 </section>
-                <!--------- Comienza Imagenes Cajas-------->
-                <!--------- SECTION ASOCIARTE-------->
+
+                <!--------- Sección ASOCIARTE-------->
                 <section class="section-asociarte py-cofinal">
                     <div class="container">
                         <div class="row">
@@ -555,7 +514,6 @@
                             </div>
                         </div>
                         <div class="row row-cards-asociarte">
-                            <!-- START CARD-->
                             <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="card">
                                     <img src="~/img/icon_card.png" class="icon-card" alt="About Us Image">
@@ -563,8 +521,6 @@
                                     <p class="desc-card">Permite estar presente en situaciones de calamidad doméstica, en el nacimiento de los hijos de los asociados, en enfermedades especializadas o en el fallecimiento del asociado o de un miembro de su grupo familiar.</p>
                                 </div>
                             </div>
-                            <!-- END CARD-->
-                            <!-- START CARD-->
                             <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="card">
                                     <img src="~/img/icon_card.png" class="icon-card" alt="About Us Image">
@@ -572,8 +528,6 @@
                                     <p class="desc-card">Permite fomentar la recreación, el deporte y la cultura entre los asociados.</p>
                                 </div>
                             </div>
-                            <!-- END CARD-->
-                            <!-- START CARD-->
                             <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="card">
                                     <img src="~/img/icon_card.png" class="icon-card" alt="About Us Image">
@@ -581,12 +535,11 @@
                                     <p class="desc-card">Permite contribuir al fortalecimiento de la educación formal en las regiones donde hace presencia COFINAL.</p>
                                 </div>
                             </div>
-                            <!-- END CARD-->
                         </div>
                     </div>
                 </section>
-
-                <!-- SECTION BUTTONS CONTACT -->
+                <!--------- FIN SECCIÓN ASOCIARTE-------->
+                <!-- SECCIÓN BOTONES DE CONTACTO -->
                 <section class="py-cofinal">
                     <div class="container">
                         <div class="row" style="padding-top:10px;">
@@ -597,7 +550,7 @@
                                             <i class="fa fa-map-marker"></i>
                                         </div>
                                     </a>
-                                    <h3>DIRECCION</h3>
+                                    <h3>DIRECCIÓN</h3>
                                     <p>
                                         Cra. 29 No. 18-41
                                         San Juan de Pasto
@@ -637,14 +590,14 @@
 
                                     <strong><a href="mailto:servicioalasociado@cofinal.com.co"> </a></strong>
                                 </div>
-                                <!-- /.box-simple -->
                             </div>
                         </div>
                     </div>
                 </section>
 
 
-                <!-- SECTION NEW LAST NEWS-->
+                <!-- FIN SECCIÓN BOTONES DE CONTACTO -->
+                <!-- ULTIMAS NOTICIAS Y EVENTOS -->
 
                 <section class="py-cofinal section-last-news">
                     <div class="container">
@@ -696,45 +649,12 @@
                                             </div>
                                         </li>
                                     }
-                                    @*
-                                        @for (int i = 0; i < 5; i++)
-                                        {
-                                            <li class="item" style="padding-bottom: 0">
-                                                <div class="team-member">
-                                                    <div class="image">
-                                                        <a href="#">
-                                                            <img src="https://picsum.photos/200/300" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="content" style="height:150px">
-                                                        <h4>Titulo</h4>
-                                                        <p style="height: 70px;" class="">decode ... </p>
-                                                        <p class="read-more">
-                                                            <a href="#" class="btn btn-template-main">Leer más.</a>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        }
-                                    *@
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </section>
-
-                <!--  ******  END PAGE  LAST UPDATE ****** -->
-                @*<div id="body">*@
-                @*<div id="imagen2">
-        <a><img src="~/img/57aniversario.jpg" width="1400" height="400" alt="" class="img-responsive" border="0"></a>
-        <br />*@
-                @*</div>*@
-
-                @*<div id="imagen1">
-
-            <img src="~/img/tasacdat4.png" alt="" class="img-responsive" border="0">
-        </div>*@
-
+                <!-- FIN DE ULTIMAS NOTICIAS Y EVENTOS -->
             </div>
                     <!------------- Estilos Cajas---------->
                     <style>
@@ -743,15 +663,7 @@
                                 margin: auto;
                                 width: 1150px;
                                 height: 400px;
-                                /*border:1px solid black;*/
                             }
-
-                            /*#imagen1 {
-                            width: 1140px;
-                            height: 540px;
-                            float: left;
-                        }*/
-
                             #imagen2 {
                                 width: 1150px;
                                 height: 400px;
@@ -759,6 +671,7 @@
                             }
                     </style>
                     <!------------- Fin Sesion Imagenes---------->
+
                     <!-- <div class="row">
                         <div class="container" id="conteniNot">
                             <div class="row" id="noti">
@@ -867,190 +780,6 @@
     @*seccion de imagen 1 Imagen de Fondo Azul*@
     <!--porque asociarte-->
 <div class="container">
-    @*
-        <div class="row parallaxbox" id="pb0" style="background-image: url(/img/tarjeta2.jpg);"> </div>
-        <div class="row">
-            <section class="bar background-gray no-mb" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
-                <div style="background-image:url(/img/barra.jpg); background-size:30%">
-                    <div id="get-it" style="background: -webkit-linear-gradient(left, rgba(216,65,65,0.99) 0%, rgba(216,65,65,0.89) 49%, rgba(213,195,195,0.81) 90%, rgba(213,195,195,0.79) 100%);text-align:left; -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
-                        <div class="container">
-                            <div class="col-md-12">
-                                <center><h2>¿Por qué asociarte?</h2></center>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>*@
-    @*<div class="row">
-            <section class="bar background-gray no-mb" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
-                <div style="background-image:url(/img/barra.jpg); background-size:30%">
-                    <div id="get-it" style="background: -webkit-linear-gradient(left, rgba(216,65,65,0.99) 0%, rgba(216,65,65,0.89) 49%, rgba(213,195,195,0.81) 90%, rgba(213,195,195,0.79) 100%);text-align:left; -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
-                        <div id="conve" class="container">
-                            <div class="col-md-12">
-                                <center><h2>Convenios y Alianzas Compartidas</h2></center>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>*@
-
-    <!--contenido porque asociarte-->
-    @*<div class="row">
-            <section id="aso" class="bar background-white no-mb">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7" style="background-color:white">
-                        <p class="mb-small text-justify" style="font-weight: bold; font-size:19px;">
-                            Porqué sus beneficios van más allá de las atractivas tasas de interés con que cuentan
-                            sus productos de ahorro, más allá de la agilidad y oportunidad los trámites de las diferentes
-                            líneas de crédito.   Porqué ofrece amplia cobertura en servicios
-                            sociales que benefician a todos sus asociados y a los integrantes de sus grupos familiares, a través de:
-                        </p>
-                        <ul class="text-justify" style="font-size:19px">
-                            <li>
-                                <strong>El Fondo de Solidaridad:</strong>  Permite estar presente en situaciones de calamidad doméstica, en el nacimiento de los hijos de los asociados, en enfermedades especializadas o en
-                                el fallecimiento del asociado o de un miembro de su grupo familiar.
-                            </li>
-                            <li><strong> El Fondo de Bienestar Integral:</strong> Permite fomentar la recreación, el deporte y la cultura entre los asociados.</li>
-                            <li><strong>El Fondo de Educación: </strong>  Permite contribuir al fortalecimiento de la educación formal en las regiones donde hace presencia COFINAL.</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 center-block">
-
-                        <!--imagen de porque asociarse-->
-                        <img src="~/img/Fachada.jpg" alt="" class="img-responsive" style="-webkit-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.83);
-                                -moz-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.75); box-shadow:  2px 7px 30px 7px rgba(0,0,0,0.75);  height: 350px; position:relative;  top:10px; left:35px">
-                    </div>
-                </div>
-            </div>
-            </section>
-        </div>*@
-
-    <!--fondo-->
-    <!--seccion de imagen 2-->
-    <!--imegne de Fondo azul-->
-    @*<div class="row parallaxbox" id="pb1" style="background-image: url(/img/fondoFunTurismo.JPG);"> </div>
-
-
-        <!--titulo convenios-->
-        <div class="row">
-            <section class="bar background-gray no-mb" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
-                <div style="background-image:url(/img/barra.jpg); background-size:30%">
-                    <div id="get-it" style="background: -webkit-linear-gradient(left, rgba(216,65,65,0.99) 0%, rgba(216,65,65,0.89) 49%, rgba(213,195,195,0.81) 90%, rgba(213,195,195,0.79) 100%);text-align:left; -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
-                        <div id="conve" class="container">
-                            <div class="col-md-12">
-                                <center><h2>Convenios y Alianzas Compartidas</h2></center>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-        </div>
-
-        <!--seccion de convenios-->
-        <div class="row">
-            <section class="bar background-gray no-mb" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);-moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
-
-                <div id="conve" class="container">
-
-                    <div class="col-md-12" style="margin-left: -120px;">
-                        <ul class="owl-carousel customers" style="width: 100%; left:80px">
-                            <!--familias en accion-->
-                            <li id="it" class="item" style="max-width: 300px">
-                                <img id="im" src="~/img/familiaslogo.png" alt="" class="img-responsive">
-                                <p class="read-more">
-                                    <a id="masI" href="/Home/ConveniosC/#assenda" class="btn btn-template-main">Mas información</a>
-                                </p>
-                            </li>
-                            <!--confamiliar-->
-                            <li id="it" class="item">
-                                <img id="im" src="~/img/comfamiliarlogo.png" alt="" class="img-responsive">
-                                <p class="read-more">
-                                    <a id="masI" href="/Home/ConveniosC/#comfa" class="btn btn-template-main">Mas información</a>
-                                </p>
-                            </li>
-                            <!--alkosto-->
-                            <li id="it" class="item">
-                                <img id="im" src="~/img/Logo-Alkosto.png" alt="" class="img-responsive">
-                                <p class="read-more">
-                                    <a id="masI" href="/Home/ConveniosC/#alkosto" class="btn btn-template-main">Mas información</a>
-                                </p>
-
-                            </li>
-                            <!--protegemos-->
-                            <li id="it" class="item">
-                                <img id="im" src="~/img/protegemos.jpg" alt="" class="img-responsive">
-                                <p class="read-more">
-                                    <a id="masI" href="/Home/ConveniosC/#protegemos" class="btn btn-template-main">Mas información</a>
-                                </p>
-                            </li>
-                            <!--giros-->
-                            <li id="it" class="item">
-                                <img id="im" src="~/img/logo-SUGIRO.jpg" alt="" class="img-responsive">
-                                <p class="read-more">
-                                    <a id="masI" href="/Home/ConveniosC/#giros" class="btn btn-template-main">Mas información</a>
-                                </p>
-                            </li>
-                            <!--previsora-->
-                            <li id="it" class="item">
-                                <img id="im" src="~/img/LogoAseguradora.png" alt="" class="img-responsive">
-                                <p class="read-more">
-                                    <a id="masI" href="/Home/AlianzasC/#previsora" class="btn btn-template-main">Mas información</a>
-                                </p>
-                            </li>
-                            <!--banca-->
-                            <li id="it" class="item">
-                                <img id="im" src="~/img/Logos/banca.png" alt="" class="img-responsive">
-                                <p class="read-more">
-                                    <a id="masI" href="/Home/AlianzasC/#banca" class="btn btn-template-main">Mas información</a>
-                                </p>
-                            </li>
-                            <!--woccu-->
-                            <li id="it" class="item">
-                                <img id="im" src="~/img/Logos/woccu.jpg" alt="" class="img-responsive">
-                                <p class="read-more">
-                                    <a id="masI" href="/Home/AlianzasC/#woccu" class="btn btn-template-main">Mas información</a>
-                                </p>
-                            </li>
-                            <!--banco bogota-->
-                            <li id="it" class="item">
-                                    <img id="im" src="~/img/Logos/bancoBogota.jpg" alt="" class="img-responsive">
-                                    <p class="read-more">
-                                        <a id="masI" href="/Home/AlianzasC/#banco" class="btn btn-template-main">Mas información</a>
-                                    </p>
-                                </li>
-                            <!--banco coopcentral-->
-                            <li id="it" class="item">
-                                <img id="im" src="~/img/Logos/coopcentral.jpg" alt="" class="img-responsive">
-                                <p class="read-more">
-                                    <a id="masI" href="/Home/AlianzasC/#coop" class="btn btn-template-main">Mas información</a>
-                                </p>
-                            </li>
-
-                        </ul>
-                        <!-- /.owl-carousel -->
-                    </div>
-
-                </div>
-
-            </section>
-        </div>
-        <!--seccion de imagen 2-->
-        <!--Imgen de Fondo Azul-->
-        <div class="parallaxbox" id="pb2" style="background-image: url(/img/fondoFunTurismo.JPG);"> </div>*@
-
-   
-    <!-- seccion de contactos-->
-    <section class="background-white no-mb">
-        <div class="container">
-            
-        </div>
-    </section>
-
     <style>
         .maps iframe {
             pointer-events: none;
@@ -1078,9 +807,9 @@
     @Scripts.Render("~/bundles/plantillaCarousel")
 
     <!--script del mapa-->
-    <script>
+    @*<script>
         document.getElementById('noclick').style.pointerEvents = 'none';
-    </script>
+    </script>*@
     <script>
         $(document).ready(function () {
             $('.maps').click(function () {
@@ -1092,8 +821,8 @@
             });
         });
     </script>
-    <!-- script para parallax-->
-    <script type="text/javascript">
+    <!-- script para parallax PARA QUE SIRVE?-->
+    @*<script type="text/javascript">
         function parallax() {
             setpos("#pb0");
             setpos("#pb1");
@@ -1143,7 +872,7 @@
         }).scroll(function () {
             parallax();
         });
-    </script>
+    </script>*@
     <!--estilo de slider-->
 
     <script>

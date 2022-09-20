@@ -343,7 +343,6 @@
     <Content Include="Content\style.blue.css" />
     <Content Include="Content\editorHtml\table.min.css" />
     <Content Include="Content\parallax.css" />
-    <Content Include="Estilos\videos.css" />
     <Content Include="igmSliders\imgtemp.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -765,6 +764,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="edithtml\" />
+    <Folder Include="Estilos\" />
     <Folder Include="Publicacion\" />
     <Folder Include="Views\Error\" />
     <Folder Include="Views\Silder\" />

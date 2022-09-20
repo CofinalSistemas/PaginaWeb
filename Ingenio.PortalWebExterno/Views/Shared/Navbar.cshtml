@@ -6,43 +6,14 @@
 }
 
         <header>
-            <!-- *** TOP ***
-            _________________________________________________________ -->
-            @*<div id="top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-5 contact">
-                            </div>
-                            <div class="col-xs-7">
-                                <div class="social">
-                                    <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                                    <a href="~/Home/Contact" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-                                </div>
-                                @if (!cuentaUsuario.IsNull())
-                                {
-                                                @cuentaUsuario.UserName
-                                }
-                                else
-                                {
-                                    <div class="login">
-                                        <a href="@Url.Action("Login", "Account")"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar sesión</span></a>
-                                        <a href="@Url.Action("Login", "Account")"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registrarse</span></a>
-                                    </div>
-                                }
-
-                            </div>
-                        </div>
-                    </div>
-                </div>*@
             <div id="top">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-8">
                             <div class="login pull-left">
                                 <div class="social">
-                                    <a href="https://www.facebook.com/profile.php?id=100011123886270" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.facebook.com/profile.php?id=100011123886270" class="external facebook" 
+                                       data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
                                     <a href="https://www.google.com.co/search?source=hp&q=cofinal&oq=cofinal&gs_l=psy-ab.3..35i39k1j0l3.1169.2424.0.2686.8.7.0.0.0.0.238.858.0j1j3.4.0....0...1.1.64.psy-ab..4.4.855.0..0i67k1.tiRMSmsmbP8" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
                                     <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
                                     <a href="~/Home/Contact" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
@@ -79,9 +50,8 @@
             </div>
 
 
-            <!-- *** TOP END *** -->
-            <!-- *** NAVBAR ***
-            _________________________________________________________ -->
+            <!-- *** NAVBAR ***-->
+
             <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
 
                 <div class="navbar navbar-default yamm" role="navigation" id="navbar">
@@ -205,8 +175,6 @@
                 <!-- /#navbar -->
 
             </div>
-
-            <!-- *** NAVBAR END *** -->
 
         </header>
 

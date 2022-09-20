@@ -5,7 +5,7 @@
     Layout = null;
     var Sliders = ViewBag.NotSlider;
     var noticias = ViewBag.Noticias;
-    var conf = ( ModalConfigurationModel )ViewBag.ModalConf;
+    var conf = (ModalConfigurationModel)ViewBag.ModalConf;
 }
 
 
@@ -55,17 +55,17 @@
 
         /* The Modal (background) */
         .modal {
-            display: none; 
+            display: none;
             position: fixed;
-            z-index: 997; 
-            padding-top: 20px; 
+            z-index: 997;
+            padding-top: 20px;
             left: 0;
             top: 0;
-            width: 100%; 
-            height: 100%; 
-            overflow: auto; 
-            background-color: rgb(0,0,0); 
-            background-color: rgba(0,0,0,0.9); 
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
         }
 
         .modal-content {
@@ -86,6 +86,7 @@
             padding: 10px 0;
             height: 150px;
         }
+
         .modal-content, #caption {
             -webkit-animation-name: zoom;
             -webkit-animation-duration: 0.6s;
@@ -130,6 +131,7 @@
                 text-decoration: none;
                 cursor: pointer;
             }
+
         @@media only screen and (max-width: 700px) {
             .modal-content {
                 width: 100%;
@@ -236,15 +238,18 @@
                             </li>
 
                             @*<li class="item item-app" style="background-color: #1F4F90">
-                        <a href="https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=2616#" target="_blank">
-                            <p>Realiza tus Pagos por <strong>PSE</strong></p>
-                            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-                        </a>
-                    </li>*@
+                                    <a href="https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=2616#" target="_blank">
+                                        <p>Realiza tus Pagos por <strong>PSE</strong></p>
+                                        <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                                    </a>
+                                </li>*@
 
                             <li class="item item-app" style="background-color: #E1852C">
                                 <a href="/FormatosAC/Index">
-                                    <p>Visualiza tu formato de afliación <strong>Aquí</strong></p>
+                                    <p>
+                                        Visualiza tu formato de afliación
+                                        <strong>Aquí</strong>
+                                    </p>
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                 </a>
                             </li>
@@ -252,14 +257,22 @@
 
                             <li class="item item-app" style="background-color: #314396">
                                 <a href="https://multiportal.redcoopcentral.com/multiportalvisio/Login/Index?ENTIDAD=00000117" target="_blank">
-                                    <p>Multiportal Transaccional  <br /> <strong>P. Natural</strong></p>
+                                    <p>
+                                        Multiportal Transaccional
+                                        <br />
+                                        <strong>P. Natural</strong>
+                                    </p>
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                 </a>
                             </li>
 
                             <li class="item item-app" style="background-color: #80031D">
                                 <a href="https://portaljuridico.redcoopcentral.com:8445/portalJuridico" target="_blank">
-                                    <p>Multiportal Transaccional <br /> <strong>P. Jurídica</strong></p>
+                                    <p>
+                                        Multiportal Transaccional
+                                        <br />
+                                        <strong>P. Jurídica</strong>
+                                    </p>
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                 </a>
                             </li>
@@ -334,28 +347,28 @@
 
                             @{
                                 @* for (int i = 0; i < 5; i++)
-                        {
-                            if (i == 0)
-                            {
-                                <div class="item active">
-                                    <img src="https://www.cofinal.com.co/igmSliders/20220214120103-ganadores-banner.png" alt="Titulo">
-                                    <div class="carousel-caption">
-                                        <h3>Titulo Titulo</h3>
-                                        <p>Descripcion </p>
-                                    </div>
-                                </div>
-                            }
-                            else
-                            {
-                                <div class="item">
-                                    <img src="https://www.cofinal.com.co/igmSliders/20220214120103-ganadores-banner.png" alt="Titulo">
-                                    <div class="carousel-caption">
-                                        <h3>Titulo Titulo</h3>
-                                        <p>Descripcion </p>
-                                    </div>
-                                </div>
-                            }
-                        }
+                                    {
+                                        if (i == 0)
+                                        {
+                                            <div class="item active">
+                                                <img src="https://www.cofinal.com.co/igmSliders/20220214120103-ganadores-banner.png" alt="Titulo">
+                                                <div class="carousel-caption">
+                                                    <h3>Titulo Titulo</h3>
+                                                    <p>Descripcion </p>
+                                                </div>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="item">
+                                                <img src="https://www.cofinal.com.co/igmSliders/20220214120103-ganadores-banner.png" alt="Titulo">
+                                                <div class="carousel-caption">
+                                                    <h3>Titulo Titulo</h3>
+                                                    <p>Descripcion </p>
+                                                </div>
+                                            </div>
+                                        }
+                                    }
                                 *@
                             }
 
@@ -388,7 +401,9 @@
                                     <strong>Cofinal</strong> es impulsor de desarrollo socioenconómico del suroccidente Colombiano a través de servicios cooperativos de ahorro y crédito; sirviendo con responsabilidad y confianza mutua, generamos bienestar a nuestros asociados.
                                     <br />
                                     <br />
-                                    Somos una <strong>Cooperativa de Ahorro y Crédito</strong> con 58 años de existencia in-interrumpida en el sector de la Economía Solidaria con amplia cobertura en el sur occidente del país. vigilada por la Superintendencia de la Economía Solidaria - <strong>SUPERSOLIDARIA</strong> .
+                                    Somos una
+                                    <strong>Cooperativa de Ahorro y Crédito</strong> con 58 años de existencia in-interrumpida en el sector de la Economía Solidaria con amplia cobertura en el sur occidente del país. vigilada por la Superintendencia de la Economía Solidaria -
+                                    <strong>SUPERSOLIDARIA</strong> .
                                 </p>
                                 <a class="btn btn-default btn-cofinal-orange" href="/Home/QuienesSomos">Conoce más</a>
                             </div>
@@ -405,10 +420,13 @@
                                 <h2 class="title-section">Nuestos servicios</h2>
                                 <hr class="separator-title" />
                                 <p class="description-section">
-                                    Brindamos servicios cooperativos de <strong>ahorro y crédito</strong>, que generen bienestar a los asociados,sus familias y a la comunidad en general,contribuyendo al desarrollo del país.
+                                    Brindamos servicios cooperativos de
+                                    <strong>ahorro y crédito</strong>, que generen bienestar a los asociados,sus familias y a la comunidad en general,contribuyendo al desarrollo del país.
                                     <br />
                                     <br />
-                                    Tenemos un <strong>producto para cada necesidad </strong>¿Ya conoces qué hace cada uno de ellos? Si aún no, te invitamos a que los conozcas y descubras cuál se <strong>adecúa mejor a tus necesidades.</strong>
+                                    Tenemos un
+                                    <strong>producto para cada necesidad </strong>¿Ya conoces qué hace cada uno de ellos? Si aún no, te invitamos a que los conozcas y descubras cuál se
+                                    <strong>adecúa mejor a tus necesidades.</strong>
                                 </p>
                             </div>
                             <div class="col-xs-12 col-md-9">
@@ -422,7 +440,10 @@
                                             <div class="body-card">
                                                 <h2 class="title-card">Ahorro</h2>
                                                 <p class="description-card">
-                                                    <strong>COFINAL®</strong> te brinda un amplio portafolio de productos de ahorros, estimulándolo con <strong>atractivas tasas de interés</strong>, <strong>bajos costos</strong> financieros y un <strong>amplio portafolio</strong> de servicios sociales.
+                                                    <strong>COFINAL®</strong> te brinda un amplio portafolio de productos de ahorros, estimulándolo con
+                                                    <strong>atractivas tasas de interés</strong>,
+                                                    <strong>bajos costos</strong> financieros y un
+                                                    <strong>amplio portafolio</strong> de servicios sociales.
                                                     <br />
                                                     <br />
                                                 </p>
@@ -440,7 +461,10 @@
                                             <div class="body-card">
                                                 <h2 class="title-card">Crédito</h2>
                                                 <p class="description-card">
-                                                    <strong>COFINAL®</strong>  cuenta con una amplia gama de líneas de crédito, diseñadas para<strong> asociados, personas naturales y jurídicas </strong>, con <strong>plazos flexibles</strong>, <strong>cómodas tasas </strong> de interés sin generación de costos adicionales.
+                                                    <strong>COFINAL®</strong>  cuenta con una amplia gama de líneas de crédito, diseñadas para
+                                                    <strong> asociados, personas naturales y jurídicas </strong>, con
+                                                    <strong>plazos flexibles</strong>,
+                                                    <strong>cómodas tasas </strong> de interés sin generación de costos adicionales.
                                                 </p>
                                                 <a href="/Home/Creditos" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
                                             </div>
@@ -456,8 +480,13 @@
                                             <div class="body-card">
                                                 <h2 class="title-card">Seguros</h2>
                                                 <p class="description-card"
-                                                    <strong>COFINAL®</strong> brinda <strong>planes de aseguramiento</strong> con lo que aseguramos tu futuro y el de tu familia. <strong>Seguro de ahorro y aportes</strong>, <strong>seguros de vida</strong>, <strong>voluntario agropecuario</strong>
-                                                <br /><br />
+                                                    <strong>COFINAL®</strong> brinda
+<strong>planes de aseguramiento</strong> con lo que aseguramos tu futuro y el de tu familia.
+<strong>Seguro de ahorro y aportes</strong>,
+<strong>seguros de vida</strong>,
+<strong>voluntario agropecuario</strong>
+                                                <br />
+<br />
                                                  </p>
                                                 <a href="/Home/Seguros" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
                                             </div>
@@ -656,92 +685,92 @@
                 </section>
                 <!-- FIN DE ULTIMAS NOTICIAS Y EVENTOS -->
             </div>
-                    <!------------- Estilos Cajas---------->
-                    <style>
-                            #body {
-                                margin-top: -50px;
-                                margin: auto;
-                                width: 1150px;
-                                height: 400px;
-                            }
-                            #imagen2 {
-                                width: 1150px;
-                                height: 400px;
-                                float: left;
-                            }
-                    </style>
-                    <!------------- Fin Sesion Imagenes---------->
+            <!------------- Estilos Cajas---------->
+            <style>
+                #body {
+                    margin-top: -50px;
+                    margin: auto;
+                    width: 1150px;
+                    height: 400px;
+                }
 
-                    <!-- <div class="row">
-                        <div class="container" id="conteniNot">
-                            <div class="row" id="noti">
-                                <div class="col-md-9" id="col">
+                #imagen2 {
+                    width: 1150px;
+                    height: 400px;
+                    float: left;
+                }
+            </style>
+            <!------------- Fin Sesion Imagenes---------->
+            <!-- <div class="row">
+                <div class="container" id="conteniNot">
+                    <div class="row" id="noti">
+                        <div class="col-md-9" id="col">
 
-                                    @*<h4>Mantenerse informado y actualizado sobre todas las noticias relacionadas con la Cooperativa</h4>*@
+                            @*<h4>Mantenerse informado y actualizado sobre todas las noticias relacionadas con la Cooperativa</h4>*@
 
-                                    <ul class="owl-carousel testimonials same-height-row">
-                                        @foreach (var item in Model)
-                                        {
-                                            string htmldecode = System.Web.HttpUtility.HtmlDecode(item.Html);
-                                            var htm = Regex.Replace(htmldecode, "<.*?>", " ");
-                                            htm = Regex.Replace(htm, "&nbsp;", " ");
-                                            htm = Regex.Replace(htm, "&aacute;", "á");
-                                            htm = Regex.Replace(htm, "&eacute;", "é");
-                                            htm = Regex.Replace(htm, "&iacute;", "í");
-                                            htm = Regex.Replace(htm, "&oacute;", "ó");
-                                            htm = Regex.Replace(htm, "&uacute;", "ú");
-                                            htm = Regex.Replace(htm, "&ntilde;", "ñ");
-                                            htm = Regex.Replace(htm, "&iquest;", "¿");
-                                            //var htmls = htmldecode.IndexOf("<p");
-                                            if (htm.Length < 100)
-                                            {
-                                                htmldecode = htm.Substring(0, htm.Length);
-                                            }
-                                            else
-                                            {
-                                                htmldecode = htm.Substring(0, 100);
-                                            }
-                                            <li class="item" style="padding-bottom: 0">
-                                                <div class="team-member">
-                                                    <div class="image">
-                                                        <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })">
-                                                            <img src="@item.Imagen" alt="" class="img-responsive img-circle" style="width: 200px; height: 200px;">
-                                                        </a>
-                                                    </div>
-                                                    <div class="content" style="height:150px">
-                                                        <h4>@item.Titulo</h4>
-                                                        <p style="height: 70px;" class="">@htmldecode ... </p>
-                                                        <p class="read-more">
-                                                            <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })" class="btn btn-template-main">Leer más.</a>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        }
-                                    </ul>
-                                </div>
+                            <ul class="owl-carousel testimonials same-height-row">
+                                @foreach (var item in Model)
+                                {
+                                    string htmldecode = System.Web.HttpUtility.HtmlDecode(item.Html);
+                                    var htm = Regex.Replace(htmldecode, "<.*?>", " ");
+                                    htm = Regex.Replace(htm, "&nbsp;", " ");
+                                    htm = Regex.Replace(htm, "&aacute;", "á");
+                                    htm = Regex.Replace(htm, "&eacute;", "é");
+                                    htm = Regex.Replace(htm, "&iacute;", "í");
+                                    htm = Regex.Replace(htm, "&oacute;", "ó");
+                                    htm = Regex.Replace(htm, "&uacute;", "ú");
+                                    htm = Regex.Replace(htm, "&ntilde;", "ñ");
+                                    htm = Regex.Replace(htm, "&iquest;", "¿");
+                                    //var htmls = htmldecode.IndexOf("<p");
+                                    if (htm.Length < 100)
+                                    {
+                                        htmldecode = htm.Substring(0, htm.Length);
+                                    }
+                                    else
+                                    {
+                                        htmldecode = htm.Substring(0, 100);
+                                    }
+                                    <li class="item" style="padding-bottom: 0">
+                                        <div class="team-member">
+                                            <div class="image">
+                                                <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })">
+                                                    <img src="@item.Imagen" alt="" class="img-responsive img-circle" style="width: 200px; height: 200px;">
+                                                </a>
+                                            </div>
+                                            <div class="content" style="height:150px">
+                                                <h4>@item.Titulo</h4>
+                                                <p style="height: 70px;" class="">@htmldecode ... </p>
+                                                <p class="read-more">
+                                                    <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })" class="btn btn-template-main">Leer más.</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
 
-                                <script>document.getElementById('noclick').style.pointerEvents = 'none';</script>
-                                <div class="col-md-3">
+                        <script>document.getElementById('noclick').style.pointerEvents = 'none';</script>
+                        <div class="col-md-3">
 
-                                    <!-- DolarWeb IndMax Start 
-                                    <div class="heading text-center" style="margin-bottom:10px;padding-top:15px;">
-                                        <h4>INDICADORES ECONÓMICOS</h4>
-                                        <p style="display:inline-block;">
+                            <!-- DolarWeb IndMax Start
+                            <div class="heading text-center" style="margin-bottom:10px;padding-top:15px;">
+                                <h4>INDICADORES ECONÓMICOS</h4>
+                                <p style="display:inline-block;">
 
-                                            <!-- DolarWeb IndMax Start 
-                                            <div id="IndicadoresMax"><h2><a href="https://dolar.wilkinsonpc.com.co/">Dolar Hoy Colombia</a></h2></div>
-                                            <script type="text/javascript" src="https://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-max.js?ancho=190&alto=280&fondo=transparent&fsize=12&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMax End 
-                                        </p>
-                                    </div>
-                                </div>
-
+                                    <!-- DolarWeb IndMax Start
+                                    <div id="IndicadoresMax"><h2><a href="https://dolar.wilkinsonpc.com.co/">Dolar Hoy Colombia</a></h2></div>
+                                    <script type="text/javascript" src="https://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-max.js?ancho=190&alto=280&fondo=transparent&fsize=12&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMax End
+                                </p>
                             </div>
                         </div>
-                    </div> -->
-                </section>
-            </div>
-  
+
+                    </div>
+                </div>
+            </div> -->
+        </section>
+    </div>
+
     @*-----------------------------------------------------FIN NOTICIAS---------------------------------------------------------*@
     <style type="text/css">
         body {
@@ -779,16 +808,16 @@
 
     @*seccion de imagen 1 Imagen de Fondo Azul*@
     <!--porque asociarte-->
-<div class="container">
-    <style>
-        .maps iframe {
-            pointer-events: none;
-        }
-    </style>
-    @*<div class='embed-container  maps'>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9160578226433!2d-77.28225128580804!3d1.2185285623241011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed487375d6129%3A0x75d762a9f2c9e3da!2sCOFINAL!5e0!3m2!1ses!2sit!4v1454678597238" height="250" frameborder="0" style="border: 0; width: 100%;" allowfullscreen></iframe>
-        </div>*@
-</div>
+    <div class="container">
+        <style>
+            .maps iframe {
+                pointer-events: none;
+            }
+        </style>
+        @*<div class='embed-container  maps'>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9160578226433!2d-77.28225128580804!3d1.2185285623241011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed487375d6129%3A0x75d762a9f2c9e3da!2sCOFINAL!5e0!3m2!1ses!2sit!4v1454678597238" height="250" frameborder="0" style="border: 0; width: 100%;" allowfullscreen></iframe>
+            </div>*@
+    </div>
 
     @Html.Partial("Footer")
     @*<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>*@
@@ -808,8 +837,8 @@
 
     <!--script del mapa-->
     @*<script>
-        document.getElementById('noclick').style.pointerEvents = 'none';
-    </script>*@
+            document.getElementById('noclick').style.pointerEvents = 'none';
+        </script>*@
     <script>
         $(document).ready(function () {
             $('.maps').click(function () {
@@ -823,56 +852,56 @@
     </script>
     <!-- script para parallax PARA QUE SIRVE?-->
     @*<script type="text/javascript">
-        function parallax() {
-            setpos("#pb0");
-            setpos("#pb1");
-            setpos("#pb2");
+            function parallax() {
+                setpos("#pb0");
+                setpos("#pb1");
+                setpos("#pb2");
 
-        }
-        function setpos(element, factor) {
-            factor = factor || 2;
+            }
+            function setpos(element, factor) {
+                factor = factor || 2;
 
-            var offset = $(element).offset();
-            var w = $(window);
+                var offset = $(element).offset();
+                var w = $(window);
 
-            var posx = (offset.left - w.scrollLeft()) / factor;
-            var posy = (offset.top - w.scrollTop()) / factor;
+                var posx = (offset.left - w.scrollLeft()) / factor;
+                var posy = (offset.top - w.scrollTop()) / factor;
 
-            $(element).css('background-position', '100% ' + posy + 'px');
+                $(element).css('background-position', '100% ' + posy + 'px');
 
-            // use this to have parralax scrolling vertical and horizontal
-            //$(element).css('background-position', posx+'px '+posy+'px');
-        }
+                // use this to have parralax scrolling vertical and horizontal
+                //$(element).css('background-position', posx+'px '+posy+'px');
+            }
 
-        $(document).ready(function () {
+            $(document).ready(function () {
 
-            //console.log("se cargo esto");
+                //console.log("se cargo esto");
 
-            $('.owl-carousel-testominals').owlCarousel({
-                loop: true,
-                responsiveClass: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: true
-                    },
-                    600: {
-                        items: 3,
-                        nav: true
-                    },
-                    1200: {
-                        items: 4,
-                        nav: true
+                $('.owl-carousel-testominals').owlCarousel({
+                    loop: true,
+                    responsiveClass: true,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: true
+                        },
+                        600: {
+                            items: 3,
+                            nav: true
+                        },
+                        1200: {
+                            items: 4,
+                            nav: true
+                        }
                     }
-                }
-            })
+                })
 
-            parallax();
+                parallax();
 
-        }).scroll(function () {
-            parallax();
-        });
-    </script>*@
+            }).scroll(function () {
+                parallax();
+            });
+        </script>*@
     <!--estilo de slider-->
 
     <script>

@@ -1,0 +1,188 @@
+﻿@using Ingenio.Models
+
+@{
+
+    AccountModels cuentaUsuario = new AccountModels();
+}
+<style>
+    .text-uppercase {
+    }
+</style>
+<header>
+    <!-- *** TOP ***
+    _________________________________________________________ -->
+    <div id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="login pull-left">
+                        <div class="social">
+                            <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
+                            <a href="~/Home/Contact" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                        </div>
+
+                        @if ( !cuentaUsuario.IsNull() )
+                        {
+                            <a href="@Url.Action("logout", "account")">
+                                <i class="fa fa-sign-in"></i>
+                                <span class="hidden-xs text-uppercase">Cerrar Sesión</span>
+                            </a>
+                        }
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="login pull-right">
+
+                        @if ( !cuentaUsuario.IsNull() )
+                        {
+                            <span> @cuentaUsuario.UserName</span>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("Login", "Account")"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar sesión</span></a>
+                            <a href="@Url.Action("Login", "Account")"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registrarse</span></a>
+                        }
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *** TOP END *** -->
+    <!-- *** NAVBAR ***
+    _________________________________________________________ -->
+
+    <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+        <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand home" href="~/Home/index">
+                        <img src="~/img/logo22.png" alt="Cofinal" class="hidden-xs hidden-sm hidden-md" style="margin-top: -0.4em ">
+                        <img src="~/img/logo23.png" alt="Cofinal" class="visible-sm visible-md" style="margin-top: -0.4em "><span class="sr-only">Cofinal</span>
+                        <img src="~/img/logo23.png" alt="Cofinal" class="visible-xs  img-responsive" style="margin-top: -0.4em "><span class="sr-only">Cofinal</span>
+                    </a>
+                    <div class="navbar-buttons">
+                        <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                            <span class="sr-only">Navegacion</span>
+                            <i class="fa fa-align-justify"></i>
+                        </button>
+                    </div>
+                </div>
+                <!--/.navbar-header -->
+
+
+                <div class="navbar-collapse collapse" id="navigation">
+                    <ul id="nav2" class="nav navbar-nav navbar-right">
+                        <!--admin personal-->
+                        <li id="adminPerso" class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Administrar Personal<b class="caret"></b></a>
+                            <ul class="dropdown-menu" style="left: 0px; right: -0px;">
+                                <li>
+                                    @Html.ActionLink("Asociados","Index","Asociado")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Usuarios","Index","User")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Roles","Index","Rol")
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!--Estados-->
+                        <li id="Estados" class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Configuración<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                @if ( !cuentaUsuario.IsNull() )
+                                {
+                                    @*<li>
+                                            <a href="@Url.Action("Details","Dian")">Parámetros DIAN</a>
+                                        </li>*@
+                                    <li>
+                                        <a href="@Url.Action("indexNoticia","Configuracion")">Noticias cofinal</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("indexNoticiaFundacion","Configuracion")">Noticias fundación</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("index","Configuracion")">Slider cofinal</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("IndexFundacion","Configuracion")">slider fundación</a>
+                                    </li>
+
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="@Url.Action("Index","CExtractos")">Publicidad Mercadeo</a>
+                                    </li>
+
+                                        <li>
+                                            <a href="@Url.Action("Modal","Configuracion")">Modal</a>
+                                        </li>
+                                }
+                            </ul>
+                        </li>
+                        <li id="reportes" class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Reportes<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="~/ReportesUIAF/Details">Reporte UIAF</a>
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Reporte Crédito","Index","SimuladorCre")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Reporte Ahorro","Index","SimuladorCDAT")
+                                </li>
+                            </ul>
+                        </li>
+
+                        @*<li id="cuenta" class="dropdown">
+                                <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Cuenta<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">link2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">link1</a>
+                                    </li>
+
+                                </ul>
+                            </li>*@
+
+                    </ul>
+
+                </div>
+                <!--/.nav-collapse -->
+
+                <div class="collapse clearfix" id="search">
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form>
+
+                </div>
+                <!--/.nav-collapse -->
+
+            </div>
+
+
+        </div>
+        <!-- /#navbar -->
+
+    </div>
+
+    <!-- *** NAVBAR END *** -->
+
+</header>
+

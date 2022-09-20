@@ -1,0 +1,122 @@
+﻿@model IEnumerable<Ingenio.BO.Ingenio.Asociados_Ingenio>
+
+@{
+    Layout = "~/Views/Shared/layoutAdmin.cshtml";
+    ViewBag.Title = "Asociados";
+    ViewBag.titulo = "Asociados";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "adminPerso";
+}
+
+<style>
+    #tabl {
+        margin-right: -15px;
+        margin-left: -15px;
+       background-color: #E9E9E9;
+        padding-left: 20px;
+        padding-right: 20px;
+       /* border: 1px solid #999;*/
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+</style>
+<section  id="contenido" >
+    <div class="container">
+   
+        <div class="row" id="tabl" style="border-radius: 15px;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Identificación
+                        </th>
+                        <th>
+                            Nombre
+                        </th>
+                        <th>
+                            Correo
+                        </th>
+                        <th>
+                            Fecha de creación
+                        </th>
+                        <th>
+                            Fecha ultimo accceso
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Identificacion)
+                            </td>
+                            <td>
+                                @item.PrimerNombre  @item.PrimerApellido
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Correo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FechaCreacion)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FechaAnteriroAcceso)
+                            </td>
+                            <td>
+                                @*@Html.ActionLink("Eliminar", "Asociado", new { id=item.Identificacion })*@
+                                <button data-id="@item.Identificacion" name="eliminar" type="button" value="@item.Identificacion" class="btn btn-danger" >Eliminar</button>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+         
+    </div>
+</section>
+<script>
+    $(".table").DataTable({
+        fixedHeader: true
+    });
+</script>
+<script>
+    $('[name=eliminar]').on('click', function (event) {
+        event.preventDefault();
+        var id = $(this).val();
+        
+        swal({
+            title: "¿Eliminar?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Si, eliminar",
+            closeOnConfirm: false
+        },
+        function () {
+            $.post("@Url.Action("EliminarAso")", { id: id }, function (response) {
+                if (response.estado == true) {
+                    swal({
+                        title: "Eliminado",
+                        text: "",
+                        timer: 1000,
+                        type: "success",
+                        showConfirmButton: false
+                    });
+                    window.location.href = "@Url.Action("Index")";
+                }
+                else {
+                    swal("Error", "No se ha eliminado el asociado", "error");
+                }
+            });
+        })
+    });
+</script>

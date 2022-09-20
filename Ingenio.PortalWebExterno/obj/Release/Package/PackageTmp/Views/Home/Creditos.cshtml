@@ -1,0 +1,358 @@
+﻿@{
+    ViewBag.Title = "Nuestros créditos";
+    ViewBag.titulo = "Nuestros Créditos";
+    ViewBag.url = Url.Action("index", "home");
+   ViewBag.activo = "productos";
+
+}
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+<style>
+    .bs-callout {
+        padding: 20px;
+        margin: 20px 0;
+        border: 1px solid #ce4844;
+        border-left-width: 5px;
+        border-radius: 3px;
+        background-color: white;
+    }
+
+    .box-image-text {
+        margin-left: -5px;
+        margin-right: -5px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        position: relative;
+        margin-bottom: 35px;
+        -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        width: 330px;
+        max-width: 330px;
+        height: 320px;
+        max-height: 320px;
+    }
+
+    .bar.background-white {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    .content {
+        margin-left: 15px;
+        margin-right: 15px;
+       
+    }
+    .blanco{
+        background-color:#fff;
+    }
+  .play:hover{
+        background:#237fef;
+        transition: 2s;
+        
+    }
+    .play {
+        width: 6em;
+        border-radius: 150%;
+        text-align: center;
+        background-color: #da4d4d;
+        font-size: 3em;
+        color: white;
+        transition: 2s;
+    }
+    .modal-body
+{
+    background-color: #DAFDFD;
+}
+    .modal-header
+{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+     background-color:#da4d4d;
+
+}
+.modal-footer
+{
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+     background-color:#da4d4d;
+   
+}
+.top{
+      margin-bottom:20px;
+  }
+
+    #col {
+        min-width: 250px;
+      
+        margin-right: 90px;
+       
+    }
+
+    .row {
+        margin-right: 5px;
+    }
+    .col-md-3{
+            width: 15%;
+    margin-left: 70px;
+    }
+
+    #textura {
+        background-color: #da4d4d;
+        padding-top: 20px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        -webkit-box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+        box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+    }
+    #imagenes{
+        padding-bottom: 45px;
+        margin: auto;
+        padding-top: 20px;
+        margin-top: -20px;
+        -moz-box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+        box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+    }
+    #pp {
+        color: #777;
+        font-size: 16px;
+    }
+    
+</style>
+
+<!--funcion cerrar del video-->
+   <script>
+      
+       function stop() {
+           var myVideo = document.getElementById("miv");
+           if (myVideo.play )
+           {
+               myVideo.pause();
+              
+           }
+          else {
+               myVideo.play();
+           }
+       }
+</script>
+
+
+
+<!-- Modal Video-->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Nuestros Créditos</h4>
+            </div>
+            <div class="modal-body">
+                <video  id="miv" src="~/Videos/creditosfin.mp4" width="100%"  controls></video>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="stop()" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--imagen 1-->
+<div class="parallaxbox1" id="pb0" style="background-image:url(/img/ahorro1-2.jpg);">
+    <div class="container">
+        <center>
+            <div class="play" id="modal" data-toggle="modal" data-target="#myModal"> <i class="fa fa-play-circle-o" style="font-size:6em;"></i></div>
+
+        </center>
+    </div>
+ 
+</div>
+
+<!--seccion de nota-->
+<section id="textura" >
+    <div class="container" >
+
+            <p class="text-justify" style="color:#eeeeee; font-size:20px;" >
+                <strong>COFINAL</strong> le ofrece todas las líneas de crédito con financiación de corto,
+                mediano y largo plazo a cómodas tasas de interés.
+                Todos los créditos en Cofinal, son en pesos, con cuota fija y amplia variedad de plazos de financiación,
+                de acuerdo a las necesidades de los asociados.
+            </p>
+       
+    </div>
+</section>
+
+<!--contenido-->
+ <div id="imagenes" class="row" style="background-image:url(/img/texture-bw.png); ">
+
+            <div id="col" class="col-md-3 col-sm-6" >
+                <div class="blanco box-image-text blog" >
+                    <div class="top" >
+                        <div class="image">
+                            <img src="~/img/educativo.png" style="width:120px; height: 120px;" alt="Cofijunior" class="img-responsive  center-block"/>
+
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h4>Crédito Educativo</h4>
+                        <p id="pp"style="height: 50px;">Dinero para formación académica.</p>
+                        <p class="read-more">
+                            <a href="/Home/ProductosCreditos/#creditoEducativo" class="btn btn-template-main">Mas información</a>
+                        </p>
+                        <br />
+
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div id="col" class="col-md-3 col-sm-6">
+                <div class="blanco box-image-text blog" >
+                    <div class="top">
+                        <div class="image">
+                            <img src="~/img/vivienda.png" style="width:120px; height: 120px;" alt="Cofijunior" class="img-responsive  center-block">
+                        </div>
+                    </div>
+                    <div class="content" >
+                        <h4>Crédito para Vivienda</h4>
+                        <p id="pp" style="height: 50px;"> Dinero para compra de vivienda nueva o usada, rural o urbana.</p>
+                        <p class="read-more">
+                            <a href="/Home/ProductosCreditos/#creditoVivienda" class="btn btn-template-main">Mas información</a>
+                        </p>
+                        <br />
+                    </div>
+                </div>
+                <!-- /.box-image-text -->
+            </div>
+            <!---->
+            <div id="col" class="col-md-3 col-sm-6">
+                <div class="blanco box-image-text blog" >
+                    <div class="top">
+                        <div class="image">
+                            <img src="~/img/cartera.png" style="width:120px; height: 120px;" alt="Cofijunior" class="img-responsive  center-block">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h4>Crédito Compra de Cartera</h4>
+                        <p id="pp" style="height: 60px;"> Le permite cancelar obligaciones de otras entidades financieras y unificarlas sus deudas en <strong>COFINAL</strong>.</p>
+                        <p class="read-more">
+                            <a href="/Home/ProductosCreditos/#creditoCartera" class="btn btn-template-main">Mas información</a>
+                        </p>
+                        <br />
+                    </div>
+                </div>
+                <!-- /.box-image-text -->
+            </div>
+            <!---->
+            <div id="col" class="col-md-3 col-sm-6">
+                <div class="blanco box-image-text blog" >
+                    <div class="top">
+                        <div class="image">
+                            <img src="~/img/libranzav2.png" style="width:120px; height: 120px;" alt="Cofijunior" class="img-responsive  center-block">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h4>Crédito de Libranza</h4>
+                        <p id="pp"style="height: 90px;">
+                            Disponer de dinero para lo que necesite, cuando lo necesite.
+                            Con tasas de interés muy competitivas.
+                        </p>
+                        <p class="read-more">
+                            <a href="/Home/ProductosCreditos/#creditoLibranza" class="btn btn-template-main">Mas información</a>
+                        </p>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <!--consumo-->
+            <div id="col" class="col-md-3 col-sm-6">
+                <div class="blanco box-image-text blog" >
+                    <div class="top">
+                        <div class="image">
+                            <img src="~/img/consumo.png" style="width:120px; height: 120px;" alt="consumo" class="img-responsive  center-block">
+                        </div>
+                    </div>
+                    <div class="content" >
+                        <h4>Crédito de Consumo</h4>
+                        <center> <p id="pp">Dinero para comprar lo que siempre ha querido. Vacaciones, vehículo, electrodomésticos, entre otras necesidades.</p></center> 
+                        <p class="read-more">
+                            <a href="/Home/ProductosCreditos/#creditoConsumo" class="btn btn-template-main">Mas información</a>
+                        </p>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <!--micro-->
+            <div id="col" class="col-md-3 col-sm-6">
+                <div class="blanco box-image-text blog" >
+                    <div class="top">
+                        <div class="image">
+                            <img src="~/img/micro.png" style="width:120px; height: 120px;" alt="micri" class="img-responsive  center-block">
+                        </div>
+                    </div>
+                    <div class="content" >
+                        <h4>Microcrédito</h4>
+                        <p id="pp" style="height: 90px;">
+                            Dinero disponible para Microempresarios facilita la compra de activos,
+                            maquinaria y equipo que su negocio necesite.
+                        </p>
+                        <p class="read-more">
+                            <a href="/Home/ProductosCreditos/#microcredito" class="btn btn-template-main">Mas información</a>
+                        </p>
+                        <br /> 
+                    </div>
+                </div>
+            </div>
+  
+        </div>
+  
+<!--imagen 1-->
+<div class="parallaxbox1" id="pb1" style="background-image:url(/img/ahorro1-2.jpg);">
+    <!--boton simulador-->
+    <div class="container" style="padding-top:1em; ">
+        <div class="well" style="max-width:400px; margin:0 auto 10px;">
+            @*<button id="miBoto" style="background-color:#da4d4d; background-size:20px;" type="button" class="btn btn-primary btn-lg btn-block"><a style="color:white" href="~/SimuladorCre/Edit">Simuladores</a></button>*@
+            <a href="~/SimuladorCre/Edit">
+                <img src="~/img/simulador.png" alt="Simulador de credito" style="width:350px;height:42px;border:0;">
+            </a>
+        </div>
+
+    </div>
+</div>
+<!-- scrip para parallax-->
+<script type="text/javascript">
+			function parallax() {
+			    setpos("#pb0");
+			    setpos("#pb1");
+
+			}
+
+
+
+			function setpos(element, factor) {
+				factor = factor || 2;
+
+				var offset = $(element).offset();
+				var w = $(window);
+
+				var posx = (offset.left - w.scrollLeft()) / factor;
+				var posy = (offset.top - w.scrollTop()) / factor;
+
+				$(element).css('background-position', '100% '+posy+'px');
+
+    // use this to have parralax scrolling vertical and horizontal
+    //$(element).css('background-position', posx+'px '+posy+'px');
+}
+
+$(document).ready(function () {
+	parallax();
+}).scroll(function () {
+	parallax();
+});
+</script>
+
+
+

@@ -1,0 +1,150 @@
+﻿
+@{
+    Layout = "~/Views/Shared/layoutAdmin.cshtml";
+    ViewBag.Title = " Publicidad Mercadeo ";
+    ViewBag.titulo = "Publicidad Mercadeo";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "Mercadeo";
+
+}
+<section>
+    <div class="container">
+        <label></label>
+        <style>
+            
+            .image-preview-input {
+                position: relative;
+                overflow: hidden;
+                margin: 0px;
+                color: #333;
+                background-color: #fff;
+                border-color: #ccc;
+            }
+
+                .image-preview-input input[type=file] {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 20px;
+                    cursor: pointer;
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                }
+
+            .image-preview-input-title {
+                margin-left: 2px;
+            }
+        </style>
+        <div class="heading">
+            <center><h2>SUBIR IMAGEN PARA MERCADEO</h2></center>
+        </div>
+
+        <p class="">
+            A través de este formulario puede cargar 
+            una imagen que muestre promociones, productos, noticias, etc., 
+            para que aparezca en el extracto de crédito.<strong>El tamaño adecuado para la publicidad es (450px,200px).</strong>
+        </p>
+        @using (Html.BeginForm("Index", "CExtractos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="row ">
+                <div class="col-md-8 col-md-offset-2">
+                   <div class="input-group image-preview">
+                        <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                        <span class="input-group-btn">
+                            <!-- image-preview-clear button -->
+                            <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                <span class="glyphicon glyphicon-remove"></span> Quitar
+                            </button>
+                            <!-- image-preview-input -->
+                            <div class="btn btn-default image-preview-input">
+                                <span class="glyphicon glyphicon-folder-open"></span>
+                                <span class="image-preview-input-title">Abrir</span>
+                                <input required type="file" id="files" accept="image/jpg, image/png, image/jpeg, image/gif" name="Imagen" /> <!-- rename it -->
+                            </div>
+                            <button type="submit" value="1" class="btn btn-info" >
+                                <span class="fa fa-save"></span> Guardar
+                            </button>
+                        </span>
+                    </div><!-- /input-group image-preview [TO HERE]-->                    
+                </div>
+               
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div id="imgoculta" @*style="display:none"*@>
+                            <img id="imgpreview" src="@Url.Action("ImagenPrevia")" style="width:450px; height:200px;" />
+                        </div>
+                    </div>
+                </div>
+
+        }
+    </div>
+</section>
+<script>
+    
+     $(document).on('click', '#close-preview', function () {
+        $('.image-preview').popover('hide');
+        // Hover befor close the preview
+        $('.image-preview').hover(
+            function () {
+                $('.image-preview').popover('show');
+            },
+             function () {
+                 $('.image-preview').popover('hide');
+             }
+        );
+    });
+
+    $(function () {
+        // Create the close button
+        var closebtn = $('<button/>', {
+            type: "button",
+            text: 'x',
+            id: 'close-preview',
+            style: 'font-size: initial;',
+        });
+        closebtn.attr("class", "close pull-right");
+        // Set the popover default content
+        $('.image-preview').popover({
+            trigger: 'manual',
+            html: true,
+            title: "<strong>Vista previa</strong>" + $(closebtn)[0].outerHTML,
+            content: "No se ha subido imagen",
+            placement: 'bottom'
+        });
+        // limpiar evento
+                
+        $('.image-preview-clear').click(function () {
+            $('.image-preview').attr("data-content", "").popover('hide');
+            $('.image-preview-filename').val("");
+            $('.image-preview-clear').hide();
+            $('.image-preview-input input:file').val("");
+            $(".image-preview-input-title").text("Abrir");
+            $('#imgoculta').hide();
+        });
+        // crear una previsualizacion de la imange
+        $(".image-preview-input input:file").change(function () {
+                       var file = this.files[0];
+             var reader = new FileReader();
+            // Set preview image into the popover data-content
+             reader.onload = function (e) {
+                 $("#imgoculta").show();
+                 $("#imgpreview").attr('src', e.target.result)
+                $(".image-preview-input-title").text("Cambiar");
+                $(".image-preview-clear").show();
+                $(".image-preview-filename").val(file.name);
+                //img.attr('src', e.target.result);
+              //  $(".image-preview").attr("data-content", $(img)[0].outerHTML).popover("show");
+               
+            }
+            reader.readAsDataURL(file);
+           
+        });
+      
+        
+    });
+
+</script>

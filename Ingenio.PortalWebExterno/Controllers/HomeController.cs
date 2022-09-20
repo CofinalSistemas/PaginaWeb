@@ -206,11 +206,21 @@ namespace Ingenio.PortalWebExterno.Controllers
 
             return View();
         }
-        /// <summary>
-        /// creado por Ing. Carlos Jojoa C, fec. 2016-05-06
-        /// Muestra el formulario de peticiones, quejas y reclamos , y se envia por email hacia cofinal
-        /// </summary>
-        public ActionResult Contact()
+        
+        public ActionResult PoliticasTIC()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+         
+
+
+    /// <summary>
+    /// creado por Ing. Carlos Jojoa C, fec. 2016-05-06
+    /// Muestra el formulario de peticiones, quejas y reclamos , y se envia por email hacia cofinal
+    /// </summary>
+    public ActionResult Contact()
         {
             string param1 = this.Request.QueryString["msj"];
             ViewBag.Message = "Your contact page.";

@@ -4,35 +4,6 @@
     ViewBag.url = Url.Action("index", "home");
     ViewBag.activo = "conoscanosActivo";
 }
-<style>
-    #an {
-        color: black;
-        font-size: 20px;
-    }
-
-    .text-justify, #pp {
-        font-size: 18px;
-    }
-
-    #valo, #prin, #gob, #pol, #est {
-        padding-bottom: 1px;
-        background: #da4d4d;
-    }
-
-    #get-it {
-        background: -webkit-linear-gradient(left, rgba(216,65,65,0.99) 0%, rgba(216,65,65,0.89) 49%, rgba(213,195,195,0.81) 90%, rgba(213,195,195,0.79) 100%);
-        text-align: left;
-        -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
-        -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
-        box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
-        height: 120px;
-    }
-
-    #titulo {
-        background-image: url(/img/textura1.png);
-        background-size: 30%;
-    }
-</style>
 
 <script type="text/javascript">
     var _smartsupp = _smartsupp || {};
@@ -45,49 +16,66 @@
     })(document);
 </script>
 
+
+
 <style>
-    .contenido {
-        background-image: url(/img/texture-bw.png);
-        padding-top: 20px;
-        padding-bottom: 20px;
-        -webkit-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
-        -moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
-        box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
+
+    .item-conceptosinteres, .item-conceptosinteres a {
+        border: none !important;
+    }
+
+    .item-conceptosinteres {
+        background: #E1852C;
+    }
+
+    .item-conceptosinteres a {
+        color: black;
+        font-weight: 400;
+        font-size: 19px;
+    }
+
+    .item-conceptosinteres:hover {
+        background: #bf640b;
+     }
+
+    .item-conceptosinteres.active {
+        background: white;
+        text-decoration: underline;
+    }
+
+     .item-conceptosinteres.active a {
+        color: black;
+        font-weight: 500;
+     }
+
+
+    .text-justify {
+        font-size: 18px;
+
     }
 </style>
+
+
+
 <!-- estilo para imagen con parallax-->
 <link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
 
-<!-- imagen fondo1-->
-<!---<div class="parallaxbox" id="pb0" style="background-image: url(/img/fondos/CB100787.JPG);"> </div>
 
-<!-- div titulo-->
-<!---
-<div id="titulo">
-    <div id="get-it">
-        <div class="container">
-            <div class="text-center">
-                <h2>Conozca de nosotros</h2>
-            </div>
-
-        </div>
-    </div>
-</div>
 
     <!-- contenido-->
 <section class="contenido">
-    <div class="container" style="background-color: rgba(255, 255, 255, 0.8); -webkit-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);-moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);   ">
-        <ul class="nav nav-tabs" style="background-color:#da4d4d">
-            <li class="active" id="valo"><a id="an" href="#valoresCoo" data-toggle="tab">Valores cooperativos</a></li>
-            <li id="prin"><a id="an" data-toggle="tab" href="#principios">Principios cooperativos</a></li>
-            <li id="gob"><a id="an" data-toggle="tab" href="#gobierno">Gobierno corporativo</a></li>
-            <li id="pol"><a id="an" data-toggle="tab" href="#politica">Politica Tratamiento Información</a></li>
-            <li id="est"><a id="an" data-toggle="tab" href="#estatutos">Estatutos</a></li>
-            <li id="est"><a id="an" data-toggle="tab" href="#r_credito">Reglamentos Crédito</a></li>
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8);">
+        <ul class="nav nav-tabs" style="background-color:#ffffff">
+            <li id="valo" class="item-conceptosinteres active" ><a id="an" href="#valoresCoo" data-toggle="tab">Valores cooperativos</a></li>
+            <li id="prin" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#principios">Principios cooperativos</a></li>
+            <li id="gob" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#gobierno">Gobierno corporativo</a></li>
+            <li id="pol" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#politica">Código de Etica y Conducta</a></li>
+            <li id="est" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#estatutos">Estatutos</a></li>
+            <li id="est" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#r_credito">Reglamentos Crédito</a></li>
 
         </ul>
 
-        <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
+        <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8); font-size: 18px; ">
             <div class="tab-pane active" id="valoresCoo">
                 <p style="text-align:justify">
 
@@ -213,16 +201,18 @@
 
             <div class="tab-pane" id="politica">
                 <p id="pp" style="text-align:justify">
-                    Esta política aplica para todos los titulares de información personal que sea utilizada y/o se encuentre en las bases de datos de COFINAL LTDA:
+                    El presente código es el reflejo de que Cofinal® está comprometida en adoptar un marco de principios y valores de
+                    autorregulación, con los que persigue orientar la conducta de sus organismos internos de administración y vigilancia,
+                    colaboradores, contratistas y terceros. En el siguiente enlace puede conocer mas:
                 </p>
-                <a href="~/Formatos/FORMATOS POLITICA/Politica.pdf" download>Descargar Archivo:PoliticaTI.pdf</a>
+                <a href="~/Formatos/Formato politica/Codigo_Etica_y_Conducta.pdf" download>Descargar Archivo: Codigo de etica y conducta.pdf</a>
             </div>
 
             <div class="tab-pane" id="estatutos">
                 <p id="pp" style="text-align:justify">
                     Los estatutos son las reglas de juego que acuerdan los socios y define el funcionamiento general de la Cooperativa.
                 </p>
-                <a href="~/Formatos/Formato estatutos/Estatutos.pdf" download>Descargar Archivo:Estatutos.pdf</a>
+                <a href="~/Formatos/Formato estatutos/Estatutos.pdf" download>Descargar Archivo: Estatutos.pdf</a>
             </div>
 
             <div class="tab-pane" id="r_credito">
@@ -239,8 +229,9 @@
     </div>
 </section>
 
-<!-- imagen fondo1-->
-<div class="parallaxbox" id="pb1" style="background-image: url(/img/fondos/fondoconinteres.jpg);"> </div>
+<div class="container-fluid" style="margin-bottom: -6px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,32L120,74.7C240,117,480,203,720,202.7C960,203,1200,117,1320,74.7L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+</div>
 
 <!-- scrip para parallax-->
 <script type="text/javascript">

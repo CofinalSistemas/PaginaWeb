@@ -1,0 +1,282 @@
+﻿@{
+    Layout = "~/Views/Shared/layoutFundacion.cshtml";
+    ViewBag.Title = "Programas Recreativos";
+    ViewBag.titulo = "Programas Recreativos";
+    ViewBag.url = Url.Action("index", "Fundacion");
+    ViewBag.activo = "NuestrosProgramas";
+}
+<style>
+    .bs-callout {
+        padding: 20px;
+        margin-top: 20px 0;
+        border: 1px solid #ce4844;
+        border-left-width: 5px;
+        border-radius: 3px;
+        background-color: white;
+    }
+
+    .box-image-text {
+        background: rgba(255, 255, 255, 0.83);
+        border-radius: 3px;
+        width: 320px;
+        height: 265px;
+        margin-left: 70px;
+        position: relative;
+        -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+    }
+
+    .bar.background-white {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    .image:hover {
+        transform: scale(0.8);
+    }
+
+    .blanco {
+        background-color: #fff;
+    }
+
+    .play:hover {
+        background: #237fef;
+        transition: 2s;
+    }
+
+    .play {
+        width: 6em;
+        border-radius: 150%;
+        text-align: center;
+        background-color: #F2A326;
+        font-size: 1em;
+        color: white;
+        transition: 2s;
+    }
+
+    .modal-body {
+        background-color: #467fbf;
+    }
+
+    .modal-header {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        background-color: white;
+    }
+
+    .modal-footer {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        background-color: white;
+    }
+
+    .top {
+        margin-bottom: 20px;
+    }
+
+    #col {
+        display: block;
+        margin-right: -50px;
+        min-width: 400px;
+        min-height: 272px;
+        margin-left: 50px;
+        padding-left: 0px;
+    }
+
+    #imagenes {
+        padding-bottom: 45px;
+        margin: auto;
+        padding-top: 20px;
+        margin-top: -20px;
+        -moz-box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+        box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+    }
+
+    .content {
+        margin: 10px;
+        text-justify: auto;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    #textura {
+        background-color: #da4d4d;
+        -webkit-box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+        box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
+        padding-top: 20px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+</style>
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+<style>
+   .text-justify {
+        font-size: 20px;
+    }
+     #a {
+        color: black;
+        font-size:20px;
+    }
+
+    #cur, #ase, #tera {
+        
+        padding-bottom: 1px;
+        background: #F2A326	;
+    }
+   
+    #get-it{
+            background: -webkit-linear-gradient(left, #f2a326 0%, rgba(242, 163, 38, 0.81) 50%, rgba(242, 163, 38, 0.55) 69%, rgba(242, 163, 38, 0.51) 100%);
+        text-align:left; 
+        
+    }
+     #titulo{
+            background-image:url(/img/texturaAmarilla2.jpg); 
+            background-size:30%;
+            }
+     .item img{
+        width:100%;
+
+    }
+</style>
+<!--seccion de imagen 1-->
+<div class="parallaxbox" id="pb0" style="background-image: url(/img/fondos/prog.jpg);"> </div>
+<!-- div titulo-->
+<div id="titulo">
+    <div id="get-it">
+        <div class="container">
+            <div class="text-center">
+                <h2>Programación</h2>
+               
+               
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- contenido-->
+<section style="background-image:url(/img/texture-bw.png); padding-top:40px; padding-bottom:40px;-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8);  ">
+        <ul class="nav nav-tabs" style="background-color:#F2A326">
+            <li class="active" id="cur"><a id="a" href="#cursos" data-toggle="tab">Vacaciones recreativas</a></li>
+            <li id="ase"><a id="a" data-toggle="tab" href="#asesoriasProfesionales">Encuentro de Colonias</a></li>
+            <li id="tera"><a id="a" data-toggle="tab" href="#terapiasP">Alianza con Comite de Educación</a></li>
+        </ul>
+
+        <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
+            <!--cursos-->
+            <div class="tab-pane active" id="cursos">
+
+                <div class="heading">
+                    <h4>Cursos </h4>
+                </div>
+                <ul class="text-justify">
+                    <li>Cursos de Pintura.</li>
+                    <li>Cursos de Caricatura.</li>
+                    <li>Cursos de Manualidades.</li>
+                    <li>Participación carnavalito Pasto</li>
+                    
+                </ul>
+                <div class="heading">
+                    <h4>Escuelas de formación Artística</h4>
+                </div>
+                <ul class="text-justify">
+                    <li>1.  nes</li>
+                    <li>2. Escuela de Danzas para niños y jóvenes</li>
+                </ul>
+                
+            </div>
+            <!--encuentro colonias-->
+            <div class="tab-pane " id="asesoriasProfesionales">
+                <div class="heading">
+                    <h4>Encuentro de colonias en Sandoná y Pasto</h4>
+                </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wUMxooyNOHw" frameborder="0" allowfullscreen></iframe>
+  
+                <div class="heading">
+                    <h4>Carnavalito en San Juan de Pasto</h4>
+                </div>
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/-jxyBf5MsEc" frameborder="0" allowfullscreen></iframe>  
+                               
+</div>
+            <!--cursos alianzas-->
+            <div class="tab-pane" id="terapiasP">
+                <div class="heading">
+                    <h4>Alianza con comite de educación Cofinal
+</h4>
+                </div>
+                <ul class="text-justify">
+                    <li>Lúdicas, Pedagógicas, Culturales, Recreativas, Deportivas y Cuidado del Medio Ambiente</li>
+                                      
+                </ul>
+
+            </div>
+         </div>
+    </div>
+
+</section>
+
+<!--seccion de imagen 2-->
+<div class="parallaxbox" id="pb1" style="background-image: url(/img/fondos/prog.jpg);"> </div>
+ <!--fondo 2 con carusel de fotos-->
+<ul class="pgwSlideshow">
+    @{ int count = 0;}
+    @foreach (var item in ViewBag.imagenesServi)
+    {
+        <li><img src="@item"></li>
+        count++;
+        if (count == 20)
+        {
+            break;
+        }
+    }
+
+
+</ul>
+<!---->
+<!-- scrip para parallax-->
+<script type="text/javascript">
+			function parallax() {
+			    setpos("#pb0");
+			    setpos("#pb1");
+			   
+
+
+			}
+
+
+
+			function setpos(element, factor) {
+				factor = factor || 2;
+
+				var offset = $(element).offset();
+				var w = $(window);
+
+				var posx = (offset.left - w.scrollLeft()) / factor;
+				var posy = (offset.top - w.scrollTop()) / factor;
+
+				$(element).css('background-position', '100% '+posy+'px');
+
+    // use this to have parralax scrolling vertical and horizontal
+    //$(element).css('background-position', posx+'px '+posy+'px');
+}
+
+$(document).ready(function () {
+	parallax();
+}).scroll(function () {
+	parallax();
+});
+</script>
+
+<!--script de carusel de fotos-->
+<script>
+    $(document).ready(function () {
+        $('.pgwSlideshow').pgwSlideshow();
+    });
+
+   
+</script>

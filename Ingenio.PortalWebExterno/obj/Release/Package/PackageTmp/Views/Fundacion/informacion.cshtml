@@ -1,0 +1,276 @@
+﻿@{
+    Layout = "~/Views/Shared/layoutFundacion.cshtml";
+    ViewBag.Title = "Nuestra fundación";
+    ViewBag.titulo = "Nuestra Fundación";
+    ViewBag.url = Url.Action("index", "Fundacion");
+    ViewBag.activo = "informacion";
+
+}
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+<style>
+    .text-justify {
+        font-size: large;
+    }
+    
+    #nav nav-tabs{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    margin:2px;
+    position: relative;
+    top: 40px;
+    width: 390px;
+    }
+   #an{
+       color: black;
+       font-size:20px;
+   }
+   
+   #reseH, #misiF, #visiF{
+        padding-bottom: 1px; 
+        background:#F2A326;
+   }
+    #get-it{
+              background: -webkit-linear-gradient(left, #f2a326 0%, rgba(242, 163, 38, 0.81) 50%, rgba(242, 163, 38, 0.55) 69%, rgba(242, 163, 38, 0.51) 100%);
+        text-align:left; 
+            }
+  #titulo{
+            background-image:url(/img/texturaAmarilla2.jpg); 
+            background-size:30%;
+            }
+  .heading{
+      margin-bottom: 10px;
+  }
+
+</style>
+<!--imagen 1-->
+<div class="parallaxbox" id="pb0" style="background-image: url(/img/fondos/funda.jpg);"> </div>
+
+<!-- div titulo-->
+<div id="titulo">
+    <div id="get-it">
+        <div class="container">
+            <div class="text-center">
+                <h2>Institución</h2>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--vab tab-->
+<section style="background-image:url(/img/texture-bw.png); padding-top:40px; padding-bottom:40px;-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+    <div class="container"  style="background-color: rgba(255, 255, 255, 0.8);  " >
+      <ul class="nav nav-tabs" style="background-color:#F2A326">
+        
+        <li id="reseH" class="active"><a id="an" data-toggle="tab" href="#resenaHistorica">Reseña Histórica</a></li>
+        <li id="objeto"><a id="an" data-toggle="tab" href="#objeS">Objeto Social</a></li>
+        <li id="misiF"><a id="an" data-toggle="tab" href="#misionF">Misión</a></li>
+        <li id="visiF"><a id="an" data-toggle="tab" href="#visionF">Visión</a></li>
+        <li id="princ"><a id="an" data-toggle="tab" href="#princV">Principios y valores</a></li>
+        <li id="valor"><a id="an" data-toggle="tab" href="#valorC">Valores Corporativos</a><li/>
+</ul>
+
+    <div class="tab-content"  style="background-color: rgba(255, 255, 255, 0.8);" >
+        <!--contenido reseña historica-->
+        <div class="tab-pane active" id="resenaHistorica" >
+            <div class="heading">
+                
+                <h4>¿Quienes Somos?</h4>
+                <p class="text-justify">
+                    FUNCOFINAL: Es una organización sin animo de lucro que impulsa el desarrollo del modelo solidario y
+                    cooperativo en los ambitos social, amibiental y empresarial en el suroccidente
+                    Colombiano.
+                </p>
+                         
+            <h4>Reseña Histórica</h4>
+            </div>
+                <p class="text-justify">
+                La Fundación Cofinal nace frente a la necesidad de crear una entidad que se
+                encargue de impartir educación cooperativa a todos los niveles de las organizaciones
+                solidarias del sur-occidente del país, educación que permita actuar con eficiencia
+                y eficacia en procesos administrativos y operativos, fortaleciendo de esta manera
+                la economía solidaria de esta región del país.
+            </p>
+
+        </div>
+        <!--contenido Objeto social-->
+        <div class="tab-pane" id="objeS">
+            <div class="heading">
+                <h4>Objeto social según estatutos</h4>
+            </div>
+            <ul class="text-justify">
+                <li>a. Contribuir al desarrollo económico y social del sur de Colombia</li>
+                <li>b. Asesorar y orientar a Consejeros, asociados, directivos y empleados de las empresas cooperativas y demás.</li>
+                <li>c. Posibilitar el desarrollo tecnológico de las cooperativas, microempresas, asociaciones y empresas de la economía solidaria.</li>
+                <li>d. Elaborar proyectos económicos y técnicos que permitan incrementar los niveles de producción y mayor generación de empleo.</li>
+                <li>e. Fomentar la integración de las empresas para contrarrestar el desempleo</li>
+                <li>f. Ofrecer servicios en los diferentes campos de la economía, la contaduría, la educación, la sistematización, asesoría jurídica y demás.</li>
+                <li>g. Canalizar líneas de financiamiento a los empresarios, asociados, microempresas y demás sectores de la economía solidaria.</li>
+                <li>h. Representar, defender e impulsar los intereses legítimos de sus asociados, empresas de economía solidaria.</li>
+                <li>i. Promover y mantener la confianza de la comunidad, de los asociados, así como también ampliar el conocimiento del sector solidario.</li>
+                <li>j. Coadyuvar el continuo mejoramiento de los asociados mediante el apoyo tecnológico, la investigación, la transferencia de tecnología, la capacitación y el control de calidad de los servicios</li>
+                <li>k. Servir de órgano de comunicación entre los asociados y el Gobierno y otros establecimientos públicos</li>
+                <li>l. Adelantar actividades que fortalezcan el sector cooperativo</li>
+                <li>m. Elaborar estudios sobre la expansión de nuevos servicios de la economía solidaria en el ámbito local, regional y nacional.</li>
+                <li>n. Organizar Seminarios, Foros y Congresos sobre el sector de la economía solidaria.</li>
+                <li>o. Estimular las investigaciones, el desarrollo y las innovaciones tecnológicas aplicables al sistema cooperativo y estudios económicos y jurídicos especializados.</li>
+                <li>p. Suministrar directamente servicios de apoyo logístico, técnico, informativo, operativo y administrativo.</li>
+                <li>q. Realizar convenios interinstitucionales y con ONG’s que permitan el incremento social y económico de la Fundación</li>
+                <li>r. Publicar escritos e investigaciones que se realicen en el campo formativo.</li>
+                <li>s. Servir como organismo capacitador a la Cooperativa Financiera Nacional COFINAL. </li>
+                <li>t. Constituir organizaciones de Trabajo Asociado a través de Proyectos de Interés Social.</li>
+                <li>u. Implementar procesos para acceder a subsidios del Estado.</li>
+                <li>v. Garantizar la Administración de Planes y Programas tendientes a favorecer el bienestar del Asociado Cofinal a través del Turismo Social.</li>
+                <li>w. Constituir organizaciones de Trabajo Asociado que presten servicios varios.</li>
+                <li>x. Establecer convenios de suministros para minimizar costos y gastos en las inversiones de las empresas de Economía Solidaria.</li>
+            </ul>
+
+        </div>
+        <!--contenido Mision-->
+        <div class="tab-pane" id="misionF">
+            <div class="heading">
+                <h4>Misión</h4>
+            </div>
+            <p class="text-justify">
+             La <strong>FUNCOFINAL</strong> Es el motor de desarrollo social, empresarial, educativo, ambiental, deportivo y recreativo,
+             principalmente de nuestros asociados y tambien de la comunidad donde la cooperativa Cofinal
+             hace presencia, somos generadores de soluciones a través del portafolio social integral para
+             el sector solidario y demas sectores de la economía.
+
+            </p>
+
+        </div>
+        <!--contenido vision-->
+       <div class="tab-pane" id="visionF">
+            <div class="heading">
+                <h4>Visión</h4>
+            </div>
+            <p class="text-justify">
+                En el año 2009 FUNCOFINAL, fortalecerá la gestión Cooperativa de COFINAL y su base social,
+                entregará en el suroccidente colombiano un portafolio social integralen PRO del binestar de
+                las personasy el desarrollo de las empresas con quien tenga relación.
+            </p>
+
+        </div>
+        <!--contenido principios y valores-->
+        <div class="tab-pane" id="princV">
+
+            <div class="heading">
+                <h4>1.	COMPROMISO CON LA EDUCACIÓN SOLIDARIA</h4>
+                <br />
+                <br />
+                <p class="text-justify">
+                    La <strong>FUNDACIÓN COFINAL</strong> está comprometida con el desarrollo de las entidades de economía solidaria, facilitando el acceso a la educación de este tipo de temáticas, con el objetivo de fortalecer este renglón de la economía nacional.
+                </p>
+
+            </div>
+            
+            <div class="heading">
+                <h4>2.	RESPONSABILIDAD SOCIAL</h4>
+                <br />
+                <br />
+                <p class="text-justify">
+                    La <strong> FUNDACIÓN COFINAL</strong> participa en el desarrollo de proyectos sociales que contribuyan en el mejoramiento de la calidad de vida y bienestar de la comunidad en general, aportando un valor agregado con justicia y pertinencia.
+                </p>
+            </div>
+           
+
+            <div class="heading">
+                <h4>3.	INTEGRALIDAD EN VALORES</h4>
+                <br />
+                <br />
+                <p class="text-justify">
+                    La <strong> FUNDACIÓN COFINAL</strong> participa en el desarrollo de proyectos sociales que contribuyan en el mejoramiento de la calidad de vida y bienestar de la comunidad en general, aportando un valor agregado con justicia y pertinencia.
+                </p>
+            </div>
+            
+            <div class="heading">
+                <h4>4.	COMPROMISO CON LA CALIDAD</h4>
+                <br />
+                <br />
+                <p class="text-justify">
+                    El personal de la <strong>FUNDACIÓN COFINAL</strong> está comprometido con el logro de los mejores resultados a través de la gestión efectiva de los procesos y recursos.
+                </p>
+            </div>
+            
+            
+        </div>
+        <!--contenido valores corporativos-->
+        <div class="tab-pane" id="valorC">
+            <div class="heading">
+                <h4>VALORES CORPORATIVOS</h4>
+                <br />
+                <p class="text-justify">
+                    Los valores corporativos son creencias compartidas sobre lo que es apropiado para nuestra organización, con ellos el actuar de la entidad se enmarca dentro una ética social que facilita el logro de los objetivos.
+                </p>
+            </div>
+           
+            <div class="heading">
+                <h4>HONESTIDAD</h4>
+                <br />
+              <p class="text-justify">
+                    Hablar y obrar en coherencia con lo que se piensa en respeto a la verdad, logrando transparencia en nuestras relaciones con los demás.
+                </p>
+            </div>
+            <div class="heading">
+                <h4>RESPETO</h4>
+                <br />
+               <p class="text-justify">
+                    Reconocer el valor de las personas y aceptar la variedad de pensamiento. Este valor es la base para una convivencia sana y pacífica.
+                </p>
+            </div>
+            <div class="heading">
+                <h4>LEALTAD</h4>
+                <br />
+                <p class="text-justify">
+                    Firmeza con la que nos identificamos y comprometemos con nuestra entidad, adhiriéndonos a sus principios.
+                </p>
+            </div>
+            <div class="heading">
+                <h4>RESPONSABILIDAD</h4>
+                <br />
+                
+                <p class="text-justify">
+                    Desempeñar nuestro rol con diligencia, seriedad y prudencia, asumiendo los objetivos de la organización como propios.
+                </p>
+            </div>
+
+        </div>
+    </div>
+ </div>
+    
+</section>
+<!--imagen fondo 2-->
+<div class="parallaxbox" id="pb1" style="background-image: url(/img/fondos/funda.jpg);"> </div>
+
+<!-- scrip para parallax-->
+<script type="text/javascript">
+			function parallax() {
+			    setpos("#pb0");
+			    setpos("#pb1");
+
+			}
+
+
+
+			function setpos(element, factor) {
+				factor = factor || 2;
+
+				var offset = $(element).offset();
+				var w = $(window);
+
+				var posx = (offset.left - w.scrollLeft()) / factor;
+				var posy = (offset.top - w.scrollTop()) / factor;
+
+				$(element).css('background-position', '100% '+posy+'px');
+
+    // use this to have parralax scrolling vertical and horizontal
+    //$(element).css('background-position', posx+'px '+posy+'px');
+}
+
+$(document).ready(function () {
+	parallax();
+}).scroll(function () {
+	parallax();
+});
+</script>

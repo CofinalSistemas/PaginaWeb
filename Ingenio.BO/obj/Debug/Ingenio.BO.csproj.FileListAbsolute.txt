@@ -56,3 +56,27 @@ F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.BO\obj\Debug
 F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.BO\obj\Debug\Ingenio.BO.csproj.CopyComplete
 F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.BO\obj\Debug\Ingenio.BO.dll
 F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.BO\obj\Debug\Ingenio.BO.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Debug\Ingenio.BO.dll.config
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Debug\Ingenio.BO.dll
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Debug\Ingenio.BO.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Debug\EntityFramework.dll
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Debug\EntityFramework.SqlServer.dll
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Debug\EntityFramework.xml
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Debug\EntityFramework.SqlServer.xml
+E:\Plataforma web\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.csproj.AssemblyReference.cache
+E:\Plataforma web\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.csproj.CoreCompileInputs.cache
+E:\Plataforma web\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.csproj.CopyComplete
+E:\Plataforma web\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.dll
+E:\Plataforma web\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.BO\bin\Debug\Ingenio.BO.dll.config
+D:\paginaCofinal\cofi_web-master\Ingenio.BO\bin\Debug\Ingenio.BO.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.BO\bin\Debug\Ingenio.BO.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.BO\bin\Debug\EntityFramework.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.BO\bin\Debug\EntityFramework.SqlServer.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.BO\bin\Debug\EntityFramework.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.BO\bin\Debug\EntityFramework.SqlServer.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.csproj.AssemblyReference.cache
+D:\paginaCofinal\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.csproj.CoreCompileInputs.cache
+D:\paginaCofinal\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.csproj.CopyComplete
+D:\paginaCofinal\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.pdb

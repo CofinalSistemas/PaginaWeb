@@ -1,0 +1,535 @@
+﻿@{
+    Layout = "~/Views/Shared/layoutAso.cshtml";
+    ViewBag.Title = "Extractos de Crédito";
+    ViewBag.titulo = "Extractos de Crédito";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "extractos";
+
+}
+@using Ingenio.Models;
+@{
+    AccountModels cuentaUsuario = new AccountModels();
+}
+@using System.Globalization;
+<!--estilos-->
+<style>
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+
+    .modal-header, .modal-footer {
+        background-color: #5CB85C;
+    }
+
+    .modal-body {
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+
+    .btn-primary {
+        background-color: #da4d4d;
+        border-color: #da4d4d;
+    }
+
+    .modal-title {
+        color: white;
+    }
+
+    .table {
+        border-collapse: inherit;
+    }
+</style>
+<meta http-equiv="Cache-control" content="no-cache">
+<section id="contenido">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="container">
+                <h4 style="text-align: center">COOPERATIVA DE AHORRO Y CREDITO NACIONAL</h4>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="container">
+                <h4 style="text-align: center">EXTRACTO DE CREDITO</h4>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+
+        <br>
+        <div id="AtBottomOfForm">
+            <div class="container well col-md-12">
+                @using (Html.BeginForm("Calcular", "CExtractos"))
+                {
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtFechaI" style="color: black;">Fecha Inicial:</label>
+                            <div class="col-md-7 input-group" id="divFechaI">
+                                <input class="form-control" id="txtFechaI" name="txtFechaI" value="@ViewBag.fi" placeholder="yyyy-mm-dd" type="text" required />
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtFechaF" style="color: black;">Fecha Final:</label>
+                            <div class="col-md-7 input-group" id="divFechaF">
+                                <input class="form-control" id="txtFechaF" name="txtFechaF" value="@ViewBag.ff" placeholder="yyyy-mm-dd" type="text" required />
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="pagare" style="color: black;">Pagaré:</label>
+                            <div class="col-md-7 input-group" id="divpagare">
+                                <select class="form-control" id="AHALAVISTA" name="AHALAVISTA" onchange="GetSelectedTextValue(this)" placeholder="" type="text" required>
+                                    <option value="">Seleccione...</option>
+                                </select>
+                                <input class="form-control" id="txtpagare" value="" name="txtpagare" placeholder="" type="number" style="display:none" />
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtcedula" style="color: black;">Cedula:</label>
+                            <div class="col-md-7 input-group" id="divcedula">
+                                <input class="form-control" id="txtcedula" value="@cuentaUsuario.Identificacion" name="txtcedula" placeholder="" type="number" required readonly />
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label" for="txtmes" style="color: black;"></label>
+                            <div class="col-md-7 input-group" id="divMes">
+                                <button class="btn btn-success" id="Calcular" name="Calcular">
+                                    <span class="glyphicon glyphicon-check"></span> Consultar
+                                </button>
+                            </div><!-- /input-group -->
+                        </div><!-- /form-group -->
+
+
+                    </div><!-- /row -->
+                }
+            </div>
+        </div>
+        @{ if (ViewBag.seguimiento != null)
+            {
+                <div id="imprimir">
+                    <div class="container">
+                        <div class="container">
+                            <h4 style="font-size:small;text-align: center">EXTRACTO DE CREDITO</h4>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table" border="0" cellspacing="0" style="font-size:12px; background-color: rgba(245, 245, 245, 0.65);    border: 1px solid #e3e3e3;">
+
+
+                                <tr>
+                                    <td style="border-right:hidden"><h6>Fecha Consulta: @(DateTime.Now.ToShortDateString())</h6></td>
+                                    <td colspan="4" align="right"><img src="~/img/logo-small.png" /></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>CEDULA</strong></td>
+                                    <td><strong>NOMBRES Y APELLIDOS</strong></td>
+
+                                    <td colspan="7">
+                                        <strong>
+                                            DESDE:
+                                        </strong>
+                                        @ViewBag.fi.ToString("yyyy-MM-dd")
+                                        <strong>
+                                            HASTA:
+                                        </strong>
+                                        @ViewBag.ff.ToString("yyyy-MM-dd")
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> @(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado : ViewBag.nitaso.nit)</td>
+                                    <td> @(ViewBag.Aso != null ? ViewBag.Aso.nits.nombreintegrado : ViewBag.nitaso.nombreintegrado)</td>
+                                    <td><strong>Destino: </strong>@ViewBag.nombrecuenta</td>
+
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>@(ViewBag.Aso != null ? ViewBag.Aso.nits.direccion : ViewBag.nitaso.direccion)</td>
+                                    <td colspan="2">
+                                        <strong>Valor del prestamo:</strong>
+                                        @{NumberFormatInfo nfi3 = new CultureInfo("en-US", false).NumberFormat;
+                                            decimal cuo42 = ViewBag.seguimiento.totalefectivo;
+                                            string scuo42 = cuo42.ToString("C", nfi3);
+                                        }
+                                        @Html.DisplayFor(modelItem => scuo42)
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>@(ViewBag.agencia ?? String.Empty)</td>
+                                    <td colspan="2"><strong>Pagare no:</strong> @ViewBag.seguimiento.pagare </td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="2" rowspan="6" align="center"><img id="img_mercado" src="@Url.Action("Imagen")" alt="" style="width:450px;height:200px;"> </td>
+
+                                    <td colspan="2"><strong>Fecha Desembolso:</strong> @ViewBag.Creditos.F_iniciofinanciacion.ToString("yyyy-MM-dd")</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2"><STRONG>Fecha Vencimiento:</STRONG> @ViewBag.Creditos.fechavence.ToString("yyyy-MM-dd")</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2"><strong>Tasa de Interes:</strong> @Math.Round(ViewBag.Creditos.tasainicial, 2) %</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2"><strong>Amortizacion:</strong> @ViewBag.periododeduce</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2">
+                                        <strong>Cuotas Pagadas:</strong> @{string a = (ViewBag.Cuotaspagadas + " de " + ViewBag.Creditos.plazo); }
+                                        @Html.DisplayFor(modelItem => a)
+                                    </td>
+
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2">
+                                        <strong>Valor de Cuota credito:</strong>
+                                        @{
+                                            decimal cuo41 = @ViewBag.Creditos.anualidad;
+                                            string scuo41 = cuo41.ToString("C", nfi3);
+                                        }
+                                        @Html.DisplayFor(modelItem => scuo41)
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+
+                        @*INICIAR COMENTARIOS*@
+
+                        @*<table class="table" border="1" cellspacing="0">
+                                    <tr>
+                                        <td><strong>Nombre de la cuenta:</strong> @(ViewBag.nombrecuenta ?? String.Empty)</td>
+                                        <td><strong>Cedula:</strong> @(ViewBag.Aso.cedulasociado ?? String.Empty)</td>
+                                        <td><strong>Fecha Inicio:</strong> @(ViewBag.Creditos.F_iniciofinanciacion ?? String.Empty)</td>
+                                        <td><strong>Fecha desembolso:</strong> @(ViewBag.Creditos.F_iniciofinanciacion ?? String.Empty)</td>
+                                        <td><strong>Fecha vence:</strong> @(ViewBag.Creditos.fechavence ?? String.Empty)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Garantia:</strong> @(ViewBag.Creditos.codgarantia ?? String.Empty)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Pagare:</strong> @(ViewBag.Creditos.pagare ?? String.Empty)</td>
+                                        <td><strong>Tasa inicial:</strong> @Math.Round(ViewBag.Creditos.tasainicial,2)</td>
+                                        <td>
+                                            <strong>Cuota:</strong>
+
+                                            @{ NumberFormatInfo nfi2 = new CultureInfo("en-US", false).NumberFormat;
+                                                decimal cuo21 = ViewBag.Creditos.anualidad;
+                                                string scuo21 = cuo21.ToString("C", nfi2);
+                                            }
+                                            @Html.DisplayFor(modelItem => scuo21)
+                                        </td>
+                                        <td colspan="2"><strong>Plazo:</strong> @(ViewBag.Creditos.plazo ?? String.Empty)</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="2">
+                                            <strong>Nombre:</strong> @(ViewBag.Aso.nits.nombreintegrado ?? String.Empty)
+                                        </td>
+
+                                        <td colspan="2"><strong>Direccion:</strong> @(ViewBag.Aso.nits.direccion ?? String.Empty)</td>
+
+
+                                        <td><strong>Agencia:</strong> @(ViewBag.agencia ?? String.Empty)</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><strong>TOTALES</strong></td>
+                                        <td><strong>PESOS</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Capital inicial</td>
+                                        <td>
+                                            @{
+                                                decimal cuo2 = ViewBag.Creditos.capitalinicial;
+                                                string scuo2 = cuo2.ToString("C", nfi2);
+                                            }
+                                            @Html.DisplayFor(modelItem => scuo2)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>+ Saldo Capital</td>
+                                        <td>
+                                            @{
+                                                decimal cuo3 = ViewBag.saldocapital;
+                                                string scuo3 = cuo3.ToString("C", nfi2);
+                                            }
+                                            @Html.DisplayFor(modelItem => scuo3)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>+ Interes Periodo</td>
+                                        <td>
+                                            @{
+                                                decimal cuo6 = Math.Round(ViewBag.interesperiodo);
+                                                string scuo6 = cuo6.ToString("C", nfi2);
+                                            }
+                                            @Html.DisplayFor(modelItem => scuo6)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>+ Costos Adicionales</td>
+                                        <td>
+                                            @{
+                                                decimal cuo4 = ViewBag.Costoadicional;
+                                                string scuo4 = cuo4.ToString("C", nfi2);
+                                            }
+                                            @Html.DisplayFor(modelItem => scuo4)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>TOTAL DEUDA</strong></td>
+                                        <td>
+                                            @{
+                                                decimal cuo5 = Math.Round(ViewBag.deudatotal);
+                                                string scuo5 = cuo5.ToString("C", nfi2);
+                                            }
+                                            @Html.DisplayFor(modelItem => scuo5)
+                                        </td>
+                                    </tr>
+
+
+                            </table>*@
+
+                        @*FIN COMENTARIOS*@
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                        </div>
+                        <div class="col-lg-4">
+                            <h4 style="font-size:small; text-align: center">DETALLE DEL MOVIMIENTO</h4>
+                        </div>
+                        <div class="col-lg-4">
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="tabla2" border="0" cellspacing="0" style="font-size: 10px; border: 0px solid #e3e3e3;">
+                            <thead>
+                                <tr style="background-color: #5CB85C;  color: black; font-size: 11px;">
+
+                                    <th>FECHA</th>
+                                    <th>DESCRIPCION</th>
+                                    <th>RECIBO No.</th>
+                                    <th>SUCURSAL</th>
+                                    <th>ABONO TOTAL</th>
+                                    <th>ABONO INTERES</th>
+
+                                    <th>ABONO MORA</th>
+                                    <th>ABONO A CAPITAL</th>
+                                    <th>SALDO CAPITAL</th>
+                                    <th>TOTAL DEUDA A PAGAR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in ViewBag.Credit)
+                                {
+                                    <tr>
+                                        <td>
+                                            @{
+                                                string cuod = item.fechatrabajo.ToString("yyyy-MM-dd");
+
+                                            }
+                                            @Html.DisplayFor(modelItem => cuod)
+                                        </td>
+                                        <td>@item.descripcion</td>
+                                        <td>@item.recibopago</td>
+                                        <td>@item.agencia</td>
+                                        <td>
+                                            @{ NumberFormatInfo nfi1 = new CultureInfo("en-US", false).NumberFormat;
+                                                decimal cuo1 = item.cngc;
+                                                string scuo1 = cuo1.ToString("C", nfi1);
+                                            }
+                                            @Html.DisplayFor(modelItem => scuo1)
+                                        </td>
+                                        <td>
+                                            @{
+                                                decimal cuo = item.aboc;
+                                                string scuo = cuo.ToString("C", nfi1);
+                                            }
+                                            @Html.DisplayFor(modelItem => scuo)
+                                        </td>
+                                        <td>
+                                            @{
+                                                decimal cuo25 = item.abom;
+                                                string scuo25 = cuo25.ToString("C", nfi1);
+                                            }
+                                            @Html.DisplayFor(modelItem => scuo25)
+
+                                        </td>
+                                        <td>
+                                            @{
+                                                decimal cuo35 = item.abok;
+                                                string scuo35 = cuo35.ToString("C", nfi1);
+                                            }
+                                            @Html.DisplayFor(modelItem => scuo35)
+                                        </td>
+                                        <td>
+                                            @{
+                                                decimal cuo31 = item.saldocap;
+                                                string scuo31 = cuo31.ToString("C", nfi1);
+                                            }
+                                            @Html.DisplayFor(modelItem => scuo31)
+                                        </td>
+
+                                        <td>                                                                      
+                                       
+                                            @{
+
+                                                //decimal cuo6 = Math.Round(ViewBag.interesperiodo);
+                                                //string scuo6 = cuo6.ToString("C", nfi2);
+
+                                                //decimal cuo4 = ViewBag.Costoadicional;
+                                                //string scuo4 = cuo4.ToString("C", nfi2);
+                                                decimal cuo90 = ViewBag.creditos.intcorriente;
+                                                decimal cuo32 = item.saldocap + ViewBag.Costoadicional + cuo90;
+                                                string scuo32 = cuo32.ToString("C", nfi1);
+                                            }
+                                            @Html.DisplayFor(modelItem => scuo32)
+                                                                        
+                                                                             
+                                       
+                                    </tr>
+                                 }
+
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+               }
+        }
+
+        <br>
+
+        <button class="btn btn-success" onclick="imprime('imprimir')"><span class="glyphicon glyphicon-download"></span>Imprimir</button>
+    </div>
+</section>
+
+<script>
+    function imprime(imprimir) {
+
+        var ficha = document.getElementById(imprimir);
+        var ventimp = window.open(' ', 'popimpr');
+        ventimp.document.write(ficha.innerHTML);
+        ventimp.document.close();
+        ventimp.print();
+        ventimp.close();
+
+        document.getElementById('img_mercado').src = "/CExtractos/Imagen/";
+
+
+    }
+</script>
+<script>
+$(function () {
+        $("[data-habilitado = True]").attr({disabled: true})
+
+        $('#tabla2').DataTable({
+            "bFilter": false,
+            "info": false,
+            "aLengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
+            "iDisplayLength": 25,
+            language: {
+                "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                "zeroRecords": "Nothing found - sorry",
+                "info": "Pagina _PAGE_ de _PAGES_",
+                "infoEmpty": "No records available",
+                "search": "Buscar",
+                "infoFiltered": "(filtered from _MAX_ total records)",
+                "paginate": {
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            }
+        });
+})
+</script>
+<script>
+    $(document).ready(function () {
+
+        load_lineas();
+    });
+
+    function load_lineas() {
+        var cedu = '@cuentaUsuario.Identificacion';
+
+        $.ajax({
+            url: "@Url.Action("Ah_creditos")",
+            type: "POST",
+            data: { "id": cedu },
+            cache: false,
+            datatype: "json",
+            success: function (data) {
+                $.each(data, function (index, value) {
+
+                    var $option = $('<option>');
+                    $option.val(value.pagare);
+                    $option.html("No. "+value.pagare + ' por $ ' + formatNumber.new(value.capitalinicial));
+                    $('#AHALAVISTA').append($option);
+                })
+            }
+        });
+    }
+
+    function GetSelectedTextValue(nrocuenta) {
+
+        var vistas = $('#AHALAVISTA').val();
+
+        document.getElementById('txtpagare').value = vistas;
+
+
+    }
+
+    var formatNumber = {
+        separador: ".", // separador para los miles
+        sepDecimal: ',', // separador para los decimales
+        formatear: function (num) {
+            num += '';
+            var splitStr = num.split('.');
+            var splitLeft = splitStr[0];
+            var splitRight = splitStr.length > 1 ? this.sepDecimal + splitStr[1] : '';
+            var regx = /(\d+)(\d{3})/;
+            while (regx.test(splitLeft)) {
+                splitLeft = splitLeft.replace(regx, '$1' + this.separador + '$2');
+            }
+            return this.simbol + splitLeft + splitRight;
+        },
+        new: function (num, simbol) {
+            this.simbol = simbol || '';
+            return this.formatear(num);
+        }
+    }
+</script>
+<script src="~/Scripts/jquery.maskedinput.js" type="text/javascript"></script>
+<script>
+    jQuery(function ($) {
+
+        $('#txtFechaI').mask('9999-99-99', { placeholder: "yyyy-mm-dd" });
+        $('#txtFechaF').mask('9999-99-99', { placeholder: "yyyy-mm-dd" });
+
+
+    });
+
+</script>

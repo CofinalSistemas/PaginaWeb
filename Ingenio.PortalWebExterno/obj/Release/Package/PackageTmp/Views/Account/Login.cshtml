@@ -1,0 +1,333 @@
+﻿@model Ingenio.PortalWebExterno.Models.SubscribeModel
+@{
+    string urlReturn = "";
+    if ( ViewBag.urlReturn != null )
+    {
+        urlReturn = ViewBag.urlReturn;
+    }
+
+}
+<style>
+    #content {
+        background-image: url(/img/Logos/cofinalFondo.png);
+        padding-top: 40px;
+        margin-top: -40px;
+    }
+
+    .form-control {
+        border-radius: 10px 10px 0 0;
+    }
+</style>
+
+<div id="content" style="">
+    <div class="container">
+
+        <div class="row" style="padding-bottom: 40px;">
+            <div class="col-md-6">
+                <div class="box" style="background: rgba(227, 227, 227, 0.62); padding-left: 20px; padding-right: 20px;">
+                    <h2 class="text-uppercase" style="text-align:center">Iniciar sesión</h2>
+
+                    <hr style="border-top: 1px solid #9E9E9E;">
+
+                    <form id="login" action="@Url.Action("Login")" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+
+                            <input name="usuario" placeholder="Ingresa tu identificación " type="text" class="form-control" id="username">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+
+
+                            </div>
+                            <input name="password1" placeholder="Ingresa tu contraseña" type="password" class="form-control" id="password1" autocomplete="off">
+                            <input type="hidden" name="password">
+
+
+
+
+                        </div>
+
+                        @{
+                            if ( ViewBag.show == true )
+                            {
+                                <div class="alert alert-danger"><strong>Error: </strong>Usuario o contraseña incorrectos</div>
+
+                            }
+                        }
+                        <hr style="border-top: 1px solid #9E9E9E;">
+                        <div class="col-sm-6 text-center">
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.Captcha)
+                                <a href="@Url.Action("Index")">
+                                    <img alt="Captcha" src="@Url.Action("CaptchaImage")" style="" />
+                                </a>
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.Captcha)
+                                @Html.ValidationMessageFor(model => model.Captcha)
+                            </div>
+                            @*<div class="g-recaptcha" data-sitekey="6LfNcBMTAAAAAMilW297YqhG2Ap25DmeMc94zbMx" style="transform:scale(0.87);-webkit-transform:scale(0.87);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+                                <br />
+                                @section scripts{
+                                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                                }*@
+                        </div>
+                        <br />
+                        <div id="alertCapcha" class="col-md-6" style="display: none;" height 2em; line-height 0.5em;>
+                            <div class="alert alert-danger">Valida que no eres un robot</div>
+                        </div>
+                        <div class="text-center">
+                            <button value="Entrar" type="submit" class="btn btn-template-main"><i class="fa fa-sign-in"></i>Iniciar</button>
+
+                        </div>
+                        <hr style="border-top: 1px solid #9E9E9E;">
+                        <div>
+                            <a class="col-md-12 " style="text-align:center" href="@Url.Action("RestaurarPass", "Account")">Olvidé mi cotraseña</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="box" style="background: rgba(227, 227, 227, 0.62);  padding-left: 20px; padding-right: 20px;">
+                    <h2 class="text-uppercase" style="text-align:center">Nueva cuenta</h2>
+
+                    <p class="lead" style="text-align:center">Completar tu Información personal para Ingresar a la plataforma de un asociado.</p>
+
+
+
+                    <hr style="border-top: 1px solid #9E9E9E;">
+
+                    <form id="registro" action="@Url.Action("Registro")" method="post">
+                        @Html.AntiForgeryToken()
+
+                        <div class="col-md-12">
+                            <div class="col-md-5 control-label">
+                                @*<label><strong> * Confirme</strong></label>*@
+                                <div class="radio">
+                                    <label>
+                                        <input class="radioPersona" type="radio" value="1" name="tipo" checked="checked" ">
+                                        Soy una Persona natural
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input class="radioPersona" type="radio" value="2" name="tipo" ">
+                                        Soy una Empresa
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted">Todos los campos del formulario son obligatorios.</p>
+                        <div class="camposComuunes">
+                           
+                            <div class="form-group">
+                                <label for="identificion-login">Identificación <span id='red'>*</span></label>
+                                <input placeholder="Escriba aquí su numero de identificación" type="number" class="form-control" id="Identificacion" name="Identificacion" required>
+                            </div>
+                            <div class="row">
+                                <div id="persona">
+
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email-login">Correo electrónico <span id='red'>*</span> </label>
+                                        <input placeholder="Escriba aquí su correo" type="email" class="form-control" id="email1" name="Correo" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email-login">Confirme su Correo electrónico<span id='red'>*</span> </label>
+                                        <input placeholder="Confirme aquí su correo" type="email" class="form-control" id="email2" required>
+                                        <img src="~/img/interro.png" data-toggle="tooltip" title="El EMAIL o Correo electrónico que va a ingresar debe estar registrado en COFINAL, de lo contrario no puede realizar el registro y no podrá ingresar al Portal Web, por favor acercarse a las oficinas de su localidad y actualizar sus datos personales" style="width:30px;height:30px">
+                                    </div>
+
+                                </div>
+                                <div id="alertcorreos" class="col-md-12" style="display: none;" height 2em; line-height 0.5em;>
+                                    <div class="alert alert-danger">Los correo no coinciden</div>
+                                </div>
+
+                                <div class="col-sm-6 text-center">
+
+                                    @*<div class="g-recaptcha" data-sitekey="6LfNcBMTAAAAAMilW297YqhG2Ap25DmeMc94zbMx" style="transform:scale(0.87);-webkit-transform:scale(0.87);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+
+                                        <script src="https://www.google.com/recaptcha/api.js" async defer></script>*@
+
+                                </div>
+                                <div id="alertCapcha" class="col-md-6" style="display: none;" height 2em; line-height 0.5em;>
+                                    <div class="alert alert-danger">Valida que no eres un robot</div>
+                                </div>
+
+                            </div>
+                            <hr style="border-top: 1px solid #9E9E9E;">
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-template-main"><i class="fa fa-user-md"></i>Registrarse</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+</div>
+
+<div class="PersonaNatural" style="display:none">
+    <div class="col-md-6 natural">
+        <div class="form-group">
+            <label for="name1-login">Primer nombre <span id='red'>*</span></label>
+            <input title="Solo se adminten letras [A-Za-z] sin espacios" pattern="[A-Za-zñÑ]+" placeholder="Escriba aquí su primer nombre" type="text" class="form-control" name="PrimerNombre" id="PrimerNombre" required>
+        </div>
+    </div>
+    <div class="col-md-6 natural">
+        <div class="form-group">
+            <label for="name1-login">Segundo nombre</label>
+            <input title="Solo se adminten letras [A-Za-z] sin espacios" pattern="[A-Za-zñÑ]+" placeholder="Escriba aquí su segundo nombre" type="text" class="form-control" name="SegundoNombre" id="SegundoNombre">
+        </div>
+    </div>
+    <div class="col-md-6 natural">
+        <div class="form-group">
+            <label for="name1-login">Primer apellido <span id='red'>*</span></label>
+            <input title="Solo se adminten letras [A-Za-z] sin espacios" pattern="[A-Za-zñÑ]+" placeholder="Escriba aquí su primer apellido" type="text" class="form-control" name="PrimerApellido" id="PrimerApellido" required>
+        </div>
+    </div>
+    <div class="col-md-6 natural">
+        <div class="form-group">
+            <label for="name1-login">Segundo apellido</label>
+            <input title="Solo se adminten letras [A-Za-z] sin espacios" pattern="[A-Za-zñÑ]+" placeholder="Escriba aquí su segundo apellido" type="text" class="form-control" name="SegundoApellido" id="SegunoApellido">
+        </div>
+    </div>
+</div>
+
+<div class="PersonaJuridica" style="display:none">
+
+    <div class="col-md-12 juridica">
+        <div class="form-group">
+            <label for="name1-login">Razón Social <span id='red'>*</span></label>
+            <input title="Solo se adminten letras [A-Za-z] sin espacios" @*pattern="^[a-zA-Z0-9_]*$"*@ placeholder="Escriba su razón social o su Nombre Comercial" type="text" class="form-control" name="PrimerNombre" id="PrimerNombre" required>
+        </div>
+    </div>
+
+</div>
+
+@Scripts.Render("~/bundles/md5")
+<script>
+    $(document).ready(function () {
+
+        $('[data-toggle="tooltip"]').tooltip();
+
+    });
+</script>
+<script>
+    var error = false;
+
+    $("#login").on("submit", function () {
+
+        //var captura = document.getElementById('g-recaptcha-response').value;
+        //if (captura == "") {
+        //    $("#alertCapcha").show();
+        //    return false;
+        //}
+
+        $("[name=password]").val(CryptoJS.MD5($("#password1").val()));
+    })
+
+
+
+    $("#email1, #email2").on("change", function () {
+        var email = $("#email1").val(),
+        email2 = $("#email2").val();
+        if (email != email2) {
+            $("#alertcorreos").show();
+            error = true;
+        } else {
+            $("#alertcorreos").hide();
+            error = false;
+        }
+    });
+
+    $("#registro").on("submit", function () {
+        event.preventDefault();
+
+        if (error) {
+            return false;
+        }
+        //enviar formulario
+        var fd = new FormData(this);
+
+        //swal({
+        //    title: "Espera un momento",
+        //    text: "Guardando...",
+        //    allowEscapeKey: false,
+        //    allowOutsideClick: false,
+        //    showConfirmButton: false
+        //});
+        $.ajax({
+            url: "@Url.Action("Registro","account")",
+            type: "POST",
+            data: fd,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                if (response.estado) {
+
+                    alert("Se ha enviado un EMAIL con los pasos a seguir para la activación de la cuenta.");
+                    //swal({
+                    //    title: "Información guardada",
+                    //    text: "Se ha enviado un correo con los pasos a seguir para la activación de la cuenta.",
+
+                    //    type: "success",
+                    //    showConfirmButton: true
+                    //});
+                } else {
+                    //swal("Error", response.mensaje, "error")
+                    alert(response.mensaje + ", Debes acercarte a las oficinas de COFINAL y actualizar sus datos personales,\n entre esos el EMAIL para porder registrarte en el Portal Web");
+                }
+            }
+        });
+    });
+</script>
+
+<script>
+    /*Req. Persona Juridica*/
+    $().ready(function () {
+        //change in checkbox
+        $('.radioPersona').attr('checked', false);
+        $('.camposComuunes').css('display', 'none');
+        //  alert($("[name='tipo']").prop("value"));
+        //$('.juridica').hide();
+        //     $("[name='tipo']").change(function () {
+
+        $(".radioPersona").change(function () {
+            $('.camposComuunes').css('display', 'block');
+            var tipo = $(this).prop("value");
+            var persona = $('#persona');
+
+            if (tipo == 2) { //persona juridica
+                var pj = $('.PersonaJuridica');
+                persona.empty().append(pj.html());
+                persona.html(pj.html());
+                
+            }
+            else {
+                var pn = $('.PersonaNatural');
+                persona.empty().append(pn.html());
+                persona.html(pn.html());
+            }
+
+
+        })
+    })
+
+</script>
+

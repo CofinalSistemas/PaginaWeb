@@ -1,0 +1,184 @@
+﻿
+@{
+    Layout = "~/Views/Shared/layoutFundacion.cshtml";
+    ViewBag.Title = "Seminarios";
+    ViewBag.titulo = "Seminarios";
+    ViewBag.url = Url.Action("index", "Fundacion");
+    ViewBag.activo = "NuestrosProgramas";
+}
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+<!-- script  para textura de titulos-->
+<style>
+    .text-justify {
+        font-size: large;
+    }
+
+    #get-it {
+        background: -webkit-linear-gradient(left, #f2a326 0%, rgba(242, 163, 38, 0.81) 50%, rgba(242, 163, 38, 0.55) 69%, rgba(242, 163, 38, 0.51) 100%);
+        text-align: left;
+    }
+
+    #titulo {
+        background-image: url(/img/texturaAmarilla2.jpg);
+        background-size: 30%;
+        -webkit-box-shadow: 0px 2px 29px 2px rgba(90,86,209,1);
+        -moz-box-shadow: 0px 2px 29px 2px rgba(90,86,209,1);
+        box-shadow: 0px 2px 29px 2px rgba(90,86,209,1);
+    }
+
+    #fondo {
+        background-image: url(/img/turiFond2.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        padding-top: 1px;
+        margin-top: -40px;
+        margin-bottom: 0px;
+        padding-bottom: 1px;
+        height: 500px;
+    }
+
+    .item img {
+        width: 100%;
+    }
+</style>
+<!--estilo contenido-->
+<style>
+   
+    .heading {
+        margin-bottom: 10px;
+    }
+
+    #an {
+        color: black;
+        font-size: 20px;
+    }
+     #a {
+        color: black;
+        font-size:20px;
+    }
+</style>
+<style>
+    #contenido {
+        background-image: url(/img/texture-bw.png);
+        padding-top: 40px;
+        -webkit-box-shadow: 0px 15px 65px -6px rgba(40,40,46,1);
+        -moz-box-shadow: 0px 15px 65px -6px rgba(40,40,46,1);
+        box-shadow: 0px 15px 65px -6px rgba(40,40,46,1);
+        padding-bottom: 40px;
+    }
+</style>
+<!--primer fondo-->
+<div class="parallaxbox" id="pb0" style="background-image: url(/img/fondos/seminar.jpg);"> </div>
+<!--seccion de Titulo-->
+<div id="titulo">
+    <div id="get-it">
+        <div class="container" >
+            <div class="text-center">
+                <center><h2>Presentamos</h2></center>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- contenido-->
+<section style="background-image:url(/img/texture-bw.png); padding-top:40px; padding-bottom:40px;-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8);  ">
+        <ul class="nav nav-tabs" style="background-color:#F2A326">
+            <li class="active" id="cur"><a id="a" href="#seminario" data-toggle="tab">Seminarios</a></li>
+            <li id="ase"><a id="a" data-toggle="tab" href="#diplomado">Diplomados</a></li>
+            
+        </ul>
+
+        <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
+            <!--seminario-->
+            <div class="tab-pane active" id="seminario">
+                               
+                <ul class="text-justify">
+                    <li>Seminario de Educación Financiera</li>
+                    <li>Seminario sobre Atención y Servicio al Cliente en las Empresas</li>
+                    <li>Seminario para el Mejoramiento de las Ventas</li>
+                </ul>
+                <div class="heading">
+                    <h4>La excelencia en el servicio como ventaja diferencial</h4>
+                </div>
+                <ul class="text-justify">
+                    <li>Dar a conocer la importancia de brindar un excelente servicio al asociado, que le sirva a las empresas como ventaja diferencial.</li>
+                    <li>Mejorar la comunicación con los asociados en la presentación de beneficios y soluciones.</li>
+                    <li>Suministrar las herramientas necesarias para poder desarrollar un adecuado manejo de momentos de verdad que permita mantener satisfechos a los asociados.</li>
+                    <li>Revisar las actitudes y aptitudes que se requieren para brindar un óptimo servicio al asociado.</li>
+                    <li>Capacitar a los participantres para manejar las situaciones que se presenten frente a los diferentes tipos de asociados con los cuales tengan contacto permanente.</li>
+                </ul>
+                <div class="heading">
+                    <h4>Generación de valor agregado a traves de las estrategias de servicio</h4>
+                </div>
+                <ul class="text-justify">
+                    <li>Visión integral del servicio y generación de valor agregado.</li>
+                    <li>Características de las entidades orientadas al servicio.</li>
+                    <li>La cultura de servicio.</li>
+                    <li>Liderando la cultura de servicio</li>
+                    <li>Gestión estratégica del servicio.</li>
+                </ul>
+                <div class="heading">
+                    <h4>Cómo  lograr mayor efectividad en las ventas</h4>
+                </div>
+                <ul class="text-justify">
+                    <li>Ayudar a los participantes a planear, organizar, ejecutar y controlar su esquema de ventas, para lograr mejores resultados</li>
+                    <li>Desarrollar habilidades que permitan mejorar el contacto con los asociados, la averiguación de necesidades y espectativas, la argumentación del portafolio de productos y servicios, el manejo de objeciones y las técnicas de cierre.</li>
+                    <li>mejorar la comunicación con los diferentes tipos de asociados en la presentación de beneficios y soluciones que sirvan de soporte a la vinculación, crecimiento y profundización de asociados.</li>
+
+                </ul>
+
+            </div>
+            <!--diplomado-->
+            <div class="tab-pane " id="diplomado">
+                
+                <ul class="text-justify">
+                    <li>Diplomado en gestión  de las organizaciones solidarias y sus políticas.</li>
+                    <li>Diplomado en gestión Cooperativa y desarrollo de talento humano.</li>
+                    
+                </ul>
+
+
+            </div>
+            
+        </div>
+    </div>
+
+</section>
+<!---->
+
+
+<div class="parallaxbox" id="pb1" style="background-image: url(/img/fondos/seminar.jpg);"> </div>
+
+<!-- scrip para parallax-->
+<script type="text/javascript">
+			function parallax() {
+			    setpos("#pb0");
+			    setpos("#pb1");
+
+			}
+        	function setpos(element, factor) {
+				factor = factor || 2;
+
+				var offset = $(element).offset();
+				var w = $(window);
+
+				var posx = (offset.left - w.scrollLeft()) / factor;
+				var posy = (offset.top - w.scrollTop()) / factor;
+
+				$(element).css('background-position', '100% '+posy+'px');
+
+    // use this to have parralax scrolling vertical and horizontal
+    //$(element).css('background-position', posx+'px '+posy+'px');
+}
+
+$(document).ready(function () {
+	parallax();
+}).scroll(function () {
+	parallax();
+});
+</script>
+
+

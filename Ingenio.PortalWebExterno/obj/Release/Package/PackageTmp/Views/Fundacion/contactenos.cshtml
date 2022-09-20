@@ -1,0 +1,218 @@
+﻿@model Ingenio.PortalWebExterno.Models.SubscribeModel
+@{
+    Layout = "~/Views/Shared/layoutFundacion.cshtml";
+    ViewBag.Title = "Contáctenos";
+    ViewBag.titulo = "Contáctenos";
+    ViewBag.url = Url.Action("index", "Fundacion");
+    ViewBag.activo = "Contactenos";
+}
+<!--formulario estilo-->
+   <style>
+      
+       #formulario {
+           background-attachment: fixed;
+           background-size: cover;
+           padding-top: 20px;
+           margin-top: 10px;
+           margin-bottom: 0px;
+           padding-bottom: 40px;
+           padding-left: 20px;
+           padding-right: 20px;
+           -webkit-box-shadow: 0px 7px 54px -6px rgba(0,0,0,0.71);
+           -moz-box-shadow: 0px 7px 54px -6px rgba(0,0,0,0.71);
+           box-shadow: 0px 7px 54px -6px rgba(0,0,0,0.71);
+       }
+       .lead {
+           color: #2D1F1F;
+           font-family: inherit;
+       }
+       #info {
+           background-color: rgb(242, 242, 242);
+           padding-top: 10px;
+           padding-bottom: 10px;
+           -webkit-box-shadow: 0px 7px 54px -6px rgba(0,0,0,0.71);
+           -moz-box-shadow: 0px 7px 54px -6px rgba(0,0,0,0.71);
+           box-shadow: 0px 7px 54px -6px rgba(0,0,0,0.71);
+       }
+       
+   </style>
+<!--estilo imageen -->
+<style>
+  .imagen  {
+            margin-left: 70px;
+    }
+</style>
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+
+<!--formulario contactenos-->
+    <section  style="background-color: #f2a326">
+    <div class="container" style="margin-top: -40px;" >
+        <div class="row" style="background-color: rgba(242, 163, 38, 0.09);" >
+            <div class="col-md-8">
+
+                <section  id="formulario" style="background-color: rgb(242, 242, 242);; margin-top: -10px;">
+   
+                    <p class="lead">
+                        Por favor diligencie completamente el siguiente formulario. Las respuestas a sus comentarios serán enviadas al e-mail que registre en este.
+                    </p>
+
+                    <form action="/Fundacion/ValidateCaptcha" method="POST">
+                        @Html.AntiForgeryToken()
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="firstname">Nombres</label>
+                                    <input type="text"  style="text-transform: uppercase;" class="form-control" id="firstname" name="firstname" placeholder="Nombres"required onkeypress="return soloLetras(event)" pattern="([a-zA-Z ]+)">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="lastname">Apellidos</label>
+                                    <input type="text"  style="text-transform: uppercase;" class="form-control" id="lastname" name="lastname" placeholder="Apellidos" required onkeypress="return soloLetras(event)" pattern="([a-zA-Z ]+)">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="Telefono">Teléfono o Celular</label>
+                                    <input type="tel" class="form-control" id="Telefono" name="Telefono" placeholder="Telefono"required onKeyPress="return soloNumeros(event)" maxlength="11" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="Ciudad">Ciudad</label>
+                                    <input type="text"  style="text-transform: uppercase;" class="form-control" id="Ciudad" name="Ciudad" placeholder="Ciudad" onkeypress="return soloLetras(event)" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail"required autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                       <div class="row">
+
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="message"><font><font>Comentarios</font></font></label>
+                                    <textarea id="message" name="message" class="form-control" required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 text-center">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.Captcha)
+                                    <a href="@Url.Action("Index")">
+                                        <img alt="Captcha" src="@Url.Action("CaptchaImage")" style="" />
+                                    </a>
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.Captcha, new { htmlAttributes = new { @id = "captura" } })
+                                    @Html.ValidationMessageFor(model => model.Captcha)
+                                </div>
+                                @*<div class="g-recaptcha" data-sitekey="6LfNcBMTAAAAAMilW297YqhG2Ap25DmeMc94zbMx"></div>
+                                <br />
+                                @section scripts{
+                                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                                }*@
+                                <div class="form-group">
+                                    <textarea id="capta" name="capta" style="height:150px" class="form-control hidden " required></textarea>
+                                </div>
+                                <button type="submit" onclick="darclick();" class="btn btn-template-main"><i class="fa fa-envelope-o"></i> Enviar Mensaje</button>
+
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </form>
+
+                </section>
+
+            </div>
+            <!--imagen-->
+            <div class="col-md-4" style="margin-top: 30px;">
+
+                <section >
+
+                    <img class="imagen" src="~/img/cofinal-para-web.png" style="width:100%; padding-top: 10px; padding-bottom: 10px; height: 300px; margin-left: -0px;" />
+
+                </section>
+
+
+            </div>
+            <!--Información-->
+            <div class="col-md-4" style="margin-top: 30px;">
+
+                <section id="info" style="padding-top: 10px; padding-bottom: 10px;">
+
+                    <center> <h3 class="text-uppercase">Dirección y Teléfonos de nuestra Oficina</h3></center>
+
+                    <center>
+                        <p>
+                            Cra. 29 No. 18-41 piso 2
+                            <br>San Juan de Pasto
+                            <br>Tel: 7336300-Ext 217
+                            <br>Cel:3182823673
+                            <br>Email:funcofinal@yahoo.es
+                            <br>
+
+                        </p>
+                    </center>
+
+                </section>
+
+
+            </div>
+           
+           
+
+        </div>
+    </div>
+</section>
+
+
+<!--funcion script darclick()-->
+<script>
+    function soloNumeros(e) {
+        var key = window.Event ? e.which : e.keyCode
+        return ((key >= 48 && key <= 57) || (key == 8))
+    }
+    function soloLetras(e) {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toLowerCase();
+        letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+        especiales = "8-37-39-46";
+
+        tecla_especial = false
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+            return false;
+        }
+    }
+
+    function darclick() {
+
+        var captura = document.getElementById('captura').value;
+        if (captura == "")
+        { swal("Por favor, Resuelva la suma"); }
+        else {
+
+            document.getElementById('capta').value = "listo";
+        }
+    }
+</script>
+<script>
+    
+    function handle1(myRadio) {
+        currentValue = myRadio.value;
+        document.getElementById("asunto").value = currentValue;
+    }
+</script>
+

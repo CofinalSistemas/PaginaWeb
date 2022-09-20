@@ -580,3 +580,235 @@ F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExt
 F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.csproj.CopyComplete
 F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.dll
 F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\ApplicationInsights.config
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\msvcr120.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\msvcr120.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\csc.exe
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\System.Collections.Immutable.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\System.Reflection.Metadata.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\vbc.exe
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe.config
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\igmSliders\imgtemp.png
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll.config
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\ClosedXML.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\EntityFramework.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\FastMember.Signed.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.DLL.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.Common.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.WebForms.DLL
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.SqlServer.Types.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Web.Infrastructure.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Owin.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Helpers.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Mvc.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Optimization.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Razor.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.WebPages.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\WebGrease.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.BO.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll.config
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.DLL.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\ClosedXML.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\ClosedXML.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\EntityFramework.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Helpers.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Mvc.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Optimization.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Razor.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.WebPages.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.xml
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.DAL.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll.config
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.Helpers.resources.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.Mvc.resources.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.Optimization.resources.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.Razor.resources.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.resources.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Deployment.resources.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Razor.resources.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.csproj.AssemblyReference.cache
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.csproj.CoreCompileInputs.cache
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.csproj.CopyComplete
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.dll
+E:\Plataforma web\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\ApplicationInsights.config
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\msvcr120.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\msvcr120.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\csc.exe
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\System.Collections.Immutable.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\System.Reflection.Metadata.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\vbc.exe
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\roslyn\VBCSCompiler.exe.config
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\igmSliders\imgtemp.png
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll.config
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.PortalWebExterno.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\ClosedXML.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\EntityFramework.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\FastMember.Signed.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.DLL.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.Agent.Intercept.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.Common.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.SqlServer.Types.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Web.Infrastructure.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Owin.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Helpers.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Mvc.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Optimization.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Razor.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.WebPages.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\WebGrease.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.BO.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.BO.dll.config
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.DLL.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\ClosedXML.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\ClosedXML.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\DocumentFormat.OpenXml.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\EntityFramework.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\EntityFramework.SqlServer.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\ExcelNumberFormat.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.DependencyCollector.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.Web.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AI.WindowsServer.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.ApplicationInsights.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Core.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Cookies.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Facebook.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Google.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.OAuth.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Microsoft.Owin.Security.Twitter.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Helpers.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Mvc.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Optimization.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.Razor.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.WebPages.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Deployment.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\System.Web.WebPages.Razor.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Antlr3.Runtime.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Newtonsoft.Json.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.DAL.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\Ingenio.DAL.dll.config
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.Helpers.resources.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.Mvc.resources.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.Optimization.resources.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.Razor.resources.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.resources.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.csproj.AssemblyReference.cache
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.csproj.CoreCompileInputs.cache
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.csproj.CopyComplete
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.pdb

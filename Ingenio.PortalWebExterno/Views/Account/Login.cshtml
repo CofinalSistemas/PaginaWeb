@@ -1,7 +1,7 @@
 ﻿@model Ingenio.PortalWebExterno.Models.SubscribeModel
 @{
     string urlReturn = "";
-    if ( ViewBag.urlReturn != null )
+    if (ViewBag.urlReturn != null)
     {
         urlReturn = ViewBag.urlReturn;
     }
@@ -16,8 +16,53 @@
 
     .form-control {
         border-radius: 10px 10px 0 0;
-    }
+    }    
 </style>
+
+<style type="text/css" media="screen" >
+    :root{
+        --color-green: #00a878;
+        --color-red: #fe5e41;
+        --color-button: #fdffff;
+        --color-black: #000;
+    }
+    .switch-button {
+        display: inline-block;
+    }
+   
+    .switch-button .switch-button__checkbox{
+        display: none;
+    }
+    .switch-button .switch-button__label{
+        background-color: var(--color-red);
+        width: 5rem;
+        height: 3rem;
+        border-radius: 3rem;
+        display: inline-block;
+        position: relative;
+    }
+    .switch-button .switch-button__label:before{
+        transition: .2s;
+        display: block;
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        background-color: var(--color-button);
+        content: '';
+        border-radius: 50%;
+        box-shadow: inset 0px 0px 0px 1px var(--color-black);
+    }
+    .switch-button .switch-button__checkbox:checked + .switch-button__label{
+        background-color: var(--color-green);
+    }
+    .switch-button .switch-button__checkbox:checked + .switch-button__label:before{
+        transform: translateX(2rem);
+    }
+</style> <!-- Estilo para el checkbox de terminos y condiciones -->
+
+
+
+
 
 <div id="content" style="">
     <div class="container">
@@ -38,18 +83,14 @@
                         <div class="form-group">
                             <div class="row">
 
-
                             </div>
                             <input name="password1" placeholder="Ingresa tu contraseña" type="password" class="form-control" id="password1" autocomplete="off">
                             <input type="hidden" name="password">
 
-
-
-
                         </div>
 
                         @{
-                            if ( ViewBag.show == true )
+                            if (ViewBag.show == true)
                             {
                                 <div class="alert alert-danger"><strong>Error: </strong>Usuario o contraseña incorrectos</div>
 
@@ -84,7 +125,7 @@
                         </div>
                         <hr style="border-top: 1px solid #9E9E9E;">
                         <div>
-                            <a class="col-md-12 " style="text-align:center" href="@Url.Action("RestaurarPass", "Account")">Olvidé mi cotraseña</a>
+                            <a class="col-md-12 " style="text-align:center" href="@Url.Action("RestaurarPass", "Account")">Olvidé mi contraseña</a>
                         </div>
                     </form>
                 </div>
@@ -95,8 +136,6 @@
                     <h2 class="text-uppercase" style="text-align:center">Nueva cuenta</h2>
 
                     <p class="lead" style="text-align:center">Completar tu Información personal para Ingresar a la plataforma de un asociado.</p>
-
-
 
                     <hr style="border-top: 1px solid #9E9E9E;">
 
@@ -122,7 +161,7 @@
                         </div>
                         <p class="text-muted">Todos los campos del formulario son obligatorios.</p>
                         <div class="camposComuunes">
-                           
+
                             <div class="form-group">
                                 <label for="identificion-login">Identificación <span id='red'>*</span></label>
                                 <input placeholder="Escriba aquí su numero de identificación" type="number" class="form-control" id="Identificacion" name="Identificacion" required>
@@ -135,7 +174,12 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="email-login">Correo electrónico <span id='red'>*</span> </label>
-                                        <input placeholder="Escriba aquí su correo" type="email" class="form-control" id="email1" name="Correo" required>
+                                        <input placeholder="Escriba aquí su correo" type="email" class="form-control" id="email1" name="Correo" required><br />
+                                        <div class="switch-button">
+                                            <p class="text-muted">Autorizo el <a href="~/Formatos/FORMATOS POLITICA/Privacidad_datos_personales2.pdf"> tratamiento de mis datos personales</a> según la Ley 1581 y sus Decretos Reglamentarios.</p>
+                                            <input type="checkbox" name="switch-button" id="switch-label"  class="switch-button__checkbox" onclick="registro.disabled = !this.checked" value="1">  
+                                            <label for="switch-label" class="switch-button__label"></label> <!-- aceptar terminos y condiciones -->
+                                        </div>
                                     </div>
                                 </div>
 
@@ -165,12 +209,13 @@
                             </div>
                             <hr style="border-top: 1px solid #9E9E9E;">
                             <div class="text-center">
-                                <button type="submit" class="btn btn-template-main"><i class="fa fa-user-md"></i>Registrarse</button>
+                                <button type="submit" class="btn btn-template-main" name="registro" disabled><i class="fa fa-user-md"></i>Registrarse</button> <!-- boton deshabilitado -->
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
+
 
 
 
@@ -317,7 +362,7 @@
                 var pj = $('.PersonaJuridica');
                 persona.empty().append(pj.html());
                 persona.html(pj.html());
-                
+
             }
             else {
                 var pn = $('.PersonaNatural');
@@ -331,3 +376,9 @@
 
 </script>
 
+<!-- Activar y desactivar Checkbox para validar formulario -->
+
+@* <form name="formulario">
+        <input type="checkbox" value="1" name="chVerTutoriales" onclick="btTutorial.disabled = !this.checked">
+        <input type="Button" value="Enviar" name="btTutorial" disabled>
+    </form>*@ 

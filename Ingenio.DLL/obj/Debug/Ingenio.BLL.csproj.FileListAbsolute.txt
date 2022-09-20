@@ -73,3 +73,33 @@ F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\obj\Debu
 F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\obj\Debug\Ingenio.BLL.csproj.CopyComplete
 F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\obj\Debug\Ingenio.DLL.dll
 F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DLL\obj\Debug\Ingenio.DLL.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.DLL.dll
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.DLL.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.BO.dll
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.DAL.dll
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\bin\Debug\EntityFramework.dll
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.BO.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.BO.dll.config
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.DAL.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.DAL.dll.config
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\bin\Debug\EntityFramework.xml
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\obj\Debug\Ingenio.BLL.csproj.AssemblyReference.cache
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\obj\Debug\Ingenio.BLL.csproj.CoreCompileInputs.cache
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\obj\Debug\Ingenio.BLL.csproj.CopyComplete
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\obj\Debug\Ingenio.DLL.dll
+E:\Plataforma web\cofi_web-master\Ingenio.DLL\obj\Debug\Ingenio.DLL.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.DLL.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.DLL.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.BO.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.DAL.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\bin\Debug\EntityFramework.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.BO.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.BO.dll.config
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.DAL.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\bin\Debug\Ingenio.DAL.dll.config
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\bin\Debug\EntityFramework.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\obj\Debug\Ingenio.BLL.csproj.AssemblyReference.cache
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\obj\Debug\Ingenio.BLL.csproj.CoreCompileInputs.cache
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\obj\Debug\Ingenio.BLL.csproj.CopyComplete
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\obj\Debug\Ingenio.DLL.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.DLL\obj\Debug\Ingenio.DLL.pdb

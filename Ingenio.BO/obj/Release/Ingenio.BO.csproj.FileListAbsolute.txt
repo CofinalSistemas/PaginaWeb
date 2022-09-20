@@ -57,3 +57,27 @@ D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.BO\obj\Re
 D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.BO\obj\Release\Ingenio.BO.csproj.CopyComplete
 D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.BO\obj\Release\Ingenio.BO.dll
 D:\Plataforma web\Ingenio.PortalWebRepo - Cofinal - 31_08_2021\Ingenio.BO\obj\Release\Ingenio.BO.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Release\Ingenio.BO.dll.config
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Release\Ingenio.BO.dll
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Release\Ingenio.BO.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Release\EntityFramework.dll
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Release\EntityFramework.SqlServer.dll
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Release\EntityFramework.xml
+E:\Plataforma web\cofi_web-master\Ingenio.BO\bin\Release\EntityFramework.SqlServer.xml
+E:\Plataforma web\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.csproj.AssemblyReference.cache
+E:\Plataforma web\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.csproj.CoreCompileInputs.cache
+E:\Plataforma web\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.csproj.CopyComplete
+E:\Plataforma web\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.dll
+E:\Plataforma web\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.pdb
+D:\cofi_web-master\Ingenio.BO\bin\Release\Ingenio.BO.dll.config
+D:\cofi_web-master\Ingenio.BO\bin\Release\Ingenio.BO.dll
+D:\cofi_web-master\Ingenio.BO\bin\Release\Ingenio.BO.pdb
+D:\cofi_web-master\Ingenio.BO\bin\Release\EntityFramework.dll
+D:\cofi_web-master\Ingenio.BO\bin\Release\EntityFramework.SqlServer.dll
+D:\cofi_web-master\Ingenio.BO\bin\Release\EntityFramework.xml
+D:\cofi_web-master\Ingenio.BO\bin\Release\EntityFramework.SqlServer.xml
+D:\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.csproj.AssemblyReference.cache
+D:\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.csproj.CoreCompileInputs.cache
+D:\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.csproj.CopyComplete
+D:\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.dll
+D:\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.pdb

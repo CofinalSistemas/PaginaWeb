@@ -74,6 +74,7 @@
         var fi= $('#inicial').val();
         var ff= $('#final').val();
 
+        console.log(`Cuenta de Usuario ${@cuentaUsuario.Identificacion}`)
         if (fi == null || fi=="") {
             swal("Por favor ingrese la Fecha inicial ");
             return false;
@@ -82,7 +83,6 @@
             swal("Por favor ingrese la Fecha final ");
             return false;
         }
-
         window.open('/WebF1.aspx?cedula='+@cuentaUsuario.Identificacion+'&fechai='+fi+'&fechaf='+ff, '', 'width=850,height=900,noresize');
     }
 

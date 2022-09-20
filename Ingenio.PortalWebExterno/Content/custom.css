@@ -669,4 +669,13 @@ hr.separator-title {
     align-content: center;
     display: flex;
     flex-direction: column;
-} 
+}
+
+.card-products {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+    .card-products .card-our-services {
+        min-height: 340px;
+    }

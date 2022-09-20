@@ -1,0 +1,158 @@
+﻿@{
+    Layout = "~/Views/Shared/layoutFundacion.cshtml";
+    ViewBag.Title = " Asesorias Profesionales";
+    ViewBag.titulo = "Asesorias Profesionales";
+    ViewBag.url = Url.Action("index", "Fundacion");
+    ViewBag.activo = "NuestrosProgramas";
+}
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+<!-- script  para textura de titulos-->
+<style>
+    #get-it {
+        background: -webkit-linear-gradient(left, #f2a326 0%, rgba(242, 163, 38, 0.81) 50%, rgba(242, 163, 38, 0.55) 69%, rgba(242, 163, 38, 0.51) 100%);
+         text-align:left; 
+    }
+
+    #titulo {
+        background-image: url(/img/texturaAmarilla2.jpg);
+        background-size: 30%;
+        -webkit-box-shadow: 0px 2px 29px 2px rgba(90,86,209,1);
+        -moz-box-shadow: 0px 2px 29px 2px rgba(90,86,209,1);
+        box-shadow: 0px 2px 29px 2px rgba(90,86,209,1);
+    }
+
+    #fondo {
+        background-image: url(/img/turiFond2.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        padding-top: 1px;
+        margin-top: -40px;
+        margin-bottom: 0px;
+        padding-bottom: 1px;
+        height: 500px;
+    }
+
+    .item img {
+        width: 100%;
+    }
+</style>
+<!--estilo contenido -->
+<style>
+    .text-justify {
+        font-size: large;
+    }
+
+    .p {
+        font-size: 20px;
+    }
+
+    .heading {
+        margin-bottom: 10px;
+    }
+
+    #an {
+        color: black;
+        font-size: 20px;
+    }
+</style>
+<style>
+    #contenido {
+        background-image: url(/img/texture-bw.png);
+        padding-top: 40px;
+        -webkit-box-shadow: 0px 15px 65px -6px rgba(40,40,46,1);
+        -moz-box-shadow: 0px 15px 65px -6px rgba(40,40,46,1);
+        box-shadow: 0px 15px 65px -6px rgba(40,40,46,1);
+        padding-bottom: 40px;
+    }
+</style>
+<!--primer fondo-->
+<div class="parallaxbox" id="pb0" style="background-image: url(/img/fondos/HR_FAN2011924.JPG);"> </div>
+<!--seccion de Titulo-->
+<div id="titulo">
+    <div id="get-it">
+        <div class="container" >
+            <div class="text-center">
+                <center><h2>Ofrecemos</h2></center>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- contenido-->
+<section style="background-image:url(/img/texture-bw.png); padding-top:70px; padding-bottom:40px;-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8);  ">
+        <ul class="nav nav-tabs" style="background-color:#F2A326; ">
+            <li class="active" id="ase">
+                <a id="an" href="#asesorias" data-toggle="tab">Asesorías</a>
+            </li>
+            <li id="cur">
+                <a id="an" href="#terapias" data-toggle="tab">Terapias Psicológicas</a>
+            </li>
+
+        </ul>
+
+        <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
+            <div class="tab-pane active" id="asesorias">
+                <!--contenido de asesorias-->
+                <div class="heading">
+
+                    <ul class="text-justify">
+                        <li>Procesos de conformación y legalización de organizaciones solidarias (Cooperativas, Fondos de Empleados, Asociaciones, Fundaciones, etc.).</li>
+                        <li>Elaboración e implementación del Sistema de Gestión de la Seguridad y Salud en el Trabajo S.G.S.S.T.</li>
+                        <li>Elaboración de informes contables para Cooperativas.</li>
+                        <li>Manejo del crédito y control de cartera para entidades de Economía Solidaria.</li>
+                        <li>Elaboración, ejecución y Control de proyectos productivos.</li>
+                        <li>Interventoría de proyectos productivos.</li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <!--contenido de terapias psicologicas-->
+            <div class="tab-pane" id="terapias">
+                <div class="heading">
+                    <ul class="text-justify">
+                        <li>Terapias empresariales.</li>
+                        <li>Terapias Grupales</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</section>
+
+<div class="parallaxbox" id="pb1" style="background-image: url(/img/fondos/HR_FAN2011924.JPG);"> </div>
+
+<!-- scrip para parallax-->
+<script type="text/javascript">
+			function parallax() {
+			    setpos("#pb0");
+			    setpos("#pb1");
+
+			}
+        	function setpos(element, factor) {
+				factor = factor || 2;
+
+				var offset = $(element).offset();
+				var w = $(window);
+
+				var posx = (offset.left - w.scrollLeft()) / factor;
+				var posy = (offset.top - w.scrollTop()) / factor;
+
+				$(element).css('background-position', '100% '+posy+'px');
+
+    // use this to have parralax scrolling vertical and horizontal
+    //$(element).css('background-position', posx+'px '+posy+'px');
+}
+
+$(document).ready(function () {
+	parallax();
+}).scroll(function () {
+	parallax();
+});
+</script>
+

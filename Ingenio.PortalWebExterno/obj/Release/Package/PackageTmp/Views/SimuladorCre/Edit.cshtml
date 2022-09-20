@@ -1,0 +1,232 @@
+﻿
+    @using Ingenio.Models
+    @{
+        AccountModels cuentaUsuario = new AccountModels();
+        if (!cuentaUsuario.IsNull())
+        {
+            Layout = "~/Views/Shared/layoutAso.cshtml";
+        }
+       
+        ViewBag.Title = "Simulador Creditos";
+        ViewBag.titulo = "Simulador Creditos";
+        ViewBag.url = Url.Action("index", "home");
+        ViewBag.activo = "simuladoresActivo";
+
+    }
+@{
+    ViewBag.Title = "Lineas";
+}
+<!--estilos de vista-->
+<style>
+    #contenido {
+        padding-bottom: 40px;
+        margin-bottom: 1px;
+        padding-top: 40px;
+        margin-top: -40px;
+        background-image: url(/img/Logos/cofinalFondo.png);
+    }
+
+    .panel-body {
+        background-color: #F5F5F5;
+    }
+
+    #tabla {
+        background-color: #F2F2F2;
+        width: auto;
+    }
+</style>
+<style type="text/css">
+    table {
+        border-collapse: collapse;
+        border-spacing: 0 7px;
+    }
+
+    thead th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    tbody td {
+        background-color: #EEEEEE;
+    }
+</style>
+
+<section id="contenido">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="container">
+                <h4 style="text-align: center">COOPERATIVA DE AHORRO Y CREDITO NACIONAL</h4>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="container">
+                <h4 style="text-align: center">Créditos</h4>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+        <br />
+        <div class="col-md-3">
+
+            <div class="panel panel-default sidebar-menu with-icons">
+
+                <div class="panel-body">
+
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active">
+                            <a href="#alianza1" onclick="return theFunction('COME');" data-toggle="pill">LINEA COMERCIAL</a>
+                        </li>
+                        <li>
+                            <a href="#alianza2" onclick="return theFunction('CONS');" data-toggle="pill">LINEA DE CONSUMO</a>
+                        </li>
+                        <li>
+                            <a href="#alianza3" onclick="return theFunction('MEMP');" data-toggle="pill">LINEA DE MICROCREDITO EMPRESARIAL</a>
+                        </li>
+                        <li>
+                            <a href="#alianza4" onclick="return theFunction('VIVI');" data-toggle="pill">LINEA DE VIVIENDA</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="tab-content col-md-9">
+            <div class="tab-pane active" id="alianza1">
+                <table role="grid" id="tablacli" class="table" border="1" cellspacing="1">
+
+                    <thead>
+                        <tr>
+                            <th align="center"style="text-align: center;">DESTINO </th>
+                            <th align="center">PLAZO MINIMO&nbsp;&nbsp; </th>
+                            <th align="center">PLAZO MAXIMO&nbsp;&nbsp; </th>
+                            <th align="center">TASA DE INTERES&nbsp;&nbsp; </th>
+                            <th align="center"></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+
+            <div class="tab-pane" id="alianza2">
+                <table role="grid" id="tablacli" border="1" cellspacing="1">
+
+                    <thead>
+                        <tr>
+                            <th align="center"style="text-align: center;">DESTINO </th>
+                            <th align="center">PLAZO MINIMO&nbsp;&nbsp; </th>
+                            <th align="center">PLAZO MAXIMO&nbsp;&nbsp; </th>
+                            <th align="center">TASA DE INTERES&nbsp;&nbsp; </th>
+                            <th align="center"></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="alianza3">
+                <table role="grid" id="tablacli" border="1" cellspacing="1">
+
+                    <thead>
+                        <tr>
+                            <th align="center"style="text-align: center;">DESTINO</th>
+                            <th align="center">PLAZO MINIMO&nbsp;&nbsp;&nbsp;&nbsp; </th>
+                            <th align="center">PLAZO MAXIMO&nbsp;&nbsp; </th>
+                            <th align="center">TASA DE INTERES&nbsp;&nbsp; </th>
+                            <th align="center"></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="alianza4">
+                <table role="grid" id="tablacli" border="1" cellspacing="1">
+
+                    <thead>
+                        <tr>
+                            <th align="center"style="text-align: center;">DESTINO </th>
+                            <th align="center">PLAZO MINIMO&nbsp;&nbsp; </th>
+                            <th align="center">PLAZO MAXIMO&nbsp;&nbsp; </th>
+                            <th align="center">TASA DE INTERES&nbsp;&nbsp; </th>
+                            <th align="center"></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+
+        theFunction("COME");
+
+    });
+
+</script>
+<script type="text/javascript">
+    function theFunction(dato) {
+
+
+
+        $.ajax({
+            url: "@Url.Action("GetLinea4")",
+            type: "POST",
+            data: { "line": dato },
+            cache: false,
+            datatype: "json",
+            success: function (data) {
+                $("#tablacli tbody tr").remove();
+                $.each(data, function (index, value) {
+
+                    var nombredestino = value.nombredestino;
+                    var plazoinicial = value.plazoinicial / 30;
+                    var coddestino = value.coddestino;
+                    plazoinicial = Math.round(plazoinicial);
+                    var tiempo = "mes(es)";
+                    if (plazoinicial < 1) {
+                        plazoinicial = 1;
+                        var tiempo = "dia";
+                    }
+
+
+                    var plazofinal = value.plazofinal / 30;
+                    var tasainteres = value.tasainteres;
+
+                    //Escribimos los datos mediante jquery en la tabla tbl-clientes que crearemos en la pagina web
+                    $("#tablacli tbody").append("<tr><td id='" + coddestino + "' align='center'>" + nombredestino + "</td>" +
+                                                                  "<td id='" + coddestino + "' align='center'>" + plazoinicial + " " + tiempo + "</td>" +
+                                                                  "<td id='" + coddestino + "' align='center'>" + Math.round(plazofinal) + " mes(es)</td>" +
+                                                                  "<td id='" + coddestino + "' align='center'>" + tasainteres + " % N.M.V</td>" +
+                                                                  "<td id='" + coddestino + "' align='center'><button style='background-color: #4CAF50;color:white; font-size:16px' data-dato='" + dato + "' value=" + coddestino + " onclick='Irasimulacion(this);'>Ver detalles</button>  </td>");
+
+
+
+                })
+            }
+        });
+
+    }
+
+
+</script>
+<script type="text/javascript">
+    function Irasimulacion(valor) {
+        console.log($(valor).val());
+        console.log($(valor).data('dato'));
+        window.location = "@Url.Action("Details")?destino=" + $(valor).val() + "&linea=" + $(valor).data('dato') + "";
+    }
+</script>

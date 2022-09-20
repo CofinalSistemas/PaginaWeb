@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.Title = "Politicas Tratamiento Información";
+    ViewBag.titulo = "Politica Tratamiento de Datos Personales";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "PoliticasTIC";
+}
+<style>
+    #an {
+        color: black;
+        font-size: 20px;
+    }
+
+    .text-justify, #pp {
+        font-size: 18px;
+    }
+
+    #valo, #prin, #gob, #pol, #est {
+        padding-bottom: 1px;
+        background: #da4d4d;
+    }
+
+    #get-it {
+        background: -webkit-linear-gradient(left, rgba(216,65,65,0.99) 0%, rgba(216,65,65,0.89) 49%, rgba(213,195,195,0.81) 90%, rgba(213,195,195,0.79) 100%);
+        text-align: left;
+        -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
+        height: 120px;
+    }
+
+    #titulo {
+        background-image: url(/img/textura1.png);
+        background-size: 30%;
+    }
+</style>
+
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'b7e1cad8ae31b522b9a3b64e60182dc54a8c7acb';
+    window.smartsupp || (function (d) {
+        var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+        s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+        c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+        c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+    })(document);
+</script>
+
+<style>
+    .contenido {
+        background-color: #ffffff;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @*-webkit-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75); <!-- coloca sombra -->
+        -moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);<!-- coloca sombra -->
+        box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);<!-- coloca sombra -->*@
+    }
+</style>
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+<img src="~/img/POL_DATOS.png" style="width:1600px; height: 320px;" alt="Contactos" class="img-responsive  center-block">
+
+<!-- contenido-->
+<section class="contenido">
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8); -webkit-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);-moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);   ">
+
+
+        <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
+            <div class="tab-pane active" id="valoresCoo">
+                <p style="text-align:justify">
+
+                </p>
+
+                <div class="tab-pane" id="politica">
+                    <p id="pp" style="text-align:justify">
+                        Esta política aplica para todos los titulares de información personal que sea utilizada y/o se encuentre en las bases de datos de COFINAL®:
+                    </p>
+                    <a href="~/Formatos/FORMATOS POLITICA/Politicas_T_DP.pdf" target="_blank"> Descargar Archivo:PoliticaTI.pdf</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- imagen fondo1-->
+@*<div class="parallaxbox" id="pb1" style="background-image: url(/img/fondos/fondoconinteres.jpg);"> </div>*@
+
+<!-- scrip para parallax-->
+<script type="text/javascript">
+    function parallax() {
+        setpos("#pb0");
+        setpos("#pb1");
+
+    }
+
+
+
+    function setpos(element, factor) {
+        factor = factor || 2;
+
+        var offset = $(element).offset();
+        var w = $(window);
+
+        var posx = (offset.left - w.scrollLeft()) / factor;
+        var posy = (offset.top - w.scrollTop()) / factor;
+
+        $(element).css('background-position', '100% ' + posy + 'px');
+
+        // use this to have parralax scrolling vertical and horizontal
+        //$(element).css('background-position', posx+'px '+posy+'px');
+    }
+
+    $(document).ready(function () {
+        parallax();
+    }).scroll(function () {
+        parallax();
+    });
+</script>
+

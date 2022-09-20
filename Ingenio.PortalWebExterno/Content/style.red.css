@@ -107,7 +107,7 @@ div.section {
 .heading h4,
 .heading h5 {
   display: inline-block;
-  border-bottom: solid 5px #da4d4d;
+  border-bottom: solid 4px #E76100;
   line-height: 1.1;
   margin-bottom: 0;
   padding-bottom: 10px;
@@ -2684,7 +2684,7 @@ fieldset[disabled] .btn-template-primary.active {
   border-color: #da4d4d;
 }
 .nav-tabs {
-  border-bottom: 1px solid #da4d4d;
+  border-bottom: none !important;
 }
 .nav-tabs > li {
   float: left;
@@ -2806,8 +2806,9 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .tab-content {
   padding: 15px;
-  border: solid 1px #ddd;
-  border-top: none;
+  margin-top:3px;
+  border: solid 2px #ddd;
+  /*border-top: none;*/
 }
 /* navbar */
 .navbar {

@@ -756,6 +756,7 @@
     <Content Include="Views\Home\Index3.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Directorio.cshtml" />
+    <Content Include="Views\Home\PoliticasTIC.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

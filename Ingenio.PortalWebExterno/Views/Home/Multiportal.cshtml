@@ -50,6 +50,19 @@
     .text-justify {
         font-size: 18px;
     }
+    .mb-2 {
+        margin-bottom: 2em;
+    }
+    .mb-4 {
+        margin-bottom: 4em;
+    }
+    .p-2 {
+        padding: 1.5em;
+    }
+    .row-flex {
+        display: flex;
+        justify-content: center;
+    }
 </style>
 <!-- imagen fondo1-->
 <img src="~/Imagenes/multiportal1.jpg" style="width:1300px; height: 300px;" alt="Multiportal" class="img-responsive  center-block">
@@ -59,22 +72,19 @@
 <section id="aso" class="bar background-white no-mb">
     <div class="container">
         <div class="row">
-            <div class="col-md-7" style="background-color:white">
 
+            <div class="col-12 col-lg-7" style="background-color:white">
                 <div class="heading text-center" style="margin-bottom:10px;padding-top:10px;">
                     <h4>¿QUE ES EL MULTIPORTAL TRANSACCIONAL? </h4>
                 </div>
 
                 <p class="mb-small text-justify" style="font-size:19px;">
-                    El Portal Transaccional y/o Banca Móvil son canales electrónicos virtuales para personas naturales 
-                    o jurídicas, a través de los cuales los Asociados de la cooperativa, pueden administrar integralmente 
-                    sus productos y realizar transacciones financieras con facilidad y agilidad desde cualquier lugar, las 
+                    El Portal Transaccional y/o Banca Móvil son canales electrónicos virtuales para personas naturales
+                    o jurídicas, a través de los cuales los Asociados de la cooperativa, pueden administrar integralmente
+                    sus productos y realizar transacciones financieras con facilidad y agilidad desde cualquier lugar, las
                     24 horas al día, durante los 365 días del año, con altos estándares de tecnología, seguridad y calidad.
 
                 </p>
-
-
-
 
                 <p class="mb-small text-justify" style="font-size:19px;">
                     <strong>BENEFICIOS DEL ASOCIADO</strong>
@@ -95,7 +105,7 @@
                     <li>El correo electrónico que registro cuando realizo la apertura de la cuenta, de lo contrario deberá actualizar el correo electrónico en las oficinas de Cofinal.</li>
                     <li>El número del teléfono celular registrado en la base de datos.</li>
                     <li>Para asociados persona jurídica, solicitar el servicio.</li>
-               </ul>
+                </ul>
 
                 <p class="mb-small text-justify" style="font-size:19px;">
                     <strong>RECOMENDACIONES DE SEGURIDAD PARA EL ASOCIADO</strong>
@@ -111,82 +121,45 @@
                     <li>Una vez termine las transacciones, asegúrese de cerrar sesión en el Multiportal Transaccional para evitar que otros ingresen a ella.</li>
                 </ul>
             </div>
-            @*<div class="col-md-4 center-block">*@
 
-            <!--Comienza imagen Persona Natural-->
-            <table style="height: 300px; position:relative;top:80px; left:60px" border="0" width="400">
+            <div class="col-12 col-lg-5">
+                <div class="row mb-4 ">
+                    <div class="col-sm-12 mb-2 row-flex">
+                        <img src="~/img/natural.png" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-sm-6 p-2 row-flex">
+                        <a href="https://multiportal.redcoopcentral.com/integracion/multiportal/Enrolamiento/?entidad=00000117">
+                            <img src="~/img/naturegistrate.png" alt="" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 p-2 row-flex">
+                        <a href="https://multiportal.redcoopcentral.com/multiportalvisio/Login/Index?ENTIDAD=00000117">
+                            <img src="~/img/natuiniciar.png" alt="" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
 
-                <tbody>
-                    <tr>
-                        <td style="width: 194px; text-align: center;" colspan="2">
-                            <a>
-                                <!--imagen Persona Natural-->
-                                <img src="~/img/natural.png" alt="" @*class="img-responsive" style="-webkit-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.83);
-                                -moz-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.75); box-shadow:  2px 7px 30px 7px rgba(0,0,0,0.75);"*@>
-                            </a>
-
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td style="width: 190px;">
-                            <a href="https://multiportal.redcoopcentral.com/integracion/multiportal/Enrolamiento/?entidad=00000117">
-                                <img src="~/img/naturegistrate.png" alt="" class="img-responsive" @*style="-webkit-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.83);
-                                -moz-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.75); box-shadow:  2px 7px 30px 7px rgba(0,0,0,0.75);  "*@>
-                            </a>
-                        </td>
-                        <td style="width: 190px;">
-                            <a href="https://multiportal.redcoopcentral.com/multiportalvisio/Login/Index?ENTIDAD=00000117">
-                                <img src="~/img/natuiniciar.png" alt="" class="img-responsive" @*style="-webkit-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.83);
-                                -moz-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.75); box-shadow:  2px 7px 30px 7px rgba(0,0,0,0.75);  "*@>
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <!--Comienza imagen Persona Juridica-->
-           
-            <table style="height: 300px; position:relative;top:190px; left:60px" border="0" width="400">
-                
-                <tbody>
-                    <tr>
-                        <td style="width: 194px; text-align: center;" colspan="2">
-                            <a>
-                                <!--imagen Persona Juridica-->
-                                <img src="~/img/juridica.png" alt="" @*class="img-responsive" style="-webkit-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.83);
-                                -moz-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.75); box-shadow:  2px 7px 30px 7px rgba(0,0,0,0.75);"*@>
-                            </a>
-
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td style="width: 190px;">
-                            <a href="https://portaljuridico.redcoopcentral.com:8445/integracionJuridico/multiportal/enrolamiento/?entidad=00000117">
-                                <img src="~/img/juridicaregistrate.png" alt="" class="img-responsive" @*style="-webkit-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.83);
-                                -moz-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.75); box-shadow:  2px 7px 30px 7px rgba(0,0,0,0.75);  "*@>
-                            </a>
-                        </td>
-                        <td style="width: 190px;">
-                            <a href="https://portaljuridico.redcoopcentral.com:8445/portalJuridico">
-                                <img src="~/img/juridcaiiniciar.png" alt="" class="img-responsive" @*style="-webkit-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.83);
-                                -moz-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.75); box-shadow:  2px 7px 30px 7px rgba(0,0,0,0.75);  "*@>
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-
-
-
+                <div class="row ">
+                    <div class="col-sm-12 mb-2 row-flex">
+                        <img src="~/img/juridica.png" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-sm-6 p-2 row-flex">
+                        <a href="https://portaljuridico.redcoopcentral.com:8445/integracionJuridico/multiportal/enrolamiento/?entidad=00000117">
+                            <img src="~/img/juridicaregistrate.png" alt="" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 p-2 row-flex">
+                        <a href="https://portaljuridico.redcoopcentral.com:8445/portalJuridico">
+                            <img src="~/img/juridcaiiniciar.png" alt="" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
+    </div>
         
 </section>
-<section>
+<section style=" margin-bottom: 0px;">
     <div align="center">
         <div class="heading text-center" style="margin-bottom:10px;padding-top:10px;">
             <h4>INSTRUCTIVOS PARA EL INGRESO AL MULTIPORTAL</h4>
@@ -194,104 +167,72 @@
     </div>
     @*Estilos para los videos*@
     <style>
-        .contenedor {
-            margin: 40px auto;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            /*justify-content: center;
-        align-content: center;
-        align-items: center;*/
-            /*background-color: #FFFFFF;*/
-            border: 0px solid #99cccc;
+        .container-multimedia {
+            padding: 1em;
         }
 
-        .contenido1 {
-            width: 100px;
-            height: 100px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 125px;
-            margin-right: 100px;
-        }
-
-        .contenido2 {
-            width: 100px;
-            height: 100px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 200px;
-            margin-right: 50px;
-        }
-
-        .contenido3 {
-            width: 100px;
-            height: 100px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 250px;
-            margin-right: 150px;
-        }
-
-        .contenido4 {
-            width: 100px;
-            height: 100px;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            margin-left: 125px;
-            margin-right: 100px;
-            /*display:block*/
-        }
-
-        .contenido5 {
-            width: 100px;
-            height: 100px;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            margin-left: 200px;
-            margin-right: 50px;
-        }
-
-        .contenido6 {
-            width: 100px;
-            height: 100px;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            margin-left: 250px;
-            margin-right: 150px;
-        }
+            .container-multimedia iframe {
+                width: 100%;
+                min-height: 260px;
+                border-radius: 20px;
+                border: none;
+            }
     </style>
 
-    <div class="contenedor">
+    <div class="container py-cofinal">
+        <div class="row">
 
-        <div class="contenido1">
-            @*Video Bienvenida*@
-            <iframe src="https://www.youtube.com/embed/FB3RdPlceT0?rel=0" allowfullscreen></iframe>
+            <div class="col-12 col-md-6 my-2 h-100">
+                <div class="container-multimedia">
+                    @*Video Bienvenida*@
+                    <iframe src="https://www.youtube.com/embed/FB3RdPlceT0?rel=0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 my-2 h-100">
+                <div class="container-multimedia">
+                    @*Video Registro Multiportal*@
+                    <iframe src="https://www.youtube.com/embed/IjLKvxpJoyk?rel=0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 my-2 h-100">
+                <div class="container-multimedia">
+                    @*Video Registro PSE*@
+                    <iframe src="https://www.youtube.com/embed/JBrgyl0ouGI?rel=0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 my-2 h-100">
+                <div class="container-multimedia">
+                    @*Video Pago de Factura*@
+                    <iframe src="https://www.youtube.com/embed/vZgtiufwg70?rel=0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 my-2 h-100">
+                <div class="container-multimedia">
+                    @*Video Consulta Movimiento*@
+                    <iframe src="https://www.youtube.com/embed/87W_GzufUto?rel=0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 my-2 h-100">
+                <div class="container-multimedia">
+                    @*Video Consulta Movimiento*@
+                    <iframe src="https://www.youtube.com/embed/m__EgZa2I-I?rel=0" allowfullscreen></iframe>
+                </div>
+            </div>
+
         </div>
-        <div class="contenido2">
-            @*Video Registro Multiportal*@
-            <iframe src="https://www.youtube.com/embed/IjLKvxpJoyk?rel=0" allowfullscreen></iframe>
-        </div>
-        <div class="contenido3">
-            @*Video Registro PSE*@
-            <iframe src="https://www.youtube.com/embed/JBrgyl0ouGI?rel=0" allowfullscreen></iframe>
-        </div>
-        <div class="contenido4">
-            @*Video Pago de Factura*@
-            <iframe src="https://www.youtube.com/embed/vZgtiufwg70?rel=0" allowfullscreen></iframe>
-        </div>
-        <div class="contenido5">
-            @*Video Consulta Movimiento*@
-            <iframe src="https://www.youtube.com/embed/87W_GzufUto?rel=0" allowfullscreen></iframe>
-        </div>
-        @*<div class="contenido6">
-                <iframe src="https://www.youtube.com/embed/m__EgZa2I-I?rel=0" allowfullscreen></iframe>
-            </div>*@
     </div>
 
+    <!-- LA FIGURA NARANJA ES DESDE https://getwaves.io/  PUED E COPIAR Y PEGAR EL SVG GENERADO-->
+    <div class="container-fluid" style="margin-bottom: -6px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,64L60,90.7C120,117,240,171,360,165.3C480,160,600,96,720,101.3C840,107,960,181,1080,181.3C1200,181,1320,107,1380,69.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
 
-
+    
 
 
     @* <!-- imagen fondo2-- > @*<div class="parallaxbox" id="pb1" style="background-image: url('/img/fondos/multiportal.jpg');" > </div > *@

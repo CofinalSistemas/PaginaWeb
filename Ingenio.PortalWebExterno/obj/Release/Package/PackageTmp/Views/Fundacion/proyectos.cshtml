@@ -1,0 +1,127 @@
+﻿
+@{
+    Layout = "~/Views/Shared/layoutFundacion.cshtml";
+    ViewBag.Title = "Proyectos de Vivienda";
+    ViewBag.titulo = "Proyectos de Vivienda";
+    ViewBag.url = Url.Action("index", "Fundacion");
+    ViewBag.activo = "proyectos";
+}
+
+<!-- estilo para imagen con parallax-->
+<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+<style>
+    
+    #get-it{
+          background: -webkit-linear-gradient(left, #f2a326 0%, rgba(242, 163, 38, 0.81) 50%, rgba(242, 163, 38, 0.55) 69%, rgba(242, 163, 38, 0.51) 100%);
+        text-align:left;
+        
+    }
+
+     #titulo{
+            background-image:url(/img/texturaAmarilla2.jpg); 
+            background-size:30%;
+            }
+      #pb1,#pb0{
+        background-image:url(/img/fondos/HR_FAN2011944.JPG);
+        background-attachment: fixed;  
+        background-size: cover; 
+        padding-top:300px; 
+        margin-top:-40px; 
+        margin-bottom:0px; 
+        padding-bottom:40px;
+    }
+</style>
+<!--seccion de imagen 1-->
+<section class="parallaxbox" id="pb0" ></section>
+<!--seccion de Titulo-->
+<div id="titulo">
+    <div id="get-it" style="">
+        <div class="container">
+            <div class="col-md-8 col-sm-12">
+                <center><h2>Plan</h2></center>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--seccion de contenido-->
+
+<section style="background-image:url(/img/texture-bw.png); padding-top:40px; padding-bottom:40px; ">
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8);  ">
+
+        <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
+            <div class="tab-pane active" id="info">
+
+
+                <ul class="text-justify" style="font-size: 20px;">
+                    <li>Construcción y desarrollo de proyectos de vivienda.</li>
+                    <li>Asesoría en trámites de subsidio para adquisición de vivienda.</li>
+                    <li>Ahorro programado para adquisición de vivienda – Alianza con la cooperativa COFINAL.</li>
+                    <li>Asesoría para la legalización de propiedad de la vivienda.</li>
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</section>
+
+<!--seccion de imagen2-->
+<section class="parallaxbox" id="pb1"></section>
+  <!--fondo 2 con carusel de fotos-->
+<ul class="pgwSlideshow">
+    @{ int count = 0;}
+    @foreach (var item in ViewBag.imagenesProyectos)
+    {
+        <li><img src="@item"></li>
+        count++;
+        if (count == 20)
+        {
+            break;
+        }
+    }
+    
+</ul>
+<!---->
+<script>
+    $(document).ready(function () {
+        $('.pgwSlideshow').pgwSlideshow();
+    }); 
+</script>
+<!-- scrip para parallax-->
+<script type="text/javascript">
+			function parallax() {
+			    setpos("#pb0");
+			    setpos("#pb1");
+
+
+
+			}
+
+
+
+			function setpos(element, factor) {
+				factor = factor || 2;
+
+				var offset = $(element).offset();
+				var w = $(window);
+
+				var posx = (offset.left - w.scrollLeft()) / factor;
+				var posy = (offset.top - w.scrollTop()) / factor;
+
+				$(element).css('background-position', '100% '+posy+'px');
+
+    // use this to have parralax scrolling vertical and horizontal
+    //$(element).css('background-position', posx+'px '+posy+'px');
+}
+
+$(document).ready(function () {
+	parallax();
+}).scroll(function () {
+	parallax();
+});
+</script>
+
+

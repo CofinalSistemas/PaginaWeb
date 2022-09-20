@@ -88,3 +88,39 @@ F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debu
 F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CopyComplete
 F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.dll
 F:\Web Cofinal\Ingenio.PortalWebRepo - Cofinal - Produccion\Ingenio.DAL\obj\Debug\Ingenio.DAL.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll.config
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\Ingenio.DAL.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\EntityFramework.dll
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\Ingenio.BO.dll
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\Newtonsoft.Json.dll
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\Owin.dll
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\Ingenio.BO.pdb
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\Ingenio.BO.dll.config
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\EntityFramework.xml
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\bin\Debug\Newtonsoft.Json.xml
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.AssemblyReference.cache
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CoreCompileInputs.cache
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CopyComplete
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\obj\Debug\Ingenio.DAL.dll
+E:\Plataforma web\cofi_web-master\Ingenio.DAL\obj\Debug\Ingenio.DAL.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll.config
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\Ingenio.DAL.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\Ingenio.DAL.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\EntityFramework.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\Ingenio.BO.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\Newtonsoft.Json.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\Owin.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\Ingenio.BO.pdb
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\Ingenio.BO.dll.config
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\EntityFramework.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\bin\Debug\Newtonsoft.Json.xml
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.AssemblyReference.cache
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CoreCompileInputs.cache
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\obj\Debug\Ingenio.DAL.csproj.CopyComplete
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\obj\Debug\Ingenio.DAL.dll
+D:\paginaCofinal\cofi_web-master\Ingenio.DAL\obj\Debug\Ingenio.DAL.pdb

@@ -1,66 +1,85 @@
 ﻿
 @{
     ViewBag.Title = "Quienes Somos";
-    ViewBag.titulo = "Nuestra Coperativa";
+    ViewBag.titulo = "Nuestra Cooperativa";
     ViewBag.url = Url.Action("index", "home");
     ViewBag.activo = "conoscanosActivo";
 
 }
 <!-- estilo contenido -->
-<style>
-    .contenido {
-        background-image: url(/img/texture-bw.png);
-        padding-top: 20px;
-        padding-bottom: 50px;
-        -webkit-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
-        -moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
-        box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
-    }
-</style>
+@*
+    <style>
+        .contenido {
+            background-image: url(/img/texture-bw.png);
+            padding-top: 20px;
+            padding-bottom: 50px;
+            -webkit-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
+            -moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
+            box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
+        }
+    </style>*@ <!-- FONDO CON TEXTURA GRIS PARA EL TEXTO -->
 
-  <script type="text/javascript">
-        var _smartsupp = _smartsupp || {};
-        _smartsupp.key = 'b7e1cad8ae31b522b9a3b64e60182dc54a8c7acb';
-        window.smartsupp || (function (d) {
-            var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
-            s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
-            c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
-            c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
-        })(document);
-    </script>
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'b7e1cad8ae31b522b9a3b64e60182dc54a8c7acb';
+    window.smartsupp || (function (d) {
+        var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+        s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+        c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+        c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+    })(document);
+</script>
 
 <!-- estilo para imagen con parallax-->
 <link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+
 <style>
-    #misio {
-        padding-bottom: 1px;
-        background: #da4d4d;
+
+    .item-quienessomos, .item-quienessomos a{
+        border:none !important;
+        
+    }
+    .item-quienessomos {
+        background: #E1852C;
     }
 
-    #an {
+    .item-quienessomos a {
+        color:black;
+        font-weight:400;
+        font-size: 19px;
+    }
+
+    .item-quienessomos:hover{
+        background:#bf640b;        
+    }
+    .item-quienessomos.active {
+        background: white;        
+        text-decoration: underline;
+
+    }
+    .item-quienessomos.active a {
         color: black;
-        font-size: 20px;
+        font-weight: 500;
+        
     }
 
-    #resena, #visio, #quienS {
-        padding-bottom: 1px;
-        background: #da4d4d;
-    }
 
     .text-justify {
         font-size: 18px;
     }
 </style>
+
 <!-- imagen fondo1-->
-<div class="parallaxbox" id="pb0" style="background-image: url('/img/fondos/Nuestra Coop.jpg');"> </div>
+@*<div class="parallaxbox" id="pb0" style="background-image: url('/img/fondos/Nuestra Coop.jpg');"> </div>*@
 <!-- contenido-->
-<section class="contenido">
-    <div class="container" style="background-color: rgba(255, 255, 255, 0.8); -webkit-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);-moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);   ">
-        <ul class="nav nav-tabs" style="background-color:#da4d4d">
-            <li id="quienS" class="active"><a id="an" href="#quienesSomos" data-toggle="tab">Quienes Somos</a></li>
-            <li id="resena"><a id="an" data-toggle="tab" href="#resenaHistorica">Reseña Histórica</a></li>
-            <li id="misio"><a id="an" data-toggle="tab" href="#mision">Misión</a></li>
-            <li id="visio"><a id="an" data-toggle="tab" href="#vision">Visión</a></li>
+
+<section class="contenido"> 
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8); ">
+        <ul class="nav nav-tabs" style="background-color: #ffffff ">
+            <li id="quienS" class="item-quienessomos active" ><a id="an" href="#quienesSomos" data-toggle="tab">Quienes Somos</a></li>
+            <li id="resena" class="item-quienessomos"><a id="an" data-toggle="tab" href="#resenaHistorica">Reseña Histórica</a></li>
+            <li id="misio" class="item-quienessomos"><a id="an" data-toggle="tab" href="#mision">Misión</a></li>
+            <li id="visio" class="item-quienessomos"><a id="an" data-toggle="tab" href="#vision">Visión</a></li>
 
         </ul>
 
@@ -68,13 +87,13 @@
             <div class="tab-pane active" id="quienesSomos">
 
                 <div class="heading">
-                    <h4>Quienes Somos</h4>
+                    <h2>Quienes Somos</h2>                       
                 </div>
                 <ul class="text-justify">
                     <li>
                         Somos una empresa nariñense de carácter privado, sin ánimo de lucro y de servicio social, fundada el 4 de Julio de 1.964.
                     </li>
-                    <li>Somos una Cooperativa de Ahorro y Crédito con 57 años de existencia in-interrumpida en el sector de la Economía Solidaria con amplia cobertura en el sur occidente del país.</li>
+                    <li>Somos una Cooperativa de Ahorro y Crédito con 58 años de existencia in-interrumpida en el sector de la Economía Solidaria con amplia cobertura en el sur occidente del país.</li>
                     <li>
                         Una empresa vigilada por la Superintendencia de la Economía Solidaria -  SUPERSOLIDARIA.
 
@@ -89,7 +108,7 @@
             </div>
             <div class="tab-pane " id="resenaHistorica">
                 <div class="heading">
-                    <h4>Reseña Histórica</h4>
+                    <h2>Reseña Histórica</h2>                   
                 </div>
                 <p class="text-justify">
                     En el enigmático y bello sur de Colombia y mas exáctamente en la serena y plácida ciudad de Pasto,
@@ -101,7 +120,7 @@
                     la primera visita de un Papa a Colombia y con mucha satisfacción y orgullo, la simiente de la mejor cooperativa
                     del suroccidente colombiano, llamada en ese entonces COOEDUCADOR.<br /><br />
 
-                    Efectivamente, COFINAL irrumpió en el panorama financiero del sur de Colombia hace 57 años, por iniciativa de un grupo de 58 docentes
+                    Efectivamente, COFINAL irrumpió en el panorama financiero del sur de Colombia hace 58 años, por iniciativa de un grupo de 58 docentes
                     impulsados por un plausible deseo de solidaridad y por la difícil  situación económica que padecían los educadores  cuyos salarios
                     se cancelaban con recursos de la incipiente Industria Licorera de Nariño, y a veces, en rama, pero sobre todo cumpliendo el postulado
                     cristiano de ayudarse los unos a los otros.
@@ -111,7 +130,7 @@
             </div>
             <div class="tab-pane" id="mision">
                 <div class="heading">
-                    <h4>Misión Corporativa</h4>
+                    <h2>Misión Corporativa</h2>
                 </div>
                 <p class="text-justify">
                     Brindar servicios cooperativos de ahorro y crédito, que generen bienestar a los asociados,sus familias y a la comunidad en general,contribuyendo al desarrollo del país.
@@ -120,7 +139,7 @@
             </div>
             <div class="tab-pane" id="vision">
                 <div class="heading">
-                    <h4>Visión Corporativa  </h4>
+                    <h2>Visión Corporativa  </h2>
                 </div>
                 <p class="text-justify">
                     En 2024 COFINAL se consolidará como la cooperativa líder en la prestación de servicios financieros y sociales del suroccidente colombiano, ampliando su cobertura a través de la innovación y el fortalecimiento organizacional.
@@ -133,7 +152,7 @@
 </section>
 
 <!-- imagen fondo2-->
-<div class="parallaxbox" id="pb1" style="background-image: url('/img/fondos/Nuestra Coop.jpg');"> </div>
+@*<div class="parallaxbox" id="pb1" style="background-image: url('/img/fondos/Nuestra Coop.jpg');"> </div>*@
 <!--seccion direccion-->
 <section class="background-white no-mb">
     <div class="container">
@@ -180,47 +199,50 @@
         </div>
     </div>
 </section>
+<div class="container-fluid" style="margin-bottom: -6px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,32L120,74.7C240,117,480,203,720,202.7C960,203,1200,117,1320,74.7L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+</div>
 
-<style>
-    .maps iframe {
-        pointer-events: none;
-    }
-</style>
+    <style>
+        .maps iframe {
+            pointer-events: none;
+        }
+    </style>
 
-<!--<div class='embed-container  maps'>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9160578226433!2d-77.28225128580804!3d1.2185285623241011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed487375d6129%3A0x75d762a9f2c9e3da!2sCOFINAL!5e0!3m2!1ses!2sit!4v1454678597238" height="350" frameborder="0" style="border: 0; width: 100%;" allowfullscreen></iframe>
-</div>-->
-<!-- scrip para parallax-->
-<script type="text/javascript">
-    function parallax() {
-        setpos("#pb0");
-        setpos("#pb1");
+    <!--<div class='embed-container  maps'>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9160578226433!2d-77.28225128580804!3d1.2185285623241011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed487375d6129%3A0x75d762a9f2c9e3da!2sCOFINAL!5e0!3m2!1ses!2sit!4v1454678597238" height="350" frameborder="0" style="border: 0; width: 100%;" allowfullscreen></iframe>
+    </div>-->
+    <!-- scrip para parallax-->
+    <script type="text/javascript">
+        function parallax() {
+            setpos("#pb0");
+            setpos("#pb1");
 
-    }
+        }
 
 
 
-    function setpos(element, factor) {
-        factor = factor || 2;
+        function setpos(element, factor) {
+            factor = factor || 2;
 
-        var offset = $(element).offset();
-        var w = $(window);
+            var offset = $(element).offset();
+            var w = $(window);
 
-        var posx = (offset.left - w.scrollLeft()) / factor;
-        var posy = (offset.top - w.scrollTop()) / factor;
+            var posx = (offset.left - w.scrollLeft()) / factor;
+            var posy = (offset.top - w.scrollTop()) / factor;
 
-        $(element).css('background-position', '100% ' + posy + 'px');
+            $(element).css('background-position', '100% ' + posy + 'px');
 
-        // use this to have parralax scrolling vertical and horizontal
-        //$(element).css('background-position', posx+'px '+posy+'px');
-    }
+            // use this to have parralax scrolling vertical and horizontal
+            //$(element).css('background-position', posx+'px '+posy+'px');
+        }
 
-    $(document).ready(function () {
-        parallax();
-    }).scroll(function () {
-        parallax();
-    });
-</script>
+        $(document).ready(function () {
+            parallax();
+        }).scroll(function () {
+            parallax();
+        });
+    </script>
 
 
 

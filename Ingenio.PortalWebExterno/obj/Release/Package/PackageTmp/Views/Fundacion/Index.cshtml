@@ -1,0 +1,412 @@
+﻿@model IEnumerable<Ingenio.BO.Ingenio.Estados>
+@using System.Text.RegularExpressions;
+@{
+    Layout = null;
+    var Sliders = ViewBag.NotSliderFudancion;
+}
+
+@*FUNDACION*@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fundacion Cofinal ®</title>
+    <meta name="keywords" content="">
+    <!-- estilo para imagen con parallax-->
+    <link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800" rel="stylesheet" type="text/css">
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/plantillafundacion")
+    @Styles.Render("~/Content/plantillaHome")
+
+    <!-- Responsivity for older IE -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Favicon and apple touch icons-->
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+    <!-- owl carousel css -->
+    <!-- estilo para imagen con parallax-->
+    <link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
+    <!--estilos vista-->
+    <link rel="stylesheet" type="text/css" href="~/Content/estiloss.css">
+    <style>
+        .sliderC {
+            height: 100%;
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+            .sliderC > .item > a > img, .carousel-inner > .item > img {
+                width: 1400px;
+            }
+
+        .titulo {
+            color: #F1A428;
+            text-align: center;
+            font-family: roboto;
+            font-size: 35px;
+        }
+
+        .texto {
+            background-color: rgba(219, 219, 219, 0.58);
+            border-radius: 90px 40px;
+            margin-bottom: 0px;
+        }
+
+        .descrip {
+            font-family: roboto;
+            color: #111;
+            font-size: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body class="">
+
+
+    <div id="all">
+
+        <!-- *** NAVBAR ***
+        _________________________________________________________ -->
+
+        @Html.Partial("NavbarFundacion")
+        <!--slider de fundacion-->
+
+        <section style="margin-bottom: 0px">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    @{int cont = 0;}
+                    @foreach (var item in Sliders)
+                    {
+                        <li data-target="#myCarousel" data-slide-to="@cont" class="@Html.Raw(item.Id == 1 ? "active" : "")"></li>
+                        cont++;
+                    }
+                </ol>
+                <div class="carousel-inner sliderC" role="listbox">
+                    @foreach (var item in Sliders)
+                    {
+                        string col = "";
+                        if (item.Posicion == 1) //alinear a la izquierda
+                        {
+                            col = "col-md-8";
+                        }
+                        else if (item.Posicion == 2)//alinear a la derecha
+                        {
+                            col = "col-md-8 col-md-offset-4";
+                        }
+                        else
+                        {//alinear al centro
+                            col = "col-md-12";
+                        }
+                        <div class="item @Html.Raw(item.Id == 7 ? "active" : "") imagen">
+                            <a href="@item.Url"><img class="first-slide" src="@item.Imagen" alt="First slide" style="align-items:center"></a>
+                            <div class="container">
+                                @if (item.Titulo != null && item.Titulo != "" && item.Descripcion != null && item.Descripcion != "")
+                                {
+                                    <div class="carousel-caption" style="right: 15%; left: 15%;">
+                                        <div class="@col texto">
+                                            <h1 class="titulo"> @item.Titulo</h1>
+                                            <p class="descrip">@item.Descripcion</p>
+                                            <p><a class="btn btn-lg btn-primary boton" href="@item.Url" role="button" style="background-color:#F3A535; border-color:#F3A535;">Leer más.</a></p>
+                                        </div>
+
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                </div>
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="color:#F3A535;"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="color:#F3A535;"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+        <!-- div titulo-->
+        <div id="titulo">
+            <div id="get-it">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>Fundación</h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--contenido de fundacion-->
+
+        <div class="container">
+             <div class="row">
+
+                    <section class="bar background-white no-mb" style="background-image:url(/img/texture-bw.png); -webkit-box-shadow: 1px 9px 100px -12px rgba(17,18,18,1); -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7" style="background-color:white">
+                                    <p class="text-justify" style="font-size:20px">
+                                        la <strong> fundación COFINAL</strong> como entidad sin ánimo de lucro y comprometida con los principios y valores
+                                        de la economía solidaria, continúa desarrollando proyectos en beneficios de sus asociados y de la comunidad en general.
+                                        En cumplimiento de sus objetivos, su Misión y Visión.
+                                        Es satisfactorio informar a toda la familia Cofinal y la comunidad educativa en general que nuestra entidad ha desarrollado innumerables
+                                        capacitaciones en curso básico de economía solidaria, asesorias, y consultorías para la conformación. Seguimiento e implementación de políticas, estrategias y temáticas en adminsitración para organizaciones tales como:
+                                    </p>
+                                    <ul class="text-justify" style="font-size:20px">
+                                        <li>
+                                            Cooperativa multiactiva de trabajadores jubilados y pensionados de cedenar-COOPCENTRAL
+                                        </li>
+                                        <li>El fondo de empleados PLATINO</li>
+                                        <li>Asociación "PROYECTO FUTURO" del municipio de Sandona.</li>
+                                        <li>COOPUMNAR</li>
+                                    </ul>
+                              
+
+                                </div>
+
+                                <div class="col-md-4 center-block" style="margin-left: 30px;">
+
+                                   
+                                    <img id="imaFun" src="~/img/fundacion12.JPG" alt="" class="img-responsive" style="">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                   
+                 <!--<div class="parallaxbox" id="pb0" style="background-image: url(/img/fondos/fundacion.JPG);"> </div>-->
+                    
+                    <section class="background-white no-mb" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+
+                        <!-- div Ultimas noticias-->
+                        <div id="titulo">
+                            <div id="get-it">
+                                <div class="container">
+                                    <div class="col-md-8 col-sm-12">
+                                        <h2>Últimas Noticias y eventos</h2>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- noticias-->
+                        <div class="container" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+                            <div class="row" style="-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+                                <div class="col-md-9" style="margin-bottom:50px; margin-top:-0px;-webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1); box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);">
+                                    <br />
+                                    <p class="lead text-center">Mantenerse informado y actualizado sobre todas las noticias relacionadas con la Cooperativa.</p>
+                                    <ul class="owl-carousel testimonials same-height-row">
+                                        @foreach (var item in Model)
+                                        {
+                                            string htmldecode = System.Web.HttpUtility.HtmlDecode(item.Html);
+                                            var htm = Regex.Replace(htmldecode, "<.*?>", " ");
+                                            htm = Regex.Replace(htm, "&nbsp;", " ");
+                                            htm = Regex.Replace(htm, "&aacute;", "á");
+                                            htm = Regex.Replace(htm, "&eacute;", "é");
+                                            htm = Regex.Replace(htm, "&iacute;", "í");
+                                            htm = Regex.Replace(htm, "&oacute;", "ó");
+                                            htm = Regex.Replace(htm, "&uacute;", "ú");
+                                            htm = Regex.Replace(htm, "&ntilde;", "ñ");
+                                            htm = Regex.Replace(htm, "&iquest;", "¿");
+                                            //var htmls = htmldecode.IndexOf("<p");
+                                            if (htm.Length < 100)
+                                            {
+                                                htmldecode = htm.Substring(0, htm.Length);
+                                            }
+                                            else
+                                            {
+                                                htmldecode = htm.Substring(0, 100);
+                                            }
+                                            <li class="item" style="padding-bottom: 0">
+                                                <div class="team-member">
+                                                    <div class="image">
+                                                        <a href="@Url.Action("NoticiasFundacion", "home",new { id = item.Url })">
+                                                            <img src="@item.Imagen" alt="" class="img-responsive img-circle" style="width: 202px; height: 202px;">
+                                                        </a>
+                                                    </div>
+                                                    <div class="content" style="height:151px">
+                                                        <h4>@item.Titulo</h4>
+                                                        <p style="height: 80px;" class="">@htmldecode ... </p>
+                                                        <p class="read-more">
+                                                            <a href="@Url.Action("NoticiasFundacion", "fundacion",new { id = item.Url })" class="btn btn-template-main">Url continuar</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="heading text-center" style="margin-bottom:10px;padding-top:10px;">
+                                        <h3>Programación</h3>
+                                    </div>
+                                    <div id="datepicker" style="width: 13em;"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--<div class="parallaxbox" id="pb1" style="background-image: url(/img/fondos/fundacion.JPG);"> </div>
+
+                    <!-------seccion de  contactos-->
+                    <section class="background-white no-mb">
+                        <div class="container">
+                            <div class="row" style="padding-top: 10px;">
+
+                                <div class="col-md-4" data-animate="fadeInUp">
+                                    <div class="box-simple">
+                                        <div class="icon">
+                                            <i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <h3>DIRECCION</h3>
+                                        <p>
+                                            Cra. 29 No. 18-41
+                                            San Juan de Pasto
+                                            Nariño Colombia - Suramerica
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4" data-animate="fadeInUp">
+                                    <div class="box-simple">
+                                        <div class="icon">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                        <h3>Centro de llamadas</h3>
+                                        <p>
+                                            Tel: +(011572) 7336300
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4" data-animate="fadeInUp">
+                                    <div class="box-simple">
+                                        <div class="icon">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <h3>CORREO ELECTRONICO</h3>
+                                        <p>
+                                            funcofinal@yahoo.es
+                                        </p>
+                                        <p class="text-muted"></p>
+                                        <strong><a href="mailto:"> </a></strong>
+                                    </div>
+                                    <!-- /.box-simple -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <style>
+                          .maps iframe {
+                            pointer-events: none;
+                        }
+
+                        #get-it {
+                            background: -webkit-linear-gradient(left, #f2a326 0%, rgba(242, 163, 38, 0.81) 50%, rgba(242, 163, 38, 0.55) 69%, rgba(242, 163, 38, 0.51) 100%);
+                            text-align: left;
+                        }
+
+                        #titulo {
+                            background-image: url(/img/texturaAmarilla2.jpg);
+                            background-size: 30%;
+                        }
+                    </style>
+                    @*<div class='embed-container maps'>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9160578226433!2d-77.28225128580804!3d1.2185285623241011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed487375d6129%3A0x75d762a9f2c9e3da!2sCOFINAL!5e0!3m2!1ses!2sit!4v1454678597238" height="350" frameborder="0" style="border:0;  width:100% ;" allowfullscreen></iframe>
+                        </div>*@
+                </div>
+
+                @Html.Partial("Footer")
+
+                @Scripts.Render("~/bundles/jquery")
+                @Scripts.Render("~/bundles/bootstrap")
+                @Scripts.Render("~/bundles/plantilla")
+                @Scripts.Render("~/bundles/plantillaCarousel")
+                <script>
+                    $(document).ready(function () {
+                        $('.maps').click(function () {
+                            $('.maps iframe').css("pointer-events", "auto");
+                        });
+
+                        $(".maps").mouseleave(function () {
+                            $('.maps iframe').css("pointer-events", "none");
+                        });
+                    });
+
+                    $(function () {
+                        $("#datepicker").datepicker();
+                    });
+
+                </script>
+                <!-- scrip para parallax-->
+                <script type="text/javascript">
+                    function parallax() {
+                        setpos("#pb0");
+                        setpos("#pb1");
+
+                    }
+
+
+
+                    function setpos(element, factor) {
+                        factor = factor || 2;
+
+                        var offset = $(element).offset();
+                        var w = $(window);
+
+                        var posx = (offset.left - w.scrollLeft()) / factor;
+                        var posy = (offset.top - w.scrollTop()) / factor;
+
+                        $(element).css('background-position', '100% ' + posy + 'px');
+
+                        // use this to have parralax scrolling vertical and horizontal
+                        //$(element).css('background-position', posx+'px '+posy+'px');
+                    }
+
+                    $(document).ready(function () {
+                        parallax();
+                    }).scroll(function () {
+                        parallax();
+                    });
+                </script>
+
+                <!--estilo de imagen-->
+                <style>
+                    #imaFun {
+                        -webkit-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.83);
+                        -moz-box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.75);
+                        box-shadow: 2px 7px 30px 7px rgba(0,0,0,0.75);
+                        height: 400px;
+                        width: 500px;
+                        top: 160px;
+                        left: 90px;
+                    }
+                </style>
+</body>
+
+</html>

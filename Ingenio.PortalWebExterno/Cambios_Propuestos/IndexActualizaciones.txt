@@ -1,0 +1,12 @@
+Cambios a realizar - Index
+1. El logo tipo 
+2. Colocar Banner de Animacon
+3. Texto de Bienvenida con un boton.
+4. Cambiar el main de la pagina
+	Quitar -> Sobre nosotros
+	Priorizar nuestros Servios
+	Actualizar nuestros Eventos y Noticas
+	Cofinal es
+	Nuestra App
+	Formulario de Informacion
+5. Pie de pagina Actualizar

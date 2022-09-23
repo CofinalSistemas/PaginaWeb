@@ -41,240 +41,325 @@
     .table {
         border-collapse: inherit;
     }
+
+    #fechaInicio {
+        margin: 20px 0px 0px 10px;
+    }
+
+    #fechaFinal {
+        margin: 20px 0px 0px 12px;
+    }
+
+    #error {
+        color: red;
+        font-size: 16px;
+    }
+
+    #nombre {
+        color: red;
+    }
+
+    #imprimir > td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
 </style>
 
 <section id="contenido">
     <div class="container">
-               
-        
-          <div class="container well col-md-12">
-                @using (Html.BeginForm("Calcular", "AhExtractos"))
-                {
-                    <div class="container">
-                        <h4 style="text-align: center">COOPERATIVA DE AHORRO Y CREDITO NACIONAL</h4>
-                    </div>
-                        <div class="container">
-                            <h4 style="text-align: center">EXTRACTO DE APORTES</h4>
-                        </div>
-                        <table id="tabla1" class="table" border="0" cellspacing="0" style="width:100%;font-size:smaller; background-color: #F2F2F2; border: 0px solid #e3e3e3;">
-
-                            <tbody>
-
-                                <tr>
-                                    <td><img src="~/img/logo-small.png" /></td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <strong>Nombre:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.nits.nombreintegrado : ViewBag.nitaso.nombreintegrado)
-                                        <strong>Cedula:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado : ViewBag.nitaso.nit)
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>Direccion:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.nits.direccion : ViewBag.nitaso.direccion)
-                                        <strong>Agencia:</strong> @(ViewBag.agencia ?? String.Empty)
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td><strong>Ciudad:</strong> @(ViewBag.nombreciudad ?? String.Empty) - @(ViewBag.nombredepartamento ?? String.Empty)</td>
-
-                                </tr>
-                                <tr>
-                                    <td> @(ViewBag.nombrelinea ?? String.Empty) </td>
-
-                                </tr>
-
-
-                            </tbody>
-                        </table>
-                    <div class="row">
-                        
-
-                        <div class="col-md-6 form-group">
-                            <label class="col-md-5 control-label" for="txtcedula" style="color: black;">Nro. Cuenta:</label>
-                            <div class="col-md-7 input-group" id="divcedula">
-                                                                       
-                                 <select class="form-control" id="AHALAVISTA" name="AHALAVISTA" onchange="GetSelectedTextValue(this)" placeholder="" type="text" required>
-                                     <option value="">Seleccione...</option>
-                                 </select>    
-                                   
-                            </div><!-- /input-group -->
-                        </div><!-- /form-group -->
-                        <div class="col-md-6 form-group">
-                            <label class="col-md-5 control-label" for="txtmes" style="color: black;"></label>
-                            <div class="col-md-7 input-group" id="divMes">
-                                @*<button class="btn btn-success" id="Calcular" name="Calcular">
-                                    <span class="glyphicon glyphicon-check"></span> Consultar
-                                </button>*@
-                            </div><!-- /input-group -->
-                        </div><!-- /form-group -->
-
-
-                    </div><!-- /row -->
-                }
-            </div>
-      
-            
-                <div id="imprimir">
-                
-                    <div class="container">
-                        
-                    </div>
-                    <div id="encabezado" style="display:none">
-                        <div class="container">
-                            <h4 style="text-align: center">EXTRACTO DE APORTE</h4>
-                        </div>
-                        <table id="tabla1" class="table" border="0" cellspacing="0" style="width:100%;font-size:smaller; background-color: #F2F2F2; border: 0px solid #e3e3e3;">
-
-                            <tbody>
-
-                                <tr>
-                                    <td><img src="~/img/logo-small.png" /></td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <strong>Nombre:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.nits.nombreintegrado : ViewBag.nitaso.nombreintegrado )
-                                        <strong>Cedula:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado : ViewBag.nitaso.nit )
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>Direccion:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.nits.direccion : ViewBag.nitaso.direccion)
-                                        <strong>Agencia:</strong> @(ViewBag.agencia ?? String.Empty)
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td><strong>Ciudad:</strong> @(ViewBag.nombreciudad ?? String.Empty) - @(ViewBag.nombredepartamento ?? String.Empty)</td>
-
-                                </tr>
-                                <tr>
-                                    <td><strong>Linea:</strong>@(ViewBag.Aho != null ? ViewBag.Aho.codlinea +" "+ ViewBag.nombrelinea :"") </td>
-
-                                </tr>
-                                <tr>
-                                    <td><strong>Número Cuenta:</strong><label id="lbl_nro"></label>   </td>
-
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                            <div class="row">
-                                <div class="col-lg-4">
-                                </div>
-                                <div class="col-lg-4">
-                                    <h4 style="font-size:small; text-align: center">Detalle</h4>
-                                </div>
-                                <div class="col-lg-4">
-                                </div>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table table-striped" id="tabla2" border="0" cellspacing="0" style="width:100%;font-size: 10px; background-color: #F2F2F2;border: 0px solid #e3e3e3;">
-                                    <thead>
-                                        <tr style="background-color: #5CB85C;  color: black; font-size: 11px;">
-
-                                            <th width="80px">FECHA</th>
-                                            <th align="center">CLASE DE MOVIMIENTO</th>
-                                            <th>CONSIGNACION</th>
-                                            <th>RETIRO</th>
-                                            <th>SALDO</th>
-
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                       
-                                    </tbody>
-
-                                </table>
-                            </div>
-                            <br />
-
-                                    <div class="table-responsive" style="width:100%">
-                                        <table class="table table-striped" id="tabla3" border="0" cellspacing="0" style="width:100%;background-color: #F9F9F9;">
-                                            <thead></thead>
-                                            <tbody>
-
-                                                <tr style="font-size:small;">
-                                                    <td colspan="5" align="center">Resumen movimientos</td>
-                                                </tr>
-                                                <tr style="font-size:small;">
-
-                                                    <td id="td_1">
-                                                      
-                                                    </td>
-
-                                                    <td id="td_2">
-                                                       
-                                                    </td>
-
-                                                    <td id="td_3">
-                                                       
-                                                    </td>
-                                                    <td id="td_4" colspan="2">
-                                                      
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-
-                                        </table>
-                                    </div>
-                
+        <div class="container well col-md-12">
+            @using (Html.BeginForm("Calcular", "AhExtractos"))
+            {
+                <div class="container">
+                    <h4 style="text-align: center">COOPERATIVA DE AHORRO Y CREDITO NACIONAL</h4>
                 </div>
+                <div class="container">
+                    <h4 style="text-align: center">EXTRACTO DE APORTES</h4>
+                </div>
+                <table id="tabla1" class="table" border="0" cellspacing="0" style="width:100%;font-size:smaller; background-color: #F2F2F2; border: 0px solid #e3e3e3;">
 
-                <button class="btn btn-success" onclick="imprime('imprimir')"><span class="glyphicon glyphicon-download"></span>Imprimir</button>
-                                        
+                    <tbody>
+
+                        <tr>
+                            <td><img src="~/img/logo-small.png" /></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>Nombre:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.nits.nombreintegrado : ViewBag.nitaso.nombreintegrado)
+                                <strong>Cedula:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado : ViewBag.nitaso.nit)
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Direccion:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.nits.direccion : ViewBag.nitaso.direccion)
+                                <strong>Agencia:</strong> @(ViewBag.agencia ?? String.Empty)
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><strong>Ciudad:</strong> @(ViewBag.nombreciudad ?? String.Empty) - @(ViewBag.nombredepartamento ?? String.Empty)</td>
+
+                        </tr>
+                        <tr>
+                            <td> @(ViewBag.nombrelinea ?? String.Empty) </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="txtcedula" style="color: black;">Nro. Cuenta:</label>
+                        <div class="col-md-7 input-group" id="divcedula">
+
+                            <select class="form-control" id="AHALAVISTA" name="AHALAVISTA" onchange="GetSelectedTextValue(this)" placeholder="" type="text" required>
+                                <option value="">Seleccione...</option>
+                            </select>
+
+                            <label for="fechaInicio"><strong>Fecha de Inicio:</strong></label>
+                            <input id="fechaInicio" type="date" disabled />
+                            <br />
+                            <label for="fechaFinal"><strong>Fecha de Final:</strong></label>
+                            <input id="fechaFinal" type="date" disabled value="" />
+                            <br />
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+                    <div class="col-md-6 form-group">
+                        <label class="col-md-5 control-label" for="txtmes" style="color: black;"></label>
+                        <div class="col-md-7">
+                            @*<button class="btn btn-success" id="consultar" onclick="movimientos()">
+                                <span class="glyphicon glyphicon-check"></span> Consultar
+                            </button>*@
+                        </div><!-- /input-group -->
+                    </div><!-- /form-group -->
+                </div><!-- /row -->
+            }
         </div>
-    </section>
-        <script>
-            function imprime(imprimir) {
+        <button id="consultar" class="btn btn-success" clasid="calcularFecha" onclick="movimientos()" disabled>
+            <span class="glyphicon glyphicon-check"></span> Consultar
+        </button>
+        <span id="error"></span>
 
-                var el = document.getElementById('encabezado'); //se define la variable "el" igual a nuestro div
-                el.style.display = (el.style.display == 'none') ? 'block' : 'none';
+        <div id="imprimir">
+            <div class="container">
+            </div>
+            <div id="encabezado" style="display:none">
+                <style>
+                    #tabla2 > tbody > tr > td {
+                        line-height: 1.7;
+                        border: 0.5px solid black;
+                        text-align: center;
+                    }
 
-                var ficha = document.getElementById(imprimir);
-                var ventimp = window.open(' ', 'popimpr');
-                ventimp.document.write(ficha.innerHTML);
-                ventimp.document.close();
-                ventimp.print();
-                ventimp.close();
+                    #tabla1 {
+                        line-height: 1.7;
+                        border: 0.5px solid black;
+                        /*text-align: center;*/
+                    }
 
-                var el = document.getElementById('encabezado'); //se define la variable "el" igual a nuestro div
-                el.style.display = (el.style.display == 'none') ? 'block' : 'none';
+                    #imgDocu {
+                        position: absolute;
+                        top: 0px;
+                        left: 70%;
+                    }
 
-            }
-        </script>
+                    .saludo {
+                        margin-top: 50px;
+                        line-height: 1.2;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+
+                    .logos {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin: 0 0 10px 0;
+                    }
+
+                        .logos > img {
+                            width: 300px;
+                        }
+
+                    .pieDePagina {
+                        background-color: red;
+                    }
+                    /*                #tabla3 > tbody > tr > td {
+                        line-height: 1.7;
+                        border: 0.5px solid black;
+                        text-align: center;
+                    }*/
+                </style>
+
+
+                <div class="logos">
+                    <img src="~/img/logo-small.png" />
+                    <img src="~/img/vigilado2.png" />
+                </div>
+                <div class="container">
+                    <h4 style="text-align: center">EXTRACTO DE APORTE</h4>
+                </div>
+                @*<img id="imgDocu" src="~/img/logo-small.png" />*@
+                <div class="saludo">
+                    <p>
+                        Estimado Cliente <br />@(ViewBag.Aso != null ? ViewBag.Aso.nits.nombreintegrado : ViewBag.nitaso.nombreintegrado )
+                        <br />C.C @(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado : ViewBag.nitaso.nit )
+                        <br />@(ViewBag.Aso != null ? ViewBag.Aso.nits.direccion : ViewBag.nitaso.direccion)
+                        <br /><strong>Agencia:</strong> @(ViewBag.agencia ?? String.Empty)
+                        <br />
+                        <br />
+                        @(ViewBag.nombreciudad ?? String.Empty)- @(ViewBag.nombredepartamento ?? String.Empty)
+                        <br /> <strong>Número Cuenta:</strong><br />No. <label id="lbl_nro"></label>
+                    </p>
+                    <p>Periodo:<span id="periodoFecha"></span><span id="periodoFechaF"></span></p>
+                </div>
+                <div class="table-responsive" style="width:100%">
+                    <table class="table table-striped" id="tabla3" border="0" cellspacing="0" style="width: 100%; background-color: #F9F9F9; font-size:13px;">
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="5" align="center"><strong>Resumen movimientos</strong></td>
+                            </tr>
+                            <tr>
+                                <td id="td_1">
+                                </td>
+                                <td id="td_2">
+                                </td>
+                                <td id="td_3">
+                                </td>
+                                <td id="td_4" colspan="2">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                @*<table id="tabla1" class="table" border="0" cellspacing="0" style="width:100%;font-size:smaller; background-color: #F2F2F2; border: 0px solid #e3e3e3;">
+
+                    <tbody>
+
+                        <tr>
+                            <td><img id="imgDocu" src="~/img/logo-small.png" /></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>Nombre:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.nits.nombreintegrado : ViewBag.nitaso.nombreintegrado )
+                                <strong>Cedula:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado : ViewBag.nitaso.nit )
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Direccion:</strong> @(ViewBag.Aso != null ? ViewBag.Aso.nits.direccion : ViewBag.nitaso.direccion)
+                                <strong>Agencia:</strong> @(ViewBag.agencia ?? String.Empty)
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><strong>Ciudad:</strong> @(ViewBag.nombreciudad ?? String.Empty) - @(ViewBag.nombredepartamento ?? String.Empty)</td>
+
+                        </tr>
+                        <tr>
+                            <td><strong>Linea:</strong>@(ViewBag.Aho != null ? ViewBag.Aho.codlinea +" "+ ViewBag.nombrelinea :"") </td>
+
+                        </tr>
+                        <tr>
+                            <td><strong>Número Cuenta:</strong><label id="lbl_nro"></label>   </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>*@
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-4">
+                    <h4 style="font-size:small; text-align: center">Detalle</h4>
+                </div>
+                <div class="col-lg-4">
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped" id="tabla2" cellspacing="0" style="width:100%;font-size: 13px; background-color: #F2F2F2;">
+                    <thead>
+                        <tr style="background-color: #5CB85C;  color: black; font-size: 12px;">
+                            <th width="90px">FECHA</th>
+                            <th text-align="center">CLASE DE MOVIMIENTO</th>
+                            <th width="100px">CONSIGNACION</th>
+                            <th width="90px">RETIRO</th>
+                            <th width="90px">SALDO</th>
+                        </tr>
+                    </thead>
+                    <tbody align="center">
+                    </tbody>
+                </table>
+                <div class="pieDePagina">hola</div>
+            </div>
+            <br />
+        </div>
+        <button class="btn btn-success" onclick="imprime('imprimir')"><span class="glyphicon glyphicon-download"></span>Imprimir</button>
+        <button onclick="generatePDF()">Download as PDF</button>
+        <div id="invoice">
+            <h1>Our Invoice</h1>
+        </div>
+    </div>
+</section>
+<script src="html2pdf.bundle.min.js"></script>
+
 @*<script>
-$(function () {
-        $("[data-habilitado = True]").attr({disabled: true})
-
-        $('#tabla2').DataTable({
-            "bFilter": false,
-            "info": false,
-            "aLengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
-            "iDisplayLength": 25,
-            language: {
-                "lengthMenu": "Mostrar _MENU_ registros por pagina",
-                "zeroRecords": "Nothing found - sorry",
-                "info": "Pagina _PAGE_ de _PAGES_",
-                "infoEmpty": "No records available",
-                "search": "Buscar",
-                "infoFiltered": "(filtered from _MAX_ total records)",
-                "paginate": {
-                    "next": "Siguiente",
-                    "previous": "Anterior"
-                }
-            }
-        });
-})
+    function generatePDF() {
+        // Choose the element that our invoice is rendered in.
+        const element = document.getElementById('invoice');
+        // Choose the element and save the PDF for our user.
+        html2pdf().from(element).save();
+    }
 </script>*@
+<script>
+    function imprime(imprimir) {
+        var el = document.getElementById('encabezado'); //se define la variable "el" igual a nuestro div
+        el.style.display = (el.style.display == 'none') ? 'block' : 'none';
+        console.log(el);
+        var ficha = document.getElementById(imprimir);
+        var ventimp = window.open(' ', 'popimpr');
+        ventimp.document.write(ficha.innerHTML);
+        ventana.document.write('hola');
+        ventimp.document.close();
+        ventimp.print();
+        //ventimp.close();
+
+        var el = document.getElementById('encabezado'); //se define la variable "el" igual a nuestro div
+        el.style.display = (el.style.display == 'none') ? 'block' : 'none';
+
+    }
+</script>
+@*<script>
+    $(function () {
+            $("[data-habilitado = True]").attr({disabled: true})
+
+            $('#tabla2').DataTable({
+                "bFilter": false,
+                "info": false,
+                "aLengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
+                "iDisplayLength": 25,
+                language: {
+                    "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                    "zeroRecords": "Nothing found - sorry",
+                    "info": "Pagina _PAGE_ de _PAGES_",
+                    "infoEmpty": "No records available",
+                    "search": "Buscar",
+                    "infoFiltered": "(filtered from _MAX_ total records)",
+                    "paginate": {
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    }
+                }
+            });
+    })
+    </script>*@
 <script>
     $(document).ready(function () {
 
@@ -302,7 +387,53 @@ $(function () {
         });
     }
 
+    function movimientos() {
+        var nrocuenta = document.getElementById('AHALAVISTA');
+        GetSelectedTextValue(nrocuenta);
+    }
+
+    const selectElement = document.getElementById('fechaInicio');
+
+    selectElement.addEventListener('input', () => {
+        document.getElementById('fechaFinal').disabled = false;
+
+        if (document.getElementById('fechaFinal').value == '') {
+            let mes;
+            let now = new Date();
+            console.log(now.getMonth()+1);
+            if (now.getMonth()+1 < 10) {
+                mes = `0${now.getMonth()+1}`
+            } else {
+                mes = now.getMonth()+1;
+            };
+            let fecha = `${now.getFullYear()}-${mes}-${now.getDate()}`;
+            console.log(fecha)
+            document.getElementById('fechaFinal').value = `${fecha}`;
+        }
+    });
+
     function GetSelectedTextValue(nrocuenta) {
+        //Ver por mes
+        var fechaI = document.getElementById('fechaInicio').value;
+        var fechaF = document.getElementById('fechaFinal').value;
+        /*document.getElementById('fechaInicio').disabled = false;*/
+        //botones(nrocuenta);
+
+        //var btn = document.getElementById('calcularFecha');
+        //btn.disabled = false;
+
+        //btn.onclick(GetSelectedTextValue(nrocuenta));
+        if (nrocuenta.value == '') {
+            document.getElementById('consultar').disabled = true;
+            document.getElementById('fechaInicio').disabled = true;
+            document.getElementById('fechaFinal').disabled = true;
+
+        } else {
+            document.getElementById('consultar').disabled = false;
+            document.getElementById('fechaInicio').disabled = false;
+            document.getElementById('fechaFinal').disabled = false;
+        }
+
         var linea = '@(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado: ViewBag.Nitaso.nit)';
         var vistas = $('#AHALAVISTA').val();
 
@@ -324,6 +455,9 @@ $(function () {
                 $.each(data, function (index, value) {
 
                     var fechatrabajo = value.fechatrabajo;
+
+                    //console.log(typeof (fechatrabajo), typeof (fechaP)); //Comparar valores
+
                     var detalle = value.detalle;
                     var valorefectivo = value.valorefectivo;
                     var retiro = value.retiro;
@@ -332,15 +466,33 @@ $(function () {
                     Consigna = value.nuevacons;
                     Reti = value.retiross;
                     Sald = value.nuevos;
-
-                    $("#tabla2 tbody").append("<tr><td align='left'> " + fechatrabajo + "</td>" +
-                                                                   "<td align='left'> " + detalle + "</td>" +
-                                                                   "<td align='right'>$ " + formatNumber.new(valorefectivo) + "</td>" +
-                                                                   "<td align='right'>$ " + formatNumber.new(retiro) + "</td>" +
-                                                                   "<td align='right'>$ " + formatNumber.new(saldoanterior) + "</td>");
-
+                    if (fechaI == '') {
+                        $("#tabla2 tbody").append("<tr><td align='left'> " + fechatrabajo + "</td>" +
+                            "<td align='left'> " + detalle + "</td>" +
+                            "<td align='right'>$ " + formatNumber.new(valorefectivo) + "</td>" +
+                            "<td align='right'>$ " + formatNumber.new(retiro) + "</td>" +
+                            "<td align='right'>$ " + formatNumber.new(saldoanterior) + "</td>");
+                        document.getElementById('error').innerHTML = '';
+                        document.getElementById('periodoFecha').innerHTML = 'Total';
+                    }
+                    else if (fechaI != '' && fechaF != '')
+                    {
+                        if (fechaI <= fechaF) {
+                            if (fechatrabajo >= fechaI && fechatrabajo <= fechaF) {
+                                $("#tabla2 tbody").append("<tr><td align='left'> " + fechatrabajo + "</td>" +
+                                    "<td align='left'> " + detalle + "</td>" +
+                                    "<td align='right'>$ " + formatNumber.new(valorefectivo) + "</td>" +
+                                    "<td align='right'>$ " + formatNumber.new(retiro) + "</td>" +
+                                    "<td align='right'>$ " + formatNumber.new(saldoanterior) + "</td>");
+                            }
+                            document.getElementById('error').innerHTML = '';
+                            document.getElementById('periodoFecha').innerHTML = `${fechaI}`;
+                            document.getElementById('periodoFechaF').innerHTML = `/ ${fechaF}`;
+                        } else {
+                            document.getElementById('error').innerHTML = 'Escriba una Fecha Valida';
+                        }
+                    }
                 })
-
                 document.getElementById('td_1').innerHTML ="Saldo Anterior: $"+ formatNumber.new(saldoant);
                 document.getElementById('td_2').innerHTML ="Consignaciones: $" + formatNumber.new(Consigna);
                 document.getElementById('td_3').innerHTML ="Retiros: $"+ formatNumber.new(Reti);

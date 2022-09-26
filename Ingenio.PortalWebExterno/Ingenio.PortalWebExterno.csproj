@@ -338,6 +338,12 @@
     <Content Include="Content\images\ui-icons_ffd27a_256x240.png" />
     <Content Include="Content\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Content\sass\prueba.css">
+      <DependentUpon>prueba.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\sass\prueba.min.css">
+      <DependentUpon>prueba.css</DependentUpon>
+    </Content>
     <Content Include="Content\skin.min.css" />
     <Content Include="Content\style.amarillo.css" />
     <Content Include="Content\style.blue.css" />
@@ -607,6 +613,11 @@
     <Content Include="Formatos\Doc Dian\7CERTIFICACION RL ANTECEDENTES DIRECTIVOS.pdf" />
     <Content Include="Formatos\Doc Dian\8EROGACIONES DIRECTIVOS 2018.pdf" />
     <Content Include="Formatos\Doc Dian\9ESTATUTOS COFINAL JULIO 2016.pdf" />
+    <Content Include="Content\sass\prueba.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="PortaWeb.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

@@ -40,6 +40,11 @@
     @Styles.Render("~/Content/plantilla")
     @Styles.Render("~/Content/plantillaHome")
 
+
+    
+    <link rel="stylesheet" href="~/Content/sass/prueba.min.css" />
+
+
     <!--Ventana emergente-->
     <!--   Estilos Modal -->
     <style>
@@ -178,7 +183,6 @@
             text-align: center;
         }
     </style>
-
     <!-- Favicon and apple touch icons-->
     <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
@@ -388,137 +392,454 @@
             </div>
         </section>
         <!-- END SECTION NEW SLIDER FOR HOMEPAGE -->
-        <!----- Contenido -->
-        <!-- FONDO DE video -->
-        <section id="Video_Slider">
-            @*<h2>Probando...</h2>*@
-            <video autoplay muted loop id="sliderVideo">
-                <source src="~/Videos/SPOTT-GENERAL-MAYO-2019-1.mp4" type="video/mp4" />
-                Your browser does not support HTML5 video.
-            </video>
-            <div class="content-video">
-                <h3>Bienvenido a Cofinal</h3>
-                <p>Somos una cooperativa de ahorro y crédito, orgullosamente <br /> Colombiana, cuyo motor son nuestros asociados ¡Aquí perteneces¡</p>
-                <a id="actualiza">Actualiza tu información personal aqui</a>
-            </div>
-        </section>
-        <!--Final fondo de Video -->
-        <!-- En que te podemos ayudar -->
-        <section>
-            <div class="contenedor">
-                <h3>¿En Que Te Podemos Ayudar?</h3>
-                <button>Quiero se socio</button>
-                <button>Credito</button>
-                <button>Ahorro</button>
-            </div>
-        </section>
-        <section id="seccionImagen">
-            <img src="~/img/Img_Web2/1.jpg" />
-            <p>Si es socio de nuestra cooperativa disfrute de múltiples beneficios</p>
-        </section>
-        <!-- -->
-        <section>
-            <div class="icons">
-                <div class="icentrado"><i class="fa-solid fa-user-tie"></i></div>
-                <div class="icentrado"><i aria-hidden="true" class="fas fa-user-lock"></i></div>
-                <div class="icentrado"><i aria-hidden="true" class="fas fa-user-plus"></i></div>
-            </div>
-        </section>
+        <div class="container-fluid" style="position: relative">
+
+            <!-- SECTION ICONS FLOAT -->
+            <section class="section-icons-float">
+                <div class="container-icons">
+                    <ul class="list-icons-float">
+                        <li class="item item-app" style="background-color:#77A53D">
+                            <a href="https://play.google.com/store/apps/details?id=com.visionamos.redcoopcentral.release&hl=es_CO&gl=US" target="_blank">
+                                <p>Descarga Nuestra APP Android</p>
+                                <i class="fa fa-android" aria-hidden="true"></i>
+                            </a>
+                        </li>
+
+                        <li class="item item-app" style="background-color: #17A2EC">
+                            <a href="https://apps.apple.com/co/app/visionamos-redcoopcentral/id1327527559" target="_blank">
+                                <p>Descarga Nuestra APP Apple</p>
+                                <i class="fa fa-apple"></i>
+                            </a>
+                        </li>
+
+                        @*<li class="item item-app" style="background-color: #1F4F90">
+                            <a href="https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=2616#" target="_blank">
+                                <p>Realiza tus Pagos por <strong>PSE</strong></p>
+                                <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                            </a>
+                        </li>*@
+
+                        <li class="item item-app" style="background-color: #E1852C">
+                            <a href="/FormatosAC/Index">
+                                <p>
+                                    Visualiza tu formato de afliación
+                                    <strong>Aquí</strong>
+                                </p>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </a>
+                        </li>
 
 
+                        <li class="item item-app" style="background-color: #314396">
+                            <a href="https://multiportal.redcoopcentral.com/multiportalvisio/Login/Index?ENTIDAD=00000117" target="_blank">
+                                <p>
+                                    Multiportal Transaccional
+                                    <br />
+                                    <strong>P. Natural</strong>
+                                </p>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </a>
+                        </li>
 
-        <section id="sobreNosotros" class="section-home-about-us py-cofinal">
-            <div class="container ">
-                <div class="row content-section">
-                    <div class="col-xs-12 col-md-6 text-center">
-                        <img src="/img/about_us_home.png" class="about-us-home" alt="About Us Image">
-                    </div>
-                    <div class="col-xs-12 col-md-6">
-                        <h2 class="title-section">Sobre nosotros</h2>
-                        <hr class="separator-title" />
-                        <p class="description-section">
-                            <strong>Cofinal</strong> es impulsor de desarrollo socioenconómico del suroccidente Colombiano a través de servicios cooperativos de ahorro y crédito; sirviendo con responsabilidad y confianza mutua, generamos bienestar a nuestros asociados.
-                            <br />
-                            <br />
-                            Somos una
-                            <strong>Cooperativa de Ahorro y Crédito</strong> con 58 años de existencia in-interrumpida en el sector de la Economía Solidaria con amplia cobertura en el sur occidente del país. vigilada por la Superintendencia de la Economía Solidaria -
-                            <strong>SUPERSOLIDARIA</strong> .
-                        </p>
-                        <a class="btn btn-default btn-cofinal-orange" href="/Home/QuienesSomos">Conoce más</a>
+                        <li class="item item-app" style="background-color: #80031D">
+                            <a href="https://portaljuridico.redcoopcentral.com:8445/portalJuridico" target="_blank">
+                                <p>
+                                    Multiportal Transaccional
+                                    <br />
+                                    <strong>P. Jurídica</strong>
+                                </p>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!----- Contenido -->
+            <!-- FONDO DE video -->
+            <p class="Prueba_sass">HOLA</p>
+            <section id="Video_Slider">
+                @*<h2>Probando...</h2>*@
+                <video autoplay muted loop id="sliderVideo">
+                    <source src="~/Videos/SPOTT-GENERAL-MAYO-2019-1.mp4" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="content-video">
+                    <h3>Bienvenido a Cofinal</h3>
+                    <p>Somos una cooperativa de ahorro y crédito, orgullosamente <br /> Colombiana, cuyo motor son nuestros asociados ¡Aquí perteneces¡</p>
+                    <a id="actualiza">Actualiza tu información personal aqui</a>
+                </div>
+            </section>
+            <!--Final fondo de Video -->
+            <!-- En que te podemos ayudar -->
+            <section>
+                <div class="contenedor">
+                    <h3>¿En Que Te Podemos Ayudar?</h3>
+                    <div class="botones">
+                        <button>Quiero se socio</button>
+                        <button>Credito</button>
+                        <button>Ahorro</button>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!--------- SECTION OUR SERVICES-------->
-        <!-- Seccion 2  -->
-
-        <section id="nuestrosServicios" class="section-our-services py-cofinal">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-md-3">
-                        <h2 class="title-section">Nuestos servicios</h2>
-                        <hr class="separator-title" />
-                        <p class="description-section">
-                            Brindamos servicios cooperativos de
-                            <strong>ahorro y crédito</strong>, que generen bienestar a los asociados,sus familias y a la comunidad en general,contribuyendo al desarrollo del país.
-                            <br />
-                            <br />
-                            Tenemos un
-                            <strong>producto para cada necesidad </strong>¿Ya conoces qué hace cada uno de ellos? Si aún no, te invitamos a que los conozcas y descubras cuál se
-                            <strong>adecúa mejor a tus necesidades.</strong>
-                        </p>
+            </section>
+            <section id="seccionImagen">
+                <div class="carrousel">
+                    <div class="conteCarrousel">
+                        <div class="itemCarrousel" id="itemCarrousel-1">
+                            <div class="itemCarrouselTarjeta">
+                                <img src="~/img/Img_Web2/1.jpg" alt="">
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-6">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#itemCarrousel-2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-2">
+                            <div class="itemCarrouselTarjeta">
+                                <img src="~/img/Img_Web2/2.jpg" alt="">
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-1">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#itemCarrousel-3">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-3">
+                            <div class="itemCarrouselTarjeta">
+                                <img src="~/img/Img_Web2/3.jpg" alt="">
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-2">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#itemCarrousel-4">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-4">
+                            <div class="itemCarrouselTarjeta">
+                                <img src="~/img/Img_Web2/4.jpg" alt="">
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-3">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#itemCarrousel-5">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-5">
+                            <div class="itemCarrouselTarjeta">
+                                <img src="~/img/Img_Web2/5.jpg" alt="">
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-4">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#itemCarrousel-6">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-6">
+                            <div class="itemCarrouselTarjeta">
+                                <img src="~/img/Img_Web2/6.jpg" alt="">
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-5">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#itemCarrousel-1">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-md-9">
-                        <div class="row">
-                            <!-- CARD SERVICE  AHORRO -->
-                            <div class="col-xs-12 col-sm-6 col-lg-4">
-                                <div class="card-our-services">
-                                    <a href="/Home/ahorros">
-                                        <img src="~/img/tarjeta_ahorro.png" class="image-card" alt="About Us Image">
-                                    </a>
-                                    <div class="body-card">
-                                        <h2 class="title-card">Ahorro</h2>
-                                        <p class="description-card">
-                                            <strong>COFINAL®</strong> te brinda un amplio portafolio de productos de ahorros, estimulándolo con
-                                            <strong>atractivas tasas de interés</strong>,
-                                            <strong>bajos costos</strong> financieros y un
-                                            <strong>amplio portafolio</strong> de servicios sociales.
-                                            <br />
-                                            <br />
-                                        </p>
-                                        <a href="/Home/ahorros" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
+                    <div class="conteCarrouselController">
+                        <a href="#itemCarrousel-1">•</a>
+                        <a href="#itemCarrousel-2">•</a>
+                        <a href="#itemCarrousel-3">•</a>
+                        <a href="#itemCarrousel-4">•</a>
+                        <a href="#itemCarrousel-5">•</a>
+                        <a href="#itemCarrousel-6">•</a>
+                    </div>
+                </div>
+            </section>
+            <section class="textoTitulo">
+                <p>Si es socio de nuestra cooperativa disfrute de múltiples beneficios</p>
+            </section>
+            <!-- -->
+            <section>
+                <div class="icons">
+                    <div class="tarjetas-Centradas">
+                        <div class="icentrado">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <p>Convenios y promociones</p>
+                    </div>
+                    <div class="tarjetas-Centradas">
+                        <div class="icentrado"><i aria-hidden="true" class="fas fa-user-lock"></i></div>
+                        <p>Protección al ahorro</p>
+                    </div>
+                    <div class="tarjetas-Centradas">
+                        <div class="icentrado"><i aria-hidden="true" class="fas fa-user-plus"></i></div>
+                        <p>Ayuda funeraria</p>
+                    </div>
+                </div>
+            </section>
+            <section class="titulos">
+                <h3>Cofinal Es</h3>
+            </section>
+            <section class="tarjetas-contenedor">
+                <div class="tarjetas-Centradas">
+                    <i aria-hidden="true" class="far fa-clock"></i>
+                    <h3>Ahorro</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                </div>
+                <div class="tarjetas-Centradas">
+                    <i aria-hidden="true" class="fas fa-check"></i>
+                    <h3>Crédito</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                </div>
+                <div class="tarjetas-Centradas">
+                    <i aria-hidden="true" class="fas fa-calendar-alt"></i>
+                    <h3>Simuladores</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+                    </p>
+                </div>
+                <div class="tarjetas-Centradas">
+                    <i aria-hidden="true" class="fas fa-calendar-alt"></i>
+                    <h3>Virtual</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                </div>
+            </section>
+            <section id="seccionImagen">
+                <img src="~/img/Img_Web2/1.jpg" />
+                <div class="carrousel">
+                    <div class="conteCarrousel">
+                        <div class="itemCarrousel" id="itemCarrousel-1">
+                            <div class="itemCarrouselTarjeta">
+                                <img src="~/img/Img_Web2/1.jpg" alt="">
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-6">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#itemCarrousel-2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-2">
+                            <div class="itemCarrouselTarjeta">
+                                <img src="~/img/Img_Web2/2.jpg" alt="">
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-1">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#itemCarrousel-3">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-3">
+                            <div class="itemCarrouselTarjeta">
+                                <img src="~/img/Img_Web2/3.jpg" alt="">
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-2">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#itemCarrousel-4">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-4">
+                            <div class="itemCarrouselTarjeta">
+                                <img src="~/img/Img_Web2/4.jpg" alt="">
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-3">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#itemCarrousel-5">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-5">
+                            <div class="itemCarrouselTarjeta">
+                                <img src="~/img/Img_Web2/5.jpg" alt="">
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-4">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#itemCarrousel-6">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-6">
+                            <div class="itemCarrouselTarjeta">
+                                <img src="~/img/Img_Web2/6.jpg" alt="">
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-5">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <a href="#itemCarrousel-1">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conteCarrouselController">
+                        <a href="#itemCarrousel-1">•</a>
+                        <a href="#itemCarrousel-2">•</a>
+                        <a href="#itemCarrousel-3">•</a>
+                        <a href="#itemCarrousel-4">•</a>
+                        <a href="#itemCarrousel-5">•</a>
+                        <a href="#itemCarrousel-6">•</a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <section class="titulos">
+                    <h3>Mejora tu Experiencia Con Nuestra App</h3>
+                </section>
+                <div id="formulario-2">
+                    <img src="~/img/Img_Web2/Fotografia_edificio.png" />
+                    <form>
+                        <h3 class="titulos">Formulario de Información</h3><br />
+                        @*<label for="fname">First name:</label><br>*@
+                        <input type="text" id="fname" name="fname" placeholder="Nombre"><br>
+                        @*<label for="lname">Last name:</label><br>*@
+                        <input type="text" id="lname" name="lname" placeholder="Correo"><br />
+                        <input type="text" id="lname" name="lname" placeholder="Numero de Telefono"><br />
+                        <label for="lname">Descripción:</label><br>
+                        <textarea class="entradas" name="message" rows="6" cols="47">
+
+                </textarea>
+                        <br />
+                        <input class="check-form" type="checkbox" id="tratamiento" name="tratamiento" value="">
+                        <label for="tratamiento"> Acepta política de tratamiento de información</label><br>
+                        <label>Acepto política tratamiento de datos </label><br>
+                        <input class="form-button" type="submit" value="Enviar información">
+                    </form>
+                </div>
+            </section>
+
+            <section id="sobreNosotros" class="section-home-about-us py-cofinal">
+                <div class="container ">
+                    <div class="row content-section">
+                        <div class="col-xs-12 col-md-6 text-center">
+                            <img src="/img/about_us_home.png" class="about-us-home" alt="About Us Image">
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <h2 class="title-section">Sobre nosotros</h2>
+                            <hr class="separator-title" />
+                            <p class="description-section">
+                                <strong>Cofinal</strong> es impulsor de desarrollo socioenconómico del suroccidente Colombiano a través de servicios cooperativos de ahorro y crédito; sirviendo con responsabilidad y confianza mutua, generamos bienestar a nuestros asociados.
+                                <br />
+                                <br />
+                                Somos una
+                                <strong>Cooperativa de Ahorro y Crédito</strong> con 58 años de existencia in-interrumpida en el sector de la Economía Solidaria con amplia cobertura en el sur occidente del país. vigilada por la Superintendencia de la Economía Solidaria -
+                                <strong>SUPERSOLIDARIA</strong> .
+                            </p>
+                            <a class="btn btn-default btn-cofinal-orange" href="/Home/QuienesSomos">Conoce más</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--------- SECTION OUR SERVICES-------->
+            <!-- Seccion 2  -->
+
+            <section id="nuestrosServicios" class="section-our-services py-cofinal">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-3">
+                            <h2 class="title-section">Nuestos servicios</h2>
+                            <hr class="separator-title" />
+                            <p class="description-section">
+                                Brindamos servicios cooperativos de
+                                <strong>ahorro y crédito</strong>, que generen bienestar a los asociados,sus familias y a la comunidad en general,contribuyendo al desarrollo del país.
+                                <br />
+                                <br />
+                                Tenemos un
+                                <strong>producto para cada necesidad </strong>¿Ya conoces qué hace cada uno de ellos? Si aún no, te invitamos a que los conozcas y descubras cuál se
+                                <strong>adecúa mejor a tus necesidades.</strong>
+                            </p>
+                        </div>
+                        <div class="col-xs-12 col-md-9">
+                            <div class="row">
+                                <!-- CARD SERVICE  AHORRO -->
+                                <div class="col-xs-12 col-sm-6 col-lg-4">
+                                    <div class="card-our-services">
+                                        <a href="/Home/ahorros">
+                                            <img src="~/img/tarjeta_ahorro.png" class="image-card" alt="About Us Image">
+                                        </a>
+                                        <div class="body-card">
+                                            <h2 class="title-card">Ahorro</h2>
+                                            <p class="description-card">
+                                                <strong>COFINAL®</strong> te brinda un amplio portafolio de productos de ahorros, estimulándolo con
+                                                <strong>atractivas tasas de interés</strong>,
+                                                <strong>bajos costos</strong> financieros y un
+                                                <strong>amplio portafolio</strong> de servicios sociales.
+                                                <br />
+                                                <br />
+                                            </p>
+                                            <a href="/Home/ahorros" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- END CARD SERVICE -->
-                            <!-- CARD SERVICE CREDITO -->
-                            <div class="col-xs-12 col-sm-6 col-lg-4">
-                                <div class="card-our-services">
-                                    <a href="/Home/Creditos">
-                                        <img src="~/img/tarjeta_credito.png" class="image-card" alt="About Us Image">
-                                    </a>
-                                    <div class="body-card">
-                                        <h2 class="title-card">Crédito</h2>
-                                        <p class="description-card">
-                                            <strong>COFINAL®</strong>  cuenta con una amplia gama de líneas de crédito, diseñadas para
-                                            <strong> asociados, personas naturales y jurídicas </strong>, con
-                                            <strong>plazos flexibles</strong>,
-                                            <strong>cómodas tasas </strong> de interés sin generación de costos adicionales.
-                                        </p>
-                                        <a href="/Home/Creditos" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
+                                <!-- END CARD SERVICE -->
+                                <!-- CARD SERVICE CREDITO -->
+                                <div class="col-xs-12 col-sm-6 col-lg-4">
+                                    <div class="card-our-services">
+                                        <a href="/Home/Creditos">
+                                            <img src="~/img/tarjeta_credito.png" class="image-card" alt="About Us Image">
+                                        </a>
+                                        <div class="body-card">
+                                            <h2 class="title-card">Crédito</h2>
+                                            <p class="description-card">
+                                                <strong>COFINAL®</strong>  cuenta con una amplia gama de líneas de crédito, diseñadas para
+                                                <strong> asociados, personas naturales y jurídicas </strong>, con
+                                                <strong>plazos flexibles</strong>,
+                                                <strong>cómodas tasas </strong> de interés sin generación de costos adicionales.
+                                            </p>
+                                            <a href="/Home/Creditos" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- END CARD SERVICE -->
-                            <!-- CARD SERVICE SEGUROS-->
-                            <div class="col-xs-12 col-sm-6 col-lg-4">
-                                <div class="card-our-services">
-                                    <a href="/Home/Seguros">
-                                        <img src="~/img/tarjeta_seguros.png" class="image-card" alt="About Us Image">
-                                    </a>
-                                    <div class="body-card">
-                                        <h2 class="title-card">Seguros</h2>
-                                        <p class="description-card"
+                                <!-- END CARD SERVICE -->
+                                <!-- CARD SERVICE SEGUROS-->
+                                <div class="col-xs-12 col-sm-6 col-lg-4">
+                                    <div class="card-our-services">
+                                        <a href="/Home/Seguros">
+                                            <img src="~/img/tarjeta_seguros.png" class="image-card" alt="About Us Image">
+                                        </a>
+                                        <div class="body-card">
+                                            <h2 class="title-card">Seguros</h2>
+                                            <p class="description-card"
                                                     <strong>COFINAL®</strong> brinda
                                                     <strong>planes de aseguramiento</strong> con lo que aseguramos tu futuro y el de tu familia.
                                                     <strong>Seguro de ahorro y aportes</strong>,
@@ -527,227 +848,158 @@
                                                     <br />
                                                     <br />
                                                  </p>
-                                        <a href="/Home/Seguros" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
+                                            <a href="/Home/Seguros" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
+                                        </div>
                                     </div>
                                 </div>
+                                <!-- END CARD SERVICE -->
                             </div>
-                            <!-- END CARD SERVICE -->
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!--------- Fin de Seccion 2 -------->
-        <!--------- Sección Anuncio -------->
-        <section class="section-invertir py-cofinal">
-            <div class="container">
-                <div class="row row-invertir">
-                    <div class="col-xs-12 col-md-6 col-image">
-                        <img src="~/img/pelada_cofinal.png" class="image-invertir" />
-                    </div>
-                    <div class="col-xs-12 col-md-6 col-content">
-                        <h2 class="text-center title-invertir">¡El momento de invertir es ahora! </h2>
-                        <p class="description-section text-center">Apertura tu CDAT  con excelentes tasas de rentabilidad en Cofinal®. </p>
-                        <div class="container-list">
-                            <ul class="list-invertir">
-                                <p class="text-center"></p>
-                                <li class="item">
-                                    <p class="text-center">Desde</p>
-                                    <h4 class="text-action text-center">$200.000</h4>
+            <!--------- Fin de Seccion 2 -------->
+            <!--------- Sección Anuncio -------->
+            <section class="section-invertir py-cofinal" style="display:none;">
+                <div class="container">
+                    <div class="row row-invertir">
+                        <div class="col-xs-12 col-md-6 col-image">
+                            <img src="~/img/pelada_cofinal.png" class="image-invertir" />
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-content">
+                            <h2 class="text-center title-invertir">¡El momento de invertir es ahora! </h2>
+                            <p class="description-section text-center">Apertura tu CDAT  con excelentes tasas de rentabilidad en Cofinal®. </p>
+                            <div class="container-list">
+                                <ul class="list-invertir">
+                                    <p class="text-center"></p>
+                                    <li class="item">
+                                        <p class="text-center">Desde</p>
+                                        <h4 class="text-action text-center">$200.000</h4>
 
-                                </li>
-                                <li class="item">
-                                    <p class="text-center">Obten hasta el</p>
-                                    <h4 class="text-action text-center">9.5% E.A.</h4>
-                                    <p class="text-center">Plazo superior a 361 días.</p>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <li class="item">
+                                        <p class="text-center">Obten hasta el</p>
+                                        <h4 class="text-action text-center">9.5% E.A.</h4>
+                                        <p class="text-center">Plazo superior a 361 días.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="terms">*Aplican términos y condiciones</p>
                         </div>
-                        <p class="terms">*Aplican términos y condiciones</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!--------- Sección ASOCIARTE-------->
-        <section class="section-asociarte py-cofinal">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2 class="title-section text-center">¿Por qué asociarte?</h2>
-                        <p class="description-section text-center">
-                            Porqué sus beneficios van más allá de las atractivas tasas de interés con que cuentan sus productos de ahorro, más allá de la agilidad y oportunidad los trámites de las diferentes líneas de crédito. Porqué ofrece amplia cobertura en servicios sociales que benefician a todos sus asociados y a los integrantes de sus grupos familiares, a través de:
-                        </p>
-                    </div>
-                </div>
-                <div class="row row-cards-asociarte">
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="card">
-                            <img src="~/img/icon_card.png" class="icon-card" alt="About Us Image">
-                            <h2 class="title-card">Fondo de Solidaridad</h2>
-                            <p class="desc-card">Permite estar presente en situaciones de calamidad doméstica, en el nacimiento de los hijos de los asociados, en enfermedades especializadas o en el fallecimiento del asociado o de un miembro de su grupo familiar.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="card">
-                            <img src="~/img/icon_card.png" class="icon-card" alt="About Us Image">
-                            <h2 class="title-card">Fondo de Bienestar Integral</h2>
-                            <p class="desc-card">Permite fomentar la recreación, el deporte y la cultura entre los asociados.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="card">
-                            <img src="~/img/icon_card.png" class="icon-card" alt="About Us Image">
-                            <h2 class="title-card">Fondo de Educación</h2>
-                            <p class="desc-card">Permite contribuir al fortalecimiento de la educación formal en las regiones donde hace presencia COFINAL.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--------- FIN SECCIÓN ASOCIARTE-------->
-        <!-- SECCIÓN BOTONES DE CONTACTO -->
-        <section class="py-cofinal">
-            <div class="container">
-                <div class="row" style="padding-top:10px;">
-                    <div class="col-md-4" data-animate="fadeInUp">
-                        <div class="box-simple">
-                            <a href="https://goo.gl/maps/oBvN8UYHhERFkgH99" target="_blank" class="goto-contact">
-                                <div class="icon">
-                                    <i class="fa fa-map-marker"></i>
-                                </div>
-                            </a>
-                            <h3>DIRECCIÓN</h3>
-                            <p>
-                                Cra. 29 No. 18-41
-                                San Juan de Pasto
-                                Nariño Colombia - Suramerica
+            <!--------- Sección ASOCIARTE-------->
+            <section class="section-asociarte py-cofinal" style="display:none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="title-section text-center">¿Por qué asociarte?</h2>
+                            <p class="description-section text-center">
+                                Porqué sus beneficios van más allá de las atractivas tasas de interés con que cuentan sus productos de ahorro, más allá de la agilidad y oportunidad los trámites de las diferentes líneas de crédito. Porqué ofrece amplia cobertura en servicios sociales que benefician a todos sus asociados y a los integrantes de sus grupos familiares, a través de:
                             </p>
                         </div>
                     </div>
-
-                    <div class="col-md-4" data-animate="fadeInUp">
-                        <div class="box-simple">
-                            <a href="tel:6027336300" target="_blank" class="goto-contact">
-                                <div class="icon">
-                                    <i class="fa fa-phone"></i>
-                                </div>
-                            </a>
-                            <h3>Centro de llamadas</h3>
-                            <p>
-                                Tel: (2) 7336300
-                                Extensión: 253
-                            </p>
+                    <div class="row row-cards-asociarte">
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="card">
+                                <img src="~/img/icon_card.png" class="icon-card" alt="About Us Image">
+                                <h2 class="title-card">Fondo de Solidaridad</h2>
+                                <p class="desc-card">Permite estar presente en situaciones de calamidad doméstica, en el nacimiento de los hijos de los asociados, en enfermedades especializadas o en el fallecimiento del asociado o de un miembro de su grupo familiar.</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="col-md-4" data-animate="fadeInUp">
-                        <div class="box-simple">
-                            <a href="mailto:servicioalasociado@cofinal.com.co" target="_blank" class="goto-contact">
-                                <div class="icon">
-                                    <i class="fa fa-envelope"></i>
-                                </div>
-                            </a>
-
-                            <h3>CORREO ELECTRONICO</h3>
-                            <p class="text-muted"></p>
-                            <p>
-                                servicioalasociado@cofinal.com.co
-                            </p>
-
-                            <strong><a href="mailto:servicioalasociado@cofinal.com.co"> </a></strong>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="card">
+                                <img src="~/img/icon_card.png" class="icon-card" alt="About Us Image">
+                                <h2 class="title-card">Fondo de Bienestar Integral</h2>
+                                <p class="desc-card">Permite fomentar la recreación, el deporte y la cultura entre los asociados.</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="card">
+                                <img src="~/img/icon_card.png" class="icon-card" alt="About Us Image">
+                                <h2 class="title-card">Fondo de Educación</h2>
+                                <p class="desc-card">Permite contribuir al fortalecimiento de la educación formal en las regiones donde hace presencia COFINAL.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-
-        <!-- FIN SECCIÓN BOTONES DE CONTACTO -->
-        <!-- ULTIMAS NOTICIAS Y EVENTOS -->
-
-        <section class="py-cofinal section-last-news">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="title-section text-center">Últimas noticias y eventos</h2>
-                    </div>
-                </div>
-                <div class="row row-carrousel-news">
-
-                    <div class="col-12" id="col">
-
-                        <ul class="owl-carousel owl-carousel-testominals testimonials same-height-row">
-                            @foreach (var item in Model)
-                            {
-                                string htmldecode = System.Web.HttpUtility.HtmlDecode(item.Html);
-                                var htm = Regex.Replace(htmldecode, "<.*?>", " ");
-                                htm = Regex.Replace(htm, "&nbsp;", " ");
-                                htm = Regex.Replace(htm, "&aacute;", "á");
-                                htm = Regex.Replace(htm, "&eacute;", "é");
-                                htm = Regex.Replace(htm, "&iacute;", "í");
-                                htm = Regex.Replace(htm, "&oacute;", "ó");
-                                htm = Regex.Replace(htm, "&uacute;", "ú");
-                                htm = Regex.Replace(htm, "&ntilde;", "ñ");
-                                htm = Regex.Replace(htm, "&iquest;", "¿");
-                                //var htmls = htmldecode.IndexOf("<p");
-                                if (htm.Length < 100)
-                                {
-                                    htmldecode = htm.Substring(0, htm.Length);
-                                }
-                                else
-                                {
-                                    htmldecode = htm.Substring(0, 100);
-                                }
-                                <li class="item" style="padding-bottom: 0">
-                                    <div class="team-member">
-                                        <div class="image">
-                                            <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })">
-                                                <img src="@item.Imagen" alt="@item.Titulo">
-                                            </a>
-                                        </div>
-                                        <div class="content" style="height:150px">
-                                            <h4>@item.Titulo</h4>
-                                            <p style="height: 70px;" class="">@htmldecode ... </p>
-                                            <p class="read-more">
-                                                <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })">Leer más.</a>
-                                            </p>
-                                        </div>
+            </section>
+            <!--------- FIN SECCIÓN ASOCIARTE-------->
+            <!-- SECCIÓN BOTONES DE CONTACTO -->
+            <section class="py-cofinal">
+                <div class="container">
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4" data-animate="fadeInUp">
+                            <div class="box-simple">
+                                <a href="https://goo.gl/maps/oBvN8UYHhERFkgH99" target="_blank" class="goto-contact">
+                                    <div class="icon">
+                                        <i class="fa fa-map-marker"></i>
                                     </div>
-                                </li>
-                            }
-                        </ul>
+                                </a>
+                                <h3>DIRECCIÓN</h3>
+                                <p>
+                                    Cra. 29 No. 18-41
+                                    San Juan de Pasto
+                                    Nariño Colombia - Suramerica
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4" data-animate="fadeInUp">
+                            <div class="box-simple">
+                                <a href="tel:6027336300" target="_blank" class="goto-contact">
+                                    <div class="icon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                </a>
+                                <h3>Centro de llamadas</h3>
+                                <p>
+                                    Tel: (2) 7336300
+                                    Extensión: 253
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4" data-animate="fadeInUp">
+                            <div class="box-simple">
+                                <a href="mailto:servicioalasociado@cofinal.com.co" target="_blank" class="goto-contact">
+                                    <div class="icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                </a>
+
+                                <h3>CORREO ELECTRONICO</h3>
+                                <p class="text-muted"></p>
+                                <p>
+                                    servicioalasociado@cofinal.com.co
+                                </p>
+
+                                <strong><a href="mailto:servicioalasociado@cofinal.com.co"> </a></strong>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- FIN DE ULTIMAS NOTICIAS Y EVENTOS -->
-    </div>
-            <!------------- Estilos Cajas---------->
-            <style>
-                #body {
-                    margin-top: -50px;
-                    margin: auto;
-                    width: 1150px;
-                    height: 400px;
-                }
+            </section>
 
-                #imagen2 {
-                    width: 1150px;
-                    height: 400px;
-                    float: left;
-                }
-            </style>
-            <!------------- Fin Sesion Imagenes---------->
-            <!-- <div class="row">
-                <div class="container" id="conteniNot">
-                    <div class="row" id="noti">
-                        <div class="col-md-9" id="col">
 
-                            @*<h4>Mantenerse informado y actualizado sobre todas las noticias relacionadas con la Cooperativa</h4>*@
+            <!-- FIN SECCIÓN BOTONES DE CONTACTO -->
+            <!-- ULTIMAS NOTICIAS Y EVENTOS -->
 
-                            <ul class="owl-carousel testimonials same-height-row">
+            <section class="py-cofinal section-last-news">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="title-section text-center">Últimas noticias y eventos</h2>
+                        </div>
+                    </div>
+                    <div class="row row-carrousel-news">
+
+                        <div class="col-12" id="col">
+
+                            <ul class="owl-carousel owl-carousel-testominals testimonials same-height-row">
                                 @foreach (var item in Model)
                                 {
                                     string htmldecode = System.Web.HttpUtility.HtmlDecode(item.Html);
@@ -773,14 +1025,14 @@
                                         <div class="team-member">
                                             <div class="image">
                                                 <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })">
-                                                    <img src="@item.Imagen" alt="" class="img-responsive img-circle" style="width: 200px; height: 200px;">
+                                                    <img src="@item.Imagen" alt="@item.Titulo">
                                                 </a>
                                             </div>
                                             <div class="content" style="height:150px">
                                                 <h4>@item.Titulo</h4>
                                                 <p style="height: 70px;" class="">@htmldecode ... </p>
                                                 <p class="read-more">
-                                                    <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })" class="btn btn-template-main">Leer más.</a>
+                                                    <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })">Leer más.</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -788,25 +1040,94 @@
                                 }
                             </ul>
                         </div>
-
-                        <script>document.getElementById('noclick').style.pointerEvents = 'none';</script>
-                        <div class="col-md-3">
-
-                            <!-- DolarWeb IndMax Start
-                            <div class="heading text-center" style="margin-bottom:10px;padding-top:15px;">
-                                <h4>INDICADORES ECONÓMICOS</h4>
-                                <p style="display:inline-block;">
-
-                                    <!-- DolarWeb IndMax Start
-                                    <div id="IndicadoresMax"><h2><a href="https://dolar.wilkinsonpc.com.co/">Dolar Hoy Colombia</a></h2></div>
-                                    <script type="text/javascript" src="https://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-max.js?ancho=190&alto=280&fondo=transparent&fsize=12&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMax End
-                                </p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-            </div> -->
+            </section>
+            <!-- FIN DE ULTIMAS NOTICIAS Y EVENTOS -->
+        </div>
+        <!------------- Estilos Cajas---------->
+        <style>
+            #body {
+                margin-top: -50px;
+                margin: auto;
+                width: 1150px;
+                height: 400px;
+            }
+
+            #imagen2 {
+                width: 1150px;
+                height: 400px;
+                float: left;
+            }
+        </style>
+        <!------------- Fin Sesion Imagenes---------->
+        <!-- <div class="row">
+        <div class="container" id="conteniNot">
+            <div class="row" id="noti">
+                <div class="col-md-9" id="col">
+
+                    @*<h4>Mantenerse informado y actualizado sobre todas las noticias relacionadas con la Cooperativa</h4>*@
+
+                    <ul class="owl-carousel testimonials same-height-row">
+                        @foreach (var item in Model)
+                        {
+                            string htmldecode = System.Web.HttpUtility.HtmlDecode(item.Html);
+                            var htm = Regex.Replace(htmldecode, "<.*?>", " ");
+                            htm = Regex.Replace(htm, "&nbsp;", " ");
+                            htm = Regex.Replace(htm, "&aacute;", "á");
+                            htm = Regex.Replace(htm, "&eacute;", "é");
+                            htm = Regex.Replace(htm, "&iacute;", "í");
+                            htm = Regex.Replace(htm, "&oacute;", "ó");
+                            htm = Regex.Replace(htm, "&uacute;", "ú");
+                            htm = Regex.Replace(htm, "&ntilde;", "ñ");
+                            htm = Regex.Replace(htm, "&iquest;", "¿");
+                            //var htmls = htmldecode.IndexOf("<p");
+                            if (htm.Length < 100)
+                            {
+                                htmldecode = htm.Substring(0, htm.Length);
+                            }
+                            else
+                            {
+                                htmldecode = htm.Substring(0, 100);
+                            }
+                            <li class="item" style="padding-bottom: 0">
+                                <div class="team-member">
+                                    <div class="image">
+                                        <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })">
+                                            <img src="@item.Imagen" alt="" class="img-responsive img-circle" style="width: 200px; height: 200px;">
+                                        </a>
+                                    </div>
+                                    <div class="content" style="height:150px">
+                                        <h4>@item.Titulo</h4>
+                                        <p style="height: 70px;" class="">@htmldecode ... </p>
+                                        <p class="read-more">
+                                            <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })" class="btn btn-template-main">Leer más.</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+                <script>document.getElementById('noclick').style.pointerEvents = 'none';</script>
+                <div class="col-md-3">
+
+                    <!-- DolarWeb IndMax Start
+                    <div class="heading text-center" style="margin-bottom:10px;padding-top:15px;">
+                        <h4>INDICADORES ECONÓMICOS</h4>
+                        <p style="display:inline-block;">
+
+                            <!-- DolarWeb IndMax Start
+                            <div id="IndicadoresMax"><h2><a href="https://dolar.wilkinsonpc.com.co/">Dolar Hoy Colombia</a></h2></div>
+                            <script type="text/javascript" src="https://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-max.js?ancho=190&alto=280&fondo=transparent&fsize=12&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMax End
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
         </section>
     </div>
 

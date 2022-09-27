@@ -4,178 +4,188 @@
 
     AccountModels cuentaUsuario = new AccountModels();
 }
+<script src="https://kit.fontawesome.com/f9533edd0d.js" crossorigin="anonymous"></script>
 
-        <header>
-            <div id="top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-8">
-                            <div class="login pull-left">
-                                <div class="social">
-                                    <a href="https://www.facebook.com/profile.php?id=100011123886270" class="external facebook" 
-                                       data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                                    <a href="https://www.google.com.co/search?source=hp&q=cofinal&oq=cofinal&gs_l=psy-ab.3..35i39k1j0l3.1169.2424.0.2686.8.7.0.0.0.0.238.858.0j1j3.4.0....0...1.1.64.psy-ab..4.4.855.0..0i67k1.tiRMSmsmbP8" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                                    <a href="~/Home/Contact" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-                                </div>
-
-                                @if (!cuentaUsuario.IsNull())
-                                {
-                                    <a href="@Url.Action("logout", "account")">
-                                        <i class="fa fa-sign-in"></i>
-                                        <span class="hidden-xs text-uppercase">Cerrar Sesión</span>
-                                    </a>
-                                }
-                            </div>
+<header>
+    <div id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="login pull-left">
+                        <div class="social">
+                            <a href="https://www.facebook.com/profile.php?id=100011123886270"
+                               class="external facebook girar" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                            @*<a href="https://www.google.com.co/search?source=hp&q=cofinal&oq=cofinal&gs_l=psy-ab.3..35i39k1j0l3.1169.2424.0.2686.8.7.0.0.0.0.238.858.0j1j3.4.0....0...1.1.64.psy-ab..4.4.855.0..0i67k1.tiRMSmsmbP8"
+                                class="external gplus girar" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>*@
+                            <a href="https://twitter.com/cofinal?lang=es"
+                               class="external twitter girar" @*data-animate-hover="pulse"*@><i class="fa fa-twitter"></i></a>
+                            <a href="~/Home/Contact" class="email girar" @*data-animate-hover="pulse"*@><i class="fa fa-envelope"></i></a>
+                            <a href="https://www.instagram.com/cofinaloficial/"
+                               class="external instagram girar"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UC8I7nZ77BH5qK3rXvQZre2w/featured"
+                               class="external youtube girar"><i class="fa-brands fa-youtube"></i></a>
                         </div>
-                        <div class="col-xs-4">
-                            <div class="login pull-right">
 
-                                @if (!cuentaUsuario.IsNull())
-                                {
-                                    <span> @cuentaUsuario.UserName</span>
-                                }
-                                else
-                                {
-                                    <a href="@Url.Action("Login", "Account")"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar sesión</span></a>
-                                    <a href="@Url.Action("Login", "Account")"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registrarse</span></a>
-
-                                }
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- *** NAVBAR ***-->
-
-            <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
-
-                <div class="navbar navbar-default yamm" role="navigation" id="navbar">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a class="navbar-brand home" href="~/Home/index">
-                                <img src="~/img/LOGO_COFINAl.png" alt="Cofinal" class="hidden-xs hidden-sm hidden-md" style="margin-top: -0.4em;width:90%; ">
-                                <img src="~/img/LOGO_COFINAl.png" alt="Cofinal" class="visible-sm visible-md" style="margin-top: -0.4em;width:196px; "><span class="sr-only">Cofinal</span>
-                                <img src="~/img/LOGO_COFINAl.png" alt="Cofinal" class="visible-xs  img-responsive" style="margin-top: -0.4em;width:250px;"><span class="sr-only">Cofinal</span>
+                        @if (!cuentaUsuario.IsNull())
+                        {
+                            <a href="@Url.Action("logout", "account")">
+                                <i class="fa fa-sign-in"></i>
+                                <span class="hidden-xs text-uppercase">Cerrar Sesión</span>
                             </a>
-                            <div class="navbar-buttons">
-                                <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                                    <span class="sr-only">Navegacion</span>
-                                    <i class="fa fa-align-justify"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!--/.navbar-header -->
+                        }
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="login pull-right">
 
+                        @if (!cuentaUsuario.IsNull())
+                        {
+                            <span> @cuentaUsuario.UserName</span>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("Login", "Account")"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar sesión</span></a>
+                            <a href="@Url.Action("Login", "Account")"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registrarse</span></a>
 
-                        <div class="navbar-collapse collapse" id="navigation">
-                            <ul id="nav2" class="nav navbar-nav navbar-right">
-                                <li id="conoscanosActivo" class="dropdown">
-                                    <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Conózcanos<b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            @Html.ActionLink("Nuestra cooperativa", "QuienesSomos", "Home")
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("Nuestras agencias", "NuestrasAgencias", "Home")
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("Conceptos de Interes", "ConceptosDeInteres", "Home")
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("Documentos Presentados Dian", "RteDian", "Home")
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("Directorio Telefónico", "Directorio", "Home")
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("Politica Tratamiento de Datos Personales", "PoliticasTIC", "Home")
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li id="productos" class="dropdown">
-                                    <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Portafolio<b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="~/Home/ahorros">AHORRO</a>
-                                        </li>
-                                        <li>
-                                            <a href="~/Home/Creditos">CRÉDITO</a>
-                                        </li>
-                                        <li>
-                                            <a href="~/Home/Seguros">SEGUROS</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li id="afiliacion" class="dropdown">
-                                    <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Afiliacion<b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="~/FormatosAC/Index">Formulario de Afiliación</a>
-                                        </li>
-                                        <li>
-                                            <a href="~/FormatosAC/Details">Solicitud de Crédito</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li id="fundacionActivo">
-                                    <a href="http://funcofinal.org/">FUNDACIÓN COFINAL</a>
-                                </li>
-
-                                <li id="multiportal">
-                                    <a href="~/Home/Multiportal">MULTIPORTAL</a>
-                                </li>
-                                @*<li id="multiportal">
-                                    <a href="~/Home/RteDian">RTE DIAN</a>
-                                </li>*@
-
-                                @if (cuentaUsuario.IsAsociado)
-                                {
-                                    <li id="cuenta">
-                                        <a href="@Url.Action("homeaso","Home")">CUENTA</a>
-                                    </li>
-                                }
-                                else if (cuentaUsuario.IsUsuario)
-                                {
-                                    <li id="cuenta">
-                                        <a href="@Url.Action("homeadmin","Home")">CUENTA</a>
-                                    </li>
-                                }
-                            </ul>
-
-                        </div>
-                        <!--/.nav-collapse -->
-
-                        @*<div class="collapse clearfix" id="search">
-
-                            <form class="navbar-form" role="search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-btn">
-
-                                        <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
-
-                                    </span>
-                                </div>
-                            </form>
-
-                        </div>*@
-                        <!--/.nav-collapse -->
+                        }
 
                     </div>
 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- *** NAVBAR ***-->
+
+    <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+        <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand home" href="~/Home/index">
+                        <img src="~/img/LOGO_COFINAl.png" alt="Cofinal" class="hidden-xs hidden-sm hidden-md" style="margin: -0.4em;width:90%; ">
+                        <img src="~/img/LOGO_COFINAl.png" alt="Cofinal" class="visible-sm visible-md" style="margin-top: -0.4em;width:219px; "><span class="sr-only">Cofinal</span>
+                        <img src="~/img/LOGO_COFINAl.png" alt="Cofinal" class="visible-xs  img-responsive" style="margin-top: -0.4em;width:250px;"><span class="sr-only">Cofinal</span>
+                    </a>
+                    <div class="navbar-buttons">
+                        <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                            <span class="sr-only">Navegacion</span>
+                            <i class="fa fa-align-justify"></i>
+                        </button>
+                    </div>
+                </div>
+                <!--/.navbar-header -->
+
+
+                <div class="navbar-collapse collapse" id="navigation">
+                    <ul id="nav2" class="nav navbar-nav navbar-right">
+                        <li id="conoscanosActivo" class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="underline">Conózcanos</span><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    @Html.ActionLink("Nuestra cooperativa", "QuienesSomos", "Home")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Nuestras agencias", "NuestrasAgencias", "Home")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Conceptos de Interes", "ConceptosDeInteres", "Home")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Documentos Presentados Dian", "RteDian", "Home")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Directorio Telefónico", "Directorio", "Home")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Politica Tratamiento de Datos Personales", "PoliticasTIC", "Home")
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li id="productos" class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="underline">Portafolio</span><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="~/Home/ahorros">AHORRO</a>
+                                </li>
+                                <li>
+                                    <a href="~/Home/Creditos">CRÉDITO</a>
+                                </li>
+                                <li>
+                                    <a href="~/Home/Seguros">SEGUROS</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="afiliacion" class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="underline">Afiliacion</span><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="~/FormatosAC/Index">Formulario de Afiliación</a>
+                                </li>
+                                <li>
+                                    <a href="~/FormatosAC/Details">Solicitud de Crédito</a>
+                                </li>
+                            </ul>
+                        </li>
+                        @*<li id="fundacionActivo">
+                                <a href="http://funcofinal.org/">FUNDACIÓN COFINAL</a>
+                            </li>*@
+                        <li id="fundacionActivo">
+                            <a href="#"><span class="underline">Porque elegir Cofinal</span></a>
+                        </li>
+                        <li id="fundacionActivo">
+                            <a href="#"><span class="underline">Coperativa Virtual</span></a>
+                        </li>
+                        <li id="multiportal">
+                            <a href="~/Home/Multiportal"><span class="underline">MULTIPORTAL</span></a>
+                        </li>
+                        @*<li id="multiportal">
+                                <a href="~/Home/RteDian">RTE DIAN</a>
+                            </li>*@
+
+                        @if (cuentaUsuario.IsAsociado)
+                        {
+                            <li id="cuenta">
+                                <a href="@Url.Action("homeaso","Home")">CUENTA</a>
+                            </li>
+                        }
+                        else if (cuentaUsuario.IsUsuario)
+                        {
+                            <li id="cuenta">
+                                <a href="@Url.Action("homeadmin","Home")">CUENTA</a>
+                            </li>
+                        }
+                    </ul>
 
                 </div>
-                <!-- /#navbar -->
+                <!--/.nav-collapse -->
+                @*<div class="collapse clearfix" id="search">
+
+                        <form class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <span class="input-group-btn">
+
+                                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                                </span>
+                            </div>
+                        </form>
+
+                    </div>*@
+                <!--/.nav-collapse -->
 
             </div>
 
-        </header>
 
-     
+        </div>
+        <!-- /#navbar -->
+
+    </div>
+
+</header>
+
+

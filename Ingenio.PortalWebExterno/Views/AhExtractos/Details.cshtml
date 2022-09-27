@@ -368,7 +368,6 @@
 
     function load_lineas() {
         var linea = '@(ViewBag.Aso != null ? ViewBag.Aso.cedulasociado: ViewBag.Nitaso.nit)';
-
         $.ajax({
             url: "@Url.Action("Ah_vista")",
             type: "POST",

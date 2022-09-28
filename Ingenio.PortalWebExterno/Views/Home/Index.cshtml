@@ -480,7 +480,7 @@
                 <div class="contenedor">
                     <h3>¿En Que Te Podemos Ayudar?</h3>
                     <div class="botones">
-                        <button>Quiero se socio</button>
+                        <button class="btn">Quiero ser socio</button>
                         <button>Credito</button>
                         <button>Ahorro</button>
                     </div>
@@ -523,6 +523,35 @@
                     </div>
                 </div>
             </section>
+            <!-- The Modal -->
+            <div id="ventana" class="modal-ventana">
+                <!-- Modal content -->
+                <div class="modal-contentenido">
+
+                    <div class="modal-contentenido-left">
+                        <img src="~/img/semilla1.png" alt="foto de prueba">
+                    </div><!-- end modal content left -->
+
+                    <div class="modal-contentenido-right">
+
+                        <div class="modal-header">
+                            <p>¿Cuales son los beneficios de ser asociados?</p>
+                            <span class="cerrar">&times;</span>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>El Asociado de COFINAL, es dueño de la Cooperativa.</p>
+                            <p>El Asociado de COFINAL tiene la posibilidad de acceder a todo el portafolio de productos y servicios ofrecidos y realizar operaciones propias de su objeto económico social.</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button>Agente su afiliación</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div><!-- END the modal -->
+            <!-- END the modal -->
             <!-- Seccion de Fin -->
             <!-- Titulo grande de texto -->
             <section class="titulos">
@@ -531,21 +560,21 @@
             <!-- Fin: Titulo grande de texto -->
             <!-- Tarjetas Contenedoras -->
             <section class="tarjetas-contenedor">
-                <div class="tarjetas-Centradas">
+                <div class="tarjetas-Centradas pintar">
                     <i aria-hidden="true" class="far fa-clock"></i>
                     <h3>Ahorro</h3>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </p>
                 </div>
-                <div class="tarjetas-Centradas">
+                <div class="tarjetas-Centradas pintar">
                     <i aria-hidden="true" class="fas fa-check"></i>
                     <h3>Crédito</h3>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </p>
                 </div>
-                <div class="tarjetas-Centradas">
+                <div class="tarjetas-Centradas pintar">
                     <i aria-hidden="true" class="fas fa-calendar-alt"></i>
                     <h3>Simuladores</h3>
                     <p>
@@ -553,7 +582,7 @@
 
                     </p>
                 </div>
-                <div class="tarjetas-Centradas">
+                <div class="tarjetas-Centradas pintar">
                     <i aria-hidden="true" class="fas fa-calendar-alt"></i>
                     <h3>Virtual</h3>
                     <p>
@@ -562,7 +591,6 @@
                 </div>
             </section>
             <!-- Fin: Tarjetas Contenedoras -->
-
             <!-- Inicio de formulario -->
             <section>
                 <section class="titulos">
@@ -590,6 +618,8 @@
                 </div>
             </section>
             <!-- Fin de Encuesta-->
+
+
 
             <section id="sobreNosotros" class="section-home-about-us py-cofinal">
                 <div class="container ">
@@ -1213,7 +1243,62 @@
             });
         });
     </script>
+    <script>
+        // Get the modal
+        const modal = document.querySelector("#ventana");
 
+        // Get the button that opens the modal
+        const btn = document.querySelectorAll(".btn");
+
+        // Get the <span> element that closes the modal
+        const closeModal = document.getElementsByClassName("cerrar")[0];
+
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener("click", function () {
+                modal.style.display = "block";
+            });
+        }
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        };
+
+        // When the user clicks on <span> (x), close the modal
+        closeModal.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+        (function ($) { // Begin jQuery
+            $(function () { // DOM ready
+                // If a link has a dropdown, add sub menu toggle.
+                $('nav ul li a:not(:only-child)').click(function (e) {
+                    $(this).siblings('.nav-dropdown').toggle();
+                    // Close one dropdown when selecting another
+                    $('.nav-dropdown').not($(this).siblings()).hide();
+                    e.stopPropagation();
+                });
+                // Clicking away from dropdown will remove the dropdown class
+                $('html').click(function () {
+                    $('.nav-dropdown').hide();
+                });
+                // Toggle open and close nav styles on click
+                $('#nav-toggle').click(function () {
+                    $('nav ul').slideToggle();
+                });
+                // Hamburger to X toggle
+                $('#nav-toggle').on('click', function () {
+                    this.classList.toggle('active');
+                });
+            }); // end DOM ready
+        })(jQuery); // end jQuery
+    </script>
 </body>
 </html>
 

@@ -1,3 +1,149 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Patua+One&display=swap"); */
+.pintar{
+    background-color:#F7F8F8;
+    border-radius:5%;
+}
+/* The Modal (background) */
+.modal-ventana {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 300px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-contentenido {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 50%;
+  overflow: hidden;
+  border-radius: 2px;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+
+  font-family: "Open Sans", sans-serif;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-contentenido-left,
+.modal-contentenido-right {
+  flex: 0 1 auto;
+}
+
+.modal-contentenido-left {
+  flex: 2;
+}
+
+.modal-contentenido-left img {
+  width: 40rem;
+  max-width: 95%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  border-radius: 2px;
+}
+
+.modal-contentenido-right {
+  flex: 2;
+  max-width: 100%;
+  padding: 1rem 3rem;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.cerrar,
+.cerrar-imp {
+    color: #aaa;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0 1rem;
+    border-radius: 2px;
+    transition: 0.4s ease-out;
+}
+
+.cerrar:hover,
+.cerrar:focus,
+.cerrar-imp:hover,
+.cerrar-imp:focus {
+  color: #111;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Patua One", cursive;
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-header p {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  padding: 0.5rem 3rem;
+}
+
+.modal-header {
+  padding-top: 2rem;
+}
+
+.modal-footer {
+  padding-bottom: 2rem;
+}
+
+/* ===== Page Content ===== */
+
+
+.contenedor {
+  width: 100%;
+}
+
 /* ESTILO PARA EL SLIDER DE IMAGENES*/
 .wrapper {
   padding: 70px 0;
@@ -15,9 +161,9 @@
   /*width:200px;*/
   /*height: 300px;*/
   margin: 0 15px 0 0;
-  display: flex;
+/*  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;*/
 }
 
 .imagen-slider {
@@ -42,6 +188,14 @@
 .slick-prev:before {
   color: #000;
   font-size: 26px;
+}
+
+.container2{
+  padding: 0 4rem 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
 }
 
 .container {
@@ -432,7 +586,7 @@ ul.list-style-none {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 60vh;
+  height: 60vh; /* Tamñano del video*/
   /*min-height: 100%;*/
   /*background-size: cover;*/
   object-fit: cover;
@@ -539,9 +693,9 @@ ul.list-style-none {
     padding: 10px;
   }
 
-  #top {
+/*  #top {
     display: none;
-  }
+  }*/
 
   #sliderVideo {
     align-items: center;
@@ -558,12 +712,12 @@ ul.list-style-none {
     text-align: center;
   }
 
-  .content-video {
+/*  .content-video {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
-  }
+  }*/
 
   #sobreNosotros {
     display: none;
@@ -610,11 +764,12 @@ ul.list-style-none {
     width: 30vh;
   }
 
+
   .icons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .icons > .tarjetas-Centradas > .icentrado {
@@ -640,19 +795,22 @@ ul.list-style-none {
     margin: 0 20px;
   }
   /* Color del titulo*/
-  #top {
-    background-color: rgba(224, 85, 20, 0.75);
-    color: #eeeeee;
-    padding: 10px 0;
-  }
-
+    #top {
+        background-color: rgba(224, 85, 20, 0.75);
+        color: #eeeeee;
+        padding: 10px 0;
+/*        display: flex;
+        align-items: center;
+        justify-content: center;*/
+    }
+    
   .tarjetas-Centradas {
     /*border: 1px solid black;*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 30px;
+    /*display: flex;*/
+/*    align-items: center;
+    justify-content: center;*/
+/*    flex-direction: column;
+    margin: 30px;*/
   }
 
   .tarjetas-Centradas > i {
@@ -702,7 +860,7 @@ ul.list-style-none {
 
   .titulos > h3 {
     text-align: center;
-    font-size: 30px;
+    /*font-size: 30px;*/
   }
 }
 
@@ -781,7 +939,7 @@ ul.list-style-none {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .icons > .tarjetas-Centradas > .icentrado {
@@ -821,11 +979,11 @@ ul.list-style-none {
 
   .tarjetas-Centradas {
     /*border: 1px solid black;*/
-    display: flex;
+/*    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 30px;
+    margin: 30px;*/
   }
 
   .tarjetas-Centradas > i {
@@ -957,7 +1115,7 @@ ul.list-style-none {
 }
 
 #top .login a {
-  font-size: 12px;
+  font-size: 14px;
   color: #eeeeee;
   margin-right: 15px;
   text-decoration: none;

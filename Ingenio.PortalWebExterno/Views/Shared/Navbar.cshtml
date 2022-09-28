@@ -8,9 +8,9 @@
 
 <header>
     <div id="top">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-8">
+       <div class="container2">
+            @*<div class="row">*@
+                @*<div class="col-xs-8">*@
                     <div class="login pull-left">
                         <div class="social">
                             <a href="https://www.facebook.com/profile.php?id=100011123886270"
@@ -34,8 +34,8 @@
                             </a>
                         }
                     </div>
-                </div>
-                <div class="col-xs-4">
+                @*</div>*@
+                @*<div class="col-xs-4">*@
                     <div class="login pull-right">
 
                         @if (!cuentaUsuario.IsNull())
@@ -51,8 +51,8 @@
 
                     </div>
 
-                </div>
-            </div>
+                @*</div>*@
+            @*</div>*@
         </div>
     </div>
 
@@ -61,6 +61,7 @@
 
     <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
 
+        @*<div class="navbar navbar-default yamm" role="navigation" id="navbar">*@
         <div class="navbar navbar-default yamm" role="navigation" id="navbar">
             <div class="container">
                 <div class="navbar-header">
@@ -179,13 +180,63 @@
                 <!--/.nav-collapse -->
 
             </div>
-
-
         </div>
         <!-- /#navbar -->
-
     </div>
-
+    @*<nav>
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="#!">Logo</a>
+                </div>
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#!">Home</a>
+                        </li>
+                        <li>
+                            <a href="#!">About</a>
+                        </li>
+                        <li>
+                            <a href="#!">Services</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="#!">Web Design</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Web Development</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Graphic Design</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#!">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#!">Portfolio</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="#!">Web Design</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Web Development</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Graphic Design</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#!">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </nav>*@
 </header>
 
 

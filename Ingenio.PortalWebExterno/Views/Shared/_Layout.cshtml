@@ -48,7 +48,13 @@
 </head>
 
 <body>
-
+    <style>
+        #heading-breadcrumbs {
+            background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),
+                url(../../img/Img_Web2/background-credito.jpg);
+            padding: 70px 0;
+        }
+    </style>
 
     <div  id="all">
 
@@ -65,7 +71,6 @@
 
 
         <!-- *** LOGIN MODAL END *** -->
-
         <div id="heading-breadcrumbs">
             <div class="container">
                 <div class="row">
@@ -75,7 +80,7 @@
                     <div class="col-md-5">
                         <ul class="breadcrumb">
                             <li>
-                                <a href="@ViewBag.url"> Inicio </a>
+                                <a href="@ViewBag.url"> Inicio</a>
                             </li>
                             <li>@ViewBag.titulo</li>
                         </ul>

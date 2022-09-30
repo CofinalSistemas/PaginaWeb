@@ -5,53 +5,54 @@
     AccountModels cuentaUsuario = new AccountModels();
 }
 <script src="https://kit.fontawesome.com/f9533edd0d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/sass/prueba.min.css" />
 
 <header>
     <div id="top">
-       <div class="container2">
+        <div class="container2">
             @*<div class="row">*@
-                @*<div class="col-xs-8">*@
-                    <div class="login pull-left">
-                        <div class="social">
-                            <a href="https://www.facebook.com/profile.php?id=100011123886270"
-                               class="external facebook girar" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                            @*<a href="https://www.google.com.co/search?source=hp&q=cofinal&oq=cofinal&gs_l=psy-ab.3..35i39k1j0l3.1169.2424.0.2686.8.7.0.0.0.0.238.858.0j1j3.4.0....0...1.1.64.psy-ab..4.4.855.0..0i67k1.tiRMSmsmbP8"
-                                class="external gplus girar" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>*@
-                            <a href="https://twitter.com/cofinal?lang=es"
-                               class="external twitter girar" @*data-animate-hover="pulse"*@><i class="fa fa-twitter"></i></a>
-                            <a href="~/Home/Contact" class="email girar" @*data-animate-hover="pulse"*@><i class="fa fa-envelope"></i></a>
-                            <a href="https://www.instagram.com/cofinaloficial/"
-                               class="external instagram girar"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/channel/UC8I7nZ77BH5qK3rXvQZre2w/featured"
-                               class="external youtube girar"><i class="fa-brands fa-youtube"></i></a>
-                        </div>
+            @*<div class="col-xs-8">*@
+            <div class="login pull-left">
+                <div class="social">
+                    <a href="https://www.facebook.com/profile.php?id=100011123886270"
+                       class="external facebook girar" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                    @*<a href="https://www.google.com.co/search?source=hp&q=cofinal&oq=cofinal&gs_l=psy-ab.3..35i39k1j0l3.1169.2424.0.2686.8.7.0.0.0.0.238.858.0j1j3.4.0....0...1.1.64.psy-ab..4.4.855.0..0i67k1.tiRMSmsmbP8"
+                        class="external gplus girar" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>*@
+                    <a href="https://twitter.com/cofinal?lang=es"
+                       class="external twitter girar" @*data-animate-hover="pulse"*@><i class="fa fa-twitter"></i></a>
+                    <a href="~/Home/Contact" class="email girar" @*data-animate-hover="pulse"*@><i class="fa fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/cofinaloficial/"
+                       class="external instagram girar"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UC8I7nZ77BH5qK3rXvQZre2w/featured"
+                       class="external youtube girar"><i class="fa-brands fa-youtube"></i></a>
+                </div>
 
-                        @if (!cuentaUsuario.IsNull())
-                        {
-                            <a href="@Url.Action("logout", "account")">
-                                <i class="fa fa-sign-in"></i>
-                                <span class="hidden-xs text-uppercase">Cerrar Sesión</span>
-                            </a>
-                        }
-                    </div>
-                @*</div>*@
-                @*<div class="col-xs-4">*@
-                    <div class="login pull-right">
+                @if (!cuentaUsuario.IsNull())
+                {
+                    <a href="@Url.Action("logout", "account")">
+                        <i class="fa fa-sign-in"></i>
+                        <span class="hidden-xs text-uppercase">Cerrar Sesión</span>
+                    </a>
+                }
+            </div>
+            @*</div>*@
+            @*<div class="col-xs-4">*@
+            <div class="login pull-right">
 
-                        @if (!cuentaUsuario.IsNull())
-                        {
-                            <span> @cuentaUsuario.UserName</span>
-                        }
-                        else
-                        {
-                            <a href="@Url.Action("Login", "Account")"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar sesión</span></a>
-                            <a href="@Url.Action("Login", "Account")"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registrarse</span></a>
+                @if (!cuentaUsuario.IsNull())
+                {
+                    <span> @cuentaUsuario.UserName</span>
+                }
+                else
+                {
+                    <a href="@Url.Action("Login", "Account")"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar sesión</span></a>
+                    <a href="@Url.Action("Login", "Account")"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registrarse</span></a>
 
-                        }
+                }
 
-                    </div>
+            </div>
 
-                @*</div>*@
+            @*</div>*@
             @*</div>*@
         </div>
     </div>
@@ -67,8 +68,9 @@
                 <div class="navbar-header">
                     <a class="navbar-brand home" href="~/Home/index">
                         <img src="~/img/LOGO_COFINAl.png" alt="Cofinal" class="hidden-xs hidden-sm hidden-md" style="margin: -0.4em;width:90%; ">
-                        <img src="~/img/LOGO_COFINAl.png" alt="Cofinal" class="visible-sm visible-md" style="margin-top: -0.4em;width:219px; "><span class="sr-only">Cofinal</span>
-                        <img src="~/img/LOGO_COFINAl.png" alt="Cofinal" class="visible-xs  img-responsive" style="margin-top: -0.4em;width:250px;"><span class="sr-only">Cofinal</span>
+                        <img src="~/img/Img_Web2/logo_mini.png" alt="Cofinal" class="visible-sm visible-md" style="margin-top: -0.4em;width:60px; "><span class="sr-only">Cofinal</span>
+
+                        <img src="~/img/LOGO_COFINAl.png" alt="Cofinal" class="visible-xs  img-responsive" style="margin-top: -0.4em; width: 250px;"><span class="sr-only">Cofinal</span>
                     </a>
                     <div class="navbar-buttons">
                         <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -137,9 +139,9 @@
                         <li id="fundacionActivo">
                             <a href="#"><span class="underline">Porque elegir Cofinal</span></a>
                         </li>
-                        <li id="fundacionActivo">
-                            <a href="#"><span class="underline">Coperativa Virtual</span></a>
-                        </li>
+                        @*<li id="fundacionActivo">
+                                <a href="#"><span class="underline">Coperativa Virtual</span></a>
+                            </li>*@
                         <li id="multiportal">
                             <a href="~/Home/Multiportal"><span class="underline">MULTIPORTAL</span></a>
                         </li>
@@ -184,59 +186,59 @@
         <!-- /#navbar -->
     </div>
     @*<nav>
-        <section class="navigation">
-            <div class="nav-container">
-                <div class="brand">
-                    <a href="#!">Logo</a>
+            <section class="navigation">
+                <div class="nav-container">
+                    <div class="brand">
+                        <a href="#!">Logo</a>
+                    </div>
+                    <nav>
+                        <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                        <ul class="nav-list">
+                            <li>
+                                <a href="#!">Home</a>
+                            </li>
+                            <li>
+                                <a href="#!">About</a>
+                            </li>
+                            <li>
+                                <a href="#!">Services</a>
+                                <ul class="nav-dropdown">
+                                    <li>
+                                        <a href="#!">Web Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Web Development</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Graphic Design</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#!">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#!">Portfolio</a>
+                                <ul class="nav-dropdown">
+                                    <li>
+                                        <a href="#!">Web Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Web Development</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Graphic Design</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#!">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav>
-                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-                    <ul class="nav-list">
-                        <li>
-                            <a href="#!">Home</a>
-                        </li>
-                        <li>
-                            <a href="#!">About</a>
-                        </li>
-                        <li>
-                            <a href="#!">Services</a>
-                            <ul class="nav-dropdown">
-                                <li>
-                                    <a href="#!">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Web Development</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Graphic Design</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#!">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#!">Portfolio</a>
-                            <ul class="nav-dropdown">
-                                <li>
-                                    <a href="#!">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Web Development</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Graphic Design</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#!">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-    </nav>*@
+            </section>
+        </nav>*@
 </header>
 
 

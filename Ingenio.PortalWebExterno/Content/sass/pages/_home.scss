@@ -7,11 +7,18 @@
 }
 /*Fin de Zonas que ocultar*/
 
+@import '../abstracts/_functions.scss';
+
 .big-container {
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
 }
+.contenedor {
+    @include obj-center();
+    flex-direction: column;
+}
+
 
 content-video > myButtons:hover{
     color:white;

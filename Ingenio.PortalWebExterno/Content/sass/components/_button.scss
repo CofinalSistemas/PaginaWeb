@@ -15,4 +15,37 @@
     text-align: center;
 }
 
+.myButtons:hover{
+    color:$secondary-color;
+}
 
+.slick-prev:before {
+    /*content: "<";*/
+    color: $primary-color;
+    font-size: 30px;
+}
+
+.slick-next:before {
+    /*content: ">";*/
+    color: $primary-color;
+    font-size: 30px;
+}
+
+.slick-dots {
+    position:relative;
+    color: $secondary-color !important;
+
+    li{
+
+        margin:0 20px 0 0;
+
+        button{
+        background:$primary-color;
+        text-indent: -9999px;
+        overflow: hidden;
+        border-radius:20%;
+        width:3vh;
+        height:1vh;
+        }
+    } 
+}

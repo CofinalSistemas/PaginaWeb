@@ -1,0 +1,14 @@
+﻿@import '../abstracts/_functions.scss';
+#c_Credito {
+    height: 400px;
+    width: 100%;
+    @include obj-center();
+    flex-wrap:wrap;
+}
+
+.card_Credito{
+    width:320px;
+    height:200px;
+    background:red;
+    margin:20px;
+}

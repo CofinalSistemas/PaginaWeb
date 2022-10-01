@@ -635,6 +635,8 @@
     <Content Include="Content\sass\pages\_ahorro.scss" />
     <Content Include="Content\sass\abstracts\_functions.scss" />
     <Content Include="Content\sass\components\_navbar.scss" />
+    <Content Include="Content\sass\components\_cards.scss" />
+    <Content Include="Content\sass\pages\_credito.scss" />
     <None Include="PortaWeb.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

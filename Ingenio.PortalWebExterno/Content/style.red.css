@@ -1,8 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Patua+One&display=swap"); */
-.pintar {
-  background-color: #f7f8f8;
-  border-radius: 5%;
-}
 .text-prueba {
   float: right;
   display: flex;
@@ -242,74 +237,14 @@
 }
 /* FIN DE ESTILO DE SLIDER*/
 
-/* FUNCION DE GIRAR*/
-.girar {
-  /*color:red;*/
-  display: inline-block;
-  /*position: relative;*/
-  /*background-color: rebeccapurple;*/
-  border-radius: 10px;
-  width: 100px;
-  height: 100px;
-}
 
-.girar:hover {
-  animation-name: rotate;
-  animation-duration: 0.8s;
-  animation-iteration-count: 1;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* FIN FUNCION DE GIRAR*/
-
-/*Inicio de Funcion de subrayar*/
-.underline {
-  /*color:red;*/
-  display: inline-block;
-  position: relative;
-}
-
-.underline:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: rgba(224, 85, 20, 0.75);
-  /*background:blue;*/
-  transform: scale(0);
-  transform-origin: bottom right;
-  transition: transform 0.6s ease-out;
-}
-
-.underline:hover:after {
-  transform: scale(1);
-  transform-origin: bottom left;
-}
-/*Fin de Funcion de subrayar*/
 /* Cambios Actualizados*/
 
-#nuestrosServicios {
-  display: none;
-}
 #navbar {
   padding: 10px;
 }
 #sliderVideo {
   align-items: center;
-}
-#sobreNosotros {
-  display: none;
 }
 .contenedor {
   display: flex;
@@ -319,12 +254,6 @@
 }
 .contenedor > .botones > button {
   margin: 10px 40px;
-  background-color: rgba(224, 85, 20, 1);
-  color: white;
-  width: 200px;
-  border-radius: 30px;
-  padding: 10px;
-  border: none;
 }
 #seccionImagen {
   display: flex;
@@ -358,14 +287,8 @@
   justify-content: center;
 }
 
-.textoTitulo {
-  color: #e06d23;
-  font: 500;
-  font-size: 4.3rem;
-  text-align: center;
-  line-height: normal;
-  margin: 0 20px;
-}
+
+
 .tarjetas-contenedor {
   display: flex;
   flex-direction: row;
@@ -497,19 +420,6 @@
   }
 /* Slider Video*/
 
-#actualiza {
-  padding: 10px 50px;
-  border-radius: 30px;
-  background-color: rgba(224, 85, 20, 1);
-  color: white;
-  border: none;
-  /*text-decoration: none;*/
-}
-#actualiza:link,
-#actualiza:visited {
-  text-decoration: none;
-  text-align: center;
-}
 #Video_Slider {
   position: relative;
   display: flex;
@@ -558,12 +468,6 @@
   .content-video > h3,
   .content-video > p {
     display: none;
-  }
-
-  #actualiza {
-    width: 300px;
-    margin: 0 auto;
-    text-align: center;
   }
   .tarjetas-contenedor {
     flex-direction: column;

@@ -1,14 +1,31 @@
-﻿/* Variables*/
-$primary-color: rgba(224, 85, 20, 0.75);
-$secondary-color: rgba(236,28,36,255);
-$sombras-color: rgba(0,0,0,0.5);
+﻿@import 'abstracts/colors';
+@import 'abstracts/fonts.scss';
+@import 'abstracts/functions.scss';
+@import 'pages/home.scss';
+@import 'components/button.scss';
+
+/* Variables*/
+
 $unit: 6px;
 
-.textoTitulo {
+.gBoxShadow {
+    /*background-color: #f7f8f8;*/
+    border-radius: 5%;
+    box-shadow: 0px 15px 30px -20px $sombras-color, 
+                0px 15px 30px -20px $sombras-color, 
+                0px 15px 30px -20px $sombras-color;
+}
+.tituleAnimation {
+    color: #e06d23;
+    font: 500;
+    font-size: 4.3rem;
+    text-align: center;
+    line-height: normal;
+    margin: 0 20px;
     transition: all 0.3s;
 }
 
-.textoTitulo:hover {
+.tituleAnimation:hover {
     color: $secondary-color;
     /*margin: 200px;*/
     letter-spacing: -1.3px;
@@ -39,13 +56,6 @@ $unit: 6px;
     transform-origin: bottom left;
 }
 
-
-
-
-
-
-
-
 section.section {
     background: transparent;
 }
@@ -65,19 +75,13 @@ section.section {
 }
 
 
-
 @function size($value) {
     @return $value * $unit;
 }
 
-@mixin obj-centrado() {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .slick-initialized .slick-slide {
-    @include obj-centrado();
+    @include obj-center();
     margin: 0 15px 0 0;
 }
 
@@ -94,12 +98,12 @@ section.section {
 
 @media screen and (max-width: 899px) {
     .content-video {
-        @include obj-centrado();
+        @include obj-center();
         margin: 0;
     }
 
     .tarjetas-Centradas {
-        @include obj-centrado();
+        @include obj-center();
         flex-direction: column;
         margin: 30px;
         border: 1px solid red;
@@ -108,7 +112,7 @@ section.section {
 
 @media (min-width: 900px) {
     .tarjetas-Centradas {
-        @include obj-centrado();
+        @include obj-center();
         flex-direction: column;
         margin: 30px;
         /*border: 1px solid $primary-color;*/
@@ -139,6 +143,7 @@ i {
     animation: wobble_vertical 1s ease-in-out;
     animation-iteration-count: 1;
 }
+
 @keyframes wobble_vertical{
     0% {
         transform: translateY(5px);

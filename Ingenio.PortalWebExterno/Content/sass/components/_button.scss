@@ -1,0 +1,18 @@
+﻿@import '../abstracts/_colors.scss';
+
+.myButtons {
+    padding: 10px 50px;
+    background-color: $primary-color;
+    color: $light-color;
+    border: none;
+    border-radius: 30px;
+    width: fit-content;
+}
+
+.myButtons:link,
+.myButtons:visited {
+    text-decoration: none;
+    text-align: center;
+}
+
+

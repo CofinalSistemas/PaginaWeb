@@ -81,3 +81,15 @@ D:\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.csproj.CoreCompileInputs.ca
 D:\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.csproj.CopyComplete
 D:\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.dll
 D:\cofi_web-master\Ingenio.BO\obj\Release\Ingenio.BO.pdb
+D:\Cofinal\PaginaWeb\Ingenio.BO\bin\Release\Ingenio.BO.dll.config
+D:\Cofinal\PaginaWeb\Ingenio.BO\bin\Release\Ingenio.BO.dll
+D:\Cofinal\PaginaWeb\Ingenio.BO\bin\Release\Ingenio.BO.pdb
+D:\Cofinal\PaginaWeb\Ingenio.BO\bin\Release\EntityFramework.dll
+D:\Cofinal\PaginaWeb\Ingenio.BO\bin\Release\EntityFramework.SqlServer.dll
+D:\Cofinal\PaginaWeb\Ingenio.BO\bin\Release\EntityFramework.xml
+D:\Cofinal\PaginaWeb\Ingenio.BO\bin\Release\EntityFramework.SqlServer.xml
+D:\Cofinal\PaginaWeb\Ingenio.BO\obj\Release\Ingenio.BO.csprojAssemblyReference.cache
+D:\Cofinal\PaginaWeb\Ingenio.BO\obj\Release\Ingenio.BO.csproj.CoreCompileInputs.cache
+D:\Cofinal\PaginaWeb\Ingenio.BO\obj\Release\Ingenio.BO.csproj.CopyComplete
+D:\Cofinal\PaginaWeb\Ingenio.BO\obj\Release\Ingenio.BO.dll
+D:\Cofinal\PaginaWeb\Ingenio.BO\obj\Release\Ingenio.BO.pdb

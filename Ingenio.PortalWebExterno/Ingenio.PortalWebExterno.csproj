@@ -627,6 +627,13 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="Content\sass\prueba.scss" />
+    <Content Include="Content\sass\abstracts\_colors.scss" />
+    <Content Include="Content\sass\abstracts\_fonts.scss" />
+    <Content Include="Content\sass\components\_button.scss" />
+    <Content Include="Content\sass\base\_typography.scss" />
+    <Content Include="Content\sass\pages\_home.scss" />
+    <Content Include="Content\sass\pages\_ahorro.scss" />
+    <Content Include="Content\sass\abstracts\_functions.scss" />
     <None Include="PortaWeb.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -783,6 +790,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\sass\layout\" />
+    <Folder Include="Content\sass\themes\" />
     <Folder Include="edithtml\" />
     <Folder Include="Estilos\" />
     <Folder Include="img\Img_Web2\App_LocalResources\" />

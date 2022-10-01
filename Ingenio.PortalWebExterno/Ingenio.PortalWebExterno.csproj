@@ -634,6 +634,7 @@
     <Content Include="Content\sass\pages\_home.scss" />
     <Content Include="Content\sass\pages\_ahorro.scss" />
     <Content Include="Content\sass\abstracts\_functions.scss" />
+    <Content Include="Content\sass\components\_navbar.scss" />
     <None Include="PortaWeb.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

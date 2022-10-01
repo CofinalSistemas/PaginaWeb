@@ -75,6 +75,56 @@ content-video > myButtons:hover {
   text-decoration: none;
   text-align: center; }
 
+#top {
+  background-color: rgba(224, 85, 20, 0.75);
+  color: #eeeeee;
+  padding: 10px 0; }
+  #top .login {
+    float: right; }
+    #top .login a {
+      font-size: 14px;
+      color: #eeeeee;
+      margin-right: 15px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.1em; }
+  #top .light {
+    background: #fff;
+    color: #999999;
+    border-bottom: solid 1px #eeeeee; }
+  #top .social {
+    float: right;
+    text-align: right;
+    display: flex;
+    flex-direction: row; }
+    #top .social a {
+      font-size: 1em;
+      color: white;
+      width: 0.5rem;
+      height: 0.5rem;
+      /*border: 3px solid #FB7601;*/
+      border-radius: 50%;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      /* Cambio de colores de redes Sociales*/ }
+      #top .social a.facebook {
+        background-color: #4460ae; }
+      #top .social a.gplus {
+        background-color: #c21f25; }
+      #top .social a.twitter {
+        background-color: #1d9bf0; }
+      #top .social a.email {
+        background-color: #4a7f45; }
+      #top .social a.youtube {
+        background-color: red;
+        color: white; }
+      #top .social a.instagram {
+        background-image: linear-gradient(to right, #f09433 10%, #e6683c 20%, #dc2743 60%, #dc2743 80%, #bc1888 100%); }
+
 /* Variables*/
 .gBoxShadow {
   /*background-color: #f7f8f8;*/
@@ -134,11 +184,6 @@ section.section {
   align-items: center;
   justify-content: center;
   margin: 0 15px 0 0; }
-
-#top {
-  background-color: rgba(224, 85, 20, 0.75);
-  color: #eeeeee;
-  padding: 10px 0; }
 
 .titulos > h3 {
   font-size: 30px; }

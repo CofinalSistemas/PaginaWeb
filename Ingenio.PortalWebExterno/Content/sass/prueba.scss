@@ -3,6 +3,7 @@
 @import 'abstracts/functions.scss';
 @import 'pages/home.scss';
 @import 'components/button.scss';
+@import 'components/_navbar.scss';
 
 /* Variables*/
 
@@ -84,13 +85,6 @@ section.section {
     @include obj-center();
     margin: 0 15px 0 0;
 }
-
-#top {
-    background-color: $primary-color;
-    color: #eeeeee;
-    padding: 10px 0;
-}
-
 
 .titulos > h3 {
     font-size: size(5);

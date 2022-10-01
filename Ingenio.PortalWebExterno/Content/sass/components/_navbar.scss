@@ -1,0 +1,76 @@
+﻿@import '../abstracts/_colors.scss';
+
+#top {
+
+    background-color: $primary-color;
+    color: #eeeeee;
+    padding: 10px 0;
+
+    .login {
+        float: right;
+
+        a {
+            font-size: 14px;
+            color: #eeeeee;
+            margin-right: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    .light {
+        background: #fff;
+        color: #999999;
+        border-bottom: solid 1px #eeeeee;
+    }
+
+    .social {
+        float: right;
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+
+        a {
+            font-size: 1em;
+            color: white;
+            width: 0.5rem;
+            height: 0.5rem;
+            /*border: 3px solid #FB7601;*/
+            border-radius: 50%;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+
+            /* Cambio de colores de redes Sociales*/
+            
+            &.facebook {
+                background-color: #4460ae;
+            }
+
+            &.gplus {
+                background-color: #c21f25;
+            }
+
+            &.twitter {
+                background-color: rgb(29, 155, 240);
+            }
+
+            &.email {
+                background-color: #4a7f45;
+            }
+
+            &.youtube {
+                background-color: red;
+                color: white;
+            }
+
+            &.instagram {
+                background-image: linear-gradient( to right, rgb(240, 148, 51) 10%, rgb(230, 104, 60) 20%, rgb(220, 39, 67) 60%, rgb(220, 39, 67) 80%, rgb(188, 24, 136) 100% );
+            }
+        }
+    }
+}

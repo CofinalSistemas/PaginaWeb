@@ -300,11 +300,6 @@
   color: #fb7601;
   margin: 20px 0 20px 0;
 }
-/*#top {
-  background-color: rgba(224, 85, 20, 0.75);
-  color: #eeeeee;
-  padding: 10px 0;
-}*/
 #formulario-2 > form > input,
 #formulario-2 > form > label {
   width: 90%;
@@ -339,85 +334,7 @@
     color: white;
     text-align: center;
   }
-  /* #top p {
-    margin: 0;
-    font-size: 12px;
-  } */
-  /* Se puede modificar el header*/
-  #top .social {
-    float: right;
-    text-align: right;
-    display: flex;
-    flex-direction: row;
-    /*align-items: center;*/
-    /*justify-content: center;*/
-  }
   
-  #top .social a {
-    font-size: 1em;
-    color: #fb7601;
-    width: 0.5rem;
-    height: 0.5rem;
-    /*border: 3px solid #FB7601;*/
-    border-radius: 50%;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-  }
-  
-  /* Cambio de colores de redes Sociales*/
-  
-  #top .social a:hover {
-    color: #fff;
-  }
-  
-  #top .social a.facebook {
-    background-color: #4460ae;
-  }
-  
-  #top .social a.gplus {
-    background-color: #c21f25;
-  }
-  
-  #top .social a.twitter {
-    background-color: rgb(29, 155, 240);
-  }
-  
-  #top .social a.instagram {
-    background-image: linear-gradient(
-      to right,
-      rgb(240, 148, 51) 10%,
-      rgb(230, 104, 60) 20%,
-      rgb(220, 39, 67) 60%,
-      rgb(220, 39, 67) 80%,
-      rgb(188, 24, 136) 100%
-    );
-  }
-  
-  #top .social a.email {
-    background-color: #4a7f45;
-  }
-  
-  #top .social a.youtube {
-    background-color: red;
-    color: white;
-  }
-  
-  #top .login {
-    float: right;
-  }
-  
-  #top .login a {
-    font-size: 14px;
-    color: #eeeeee;
-    margin-right: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-  }
 /* Slider Video*/
 
 #Video_Slider {
@@ -898,12 +815,6 @@ ul.list-style-none {
   #top .login {
     float: left;
   }
-}
-
-#top.light {
-  background: #fff;
-  color: #999999;
-  border-bottom: solid 1px #eeeeee;
 }
 
 #top.light .login a {

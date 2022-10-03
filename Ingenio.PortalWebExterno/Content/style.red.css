@@ -240,9 +240,7 @@
 
 /* Cambios Actualizados*/
 
-#navbar {
-  padding: 10px;
-}
+
 #sliderVideo {
   align-items: center;
 }
@@ -329,11 +327,7 @@
   
 /* Slider Video*/
 
-#Video_Slider {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
+
 
 #sliderVideo {
   /*position: fixed;*/

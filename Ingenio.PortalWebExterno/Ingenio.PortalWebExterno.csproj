@@ -477,6 +477,17 @@
     <Content Include="img\Logos\seguvida1v2.png" />
     <Content Include="img\Logos\vivien.png" />
     <Content Include="img\Logos\woccu.jpg" />
+    <Content Include="img\LOGOS_CREDITO\CARTERA1.jpg" />
+    <Content Include="img\LOGOS_CREDITO\cofinagro1.png" />
+    <Content Include="img\LOGOS_CREDITO\consumo1.jpg" />
+    <Content Include="img\LOGOS_CREDITO\EDUCATIVO3.jpg" />
+    <Content Include="img\LOGOS_CREDITO\LIBRANZA1.jpg" />
+    <Content Include="img\LOGOS_CREDITO\MICROCRE.png" />
+    <Content Include="img\LOGOS_CREDITO\ROTATIVO1.png" />
+    <Content Include="img\LOGOS_CREDITO\Seguros\AGROPECUARIO.png" />
+    <Content Include="img\LOGOS_CREDITO\Seguros\ASOCIADO.png" />
+    <Content Include="img\LOGOS_CREDITO\Seguros\seg-ahorros.png" />
+    <Content Include="img\LOGOS_CREDITO\VIVIENDA2.jpg" />
     <Content Include="img\marker.png" />
     <Content Include="img\micro.png" />
     <Content Include="img\Micro2.jpg" />

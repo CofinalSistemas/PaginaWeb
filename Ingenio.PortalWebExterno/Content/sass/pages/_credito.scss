@@ -1,14 +1,82 @@
 ﻿@import '../abstracts/_functions.scss';
+@import '../abstracts/_colors.scss';
+
 #c_Credito {
-    height: 400px;
-    width: 100%;
     @include obj-center();
     flex-wrap:wrap;
+    flex-direction:row;
 }
 
-.card_Credito{
-    width:320px;
-    height:200px;
-    background:red;
-    margin:20px;
+.card_Credito {
+    width: 200px;
+    height: 200px;
+    background: red;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    &:hover p{
+        clip-path: circle(150% at top left);
+    }
+
+    img {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        object-fit: cover;
+        width: 100%;
+        /*z-index:1;*/
+    }
+
+    p {
+        background:$secondary-color-sombra;
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+        color:white;
+        font-size: 2.5rem;
+
+        display:grid;
+        text-align:center;
+        place-items: center;
+
+        clip-path: circle(0 at top left);
+        transition: clip-path 0.4s;
+
+    }
+}
+
+.page__Credito{
+    margin:10px;
+}
+
+.componente__Credito {
+    /*background: $primary-color;*/
+
+    @include obj-center();
+    flex-direction: column;
+    padding: 20px;
+    /*background: #f3f3f3;*/
+    /*border-radius:0 !important;*/
+    border-top: 1px solid $primary-color;
+
+    h2 {
+        color: $secondary-color;
+    }
+
+    img {
+        width: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    a {
+        width: 100%;
+        transition: all 0.1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+        &:hover, &:focus {
+            background: linear-gradient(90deg, $primary-color 0%, $secondary-color 99%);
+            color: white;
+        }
+    }
 }

@@ -1,4 +1,6 @@
-﻿/* FUNCION DE GIRAR*/
+﻿@import '_colors.scss';
+
+/* FUNCION DE GIRAR*/
 .girar {
     display: inline-block;
     border-radius: 10px;
@@ -62,3 +64,8 @@
     justify-content: center;
 }
 
+.gBoxShadow {
+    /*background-color: #f7f8f8;*/
+    border-radius: 5%;
+    box-shadow: 0px 15px 30px -20px $sombras-color, 0px 15px 30px -20px $sombras-color, 0px 15px 30px -20px $sombras-color;
+}

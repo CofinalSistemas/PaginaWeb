@@ -42,6 +42,11 @@
   transform-origin: bottom left; }
 
 /*Fin de Funcion de subrayar*/
+.gBoxShadow {
+  /*background-color: #f7f8f8;*/
+  border-radius: 5%;
+  box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5); }
+
 /*Zonas que ocultar*/
 #nuestrosServicios {
   display: none; }
@@ -93,6 +98,11 @@
   transform-origin: bottom left; }
 
 /*Fin de Funcion de subrayar*/
+.gBoxShadow {
+  /*background-color: #f7f8f8;*/
+  border-radius: 5%;
+  box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5); }
+
 .big-container {
   max-width: 1200px;
   margin-right: auto;
@@ -104,12 +114,49 @@
   justify-content: center;
   flex-direction: column; }
 
+#Video_Slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5); }
+
 content-video > myButtons:hover {
   color: white; }
 
 @media screen and (max-width: 899px) {
   .centerSpan {
     margin: 0 auto; } }
+
+/* Contenido */
+.tarjetas-Centradas .myButtons {
+  margin: 20px auto;
+  transition: all 0.2s ease-in-out; }
+  .tarjetas-Centradas .myButtons:hover {
+    background: rgba(236, 28, 36, 0.75);
+    color: white; }
+
+.tarjetas-Centradas i {
+  transition: all 0.2s ease-in-out; }
+
+.animacion_arriba:hover > i {
+  animation: wobble_vertical 1s ease-in-out;
+  animation-iteration-count: 1; }
+
+.animacion_arriba:focus > i {
+  animation: wobble_vertical 1s ease-in-out;
+  animation-iteration-count: 1; }
+
+@keyframes wobble_vertical {
+  0% {
+    transform: translateY(5px); }
+  20% {
+    transform: translateY(-5px); }
+  60% {
+    transform: translateY(2px); }
+  80% {
+    transform: translateY(-2px); }
+  100% {
+    transform: translateY(0); } }
 
 /* FUNCION DE GIRAR*/
 .girar {
@@ -154,19 +201,71 @@ content-video > myButtons:hover {
   transform-origin: bottom left; }
 
 /*Fin de Funcion de subrayar*/
+.gBoxShadow {
+  /*background-color: #f7f8f8;*/
+  border-radius: 5%;
+  box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5); }
+
 #c_Credito {
-  height: 400px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  flex-direction: row; }
 
 .card_Credito {
-  width: 320px;
+  width: 200px;
   height: 200px;
   background: red;
-  margin: 20px; }
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr; }
+  .card_Credito:hover p {
+    clip-path: circle(150% at top left); }
+  .card_Credito img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    object-fit: cover;
+    width: 100%;
+    /*z-index:1;*/ }
+  .card_Credito p {
+    background: rgba(236, 28, 36, 0.5);
+    grid-column: 1/2;
+    grid-row: 1/2;
+    color: white;
+    font-size: 2.5rem;
+    display: grid;
+    text-align: center;
+    place-items: center;
+    clip-path: circle(0 at top left);
+    transition: clip-path 0.4s; }
+
+.page__Credito {
+  margin: 10px; }
+
+.componente__Credito {
+  /*background: $primary-color;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  /*background: #f3f3f3;*/
+  /*border-radius:0 !important;*/
+  border-top: 1px solid rgba(224, 85, 20, 0.75); }
+  .componente__Credito h2 {
+    color: rgba(236, 28, 36, 0.75); }
+  .componente__Credito img {
+    width: 50%;
+    object-fit: cover;
+    margin: 0 auto; }
+  .componente__Credito a {
+    width: 100%;
+    transition: all 0.1s cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+    .componente__Credito a:hover, .componente__Credito a:focus {
+      background: linear-gradient(90deg, rgba(224, 85, 20, 0.75) 0%, rgba(236, 28, 36, 0.75) 99%);
+      color: white; }
 
 .myButtons {
   padding: 10px 50px;
@@ -182,7 +281,7 @@ content-video > myButtons:hover {
   text-align: center; }
 
 .myButtons:hover {
-  color: #ec1c24; }
+  color: rgba(236, 28, 36, 0.75); }
 
 .slick-prev:before {
   /*content: "<";*/
@@ -196,7 +295,7 @@ content-video > myButtons:hover {
 
 .slick-dots {
   position: relative;
-  color: #ec1c24 !important; }
+  color: rgba(236, 28, 36, 0.75) !important; }
   .slick-dots li {
     margin: 0 20px 0 0; }
     .slick-dots li button {
@@ -205,7 +304,13 @@ content-video > myButtons:hover {
       overflow: hidden;
       border-radius: 20%;
       width: 3vh;
-      height: 1vh; }
+      height: 1vh;
+      animation: all 1s case ease-out; }
+      .slick-dots li button:hover, .slick-dots li button:focus {
+        background: rgba(236, 28, 36, 0.75); }
+
+.my-slider .slick-list {
+  margin: 0px 10px; }
 
 /* FUNCION DE GIRAR*/
 .girar {
@@ -250,6 +355,11 @@ content-video > myButtons:hover {
   transform-origin: bottom left; }
 
 /*Fin de Funcion de subrayar*/
+.gBoxShadow {
+  /*background-color: #f7f8f8;*/
+  border-radius: 5%;
+  box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5); }
+
 #top {
   background-color: rgba(224, 85, 20, 0.75);
   color: #eeeeee;
@@ -257,6 +367,9 @@ content-video > myButtons:hover {
   /*.container2{
         max-width:1400px;
     }*/ }
+  @media only screen and (min-width: 1300px) {
+    #top .container2 {
+      margin: 0 50px 0 50px; } }
   #top .login {
     float: right; }
     #top .login a {
@@ -303,12 +416,13 @@ content-video > myButtons:hover {
       #top .social a.instagram {
         background-image: linear-gradient(to right, #f09433 10%, #e6683c 20%, #dc2743 60%, #dc2743 80%, #bc1888 100%); }
 
-/* Variables*/
-.gBoxShadow {
-  /*background-color: #f7f8f8;*/
-  border-radius: 5%;
-  box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5); }
+#navbar {
+  padding: 10px; }
+  @media only screen and (min-width: 1300px) {
+    #navbar {
+      margin: 0 50px 0 50px; } }
 
+/* Variables*/
 .tituleAnimation {
   color: #e06d23;
   font: 500;
@@ -319,7 +433,7 @@ content-video > myButtons:hover {
   transition: all 0.3s; }
 
 .tituleAnimation:hover {
-  color: #ec1c24;
+  color: rgba(236, 28, 36, 0.75);
   /*margin: 200px;*/
   letter-spacing: -1.3px; }
 
@@ -335,7 +449,7 @@ content-video > myButtons:hover {
   height: 2px;
   bottom: -20px;
   left: 40%;
-  background: #ec1c24;
+  background: rgba(236, 28, 36, 0.75);
   /*background:blue;*/
   transform: scale(0);
   transform-origin: bottom right;

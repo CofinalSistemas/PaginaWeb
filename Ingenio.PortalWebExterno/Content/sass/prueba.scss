@@ -2,7 +2,7 @@
 @import 'abstracts/fonts.scss';
 @import 'abstracts/functions.scss';
 @import 'pages/home.scss';
-@import 'pages/_credito.scss';
+@import 'pages/credito.scss';
 @import 'components/button.scss';
 @import 'components/_navbar.scss';
 
@@ -10,13 +10,7 @@
 
 $unit: 6px;
 
-.gBoxShadow {
-    /*background-color: #f7f8f8;*/
-    border-radius: 5%;
-    box-shadow: 0px 15px 30px -20px $sombras-color, 
-                0px 15px 30px -20px $sombras-color, 
-                0px 15px 30px -20px $sombras-color;
-}
+
 .tituleAnimation {
     color: #e06d23;
     font: 500;

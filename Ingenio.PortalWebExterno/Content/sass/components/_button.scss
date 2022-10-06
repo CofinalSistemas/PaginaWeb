@@ -19,41 +19,98 @@
     color:$secondary-color;
 }
 
+/*.slick-next {*/
+    /*background: red;*/
+    /*content: ">";
+    z-index: 1;
+    height: 100%;
+    width: 50px;
+    border-radius: 3px;
+    outline: none !important;
+    opacity: 1;
+
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f007";
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin: 0 auto;
+        line-height: 40px;
+        border-radius: 50%;
+        color: transparent;
+        opacity: .5;
+        font-weight: 900;
+        background: $primary-color;
+        box-shadow: 0 0 0 0px $secondary-color;
+        transition: all .25s ease-in-out;
+    }
+}*/
+
+.slick-next:before {
+    /*content: "<";*/
+    color: $primary-color;
+    font-size: 30px;
+    padding: 5px;
+}
+
 .slick-prev:before {
     /*content: "<";*/
     color: $primary-color;
     font-size: 30px;
+    padding:5px;
 }
 
-.slick-next:before {
-    /*content: ">";*/
-    color: $primary-color;
-    font-size: 30px;
-}
 
 .slick-dots {
     position: relative;
-    color: $secondary-color !important;
+    /*color: $secondary-color !important;*/
 
     li {
         margin: 0 20px 0 0;
 
-        button {
-            background: $primary-color;
-            text-indent: -9999px;
-            overflow: hidden;
-            border-radius: 20%;
-            width: 3vh;
-            height: 1vh;
-            animation: all 1s case ease-out;
+        &.slick-active {
 
-            &:hover, &:focus {
-                background: $secondary-color
+            button {
+                padding: 6px 12px;
+
+                &:before {
+                    color: $secondary-color;
+                }
             }
         }
 
+        button {
+            width: auto;
+            height: auto;
+            color: $primary-color;
+            border-radius: 10%;
+            /*background: $primary-color;*/
+            /*text-indent: -9999px;*/
+            /*overflow: hidden;*/
+            /*border-radius: 20%;*/
+            /*width: 3vh;*/
+            /*height: 1vh;*/
+            /*padding: 6px;*/
+            /*outline: dashed red;*/
+            animation: all 1s case ease-out;
+
+
+
+            &:before {
+                color: $primary-color;
+            }
+            /*&:hover, &:focus {
+                background: $secondary-color
+
+            }*/
+        }
     }
 }
-.my-slider .slick-list {
-    margin: 0px 10px;
+.slick-active{
+    color:$secondary-color;
 }
+/*.my-slider .slick-list {
+    margin: 0px 10px;
+}*/

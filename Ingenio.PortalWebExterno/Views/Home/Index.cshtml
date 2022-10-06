@@ -46,10 +46,6 @@
     @Styles.Render("~/Content/plantilla")
     @Styles.Render("~/Content/plantillaHome")
 
-
-    <link rel="stylesheet" href="~/Content/sass/prueba.min.css" />
-
-
     <!--Ventana emergente-->
     <!--   Estilos Modal -->
     <style>
@@ -465,12 +461,12 @@
             <div class="big-container">
                 <section id="Video_Slider">
                     <video autoplay muted loop id="sliderVideo">
-                        <source src="~/Videos/SPOTT-GENERAL-MAYO-2019-1.mp4" type="video/mp4" />
+                        <source src="~/Videos/Animacion_Banner.mp4" type="video/mp4" />
                         Your browser does not support HTML5 video.
                     </video>
                     <div class="content-video">
-                        <h3>Bienvenido a Cofinal</h3>
-                        <p>Somos una cooperativa de ahorro y crédito, orgullosamente <br /> Colombiana, cuyo motor son nuestros asociados ¡Aquí perteneces¡</p>
+                        @*<h3>Bienvenido a Cofinal</h3> *@
+                        @*<p>Somos una cooperativa de ahorro y crédito, orgullosamente <br /> Colombiana, cuyo motor son nuestros asociados ¡Aquí perteneces¡</p>*@
                         <a href="#" class="myButtons centerSpan">Actualiza tu información personal aqui</a>
                     </div>
                 </section>
@@ -1258,7 +1254,7 @@
                 slidesToScroll: 1,
                 arrows: true,
                 centermode: true,
-                //dots: true,
+                dots: true,
                 speed: 500,
                 infinite: true,
                 autoplaySpeed: 5000,

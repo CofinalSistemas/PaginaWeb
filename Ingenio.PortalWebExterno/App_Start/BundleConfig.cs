@@ -119,7 +119,8 @@ namespace Ingenio.PortalWebExterno
                         "~/Content/animate.css",
                         "~/Content/style.red.css",
                         "~/Content/custom.css",
-                        "~/Content/sweetalert.css"
+                        "~/Content/sweetalert.css",
+                        "~/Content/sass/main_style.min.css"
                       ) );
             bundles.Add( new StyleBundle( "~/Content/plantillafundacion" ).Include(
                        "~/Content/animate.css",

@@ -14,5 +14,13 @@
   {
     "outputFile": "Content/sass/prueba1.css",
     "inputFile": "Content/sass/prueba1.scss"
+  },
+  {
+    "outputFile": "Content/sass/main__Style.css",
+    "inputFile": "Content/sass/main__Style.scss"
+  },
+  {
+    "outputFile": "Content/sass/main_style.css",
+    "inputFile": "Content/sass/main_style.scss"
   }
 ]

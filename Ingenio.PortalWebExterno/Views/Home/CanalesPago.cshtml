@@ -1,0 +1,229 @@
+﻿@{
+    ViewBag.Title = "Canales de Pago";
+    ViewBag.titulo = "Canales de Pago";
+    ViewBag.url = Url.Action("index", "home");
+    ViewBag.activo = "CanalesPago";
+}
+<style>
+    .text-justify {
+        font-size: 18px;
+    }
+</style>
+
+<section class="container__Convenio">
+    <div class="pago__Header">
+        <div class="pago__text">
+            <h2>Nuestros canales de pago</h2>
+            <h3>Paga facil tu credito como prefieras</h3>
+            <p>
+                Así de facil pagas tu crédito en Cofinal, cada mes te enviamos el extracto de crédito, en el que <br>
+                te contamis cuánto has pagado, como va tu prestamo, cuál es el valor de tu cuota mensual, las <br>
+                fechas de pago para hacerlo y el número de referencias de pago, tambien un mensaje de texto <br>
+                recordándote el pago. Para pagar puedes usar el medio de pago que prefieras:
+            </p>
+        </div>
+        <img src="~/img/Convenios/pagos.png">
+    </div>
+
+    <div class="pagos__main">
+        <div class="pagos__items">
+            <div class="container__img"><img src="https://registro.pse.com.co/PSEUserRegister/assets/logo-pse.png"></div>
+            <div class="pago_opciones">
+                <h3>PSE</h3>
+                <p>
+                    This....
+                </p>
+                <button id="pse" class="myButtons control_pago">Ingresa</button>
+            </div>
+        </div>
+        <div class="pagos__items">
+            <div class="container__img"><img src="https://www.coopcentral.com.co/file.asp?IDe=77&latabla=7&llf=0"></div>
+            <div class="pago_opciones">
+                <h3>APP RED COOPCENTRA</h3>
+                <p>
+                    This....
+                </p>
+                <button id="app_coopcentral"class="myButtons control_pago">Ingresa</button>
+            </div>
+        </div>
+        <div class="pagos__items">
+            <div class="container__img"><img src="https://www.efecty.com.co/WebApi//uploads/logo-efecty_nuevo-01.png"></div>
+            <div class="pago_opciones">
+                <h3>EFECTY</h3>
+                <p>
+                    This....
+                </p>
+                <button id="efecty" class="myButtons control_pago">Ingresa</button>
+            </div>
+        </div>
+        <div class="pagos__items">
+            <div class="container__img"><img src="https://www.redcoopcentral.com/wp-content/uploads/2021/03/Logo-Red_Coopcentral-X1.png"></div>
+            <div class="pago_opciones">
+                <h3>Transferencia</h3>
+                <p>
+                    This....
+                </p>
+                <button id="trans" class="myButtons control_pago">Ingresa</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<dialog class="modal_Agencias" id="dialog_pse">
+    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+    <div class="container__Modal_pagos">
+        <div class="header_modal_pagos">
+            <h2>PSE</h2>
+            <img src="https://registro.pse.com.co/PSEUserRegister/assets/logo-pse.png" />
+        </div>
+        <div>Conoce más</div>
+    </div>
+</dialog>
+
+<dialog class="modal_Agencias" id="dialog_app_coopcentral">
+    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+    <div class="container__Modal">
+        <div class="header_modal">
+            <h2>Finagro</h2>
+            <img src="https://caracoltv.brightspotcdn.com/dims4/default/39d8175/2147483647/strip/true/crop/1000x566+0+0/resize/1000x566!/quality/90/?url=http%3A%2F%2Fcaracol-brightspot.s3.amazonaws.com%2Ffb%2F28%2F5d677744438d8427422e73e4102b%2Fpalmira-valle-del-cauca.jpg" />
+        </div>
+        <p>
+            <strong>Dirección: </strong><br>
+            Calle 5ta. No. 03-77<br>
+            <strong>Telefono: </strong><br>
+            Teléfono: 7336300 Extensiones: 200 - 201<br>
+            <strong>Horario de Atencion: </strong>
+            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+        </p>
+        <div class="imagen_Google">GOOGLE MAPS</div>
+    </div>
+</dialog>
+
+<dialog class="modal_Agencias" id="dialog_efecty">
+    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+    <div class="container__Modal">
+        <div class="header_modal">
+            <h2>Finagro</h2>
+            <img src="https://caracoltv.brightspotcdn.com/dims4/default/39d8175/2147483647/strip/true/crop/1000x566+0+0/resize/1000x566!/quality/90/?url=http%3A%2F%2Fcaracol-brightspot.s3.amazonaws.com%2Ffb%2F28%2F5d677744438d8427422e73e4102b%2Fpalmira-valle-del-cauca.jpg" />
+        </div>
+        <p>
+            <strong>Dirección: </strong><br>
+            Calle 5ta. No. 03-77<br>
+            <strong>Telefono: </strong><br>
+            Teléfono: 7336300 Extensiones: 200 - 201<br>
+            <strong>Horario de Atencion: </strong>
+            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+        </p>
+        <div class="imagen_Google">GOOGLE MAPS</div>
+    </div>
+</dialog>
+
+<dialog class="modal_Agencias" id="dialog_trans">
+    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+    <div class="container__Modal">
+        <div class="header_modal">
+            <h2>Finagro</h2>
+            <img src="https://caracoltv.brightspotcdn.com/dims4/default/39d8175/2147483647/strip/true/crop/1000x566+0+0/resize/1000x566!/quality/90/?url=http%3A%2F%2Fcaracol-brightspot.s3.amazonaws.com%2Ffb%2F28%2F5d677744438d8427422e73e4102b%2Fpalmira-valle-del-cauca.jpg" />
+        </div>
+        <p>
+            <strong>Dirección: </strong><br>
+            Calle 5ta. No. 03-77<br>
+            <strong>Telefono: </strong><br>
+            Teléfono: 7336300 Extensiones: 200 - 201<br>
+            <strong>Horario de Atencion: </strong>
+            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+        </p>
+        <div class="imagen_Google">GOOGLE MAPS</div>
+    </div>
+</dialog>
+
+@*<script>
+    // const body = document.querySelector("body");
+    // console.log(body);
+
+    const convenios = document.querySelectorAll(".convenio__items");
+    const convenios_controls = document.querySelectorAll(".convenio__boton");
+
+    document.querySelectorAll(".convenio__boton").forEach((item) => {
+        // console.log(convenios);
+        item.addEventListener("click", () => {
+            convenios_controls.forEach(a => a.classList.remove('control_con_active'));
+            item.classList.add('control_con_active')
+            console.log(`Esto: ${item.classList}`)
+            convenios.forEach(convenio => convenio.classList.add('con_desactive'));
+            document.querySelectorAll(".convenio__items").forEach((convenio) => {
+                // console.log(item.id)
+                if (item.id == "todos") {
+                    //console.log("entro");
+                    convenios.forEach(convenio => convenio.classList.remove('con_desactive'));
+                } else {
+                    // console.log(`Nuevo:  ${item.id}`);
+                    const cla = `${item.id}_item`
+                    // console.log(cla)
+                    const clases_convenio = convenio.classList.value;
+                    // console.log(cla,clases_convenio)
+                    if (clases_convenio.match(cla)) {
+                        convenio.classList.remove('con_desactive')
+                        console.log(convenio.classList.value)
+                    };
+                }
+                // console.log(result);
+            })
+            //   const stringModal = `dialog_${item.id}`;
+            //   // console.log(`#${stringModal}`);
+            //   const modal = document.querySelector(`#${stringModal}`)
+            //   console.log(event)
+            //   modal.showModal();
+            //   body.style.overflow = "hidden";
+            //   document.querySelectorAll(".close-button").forEach((item) => {
+            //     item.addEventListener("click", (event) => {
+            //       modal.close()
+            //       body.style.overflow = "auto";
+            //       // console.log(item.classList.contains("close-button"));
+            //     });
+            //     window.onclick = function (event) {
+            //     // console.log(event.target);
+            //     console.log(modal);
+            //     if (event.target == modal) {
+            //       modal.close();
+            //       body.style.overflow = "auto";
+            //     }
+            //   };
+            //   });
+        });
+    });
+</script>*@
+
+<script>
+    const body = document.querySelector("body");
+    //console.log(body);
+    document.querySelectorAll(".control_pago").forEach((item) => {
+        item.addEventListener("click", (event) => {
+            //console.log(item)
+
+            const stringModal = `dialog_${item.id}`;
+
+            // console.log(`#${stringModal}`);
+            const modal = document.querySelector(`#${stringModal}`)
+            //console.log(event)
+            modal.showModal();
+            body.style.overflow = "hidden";
+            document.querySelectorAll(".close-button").forEach((item) => {
+                item.addEventListener("click", (event) => {
+                    modal.close()
+                    body.style.overflow = "auto";
+                    // console.log(item.classList.contains("close-button"));
+                });
+                window.onclick = function (event) {
+                    // console.log(event.target);
+                    //console.log(modal);
+                    if (event.target == modal) {
+                        modal.close();
+                        body.style.overflow = "auto";
+                    }
+                };
+            });
+        });
+    });
+</script>
+

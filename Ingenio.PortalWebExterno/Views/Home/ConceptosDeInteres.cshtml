@@ -5,7 +5,7 @@
     ViewBag.activo = "conoscanosActivo";
 }
 
-<script type="text/javascript">
+@*<script type="text/javascript">
     var _smartsupp = _smartsupp || {};
     _smartsupp.key = 'b7e1cad8ae31b522b9a3b64e60182dc54a8c7acb';
     window.smartsupp || (function (d) {
@@ -14,46 +14,8 @@
         c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
         c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
     })(document);
-</script>
+</script>*@
 
-
-
-<style>
-
-    .item-conceptosinteres, .item-conceptosinteres a {
-        border: none !important;
-    }
-
-    .item-conceptosinteres {
-        background: #E1852C;
-    }
-
-    .item-conceptosinteres a {
-        color: black;
-        font-weight: 400;
-        font-size: 19px;
-    }
-
-    .item-conceptosinteres:hover {
-        background: #bf640b;
-     }
-
-    .item-conceptosinteres.active {
-        background: white;
-        text-decoration: underline;
-    }
-
-     .item-conceptosinteres.active a {
-        color: black;
-        font-weight: 500;
-     }
-
-
-    .text-justify {
-        font-size: 18px;
-
-    }
-</style>
 
 
 
@@ -65,15 +27,14 @@
     <!-- contenido-->
 <section class="contenido">
     <div class="container" style="background-color: rgba(255, 255, 255, 0.8);">
-        <ul class="nav nav-tabs" style="background-color:#ffffff">
-            <li id="valo" class="item-conceptosinteres active" ><a id="an" href="#valoresCoo" data-toggle="tab">Valores cooperativos</a></li>
-            <li id="prin" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#principios">Principios cooperativos</a></li>
-            <li id="gob" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#gobierno">Gobierno corporativo</a></li>
-            <li id="pol" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#politica">Código de Etica y Conducta</a></li>
-            <li id="est" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#estatutos">Estatutos</a></li>
-            <li id="est" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#r_credito">Reglamentos Crédito</a></li>
-
-        </ul>
+        <div class="conceptos_container">
+            <div id="valo" class="item-conceptosinteres active" ><a id="an" href="#valoresCoo"  data-toggle="tab">Valores cooperativos</a></div>
+            <div id="prin" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#principios">Principios cooperativos</a></div>
+            <div id="gob" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#gobierno">Gobierno corporativo</a></div>
+            <div id="pol" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#politica">Código de Etica y Conducta</a></div>
+            <div id="est" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#estatutos">Estatutos</a></div>
+            <div id="est" class="item-conceptosinteres"><a id="an" data-toggle="tab" href="#r_credito">Reglamentos Crédito</a></div>
+        </div>
 
         <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8); font-size: 18px; ">
             <div class="tab-pane active" id="valoresCoo">
@@ -234,7 +195,7 @@
 </div>
 
 <!-- scrip para parallax-->
-<script type="text/javascript">
+@*<script type="text/javascript">
     function parallax() {
         setpos("#pb0");
         setpos("#pb1");
@@ -263,5 +224,28 @@
     }).scroll(function () {
         parallax();
     });
-</script>
+</script>*@
 
+<script>
+    const list__somos = document.querySelectorAll(".item-conceptosinteres");
+
+    document.querySelectorAll(".item-conceptosinteres").forEach((somos) => {
+        somos.addEventListener("click", () => {
+            list__somos.forEach(somosT => somosT.classList.remove('active'));
+            //console.log(agencia.id);
+            somos.classList.add('active');
+            //document.querySelectorAll(".tab-pane").forEach((item) => {
+            //    item.classList.remove('active');
+            //    //console.log(item.classList);
+            //    //console.log(agencia)
+            //    //console.log(item.id);
+            //    //console.log(item);
+            //    const agencia_lugar = `${agencia.id}_Agencia`
+            //    if (item.id == agencia_lugar) {
+            //        //console.log(item.id)
+            //        item.classList.add('active');
+            //    }
+            //})
+        });
+    })
+</script>

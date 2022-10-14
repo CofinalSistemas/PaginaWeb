@@ -325,7 +325,6 @@
 
                 <div class="carousel-inner">
 
-
                     @{
                         foreach (Ingenio.BO.Ingenio.Sliders slid in Sliders)
                         {
@@ -467,16 +466,17 @@
                     <div class="content-video">
                         @*<h3>Bienvenido a Cofinal</h3> *@
                         @*<p>Somos una cooperativa de ahorro y crédito, orgullosamente <br /> Colombiana, cuyo motor son nuestros asociados ¡Aquí perteneces¡</p>*@
-                        <a href="#" class="myButtons centerSpan">Actualiza tu información personal aqui</a>
+                        <a href="~/Home/ActualizacionDatos" class="myButtons centerSpan">Actualiza tu información personal aqui</a>
                     </div>
                 </section>
                 <!--Final fondo de Video -->
                 <!-- Seccion: En que te podemos ayudar -->
                 <section>
                     <div class="contenedor">
-                        <h3 class="tituleAnimation">¿En Que Te Podemos Ayudar?</h3>
+                        <h3 class="tituleAnimation">¿En que te podemos ayudar?</h3>
                         <div class="botones">
                             <button class="btn myButtons">Ahorro</button>
+
                             <button class="btn myButtons">Crédito</button>
                             <button class="btn myButtons">Quiero ser socio</button>
                             <button class="btn myButtons">Fondos sociales</button>
@@ -593,7 +593,8 @@
                 <!-- Tarjetas Contenedoras -->
                 <section class="tarjetas-contenedor">
                     <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
-                        <i aria-hidden="true" class="far fa-clock"></i>
+                        <img src="~/img/Img_Web2/iconoAhorro.png"/>
+                        @*<i aria-hidden="true" class="far fa-clock"></i>*@
                         <h3>Ahorro</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.

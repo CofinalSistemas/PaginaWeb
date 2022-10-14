@@ -5,46 +5,6 @@
     ViewBag.activo = "conoscanosActivo";
 }
 
-
-<style>
-
-    .item-agencias, .item-agencias a {
-        border: none !important;
-    }
-
-    .item-agencias {
-        background: #E1852C;
-    }
-
-    .item-agencias a {
-        color: black;
-        font-weight: 400;
-        font-size: 19px;
-    }
-
-    .item-agencias:hover {
-        background: #bf640b;
-    }
-
-    .item-agencias.active {
-        background: white;
-        text-decoration: underline;
-    }
-
-    .item-agencias.active a {
-        color: black;
-        font-weight: 500;
-    }
-
-
-    .text-justify {
-        font-size: 18px;
-    }
-</style>
-
-
-
-
 <script type="text/javascript">
     var _smartsupp = _smartsupp || {};
     _smartsupp.key = 'b7e1cad8ae31b522b9a3b64e60182dc54a8c7acb';
@@ -56,10 +16,12 @@
     })(document);
 </script>
 
+<script src="https://kit.fontawesome.com/f9533edd0d.js" crossorigin="anonymous"></script>
+
 <style>
     .contenido {
         @* background-image: url(/img/texture-bw.png);*@
-        padding-top: 20px;
+        /*padding-top: 20px;*/
         padding-bottom: 20px;
         @*-webkit-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
         -moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
@@ -84,204 +46,961 @@
 </div>-->
 <!-- contenido-->
 <section class="contenido">
-    <div class="container" style="background-color: rgba(255, 255, 255, 0.8); ">
-        <ul class="nav nav-tabs" style="background-color: #ffffff">
-            <li id="nar" class="item-agencias active"><a id="Nariñoo" href="#Nariño" data-toggle="tab">Nariño</a></li>
+    <div class="container container__nuestras_Agencias" style="background-color: rgba(255, 255, 255, 0.8); ">
+        @*<ul class="nav nav-tabs" style="background-color: #ffffff">
             <li id="Cau" class="item-agencias"><a data-toggle="tab" id="Caucaa" href="#Cauca">Cauca</a></li>
             <li id="Putu" class="item-agencias"><a data-toggle="tab" id="Putumayoo" href="#Putumayo">Putumayo</a></li>
             <li id="Valle" class="item-agencias"><a data-toggle="tab" id="Vallee" href="#ValledelCauca">Valle del Cauca</a></li>
             <li id="Punto" class="item-agencias"><a data-toggle="tab" id="PuntosAtencioon" href="#PuntosAtencion">Extensiones de Caja</a></li>
-
-        </ul>
+        </ul>*@
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="controles_Agencia">
+            <div id="nar" class="total_Agencias active">Nariño</div>
+            <div id="Cau" class="total_Agencias ">Cauca</div>
+            <div id="Putumayo" class="total_Agencias ">Putumayo</div>
+            <div id="Valle" class="total_Agencias ">Valle</div>
+            @*<div id="Punto" class="total_Agencias ">Extenciones</div>*@
+        </div>
 
         <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
-            <div class="tab-pane active" id="Nariño">
+            <div class="tab-pane active" id="nar_Agencia">
+                <div class="container__Agencias">
+                    <div id="Pasto" class="agencias agencia_2">
+                        <img src="https://www.cideu.org/wp-content/uploads/Pasto5.jpg" />
+                        <p>PASTO</p>
+                    </div>
+                    <div id="Sandona" class="agencias agencia_2">
+                        <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        <p>SANDONA</p>
+                    </div>
+                    <div id="Ipiales" class="agencias agencia_2">
+                        <img src="https://situr.narino.gov.co/storage/Clientes/situr_narino/principal/imagenes/contenidos/19-19_Parque_20_de_Julio_y_Catedral_de_Ipiales.JPG" />
+                        <p>IPIALES</p>
+                    </div>
+                    <div id="Consaca" class="agencias agencia_2">
+                        <img src="https://cdn.municipios.com.co/fotos/755-2017-11-25-17-06-913-L.jpg" />
+                        <p>CONSACÁ</p>
+                    </div>
+                    <div id="Buesaco" class="agencias agencia_2">
+                        <img src="https://colombiaextraordinaria.com/somos_colombia/external/img/img_departamentos/Buesacoimagen_ce.jpg" />
+                        <p>BUESACO</p>
+                    </div>
+                    <div id="Taminango" class="agencias agencia_2">
+                        <img src="https://www.viajarenverano.com/wp-content/uploads/2017/01/LaCalidosaFM.png" />
+                        <p>TAMINANGO</p>
+                    </div>
+                    <div id="Union" class="agencias agencia_2">
+                        <img src="https://2.bp.blogspot.com/-mvbWdO5axAM/WB0pINKgccI/AAAAAAAAAFg/T7BNIMT4imUtvdT7PrOaNje65lFUYUKMACEw/s1600/Iglesia_Ntra._Sra._del_Rosario.JPG" />
+                        <p>LA UNION</p>
+                    </div>
+                    <div id="Tumaco" class="agencias agencia_2">
+                        <img src="https://situr.narino.gov.co/storage/Clientes/situr_narino/principal/imagenes/contenidos/1063-31_Pen%CC%83a_El_Morro_y_Kioscos.jpg" />
+                        <p>TUMACO</p>
+                    </div>
+                    <div id="Linares" class="agencias agencia_2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Linares_%28plaza_principal%29.png" />
+                        <p>LINARES</p>
+                    </div>
+                    <div id="Ancuya" class="agencias agencia_2">
+                        <img src="https://www.viajarenverano.com/wp-content/uploads/2016/05/FrontisAncu.png" />
+                        <p>ANCUYA</p>
+                    </div>
+                    <div id="Tuquerres" class="agencias agencia_2">
+                        <img src="https://fastly.4sqi.net/img/general/600x600/45094903_5f8aHbK2KictpAWNY39eSSAQdU6DFDkTPPs95riZc9o.jpg" />
+                        <p>TUQUERRES</p>
+                    </div>
+                    <div id="Gualmatan" class="agencias agencia_2">
+                        <img src="https://3.bp.blogspot.com/-wBi8xhRVNro/WIydRRZ7w3I/AAAAAAABBAU/baie-UrzlYw197DNh39cdKtpXL0h9jBHgCLcB/s1600/01-TEMPLO%2BPARROQUIAL-GUALMATAN.jpg" />
+                        <p>GUALMATAN</p>
+                    </div>
+                    <div id="Guachucal" class="agencias agencia_2">
+                        <img src="https://radionacional-v3.s3.amazonaws.com/s3fs-public/senalradio/articulo-noticia/galeriaimagen/guachucal_plaza_-_copia.jpeg" />
+                        <p>GUACHUCAL</p>
+                    </div>
+                    <div id="Tambo" class="agencias agencia_2">
+                        <img src="https://www.viajarenverano.com/wp-content/uploads/2021/09/El-Tambo-Frontis1.jpg" />
+                        <p>EL TAMBO</p>
+                    </div>
+                    <div id="Spablo" class="agencias agencia_2">
+                        <img src="https://situr.narino.gov.co/storage/Clientes/situr_narino/principal/imagenes/contenidos/2195-2_Santuario_Nuestra_Se%C3%B1ora_de_la_Playa.jpg" />
+                        <p>SAN PABLO</p>
+                    </div>
+                    <div id="Lorenzo" class="agencias agencia_2">
+                        <img src="https://situr.narino.gov.co/storage/Clientes/situr_narino/principal/imagenes/contenidos/4892-1_Parque_20_de_Julio_y_Catedral_de_Ipiales.jpg" />
+                        <p>LORENZO DE ALDANA - PASTO</p>
+                    </div>
+                    <div id="Alban" class="agencias agencia_2">
+                        <img src="https://www.viajarenverano.com/wp-content/uploads/2020/03/Alban-Iglesia.jpg" />
+                        <p>SAN JOSE DE ALBAN</p>
+                    </div>
+                    <div id="Slorenzo" class="agencias agencia_2">
+                        <img src="https://www.viajarenverano.com/wp-content/uploads/2021/11/San-Lorenzo-Centro.jpg" />
+                        <p>SAN LORENZO</p>
+                    </div>
+                    <div id="Cumbal" class="agencias agencia_2">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/19/f4/1f/17/cumbal-es-un-municipio.jpg" />
+                        <p>CUMBAL</p>
+                    </div>
+                    <div id="Bernardo" class="agencias agencia_2">
+                        <img src="https://www.colombiaturismoweb.com/DEPARTAMENTOS/NARINO/MUNICIPIOS/SAN%20BERNARDO/imagenes/DSC06427_thumb_1.JPG" />
+                        <p>SAN BERNARDO</p>
+                    </div>
+                    <div id="Penol" class="agencias agencia_2">
+                        <img src="https://www.viajarenverano.com/wp-content/uploads/2019/10/El-Pe%C3%B1ol-Parque.jpg" />
+                        <p>EL PEÑOL</p>
+                    </div>
+                    <div id="Florida" class="agencias agencia_2">
+                        <img src="https://2.bp.blogspot.com/-qzSyN_p_Cak/VTmpcUP0XHI/AAAAAAAAABk/6jEWkG6zqcE/s1600/Imagen1.jpg" />
+                        <p>LA FLORIDA</p>
+                    </div>
+                    <div id="Narino" class="agencias agencia_2">
+                        <img src="https://www.viajarenverano.com/wp-content/uploads/2019/12/Nari%C3%B1o-Frontis.jpg" />
+                        <p>NARIÑO</p>
+                    </div>
+                    <div id="Samaniego" class="agencias agencia_2">
+                        <img src="https://www.elcolombiano.com/documents/10157/0/580x435/0c13/580d365/none/11101/INYJ/image_content_36215433_20200816094315.jpg" />
+                        <p>SAMANIEGO</p>
+                    </div>
+                    <div id="Cruz" class="agencias agencia_2">
+                        <img src="https://www.colombiaturismoweb.com/DEPARTAMENTOS/NARINO/MUNICIPIOS/LA%20CRUZ/imagenes/Iglecia_nuestra_Se_ora_del_Carmen_thumb_1.jpg" />
+                        <p>LA CRUZ</p>
+                    </div>
+                    <div id="Altamira" class="agencias agencia_2">
+                        <img src="https://mapio.net/images-p/51406814.jpg" />
+                        <p>ALTAMIRA</p>
+                    </div>
+                    <div id="Chachagui" class="agencias agencia_2">
+                        <img src="https://www.udenar.edu.co/recursos/wp-content/uploads/2018/12/ultimos-artesanos-cafeteros-de-guapuiy-chachagui-4.jpg" />
+                        <p>CHACHAGUI</p>
+                    </div>
+                </div>
 
-                <div class="heading">
-                    <h4>PASTO</h4>
-                </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto1_LorenzoPasto.jpg" style="width:400px; height: 400px;" alt="Lorenzo Pasto" class="img-responsive  center-block">*@
-                    <strong>Principal:</strong> Cra 29 No 18–41 Teléfono: 7336300 - Extensiones: 100, 101, 102. Asesores Integrales: 103 a 107. cartera Pasto: 111 a 113 <br />
-                    <strong>Barrio Lorenzo:</strong> Calle 18A No 1-17 - Teléfono: 7336300 Extensiones: 190 - 191  <br />
-                    <strong>Horario de atención al publico:</strong>   Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm - Sábado: 8:00 am a 11:30 am.
-                </p>
-                <div class="heading">
-                    <h4>SANDONA</h4>
-                </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Sandona.jpg" style="width:400px; height: 400px;" alt="Sandona" class="img-responsive  center-block">*@
-                    Calle 5ta. No. 03-77 - Teléfono: 7336300 Extensiones: 200 - 201<br />
-                    <strong>Celulares:</strong> 3186082380 - 3183305168 - 3188030838 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
-                </p>
+                @*Inicio de dialogos*@
+                <dialog class="modal_Agencias" id="dialog_Pasto">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>Pasto</h2>
+                            <img src="https://www.cideu.org/wp-content/uploads/Pasto5.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">
+                            <iframe class="img2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9160578226433!2d-77.28225128580804!3d1.2185285623241011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed487375d6129%3A0x75d762a9f2c9e3da!2sCOFINAL!5e0!3m2!1ses!2sit!4v1454678597238" frameborder="0" style="border: 0;" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </dialog>
 
-                <div class="heading">
-                    <h4>IPIALES</h4>
-                </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Ipiales.jpg" style="width:400px; height: 400px;" alt="Lorenzo Pasto" class="img-responsive  center-block">*@
-                    Calle 16 No 7-40 - Teléfono: 7336300 Extensiones: 300 - 301 <br />
-                    <strong>Celulares:</strong> 3176727009 - 3176431121 - 3160232580 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am.
-                </p>
+                <dialog class="modal_Agencias" id="dialog_Sandona">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>Sandona</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">
+                            <iframe class="img2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9160578226433!2d-77.28225128580804!3d1.2185285623241011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed487375d6129%3A0x75d762a9f2c9e3da!2sCOFINAL!5e0!3m2!1ses!2sit!4v1454678597238" frameborder="0" style="border: 0;" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </dialog>
 
-                <div class="heading">
-                    <h4>CONSACÁ</h4>
-                </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Consaca.jpg" style="width:400px; height: 400px;" alt="Consaca" class="img-responsive  center-block">*@
-                    Carrera 7 No 2-61 - Teléfono: 7336300 Extensiones: 400 - 401 <br />
-                    <strong>Celulares:</strong> 3128510554 - 3162951809 - 3174026443 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12.00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
-                </p>
+                <dialog class="modal_Agencias" id="dialog_Ipiales">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>Ipiales</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
 
-                <div class="heading">
-                    <h4>BUESACO</h4>
-                </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Buesaco.jpg" style="width:400px; height: 300px;" alt="Buesaco" class="img-responsive  center-block">*@
-                    Carrera 3 No 8-22 Parque Principal - Teléfono: 7336300 Extensiones: 500 - 501 <br />
-                    <strong>Celulares:</strong> 3160232579 - 3176613267 - 3187258626 - 3166941049 - 3160232596 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
+                <dialog class="modal_Agencias" id="dialog_Consaca">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>CONSACÁ</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
 
-                </p>
-                <div class="heading">
-                    <h4>TAMINANGO</h4>
-                </div>
-                <p class="text-justify">
-                    Calle 3 No. 4 -70 B/San Francisco - Teléfono: 7336300 Extensiones: 600 - 601 <br />
-                    <strong>Celulares:</strong> 3183744781 - 3153758059 - 3165216341 - 3160232575 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12.00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 3:00 pm Jornada Continua.
-                </p>
-                <div class="heading">
-                    <h4>LA UNION</h4>
-                </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto1_La Union.JPG" style="width:400px; height: 300px;" alt="La Unión" class="img-responsive  center-block">*@
-                    Carrera 2a No 17-67 B/Eduardo Santos - Teléfono: 7336300 Extensiones: 700 - 701 <br />
-                    <strong>Celulares:</strong> 3183500747 - 3188044897 - 3160109130 - 3160232594 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
-                </p>
+                <dialog class="modal_Agencias" id="dialog_Buesaco">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>BUESACO</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
 
-                <div class="heading">
-                    <h4>TUMACO</h4>
-                </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto3_Tumaco.JPG" style="width:400px; height: 300px;" alt="Tumaco" class="img-responsive  center-block">*@
-                    Casa 67 Calle Obando – Teléfono: 7336300 Extensiones: 800 - 801 <br />
-                    <strong>Celulares:</strong> 3160232590 - 3168748189 - 3188032069 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am.
-                </p>
+                <dialog class="modal_Agencias" id="dialog_Taminango">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>TAMINANGO</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
 
-                <div class="heading">
-                    <h4>LINARES</h4>
-                </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto2_Linares.JPG" style="width:400px; height: 300px;" alt="Buesaco" class="img-responsive  center-block">*@
-                    Calle 4 No 3-50 B/Golgota - Teléfono: 7336300 Extensiones: 110 - 111 <br />
-                    <strong>Celular:</strong> 3173660934 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
-                </p>
-                <div class="heading">
-                    <h4>ANCUYA</h4>
-                </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Ancuya.jpg" style="width:400px; height: 300px;" alt="Buesaco" class="img-responsive  center-block">*@
-                    Calle 2 No 4-27 - Teléfono: 7336300 Extensiones: 130 - 131 <br />
-                    <strong>Celulares:</strong> 3186445425 - 3160232581 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
-                </p>
-                <div class="heading">
-                    <h4>TUQUERRES</h4>
-                </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Tuquerres.jpg" style="width:400px; height: 400px;" alt="Buesaco" class="img-responsive  center-block">*@
-                    Calle 17 No 12-54 - Teléfono: 7336300 Extensiones: 140 - 141 <br />
-                    <strong>Celulares:</strong> 3188044895 - 3173331789 - 3183418416 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am
-                </p>
-                <div class="heading">
-                    <h4>GUALMATAN</h4>
-                </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Gualmatan.jpg" style="width:400px; height: 500px;" alt="Gualmatan" class="img-responsive  center-block">*@
-                    Calle 5 No 5-28 B/ Centro. Calle Ppal - Teléfono: 7336300 Extensiones: 150 - 151 <br />
-                    <strong>Celular:</strong> 3160232588 - 3164697965 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
-                </p>
-                <div class="heading">
-                    <h4>GUACHUCAL</h4>
-                </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Guachucal.jpg" style="width:400px; height: 400px;" alt="Guachucal" class="img-responsive  center-block">*@
-                    Carrera 5 No 4-67 B/ Centro - Teléfono: 7336300 Extensiones: 160 - 161 <br />
-                    <strong>Celulares:</strong> 3175003392 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
-                </p>
-                <div class="heading">
-                    <h4>El Tambo</h4>
-                </div>
-                <p class="text-justify">
-                    Carrera 10 N° 2-33 B/ Colon - Teléfono: 7336300 Extensiones: 170 - 171 <br />
-                    <strong>Celulares:</strong> 3154392435 - 3160232585 - 3160232574 <br />
-                    <strong>Horario de atención al publico:</strong> Martes a Viernes: 8:00 am 4:00 pm Jornada Continua, Sábado: 8:00 am a 2:00 pm Jornada Continua.
-                </p>
-                <div class="heading">
-                    <h4>San Pablo</h4>
-                </div>
-                <p class="text-justify">
-                    Carrera 2 Calle 5 N° 9-13 B/ Parque Bolivar - Teléfono: 7336300 Extensiones: 180 - 181 <br />
-                    <strong>Celulares:</strong> 3157113453 - 3160232592 <br />
-                    <strong>Horario de atención al publico:</strong> Martes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
-                <div class="heading">
-                    <h4>LORENZO DE ALDANA - PASTO</h4>
-                </div>
-                <p class="text-justify">
-                    Calle 18A N° 1 -17 B/ Lorenzo de Aldana - Teléfono: 7336300 Extensiones: 190 - 191 <br />
-                    <strong>Celulares:</strong> 3187069950 - 3166294278 - 3153704573 - 3174016418 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am.
-                </p>
+                <dialog class="modal_Agencias" id="dialog_Union">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>LA UNION</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Tumaco">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>TUMACO</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Linares">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>LINARES</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+
+                <dialog class="modal_Agencias" id="dialog_Ancuya">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>ANCUYA</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Tuquerres">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>TUQUERRES</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Gualmatan">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>GUALMATAN</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Guachucal">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>GUACHUCAL</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Tambo">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>EL TAMBO</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Spablo">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>SAN PABLO</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Lorenzo">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>LORENZO DE ALDANA - PASTO</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Lorenzo">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>LORENZO DE ALDANA - PASTO</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Alban">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>SAN JOSE DE ALBAN</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Slorenzo">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>SAN LORENZO</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Cumbal">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>CUMBAL</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Bernardo">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>SAN BERNARDO</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Penol">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>EL PEÑOL</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Florida">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>LA FLORIDA</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Narino">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>NARIÑO</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Samaniego">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>SAMANIEGO</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Cruz">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>LA CRUZ</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Altamira">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>ALTAMIRA</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+                <dialog class="modal_Agencias" id="dialog_Chachagui">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>CHACHAGUI</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+
+
+
+                <!--<div class="heading">
+            <h4>PASTO</h4>
+        </div>
+        <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto1_LorenzoPasto.jpg" style="width:400px; height: 400px;" alt="Lorenzo Pasto" class="img-responsive  center-block">*@
+                <!--<strong>Principal:</strong> Cra 29 No 18–41 Teléfono: 7336300 - Extensiones: 100, 101, 102. Asesores Integrales: 103 a 107. cartera Pasto: 111 a 113 <br />
+            <strong>Barrio Lorenzo:</strong> Calle 18A No 1-17 - Teléfono: 7336300 Extensiones: 190 - 191  <br />
+            <strong>Horario de atención al publico:</strong>   Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm - Sábado: 8:00 am a 11:30 am.
+        </p>
+        <div class="heading">
+            <h4>SANDONA</h4>
+        </div>
+        <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto1_Sandona.jpg" style="width:400px; height: 400px;" alt="Sandona" class="img-responsive  center-block">*@
+                <!--Calle 5ta. No. 03-77 - Teléfono: 7336300 Extensiones: 200 - 201<br />
+            <strong>Celulares:</strong> 3186082380 - 3183305168 - 3188030838 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
+        </p>
+
+        <div class="heading">
+            <h4>IPIALES</h4>
+        </div>
+        <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto1_Ipiales.jpg" style="width:400px; height: 400px;" alt="Lorenzo Pasto" class="img-responsive  center-block">*@
+                <!--Calle 16 No 7-40 - Teléfono: 7336300 Extensiones: 300 - 301 <br />
+            <strong>Celulares:</strong> 3176727009 - 3176431121 - 3160232580 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am.
+        </p>
+
+        <div class="heading">
+            <h4>CONSACÁ</h4>
+        </div>
+        <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto1_Consaca.jpg" style="width:400px; height: 400px;" alt="Consaca" class="img-responsive  center-block">*@
+                <!--Carrera 7 No 2-61 - Teléfono: 7336300 Extensiones: 400 - 401 <br />
+            <strong>Celulares:</strong> 3128510554 - 3162951809 - 3174026443 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12.00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
+        </p>
+
+        <div class="heading">
+            <h4>BUESACO</h4>
+        </div>
+        <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto1_Buesaco.jpg" style="width:400px; height: 300px;" alt="Buesaco" class="img-responsive  center-block">*@
+                <!--Carrera 3 No 8-22 Parque Principal - Teléfono: 7336300 Extensiones: 500 - 501 <br />
+            <strong>Celulares:</strong> 3160232579 - 3176613267 - 3187258626 - 3166941049 - 3160232596 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
+
+        </p>
+        <div class="heading">
+            <h4>TAMINANGO</h4>
+        </div>
+        <p class="text-justify">
+            Calle 3 No. 4 -70 B/San Francisco - Teléfono: 7336300 Extensiones: 600 - 601 <br />
+            <strong>Celulares:</strong> 3183744781 - 3153758059 - 3165216341 - 3160232575 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12.00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 3:00 pm Jornada Continua.
+        </p>
+        <div class="heading">
+            <h4>LA UNION</h4>
+        </div>
+        <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto1_La Union.JPG" style="width:400px; height: 300px;" alt="La Unión" class="img-responsive  center-block">*@
+                <!--Carrera 2a No 17-67 B/Eduardo Santos - Teléfono: 7336300 Extensiones: 700 - 701 <br />
+            <strong>Celulares:</strong> 3183500747 - 3188044897 - 3160109130 - 3160232594 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
+        </p>
+
+        <div class="heading">
+            <h4>TUMACO</h4>
+        </div>
+        <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto3_Tumaco.JPG" style="width:400px; height: 300px;" alt="Tumaco" class="img-responsive  center-block">*@
+                <!--Casa 67 Calle Obando – Teléfono: 7336300 Extensiones: 800 - 801 <br />
+            <strong>Celulares:</strong> 3160232590 - 3168748189 - 3188032069 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am.
+        </p>
+
+        <div class="heading">
+            <h4>LINARES</h4>
+        </div>
+        <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto2_Linares.JPG" style="width:400px; height: 300px;" alt="Buesaco" class="img-responsive  center-block">*@
+                <!--Calle 4 No 3-50 B/Golgota - Teléfono: 7336300 Extensiones: 110 - 111 <br />
+            <strong>Celular:</strong> 3173660934 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada Continua.
+        </p>
+        <div class="heading">
+            <h4>ANCUYA</h4>
+        </div>
+        <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto1_Ancuya.jpg" style="width:400px; height: 300px;" alt="Buesaco" class="img-responsive  center-block">*@
+                <!--Calle 2 No 4-27 - Teléfono: 7336300 Extensiones: 130 - 131 <br />
+            <strong>Celulares:</strong> 3186445425 - 3160232581 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+        </p>
+        <div class="heading">
+            <h4>TUQUERRES</h4>
+        </div>
+        <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto1_Tuquerres.jpg" style="width:400px; height: 400px;" alt="Buesaco" class="img-responsive  center-block">*@
+                <!--Calle 17 No 12-54 - Teléfono: 7336300 Extensiones: 140 - 141 <br />
+            <strong>Celulares:</strong> 3188044895 - 3173331789 - 3183418416 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am
+        </p>
+        <div class="heading">
+            <h4>GUALMATAN</h4>
+        </div>
+        <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto1_Gualmatan.jpg" style="width:400px; height: 500px;" alt="Gualmatan" class="img-responsive  center-block">*@
+                <!--Calle 5 No 5-28 B/ Centro. Calle Ppal - Teléfono: 7336300 Extensiones: 150 - 151 <br />
+            <strong>Celular:</strong> 3160232588 - 3164697965 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+        </p>
+        <div class="heading">
+            <h4>GUACHUCAL</h4>
+        </div>
+        <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto1_Guachucal.jpg" style="width:400px; height: 400px;" alt="Guachucal" class="img-responsive  center-block">*@
+                <!--Carrera 5 No 4-67 B/ Centro - Teléfono: 7336300 Extensiones: 160 - 161 <br />
+            <strong>Celulares:</strong> 3175003392 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+        </p>
+        <div class="heading">
+            <h4>El Tambo</h4>
+        </div>
+        <p class="text-justify">
+            Carrera 10 N° 2-33 B/ Colon - Teléfono: 7336300 Extensiones: 170 - 171 <br />
+            <strong>Celulares:</strong> 3154392435 - 3160232585 - 3160232574 <br />
+            <strong>Horario de atención al publico:</strong> Martes a Viernes: 8:00 am 4:00 pm Jornada Continua, Sábado: 8:00 am a 2:00 pm Jornada Continua.
+        </p>
+        <div class="heading">
+            <h4>San Pablo</h4>
+        </div>
+        <p class="text-justify">
+            Carrera 2 Calle 5 N° 9-13 B/ Parque Bolivar - Teléfono: 7336300 Extensiones: 180 - 181 <br />
+            <strong>Celulares:</strong> 3157113453 - 3160232592 <br />
+            <strong>Horario de atención al publico:</strong> Martes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
+            <div class="heading">
+                <h4>LORENZO DE ALDANA - PASTO</h4>
+            </div>
+        <p class="text-justify">
+            Calle 18A N° 1 -17 B/ Lorenzo de Aldana - Teléfono: 7336300 Extensiones: 190 - 191 <br />
+            <strong>Celulares:</strong> 3187069950 - 3166294278 - 3153704573 - 3174016418 <br />
+            <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am.
+        </p>-->
 
             </div>
-            <div class="tab-pane " id="Cauca">
-                <div class="heading">
+            <div class="tab-pane " id="Cau_Agencia">
+                <!--<div class="heading">
                     <h4>POPAYÁN</h4>
                 </div>
-                <p class="text-justify">
+                <p class="text-justify">-->
                     @*<img src="~/Imagenes/fotos_agencias/Foto2_Popayan.jpg" style="width:500px; height: 400px;" alt="Popayan" class="img-responsive  center-block">*@
-                    Calle 4 No 4-12 Ed.Altozano Centro Histórico - Teléfono: 7336300 Extensiones: 900 - 901  <br />
+                    <!--Calle 4 No 4-12 Ed.Altozano Centro Histórico - Teléfono: 7336300 Extensiones: 900 - 901  <br />
                     <strong>Celulares:</strong> 3174017522 - 3187115124 - 3167408856 - 3175177452 <br />
                     <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am
-                </p>
+                </p>-->
+
+                <div class="container__Agencias">
+                    <div id="Popayan" class="agencias agencia_2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Catedralpopayan.jpg" />
+                        <p>POPAYÁN</p>
+                    </div>
+                    <div id="Mercaderes" class="agencias agencia_2">
+                        <img src="https://www.eltiempo.com/files/article_content/uploads/2018/10/26/5bd3ba4927370.jpeg" />
+                        <p>MERCADERES</p>
+                    </div>
+                </div>
             </div>
-            <div class="tab-pane" id="Putumayo">
-                <div class="heading">
+            <dialog class="modal_Agencias" id="dialog_Popayan">
+                <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                <div class="container__Modal">
+                    <div class="header_modal">
+                        <h2>POPAYÁN</h2>
+                        <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                    </div>
+                    <p>
+                        <strong>Dirección: </strong><br>
+                        Calle 5ta. No. 03-77<br>
+                        <strong>Telefono: </strong><br>
+                        Teléfono: 7336300 Extensiones: 200 - 201<br>
+                        <strong>Horario de Atencion: </strong>
+                        Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                    </p>
+                    <div class="imagen_Google">GOOGLE MAPS</div>
+                </div>
+            </dialog>
+            <dialog class="modal_Agencias" id="dialog_Mercaderes">
+                <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                <div class="container__Modal">
+                    <div class="header_modal">
+                        <h2>MERCADERES</h2>
+                        <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                    </div>
+                    <p>
+                        <strong>Dirección: </strong><br>
+                        Calle 5ta. No. 03-77<br>
+                        <strong>Telefono: </strong><br>
+                        Teléfono: 7336300 Extensiones: 200 - 201<br>
+                        <strong>Horario de Atencion: </strong>
+                        Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                    </p>
+                    <div class="imagen_Google">GOOGLE MAPS</div>
+                </div>
+            </dialog>
+
+
+            <div class="tab-pane" id="Putumayo_Agencia">
+                <!--<div class="heading">
                     <h4>SIBUNDOY</h4>
                 </div>
-                <p class="text-justify">
+                <p class="text-justify">-->
                     @*<img src="~/Imagenes/fotos_agencias/Foto1_Sibundoy.jpg" style="width:500px; height: 400px;" alt="Sibundoy" class="img-responsive  center-block">*@
-                    Calle 15 No 15-74 B/Oriental - Teléfono: 7336300 Extensiones: 120 - 121 <br />
+                    <!--Calle 15 No 15-74 B/Oriental - Teléfono: 7336300 Extensiones: 120 - 121 <br />
                     <strong>Celulares:</strong> 3185148457 - 3218009451 <br />
                     <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 4:30 pm Sábado: 8:00 am a 2:00 pm Jornada continua.
-                </p>
-            </div>
-
-            <div class="tab-pane" id="ValledelCauca">
-                <div class="heading">
-                    <h4>PALMIRA</h4>
+                </p>-->
+                <div class="container__Agencias">
+                    <div id="Sibundoy" class="agencias agencia_2">
+                        <img src="https://www.eltiempo.com/files/article_content/uploads/2018/10/26/5bd3ba4927370.jpeg" />
+                        <p>SIBUNDOY</p>
+                    </div>
                 </div>
-                <p class="text-justify">
-                    @*<img src="~/Imagenes/fotos_agencias/Foto1_Sibundoy.jpg" style="width:500px; height: 400px;" alt="Sibundoy" class="img-responsive  center-block">*@
-                    Calle 29 No 29-39 Centro - Respaldo de Nuestra Señora del Palmar - Teléfono: 7336300 Extensiones: 202 - 203 <br />
-                    <strong>Celulares:</strong> 3162523958 - 3160232587 - 3160232586 <br />
-                    <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am
-                </p>
+                <dialog class="modal_Agencias" id="dialog_Sibundoy">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>SIBUNDOY</h2>
+                            <img src="http://www.cafeoccidente.co/images/paisajes/sandona.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
+            </div>
+            <div class="tab-pane" id="Valle_Agencia">
+                <!--<div class="heading">
+        <h4>PALMIRA</h4>
+    </div>
+    <p class="text-justify">-->
+                @*<img src="~/Imagenes/fotos_agencias/Foto1_Sibundoy.jpg" style="width:500px; height: 400px;" alt="Sibundoy" class="img-responsive  center-block">*@
+                <!--Calle 29 No 29-39 Centro - Respaldo de Nuestra Señora del Palmar - Teléfono: 7336300 Extensiones: 202 - 203 <br />
+        <strong>Celulares:</strong> 3162523958 - 3160232587 - 3160232586 <br />
+        <strong>Horario de atención al publico:</strong> Lunes a Viernes: 8:00 am a 11:30 am – 2:00 pm a 4:30 pm Sábado: 8:00 am a 11:30 am
+    </p>-->
+
+                <div class="container__Agencias">
+                    <div id="Palmira" class="agencias agencia_2">
+                        <img src="https://caracoltv.brightspotcdn.com/dims4/default/39d8175/2147483647/strip/true/crop/1000x566+0+0/resize/1000x566!/quality/90/?url=http%3A%2F%2Fcaracol-brightspot.s3.amazonaws.com%2Ffb%2F28%2F5d677744438d8427422e73e4102b%2Fpalmira-valle-del-cauca.jpg" />
+                        <p>PALMIRA</p>
+                    </div>
+                </div>
+                <dialog class="modal_Agencias" id="dialog_Palmira">
+                    <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
+                    <div class="container__Modal">
+                        <div class="header_modal">
+                            <h2>PALMIRA</h2>
+                            <img src="https://caracoltv.brightspotcdn.com/dims4/default/39d8175/2147483647/strip/true/crop/1000x566+0+0/resize/1000x566!/quality/90/?url=http%3A%2F%2Fcaracol-brightspot.s3.amazonaws.com%2Ffb%2F28%2F5d677744438d8427422e73e4102b%2Fpalmira-valle-del-cauca.jpg" />
+                        </div>
+                        <p>
+                            <strong>Dirección: </strong><br>
+                            Calle 5ta. No. 03-77<br>
+                            <strong>Telefono: </strong><br>
+                            Teléfono: 7336300 Extensiones: 200 - 201<br>
+                            <strong>Horario de Atencion: </strong>
+                            Lunes a Viernes: 8:00 am a 12:00 meridiano – 2:00 pm a 5:00 pm Sábado: 8:00 am a 2:00 pm Jornada Continua
+                        </p>
+                        <div class="imagen_Google">GOOGLE MAPS</div>
+                    </div>
+                </dialog>
             </div>
 
             <!--INICIO DE EXTENSIONES DE CAJA -->
 
-            <div class="tab-pane" id="PuntosAtencion">
+            <div class="tab-pane" id="Punto_Agencia">
                 <div class="heading">
                     <h4>SAN JOSE DE ALBAN</h4>
                 </div>
@@ -394,7 +1113,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,32L120,74.7C240,117,480,203,720,202.7C960,203,1200,117,1320,74.7L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
 </div>
 
-<script>
+<!--<script>
     $("#Nariñoo").click(function (e) {
         e.preventDefault();
         console
@@ -427,9 +1146,9 @@
 
     });
 
-</script>
+</script>-->
 <!-- scrip para parallax-->
-<script type="text/javascript">
+<!--<script type="text/javascript">
     function parallax() {
         setpos("#pb0");
         setpos("#pb1");
@@ -458,4 +1177,61 @@
     }).scroll(function () {
         parallax();
     });
+</script>-->
+
+<script>
+    const body = document.querySelector("body");
+    //console.log(body);
+    document.querySelectorAll(".agencias").forEach((item) => {
+        item.addEventListener("click", (event) => {
+            // console.log(item.id);
+            const stringModal = `dialog_${item.id}`;
+            // console.log(`#${stringModal}`);
+            const modal = document.querySelector(`#${stringModal}`)
+            console.log(event)
+            modal.showModal();
+            body.style.overflow = "hidden";
+            document.querySelectorAll(".close-button").forEach((item) => {
+                item.addEventListener("click", (event) => {
+                    modal.close()
+                    body.style.overflow = "auto";
+                    // console.log(item.classList.contains("close-button"));
+                });
+                window.onclick = function (event) {
+                    // console.log(event.target);
+                    console.log(modal);
+                    if (event.target == modal) {
+                        modal.close();
+                        body.style.overflow = "auto";
+                    }
+                };
+            });
+        });
+    });
+</script>
+
+<script>
+    const list__Agencia = document.querySelectorAll(".total_Agencias");
+
+
+    document.querySelectorAll(".total_Agencias").forEach((agencia) => {
+        agencia.addEventListener("click", () => {
+            list__Agencia.forEach(agenciaT => agenciaT.classList.remove('active'));
+            //console.log(agencia.id);
+            agencia.classList.add('active');
+            document.querySelectorAll(".tab-pane").forEach((item) => {
+                item.classList.remove('active');
+                //console.log(item.classList);
+                //console.log(agencia)
+                //console.log(item.id);
+                //console.log(item);
+                const agencia_lugar = `${agencia.id}_Agencia`
+                if (item.id == agencia_lugar) {
+                    //console.log(item.id)
+                    item.classList.add('active');
+                }
+            })
+        })
+    })
+
 </script>

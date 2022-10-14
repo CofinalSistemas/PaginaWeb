@@ -1,0 +1,64 @@
+﻿@import '../abstracts/_colors.scss';
+
+
+.container__multi {
+    margin: 20px 2rem;
+
+    .container__header_multi {
+        background: $secondary-color;
+        color: white;
+        height: 200px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+        h3 {
+            color: white;
+        }
+    }
+
+    .container__main__multi {
+        /*border:1px solid red;*/
+        max-width: 1200px;
+        margin: auto;
+
+        h2 {
+            text-align: center;
+        }
+
+        .big__container__multi {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 900px;
+            margin: auto;
+
+            @media screen and (min-width: 700px) {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .container_personaNatural {
+                width: 100%;
+                height: 200px;
+                background: $third-color;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                margin: 10px 0;
+                padding: 20px 0;
+                border-radius: 10px;
+
+                i {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+}

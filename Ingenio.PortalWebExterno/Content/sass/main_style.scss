@@ -1,10 +1,18 @@
 ﻿@import 'abstracts/colors';
-@import 'abstracts/fonts.scss';
-@import 'abstracts/functions.scss';
-@import 'pages/home.scss';
-@import 'pages/credito.scss';
-@import 'components/button.scss';
-@import 'components/_navbar.scss';
+@import 'abstracts/fonts';
+@import 'abstracts/functions';
+
+@import 'pages/home';
+@import 'pages/credito';
+@import 'pages/nuestasAgencias';
+@import 'pages/Convenios';
+@import 'pages/canalesPago';
+@import 'pages/quienesSomos';
+@import 'pages/conceptosDeInteres';
+@import 'pages/multiportal';
+
+@import 'components/button';
+@import 'components/navbar';
 
 /* Variables*/
 

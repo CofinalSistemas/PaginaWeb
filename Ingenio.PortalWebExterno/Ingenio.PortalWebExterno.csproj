@@ -285,6 +285,7 @@
     <Compile Include="Models\CaptchaResponse.cs" />
     <Compile Include="Models\model.cs" />
     <Compile Include="Models\UIAF.cs" />
+    <Compile Include="Models\user.cs" />
     <Compile Include="PortaWeb.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -404,6 +405,17 @@
     <Content Include="img\cartera.png" />
     <Content Include="img\cofijunior-01.png" />
     <Content Include="img\cofijunior-02.png" />
+    <Content Include="img\Convenios\aventura_turs.jpg" />
+    <Content Include="img\Convenios\confamiliar_nariño.jpg" />
+    <Content Include="img\Convenios\Familias_en_Accion.png" />
+    <Content Include="img\Convenios\H_Civil_Ipiales.png" />
+    <Content Include="img\Convenios\Iglesia_Cristiana.jpg" />
+    <Content Include="img\Convenios\INVÍAS_Colombia_logo.png" />
+    <Content Include="img\Convenios\pasto.jpg" />
+    <Content Include="img\Convenios\Popayan.png" />
+    <Content Include="img\Convenios\Sandona.jpg" />
+    <Content Include="img\Convenios\turismo_andino.jpg" />
+    <Content Include="img\Convenios\yo_reinare.png" />
     <Content Include="img\docDian2019.png" />
     <Content Include="img\Fachada.jpg" />
     <Content Include="img\fondos\fondoconinteres.jpg" />
@@ -648,6 +660,21 @@
     <Content Include="Content\sass\components\_navbar.scss" />
     <Content Include="Content\sass\components\_cards.scss" />
     <Content Include="Content\sass\pages\_credito.scss" />
+    <Content Include="Content\sass\pages\_nuestasAgencias.scss" />
+    <Content Include="Content\sass\pages\_Convenios.scss" />
+    <Content Include="Content\sass\pages\_canalesPago.scss" />
+    <Content Include="Content\sass\pages\_quienesSomos.scss" />
+    <Content Include="Content\sass\pages\_conceptosDeInteres.scss" />
+    <Content Include="Formatos\FORMATOS POLITICA\Politica.pdf" />
+    <Content Include="Formatos\FORMATOS POLITICA\Politica2.pdf" />
+    <Content Include="Formatos\FORMATOS POLITICA\Politicas_T_DP.pdf" />
+    <Content Include="Formatos\FORMATOS POLITICA\Privacidad_datos_personales2.pdf" />
+    <Content Include="Content\sass\pages\_multiportal.scss" />
+    <Content Include="Content\sass\abstracts\_mixins.scss" />
+    <Content Include="Content\sass\components\_dropdown.scss" />
+    <Content Include="Content\sass\layout\_footer.scss" />
+    <Content Include="Content\sass\layout\_header.scss" />
+    <Content Include="Content\sass\layout\_forms.scss" />
     <None Include="PortaWeb.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -735,7 +762,6 @@
     <Content Include="Views\SimuladorCDAT\Details.cshtml" />
     <Content Include="Views\SimuladorCre\Details.cshtml" />
     <Content Include="Views\Formapago\Index.cshtml" />
-    <Content Include="Views\Home\Servicios.cshtml" />
     <Content Include="Views\Configuracion\IndexNoticia.cshtml" />
     <Content Include="Views\Home\Ahorros.cshtml" />
     <Content Include="Views\Home\Creditos.cshtml" />
@@ -784,17 +810,17 @@
     <Content Include="Views\Asociado\index.cshtml" />
     <Content Include="Views\Dian\Details.cshtml" />
     <Content Include="Views\Dian\Edit.cshtml" />
-    <Content Include="Views\Home\Social.cshtml" />
-    <Content Include="Views\Home\Modal.cshtml" />
     <Content Include="Views\Configuracion\Modal.cshtml" />
     <Content Include="Views\Configuracion\ConfigureModal.cshtml" />
     <Content Include="Views\Home\Multiportal.cshtml" />
     <Content Include="Views\Home\RteDian.cshtml" />
     <Content Include="Views\Home\Alivios2020.cshtml" />
-    <Content Include="Views\Home\Indeximag.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Directorio.cshtml" />
     <Content Include="Views\Home\PoliticasTIC.cshtml" />
+    <Content Include="Views\Home\CanalesPago.cshtml" />
+    <Content Include="Views\Home\ActualizacionDatos.cshtml" />
+    <Content Include="Views\Home\Message2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -804,7 +830,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\sass\layout\" />
     <Folder Include="Content\sass\themes\" />
     <Folder Include="edithtml\" />
     <Folder Include="Estilos\" />

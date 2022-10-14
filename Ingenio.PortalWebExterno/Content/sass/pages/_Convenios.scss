@@ -1,0 +1,218 @@
+﻿@import '../abstracts/_colors.scss';
+.convenio__Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: $primary-color;
+    padding: 20px;
+
+    .convenio__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: 0 0 0 30px;
+
+        h2{
+            color:$secondary-color;
+        }
+
+        p {
+            color: #fff;
+        }
+    }
+
+    img {
+        width: 300px;
+    }
+}
+
+.convenio__control {
+    max-width: 1300px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .convenio__boton {
+        cursor: pointer;
+        width: 100px;
+        height: 30px;
+        background: $primary-color;
+        color: white;
+        display: grid;
+        place-content: center;
+        transition: all 0.2s;
+
+        &:hover, &:focus {
+            transform: translateY(-2px);
+            background: $secondary-color;
+        }
+    }
+
+    .convenio__boton.control_con_active {
+        background: $secondary-color !important;
+    }
+}
+
+.convenio__main {
+    max-width:1300px;
+    margin: 4rem auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .convenio__items {
+        /*background: gold;*/
+        width: 250px;
+        height: 300px;
+        border: 1px solid $secondary-color;
+        display: grid;
+        place-content: center;
+        gap: 30px;
+        cursor: pointer;
+
+        p {
+            border: 1px solid $secondary-color;
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+        }
+    }
+
+    .con_desactive {
+        display: none;
+    }
+}
+
+
+
+.modal_Agencias {
+    padding: 0;
+    max-width: 750px;
+    box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5);
+    margin: auto auto;
+    border: 0;
+    /*position: relative;*/
+    /*
+    @media screen and (max-width: 899px) {
+        margin:auto 1rem;
+    }*/
+
+    .close-button {
+        position: absolute;
+        right: 23px;
+        top: 10px;
+
+        i {
+            font-size: 25px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.modal_Agencias::backdrop {
+    background: rgba(0, 0,0,0.4);
+}
+
+
+
+/* extra styling */
+
+/*body {
+    min-height: 100vh;
+    margin: 2rem;
+    font-family: system-ui;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}*/
+
+.container__Modal {
+    margin: 0;
+    padding: 0 30px 30px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+
+    .header_modal {
+        display: grid;
+        place-content: center;
+        margin: auto;
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        h2 {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        img {
+            width: 100%;
+            height: 150px;
+        }
+    }
+
+    p {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+
+    .imagen_Google {
+        display: grid;
+        place-content: center;
+        grid-column: 2 / 2;
+        grid-row: 2;
+        /*background: pink;*/
+
+        iframe {
+            width: 100%
+            /*width: 100px;*/
+            /*height: 100px;*/
+        }
+    }
+}
+
+
+.item-agencias {
+    border: none !important;
+    background: $primary-color;
+
+    a {
+        border: none !important;
+        color: black;
+        font-weight: 400;
+        font-size: 19px;
+    }
+
+    &:hover {
+        background: $secondary-color;
+    }
+
+    .active {
+        background: white;
+
+        a {
+            color: black;
+            font-weight: 500;
+        }
+    }
+
+    .text-justify {
+        font-size: 18px;
+    }
+}

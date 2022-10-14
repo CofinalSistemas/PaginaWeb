@@ -1,0 +1,264 @@
+﻿@import '../abstracts/_colors.scss';
+
+$primary-color: rgba(224, 85, 20, 0.75);
+$secondary-color: rgba(236, 28, 36, 0.75);
+
+.contenido {
+    .container__nuestras_Agencias{
+        margin : 0;
+    }
+}
+
+
+.controles_Agencia {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    /*background: red;*/
+
+    .total_Agencias {
+        cursor: pointer;
+        font-weight:600;
+        text-transform: uppercase;
+        transition: all 0.25s;
+        width: 100px;
+        height: 50px;
+        background: $primary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        /*border: 1px solid $primary-color;*/
+
+        &:hover {
+            box-shadow: 0 0.5em 0.5em -0.4em $primary-color;
+            transform: translateY(-0.25em);
+            /*text-shadow: 1px 1px 2px $secondary-color;*/
+            cursor: pointer;
+        }
+    }
+
+    .total_Agencias.active {
+        background: $secondary-color;
+        color: white;
+
+        &:hover {
+            box-shadow: 0 0.5em 0.5em -0.4em $secondary-color;
+            transform: translateY(-0.25em);
+            /*text-shadow: 1px 1px 2px $secondary-color;*/
+            cursor: pointer;
+        }
+    }
+}
+
+.container__Agencias {
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .agencia_1 {
+        width: 200px;
+        height: 150px;
+        background: $primary-color;
+        position: relative;
+        border-radius: 20px;
+
+        p {
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            bottom: 0px;
+            left: 20px;
+        }
+
+        img {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .agencia_2 {
+        width: 200px;
+        height: 150px;
+        background: $primary-color;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        overflow: hidden;
+        transition: 0.8s;
+
+        &:hover, &:focus {
+            transform: translateY(-10px);
+            cursor: pointer;
+
+            img {
+                transform: scale(1.1);
+                transition: 1s;
+                border: 1px solid transparent;
+            }
+
+            p {
+                background-color: transparent;
+            }
+        }
+
+        &:not(:hover) img {
+            transform: scale(1);
+            transition: 1s;
+        }
+
+        img {
+            width: 100%;
+            height: 150px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            object-fit: cover;
+            border-radius: 20px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+
+        p {
+            margin: 0;
+            border-radius: 20px;
+            z-index: 2;
+            background-color: rgba(224, 85, 20, 0.25);
+            grid-column: 1/2;
+            grid-row: 1/2;
+            font-size: 1.7rem;
+            color: white;
+            font-weight: 700;
+            display: grid;
+            text-align: center;
+            place-items: center;
+        }
+    }
+}
+.modal_Agencias {
+    padding: 0;
+    max-width: 750px;
+    box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5);
+    margin: auto auto;
+    border: 0;
+    /*position: relative;*/
+/*
+    @media screen and (max-width: 899px) {
+        margin:auto 1rem;
+    }*/
+
+    .close-button {
+        position: absolute;
+        right: 23px;
+        top: 10px;
+
+        i{
+            font-size:25px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+.modal_Agencias::backdrop {
+    background: rgba(0, 0,0,0.4);
+}
+
+
+
+/* extra styling */
+
+/*body {
+    min-height: 100vh;
+    margin: 2rem;
+    font-family: system-ui;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}*/
+
+.container__Modal {
+    margin: 0;
+    padding: 0 30px 30px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+
+    .header_modal {
+        display: grid;
+        place-content: center;
+        margin: auto;
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        h2 {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        img {
+            width: 100%;
+            height: 150px;
+        }
+    }
+
+    p {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+
+    .imagen_Google {
+        display: grid;
+        place-content: center;
+        grid-column: 2 / 2;
+        grid-row: 2;
+        /*background: pink;*/
+
+        iframe {
+            width:100%
+            /*width: 100px;*/
+            /*height: 100px;*/
+        }
+    }
+}
+
+
+.item-agencias{
+    border: none !important;
+    background: $primary-color;
+
+    a {
+        border: none !important;
+        color: black;
+        font-weight: 400;
+        font-size: 19px;
+    }
+
+    &:hover{
+        background: $secondary-color;
+    }
+
+    .active{
+        background: white;
+
+        a{
+            color: black;
+            font-weight: 500;
+        }
+    }
+    .text-justify {
+        font-size: 18px;
+    }
+}
+

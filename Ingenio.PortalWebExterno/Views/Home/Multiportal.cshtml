@@ -69,11 +69,10 @@
 @*<div class="parallaxbox" id="pb0" style="background-image: url('//img/fondos/multiportal1.jpg');"> </div>*@
 <!-- contenido-->
 
-<section id="aso" class="bar background-white no-mb">
+<section id="aso" class="bar background-white no-mb" style="display:none;">
     <div class="container">
         <div class="row">
-
-            <div class="col-12 col-lg-7" style="background-color:white">
+            <div class="col-12 col-lg-7" style="background-color:white;display:none">
                 <div class="heading text-center" style="margin-bottom:10px;padding-top:10px;">
                     <h4>¿QUE ES EL MULTIPORTAL TRANSACCIONAL? </h4>
                 </div>
@@ -157,9 +156,57 @@
             </div>
         </div>
     </div>
-        
 </section>
-<section style=" margin-bottom: 0px;">
+
+
+<section class="container__multi">
+    <div class="container__header_multi">
+        <h3>Portal Transaccional</h3>
+        <p>Realice transacciones de forma facil y segura</p>
+    </div>
+    <div class="container__main__multi">
+            <h2>Persona Natural</h2>
+        <div class="big__container__multi">
+            <div class="container_personaNatural">
+                <i class="fa-solid fa-computer"></i>
+                <div>
+                    <h4>Portal <br /> Transaccional</h4>
+                    <a href="https://multiportal.redcoopcentral.com/multiportalvisio/Login/Index?ENTIDAD=00000117"
+                       class="myButtons">Ingresar</a>
+                </div>
+            </div>
+            <div class="container_personaNatural">
+                <i class="fa-regular fa-address-card"></i>
+                <div>
+                    <h4>Si no es usuario en el <br />portal transaccional</h4>
+                    <a href="https://multiportal.redcoopcentral.com/integracion/multiportal/Enrolamiento/?entidad=00000117"
+                       class="myButtons">Regístrese aquí.</a>
+                </div>
+            </div>
+        </div>
+            <h2>Persona Juridica</h2>
+        <div class="big__container__multi">
+            <div class="container_personaNatural">
+                <i class="fa-solid fa-computer"></i>
+                <div>
+                    <h4>Portal <br /> Transaccional</h4>
+                    <a href="https://portaljuridico.redcoopcentral.com:8445/portalJuridico"
+                       class="myButtons">Ingresar</a>
+                </div>
+            </div>
+            <div class="container_personaNatural">
+                <i class="fa-regular fa-address-card"></i>
+                <div>
+                    <h4>Si no es usuario en el <br />portal transaccional</h4>
+                    <a href="https://portaljuridico.redcoopcentral.com:8445/integracionJuridico/multiportal/enrolamiento/?entidad=00000117"
+                       class="myButtons">Regístrese aquí.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style=" margin-bottom: 0px;display:none">
     <div align="center">
         <div class="heading text-center" style="margin-bottom:10px;padding-top:10px;">
             <h4>INSTRUCTIVOS PARA EL INGRESO AL MULTIPORTAL</h4>
@@ -226,27 +273,10 @@
 
         </div>
     </div>
-
-    <!-- LA FIGURA NARANJA ES DESDE https://getwaves.io/  PUED E COPIAR Y PEGAR EL SVG GENERADO-->
+    </section>
     <div class="container-fluid" style="margin-bottom: -6px;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,64L60,90.7C120,117,240,171,360,165.3C480,160,600,96,720,101.3C840,107,960,181,1080,181.3C1200,181,1320,107,1380,69.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
     </div>
-
-    
-
-
-    @* <!-- imagen fondo2-- > @*<div class="parallaxbox" id="pb1" style="background-image: url('/img/fondos/multiportal.jpg');" > </div > *@
-    <!-- seccion direccion-- >
-
-
-    <section class="background-white no-mb" >
-    <div class="container" >
-    <div class="row" style="padding-top:20px;" >
-    <div class="col-md-4" data-animate="fadeInUp" > <div class="box-simple" > <div class="icon" > <i class="fa fa-map-marker" > </i > </div > <h3 > DIRECCION</h3 > <p > Cra. 29 No. 18-41 San Juan de Pasto Nariño Colombia - Suramerica </p > </div > </div > <div class="col-md-4" data-animate="fadeInUp" > <div class="box-simple" > <div class="icon" > <i class="fa fa-phone" > </i > </div > <h3 > Centro de llamadas</h3 > <p > Tel: + (011572) 7336300 </p > </div > </div > <div class="col-md-4" data-animate="fadeInUp" >
-    <div class="box-simple" > <div class="icon" > <i class="fa fa-envelope" > </i > </div > <h3 > CORREO ELECTRONICO</h3 > <p class="text-muted" > servicioalcliente@cofinal.com.co </p > <strong > <a href="mailto:" > </a > </strong > </div >
-    <!-- /.box-simple -->
-
-</section>
 <style>
     .maps iframe {
         pointer-events: none;
@@ -254,62 +284,6 @@
 </style>
 
 
-
-<!--<div class='embed-container  maps'>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9160578226433!2d-77.28225128580804!3d1.2185285623241011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed487375d6129%3A0x75d762a9f2c9e3da!2sCOFINAL!5e0!3m2!1ses!2sit!4v1454678597238" height="350" frameborder="0" style="border: 0; width: 100%;" allowfullscreen></iframe>
-</div>-->
-<!-- scrip para parallax-->
-<script type="text/javascript">
-    function parallax() {
-        setpos("#pb0");
-        setpos("#pb1");
-
-    }
-
-
-
-    function setpos(element, factor) {
-        factor = factor || 2;
-
-        var offset = $(element).offset();
-        var w = $(window);
-
-        var posx = (offset.left - w.scrollLeft()) / factor;
-        var posy = (offset.top - w.scrollTop()) / factor;
-
-        $(element).css('background-position', '100% ' + posy + 'px');
-
-        // use this to have parralax scrolling vertical and horizontal
-        //$(element).css('background-position', posx+'px '+posy+'px');
-    }
-
-    $(document).ready(function () {
-        parallax();
-    }).scroll(function () {
-        parallax();
-    });
-</script>
-
-@*<style type="text/css">
-        body {
-            overflow-x: hidden;
-        }
-
-        .video {
-            position: relative;
-            padding-bottom: 56.25%;
-            overflow: hidden;
-        }
-
-            .video iframe {
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-    </style>*@
 
 
 

@@ -70,11 +70,6 @@ namespace Ingenio.PortalWebExterno.Controllers
         }
 
 
-        public ActionResult Modal()
-        {
-            return View();
-        }
-
         public ActionResult NoticiasCofinal(string Id)
         {
             ViewBag.TitleNoti = null;
@@ -126,14 +121,6 @@ namespace Ingenio.PortalWebExterno.Controllers
         {
             return View();
         }
-
-        public ActionResult Servicios()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
         public ActionResult QuienesSomos()
         {
             ViewBag.Message = "Your application description page.";
@@ -213,14 +200,64 @@ namespace Ingenio.PortalWebExterno.Controllers
 
             return View();
         }
-         
+
+        // Crear Pagina Nueva (Prueba)
+        public ActionResult CanalesPago()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult ActualizacionDatos()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ActualizacionDatos(user model)
+        {
+            if (string.IsNullOrEmpty(model.Name))
+            {
+                ModelState.AddModelError("Name", "Please Enter Name");
+            }
+
+            if (string.IsNullOrEmpty(model.Username))
+            {
+                ModelState.AddModelError("Username", "Please Enter Name");
+            }
 
 
-    /// <summary>
-    /// creado por Ing. Carlos Jojoa C, fec. 2016-05-06
-    /// Muestra el formulario de peticiones, quejas y reclamos , y se envia por email hacia cofinal
-    /// </summary>
-    public ActionResult Contact()
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Message2");
+            }
+
+            return View();
+        }
+
+
+        //[HttpPost]
+        //public ActionResult Form4(StudentModel sm)
+        //{
+        //    string value = "ID: " + Convert.ToString(sm.Id)
+        //        + "<br />Name: " + sm.Name
+        //        + "<br />Addon: " + Convert.ToString(sm.Addon);
+
+        //    string s = "$('#output').html('" + value + "');";
+        //    return JavaScript(s);
+        //}
+
+
+
+
+        /// <summary>
+        /// creado por Ing. Carlos Jojoa C, fec. 2016-05-06
+        /// Muestra el formulario de peticiones, quejas y reclamos , y se envia por email hacia cofinal
+        /// </summary>
+        public ActionResult Contact()
         {
             string param1 = this.Request.QueryString["msj"];
             ViewBag.Message = "Your contact page.";

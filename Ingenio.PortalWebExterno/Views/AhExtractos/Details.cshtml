@@ -297,15 +297,14 @@
                     <tbody align="center">
                     </tbody>
                 </table>
-                <div class="pieDePagina">hola</div>
             </div>
             <br />
         </div>
         <button class="btn btn-success" onclick="imprime('imprimir')"><span class="glyphicon glyphicon-download"></span>Imprimir</button>
-        <button onclick="generatePDF()">Download as PDF</button>
-        <div id="invoice">
+        @*<button onclick="generatePDF()">Download as PDF</button>*@
+        @*<div id="invoice">
             <h1>Our Invoice</h1>
-        </div>
+        </div>*@
     </div>
 </section>
 <script src="html2pdf.bundle.min.js"></script>
@@ -326,10 +325,9 @@
         var ficha = document.getElementById(imprimir);
         var ventimp = window.open(' ', 'popimpr');
         ventimp.document.write(ficha.innerHTML);
-        ventana.document.write('hola');
         ventimp.document.close();
         ventimp.print();
-        //ventimp.close();
+        ventimp.close();
 
         var el = document.getElementById('encabezado'); //se define la variable "el" igual a nuestro div
         el.style.display = (el.style.display == 'none') ? 'block' : 'none';

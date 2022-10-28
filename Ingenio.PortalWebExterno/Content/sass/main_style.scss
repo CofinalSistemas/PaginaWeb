@@ -10,55 +10,23 @@
 @import 'pages/quienesSomos';
 @import 'pages/conceptosDeInteres';
 @import 'pages/multiportal';
+@import 'pages/_directorio';
+@import 'pages/_ActualizacionDatos';
+@import 'pages/FormulariosAC';
+
+@import 'layout/_footer.scss';
 
 @import 'components/button';
 @import 'components/navbar';
+@import 'components/modalStyle';
 
-/* Variables*/
-
-$unit: 6px;
-
-
-.tituleAnimation {
-    color: #e06d23;
-    font: 500;
-    font-size: 4.3rem;
-    text-align: center;
-    line-height: normal;
-    margin: 0 20px;
-    transition: all 0.3s;
+#heading-breadcrumbs {
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../img/Img_Web2/background-credito.jpg) center;
+    padding: 70px 0;
+    /*margin-bottom: 40px;*/
 }
 
-.tituleAnimation:hover {
-    color: $secondary-color;
-    /*margin: 200px;*/
-    letter-spacing: -1.3px;
-}
 
-.underline2 {
-    /*color:red;*/
-    display: inline-block;
-    position: relative;
-}
-
-.underline2:after {
-    content: "";
-    position: absolute;
-    width: 20%;
-    height: 2px;
-    bottom: -20px;
-    left: 40%;
-    background: $secondary-color;
-    /*background:blue;*/
-    transform: scale(0);
-    transform-origin: bottom right;
-    transition: transform 0.2s ease-out;
-}
-
-.underline2:hover:after {
-    transform: scale(1);
-    transform-origin: bottom left;
-}
 
 section.section {
     background: transparent;
@@ -76,11 +44,6 @@ section.section {
     .slick-next:before {
         color: black;
     }
-}
-
-
-@function size($value) {
-    @return $value * $unit;
 }
 
 
@@ -103,7 +66,13 @@ section.section {
         @include obj-center();
         flex-direction: column;
         margin: 30px;
-        border: 1px solid red;
+        height: 320px;
+
+        p{
+            text-align:center;
+            margin: 0 10px;
+        }
+        /*border: 1px solid red;*/
     }
 }
 
@@ -116,7 +85,18 @@ section.section {
         border-radius: 5%;
         transition: all 0.2s;
         /*background: red;*/
+        width:300px;
+        height:330px;
+
     }
+    .icons {
+        /*background: $primary-color-light;*/
+
+        p {
+            color: black;
+        }
+    }
+
 
     .icons > .tarjetas-Centradas:hover, .icons > .tarjetas-Centradas:focus {
         background: #fff;
@@ -127,39 +107,9 @@ section.section {
                     0px 15px 30px -20px $sombras-color, 
                     0px 15px 30px -20px $sombras-color;
         /*background: blue;*/
+        p{
+            color:black;
+        }
     }
 
 }
-i {
-    transition: all 0.2s ease-in-out;
-}
-
-
-.animacion_arriba:hover > i, .animacion_arriba:focus > i {
-    /*background-color: blue;*/
-    animation: wobble_vertical 1s ease-in-out;
-    animation-iteration-count: 1;
-}
-
-@keyframes wobble_vertical{
-    0% {
-        transform: translateY(5px);
-    }
-
-    20% {
-        transform: translateY(-5px)
-    }
-
-    60% {
-        transform: translateY(2px)
-    }
-
-    80% {
-        transform: translateY(-2px)
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-

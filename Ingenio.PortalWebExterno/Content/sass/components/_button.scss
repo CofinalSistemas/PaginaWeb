@@ -7,6 +7,7 @@
     border: none;
     border-radius: 30px;
     width: fit-content;
+    text-decoration: none;
 }
 
 .myButtons:link,
@@ -16,37 +17,9 @@
 }
 
 .myButtons:hover{
-    color:$secondary-color;
+    background:$secondary-color;
+    color:white;
 }
-
-/*.slick-next {*/
-    /*background: red;*/
-    /*content: ">";
-    z-index: 1;
-    height: 100%;
-    width: 50px;
-    border-radius: 3px;
-    outline: none !important;
-    opacity: 1;
-
-    &::before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f007";
-        width: 40px;
-        height: 40px;
-        display: block;
-        margin: 0 auto;
-        line-height: 40px;
-        border-radius: 50%;
-        color: transparent;
-        opacity: .5;
-        font-weight: 900;
-        background: $primary-color;
-        box-shadow: 0 0 0 0px $secondary-color;
-        transition: all .25s ease-in-out;
-    }
-}*/
 
 .slick-next:before {
     /*content: "<";*/

@@ -9,7 +9,13 @@
 <!-- estilo contenido -->
 <!-- estilo para imagen con parallax-->
 <link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
-
+<style>
+    #heading-breadcrumbs {
+        background: linear-gradient( to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../img/57aniversario.jpg) center;
+        padding: 60px 0;
+        /* margin-bottom: 40px; */
+    }
+</style>
 
 <!-- imagen fondo1-->
 @*<div class="parallaxbox" id="pb0" style="background-image: url('/img/fondos/Nuestra Coop.jpg');"> </div>*@
@@ -19,10 +25,26 @@
     <div class="container" style="background-color: rgba(255, 255, 255, 0.8); ">
         @*<ul class="nav nav-tabs" style="background-color: #ffffff ">*@
         <div class="quienes_somos_container">
-            <div id="quienS" class="item-quienessomos active"><a id="an" href="#quienesSomos" data-toggle="tab">Quienes Somos</a></div>
-            <div id="resena" class="item-quienessomos"><a id="an" data-toggle="tab" href="#resenaHistorica">Reseña Histórica</a></div>
-            <div id="misio" class="item-quienessomos"><a id="an" data-toggle="tab" href="#mision">Misión</a></div>
-            <div id="visio" class="item-quienessomos"><a id="an" data-toggle="tab" href="#vision">Visión</a></div>
+            <a id="an" href="#quienesSomos" data-toggle="tab">
+                <div id="quienS" class="item-quienessomos active">
+                    Quienes Somos
+                </div>
+            </a>
+            <a id="an" data-toggle="tab" href="#resenaHistorica">
+                <div id="resena" class="item-quienessomos">
+                    Reseña Histórica
+                </div>
+            </a>
+            <a id="an" data-toggle="tab" href="#mision">
+                <div id="misio" class="item-quienessomos">
+                    Misión
+                </div>
+            </a>
+            <a  id="an" data-toggle="tab" href="#vision">
+                <div  id="visio" class="item-quienessomos">
+                    Visión
+                </div>
+            </a>
         </div>
         @*</ul>*@
 

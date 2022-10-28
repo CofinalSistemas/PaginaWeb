@@ -414,6 +414,7 @@ hr.separator-title {
 .row-logo-footer {
     display: flex;
     align-items: center;
+    justify-content:space-evenly;
 }
 
 .row-logo-footer .list-redes {

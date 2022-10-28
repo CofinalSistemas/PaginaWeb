@@ -1,2 +1,18 @@
-﻿body {
+﻿.Politicas{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction:column;
+    margin: 10px 0 0 0;
+    
+    a{
+        text-decoration:none;
+        color:#fff;
+    }
+}
+
+.icono_cofinal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

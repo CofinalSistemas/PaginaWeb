@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "RteDian";
     ViewBag.titulo = "Regimén Tributario Especial Dian";
     ViewBag.url = Url.Action("index", "home");
@@ -28,6 +27,11 @@
         -moz-box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
         box-shadow: 3px 6px 37px 4px rgba(0,0,0,0.75);
     }
+
+    #heading-breadcrumbs {
+        background: linear-gradient( to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../img/Dian-banner.png) center no-repeat;
+        padding: 50px 0;
+    }
 </style>
 <!-- estilo para imagen con parallax-->
 <link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
@@ -36,7 +40,7 @@
 
 
 <!-- imagen fondo1-->
-<img src="~/img/Dian-banner.png" style="width:1800px; height: 350px;" alt="Multiportal" class="img-responsive  center-block">
+@*<img src="~/img/Dian-banner.png" style="width:1800px; height: 350px;" alt="Multiportal" class="img-responsive  center-block">*@
 <!-- contenido-->
 
 @*<a href="https://www.cofinal.com.co/Home/Contact">Contactanos</a>*@

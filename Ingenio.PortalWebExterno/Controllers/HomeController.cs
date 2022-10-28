@@ -20,6 +20,8 @@ using System.Drawing.Drawing2D;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Excel = Microsoft.Office.Interop.Excel;
+
 
 namespace Ingenio.PortalWebExterno.Controllers
 {
@@ -219,21 +221,63 @@ namespace Ingenio.PortalWebExterno.Controllers
         [HttpPost]
         public ActionResult ActualizacionDatos(user model)
         {
-            if (string.IsNullOrEmpty(model.Name))
+            Excel.Application xlApp = new Excel.Application();
+            Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.PortalWebExterno\Pruebas_SitioWeb.xlsx");
+            Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+            Excel.Range xlRange = xlWorksheet.UsedRange;
+
+            xlWorksheet= xlWorkbook.ActiveSheet;
+            
+            int rowCount = xlRange.Rows.Count;
+            int colCount = xlRange.Columns.Count;
+
+
+            string[,] miArray = new string[rowCount-1, 2];
+            
+            for (int i = 2; i <= rowCount; i++)
             {
-                ModelState.AddModelError("Name", "Please Enter Name");
+                    string Nombre = xlRange.Cells[i, 1].Value2.ToString();
+                    string Cedula = xlRange.Cells[i, 2].Value.ToString();
+                    miArray[i-2, 0] = Nombre;
+                    miArray[i-2, 1] = Cedula;
+            }
+            bool isBase = false;
+
+            for (int i = 0; i <= rowCount-2; i++)
+            {
+                if (miArray[i, 0] == model.Cedula)
+                {
+                    isBase = true;
+                    if (miArray[i, 1] == model.fechaExpedicion.ToString())
+                    {
+                        xlWorksheet.Cells[i+2, 3] = model.Nombre;
+                        xlWorksheet.Cells[i+2, 4] = model.Apellido;
+                        xlWorksheet.Cells[i+2, 5] = model.Direccion;
+                        xlWorksheet.Cells[i+2, 6] = model.Telefono;
+                        xlApp.DisplayAlerts = false;
+                        xlWorkbook.Save();
+                        TempData["SuccessMessage"] = "Tu informacion a sido Actualizada";
+                        break;
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("fechaExpedicion", "Su Fecha de expedicion no coincide con su Cedula");
+                    }
+                }
             }
 
-            if (string.IsNullOrEmpty(model.Username))
+            if (!isBase)
             {
-                ModelState.AddModelError("Username", "Please Enter Name");
+                ModelState.AddModelError("Cedula", "Su Cedula no esta en la Base de datos");
             }
 
+            // Salir de Excel y Eliminar Todos los procesos del mismo
+            xlWorkbook.Close(true, Type.Missing, Type.Missing);
+            xlApp.Quit();
+            Process[] pro = Process.GetProcessesByName("excel");
+            pro[0].Kill();
+            pro[0].WaitForExit();
 
-            if (ModelState.IsValid)
-            {
-                return RedirectToAction("Message2");
-            }
 
             return View();
         }

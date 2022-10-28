@@ -6,7 +6,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    background: $primary-color;
+    background: $primary-color-light;
     padding: 20px;
 
     .convenio__text {
@@ -22,7 +22,7 @@
         }
 
         p {
-            color: #fff;
+            /*color: #fff;*/
         }
     }
 
@@ -44,11 +44,13 @@
     .convenio__boton {
         cursor: pointer;
         width: 100px;
-        height: 30px;
+        height: 50px;
         background: $primary-color;
         color: white;
-        display: grid;
-        place-content: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
         transition: all 0.2s;
 
         &:hover, &:focus {
@@ -63,7 +65,7 @@
 }
 
 .convenio__main {
-    max-width:1300px;
+    max-width: 1300px;
     margin: 4rem auto;
     display: flex;
     gap: 30px;
@@ -75,19 +77,36 @@
         /*background: gold;*/
         width: 250px;
         height: 300px;
-        border: 1px solid $secondary-color;
-        display: grid;
-        place-content: center;
+        border: 1px solid rgba(211, 211, 211, 0.75);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         gap: 30px;
-        cursor: pointer;
+        position: relative;
+        border-radius: 10px;
+        transition: all 0.2s ease-in-out;
 
-        p {
-            border: 1px solid $secondary-color;
-            text-align: center;
+        .myButtons {
+            cursor: pointer;
+            text-decoration: none;
         }
 
-        img {
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5);
+        }
+
+        .container__imagen__convenio {
             width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 200px;
+            }
         }
     }
 

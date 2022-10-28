@@ -46,144 +46,8 @@
     @Styles.Render("~/Content/plantilla")
     @Styles.Render("~/Content/plantillaHome")
 
-    <!--Ventana emergente-->
-    <!--   Estilos Modal -->
-    <style>
-
-        #myImg {
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-            #myImg:hover {
-                opacity: 0.7;
-            }
-
-        /* The Modal (background) */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 997;
-            padding-top: 20px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.9);
-        }
-
-        .modal-content {
-            z-index: 998; /* Sit on top */
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-
-        #caption {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-            text-align: center;
-            color: #ccc;
-            padding: 10px 0;
-            height: 150px;
-        }
-
-        .modal-content, #caption {
-            -webkit-animation-name: zoom;
-            -webkit-animation-duration: 0.6s;
-            animation-name: zoom;
-            animation-duration: 0.6s;
-        }
-
-        @@-webkit-keyframes zoom {
-            from {
-                -webkit-transform: scale(0)
-            }
-
-            to {
-                -webkit-transform: scale(1)
-            }
-        }
-
-        @@keyframes zoom {
-            from {
-                transform: scale(0)
-            }
-
-            to {
-                transform: scale(1)
-            }
-        }
-
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: white !important;
-            font-size: 50px;
-            font-weight: bold;
-            transition: 0.3s;
-            z-index: 1000 !important;
-        }
-
-            .close:hover,
-            .close:focus {
-                color: #ff0000;
-                text-decoration: none;
-                cursor: pointer;
-            }
-
-        @@media only screen and (max-width: 700px) {
-            .modal-content {
-                width: 100%;
-            }
-        }
-    </style>
-    <!--   Estilos Modal -->
-    <!--ventana emergente-->
-    <!-- owl carousel css -->
-
     <link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
     <link rel="stylesheet" type="text/css" href="~/Content/estiloss.css">
-    <style>
-        .sliderC {
-            height: 1000%;
-            width: 100%;
-            margin-bottom: 0px;
-        }
-
-            .sliderC > .item > a > img, .carousel-inner > .item > img {
-                width: 100%;
-                object-fit: cover;
-                object-position: center center;
-            }
-
-        .titulo {
-            color: #E1852C;
-            text-align: center;
-            font-family: roboto;
-            font-size: 35px;
-        }
-
-        .texto {
-            background-color: rgba(219, 219, 219, 0.58);
-            border-radius: 90px 40px;
-            margin-bottom: 0px;
-        }
-
-        .descrip {
-            font-family: roboto;
-            color: #111;
-            font-size: 25px;
-            text-align: center;
-        }
-    </style>
     <!-- Favicon and apple touch icons-->
     <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
@@ -285,100 +149,6 @@
                         </ul>
                     </div>
                 </section>
-                <!-- END  SECTION ICONS FLOAT -->
-                <!-- SECTION NEW SLIDER FOR HOMEPAGE -->
-                <!--
-                <section class="row" style="margin-bottom: 0px">
-
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                <ol class="carousel-indicators">
-
-                    @{ int pos = 0;
-                        foreach (var slide in Sliders)
-                        {
-                            if (slide.Id == 1)
-                            {
-                                <li data-target="#myCarousel" data-slide-to="@pos" class="active"></li>
-                            }
-                            else
-                            {
-                                <li data-target="#myCarousel" data-slide-to="@pos"></li>
-                            }
-                            pos++;
-                        }
-                    }
-
-                    @{ for (int i = 0; i < 5; i++)
-                        {
-                            if (i == 0)
-                            {
-                                <li data-target="#myCarousel" data-slide-to="@pos" class="active"></li>
-                            }
-                            else
-                            {
-                                <li data-target="#myCarousel" data-slide-to="@pos"></li>
-                            }
-                        }
-                    }
-                </ol>
-
-                <div class="carousel-inner">
-
-                    @{
-                        foreach (Ingenio.BO.Ingenio.Sliders slid in Sliders)
-                        {
-                            if (slid.Id == 1)
-                            {
-                                <div class="item active">
-                                    <img src="@slid.Imagen" alt="@slid.Titulo">
-                                    <div class="carousel-caption">
-                                        <h3>@slid.Titulo</h3>
-                                        <p>@slid.Descripcion</p>
-                                    </div>
-                                </div>
-                            }
-                            else
-                            {
-                                <div class="item">
-                                    <img src="@slid.Imagen" alt="@slid.Titulo">
-                                    <div class="carousel-caption">
-                                        <h3>@slid.Titulo</h3>
-                                        <p>@slid.Descripcion</p>
-                                    </div>
-                                </div>
-                            }
-                        }
-                    }
-
-                    @{
-                        @* for (int i = 0; i < 5; i++)
-                            {
-                                if (i == 0)
-                                {
-                                    <div class="item active">
-                                        <img src="https://www.cofinal.com.co/igmSliders/20220214120103-ganadores-banner.png" alt="Titulo">
-                                        <div class="carousel-caption">
-                                            <h3>Titulo Titulo</h3>
-                                            <p>Descripcion </p>
-                                        </div>
-                                    </div>
-                                }
-                                else
-                                {
-                                    <div class="item">
-                                        <img src="https://www.cofinal.com.co/igmSliders/20220214120103-ganadores-banner.png" alt="Titulo">
-                                        <div class="carousel-caption">
-                                            <h3>Titulo Titulo</h3>
-                                            <p>Descripcion </p>
-                                        </div>
-                                    </div>
-                                }
-                            }
-                        *@
-                    }
-
-                </div>
 
                 <!-- Controles de izquierda a derecha -->
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -458,7 +228,7 @@
             <!-- Fonde De Video -->
 
             <div class="big-container">
-                <section id="Video_Slider">
+                <section class="container_prin" id="Video_Slider">
                     <video autoplay muted loop id="sliderVideo">
                         <source src="~/Videos/Animacion_Banner.mp4" type="video/mp4" />
                         Your browser does not support HTML5 video.
@@ -470,25 +240,37 @@
                     </div>
                 </section>
                 <!--Final fondo de Video -->
-                <!-- Seccion: En que te podemos ayudar -->
-                <section>
-                    <div class="contenedor">
+                <section class="servicios">
+                    <section class="container_prin">
                         <h3 class="tituleAnimation">¿En que te podemos ayudar?</h3>
-                        <div class="botones">
-                            <button class="btn myButtons">Ahorro</button>
-
-                            <button class="btn myButtons">Crédito</button>
-                            <button class="btn myButtons">Quiero ser socio</button>
-                            <button class="btn myButtons">Fondos sociales</button>
-                            <button class="btn myButtons">Servicios Virtuales</button>
+                        <div class="nuestros__Servicios">
+                            <a href="~/Home/ahorros" class="tartjeta__servicios animacion_arriba">
+                                <img src="~/img/Img_Web2/icono-ahorro.png" />
+                                <p>Ahorro</p>
+                            </a>
+                            <a href="~/Home/Creditos" class="tartjeta__servicios animacion_arriba">
+                                <img src="~/img/Img_Web2/icono-credito.png" />
+                                <p>Crédito</p>
+                            </a>
+                            <a class="tartjeta__servicios animacion_arriba">
+                                <img src="~/img/Img_Web2/iconos/quiero-ser-socio.png" />
+                                <p>Quiero ser socio</p>
+                            </a>
+                            <a class="tartjeta__servicios animacion_arriba">
+                                <img src="~/img/Img_Web2/iconos/fondo-social.png" />
+                                <p>Fondos sociales</p>
+                            </a>
+                            <a class="tartjeta__servicios animacion_arriba">
+                                <img src="~/img/Img_Web2/iconos/servicios-virtuales.png" />
+                                <p>Servicios Virtuales</p>
+                            </a>
                         </div>
-                    </div>
+                    </section>
                 </section>
-                <!-- Final: En que te podemos ayudar -->
                 <!-- Seccion slider de imagenes -->
-                <div class="caroosles_de_imagenes">
+                <div class="caroosles_de_imagenes container_prin">
                     <div class="wrapper">
-                        <div class="my-slider">
+                        <div id="Carusel" class="my-slider" style="display:none;" >
                             <div><img class="imagen-slider" src="~/img/Img_Web2/1.jpg"></div>
                             <div><img class="imagen-slider" src="~/img/Img_Web2/2.jpg"></div>
                             <div><img class="imagen-slider" src="~/img/Img_Web2/3.jpg"></div>
@@ -501,116 +283,74 @@
 
 
                 <!-- Titulo grande de texto -->
-                <section class="tituleAnimation">
-                    <p >Si es socio de nuestra cooperativa disfrute de múltiples beneficios</p>
-                </section>
+                
                 <!-- Fin: Titulo grande de texto -->
                 <!-- Seccion de Iconos -->
-                <section>
-                    <div class="icons">
+                <section class="servicios">
+                    <section class="tituleAnimation">
+                        <p>Si es socio de nuestra cooperativa disfrute de múltiples beneficios</p>
+                    </section>
+                    <div class="icons container_prin">
                         <div class="tarjetas-Centradas underline2">
                             <div class="icentrado">
-                                <i class="fa-solid fa-user-tie"></i>
+                                <img src="~/img/Img_Web2/iconos/convenios-y-promociones.png" />
                             </div>
                             <p>Convenios y promociones</p>
-                            <p class="text-prueba"> Lorem Ipsum is simply dummy<br /> text of the printing and typesetting industry. </p>
+                            @*<p class="text-prueba">
+                    Ubica tu sucursal más cercana y conoce las promociones y convenios vigentes en cada una de ellas.
+                    * Los convenios y promociones pueden estar sujetos a cambios<br />
+                </p>*@
                         </div>
                         <div class="tarjetas-Centradas underline2">
-                            <div class="icentrado"><i aria-hidden="true" class="fas fa-user-lock"></i></div>
+                            <div class="icentrado"><img src="~/img/Img_Web2/icono-seguro.png" /></div>
                             <p>Protección al ahorro</p>
-                            <p class="text-prueba"> Lorem Ipsum is simply dummy<br /> text of the printing and typesetting industry. </p>
+                            @*<p class="text-prueba">
+                    Sabemos lo difícil que es sobreponerse a una pérdida del ser amado, especialmente si es el sustento familiar; es por ello que protegemos tu ahorro sin costo como servicio adicional y saldamos el crédito vigente de tu ser querido al fallecer*
+
+                    * Aplican restricciones de acuerdo a la póliza de seguro vigente. Para mayores informes, consulta a un ejecutivo en tu sucursal y no olvides dar de alta a tus beneficiarios con su nombre completo, dirección y número telefónico.<br /> text of the printing and typesetting industry.
+                </p>*@
                         </div>
                         <div class="tarjetas-Centradas underline2">
-                            <div class="icentrado"><i aria-hidden="true" class="fas fa-user-plus"></i></div>
+                            <div class="icentrado">
+                                <img src="~/img/Img_Web2/iconos/ayuda-funeraria.png" />
+                            </div>
                             <p>Ayuda funeraria</p>
-                            <p class="text-prueba"> Lorem Ipsum is simply dummy<br /> text of the printing and typesetting industry. </p>
+                            @*<p class="text-prueba">
+                    En los momentos difíciles, queremos apoyar tu economía con la ayuda funeraria económica para nuestros socios*. Recuerda que únicamente tus beneficiarios (quienes brindaste al momento de darte alta como socios), son los únicos que pueden solicitar el apoyo por lo que considera siempre actualizar los datos en caso de cambios.
+
+                    * Aplican restricciones de acuerdo a la póliza de seguro vigente. Para mayores informes, consulta a un ejecutivo en tu sucursal.
+                </p>*@
                         </div>
                     </div>
                 </section>
-                <!-- The Modal -->
-                <div id="ventana" class="modal-ventana">
-                    <!-- Modal content -->
-                    <div class="modal-contentenido">
-
-                        <div class="modal-contentenido-left">
-                            <img src="~/img/semilla1.png" alt="foto de prueba">
-                        </div><!-- end modal content left -->
-
-                        <div class="modal-contentenido-right">
-
-                            <div class="modal-header">
-                                <p>¿Cuales son los beneficios de ser asociados?</p>
-                                <span class="cerrar">&times;</span>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>El Asociado de COFINAL, es dueño de la Cooperativa.</p>
-                                <p>El Asociado de COFINAL tiene la posibilidad de acceder a todo el portafolio de productos y servicios ofrecidos y realizar operaciones propias de su objeto económico social.</p>
-                            </div>
-
-                            <div class="modal-footer">
-                                <button>Agende su afiliación</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div id="ventana1" class="modal-ventana">
-                    <!-- Modal content -->
-                    <div class="modal-contentenido">
-
-                        <div class="modal-contentenido-left">
-                            <img src="~/img/semilla1.png" alt="foto de prueba">
-                        </div><!-- end modal content left -->
-
-                        <div class="modal-contentenido-right">
-
-                            <div class="modal-header">
-                                <p>Credito</p>
-                                <span class="cerrar1">&times;</span>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>El Asociado de COFINAL, es dueño de la Cooperativa.</p>
-                                <p>El Asociado de COFINAL tiene la posibilidad de acceder a todo el portafolio de productos y servicios ofrecidos y realizar operaciones propias de su objeto económico social.</p>
-                            </div>
-
-                            <div class="modal-footer">
-                                <button>Agente su afiliación</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- END the modal -->
-                <!-- END the modal -->
                 <!-- Seccion de Fin -->
                 <!-- Titulo grande de texto -->
-                <section class="titulos">
-                    <h3>Cofinal Es</h3>
+                <section class="titulos container_prin">
+                    <h3 class="tituleAnimation">Cofinal es</h3>
                 </section>
                 <!-- Fin: Titulo grande de texto -->
                 <!-- Tarjetas Contenedoras -->
-                <section class="tarjetas-contenedor">
+                <section class="tarjetas-contenedor container_prin">
                     <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
-                        <img src="~/img/Img_Web2/iconoAhorro.png"/>
+                        <img src="~/img/Img_Web2/iconoAhorro.png" />
                         @*<i aria-hidden="true" class="far fa-clock"></i>*@
                         <h3>Ahorro</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
-                        <button class="myButtons">Ingresar</button>
+                        <a href="/Home/ahorros" class="myButtons">Ingresar</a>
                     </div>
                     <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
-                        <i aria-hidden="true" class="fas fa-check"></i>
+                        <img src="~/img/Img_Web2/iconoCredito.png" />
+                        @*<i aria-hidden="true" class="fas fa-check"></i>*@
                         <h3>Crédito</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
-                        <button class="myButtons">Ingresar</button>
+                        <a href="/Home/Creditos" class="myButtons">Ingresar</a>
                     </div>
                     <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
-                        <i aria-hidden="true" class="fas fa-solid fa-calculator"></i>
+                        <img src="~/img/Img_Web2/iconos/simuladores.png" />
                         <h3>Simuladores</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -618,7 +358,7 @@
                         <button class="myButtons">Ingresar</button>
                     </div>
                     <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
-                        <i aria-hidden="true" class="fas fa-solid fa-desktop"></i>
+                        <img src="~/img/Img_Web2/icono-enlaces.png" />
                         <h3>Virtual</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -630,7 +370,7 @@
                 <!-- Inicio de formulario -->
                 <section>
                     <section class="titulos">
-                        <h3>Mejora tu Experiencia Con Nuestra App</h3>
+                        <h3 class="tituleAnimation">Mejora tu experiencia con nuestra app</h3>
                     </section>
                     <div id="formulario-2">
                         <img src="~/img/Img_Web2/Fotografia_edificio.png" />
@@ -898,188 +638,8 @@
 
 
             <!-- FIN SECCIÓN BOTONES DE CONTACTO -->
-            <!-- ULTIMAS NOTICIAS Y EVENTOS -->
-
-            <section class="py-cofinal section-last-news">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="title-section text-center">Últimas noticias y eventos</h2>
-                        </div>
-                    </div>
-                    <div class="row row-carrousel-news">
-
-                        <div class="col-12" id="col">
-
-                            <ul class="owl-carousel owl-carousel-testominals testimonials same-height-row">
-                                @foreach (var item in Model)
-                                {
-                                    string htmldecode = System.Web.HttpUtility.HtmlDecode(item.Html);
-                                    var htm = Regex.Replace(htmldecode, "<.*?>", " ");
-                                    htm = Regex.Replace(htm, "&nbsp;", " ");
-                                    htm = Regex.Replace(htm, "&aacute;", "á");
-                                    htm = Regex.Replace(htm, "&eacute;", "é");
-                                    htm = Regex.Replace(htm, "&iacute;", "í");
-                                    htm = Regex.Replace(htm, "&oacute;", "ó");
-                                    htm = Regex.Replace(htm, "&uacute;", "ú");
-                                    htm = Regex.Replace(htm, "&ntilde;", "ñ");
-                                    htm = Regex.Replace(htm, "&iquest;", "¿");
-                                    //var htmls = htmldecode.IndexOf("<p");
-                                    if (htm.Length < 100)
-                                    {
-                                        htmldecode = htm.Substring(0, htm.Length);
-                                    }
-                                    else
-                                    {
-                                        htmldecode = htm.Substring(0, 100);
-                                    }
-                                    <li class="item" style="padding-bottom: 0">
-                                        <div class="team-member">
-                                            <div class="image">
-                                                <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })">
-                                                    <img src="@item.Imagen" alt="@item.Titulo">
-                                                </a>
-                                            </div>
-                                            <div class="content" style="height:150px">
-                                                <h4></h4>
-                                                <p style="height: 70px;" class="">@htmldecode ... </p>
-                                                <p class="read-more">
-                                                    <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })">Leer más.</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                }
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- FIN DE ULTIMAS NOTICIAS Y EVENTOS -->
         </div>
-        <!------------- Estilos Cajas---------->
-        <style>
-            #body {
-                margin-top: -50px;
-                margin: auto;
-                width: 1150px;
-                height: 400px;
-            }
-
-            #imagen2 {
-                width: 1150px;
-                height: 400px;
-                float: left;
-            }
-        </style>
-        <!------------- Fin Sesion Imagenes---------->
-        <!-- <div class="row">
-            <div class="container" id="conteniNot">
-                <div class="row" id="noti">
-                    <div class="col-md-9" id="col">
-
-                        @*<h4>Mantenerse informado y actualizado sobre todas las noticias relacionadas con la Cooperativa</h4>*@
-
-                        <ul class="owl-carousel testimonials same-height-row">
-                            @foreach (var item in Model)
-                            {
-                                string htmldecode = System.Web.HttpUtility.HtmlDecode(item.Html);
-                                var htm = Regex.Replace(htmldecode, "<.*?>", " ");
-                                htm = Regex.Replace(htm, "&nbsp;", " ");
-                                htm = Regex.Replace(htm, "&aacute;", "á");
-                                htm = Regex.Replace(htm, "&eacute;", "é");
-                                htm = Regex.Replace(htm, "&iacute;", "í");
-                                htm = Regex.Replace(htm, "&oacute;", "ó");
-                                htm = Regex.Replace(htm, "&uacute;", "ú");
-                                htm = Regex.Replace(htm, "&ntilde;", "ñ");
-                                htm = Regex.Replace(htm, "&iquest;", "¿");
-                                //var htmls = htmldecode.IndexOf("<p");
-                                if (htm.Length < 100)
-                                {
-                                    htmldecode = htm.Substring(0, htm.Length);
-                                }
-                                else
-                                {
-                                    htmldecode = htm.Substring(0, 100);
-                                }
-                                <li class="item" style="padding-bottom: 0">
-                                    <div class="team-member">
-                                        <div class="image">
-                                            <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })">
-                                                <img src="@item.Imagen" alt="" class="img-responsive img-circle" style="width: 200px; height: 200px;">
-                                            </a>
-                                        </div>
-                                        <div class="content" style="height:150px">
-                                            <h4>@item.Titulo</h4>
-                                            <p style="height: 70px;" class="">@htmldecode ... </p>
-                                            <p class="read-more">
-                                                <a href="@Url.Action("NoticiasCofinal", "home",new { id = item.Url })" class="btn btn-template-main">Leer más.</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                            }
-                        </ul>
-                    </div>
-
-                    <script>document.getElementById('noclick').style.pointerEvents = 'none';</script>
-                    <div class="col-md-3">
-
-                        <!-- DolarWeb IndMax Start
-                        <div class="heading text-center" style="margin-bottom:10px;padding-top:15px;">
-                            <h4>INDICADORES ECONÓMICOS</h4>
-                            <p style="display:inline-block;">
-
-                                <!-- DolarWeb IndMax Start
-                                <div id="IndicadoresMax"><h2><a href="https://dolar.wilkinsonpc.com.co/">Dolar Hoy Colombia</a></h2></div>
-                                <script type="text/javascript" src="https://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-max.js?ancho=190&alto=280&fondo=transparent&fsize=12&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMax End
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-            </section>-->
     </div>
-
-    @*-----------------------------------------------------FIN NOTICIAS---------------------------------------------------------*@
-    <style type="text/css">
-        body {
-            overflow-x: hidden;
-        }
-
-        .vFlotante {
-            position: absolute;
-            left: 90%;
-            top: 15%;
-            width: 500px;
-            height: 500px;
-            transition: all .4s ease-in;
-            -webkit-transition: all .4s ease-in;
-            -moz-transition: all .4s ease-in;
-            -o-transition: all .4s ease-in;
-        }
-
-            .vFlotante:hover {
-                left: 65%;
-            }
-
-        .titulo {
-            transform: rotate(270deg);
-            -webkit-transform: rotate(270deg);
-            -moz-transform: rotate(270deg);
-            -o-transform: rotate(270deg);
-            background: red;
-            color: white;
-            font-size: 25px;
-        }
-    </style>
-
-
-
-    @*seccion de imagen 1 Imagen de Fondo Azul*@
-    <!--porque asociarte-->
     <div class="container">
         <style>
             .maps iframe {
@@ -1241,46 +801,52 @@
     <script type="text/javascript" src="~/Content/slick/slick/slick.min.js"></script>
     <script type="text/javascript">
         // Control de slider
-        $('.slick-carousel').slick({
-            infinite: true,
-            slidesToShow: 3, // Shows a three slides at a time
-            slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
-            arrows: true, // Adds arrows to sides of slider
-            dots: true // Adds the dots on the bottom
-        });
-        $(document).ready(function () {
-            $('.my-slider').slick({
-                // Propiedades del Slider
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                arrows: true,
-                centermode: true,
-                dots: true,
-                speed: 500,
+        
+            
+            $('.slick-carousel').slick({
                 infinite: true,
-                autoplaySpeed: 5000,
-                responsive: [
-                    {
-                        breakpoint: 1400,
-                        settings: {
-                            slidesToShow: 3,
-                        }
-                    },
-                    {
-                        breakpoint: 900,
-                        settings: {
-                            slidesToShow: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 750,
-                        settings: {
-                            slidesToShow: 1,
-                        }
-                    },
-                ]
+                slidesToShow: 3, // Shows a three slides at a time
+                slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
+                arrows: true, // Adds arrows to sides of slider
+                dots: true // Adds the dots on the bottom
             });
-        });
+        setTimeout(function () {
+            $(document).ready(function () {
+                $("#Carusel").attr("style", "display: block");
+                $('.my-slider').slick({
+                    // Propiedades del Slider
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    centermode: true,
+                    dots: true,
+                    speed: 500,
+                    infinite: true,
+                    autoplaySpeed: 5000,
+                    responsive: [
+                        {
+                            breakpoint: 1400,
+                            settings: {
+                                slidesToShow: 3,
+                            }
+                        },
+                        {
+                            breakpoint: 900,
+                            settings: {
+                                slidesToShow: 2,
+                            }
+                        },
+                        {
+                            breakpoint: 750,
+                            settings: {
+                                slidesToShow: 1,
+                            }
+                        },
+                    ]
+                });
+            })
+        }, 100);
+            
     </script>
     <script>
         // Get the modal
@@ -1338,39 +904,6 @@
             }); // end DOM ready
         })(jQuery); // end jQuery
     </script>
-    @*<script>
-        // Get the modal
-        const modal1 = document.querySelector("#ventana1");
-        console.log(modal1);
-        // Get the button that opens the modal
-        const btn1 = document.querySelectorAll(".btn1");
-
-        // Get the <span> element that closes the modal
-        const closeModal1 = document.getElementsByClassName("cerrar")[0];
-
-        for (let i = 0; i < btn1.length; i++) {
-            btn1[i].addEventListener("click", function () {
-                modal1.style.display = "block";
-            });
-        }
-
-        // When the user clicks the button, open the modal
-        btn1.onclick = function () {
-            modal1.style.display = "block";
-        };
-
-        // When the user clicks on <span> (x), close the modal
-        closeModal1.onclick = function () {
-            modal1.style.display = "none";
-        };
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal1.style.display = "none";
-            }
-        };
-    </script>*@
 </body>
 </html>
 

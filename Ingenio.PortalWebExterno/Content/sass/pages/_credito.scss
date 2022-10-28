@@ -261,9 +261,9 @@
     width: 271px;
     height: 197px;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 9px 34px;
-    align-items: flex-end;
+    align-items: center;
     box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5);
     border-radius: 42px;
     text-decoration: none;
@@ -271,15 +271,17 @@
     position: relative;
     background: white;
     transition: all 0.2s ease 0s;
-    z-index: 1;
+    background-image: url(../../../img/Img_Web2/tarjeta.png);
 
     &:hover {
-        background-image: url(../../../img/Img_Web2/backitemcredit.png);
+        background-image: url(../../../img/Img_Web2/Tarjetaaaaaa2.png);
         background-repeat: no-repeat;
+        background-size: cover;
         transform: translateY(-5px);
         transition: all 0.2s ease 0s;
+        /*z-index: 1;*/
 
-        a{
+        a {
             text-decoration: none;
         }
 
@@ -289,12 +291,9 @@
     }
 
     img {
-        width: 60px;
-        margin: 0px 11px 0px 0px;
+        width: 150px;
         font-size: 40px;
         -webkit-text-fill-color: transparent;
-        position: absolute;
-        top: 20px;
     }
 
     p {
@@ -307,6 +306,16 @@
         letter-spacing: -0.4px;
         line-height: 23px;
         transition: all 0.2s ease 0s;
+    }
+
+    &.hey {
+        background-image: url(../../../img/Img_Web2/tarjeta.png);
+
+        &:hover {
+            background-image: url(../../../img/Img_Web2/Tarjetaaaaaa2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     }
 }
 

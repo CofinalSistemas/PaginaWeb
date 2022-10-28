@@ -26,6 +26,25 @@
 
 /* Fin funcion de girar*/
 
+/* Animacion del Titulo*/
+.tituleAnimation {
+    color: $primary-color;
+    font: 500;
+    font-size: 3.3rem;
+    text-align: center;
+    line-height: normal;
+    margin: 0 20px;
+    transition: all 0.3s;
+}
+
+.tituleAnimation:hover {
+    color: $secondary-color;
+    /*margin: 200px;*/
+    letter-spacing: -1.3px;
+}
+
+/* Animacion del Titulo*/
+
 /*Inicio de Funcion de subrayar*/
 .underline {
     /*color:red;*/
@@ -51,6 +70,32 @@
     transform: scale(1);
     transform-origin: bottom left;
 }
+
+.underline2 {
+    /*color:red;*/
+    display: inline-block;
+    position: relative;
+}
+
+.underline2:after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    bottom: -20px;
+    left: 40%;
+    background: $secondary-color;
+    /*background:blue;*/
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-out;
+}
+
+.underline2:hover:after {
+    transform: scale(1);
+    transform-origin: bottom left;
+}
+
 /*Fin de Funcion de subrayar*/
 
 @mixin uderline(){
@@ -68,4 +113,40 @@
     /*background-color: #f7f8f8;*/
     border-radius: 5%;
     box-shadow: 0px 15px 30px -20px $sombras-color, 0px 15px 30px -20px $sombras-color, 0px 15px 30px -20px $sombras-color;
+}
+
+
+/*Animaciones*/
+
+i {
+    transition: all 0.2s ease-in-out;
+}
+
+
+.animacion_arriba:hover > i, .animacion_arriba:focus > i {
+    /*background-color: blue;*/
+    animation: wobble_vertical 1s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes wobble_vertical {
+    0% {
+        transform: translateY(5px);
+    }
+
+    20% {
+        transform: translateY(-5px)
+    }
+
+    60% {
+        transform: translateY(2px)
+    }
+
+    80% {
+        transform: translateY(-2px)
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }

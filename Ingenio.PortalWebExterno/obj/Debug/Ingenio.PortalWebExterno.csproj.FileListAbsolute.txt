@@ -928,3 +928,7 @@ D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.Po
 D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.csproj.CopyComplete
 D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.dll
 D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.pdb
+D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.PortalWebExterno\bin\HtmlAgilityPack.dll
+D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.PortalWebExterno\bin\HtmlAgilityPack.pdb
+D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.PortalWebExterno\bin\HtmlAgilityPack.xml
+D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.PortalWebExterno\obj\Debug\Ingenio.PortalWebExterno.csproj.ResolveComReference.cache

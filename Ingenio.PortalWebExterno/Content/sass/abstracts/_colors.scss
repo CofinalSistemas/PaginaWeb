@@ -1,6 +1,13 @@
-﻿$primary-color: rgba(224, 85, 20, 0.75);
+﻿/*$primary-color: rgba(224, 85, 20, 0.75);*/
+$primary-color: rgba(252,132,4,0.9) ;
+/*$primary-color: rgba(252,187,43,1);*/
+$primary-color-light: rgba(252,132,4,0.1);
+
 $secondary-color: rgba(236, 28, 36, 0.75);
-$third-color: rgba(246, 146, 31, 0.8) ;
+$secondary-color-light: rgba(236, 28, 36, 0.2);
+
+
+$third-color: rgba(246, 146, 31, 0.8);
 $secondary-color-sombra: rgba(236, 28, 36, 0.5);
 $sombras-color: rgba(0, 0, 0, 0.5);
 $light-color: rgba(255, 255, 255, 1);

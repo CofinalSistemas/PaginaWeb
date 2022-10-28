@@ -1,24 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using Excel = Microsoft.Office.Interop.Excel;
+
+
 
 namespace Ingenio.PortalWebExterno.Models
 {
+
     public class user
     {
-        public string Name { get; set; }
+        [Required]
+        [DisplayName("Cedula: ")]
+        public string Cedula { get; set; }
+        
+        [Required]
+        [DisplayName("Fecha de Expedición: ")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        [DataType(DataType.Date)]
+        public DateTime fechaExpedicion { get; set; }
 
-        public string Username { get; set; }
+        public string Nombre { get; set; }
 
-        public string Password { get; set; }
+        public string Apellido { get; set; }
 
-        public string ConfirmPassword { get; set; }
+        public string Direccion { get; set; }
 
-        public string Address { get; set; }
+        public string Telefono { get; set; }
 
-        public string Contact { get; set; }
-
-        public bool Terms { get; set; }
+        [Required]
+        [DisplayName("Terminos y Condiciones: ")]
+        public bool Terminos { get; set; }
     }
 }

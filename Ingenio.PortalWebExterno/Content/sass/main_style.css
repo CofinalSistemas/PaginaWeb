@@ -242,7 +242,7 @@ i {
     text-decoration: none; }
     .container_prin a:hover, .container_prin a:focus {
       text-decoration: none;
-      color: black; }
+      /*color: black;*/ }
 
 .contenedor {
   display: flex;
@@ -927,15 +927,18 @@ i {
     font-size: 15px; }
 
 .page__Credito {
-  margin: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 30px auto;
   /*    @media screen and (min-width:750px) {
         flex-direction: row;
     }*/ }
+  .page__Credito article a {
+    text-decoration: none; }
 
 .componente__Credito {
   /*background: $primary-color;*/
@@ -1070,18 +1073,11 @@ i {
       background-repeat: no-repeat;
       background-size: cover; }
 
-.page__Credito {
-  margin: 0 10rem 100px; }
-  @media (min-width: 1390px) {
-    .page__Credito {
-      margin: 0 10rem; } }
-  .page__Credito article a {
-    text-decoration: none; }
-
 .section__Credito img {
   width: 200px; }
 
 .container__Herramienta {
+  max-width: 1400px;
   border: 1px solid rgba(252, 132, 4, 0.9);
   border-top: 10px solid rgba(236, 28, 36, 0.75);
   display: flex;
@@ -1090,7 +1086,7 @@ i {
   justify-content: center;
   gap: 20px;
   padding: 30px;
-  margin: 0 30px; }
+  margin: 30px auto; }
   .container__Herramienta .section__Credito {
     display: flex;
     flex-direction: row;
@@ -1240,7 +1236,7 @@ i {
 
 .modal_Agencias {
   padding: 0;
-  max-width: 750px;
+  /*max-width: 750px;*/
   box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5);
   margin: auto auto;
   border: 0;
@@ -1496,7 +1492,7 @@ i {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  background: rgba(252, 132, 4, 0.9);
+  background: rgba(252, 132, 4, 0.1);
   padding: 20px; }
   .pago__Header .pago__text {
     display: flex;
@@ -1508,7 +1504,7 @@ i {
     .pago__Header .pago__text h2 {
       color: rgba(236, 28, 36, 0.75); }
     .pago__Header .pago__text p {
-      color: #fff; }
+      color: black; }
   .pago__Header img {
     width: 300px; }
 
@@ -1600,6 +1596,9 @@ i {
   .header_modal_pagos img {
     object-fit: fill;
     /*width:100%;*/ }
+
+.my-slider-pagos img {
+  width: 500px; }
 
 /*$primary-color: rgba(224, 85, 20, 0.75);*/
 /*$primary-color: rgba(252,187,43,1);*/

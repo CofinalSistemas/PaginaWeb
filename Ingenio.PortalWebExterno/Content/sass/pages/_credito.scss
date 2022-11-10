@@ -8,7 +8,7 @@
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
-    width:70%;
+    width: 70%;
 }
 
 .tipo_5 {
@@ -84,6 +84,7 @@
         margin-bottom: 20px;
     }
 }
+
 .learn_more {
     width: 12rem;
     height: auto;
@@ -126,72 +127,69 @@
         text-transform: uppercase;
         font-size: 15px;
     }
-
-
 }
+.page__Credito {
+    @include obj-center();
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 30px auto;
 
-
-
-
-
-
-
-
-
-    .page__Credito {
-        margin: 30px;
-        @include obj-center();
-        flex-direction: row;
-        flex-wrap: wrap;
-        /*    @media screen and (min-width:750px) {
-        flex-direction: row;
-    }*/
-    }
-
-    .componente__Credito {
-        /*background: $primary-color;*/
-
-        @include obj-center();
-        flex-direction: column;
-        margin: 0 2% 20px;
-        padding: 20px;
-        max-width: 300px;
-        height: 350px;
-        box-sizing: border-box;
-        /*background: #f3f3f3;*/
-        /*border-radius:0 !important;*/
-        border: 1px solid $primary-color;
-
-        p {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-        }
-
-        h2 {
-            color: $secondary-color;
-            line-height: 24px;
-            font-size: 20px;
-        }
-
-        img {
-            width: 50%;
-            object-fit: cover;
-            margin: 0 auto;
-        }
+    article {
 
         a {
-            width: 100%;
-            transition: all 0.1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-
-            &:hover, &:focus {
-                background: linear-gradient(90deg, $primary-color 0%, $secondary-color 99%);
-                color: white;
-            }
+            text-decoration: none;
         }
     }
+    /*    @media screen and (min-width:750px) {
+        flex-direction: row;
+    }*/
+}
+
+.componente__Credito {
+    /*background: $primary-color;*/
+
+    @include obj-center();
+    flex-direction: column;
+    margin: 0 2% 20px;
+    padding: 20px;
+    max-width: 300px;
+    height: 350px;
+    box-sizing: border-box;
+    /*background: #f3f3f3;*/
+    /*border-radius:0 !important;*/
+    border: 1px solid $primary-color;
+
+    p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    h2 {
+        color: $secondary-color;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    img {
+        width: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    a {
+        width: 100%;
+        transition: all 0.1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+        &:hover, &:focus {
+            background: linear-gradient(90deg, $primary-color 0%, $secondary-color 99%);
+            color: white;
+        }
+    }
+}
 
 .componente__Credito2 {
     /*background: $primary-color;*/
@@ -247,14 +245,14 @@
     }
 }
 
-    .tipo_3 img.img_2 {
-        width: 150px;
-        height: 150px;
-        background-color: white;
-        border-radius: 50%;
-        text-align: center;
-        margin: auto;
-    }
+.tipo_3 img.img_2 {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+}
 
 .tipo_4 {
     display: flex;
@@ -320,29 +318,23 @@
 }
 
 .page__Credito {
-    margin: 0 10rem 100px;
-
-    @media (min-width: 1390px) {
-        margin: 0 10rem;
-    }
 
 
-    article {
 
-        a {
-            text-decoration: none;
-        }
-    }
+
 }
 
-.section__Credito{
+.section__Credito {
 
-    img{
-        width:200px;
+    img {
+        width: 200px;
     }
 }
 
 .container__Herramienta {
+
+    max-width:1400px;
+
     border: 1px solid $primary-color;
     border-top: 10px solid $secondary-color;
     display: flex;
@@ -351,7 +343,7 @@
     justify-content: center;
     gap: 20px;
     padding: 30px;
-    margin: 0 30px;
+    margin: 30px auto;
 
     .section__Credito {
         display: flex;

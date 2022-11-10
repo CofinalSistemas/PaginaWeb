@@ -6,7 +6,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    background: $primary-color;
+    background: $primary-color-light;
     padding: 20px;
 
     .pago__text {
@@ -22,7 +22,7 @@
         }
 
         p {
-            color: #fff;
+            color: black;
         }
     }
 
@@ -146,5 +146,11 @@
     img {
         object-fit: fill;
         /*width:100%;*/
+    }
+}
+
+.my-slider-pagos{
+    img{
+        width:500px;
     }
 }

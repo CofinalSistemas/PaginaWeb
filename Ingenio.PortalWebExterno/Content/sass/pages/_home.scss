@@ -20,6 +20,15 @@
 .container_prin {
     max-width: 1200px;
     margin: 0 auto 30px;
+
+    a {
+        text-decoration: none;
+
+        &:hover, &:focus {
+            text-decoration: none;
+            color: black;
+        }
+    }
 }
 
 .contenedor {
@@ -73,6 +82,7 @@ content-video > myButtons:hover {
     i {
         transition: all 0.2s ease-in-out;
     }
+
 }
 
 .animacion_arriba {

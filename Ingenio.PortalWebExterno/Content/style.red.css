@@ -3352,8 +3352,9 @@ fieldset[disabled] .btn-template-primary.active {
 }
 
 .tab-content {
+  max-width:1400px;
   padding: 15px 30px;
-  margin-top: 3px;
+  margin: 3px auto;
   border: solid 2px #ddd;
   /*border-top: none;*/
 }

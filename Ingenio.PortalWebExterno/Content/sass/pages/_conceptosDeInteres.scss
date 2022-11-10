@@ -16,44 +16,35 @@
     gap: 20px;
     margin: 20px auto;
 
+    a {
+        text-decoration: none;
+
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+    }
+
     .item-conceptosinteres {
         padding: 20px;
         transition: all .2s;
-
-
-        a {
-            /*background: #E1852C;*/
-            text-decoration: none;
-            color: black;
-            font-weight: 400;
-            font-size: 19px;
-        }
+        text-decoration: none;
+        color: black;
+        font-weight: 400;
+        font-size: 19px;
 
         &:hover, &:focus {
             background: $secondary-color;
             /*border:1px solid red;*/
             transform: translateY(-4px);
             box-shadow: 0 0.5em 0.5em -0.4em $secondary-color;
-
-            a {
-                color: white;
-            }
+            color: #fff;
         }
 
         &.active {
-            a {
-                color: $primary-color;
-            }
-
+            background: $secondary-color;
             font-weight: 500;
-            font-weight: 500;
-
-            &:hover, &:focus {
-                /*border:1px solid red;*/
-                a {
-                    color: white;
-                }
-            }
+            box-shadow: 0 0.5em 0.5em -0.4em $secondary-color;
+            color: #fff;
         }
     }
 

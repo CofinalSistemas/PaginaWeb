@@ -837,6 +837,7 @@
     <Content Include="Views\Home\CanalesPago.cshtml" />
     <Content Include="Views\Home\ActualizacionDatos.cshtml" />
     <Content Include="Views\Home\Message2.cshtml" />
+    <Content Include="Views\Home\Simulador.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -931,6 +932,8 @@
           <DevelopmentServerPort>54623</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:54623/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:54623/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -56,20 +56,18 @@
         }*/
     </style>
 
-    <div  id="all">
+    <div id="all">
 
 
         <!-- *** TOP END *** -->
         <!-- *** NAVBAR ***
-        _________________________________________________________ -->
+    _________________________________________________________ -->
         @Html.Partial("Navbar")
 
 
         <!-- *** NAVBAR END *** -->
         <!-- *** LOGIN MODAL ***
-        _________________________________________________________ -->
-
-
+    _________________________________________________________ -->
         <!-- *** LOGIN MODAL END *** -->
         <div id="heading-breadcrumbs">
             <div class="container">
@@ -88,6 +86,9 @@
                 </div>
             </div>
         </div>
+
+        @*<div id="heading-breadcrumbs"></div>
+        <a href="@ViewBag.url">Inicio</a> > @ViewBag.titulo*@
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/modernizr")
         @Scripts.Render("~/bundles/bootstrap")
@@ -96,8 +97,8 @@
 
         @RenderBody()
 
-            
-        
+
+
         @Html.Partial("Footer")
 
     </div>

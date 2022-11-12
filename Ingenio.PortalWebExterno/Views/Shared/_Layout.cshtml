@@ -69,7 +69,7 @@
         <!-- *** LOGIN MODAL ***
     _________________________________________________________ -->
         <!-- *** LOGIN MODAL END *** -->
-        <div id="heading-breadcrumbs">
+        @*<div id="heading-breadcrumbs">
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
@@ -85,10 +85,17 @@
                     </div>
                 </div>
             </div>
+        </div>*@
+
+        @*<div id="heading-breadcrumbs"></div>*@
+        <div class="nav_referencia">
+            <div class="titulo_nav">
+                <a href="@ViewBag.url">Inicio</a> >
+                @ViewBag.activo >
+                @ViewBag.titulo
+            </div>
         </div>
 
-        @*<div id="heading-breadcrumbs"></div>
-        <a href="@ViewBag.url">Inicio</a> > @ViewBag.titulo*@
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/modernizr")
         @Scripts.Render("~/bundles/bootstrap")

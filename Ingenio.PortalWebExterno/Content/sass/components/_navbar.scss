@@ -91,3 +91,23 @@
     /*max-width:1400px;*/
     margin:auto;
 }
+
+
+.nav_referencia {
+    background: $primary-color-light;
+    padding: 20px;
+    color: $primary-color;
+
+    .titulo_nav{
+        max-width:1400px;
+        margin:auto;
+    }
+    a {
+        /*text-decoration: none;*/
+        color: $primary-color;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}

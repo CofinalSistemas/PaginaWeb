@@ -430,7 +430,8 @@ namespace Ingenio.PortalWebExterno.Controllers
                 ViewBag.Message = "valid";
 
                 SmtpClient WebMail = new SmtpClient( ConfigurationManager.AppSettings["smtp"], Convert.ToInt32( ConfigurationManager.AppSettings["port"] ) );
-                WebMail.Credentials = new System.Net.NetworkCredential( ConfigurationManager.AppSettings["email"], ConfigurationManager.AppSettings["pss"] );
+                WebMail.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["email"], ConfigurationManager.AppSettings["pss"]);
+                    //WebMail.Credentials = new System.Net.NetworkCredential("juanjo.figue97@gmail.com","0204Juanjose" );
                 WebMail.EnableSsl = true;
 
 

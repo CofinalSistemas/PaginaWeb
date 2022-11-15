@@ -838,6 +838,8 @@
     <Content Include="Views\Home\ActualizacionDatos.cshtml" />
     <Content Include="Views\Home\Message2.cshtml" />
     <Content Include="Views\Home\Simulador.cshtml" />
+    <Content Include="Views\Multimedia\baseVideos.cshtml" />
+    <Content Include="Views\Home\Videos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -210,6 +210,12 @@ namespace Ingenio.PortalWebExterno.Controllers
 
             return View();
         }
+        public ActionResult Videos()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
 
         public ActionResult Simulador()
         {

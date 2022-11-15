@@ -91,9 +91,18 @@
         <div class="nav_referencia">
             <div class="titulo_nav">
                 <a href="@ViewBag.url">Inicio</a> >
-                @ViewBag.activo >
+
+                @if (@ViewBag.activo != null)
+                {
+                   <span>@ViewBag.activo ></span>
+                }
+                else
+                {
+                    
+                }
+
                 @ViewBag.titulo
-            </div>
+</div>
         </div>
 
         @Scripts.Render("~/bundles/jquery")

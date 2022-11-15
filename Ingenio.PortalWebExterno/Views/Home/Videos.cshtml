@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Videos";
+    ViewBag.titulo = "Videos";
+    ViewBag.url = Url.Action("index", "home");
+    //ViewBag.activo = "conoscanosActivo";
+    ViewBag.activo = "Multimedia";
+    ViewBag.img = "/img/Img_Web2/backitemcredit.png";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Videos</title>
+</head>
+<body>
+    @Html.Partial("~/Views/Multimedia/baseVideos.cshtml")
+    <div>
+        <img src="~/img/Img_Web2/backitemcredit.png" alt="Alternate Text" />
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bzm2pKyMBhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+</body>
+</html>     

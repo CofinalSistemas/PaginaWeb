@@ -40,6 +40,42 @@
 .servicios {
     background: $primary-color-light;
     padding: 30px;
+
+    .circle_cards {
+        display: flex;
+        background: #fff;
+        flex-direction: column;
+        height: 300px;
+        border-radius: 25px 25px 0 0;
+
+        .contenido_servicios {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            p {
+                width:50%;  
+                color:$secondary-color;
+                font-size:24px;
+            }
+        }
+
+        .main_img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 25px 25px 0 0;
+            overflow: hidden;
+        }
+
+        .icentrado {
+
+            .ser_iconos {
+                width: 100px;
+            }
+        }
+    }
 }
 
 #Video_Slider {
@@ -49,10 +85,27 @@
     box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5)
 }
 
-content-video > myButtons:hover {
-    color: white;
-}
+.content-video {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    color: #c2841c;
+    /*width: 100%;*/
+    /*padding: 20px;*/
+    margin: 0 0 20px 20px;
 
+    h3 {
+        color: #a47d42;
+        font-size: 3em;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    .myButtons:hover {
+        color: white;
+    }
+}
 
 @media screen and (max-width: 899px) {
     .centerSpan {
@@ -62,6 +115,8 @@ content-video > myButtons:hover {
 /* Contenido */
 
 .tarjetas-Centradas {
+
+    width:300px;    
 
     img {
         transition: all 0.2s ease-in-out;
@@ -174,7 +229,6 @@ content-video > myButtons:hover {
         }
     }
 }
-
 
 .text-prueba {
     float: right;
@@ -524,11 +578,6 @@ content-video > myButtons:hover {
     border: none;
 }
 
-.content-video {
-    display: flex;
-    flex-direction: column;
-}
-
 #formulario-2 > img {
     margin: 10px;
 }
@@ -556,22 +605,6 @@ content-video > myButtons:hover {
     object-fit: cover;
 }
 
-.content-video {
-    position: absolute;
-    bottom: 0;
-    /*background: rgba(0, 0, 0, 0.5);*/
-    color: #c2841c;
-    /*width: 100%;*/
-    /*padding: 20px;*/
-    margin: 0 0 20px 20px;
-}
-
-.content-video > h3 {
-    color: #a47d42;
-    font-size: 3em;
-    text-shadow: 1px 1px 2px black;
-}
-
 @media screen and (max-width: 450px) {
     .container2 {
         padding: 0 1rem 0;
@@ -582,11 +615,6 @@ content-video > myButtons:hover {
     #Video_Slider {
         align-items: center;
         justify-content: center;
-    }
-
-    .content-video > h3,
-    .content-video > p {
-        display: none;
     }
 
     .contenedor > .botones {
@@ -668,10 +696,15 @@ content-video > myButtons:hover {
         max-width: 1400px;
         margin: auto;
 
+
+
         @media screen and (max-width:400px ) {
             max-width: 350px;
         }
 
+        h3 {
+            padding: 15px 0px;
+        }
 
         .wrapper_2 {
             width: 100%;

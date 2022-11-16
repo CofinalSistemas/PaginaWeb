@@ -253,6 +253,29 @@ i {
 .servicios {
   background: rgba(252, 132, 4, 0.1);
   padding: 30px; }
+  .servicios .circle_cards {
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    height: 300px;
+    border-radius: 25px 25px 0 0; }
+    .servicios .circle_cards .contenido_servicios {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; }
+      .servicios .circle_cards .contenido_servicios p {
+        width: 50%;
+        color: rgba(236, 28, 36, 0.75);
+        font-size: 24px; }
+    .servicios .circle_cards .main_img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 25px 25px 0 0;
+      overflow: hidden; }
+    .servicios .circle_cards .icentrado .ser_iconos {
+      width: 100px; }
 
 #Video_Slider {
   position: relative;
@@ -260,27 +283,41 @@ i {
   flex-direction: column;
   box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5); }
 
-content-video > myButtons:hover {
-  color: white; }
+.content-video {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  /*background: rgba(0, 0, 0, 0.5);*/
+  color: #c2841c;
+  /*width: 100%;*/
+  /*padding: 20px;*/
+  margin: 0 0 20px 20px; }
+  .content-video h3 {
+    color: #a47d42;
+    font-size: 3em;
+    text-shadow: 1px 1px 2px black; }
+  .content-video .myButtons:hover {
+    color: white; }
 
 @media screen and (max-width: 899px) {
   .centerSpan {
     margin: 0 auto; } }
 
 /* Contenido */
-.tarjetas-Centradas img {
-  transition: all 0.2s ease-in-out;
-  width: 100px; }
-
-.tarjetas-Centradas .myButtons {
-  margin: 20px auto;
-  transition: all 0.2s ease-in-out; }
-  .tarjetas-Centradas .myButtons:hover {
-    background: rgba(236, 28, 36, 0.75);
-    color: white; }
-
-.tarjetas-Centradas i {
-  transition: all 0.2s ease-in-out; }
+.tarjetas-Centradas {
+  width: 300px; }
+  .tarjetas-Centradas img {
+    transition: all 0.2s ease-in-out;
+    width: 100px; }
+  .tarjetas-Centradas .myButtons {
+    margin: 20px auto;
+    transition: all 0.2s ease-in-out; }
+    .tarjetas-Centradas .myButtons:hover {
+      background: rgba(236, 28, 36, 0.75);
+      color: white; }
+  .tarjetas-Centradas i {
+    transition: all 0.2s ease-in-out; }
 
 .animacion_arriba:hover > i {
   animation: wobble_vertical 1s ease-in-out;
@@ -638,10 +675,6 @@ content-video > myButtons:hover {
   padding: 10px;
   border: none; }
 
-.content-video {
-  display: flex;
-  flex-direction: column; }
-
 #formulario-2 > img {
   margin: 10px; }
 
@@ -664,20 +697,6 @@ content-video > myButtons:hover {
   /*background-size: cover;*/
   object-fit: cover; }
 
-.content-video {
-  position: absolute;
-  bottom: 0;
-  /*background: rgba(0, 0, 0, 0.5);*/
-  color: #c2841c;
-  /*width: 100%;*/
-  /*padding: 20px;*/
-  margin: 0 0 20px 20px; }
-
-.content-video > h3 {
-  color: #a47d42;
-  font-size: 3em;
-  text-shadow: 1px 1px 2px black; }
-
 @media screen and (max-width: 450px) {
   .container2 {
     padding: 0 1rem 0; } }
@@ -686,9 +705,6 @@ content-video > myButtons:hover {
   #Video_Slider {
     align-items: center;
     justify-content: center; }
-  .content-video > h3,
-  .content-video > p {
-    display: none; }
   .contenedor > .botones {
     display: flex;
     flex-direction: column;
@@ -745,6 +761,8 @@ content-video > myButtons:hover {
     @media screen and (max-width: 400px) {
       .noticias .container__Noticias {
         max-width: 350px; } }
+    .noticias .container__Noticias h3 {
+      padding: 15px 0px; }
     .noticias .container__Noticias .wrapper_2 {
       width: 100%;
       padding-right: 15px;
@@ -2345,7 +2363,7 @@ section.section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 30px;
+    margin: 17px;
     /*border: 1px solid $primary-color;*/
     border-radius: 5%;
     transition: all 0.2s;

@@ -80,7 +80,7 @@ section.section {
     .tarjetas-Centradas {
         @include obj-center();
         flex-direction: column;
-        margin: 30px;
+        margin: 17px;
         /*border: 1px solid $primary-color;*/
         border-radius: 5%;
         transition: all 0.2s;

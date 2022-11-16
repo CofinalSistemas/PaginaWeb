@@ -4,6 +4,21 @@
 /*.item-quienessomos, .item-quienessomos a {
     border: none !important;
 }*/
+.img_desk {
+    display: block;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
+.img_phone {
+    display: none;
+
+    @media (max-width: 600px) {
+        display: block;
+    }
+}
 
 
 .quienes_somos_container {

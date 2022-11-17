@@ -10,25 +10,39 @@
 <!-- estilo contenido -->
 <!-- estilo para imagen con parallax-->
 <link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
-<style>
-    #heading-breadcrumbs {
-        background: linear-gradient( to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../img/Img_Web2/background_aniversario.png) center;
-        padding: 60px 0;
-        /* margin-bottom: 40px; */
-    }
-</style>
 
-<!-- imagen fondo1-->
-@*<div class="parallaxbox" id="pb0" style="background-image: url('/img/fondos/Nuestra Coop.jpg');"> </div>*@
-<!-- contenido-->
-<section class="imagen_directorio">
+<!-- Cambiar Banner-->
+<section class="imagen_baner">
     <img class="img_desk" src="~/img/Img_Web2/somos.png" alt="Numero principal: 7366087" />
     <img class="img_phone" src="~/img/Img_Web2/somos2.png" alt="Numero principal: 7366087" />
-
 </section>
+
 <section class="contenido">
     <div class="container" style="background-color: rgba(255, 255, 255, 0.8); ">
-        @*<ul class="nav nav-tabs" style="background-color: #ffffff ">*@
+        @*<div class="quienes_somos_container">
+        @{
+            var Creditos = new Dictionary<string, string>
+        {
+            {"EDUCATIVO.png", "#creditoEducativo" },
+            {"VIVIENDA.png", "#creditoVivienda" },
+            {"CARTERA.png", "#creditoCartera" },
+            {"LIBRANZA.png", "#creditoLibranza" },
+            {"CONSUMO.png", "#creditoConsumo" },
+            {"MICROCRE.png", "#microcredito" },
+            {"ROTATIVO.png", "#rotativos" },
+            {"cofinagro.png", "#cofinagro" },
+        };
+
+            foreach (var credito in Creditos)
+            {
+                <a id="an" href="#quienesSomos" data-toggle="tab">
+                    <div id="quienS" class="item-quienessomos active">
+                        Quienes Somos
+                    </div>
+                </a>
+            }
+        }
+        </div>*@
         <div class="quienes_somos_container">
             <a id="an" href="#quienesSomos" data-toggle="tab">
                 <div id="quienS" class="item-quienessomos active">
@@ -45,13 +59,12 @@
                     Misión
                 </div>
             </a>
-            <a  id="an" data-toggle="tab" href="#vision">
-                <div  id="visio" class="item-quienessomos">
+            <a id="an" data-toggle="tab" href="#vision">
+                <div id="visio" class="item-quienessomos">
                     Visión
                 </div>
             </a>
         </div>
-        @*</ul>*@
 
         <div class="tab-content" style="background-color: rgba(255, 255, 255, 0.8);">
             <div class="tab-pane active" id="quienesSomos">
@@ -79,7 +92,8 @@
                     </div>
                     <div class="parte-img">
                         <img class="cumple" src="~/igmSliders/imagenes nuevas/cumpleaños_cofinal_2022.jpeg" alt="Cumpleaños de Cofinal" />
-                    </div>                </div>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane " id="resenaHistorica">
                 <div class="heading">
@@ -200,39 +214,6 @@
     }
 </style>
 
-<!--<div class='embed-container  maps'>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9160578226433!2d-77.28225128580804!3d1.2185285623241011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed487375d6129%3A0x75d762a9f2c9e3da!2sCOFINAL!5e0!3m2!1ses!2sit!4v1454678597238" height="350" frameborder="0" style="border: 0; width: 100%;" allowfullscreen></iframe>
-</div>-->
-<!-- scrip para parallax-->
-@*<script type="text/javascript">
-    function parallax() {
-        setpos("#pb0");
-        setpos("#pb1");
-
-    }
-
-    function setpos(element, factor) {
-        factor = factor || 2;
-
-        var offset = $(element).offset();
-        var w = $(window);
-
-        var posx = (offset.left - w.scrollLeft()) / factor;
-        var posy = (offset.top - w.scrollTop()) / factor;
-
-        $(element).css('background-position', '100% ' + posy + 'px');
-
-        // use this to have parralax scrolling vertical and horizontal
-        //$(element).css('background-position', posx+'px '+posy+'px');
-    }
-
-    $(document).ready(function () {
-        parallax();
-    }).scroll(function () {
-        parallax();
-    });
-</script>*@
-
 <script>
     const list__somos = document.querySelectorAll(".item-quienessomos");
 
@@ -256,6 +237,3 @@
         });
     })
 </script>
-
-
-

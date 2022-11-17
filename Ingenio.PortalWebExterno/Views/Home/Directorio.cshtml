@@ -7,7 +7,7 @@
 
 }
 
-<script type="text/javascript">
+@*<script type="text/javascript">
     var _smartsupp = _smartsupp || {};
     _smartsupp.key = 'b7e1cad8ae31b522b9a3b64e60182dc54a8c7acb';
     window.smartsupp || (function (d) {
@@ -16,7 +16,7 @@
         c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
         c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
     })(document);
-</script>
+</script>*@
 
 <!-- estilo contenido -->
 <style>
@@ -44,15 +44,35 @@
 <!-- imagen fondo1-->
 @*<img src="~/img/centralcontactos1.png" style="width:1800px; height: 350px;" alt="Contactos" class="img-responsive  center-block">*@
 
-    <section class="imagen_directorio">
-        <img src="~/img/Img_Web2/directorio.png" alt="Numero principal: 7366087" />
-    </section>
+<section class="imagen_baner">
+    <img class="img_desk" src="~/img/Img_Web2/telefono_cel.png" alt="Numero principal: 7366087" />
+    <img class="img_phone" src="~/img/Img_Web2/telefono.png" alt="Numero principal: 7366087" />
+</section>
+
+
+@{ 
+    string[] cars = { "GERENCIA GENERAL", "BMW", "Ford", "Mazda" };
+    string[] cars1 = { "D_Admin", "BMW", "Ford", "Mazda" };
+    string[] cars2 = { "fa-list-check", "BMW", "Ford", "Mazda" };
+}
 
 <section>
     <div class="container__Directorio">
+        @{
+            foreach (var credito in cars)
+            {
+                <div id="D_Admin" class="directorio">
+                    <i class="fas fa-solid fa-list-check"></i>
+                    <p>SUBGERENCIA ADMINISTRATIVA</p>
+                </div>
+            }
+
+        }
+
         <div id="D_Gere" class="directorio">
             <i class="fas fa-solid fa-building"></i>
-            <p>GERENCIA GENERAL</p>
+            @*<p>GERENCIA GENERAL</p>*@
+            <p>@cars[0]</p>
         </div>
         <div id="D_Admin" class="directorio">
             <i class="fas fa-solid fa-list-check"></i>

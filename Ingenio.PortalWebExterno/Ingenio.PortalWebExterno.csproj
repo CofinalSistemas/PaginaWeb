@@ -691,6 +691,7 @@
     <Content Include="Formato_Seguimiento_PSI_V3.xlsx" />
     <Content Include="Content\sass\pages\_ActualizacionDatos.scss" />
     <Content Include="Content\sass\pages\FormulariosAC.scss" />
+    <Content Include="Content\sass\pages\_RteDian.scss" />
     <None Include="PortaWeb.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

@@ -111,3 +111,35 @@
         }
     }
 }
+
+.imagen_baner {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    position: relative;
+
+    img {
+        margin: 10px 0px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .img_desk {
+        display: block;
+
+        @media (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    .img_phone {
+        display: none;
+
+        @media (max-width: 600px) {
+            display: block;
+        }
+    }
+}
+

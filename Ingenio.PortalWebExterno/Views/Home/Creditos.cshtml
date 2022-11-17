@@ -6,290 +6,61 @@
 
 }
 
-@*<script type="text/javascript">
-        var _smartsupp = _smartsupp || {};
-        _smartsupp.key = 'b7e1cad8ae31b522b9a3b64e60182dc54a8c7acb';
-        window.smartsupp || (function (d) {
-            var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
-            s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
-            c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
-            c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
-        })(document);
-    </script>*@
-
-<!-- estilo para imagen con parallax-->
-<link rel="stylesheet" type="text/css" href="~/Content/parallax.css">
-<style>
-    #heading-breadcrumbs {
-        background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),
-                                         url(../../img/Img_Web2/background-credito.jpg);
-        padding: 70px 0;
-    }
-    .bs-callout {
-        padding: 20px;
-        margin: 20px 0;
-        border: 1px solid #ce4844;
-        border-left-width: 5px;
-        border-radius: 3px;
-        background-color: white;
-    }
-
-    .box-image-text {
-        margin-left: -5px;
-        margin-right: -5px;
-        padding-top: 10px;
-        padding-bottom: 15px;
-        position: relative;
-        margin-bottom: 35px;
-        -webkit-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
-        -moz-box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
-        box-shadow: 1px 9px 98px -12px rgba(17,18,18,1);
-        width: 330px;
-        max-width: 330px;
-        height: 320px;
-        max-height: 320px;
-    }
-
-    .bar.background-white {
-        background: rgba(255, 255, 255, 0);
-    }
-
-    .content {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-
-    .blanco {
-        margin-left: 7%
-    }
-
-    .play:hover {
-        background: #237fef;
-        transition: 2s;
-    }
-
-    .play {
-        width: 6em;
-        border-radius: 150%;
-        text-align: center;
-        background-color: #da4d4d;
-        font-size: 3em;
-        color: white;
-        transition: 2s;
-    }
-
-    .modal-body {
-        background-color: #DAFDFD;
-    }
-
-    .modal-header {
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-        background-color: #da4d4d;
-    }
-
-    .modal-footer {
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
-        background-color: #da4d4d;
-    }
-
-    .top {
-        margin-bottom: 20px;
-    }
-
-    .row {
-        margin-right: 5px;
-    }
-
-    .col-md-3 {
-        width: 15%;
-        margin-left: 70px;
-    }
-
-    #textura {
-        background-color: #E76100;
-        padding-top: 20px;
-        margin-top: -20px;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-        -webkit-box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
-        box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
-    }
-
-    #imagenes {
-        padding-bottom: 45px;
-        margin: auto;
-        padding-top: 20px;
-        margin-top: -20px;
-        @*-moz-box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);
-        box-shadow: -1px 3px 38px 0px rgba(0,0,0,0.75);*@
-    }
-
-    #pp {
-        color: #777;
-        font-size: 16px;
-    }
-</style>
-
-<!--funcion cerrar del video-->
-<script>
-
-    function stop() {
-        var myVideo = document.getElementById("miv");
-        if (myVideo.play) {
-            myVideo.pause();
-
-        }
-        else {
-            myVideo.play();
-        }
-    }
-</script>
-
-<section class="imagen_directorio">
-    <img src="~/img/Img_Web2/Creditos.png" alt="Numero principal: 7366087" />
+<section class="imagen_baner">
+    <img class="img_desk" src="~/img/Img_Web2/Creditos.png" alt="Numero principal: 7366087" />
+    <img class="img_phone" src="~/img/Img_Web2/creditos_cel.png" alt="Numero principal: 7366087" />
 </section>
 
 
 <!--seccion de nota-->
 <section id="textura" style="display:none">
     <div class="container">
-
         <p class="text-justify" style="color:#eeeeee; font-size:20px;">
             <strong>Cofinal</strong> cuenta con una amplia gama de líneas de crédito, diseñadas para cubrir las necesidades de recursos económicos de los asociados,
             personas naturales y jurídicas, con plazos flexibles, cómodas tasas de interés sin generación de costos adicionales. Hacemos realidad sus sueños
         </p>
-
     </div>
 </section>
 
-<!-- Nuevo Diseño  -->
-
 <section class="page__Credito">
-    @*<div class="componente__Credito gBoxShadow">
-            <img class="imagen_credito" src="~/img/LOGOS_CREDITO/educativo3.jpg">
-            <h2>Credito Educativo</h2>
-            <p>
-                El <strong>CRÉDITO EDUCATIVO</strong> dónde los <strong>asociados</strong> y sus <strong>hijos</strong> podrán lograr el sueño de realizar sus <strong>estudios.</strong>
-            </p>
-            <a href="/Home/ProductosCreditos/#creditoEducativo" class="myButtons">Conoce más</a>
-        </div>
 
-        <div class="componente__Credito gBoxShadow">
-            <img class="imagen_credito" src="~/img/LOGOS_CREDITO/vivienda2.jpg">
-            <h2>Credito Educativo</h2>
-            <p>
-                El <strong>CRÉDITO PARA VIVIENDA</strong> para la adquisición de vivienda nueva o usada, rural o urbana de asociados.
-            </p>
-            <a href="/Home/ProductosCreditos/#creditoEducativo" class="myButtons">Conoce más</a>
-        </div>
+    @{
+        // En la primera parte se pone el nombre de la imagen y en el segundo el link
 
-        <div class="componente__Credito gBoxShadow">
-            <img class="imagen_credito" src="~/img/LOGOS_CREDITO/CARTERA1.jpg">
-            <h2>Credito Educativo</h2>
-            <p>
-                La <strong>COMPRA DE CARTERA</strong> permite cancelar deudas de otras<strong> entidades financieras</strong> y unificar en <strong>COFINAL</strong>
-            </p>
-            <a href="/Home/ProductosCreditos/#creditoEducativo" class="myButtons">Conoce más</a>
-        </div>
+        var Creditos = new Dictionary<string, string>
+        {
+            {"EDUCATIVO.png", "#creditoEducativo" },
+            {"VIVIENDA.png", "#creditoVivienda" },
+            {"CARTERA.png", "#creditoCartera" },
+            {"LIBRANZA.png", "#creditoLibranza" },
+            {"CONSUMO.png", "#creditoConsumo" },
+            {"MICROCRE.png", "#microcredito" },
+            {"ROTATIVO.png", "#rotativos" },
+            {"cofinagro.png", "#cofinagro" },
+        };
 
-        <div class="componente__Credito gBoxShadow">
-            <img class="imagen_credito" src="~/img/LOGOS_CREDITO/LIBRANZA1.jpg">
-            <h2>Credito Educativo</h2>
-            <p>
-                El <strong>CRÉDITO DE LIBRANZA</strong> es otorgado a <strong>empleados</strong> el cual se <strong>descuenta</strong> mensualmente de tu <strong>nómina.</strong>
-            </p>
-            <a href="/Home/ProductosCreditos/#creditoEducativo" class="myButtons">Conoce más</a>
-        </div>
+        foreach (var credito in Creditos)
+        {
+            <a class="tipo_4" href="/Home/ProductosCreditos/@credito.Value">
+                <img class="imagen_credito" src="~/img/Img_Web2/creditos/@credito.Key" alt="Imagen de @credito.Key">
+            </a>
+        }
 
-        <div class="componente__Credito gBoxShadow">
-            <img class="imagen_credito" src="~/img/LOGOS_CREDITO/consumo1.jpg">
-            <h2>Credito Educativo</h2>
-            <p>
-                El <strong>CRÉDITO DE CONSUMO</strong> destinado a satisfacer las necesidades de los asociados en la <strong>adquisición</strong> de
-                <strong>bienes de uso personal.</strong>
-            </p>
-            <a href="/Home/ProductosCreditos/#creditoEducativo" class="myButtons">Conoce más</a>
-        </div>
+        @functions {
+            public string GetHello()
+            {
+                return "Hello";
+            }
+        }
 
-        <div class="componente__Credito gBoxShadow">
-            <img class="imagen_credito" src="~/img/LOGOS_CREDITO/MICROCRE.png">
-            <h2>Credito Educativo</h2>
-            <p>
-                <strong>MICROCRÉDITO</strong> destinado para asociados cuyas <strong>actividades economicas</strong> sean comerciales,
-                agropecuarias, industriales y de servicios.
-            </p>
-            <a href="/Home/ProductosCreditos/#creditoEducativo" class="myButtons">Conoce más</a>
-        </div>
 
-        <div class="componente__Credito gBoxShadow">
-            <img class="imagen_credito" src="~/img/LOGOS_CREDITO/ROTATIVO1.png">
-            <h2>Credito Educativo</h2>
-            <p>
-                El <strong>CRÉDITO ROTATIVO</strong> es un cupo personal reutilizable, que se liga a la <strong>tarjeta débito,</strong> este permite contar con recursos las <strong>24 horas - 365 días</strong> del año.
-            </p>
-            <a href="/Home/ProductosCreditos/#creditoEducativo" class="myButtons">Conoce más</a>
-        </div>
+    }
+        @*<div>From method: @GetHello() dos</div>*@
 
-        <div class="componente__Credito gBoxShadow">
-            <img class="imagen_credito" src="~/img/LOGOS_CREDITO/cofinagro1.png">
-            <h2>Credito Educativo</h2>
-            <p>
-                Con el <strong>CRÉDITO FINAGRO</strong> puedes disponer de los <strong>recursos suficientes</strong>  para el desarrollo de sus actividades <strong>agropecuarias.</strong>
-            </p>
-            <a href="/Home/ProductosCreditos/#creditoEducativo" class="myButtons">Conoce más</a>
-        </div>*@
-    <article>
-        <a class="tipo_4" href="/Home/ProductosCreditos/#creditoEducativo">
-            <img class="imagen_credito" src="~/img/Img_Web2/EDUCATIVO.png">
-            @*<p>CRÉDITO EDUCATIVO</p>*@
-        </a>
-    </article>
-    <article>
-        <a class="tipo_4" href="/Home/ProductosCreditos/#creditoEducativo">
-            <img class="imagen_credito" src="~/img/Img_Web2/VIVIENDA.png">
-            @*<p>CRÉDITO PARA VIVIENDA</p>*@
-        </a>
-    </article>
-    <article>
-        <a class="tipo_4" href="/Home/ProductosCreditos/#creditoCartera">
-            <img class="imagen_credito" src="~/img/Img_Web2/CARTERA.png">
-            @*<p>COMPRA DE CARTERA</p>*@
-        </a>
-    </article>
-    <article>
-        <a class="tipo_4" href="/Home/ProductosCreditos/#creditoCartera">
-            <img class="imagen_credito" src="~/img/Img_Web2/LIBRANZA.png">
-            @*<p>CRÉDITO DE LIBRANZA</p>*@
-        </a>
-    </article>
-    <article>
-        <a class="tipo_4" href="/Home/ProductosCreditos/#creditoConsumo">
-            <img class="imagen_credito" src="~/img/Img_Web2/CONSUMO.png">
-            @*<p>CRÉDITO DE CONSUMO</p>*@
-        </a>
-    </article>
-    <article>
-        <a class="tipo_4" href="/Home/ProductosCreditos/#microcredito">
-            <img class="imagen_credito" src="~/img/LOGOS_CREDITO/MICROCRE.png">
-            @*<p>MICROCRÉDITO</p>*@
-        </a>
-    </article>
-    <article>
-        <a class="tipo_4" href="~/Home/ProductosCreditos/#rotativos">
-            <img class="imagen_credito" src="~/img/LOGOS_CREDITO/ROTATIVO1.png">
-            @*<p>CRÉDITO ROTATIVO</p>*@
-        </a>
-    </article>
-    <article>
-        <a class="tipo_4" href="/Home/ProductosCreditos/#cofinagro">
-            <img class="imagen_credito" src="~/img/LOGOS_CREDITO/cofinagro1.png">
-            @*<p>CRÉDITO FINAGRO</p>*@
-        </a>
-    </article>
 </section>
+
+<!--Seccion de herramienta de Credito-->
+
 <section>
     <div class="container__Herramienta">
         <h3>Herramienta de crédito</h3>
@@ -306,261 +77,7 @@
     </div>
 </section>
 
-
-
-
-<div class="opciones_tarjetas" style="display:none">
-    <section>
-        <div class="componente__Credito2 gBoxShadow">
-            <img class="imagen_credito" src="~/img/Img_Web2/credito_Vivienda.jpg">
-            <h2>Credito de Vivienda</h2>
-            <p>
-                El <strong>CRÉDITO PARA VIVIENDA</strong> para la adquisición de vivienda nueva o usada, rural o urbana de asociados.
-            </p>
-            <a href="/Home/ProductosCreditos/#creditoEducativo" class="myButtons link__button">Conoce más</a>
-        </div>
-    </section>
-    <section class="tipo_3">
-        <div class="componente__Credito2 gBoxShadow">
-            <img class="img_2" src="~/img/Img_Web2/credito_Vivienda.jpg">
-            <h2>Credito de Vivienda</h2>
-            <p>
-                El <strong>CRÉDITO PARA VIVIENDA</strong> para la adquisición de vivienda nueva o usada, rural o urbana de asociados.
-            </p>
-            <a href="/Home/ProductosCreditos/#creditoEducativo" class="myButtons">Conoce más</a>
-        </div>
-    </section>
-    <section>
-        <a class="tipo_4" href="/Home/ProductosCreditos/#cofinagro">
-            <img class="imagen_credito" src="~/img/LOGOS_CREDITO/vivienda2.jpg">
-            <p>CRÉDITO PARA VIVIENDA</p>
-        </a>
-    </section>
-</div>
-
-<!--contenido-->
-<div id="imagenes" class="row" style="background-color:#ffffff; display:none ">
-    <div class="container">
-        <div class="row">
-            <!--EMPIEZA CREDITO EDUCATIVO-->
-            <div class="col-12 col-sm-4 col-lg-3 card-products">
-                <div class="card-our-services">
-                    <div class="top" style="margin-bottom:1px;">
-                        <div class="image">
-                            <a href="/Home/ProductosCreditos/#creditoEducativo">
-                                <img src="~/img/LOGOS_CREDITO/educativo3.jpg" style="height: 150px;margin-top: 10px;margin-bottom:-10px;" alt="Cofijunior" class="img-responsive  center-block">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="body-card">
-                        <div class="content" style="padding-top:11px;">
-                            <p class="description-card">
-                                El <strong>CRÉDITO EDUCATIVO</strong> dónde los <strong>asociados</strong> y sus <strong>hijos</strong> podrán lograr el sueño de realizar sus <strong>estudios.</strong>
-                            </p>
-                        </div>
-                        <a href="/Home/ProductosCreditos/#creditoEducativo" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
-                    </div>
-                </div>
-            </div>
-            <!--EMPIEZA CREDITO DE VIVIENDA-->
-            <div class="col-12 col-sm-4 col-lg-3 card-products">
-                <div class="card-our-services">
-                    <div class="top" style="margin-bottom:1px;">
-                        <div class="image">
-                            <a href="/Home/ProductosCreditos/#creditoVivienda">
-                                <img src="~/img/LOGOS_CREDITO/vivienda2.jpg" style="height: 150px;margin-top: 10px;margin-bottom:-10px;" alt="Cofijunior" class="img-responsive  center-block">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="body-card">
-                        <div class="content" style="padding-top:11px;">
-                            <p class="description-card">
-                                El <strong>CRÉDITO PARA VIVIENDA</strong> para la adquisición de vivienda nueva o usada, rural o urbana de asociados.
-                            </p>
-                        </div>
-                        <a href="/Home/ProductosCreditos/#creditoVivienda" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
-                    </div>
-                </div>
-            </div>
-            <!--EMPIEZA CREDITO DE CARTERA-->
-            <div class="col-12 col-sm-4 col-lg-3 card-products">
-                <div class="card-our-services">
-                    <div class="top" style="margin-bottom:1px;">
-                        <div class="image">
-                            <a href="/Home/ProductosCreditos/#creditoCartera">
-                                <img src="~/img/LOGOS_CREDITO/cartera1.jpg" style="height: 150px;margin-top: 10px;margin-bottom:-10px;" alt="Cofijunior" class="img-responsive  center-block">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="body-card">
-                        <div class="content" style="padding-top:11px;">
-                            <p class="description-card">
-                                La <strong>COMPRA DE CARTERA</strong> permite cancelar deudas de otras<strong> entidades financieras</strong> y unificar en <strong>COFINAL</strong>
-                            </p>
-                        </div>
-                        <a href="/Home/ProductosCreditos/#creditoCartera" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
-                    </div>
-                </div>
-            </div>
-
-            <!--EMPIEZA CREDITO DE LIBRANZA-->
-            <div class="col-12 col-sm-4 col-lg-3 card-products">
-                <div class="card-our-services">
-                    <div class="top" style="margin-bottom:1px;">
-                        <div class="image">
-                            <a href="/Home/ProductosCreditos/#creditoCartera">
-                                <img src="~/img/LOGOS_CREDITO/LIBRANZA1.jpg" style="height: 150px;margin-top: 10px;margin-bottom:-10px;" alt="Cofijunior" class="img-responsive  center-block">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="body-card">
-                        <div class="content" style="padding-top:11px;">
-                            <p class="description-card">
-                                El <strong>CRÉDITO DE LIBRANZA</strong> es otorgado a <strong>empleados</strong> el cual se <strong>descuenta</strong> mensualmente de tu <strong>nómina.</strong>
-                            </p>
-                        </div>
-                        <a href="/Home/ProductosCreditos/#creditoLibranza" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
-                    </div>
-                </div>
-            </div>
-
-            <!--EMPIEZA CREDITO DE CONSUMO-->
-            <div class="col-12 col-sm-4 col-lg-3 card-products">
-                <div class="card-our-services">
-                    <div class="top" style="margin-bottom:1px;">
-                        <div class="image">
-                            <a href="/Home/ProductosCreditos/#creditoConsumo">
-                                <img src="~/img/LOGOS_CREDITO/consumo1.jpg" style="height: 150px;margin-top: 10px;margin-bottom:-10px;" alt="Cofijunior" class="img-responsive  center-block">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="body-card">
-                        <div class="content" style="padding-top:11px;">
-                            <p class="description-card">
-                                El <strong>CRÉDITO DE CONSUMO</strong> destinado a satisfacer las necesidades de los asociados en la <strong>adquisición</strong> de
-                                <strong>bienes de uso personal.</strong>
-                            </p>
-                        </div>
-                        <a href="/Home/ProductosCreditos/#creditoConsumo" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
-                    </div>
-                </div>
-            </div>
-
-            <!--EMPIEZA MICROCREDITO-->
-            <div class="col-12 col-sm-4 col-lg-3 card-products">
-                <div class="card-our-services">
-                    <div class="top" style="margin-bottom:1px;">
-                        <div class="image">
-                            <a href="/Home/ProductosCreditos/#microcredito">
-                                <img src="~/img/LOGOS_CREDITO/MICROCRE.png" style="height: 150px;margin-top: 10px;margin-bottom:-10px;" alt="Cofijunior" class="img-responsive  center-block">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="body-card">
-                        <div class="content" style="padding-top:11px;">
-                            <p class="description-card">
-                                <strong>MICROCRÉDITO</strong> destinado para asociados cuyas <strong>actividades economicas</strong> sean comerciales,
-                                agropecuarias, industriales y de servicios.
-                            </p>
-                        </div>
-                        <a href="/Home/ProductosCreditos/#microcredito" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
-                    </div>
-                </div>
-            </div>
-
-            <!--EMPIEZA ROTATIVO-->
-            <div class="col-12 col-sm-4 col-lg-3 card-products">
-                <div class="card-our-services">
-                    <div class="top" style="margin-bottom:1px;">
-                        <div class="image">
-                            <a href="~/Home/ProductosCreditos/#rotativos">
-                                <img src="~/img/LOGOS_CREDITO/ROTATIVO1.png" style="height: 150px;margin-top: 10px;margin-bottom:-10px;" alt="Cofijunior" class="img-responsive  center-block">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="body-card">
-                        <div class="content" style="padding-top:11px;">
-                            <p class="description-card">
-                                El <strong>CRÉDITO ROTATIVO</strong> es un cupo personal reutilizable, que se liga a la <strong>tarjeta débito,</strong> este permite contar con recursos las <strong>24 horas - 365 días</strong> del año.
-                            </p>
-                        </div>
-                        <a href="~/Home/ProductosCreditos/#rotativos" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
-                    </div>
-                </div>
-            </div>
-            <!--EMPIEZA COFINAGRO-->
-            <div class="col-12 col-sm-4 col-lg-3 card-products">
-                <div class="card-our-services">
-                    <div class="top" style="margin-bottom:1px;">
-                        <div class="image">
-                            <a href="/Home/ProductosCreditos/#cofinagro">
-                                <img src="~/img/LOGOS_CREDITO/COFINAGRO1.png" style="height: 150px;margin-top: 10px;margin-bottom:-10px;" alt="Cofijunior" class="img-responsive  center-block">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="body-card">
-                        <div class="content" style="padding-top:11px;">
-                            <p class="description-card">
-                                Con el <strong>CRÉDITO FINAGRO</strong> puedes disponer de los <strong>recursos suficientes</strong>  para el desarrollo de sus actividades <strong>agropecuarias.</strong>
-                            </p>
-                        </div>
-                        <a href="/Home/ProductosCreditos/#cofinagro" class="btn btn-default btn-cofinal-orange btn-cofinal-outline">Descubrir</a>
-                    </div>
-                </div>
-            </div>
-            <!--FINALIZA COFINAGRO-->
-        </div>
-    </div>
-</div>
 <div class="container-fluid" style="margin-bottom: -6px;">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(252,132,4,0.9)" fill-opacity="1" d="M0,64L80,101.3C160,139,320,213,480,213.3C640,213,800,139,960,96C1120,53,1280,43,1360,37.3L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
 </div>
-
-<!--CODIGO PARA SIMULADORES DE CREDITO-->
-@* <div class="parallaxbox1" id="pb1" style="background-image:url(/img/ahorro1-2.jpg);">
-    <!--boton simulador-->
-    <div class="container" style="padding-top:1em; ">
-        <div class="well" style="max-width:400px; margin:0 auto 10px;">*@
-@*<button id="miBoto" style="background-color:#da4d4d; background-size:20px;" type="button" class="btn btn-primary btn-lg btn-block"><a style="color:white" href="~/SimuladorCre/Edit">Simuladores</a></button>*@
-@*<a href="~/SimuladorCre/Edit">
-        <img src="~/img/simulador.png" alt="Simulador de credito" style="width:350px;height:42px;border:0;">
-    </a>
-            </div>
-        </div>
-    </div>*@
-<!-- scrip para parallax-->
-
-
-<script type="text/javascript">
-    function parallax() {
-        setpos("#pb0");
-        setpos("#pb1");
-
-    }
-
-
-
-        //function setpos(element, factor) {
-        //    factor = factor || 2;
-
-        //    var offset = $(element).offset();
-        //    var w = $(window);
-
-        //    var posx = (offset.left - w.scrollLeft()) / factor;
-        //    var posy = (offset.top - w.scrollTop()) / factor;
-
-        //    $(element).css('background-position', '100% ' + posy + 'px');
-
-        //    // use this to have parralax scrolling vertical and horizontal
-        //    //$(element).css('background-position', posx+'px '+posy+'px');
-        //}
-
-        //$(document).ready(function () {
-        //    parallax();
-        //}).scroll(function () {
-        //    parallax();
-        //});
-</script>
-
-
 

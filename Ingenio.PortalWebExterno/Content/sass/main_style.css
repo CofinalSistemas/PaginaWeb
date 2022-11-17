@@ -1804,18 +1804,6 @@ i {
 /*.item-quienessomos, .item-quienessomos a {
     border: none !important;
 }*/
-.img_desk {
-  display: block; }
-  @media (max-width: 600px) {
-    .img_desk {
-      display: none; } }
-
-.img_phone {
-  display: none; }
-  @media (max-width: 600px) {
-    .img_phone {
-      display: block; } }
-
 .quienes_somos_container {
   display: flex;
   flex-direction: row;
@@ -2114,6 +2102,15 @@ i {
     transform: rotateY(180deg);
     transition: transform 0.5s; }
 
+/*$primary-color: rgba(224, 85, 20, 0.75);*/
+/*$primary-color: rgba(252,187,43,1);*/
+.container__Dian {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .Politicas {
   display: flex;
   justify-content: center;
@@ -2129,10 +2126,29 @@ i {
   justify-content: center;
   align-items: center; }
 
+.icono_whatsapp {
+  width: 60px;
+  height: 60px;
+  line-height: 51px;
+  border-radius: 50%;
+  font-size: 20px;
+  background-image: url("../../../img/Img_Web2/whatsapp_footer.png");
+  /*background-color:red;*/
+  background-size: contain;
+  /*background: linear-gradient(125deg, var(--valid), var(--verde2));*/
+  /*box-shadow: 0px 20px 20px -15px rgba(var(--verdecode),.8);*/
+  bottom: 30px;
+  text-align: center;
+  position: fixed;
+  right: 20px;
+  /*z-index: 10;*/ }
+  .icono_whatsapp:hover {
+    cursor: pointer; }
+
 /*$primary-color: rgba(224, 85, 20, 0.75);*/
 /*$primary-color: rgba(252,187,43,1);*/
 .myButtons {
-  padding: 10px 50px;
+  padding: 10px 40px;
   background-color: rgba(252, 132, 4, 0.9);
   color: white;
   border: none;
@@ -2387,6 +2403,28 @@ i {
     color: rgba(252, 132, 4, 0.9); }
     .nav_referencia a:hover {
       color: rgba(252, 132, 4, 0.9); }
+
+.imagen_baner {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  position: relative; }
+  .imagen_baner img {
+    margin: 10px 0px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
+  .imagen_baner .img_desk {
+    display: block; }
+    @media (max-width: 600px) {
+      .imagen_baner .img_desk {
+        display: none; } }
+  .imagen_baner .img_phone {
+    display: none; }
+    @media (max-width: 600px) {
+      .imagen_baner .img_phone {
+        display: block; } }
 
 .modal_container {
   padding: 0;

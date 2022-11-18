@@ -284,9 +284,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Informacion\Agencias_info.cs" />
+    <Compile Include="Informacion\Directorio_info.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Agencia.cs" />
     <Compile Include="Models\CaptchaResponse.cs" />
+    <Compile Include="Informacion\Credito_info.cs" />
+    <Compile Include="Models\Credito.cs" />
     <Compile Include="Models\model.cs" />
+    <Compile Include="Models\Telefono.cs" />
     <Compile Include="Models\UIAF.cs" />
     <Compile Include="Models\user.cs" />
     <Compile Include="PortaWeb.Designer.cs">

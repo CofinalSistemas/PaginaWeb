@@ -330,7 +330,7 @@
             </section>
             <!-- Fin: Tarjetas Contenedoras -->
             <!-- Inicio de formulario -->
-            <section>
+            <section style="display:none;">
                 <section class="titulos">
                     <h3 class="tituleAnimation">Mejora tu experiencia con nuestra app</h3>
                 </section>
@@ -628,60 +628,7 @@
             });
         });
     </script>
-    <!-- script para parallax PARA QUE SIRVE?-->
-    @*<script type="text/javascript">
-            function parallax() {
-                setpos("#pb0");
-                setpos("#pb1");
-                setpos("#pb2");
-
-            }
-            function setpos(element, factor) {
-                factor = factor || 2;
-
-                var offset = $(element).offset();
-                var w = $(window);
-
-                var posx = (offset.left - w.scrollLeft()) / factor;
-                var posy = (offset.top - w.scrollTop()) / factor;
-
-                $(element).css('background-position', '100% ' + posy + 'px');
-
-                // use this to have parralax scrolling vertical and horizontal
-                //$(element).css('background-position', posx+'px '+posy+'px');
-            }
-
-            $(document).ready(function () {
-
-                //console.log("se cargo esto");
-
-                $('.owl-carousel-testominals').owlCarousel({
-                    loop: true,
-                    responsiveClass: true,
-                    responsive: {
-                        0: {
-                            items: 1,
-                            nav: true
-                        },
-                        600: {
-                            items: 3,
-                            nav: true
-                        },
-                        1200: {
-                            items: 4,
-                            nav: true
-                        }
-                    }
-                })
-
-                parallax();
-
-            }).scroll(function () {
-                parallax();
-            });
-        </script>*@
-    <!--estilo de slider-->
-
+    
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {

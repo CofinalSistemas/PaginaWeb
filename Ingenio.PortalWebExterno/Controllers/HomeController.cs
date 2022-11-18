@@ -21,6 +21,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using Excel = Microsoft.Office.Interop.Excel;
+using Ingenio.PortalWebExterno.Informacion;
 
 
 namespace Ingenio.PortalWebExterno.Controllers
@@ -29,9 +30,16 @@ namespace Ingenio.PortalWebExterno.Controllers
     {
         ConfiguracionBLL configBLL;
 
+        //Inializacion de las variables de informacion
+
+        private Agencias_info _agencias_Info;
+        private Credito_info _credito_Info;
+
         public HomeController()
         {
             configBLL = new ConfiguracionBLL();
+            _agencias_Info = new Agencias_info();
+            _credito_Info = new Credito_info();
         }
         [OutputCache(Duration =300,Location =System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Index()
@@ -116,7 +124,8 @@ namespace Ingenio.PortalWebExterno.Controllers
         }
         public ActionResult Creditos()
         {
-            return View();
+            var model = _credito_Info.ObtenerCreditos();
+            return View(model);
         }
 
         public ActionResult Seguros()
@@ -125,109 +134,86 @@ namespace Ingenio.PortalWebExterno.Controllers
         }
         public ActionResult QuienesSomos()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
         public ActionResult NuestrasAgencias()
         {
-            ViewBag.Message = "Your application description page.";
+            var model = _agencias_Info.ObtenerAgencias();
 
-            return View();
+            return View(model);
         }
         public ActionResult ConceptosDeinteres()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
         public ActionResult Fundacion()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
         public ActionResult Directorio()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
         public ActionResult RteDian()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
         public ActionResult Multiportal()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
         public ActionResult Productos()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
         public ActionResult ProductosCreditos()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
         public ActionResult AlianzasC()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
         public ActionResult ConveniosC()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
         public ActionResult Alianzas()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
         
         public ActionResult PoliticasTIC()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         // Crear Pagina Nueva (Prueba)
         public ActionResult CanalesPago()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
         public ActionResult Videos()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Simulador()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult ActualizacionDatos()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
@@ -294,6 +280,7 @@ namespace Ingenio.PortalWebExterno.Controllers
 
             return View();
         }
+
 
 
         //[HttpPost]
@@ -458,7 +445,6 @@ namespace Ingenio.PortalWebExterno.Controllers
                     return RedirectToAction( "Contact", "Home", new { msj = "1" } );
 
                 }
-
                 return View();
             }
         }

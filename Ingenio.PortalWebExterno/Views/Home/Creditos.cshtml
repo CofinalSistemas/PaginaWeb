@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Ingenio.PortalWebExterno.Models.Credito>
+@{
     ViewBag.Title = "Nuestros créditos";
     ViewBag.titulo = "Nuestros Créditos";
     ViewBag.url = Url.Action("index", "home");
@@ -8,7 +9,7 @@
 
 <section class="imagen_baner">
     <img class="img_desk" src="~/img/Img_Web2/Creditos.png" alt="Numero principal: 7366087" />
-    <img class="img_phone" src="~/img/Img_Web2/creditos_cel.png" alt="Numero principal: 7366087" />
+    <img class="img_phone" src="~/img/Img_Web2/credito_cel.png" alt="Numero principal: 7366087" />
 </section>
 
 
@@ -25,37 +26,14 @@
 <section class="page__Credito">
 
     @{
-        // En la primera parte se pone el nombre de la imagen y en el segundo el link
 
-        var Creditos = new Dictionary<string, string>
+        foreach (var credito in Model)
         {
-            {"EDUCATIVO.png", "#creditoEducativo" },
-            {"VIVIENDA.png", "#creditoVivienda" },
-            {"CARTERA.png", "#creditoCartera" },
-            {"LIBRANZA.png", "#creditoLibranza" },
-            {"CONSUMO.png", "#creditoConsumo" },
-            {"MICROCRE.png", "#microcredito" },
-            {"ROTATIVO.png", "#rotativos" },
-            {"cofinagro.png", "#cofinagro" },
-        };
-
-        foreach (var credito in Creditos)
-        {
-            <a class="tipo_4" href="/Home/ProductosCreditos/@credito.Value">
-                <img class="imagen_credito" src="~/img/Img_Web2/creditos/@credito.Key" alt="Imagen de @credito.Key">
+            <a class="tipo_4" href="/Home/ProductosCreditos/@credito.Id">
+                <img class="imagen_credito" src="~/img/Img_Web2/creditos/@credito.Icono" alt="Imagen del icono de @credito.Nombre">
             </a>
         }
-
-        @functions {
-            public string GetHello()
-            {
-                return "Hello";
-            }
-        }
-
-
     }
-        @*<div>From method: @GetHello() dos</div>*@
 
 </section>
 

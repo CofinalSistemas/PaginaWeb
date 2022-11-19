@@ -17,8 +17,10 @@
     margin-left: auto;
 }*/
 
+
+
 .container_prin {
-    padding-top:20px;
+    padding-top: 20px;
     max-width: 1400px;
     margin: 0 auto;
 
@@ -49,8 +51,8 @@
     margin: 0;
 
     @media screen and (max-width:900px ) {
-        background-image: url("../../../img/Img_Web2/fondo_svg.svg");
-        background-size: cover;
+        /*background-image: url("../../../img/Img_Web2/fondo_svg.svg");*/
+        /*background-size: cover;*/
     }
 
 
@@ -58,18 +60,27 @@
         display: flex;
         background: #fff;
         flex-direction: column;
-        height: 300px;
+        width: 300px;
+        height: 260px;
         border-radius: 25px 25px 0 0;
+        cursor:pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 15px 30px -20px $primary-color;
+        }
 
         .contenido_servicios {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
+            padding:10px;
 
             p {
                 width: 50%;
-                color: $secondary-color;
+                color: black;
                 font-size: 24px;
             }
         }
@@ -538,6 +549,7 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    gap:20px;
 }
 
 .icons > .tarjetas-Centradas > .icentrado {
@@ -909,16 +921,44 @@
     }
 }
 
+.multi_videos{
+    margin:80px 20px 0 20px;
+}
 .container__Video {
     max-width: 600px;
-    height: 500px;
     margin: auto;
-
+    
+    .slick-list{
+        max-width:100%;
+    }
+    
     .my-slider-videos {
 
-        .tam_video {
-            /*max-height: 500px;*/
-            height: 400px;
+        .tam_video_2 {
+            width:100% !important;
+            height: 200px;
+        }
+    }
+}
+
+.main__video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 20px auto;
+    gap: 30px;
+    flex-direction: row;
+    overflow:hidden;
+
+    @media screen and (max-width:900px ) {
+        flex-direction: column;
+    }
+    /*flex-wrap:wrap;*/
+    .multi_texto {
+
+        .texto_video {
+            margin: 20px;
         }
     }
 }

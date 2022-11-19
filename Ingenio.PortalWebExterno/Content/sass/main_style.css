@@ -262,22 +262,29 @@ i {
   margin: 0; }
   @media screen and (max-width: 900px) {
     .servicios {
-      background-image: url("../../../img/Img_Web2/fondo_svg.svg");
-      background-size: cover; } }
+      /*background-image: url("../../../img/Img_Web2/fondo_svg.svg");*/
+      /*background-size: cover;*/ } }
   .servicios .circle_cards {
     display: flex;
     background: #fff;
     flex-direction: column;
-    height: 300px;
-    border-radius: 25px 25px 0 0; }
+    width: 300px;
+    height: 260px;
+    border-radius: 25px 25px 0 0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; }
+    .servicios .circle_cards:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 15px 30px -20px rgba(252, 132, 4, 0.9); }
     .servicios .circle_cards .contenido_servicios {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      padding: 10px; }
       .servicios .circle_cards .contenido_servicios p {
         width: 50%;
-        color: rgba(236, 28, 36, 0.75);
+        color: black;
         font-size: 24px; }
     .servicios .circle_cards .main_img {
       width: 100%;
@@ -639,7 +646,8 @@ i {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  flex-direction: column; }
+  flex-direction: column;
+  gap: 20px; }
 
 .icons > .tarjetas-Centradas > .icentrado {
   font-size: 3.5em;
@@ -907,13 +915,33 @@ i {
         .noticias .container__Noticias .noticas_subcontainer .noticia_fecha span {
           color: white; }
 
+.multi_videos {
+  margin: 80px 20px 0 20px; }
+
 .container__Video {
   max-width: 600px;
-  height: 500px;
   margin: auto; }
-  .container__Video .my-slider-videos .tam_video {
-    /*max-height: 500px;*/
-    height: 400px; }
+  .container__Video .slick-list {
+    max-width: 100%; }
+  .container__Video .my-slider-videos .tam_video_2 {
+    width: 100% !important;
+    height: 200px; }
+
+.main__video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 20px auto;
+  gap: 30px;
+  flex-direction: row;
+  overflow: hidden;
+  /*flex-wrap:wrap;*/ }
+  @media screen and (max-width: 900px) {
+    .main__video {
+      flex-direction: column; } }
+  .main__video .multi_texto .texto_video {
+    margin: 20px; }
 
 /*$primary-color: rgba(224, 85, 20, 0.75);*/
 /*$primary-color: rgba(252,187,43,1);*/

@@ -34,12 +34,14 @@ namespace Ingenio.PortalWebExterno.Controllers
 
         private Agencias_info _agencias_Info;
         private Credito_info _credito_Info;
+        private Ahorro_info _ahorro_Info;
 
         public HomeController()
         {
             configBLL = new ConfiguracionBLL();
             _agencias_Info = new Agencias_info();
             _credito_Info = new Credito_info();
+            _ahorro_Info = new Ahorro_info();
         }
         [OutputCache(Duration =300,Location =System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Index()
@@ -116,11 +118,8 @@ namespace Ingenio.PortalWebExterno.Controllers
         }
         public ActionResult Ahorros()
         {
-            return View();
-        }
-        public ActionResult Alivios2020()
-        {
-            return View();
+            var model = _ahorro_Info.ObtenerAhorro();
+            return View(model);
         }
         public ActionResult Creditos()
         {
@@ -177,27 +176,11 @@ namespace Ingenio.PortalWebExterno.Controllers
         {
             return View();
         }
-        public ActionResult AlianzasC()
-        {
-
-            return View();
-        }
         public ActionResult ConveniosC()
-        {
-
-            return View();
-        }
-        public ActionResult Alianzas()
         {
             return View();
         }
         
-        public ActionResult PoliticasTIC()
-        {
-            return View();
-        }
-
-        // Crear Pagina Nueva (Prueba)
         public ActionResult CanalesPago()
         {
             return View();

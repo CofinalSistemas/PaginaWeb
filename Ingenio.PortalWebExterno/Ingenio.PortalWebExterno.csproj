@@ -285,9 +285,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Informacion\Agencias_info.cs" />
+    <Compile Include="Informacion\Ahorro_info.cs" />
     <Compile Include="Informacion\Directorio_info.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Agencia.cs" />
+    <Compile Include="Models\Ahorro.cs" />
     <Compile Include="Models\CaptchaResponse.cs" />
     <Compile Include="Informacion\Credito_info.cs" />
     <Compile Include="Models\Credito.cs" />
@@ -757,14 +759,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\QuienesSomos.cshtml" />
     <Content Include="Views\Shared\Navbar.cshtml" />
     <Content Include="Views\Home\ConceptosDeInteres.cshtml" />
     <Content Include="Web.sitemap" />
     <Content Include="Views\Home\Fundacion.cshtml" />
-    <Content Include="Views\Home\Alianzas.cshtml" />
     <Content Include="Views\Home\Productos.cshtml" />
     <Content Include="Views\Asociado\Edit.cshtml" />
     <Content Include="Views\Home\ValidateCaptcha.cshtml" />
@@ -820,7 +820,6 @@
     <Content Include="Views\Fundacion\AñosFelices.cshtml" />
     <Content Include="Views\Fundacion\contactenos.cshtml" />
     <Content Include="Views\Fundacion\Seminarios.cshtml" />
-    <Content Include="Views\Home\AlianzasC.cshtml" />
     <Content Include="Views\Home\ConveniosC.cshtml" />
     <Content Include="Views\Home\ProductosCreditos.cshtml" />
     <Content Include="Views\Home\HomeAso.cshtml" />
@@ -837,13 +836,10 @@
     <Content Include="Views\Configuracion\ConfigureModal.cshtml" />
     <Content Include="Views\Home\Multiportal.cshtml" />
     <Content Include="Views\Home\RteDian.cshtml" />
-    <Content Include="Views\Home\Alivios2020.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Directorio.cshtml" />
-    <Content Include="Views\Home\PoliticasTIC.cshtml" />
     <Content Include="Views\Home\CanalesPago.cshtml" />
     <Content Include="Views\Home\ActualizacionDatos.cshtml" />
-    <Content Include="Views\Home\Message2.cshtml" />
     <Content Include="Views\Home\Simulador.cshtml" />
     <Content Include="Views\Multimedia\baseVideos.cshtml" />
     <Content Include="Views\Home\Videos.cshtml" />

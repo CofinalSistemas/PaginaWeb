@@ -11,18 +11,18 @@
 @import '../abstracts/_functions.scss';
 @import '../abstracts/_colors.scss';
 
-/*.big-container {
-    max-width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-}*/
+.container__index__global{
+    margin:0px;
+    padding: 0px;
+    font-size:16px;
+}
 
 
 
-.container_prin {
-    padding-top: 20px;
+.container__seccion {
     max-width: 1400px;
     margin: 0 auto;
+    padding: 40px 20px;
 
     a {
         text-decoration: none;
@@ -40,21 +40,21 @@
 }
 
 
-.servicios {
+.seccion__general {
     background-color: $primary-color-light;
     background-image: url("../../../img/Img_Web2/Fondo6.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center right;
-    /*background-position: 0% 0%;*/
-    padding: 30px;
-    margin: 0;
+    
 
     @media screen and (max-width:900px ) {
         /*background-image: url("../../../img/Img_Web2/fondo_svg.svg");*/
         /*background-size: cover;*/
     }
+}
 
+.seccion__servicios {
 
     .circle_cards {
         display: flex;
@@ -63,7 +63,7 @@
         width: 300px;
         height: 260px;
         border-radius: 25px 25px 0 0;
-        cursor:pointer;
+        cursor: pointer;
         transition: all 0.2s ease-in-out;
 
         &:hover {
@@ -76,7 +76,7 @@
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            padding:10px;
+            padding: 10px;
 
             p {
                 width: 50%;
@@ -108,17 +108,26 @@
     flex-direction: column;
     box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5)
 }
-
+.container__global_video{
+    max-width:1400px;
+    margin:auto;
+    background-color:#fff;
+}
 .content-video {
     display: flex;
     flex-direction: column;
     position: absolute;
     bottom: 0;
-    /*background: rgba(0, 0, 0, 0.5);*/
-    color: #c2841c;
-    /*width: 100%;*/
-    /*padding: 20px;*/
     margin: 0 0 20px 20px;
+
+    @media screen and (max-width: 899px) {
+        bottom: 83px;
+        font-size: 1.3rem;
+        left: 10px;
+        max-width: 160px;
+        border-radius: 30px;
+        box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5);
+    }
 
     h3 {
         color: #a47d42;
@@ -488,13 +497,7 @@
     font-size: 26px;
 }
 
-.container2 {
-    padding: 0 4rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
+
 
 .container {
     width: 100%;
@@ -794,6 +797,7 @@
 
 .noticias {
     background-color: $primary-color-light;
+    /*padding: 40px 20px;*/
 
     .container__Noticias {
         max-width: 1400px;
@@ -827,7 +831,7 @@
 
                 @media screen and (max-width:400px ) {
                     right: 130px;
-                    top: 540px;
+                    top: 610px;
                 }
             }
 
@@ -839,12 +843,13 @@
                     font-size: 30px;
                     padding: 5px;
                 }
+            
+                @media screen and (max-width:400px ) {
+                    left: 90px;
+                    top: 610px;
+                }
             }
 
-            @media screen and (max-width:400px ) {
-                left: 90px;
-                top: 540px;
-            }
         }
 
 
@@ -857,7 +862,7 @@
             /*border: 1px solid red;*/
             margin: 10px;
             height: auto;
-            max-height: 450px;
+            /*max-height: 450px;*/
             background-color: #fff;
             box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.5);
             transition: all 0.2s ease-in-out;
@@ -924,21 +929,22 @@
 .multi_videos{
     margin:80px 20px 0 20px;
 }
-.container__Video {
-    max-width: 600px;
-    margin: auto;
-    
-    .slick-list{
-        max-width:100%;
-    }
-    
-    .my-slider-videos {
 
-        .tam_video_2 {
-            width:100% !important;
-            height: 200px;
-        }
-    }
+.multiples__videos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.contenido__videos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px;
 }
 
 .main__video {
@@ -948,8 +954,83 @@
     max-width: 1400px;
     margin: 20px auto;
     gap: 30px;
-    flex-direction: row;
-    overflow:hidden;
+    flex-direction: column;
+    overflow: hidden;
+
+    .container__Video {
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        margin: auto;
+
+        .tam_video {
+            height: auto !important;
+        }
+
+        .slick-list {
+            max-width: 100%;
+        }
+
+        .slick-next {
+            right: -7px;
+
+            &:before {
+                color: rgba(252,132,4,.9);
+                font-size: 30px;
+                padding: 5px;
+            }
+
+
+            @media screen and (max-width:400px ) {
+                right: 130px;
+                top: 610px;
+            }
+        }
+
+        .slick-prev {
+            left: -42px;
+
+            &:before {
+                color: rgba(252,132,4,.9);
+                font-size: 30px;
+                padding: 5px;
+            }
+
+            @media screen and (max-width:400px ) {
+                left: 90px;
+                top: 610px;
+            }
+        }
+
+        .my-slider-videos {
+            /*.tam_video_2 {
+                height: 400px;
+            }*/
+        }
+
+        .multimedia_video__index {
+            display: block;
+            position: relative;
+            width:100%;
+
+            .contenedor_video {
+                /*height: 287px;*/
+                display: block;
+                width: 100%;
+                min-width: 100%;
+
+                iframe {
+                    width: 100%;
+                    min-width: 100%;
+                    border: 0 !important;
+                    min-height: 100%;
+                    height: 320px;
+                    border-radius: 3px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
 
     @media screen and (max-width:900px ) {
         flex-direction: column;
@@ -960,5 +1041,21 @@
         .texto_video {
             margin: 20px;
         }
+    }
+}
+
+.video_computador {
+    display: block;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
+.video_celular {
+    display: none;
+
+    @media (max-width: 600px) {
+        display: block;
     }
 }

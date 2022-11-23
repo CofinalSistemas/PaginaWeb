@@ -52,3 +52,27 @@
 
     }
 }
+
+
+.modal__container__general {
+    
+    margin: 40px 20px 20px 20px;
+
+    .contenido__modal{
+
+        img{
+            height:100%;
+            width:100%;
+        }
+
+        p{
+            margin-top:10px;
+            text-align:justify;
+        }
+    }
+
+    .fin__modal{
+        border-top: 1px dashed black;
+    }
+
+}

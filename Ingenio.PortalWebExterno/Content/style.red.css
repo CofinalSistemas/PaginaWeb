@@ -98,11 +98,6 @@ p.lead {
   margin-bottom: 40px;
 }
 
-section,
-div.section {
-  margin-bottom: 40px;
-}
-
 .no-mb {
   margin-bottom: 0 !important;
 }

@@ -7,13 +7,21 @@
     padding: 10px 0;
 
     .container2 {
+        padding: 0 4rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+
+        @media only screen and (max-width: 500px) {
+            gap: 20px;
+            padding: 0 10px;
+        }
+
         @media only screen and (min-width: 1300px) {
             margin: 0 50px 0 50px;
         }
     }
-    /*.container2{
-        max-width:1400px;
-    }*/
 
     .login {
         float: right;
@@ -26,6 +34,10 @@
             text-transform: uppercase;
             font-weight: 700;
             letter-spacing: 0.1em;
+
+            i{
+                margin:0px;
+            }
         }
     }
 
@@ -51,6 +63,10 @@
             border-radius: 50%;
             padding: 15px;
             flex-direction: row;
+
+            @media only screen and (max-width: 800px) {
+                padding: 12px;
+            }
             /* Cambio de colores de redes Sociales*/
             &.facebook {
                 background-color: #4460ae;

@@ -122,8 +122,6 @@
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                 </a>
                             </li>
-
-
                             <li class="item item-app" style="background-color: #314396">
                                 <a href="https://multiportal.redcoopcentral.com/multiportalvisio/Login/Index?ENTIDAD=00000117" target="_blank">
                                     <p>
@@ -134,7 +132,6 @@
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                 </a>
                             </li>
-
                             <li class="item item-app" style="background-color: #80031D">
                                 <a href="https://portaljuridico.redcoopcentral.com:8445/portalJuridico" target="_blank">
                                     <p>
@@ -154,20 +151,29 @@
         <!----- Contenido -->
         <!-- Fonde De Video -->
 
-        <div class="big-container">
-            <section class="container_prin" id="Video_Slider">
-                <video autoplay muted loop id="sliderVideo">
-                    <source src="~/Videos/Animacion_Banner.mp4" type="video/mp4" />
-                </video>
-                <div class="content-video">
-                    @*<h3>Bienvenido a Cofinal</h3> *@
-                    @*<p>Somos una cooperativa de ahorro y crédito, orgullosamente <br /> Colombiana, cuyo motor son nuestros asociados ¡Aquí perteneces¡</p>*@
-                    <a href="~/Home/ActualizacionDatos" class="myButtons centerSpan">Actualiza tu información personal aqui</a>
-                </div>
-            </section>
+        <div class="container__index__global">
+            <div class="seccion__general">
+                <section class="container__global_video">
+                    <section class="container__video" id="Video_Slider">
+                        <div class="video_computador">
+                            <video autoplay muted loop id="sliderVideo">
+                                <source src="~/Videos/Animacion_Banner.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <div class="video_celular">
+                            <video autoplay muted loop id="sliderVideo">
+                                <source src="~/Videos/animacion_cel.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <div class="content-video">
+                            <a href="~/Home/ActualizacionDatos" class="myButtons centerSpan">Actualiza tu información personal aqui</a>
+                        </div>
+                    </section>
+                </section>
+            </div>
             <!--Final fondo de Video -->
-            <section class="servicios">
-                <section class="container_prin">
+            <section class="seccion__general">
+                <section class="container__seccion">
                     <h3 class="tituleAnimation">¿En que te podemos ayudar?</h3>
                     <div class="nuestros__Servicios">
                         <a href="~/Home/ahorros" class="tartjeta__servicios animacion_arriba">
@@ -249,46 +255,54 @@
             <!-- Titulo grande de texto -->
             <!-- Fin: Titulo grande de texto -->
             <!-- Seccion de Iconos -->
-            <section class="servicios">
-                <section class="tituleAnimation">
-                    <p>Si es socio de nuestra cooperativa disfrute de múltiples beneficios</p>
+            <section class="seccion__general">
+                <section class="container__seccion">
+                    <div class="tituleAnimation">
+                        <p>Si es socio de nuestra cooperativa disfrute de múltiples beneficios</p>
+                    </div>
+                    <div class="seccion__servicios icons container__seccion">
+                        <a href="~/Home/ConveniosC" class="circle_cards">
+                            <img class="main_img" src="~/img2/Convenios.png" alt="Apreton de Manos" />
+                            <div class="contenido_servicios">
+                                <p>Convenios y promociones</p>
+                                <div class="icentrado">
+                                    <img class="ser_iconos" src="~/img/Img_Web2/iconos/convenios-y-promociones.png" />
+                                </div>
+                            </div>
+                        </a>
+                        <div id="proteccion" class="circle_cards modal_index">
+                            <img class="main_img" src="~/img/Img_Web2/ahorro_index.png" alt="Apreton de Manos" />
+                            <div class="contenido_servicios">
+                                <p>Protección al ahorro</p>
+                                <div class="icentrado">
+                                    <img class="ser_iconos" src="~/img/Img_Web2/icono-seguro.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="funeraria" class="circle_cards modal_index">
+                            <img class="main_img" src="~/img/Img_Web2/funeraria_index.png" alt="Apreton de Manos" />
+                            <div class="contenido_servicios">
+                                <p>Ayuda funeraria</p>
+                                <div class="icentrado">
+                                    <img class="ser_iconos" src="~/img/Img_Web2/iconos/ayuda-funeraria.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-                <div class="icons container_prin">
-                    <a href="~/Home/ConveniosC" class="circle_cards">
-                        <img class="main_img" src="~/img2/Convenios.png" alt="Apreton de Manos" />
-                        <div class="contenido_servicios">
-                            <p>Convenios y promociones</p>
-                            <div class="icentrado">
-                                <img class="ser_iconos" src="~/img/Img_Web2/iconos/convenios-y-promociones.png" />
-                            </div>
-                        </div>
-                    </a>
-                    <div id="proteccion" class="circle_cards modal_index">
-                        <img class="main_img" src="~/img/Img_Web2/ahorro_index.png" alt="Apreton de Manos" />
-                        <div class="contenido_servicios">
-                            <p>Protección al ahorro</p>
-                            <div class="icentrado">
-                                <img class="ser_iconos" src="~/img/Img_Web2/icono-seguro.png" />
-                            </div>
-                        </div>
-                    </div>
-                    <div id="funeraria" class="circle_cards modal_index">
-                        <img class="main_img" src="~/img/Img_Web2/funeraria_index.png" alt="Apreton de Manos" />
-                        <div class="contenido_servicios">
-                            <p>Ayuda funeraria</p>
-                            <div class="icentrado">
-                                <img class="ser_iconos" src="~/img/Img_Web2/iconos/ayuda-funeraria.png" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section>
             <dialog class="modal_Agencias" id="dialog_proteccion">
                 <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
-                <div class="container__Modal">
-                    <div class="header_modal">
+                <div class="modal__container__general">
+                    <div class="titulo_modal"></div>
+                    <div class="contenido__modal">
+                        <img src="~/img/Img_Web2/Fotos_index/ayuda.png" alt="Alternate Text" />
                         <p>
-                            Sabemos lo difícil que es sobreponerse a una pérdida del ser amado, especialmente si es el sustento familiar; es por ello que protegemos tu ahorro sin costo como servicio adicional y saldamos el crédito vigente de tu ser querido al fallecer*
+                            Sabemos lo difícil que es sobreponerse a una pérdida del ser amado, especialmente si es el sustento familiar; es por ello que protegemos tu ahorro sin costo como servicio adicional y saldamos el crédito vigente de tu ser querido al fallecer.
+                        </p>
+                    </div>
+                    <div class="fin__modal">
+                        <p class="texto-restricciones">
                             * Aplican restricciones de acuerdo a la póliza de seguro vigente. Para mayores informes, consulta a un ejecutivo en tu sucursal y no olvides dar de alta a tus beneficiarios con su nombre completo, dirección y número telefónico.
                         </p>
                     </div>
@@ -296,54 +310,55 @@
             </dialog>
             <dialog class="modal_Agencias" id="dialog_funeraria">
                 <div class="button close-button" id="c-modal1"><i class="fa fa-solid fa-xmark"></i></div>
-                <div class="container__Modal">
-                    <div class="header_modal">
+                <div class="modal__container__general">
+                    <div class="titulo_modal"></div>
+                    <div class="contenido__modal">
+                        <img src="~/img/Img_Web2/Fotos_index/funeral.png" alt="Alternate Text" />
                         <p>
                             En los momentos difíciles, queremos apoyar tu economía con la ayuda funeraria económica para nuestros socios*. Recuerda que únicamente tus beneficiarios (quienes brindaste al momento de darte alta como socios), son los únicos que pueden solicitar el apoyo por lo que considera siempre actualizar los datos en caso de cambios.
-                            * Aplican restricciones de acuerdo a la póliza de seguro vigente. Para mayores informes, consulta a un ejecutivo en tu sucursal.
+                        </p>
+                    </div>
+                    <div class="fin__modal">
+                        <p class="texto-restricciones">
+                            * Aplican restricciones de acuerdo a la póliza de seguro vigente. Para mayores informes, consulta a un ejecutivo en tu sucursal y no olvides dar de alta a tus beneficiarios con su nombre completo, dirección y número telefónico.
                         </p>
                     </div>
                 </div>
             </dialog>
             <!-- Seccion de Fin -->
             <!-- Titulo grande de texto -->
-            <section class="titulos container_prin">
+            <section class="container__seccion">
                 <h3 class="tituleAnimation">Cofinal es</h3>
+                <section class="tarjetas-contenedor">
+                    <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
+                        <img src="~/img/Img_Web2/iconoAhorro.png" />
+                        @*<i aria-hidden="true" class="far fa-clock"></i>*@
+                        <h3>Ahorro</h3>
+                        <p>
+                        </p>
+                        <a href="/Home/ahorros" class="myButtons">Ingresar</a>
+                    </div>
+                    <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
+                        <img src="~/img/Img_Web2/iconoCredito.png" />
+                        @*<i aria-hidden="true" class="fas fa-check"></i>*@
+                        <h3>Crédito</h3>
+                        <a href="/Home/Creditos" class="myButtons">Ingresar</a>
+                    </div>
+                    <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
+                        <img src="~/img/Img_Web2/iconos/simuladores.png" />
+                        <h3>Simuladores</h3>
+                        <button class="myButtons">Ingresar</button>
+                    </div>
+                    <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
+                        <img src="~/img/Img_Web2/icono-enlaces.png" />
+                        <h3>Virtual</h3>
+                        <button class="myButtons">Ingresar</button>
+                    </div>
+                </section>
             </section>
             <!-- Fin: Titulo grande de texto -->
             <!-- Tarjetas Contenedoras -->
-            <section class="tarjetas-contenedor container_prin">
-                <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
-                    <img src="~/img/Img_Web2/iconoAhorro.png" />
-                    @*<i aria-hidden="true" class="far fa-clock"></i>*@
-                    <h3>Ahorro</h3>
-                    <p>
-                    </p>
-                    <a href="/Home/ahorros" class="myButtons">Ingresar</a>
-                </div>
-                <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
-                    <img src="~/img/Img_Web2/iconoCredito.png" />
-                    @*<i aria-hidden="true" class="fas fa-check"></i>*@
-                    <h3>Crédito</h3>
-                    <p>
-                    </p>
-                    <a href="/Home/Creditos" class="myButtons">Ingresar</a>
-                </div>
-                <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
-                    <img src="~/img/Img_Web2/iconos/simuladores.png" />
-                    <h3>Simuladores</h3>
-                    <p>
-                    </p>
-                    <button class="myButtons">Ingresar</button>
-                </div>
-                <div class="tarjetas-Centradas gBoxShadow animacion_arriba">
-                    <img src="~/img/Img_Web2/icono-enlaces.png" />
-                    <h3>Virtual</h3>
-                    <p>
-                    </p>
-                    <button class="myButtons">Ingresar</button>
-                </div>
-            </section>
+            
             <!-- Fin: Tarjetas Contenedoras -->
             <!-- Inicio de formulario -->
             <section style="display:none;">
@@ -375,28 +390,6 @@
         </div>
         <!-- Fin de Encuesta-->
 
-        <section id="sobreNosotros" class="section-home-about-us py-cofinal">
-            <div class="container ">
-                <div class="row content-section">
-                    <div class="col-xs-12 col-md-6 text-center">
-                        <img src="/img/about_us_home.png" class="about-us-home" alt="About Us Image">
-                    </div>
-                    <div class="col-xs-12 col-md-6">
-                        <h2 class="title-section">Sobre nosotros</h2>
-                        <hr class="separator-title" />
-                        <p class="description-section">
-                            <strong>Cofinal</strong> es impulsor de desarrollo socioenconómico del suroccidente Colombiano a través de servicios cooperativos de ahorro y crédito; sirviendo con responsabilidad y confianza mutua, generamos bienestar a nuestros asociados.
-                            <br />
-                            <br />
-                            Somos una
-                            <strong>Cooperativa de Ahorro y Crédito</strong> con 58 años de existencia in-interrumpida en el sector de la Economía Solidaria con amplia cobertura en el sur occidente del país. vigilada por la Superintendencia de la Economía Solidaria -
-                            <strong>SUPERSOLIDARIA</strong> .
-                        </p>
-                        <a class="btn btn-default btn-cofinal-orange" href="/Home/QuienesSomos">Conoce más</a>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!--------- SECTION OUR SERVICES-------->
 
         <section class="noticias">
@@ -538,34 +531,40 @@
             <div class="main__video">
                 <div class="container__Video">
                     <div id="Videos_Carrusel" class="my-slider-videos" style="display:none;">
-                        <div class="tam_video">
-                            <iframe class="tam_video_2" width="660" height="515" src="https://www.youtube.com/embed/bzm2pKyMBhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div>
+                            <div class="multimedia_video__index">
+                                <div class="contenedor_video">
+                                    <iframe class="video_youtube" width="660" height="515" src="https://www.youtube.com/embed/bzm2pKyMBhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
                         </div>                        
-                        <div class="tam_video">
+                        @*<div class="tam_video">
                             <iframe class="tam_video_2" width="560" height="315" src="https://www.youtube.com/embed/bzm2pKyMBhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>                        
                         <div class="tam_video">
                             <iframe class="tam_video_2" width="560" height="315" src="https://www.youtube.com/embed/bzm2pKyMBhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>                    
+                        </div>*@                    
                     </div>
                     <h3>Titulo del video</h3>
                 </div>
                 <div class="multi_texto">
-                    <h4>
-                        Multimedia
-                    </h4>
                     <div class="texto_video">
+                        <h4>
+                            Multimedia
+                        </h4>
                         Informate Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
-                    </div>   
-                    <div>
-                        <iframe width="300" height="250" src="https://www.youtube.com/embed/n_-aOj04J2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="300" height="250" src="https://www.youtube.com/embed/bzm2pKyMBhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="300" height="250" src="https://www.youtube.com/embed/bzm2pKyMBhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="300" height="250" src="https://www.youtube.com/embed/bzm2pKyMBhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <a href="/Home/Videos" class="myButtons">
-                        Mas videos
-                    </a>
+                    <div class="contenido__videos">
+                        <div class="multiples__videos">
+                            <iframe width="300" height="250" src="https://www.youtube.com/embed/n_-aOj04J2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="300" height="250" src="https://www.youtube.com/embed/bzm2pKyMBhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="300" height="250" src="https://www.youtube.com/embed/bzm2pKyMBhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="300" height="250" src="https://www.youtube.com/embed/bzm2pKyMBhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <a href="/Home/Videos" class="myButtons">
+                            Mas videos
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

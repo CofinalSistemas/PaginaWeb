@@ -2050,7 +2050,11 @@ i {
       flex-direction: column;
       max-width: 900px;
       margin: auto;
-      gap: 20px; }
+      gap: 20px;
+      padding: 20px;
+      transition: all 0.2s; }
+      .container__multi .container__main__multi .big__container__multi:hover {
+        transform: translateY(-2px); }
       .container__multi .container__main__multi .big__container__multi h2 {
         margin-top: 30px; }
       @media screen and (min-width: 700px) {
@@ -2696,3 +2700,7 @@ section.section {
     /*background: blue;*/ }
     .icons > .tarjetas-Centradas:hover p, .icons > .tarjetas-Centradas:focus p {
       color: black; } }
+
+.login_contantenedor {
+  max-width: 1400px;
+  margin: auto; }

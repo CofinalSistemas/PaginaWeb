@@ -294,6 +294,7 @@
     <Compile Include="Informacion\Credito_info.cs" />
     <Compile Include="Models\Credito.cs" />
     <Compile Include="Models\model.cs" />
+    <Compile Include="Models\SimuladorCredito.cs" />
     <Compile Include="Models\Telefono.cs" />
     <Compile Include="Models\UIAF.cs" />
     <Compile Include="Models\user.cs" />
@@ -840,9 +841,9 @@
     <Content Include="Views\Home\Directorio.cshtml" />
     <Content Include="Views\Home\CanalesPago.cshtml" />
     <Content Include="Views\Home\ActualizacionDatos.cshtml" />
-    <Content Include="Views\Home\Simulador.cshtml" />
     <Content Include="Views\Multimedia\baseVideos.cshtml" />
     <Content Include="Views\Home\Videos.cshtml" />
+    <Content Include="Views\Home\Simulador.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

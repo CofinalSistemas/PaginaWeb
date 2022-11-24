@@ -2051,10 +2051,12 @@ i {
       max-width: 900px;
       margin: auto;
       gap: 20px;
-      padding: 20px;
-      transition: all 0.2s; }
-      .container__multi .container__main__multi .big__container__multi:hover {
-        transform: translateY(-2px); }
+      padding: 20px; }
+      .container__multi .container__main__multi .big__container__multi a img {
+        transition: all 0.2s; }
+      .container__multi .container__main__multi .big__container__multi a:hover img {
+        transform: translateY(-2px);
+        box-shadow: 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5), 0px 15px 30px -20px rgba(0, 0, 0, 0.5); }
       .container__multi .container__main__multi .big__container__multi h2 {
         margin-top: 30px; }
       @media screen and (min-width: 700px) {

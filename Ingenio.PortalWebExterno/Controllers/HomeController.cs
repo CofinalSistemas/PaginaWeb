@@ -195,6 +195,13 @@ namespace Ingenio.PortalWebExterno.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Simulador(SimuladorCredito credito)
+        {
+            ViewBag.Message = "Exitoso";
+            return View(credito);
+        }
+
         public ActionResult ActualizacionDatos()
         {
             return View();

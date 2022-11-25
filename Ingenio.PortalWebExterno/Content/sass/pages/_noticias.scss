@@ -1,0 +1,45 @@
+﻿.noticias-body {
+    background-image: url("../../../img/Img_Web2/fondo_flores2.png");
+}
+.noticias-contenedor {
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px;
+
+    .noticias-titulo {
+        margin: 40px 20px;
+    }
+
+    .noticias-contenido {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 10px;
+
+        .noticias-contenido-imagen {
+            max-width:500px;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .noticias-contenido-informacion {
+        width: 100%;
+        margin: 20px;
+        text-align: justify;
+
+        @media screen and (min-width: 900px) {
+            width: 50%;
+        }
+
+        .content-table {
+            margin: 20px auto;
+            padding-top: 0px;
+            min-width: 300px;
+        }
+    }
+}

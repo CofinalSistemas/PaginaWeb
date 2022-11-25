@@ -1429,6 +1429,14 @@ i {
         border-right: none;
         place-content: start; } }
 
+.panel {
+  padding: 10px; }
+  .panel .panel-body {
+    padding: 30px; }
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  background: rgba(236, 28, 36, 0.75); }
+
 /*$primary-color: rgba(224, 85, 20, 0.75);*/
 /*$primary-color: rgba(252,187,43,1);*/
 .contenido {
@@ -2023,6 +2031,12 @@ i {
 
 /*$primary-color: rgba(224, 85, 20, 0.75);*/
 /*$primary-color: rgba(252,187,43,1);*/
+.multiportal-contenedor-general {
+  background-image: url(../../../img/Img_Web2/Fondo4.png);
+  background-color: red;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
 .container__multi {
   margin: 20px 2rem; }
   .container__multi .container__header_multi {
@@ -2253,6 +2267,40 @@ i {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.noticias-body {
+  background-image: url("../../../img/Img_Web2/fondo_flores2.png"); }
+
+.noticias-contenedor {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px; }
+  .noticias-contenedor .noticias-titulo {
+    margin: 40px 20px; }
+  .noticias-contenedor .noticias-contenido {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px; }
+    .noticias-contenedor .noticias-contenido .noticias-contenido-imagen {
+      max-width: 500px;
+      width: 100%;
+      object-fit: contain; }
+  .noticias-contenedor .noticias-contenido-informacion {
+    width: 100%;
+    margin: 20px;
+    text-align: justify; }
+    @media screen and (min-width: 900px) {
+      .noticias-contenedor .noticias-contenido-informacion {
+        width: 50%; } }
+    .noticias-contenedor .noticias-contenido-informacion .content-table {
+      margin: 20px auto;
+      padding-top: 0px;
+      min-width: 300px; }
 
 .Politicas {
   display: flex;

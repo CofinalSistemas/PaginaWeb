@@ -2,44 +2,88 @@
 
 @using (Html.BeginForm())
 {
-<div class="form-horizontal">
-    <h4>Simulador</h4>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(model => model.Capital, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-4">
-            @Html.EditorFor(model => model.Capital, new { htmlAttributes = new { @class = "form-control", @id = "monto_capital",@placeholder ="Ingresar un valor de 500.000 a 1'000.000" }})
-            @Html.ValidationMessageFor(model => model.Capital, "", new { @class = "text-danger" })
+    <div class="form-horizontal">
+        <h4>Simulador</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Capital, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.Capital, new { htmlAttributes = new { @class = "form-control", @id = "monto_capital", @placeholder = "Ingresar un valor de 100.000 a 100'000'000.000" } })
+                @Html.ValidationMessageFor(model => model.Capital, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Periodo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownListFor(model => model.Periodo, new List<SelectListItem>
+                {
+                   new SelectListItem { Text = "90", Value = "90" },
+                   new SelectListItem { Text = "120", Value = "120" },
+                   new SelectListItem { Text = "150", Value = "150" },
+                   new SelectListItem { Text = "180", Value = "180" },
+                   new SelectListItem { Text = "210", Value = "210" },
+                   new SelectListItem { Text = "240", Value = "240" },
+                   new SelectListItem { Text = "270", Value = "270" },
+                   new SelectListItem { Text = "300", Value = "300" },
+                   new SelectListItem { Text = "330", Value = "330" },
+                   new SelectListItem { Text = "360", Value = "360" },
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Periodo, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-4">
-            @Html.EditorFor(model => model.Periodo, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Periodo, "", new { @class = "text-danger" })
+                }, "Seleccionar")
+                @Html.ValidationMessageFor(model => model.Periodo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Periodo_Ahorro, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownListFor(model => model.Periodo_Ahorro, new List<SelectListItem>
+                {
+                   new SelectListItem { Text = "Al Vencimiento", Value = "Al Vencimiento" },
+                   new SelectListItem { Text = "Mensual", Value = "Mensual" },
+                }, "Seleccionar")
+                @Html.ValidationMessageFor(model => model.Periodo_Ahorro, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Periodo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.Periodo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Periodo, "", new { @class = "text-danger" })
+            </div>
+
+            <select id="Periodo" name="Periodo" required>
+                <option value="Al_Vencimiento">Al Vencimiento</option>
+                <option value="Mensual">Mensual</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <input type="submit" value="Enviar" class="myButtons" />
+                <a href="/Home/Simulador" class="myButtons centerSpan">Resetear</a>
+            </div>
         </div>
     </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-4">
-            <input type="submit" value="Enviar" class="myButtons" />
-            <a href="/Home/Simulador" class="myButtons centerSpan">Resetear</a>
-        </div>
-    </div>
-</div>
 }
 
 @{
-
     if (IsPost)
     {
-        <p>El capital es @Model.Capital</p> 
+
         if (Model.Capital >= 500000 & Model.Capital <= 1000000000)
-         {
-             <p>Este es un Post</p>
-            <p>El capital es @Model.Capital</p>
-         }
+        {
+            @*<p>La tasa de Interes es: @Model.Tasa_Efectiva(num)</p>*@
+            <p>El Capital es: @Model.Capital</p>
+            <p>La tasa efectiva anual:  @Model.Tasa_Efectiva(Model.Periodo)</p>
+            <p>La tasa efectiva anual:  @Model.Tasa_Efectiva(Model.Periodo)</p>
+            <p>Periodo pago interés @Model.Periodo_Ahorro</p>
+
+            <p>Este es un Post</p>
+            <p>El capital es @Model.Capital*@Model.Tasa_Efectiva(Model.Periodo)</p>
+        }
     }
     else
     {
@@ -67,20 +111,20 @@
             setTimeout(() => {
                 capital.value = capital.value.substring(0, capital.value.length - 1);
             }, "100")
-        } 
-    });
-
-    $("#monto_capital").on({
-        "focus": function (event) {
-            $(event.target).select();
-        },
-        "keyup": function (event) {
-            $(event.target).val(function (index, value) {
-                return value.replace(/\D/g, "")
-                    .replace(/([0-9])([0-9]{2})$/, '$1.$2')
-                    .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
-            });
         }
     });
+
+    //$("#monto_capital").on({
+    //    "focus": function (event) {
+    //        $(event.target).select();
+    //    },
+    //    "keyup": function (event) {
+    //        $(event.target).val(function (index, value) {
+    //            return value.replace(/\D/g, "")
+    //                .replace(/([0-9])([0-9]{2})$/, '$1.$2')
+    //                .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
+    //        });
+    //    }
+    //});
 
 </script>

@@ -386,3 +386,18 @@
         border-right: 3px solid black;
     }
 }
+
+
+// Productos
+
+.panel {
+    padding: 10px;
+
+    .panel-body {
+        padding: 30px;
+    }
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+    background:$secondary-color;
+}

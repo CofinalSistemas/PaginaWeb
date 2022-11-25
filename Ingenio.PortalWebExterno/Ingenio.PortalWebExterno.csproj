@@ -701,6 +701,7 @@
     <Content Include="Content\sass\pages\_ActualizacionDatos.scss" />
     <Content Include="Content\sass\pages\FormulariosAC.scss" />
     <Content Include="Content\sass\pages\_RteDian.scss" />
+    <Content Include="Content\sass\pages\_noticias.scss" />
     <None Include="PortaWeb.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -844,6 +845,7 @@
     <Content Include="Views\Multimedia\baseVideos.cshtml" />
     <Content Include="Views\Home\Videos.cshtml" />
     <Content Include="Views\Home\Simulador.cshtml" />
+    <Content Include="Views\Home\Noticias.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

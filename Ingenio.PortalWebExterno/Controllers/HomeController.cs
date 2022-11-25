@@ -207,6 +207,11 @@ namespace Ingenio.PortalWebExterno.Controllers
             return View();
         }
 
+        public ActionResult Noticias()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult ActualizacionDatos(user model)
         {

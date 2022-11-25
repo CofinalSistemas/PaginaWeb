@@ -1,6 +1,11 @@
 ﻿@import '../abstracts/_colors.scss';
 
-
+.multiportal-contenedor-general {
+    background-image: url(../../../img/Img_Web2/Fondo4.png);
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
 .container__multi {
     margin: 20px 2rem;
 

@@ -11,7 +11,7 @@ namespace Ingenio.PortalWebExterno.Models
     {
         readonly double Tasa_E = 12.2;
         private string _strNombre;
-        double tasa_efectiva;
+        decimal tasa_efectiva;
 
         // Constructor
 
@@ -36,7 +36,7 @@ namespace Ingenio.PortalWebExterno.Models
         [DisplayName("Monto de Capital: ")]
         [Range(100000, 100000000000)]
         //[DisplayFormat(DataFormatString = "{0:C}")]
-        public double? Capital { get; set; }
+        public double Capital { get; set; }
 
         [Required]
         [DisplayName("Periodo pago de interes: ")]
@@ -46,48 +46,48 @@ namespace Ingenio.PortalWebExterno.Models
         [DisplayName("Plazo en días: ")]
         public string Periodo { get; set; }
 
-        public double Tasa_Efectiva(string tasa)
+        public decimal Tasa_Efectiva(string tasa)
         {
             switch (tasa)
             {
                 case "90":
-                    tasa_efectiva = 14;
+                    tasa_efectiva = 14.00m;
                     break;
 
                 case "120":
-                    tasa_efectiva = 14.25;
+                    tasa_efectiva = 14.25m;
                     break;
 
                 case "150":
-                    tasa_efectiva = 14.5;
+                    tasa_efectiva = 14.50m;
                     break;
 
                 case "180":
-                    tasa_efectiva = 14.75;
+                    tasa_efectiva = 14.75m;
                     break;
 
                 case "210":
-                    tasa_efectiva = 15;
+                    tasa_efectiva = 15.00m;
                     break;
 
                 case "240":
-                    tasa_efectiva = 15.25;
+                    tasa_efectiva = 15.25m;
                     break;
 
                 case "270":
-                    tasa_efectiva = 15.5;
+                    tasa_efectiva = 15.50m;
                     break;
 
                 case "300":
-                    tasa_efectiva = 15.75;
+                    tasa_efectiva = 15.75m;
                     break;
 
                 case "330":
-                    tasa_efectiva = 16;
+                    tasa_efectiva = 16.00m;
                     break;
 
                 case "360":
-                    tasa_efectiva = 16.25;
+                    tasa_efectiva = 16.25m;
                     break;
 
             }

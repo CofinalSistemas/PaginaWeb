@@ -1,9 +1,10 @@
 ﻿@model Ingenio.PortalWebExterno.Models.SimuladorCredito
 
+
 @using (Html.BeginForm())
 {
     <div class="form-horizontal">
-        <h4>Simulador</h4>
+        <h4 class="tituleAnimation">Simulador</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -49,18 +50,6 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Periodo, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-4">
-                @Html.EditorFor(model => model.Periodo, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Periodo, "", new { @class = "text-danger" })
-            </div>
-
-            <select id="Periodo" name="Periodo" required>
-                <option value="Al_Vencimiento">Al Vencimiento</option>
-                <option value="Mensual">Mensual</option>
-            </select>
-        </div>
-        <div class="form-group">
             <div class="col-md-offset-2 col-md-4">
                 <input type="submit" value="Enviar" class="myButtons" />
                 <a href="/Home/Simulador" class="myButtons centerSpan">Resetear</a>
@@ -75,14 +64,65 @@
 
         if (Model.Capital >= 500000 & Model.Capital <= 1000000000)
         {
+            //double tasa_nominal = Math.((1 + Model.Tasa_Efectiva),(1/ @Model.Periodo_Ahorro) * @Model.Periodo_Ahorro;
+
+            //decimal prueba = Math.Pow((1m + (Model.Tasa_Efectiva(Model.Periodo) / 100m)), (1m / 12m)) * 12m;
+
+            // (((1+0.14)^(1/12)-1)*12)*100
+            // Math.Truncate(550.847457 * 100) / 100
+            double tasa_nomial,interes,interesTotales;
+            decimal tasa_efectivas = (1 + Model.Tasa_Efectiva(Model.Periodo) / 100);
+            double mes = double.Parse(Model.Periodo) / 30;
+
+            if (@Model.Periodo_Ahorro == "Al Vencimiento")
+            {
+                tasa_nomial =
+                    Math.Truncate((
+                    (Math.Pow(Decimal.ToDouble(tasa_efectivas), 1 / (12 / mes)) - 1) * (12 / mes))
+                    * 100 * 100) / 100;
+
+                interes = (tasa_nomial / 100 * Model.Capital) / 12;
+                interesTotales = (tasa_nomial / 100 * Model.Capital);
+
+            }
+            else
+            {
+                tasa_nomial =
+                    Math.Truncate((
+                    (Math.Pow(Decimal.ToDouble(tasa_efectivas), 1 / (12 / 1)) - 1) * (12 / 1))
+                    * 100 * 100) / 100;
+
+                interes = (tasa_nomial / 100 * Model.Capital) / 12;
+                interesTotales = (tasa_nomial / 100 * Model.Capital);
+            }
+
+
             @*<p>La tasa de Interes es: @Model.Tasa_Efectiva(num)</p>*@
             <p>El Capital es: @Model.Capital</p>
-            <p>La tasa efectiva anual:  @Model.Tasa_Efectiva(Model.Periodo)</p>
-            <p>La tasa efectiva anual:  @Model.Tasa_Efectiva(Model.Periodo)</p>
-            <p>Periodo pago interés @Model.Periodo_Ahorro</p>
+            <p>Periodo en dias: @Model.Periodo </p>
+            <p>Periodo pago de Intereses: @Model.Periodo_Ahorro</p>
+            @*<p>Meses = @mes </p>*@
+            <p>
+                No. de pagos:
+                @if (@Model.Periodo_Ahorro == "Al Vencimiento")
+                {
+                    <span>1</span>;
+                }
+                else
+                {
+                    <span>@mes</span>
+                }
+            </p>
+            <p>La tasa efectiva anual:  @Model.Tasa_Efectiva(Model.Periodo) %</p>
+            <p>Tasa nominal = @String.Format("{0:0,0.0}", tasa_nomial) %</p>
+            <p>Interes del Periodo: $ @String.Format("{0:0,0.0}", interes) </p>
+            <p>Total Interés Plazo: $ @String.Format("{0:0,0.0}", interesTotales) </p>
+            <p>Rte Funete : $ 0 </p>
+            <p>Total de Rte Funete : $0 </p>
+            <p>Valor a Recibir en el Período:$ @String.Format("{0:0,0.0}", interes) </p>
+            <p>Valor a Recibir en Total: $ @String.Format("{0:0,0.0}", interesTotales + Model.Capital) </p>
 
-            <p>Este es un Post</p>
-            <p>El capital es @Model.Capital*@Model.Tasa_Efectiva(Model.Periodo)</p>
+
         }
     }
     else

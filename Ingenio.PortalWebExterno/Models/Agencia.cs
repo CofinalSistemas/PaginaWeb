@@ -14,6 +14,7 @@ namespace Ingenio.PortalWebExterno.Models
         public string Extensiones { get; set; }
         public string Url { get; set; }
         public string Departamento { get; set; }
+        public string foto { get; set; }
         public string Mapas { get; set; }
     }
 }

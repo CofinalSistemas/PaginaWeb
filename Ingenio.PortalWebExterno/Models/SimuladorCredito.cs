@@ -34,6 +34,7 @@ namespace Ingenio.PortalWebExterno.Models
 
         [Required]
         [DisplayName("Monto de Capital: ")]
+        [DisplayFormat(DataFormatString = "{0:0,0.0}")]
         [Range(100000, 100000000000)]
         //[DisplayFormat(DataFormatString = "{0:C}")]
         public double Capital { get; set; }

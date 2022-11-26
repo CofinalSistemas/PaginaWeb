@@ -119,3 +119,25 @@ section.section {
     max-width:1400px;
     margin: auto;
 }
+
+
+.simulador-table {
+    margin: 20px auto;
+    min-width: 350px;
+
+    .simulador-tabla-titulo{
+        color:$primary-color;
+        font-size:17px;
+    }
+}
+.seccion_simulador {
+    max-width:1400px;
+    margin: 20px auto;
+    .form-horizontal{
+        
+        .form-group {
+        margin-right: 0px;
+        margin-left: 0px;
+        }
+    }
+}

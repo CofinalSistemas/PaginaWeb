@@ -3,7 +3,7 @@
 
 @using (Html.BeginForm())
 {
-    <div class="form-horizontal">
+    <div class="form-horizontal seccion_simulador">
         <h4 class="tituleAnimation">Simulador</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -62,7 +62,7 @@
     if (IsPost)
     {
 
-        if (Model.Capital >= 500000 & Model.Capital <= 1000000000)
+        if (Model.Capital >= 100000 & Model.Capital <= 1000000000)
         {
             //double tasa_nominal = Math.((1 + Model.Tasa_Efectiva),(1/ @Model.Periodo_Ahorro) * @Model.Periodo_Ahorro;
 
@@ -71,6 +71,7 @@
             // (((1+0.14)^(1/12)-1)*12)*100
             // Math.Truncate(550.847457 * 100) / 100
             double tasa_nomial,interes,interesTotales;
+            decimal division;
             decimal tasa_efectivas = (1 + Model.Tasa_Efectiva(Model.Periodo) / 100);
             double mes = double.Parse(Model.Periodo) / 30;
 
@@ -82,60 +83,71 @@
                     * 100 * 100) / 100;
 
                 interes = (tasa_nomial / 100 * Model.Capital) / 12;
-                interesTotales = (tasa_nomial / 100 * Model.Capital);
+                interesTotales = interes*mes;
 
             }
             else
             {
+                division = 1m / 12m;
+                
                 tasa_nomial =
                     Math.Truncate((
-                    (Math.Pow(Decimal.ToDouble(tasa_efectivas), 1 / (12 / 1)) - 1) * (12 / 1))
+                    (Math.Pow(Decimal.ToDouble(tasa_efectivas), Decimal.ToDouble(division)) - 1) * (12))
                     * 100 * 100) / 100;
 
                 interes = (tasa_nomial / 100 * Model.Capital) / 12;
-                interesTotales = (tasa_nomial / 100 * Model.Capital);
+                interesTotales = interes*mes;
             }
 
 
             @*<p>La tasa de Interes es: @Model.Tasa_Efectiva(num)</p>*@
-            <p>El Capital es: @Model.Capital</p>
-            <p>Periodo en dias: @Model.Periodo </p>
-            <p>Periodo pago de Intereses: @Model.Periodo_Ahorro</p>
-            @*<p>Meses = @mes </p>*@
-            <p>
-                No. de pagos:
-                @if (@Model.Periodo_Ahorro == "Al Vencimiento")
-                {
-                    <span>1</span>;
-                }
-                else
-                {
-                    <span>@mes</span>
-                }
-            </p>
-            <p>La tasa efectiva anual:  @Model.Tasa_Efectiva(Model.Periodo) %</p>
-            <p>Tasa nominal = @String.Format("{0:0,0.0}", tasa_nomial) %</p>
-            <p>Interes del Periodo: $ @String.Format("{0:0,0.0}", interes) </p>
-            <p>Total Interés Plazo: $ @String.Format("{0:0,0.0}", interesTotales) </p>
-            <p>Rte Funete : $ 0 </p>
-            <p>Total de Rte Funete : $0 </p>
-            <p>Valor a Recibir en el Período:$ @String.Format("{0:0,0.0}", interes) </p>
-            <p>Valor a Recibir en Total: $ @String.Format("{0:0,0.0}", interesTotales + Model.Capital) </p>
 
+            <table class="content-table simulador-table">
+                <tr>
+                    <td><span class="simulador-tabla-titulo">Capital</span> <br /><strong>@String.Format("{0:0,0.0}", Model.Capital)</strong></td>
+                    <td><span class="simulador-tabla-titulo">Periodo en dias</span> <br />@Model.Periodo</td>
+                </tr>
+                <tr>
+                    <td><span class="simulador-tabla-titulo">Periodo pago de Intereses</span> <br />@Model.Periodo_Ahorro </td>
+                    <td>
+                        <span class="simulador-tabla-titulo">No. de pagos:</span> <br />
+                        @if (@Model.Periodo_Ahorro == "Al Vencimiento")
+                        {
+                            <span>1</span>;
+                        }
+                        else
+                        {
+                            <span>@mes</span>
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="simulador-tabla-titulo">Tasa efectiva anual:</span> <br />@Model.Tasa_Efectiva(Model.Periodo) % </td>
+                    <td><span class="simulador-tabla-titulo">Tasa nominal</span> <br />@String.Format("{0:0,0.0}", tasa_nomial) %</td>
+                </tr>
+                <tr>
+                    <td><span class="simulador-tabla-titulo">Interes del Periodo</span> <br />$ @String.Format("{0:0,0.0}", interes) </td>
+                    <td><span class="simulador-tabla-titulo">Total Interés Plazo</span> <br />$ @String.Format("{0:0,0.0}", interesTotales)</td>
+                </tr>
+                <tr>
+                    <td><span class="simulador-tabla-titulo">Rte Funete</span>  <br />$ 0 </td>
+                    <td><span class="simulador-tabla-titulo">Total de Rte Funete:</span> <br />$ 0</td>
+                </tr>
+                <tr>
+                    <td><span class="simulador-tabla-titulo">Valor a Recibir en el Período:</span>  <br />$ @String.Format("{0:0,0.0}", interes) </td>
+                    <td><span class="simulador-tabla-titulo">Valor a Recibir en Total:</span> <br />$ @String.Format("{0:0,0.0}", interesTotales + Model.Capital)</td>
+                </tr>
+            </table>
 
         }
     }
     else
     {
-        <p>Aqui  apenas entro</p>
+        @*<p>Aqui  apenas entro</p>*@
     }
     @*Model.Capital = "3000";
         <p> El nombre es: @Model.Capital</p>*@
 }
-<div>
-    @Html.ActionLink("home", "simulador")
-</div>
-
 <script>
     const capital = document.getElementById('monto_capital');
     function isCharacterALetter(char) {

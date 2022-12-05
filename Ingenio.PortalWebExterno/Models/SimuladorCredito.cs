@@ -100,7 +100,7 @@ namespace Ingenio.PortalWebExterno.Models
 
         public string Interes_Periodo { get; set; }
 
-        public string Rte_Fuente { get; set; }
+        public decimal Rte_Fuente { get; set; }
 
         public string Interes_Neto { get; set; }
 

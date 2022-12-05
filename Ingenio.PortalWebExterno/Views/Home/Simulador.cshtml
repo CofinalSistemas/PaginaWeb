@@ -51,7 +51,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-4">
-                <input type="submit" value="Enviar" class="myButtons" />
+                <input type="submit" value="Simular" class="myButtons" />
                 <a href="/Home/Simulador" class="myButtons centerSpan">Resetear</a>
             </div>
         </div>
@@ -70,10 +70,11 @@
 
             // (((1+0.14)^(1/12)-1)*12)*100
             // Math.Truncate(550.847457 * 100) / 100
-            double tasa_nomial,interes,interesTotales;
+            double tasa_nomial, interes, interesTotales;
             decimal division;
             decimal tasa_efectivas = (1 + Model.Tasa_Efectiva(Model.Periodo) / 100);
             double mes = double.Parse(Model.Periodo) / 30;
+            decimal dmes = Convert.ToDecimal(mes);
 
             if (@Model.Periodo_Ahorro == "Al Vencimiento")
             {
@@ -83,20 +84,21 @@
                     * 100 * 100) / 100;
 
                 interes = (tasa_nomial / 100 * Model.Capital) / 12;
-                interesTotales = interes*mes;
-
+                interesTotales = interes * mes;
+                Model.Rte_Fuente = Convert.ToDecimal(interes) * Convert.ToDecimal(0.04);
             }
             else
             {
                 division = 1m / 12m;
-                
+
                 tasa_nomial =
                     Math.Truncate((
                     (Math.Pow(Decimal.ToDouble(tasa_efectivas), Decimal.ToDouble(division)) - 1) * (12))
                     * 100 * 100) / 100;
 
                 interes = (tasa_nomial / 100 * Model.Capital) / 12;
-                interesTotales = interes*mes;
+                interesTotales = interes * mes;
+                Model.Rte_Fuente = Convert.ToDecimal(interes) * Convert.ToDecimal(0.04);
             }
 
 
@@ -130,19 +132,19 @@
                     <td><span class="simulador-tabla-titulo">Total Interés Plazo</span> <br />$ @String.Format("{0:0,0.0}", interesTotales)</td>
                 </tr>
                 <tr>
-                    <td><span class="simulador-tabla-titulo">Rte Funete</span>  <br />$ 0 </td>
-                    <td><span class="simulador-tabla-titulo">Total de Rte Funete:</span> <br />$ 0</td>
+                    <td><span class="simulador-tabla-titulo">Rte Fuente</span> <br />$ @String.Format("{0:0,0.0}", Model.Rte_Fuente)</td>
+                    <td><span class="simulador-tabla-titulo">Total de Rte Fuente:</span>  <br />$ @String.Format("{0:0,0.0}",(Model.Rte_Fuente*Convert.ToDecimal(mes))) </td>
                 </tr>
                 <tr>
-                    <td><span class="simulador-tabla-titulo">Valor a Recibir en el Período:</span>  <br />$ @String.Format("{0:0,0.0}", interes) </td>
-                    <td><span class="simulador-tabla-titulo">Valor a Recibir en Total:</span> <br />$ @String.Format("{0:0,0.0}", interesTotales + Model.Capital)</td>
+                    <td><span class="simulador-tabla-titulo">Valor a Recibir en el Período:</span>  <br />$ @String.Format("{0:0,0.0}", interes - Decimal.ToDouble(Model.Rte_Fuente)) </td>
+                    <td><span class="simulador-tabla-titulo">Valor a Recibir en Total:</span> <br />$ @String.Format("{0:0,0.0}", interesTotales + Model.Capital - Decimal.ToDouble(Model.Rte_Fuente)*mes)</td>
                 </tr>
             </table>
 
         }
-    }
+                    }
     else
-    {
+                    {
         @*<p>Aqui  apenas entro</p>*@
     }
     @*Model.Capital = "3000";

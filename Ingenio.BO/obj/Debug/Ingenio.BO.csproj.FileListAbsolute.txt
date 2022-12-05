@@ -92,3 +92,15 @@ D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.csproj.CoreCo
 D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.csproj.CopyComplete
 D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.dll
 D:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.pdb
+E:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\bin\Debug\Ingenio.BO.dll.config
+E:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\bin\Debug\Ingenio.BO.dll
+E:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\bin\Debug\Ingenio.BO.pdb
+E:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\bin\Debug\EntityFramework.dll
+E:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\bin\Debug\EntityFramework.SqlServer.dll
+E:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\bin\Debug\EntityFramework.xml
+E:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\bin\Debug\EntityFramework.SqlServer.xml
+E:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.csproj.AssemblyReference.cache
+E:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.csproj.CoreCompileInputs.cache
+E:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.csproj.CopyComplete
+E:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.dll
+E:\PaginaWeb_NUEVA\cofi_web-master\Ingenio.BO\obj\Debug\Ingenio.BO.pdb

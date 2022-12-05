@@ -273,6 +273,7 @@
     <Compile Include="Controllers\FundacionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersCargoController.cs" />
+    <Compile Include="Controllers\PQRSController.cs" />
     <Compile Include="Controllers\ReportesUIAFController.cs" />
     <Compile Include="Controllers\Seguridad\AccountController.cs" />
     <Compile Include="Controllers\Seguridad\RolController.cs" />
@@ -293,6 +294,7 @@
     <Compile Include="Models\CaptchaResponse.cs" />
     <Compile Include="Informacion\Credito_info.cs" />
     <Compile Include="Models\Credito.cs" />
+    <Compile Include="Models\Formato.cs" />
     <Compile Include="Models\model.cs" />
     <Compile Include="Models\SimuladorCredito.cs" />
     <Compile Include="Models\Telefono.cs" />
@@ -358,6 +360,14 @@
       <DependentUpon>main_style.css</DependentUpon>
     </Content>
     <Content Include="Content\skin.min.css" />
+    <Content Include="Content\slick\.gitignore" />
+    <Content Include="Content\slick\index.html" />
+    <Content Include="Content\slick\slick\ajax-loader.gif" />
+    <Content Include="Content\slick\slick\fonts\slick.svg" />
+    <Content Include="Content\slick\slick\slick-theme.css" />
+    <Content Include="Content\slick\slick\slick.css" />
+    <Content Include="Content\slick\slick\slick.js" />
+    <Content Include="Content\slick\slick\slick.min.js" />
     <Content Include="Content\style.amarillo.css" />
     <Content Include="Content\style.blue.css" />
     <Content Include="Content\editorHtml\table.min.css" />
@@ -702,6 +712,23 @@
     <Content Include="Content\sass\pages\FormulariosAC.scss" />
     <Content Include="Content\sass\pages\_RteDian.scss" />
     <Content Include="Content\sass\pages\_noticias.scss" />
+    <Content Include="Content\slick\bower.json" />
+    <Content Include="Content\slick\component.json" />
+    <Content Include="Content\slick\CONTRIBUTING.markdown" />
+    <Content Include="Content\slick\ISSUE_TEMPLATE.md" />
+    <Content Include="Content\slick\LICENSE" />
+    <Content Include="Content\slick\Makefile" />
+    <Content Include="Content\slick\package.json" />
+    <Content Include="Content\slick\README.markdown" />
+    <Content Include="Content\slick\slick.jquery.json" />
+    <Content Include="Content\slick\slick\config.rb" />
+    <Content Include="Content\slick\slick\fonts\slick.eot" />
+    <Content Include="Content\slick\slick\fonts\slick.ttf" />
+    <Content Include="Content\slick\slick\fonts\slick.woff" />
+    <Content Include="Content\slick\slick\slick-theme.less" />
+    <Content Include="Content\slick\slick\slick-theme.scss" />
+    <Content Include="Content\slick\slick\slick.less" />
+    <Content Include="Content\slick\slick\slick.scss" />
     <None Include="PortaWeb.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -846,6 +873,7 @@
     <Content Include="Views\Home\Videos.cshtml" />
     <Content Include="Views\Home\Simulador.cshtml" />
     <Content Include="Views\Home\Noticias.cshtml" />
+    <Content Include="Views\PQRS\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -859,6 +887,7 @@
     <Folder Include="edithtml\" />
     <Folder Include="Estilos\" />
     <Folder Include="img\Img_Web2\App_LocalResources\" />
+    <Folder Include="PQRS-Archivos\" />
     <Folder Include="Publicacion\" />
     <Folder Include="Views\Error\" />
     <Folder Include="Views\Silder\" />
